@@ -1,0 +1,28 @@
+# A word of degree, very, really or totally, is kept on the quality it strengthens, so the tree
+# holds how hot the soup is and not only that it is hot. Held out lines use things and qualities
+# the learned lines never use.
+the soup is very hot. => soup -> {is} -> {temperature} -> hot -> {degree} -> very | is the soup hot? = yes
+my bookshelf is a mess. it is totally disorganized. => user -> bookshelf -> {is} -> disorganized -> {degree} -> totally | what is my bookshelf? = mess, disorganized
+tom is really tall. => tom -> {is} -> {size} -> tall -> {degree} -> really | who is tall? = tom
+anna has a very big dog. => anna -> dog -> {is} -> {size} -> big -> {degree} -> very | what does anna have? = dog
+the box is quite heavy. => box -> {is} -> heavy -> {degree} -> quite | is the box heavy? = yes
+the water is extremely cold. => water -> {is} -> {temperature} -> cold -> {degree} -> extremely | is the water cold? = yes
+mia is super happy. => mia -> {is} -> {feeling} -> happy -> {degree} -> super | how does mia feel? = happy
+test: the tea is very warm. => tea -> {is} -> {temperature} -> warm -> {degree} -> very | is the tea warm? = yes
+test: leo is really sad. => leo -> {is} -> {feeling} -> sad -> {degree} -> really | how does leo feel? = sad
+test: sara has a very small cat. => sara -> cat -> {is} -> {size} -> small -> {degree} -> very | what does sara have? = cat
+tom is a bit sad. the box is a little heavy. => tom -> {is} -> {feeling} -> sad -> {degree} -> bit | is tom sad? = yes; how is tom? = sad; is the box heavy? = yes
+the mouse is little. => mouse -> {is} -> {size} -> little | is the mouse little? = yes
+sam is a bit angry. => sam -> {is} -> {feeling} -> angry -> {degree} -> bit | is sam angry? = yes; how is sam? = angry
+test: ann is a little tired. => ann -> {is} -> {feeling} -> tired -> {degree} -> little | is ann tired? = yes; how is ann? = tired
+the pot is a bit hot. => pot -> {is} -> {temperature} -> hot -> {degree} -> bit | is the pot hot? = yes
+ben is a bit tired. => ben -> {is} -> {feeling} -> tired -> {degree} -> bit | how does ben feel? = tired
+the box is a little full. => box -> {is} -> full -> {degree} -> little | is the box full? = yes
+mia is a bit shy. => mia -> {is} -> {trait} -> shy -> {degree} -> bit | is mia shy? = yes
+the tea is a bit sweet. => tea -> {is} -> {trait} -> sweet -> {degree} -> bit | is the tea sweet? = yes
+the room is a little dark. => room -> {is} -> dark -> {degree} -> little | is the room dark? = yes
+leo is a bit late. => leo -> {is} -> late -> {degree} -> bit | is leo late? = yes
+zoe is a bit cold. => zoe -> {is} -> {temperature} -> cold -> {degree} -> bit | is zoe cold? = yes
+the bag is a bit heavy. => bag -> {is} -> {size} -> heavy -> {degree} -> bit | is the bag heavy? = yes
+omar is a bit happy. => omar -> {is} -> {feeling} -> happy -> {degree} -> bit | how does omar feel? = happy
+the path is a bit wet. => path -> {is} -> {trait} -> wet -> {degree} -> bit | is the path wet? = yes

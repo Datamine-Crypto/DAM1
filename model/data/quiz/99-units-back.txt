@@ -1,0 +1,16 @@
+# Units counted back up: a larger unit of time holds a number of a smaller one, so some of the smaller
+# unit make that many over the number the larger one holds. The traced line and the turns stay as
+# single lessons; each scene tells how much time several people have, then asks many of those counts
+# back in larger units, and each count.
+seed: measures
+turn: how many hours are 120 minutes? {eom} => | 2
+turn: how many minutes are 180 seconds? {eom} => | 3
+turn: how many days are 48 hours? {eom} => | 2
+turn: how many weeks are 21 days? {eom} => | 3
+turn: how many minutes are 120 seconds? {eom} => | 2
+turn: how many weeks are 14 days? {eom} => | 2
+tom has 120 minutes. ann has 180 seconds. => 120 = 120; tom owns minutes; minutes is 120; 180 = 180; ann owns seconds; seconds is 180 | how many hours are 120 minutes? = 2; how many minutes are 180 seconds? = 3; how many days are 48 hours? = 2; how many weeks are 21 days? = 3; how many minutes are 120 seconds? = 2; how many weeks are 14 days? = 2; how many hours are 60 minutes? = 1; how many minutes are 60 seconds? = 1; how many minutes does tom have? = 120; how many seconds does ann have? = 180
+kim has 48 hours. joe has 21 days. => 48 = 48; kim owns hours; hours is 48; 21 = 21; joe owns days; days is 21 | how many days are 48 hours? = 2; how many weeks are 21 days? = 3; how many weeks are 14 days? = 2; how many hours are 120 minutes? = 2; how many days are 72 hours? = 3; how many weeks are 28 days? = 4; how many minutes are 180 seconds? = 3; how many hours does kim have? = 48; how many days does joe have? = 21
+test: zoe has 300 minutes. ben has 24 months. => 300 = 300; zoe owns minutes; minutes is 300; 24 = 24; ben owns months; months is 24 | how many hours are 300 minutes? = 5; how many years are 24 months? = 2; how many hours are 180 minutes? = 3; how many years are 36 months? = 3; how many days are 96 hours? = 4; how many weeks are 35 days? = 5; how many minutes does zoe have? = 300; how many months does ben have? = 24
+test: turn: how many hours are 300 minutes? {eom} => | 5
+test: turn: how many years are 24 months? {eom} => | 2

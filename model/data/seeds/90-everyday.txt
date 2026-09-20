@@ -1,0 +1,223 @@
+# The statements of data/facts/90-everyday.txt the cursor tree holds, one path each, written by build-seeds.mjs.
+red {is} color
+blue {is} color
+green {is} color
+yellow {is} color
+orange {is} color
+purple {is} color
+pink {is} color
+brown {is} color
+black {is} color
+white {is} color
+grey {is} color
+gray {is} color
+sky -> {is} -> {color} -> blue
+sea -> {is} -> {color} -> blue
+grass -> {is} -> {color} -> green
+snow -> {is} -> {color} -> white
+milk -> {is} -> {color} -> white
+cloud -> {is} -> {color} -> white
+coal -> {is} -> {color} -> black
+night -> {is} -> {color} -> black
+chocolate -> {is} -> {color} -> brown
+mud -> {is} -> {color} -> brown
+apple -> {is} -> {color} -> red
+tomato -> {is} -> {color} -> red
+cherry -> {is} -> {color} -> red
+strawberry -> {is} -> {color} -> red
+banana -> {is} -> {color} -> yellow
+lemon -> {is} -> {color} -> yellow
+orange -> {is} -> {color} -> orange
+carrot -> {is} -> {color} -> orange
+pumpkin -> {is} -> {color} -> orange
+lime -> {is} -> {color} -> green
+pea -> {is} -> {color} -> green
+cucumber -> {is} -> {color} -> green
+plum -> {is} -> {color} -> purple
+grape -> {is} -> {color} -> purple
+eggplant -> {is} -> {color} -> purple
+ruby -> {is} -> {color} -> red
+emerald -> {is} -> {color} -> green
+sapphire -> {is} -> {color} -> blue
+apple {is} fruit
+banana {is} fruit
+pear {is} fruit
+plum {is} fruit
+orange {is} fruit
+grape {is} fruit
+lemon {is} fruit
+cherry {is} fruit
+peach {is} fruit
+melon {is} fruit
+strawberry {is} fruit
+mango {is} fruit
+pineapple {is} fruit
+tomato {is} fruit
+carrot {is} vegetable
+potato {is} vegetable
+onion {is} vegetable
+pea {is} vegetable
+bean {is} vegetable
+cabbage {is} vegetable
+lettuce {is} vegetable
+cucumber {is} vegetable
+pumpkin {is} vegetable
+pepper {is} vegetable
+bread {is} food
+rice {is} food
+meat {is} food
+cheese {is} food
+egg {is} food
+milk {is} drink
+water {is} drink
+tea {is} drink
+coffee {is} drink
+juice {is} drink
+wine {is} drink
+sugar {is} sweet
+honey {is} sweet
+lemon -> {sour}
+salt -> {salty}
+pepper -> {is} -> {temperature} -> hot
+soup -> {is} -> {temperature} -> hot
+bread {material} flour
+flour {material} wheat
+cheese {material} milk
+butter {material} milk
+yogurt {material} milk
+paper {material} wood
+glass {material} sand
+wine {material} grapes
+chocolate {material} cocoa
+sugar {material} cane
+coin {material} metal
+book {material} paper
+window {material} glass
+shirt {material} cotton
+sweater {material} wool
+ring {material} gold
+table {material} wood
+tire {material} rubber
+bottle {material} glass
+can {material} metal
+brick {material} clay
+candle {material} wax
+rope {material} fiber
+car {is} vehicle
+bus {is} vehicle
+bike {is} vehicle
+train {is} vehicle
+plane {is} vehicle
+boat {is} vehicle
+ship {is} vehicle
+truck {is} vehicle
+car -> {wheel:quantity(4)}
+bicycle -> {wheel:quantity(2)}
+tricycle -> {wheel:quantity(3)}
+car {has} engine
+bike {has} pedals
+plane {has} wings
+boat {has} sail
+ship {has} anchor
+plane {in} air
+kitchen {is} room
+bedroom {is} room
+bathroom {is} room
+hall {is} room
+kitchen {in} house
+bedroom {in} house
+bed {in} bedroom
+stove {in} kitchen
+fridge {in} kitchen
+bath {in} bathroom
+house {has} roof
+house {has} door
+house {has} windows
+house {has} walls
+room {has} walls
+room {has} floor
+room {has} ceiling
+clock {has} hands
+book {has} pages
+chair {has} legs
+table {has} legs
+shirt {has} sleeves
+shoe {has} laces
+lock {need} key
+knife -> {sharp}
+pillow -> {soft}
+rock -> {hard}
+feather -> {light}
+stone -> {heavy}
+mountain -> {is} -> {size} -> big
+ant -> {is} -> {size} -> small
+giraffe -> {is} -> {size} -> tall
+snail -> {is} -> {speed} -> slow
+cheetah -> {is} -> {speed} -> fast
+cheetah -> {is} -> fastest
+cheetah {is} animal
+giraffe -> {is} -> tallest
+giraffe {is} animal
+whale -> {is} -> biggest
+whale {is} animal
+ostrich -> {is} -> biggest
+ostrich {is} bird
+hummingbird -> {is} -> smallest
+hummingbird {is} bird
+teacher {help} children
+baker {has} bakery
+king {has} crown
+queen {has} crown
+soldier {has} gun
+fisherman {has} boat
+pilot {has} plane
+driver {has} car
+teacher {has} students
+shop {has} door
+zoo {has} animals
+garden {has} flowers
+forest {has} trees
+street {has} houses
+van {is} vehicle
+taxi {is} vehicle
+tram {is} vehicle
+lorry {is} vehicle
+helicopter {is} vehicle
+submarine {is} vehicle
+rocket {is} vehicle
+canoe {is} vehicle
+jeep {is} vehicle
+papaya {is} fruit
+guava {is} fruit
+lychee {is} fruit
+nectarine {is} fruit
+gooseberry {is} fruit
+currant {is} fruit
+date {is} fruit
+quince {is} fruit
+persimmon {is} fruit
+passionfruit {is} fruit
+cocoa {is} drink
+soda {is} drink
+brandy {is} drink
+champagne {is} drink
+kombucha {is} drink
+espresso {is} drink
+violet {is} color
+indigo {is} color
+turquoise {is} color
+crimson {is} color
+scarlet {is} color
+beige {is} color
+maroon {is} color
+silver {is} color
+gold {is} color
+navy {is} color
+golden {is} color
+tan {is} color
+teal {is} color
+cyan {is} color
+magenta {is} color
+lavender {is} color
+olive {is} color
+cream {is} color

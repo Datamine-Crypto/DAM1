@@ -1,0 +1,3 @@
+# what color was the house: the color stands under the dated is.
+there was a house. it was red. => house:a(true):time(past) -> {is}:time(past) -> {color} -> red | what color was the house? = red
+test: there was a zorp. it was blue. => zorp:a(true):time(past) -> {is}:time(past) -> {color} -> blue | what color was the zorp? = blue

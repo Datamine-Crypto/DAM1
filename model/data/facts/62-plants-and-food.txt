@@ -1,0 +1,278 @@
+# Plants and food: kinds of plants, grains, fruits, vegetables, herbs and spices, what foods are made of, dishes, drinks and meals.
+a willow is a tree.
+an elm is a tree.
+a beech is a tree.
+a cedar is a tree.
+a fir is a tree.
+a spruce is a tree.
+a redwood is a tree.
+a sequoia is a tree.
+a baobab is a tree.
+a eucalyptus is a tree.
+an orchid is a flower.
+a daffodil is a flower.
+a poppy is a flower.
+lavender is a flower.
+a buttercup is a flower.
+a dandelion is a flower.
+a bluebell is a flower.
+a snowdrop is a flower.
+a lotus is a flower.
+bamboo is a grass.
+a shrub is a plant.
+a bush is a plant.
+a vine is a plant.
+a weed is a plant.
+a herb is a plant.
+ivy is a plant.
+seaweed is a plant.
+a reed is a plant.
+a nettle is a weed.
+a thistle is a weed.
+a mushroom is a fungus.
+a toadstool is a fungus.
+yeast is a fungus.
+mold is a fungus.
+a daffodil is yellow.
+a poppy is red.
+lavender is purple.
+a bluebell is blue.
+a snowdrop is white.
+a dandelion is yellow.
+a buttercup is yellow.
+moss is green.
+ivy is green.
+a rose has thorns.
+a cactus has spines.
+an oak has acorns.
+a pine has cones.
+a palm has coconuts.
+a vine has grapes.
+a bush has berries.
+a flower has a scent.
+a clover has 3 leaves.
+a redwood is the tallest tree.
+a sequoia is the biggest tree.
+an oak is strong.
+a sunflower is tall.
+a cactus is prickly.
+a palm is on a beach.
+a lotus is in water.
+a reed is in water.
+seaweed is in the sea.
+moss is on a rock.
+ivy is on a wall.
+a mushroom is in the forest.
+wheat is a grain.
+rice is a grain.
+corn is a grain.
+barley is a grain.
+rye is a grain.
+millet is a grain.
+quinoa is a grain.
+a grain is a seed.
+cereal is made of grain.
+porridge is made of oats.
+pasta is made of flour.
+a noodle is made of flour.
+a kiwi is a fruit.
+an avocado is a fruit.
+an apricot is a fruit.
+a fig is a fruit.
+a coconut is a fruit.
+a pomegranate is a fruit.
+a raspberry is a fruit.
+a blueberry is a fruit.
+a blackberry is a fruit.
+a cranberry is a fruit.
+a grapefruit is a fruit.
+a watermelon is a fruit.
+a tangerine is a fruit.
+a lime is a fruit.
+an olive is a fruit.
+a berry is a fruit.
+a kiwi is green.
+an avocado is green.
+an apricot is orange.
+a raspberry is red.
+a blueberry is blue.
+a blackberry is black.
+a cranberry is red.
+a watermelon is green.
+a tangerine is orange.
+a fig is purple.
+a pomegranate is red.
+a coconut is brown.
+a pear is green.
+a mango is sweet.
+a strawberry is sweet.
+a lime is sour.
+a grapefruit is bitter.
+a nut is a seed.
+an almond is a nut.
+a walnut is a nut.
+a peanut is a nut.
+a cashew is a nut.
+a hazelnut is a nut.
+a pistachio is a nut.
+a chestnut is a nut.
+a pecan is a nut.
+a leek is a vegetable.
+a turnip is a vegetable.
+a radish is a vegetable.
+a beetroot is a vegetable.
+spinach is a vegetable.
+kale is a vegetable.
+broccoli is a vegetable.
+a cauliflower is a vegetable.
+celery is a vegetable.
+asparagus is a vegetable.
+an artichoke is a vegetable.
+a zucchini is a vegetable.
+a parsnip is a vegetable.
+a yam is a vegetable.
+garlic is a vegetable.
+an eggplant is a vegetable.
+a chili is a pepper.
+a lentil is a legume.
+a chickpea is a legume.
+a soybean is a legume.
+a legume is a plant.
+a beetroot is red.
+spinach is green.
+broccoli is green.
+a cauliflower is white.
+a radish is red.
+a chili is hot.
+garlic is strong.
+basil is a herb.
+mint is a herb.
+parsley is a herb.
+rosemary is a herb.
+cinnamon is a spice.
+ginger is a spice.
+turmeric is a spice.
+saffron is a spice.
+vanilla is a spice.
+mustard is yellow.
+mustard is hot.
+saffron is yellow.
+turmeric is yellow.
+cinnamon is brown.
+ginger is hot.
+a cake is made of flour and sugar.
+a biscuit is made of flour and butter.
+a pancake is made of flour and eggs.
+pizza is made of dough and cheese.
+dough is made of flour and water.
+a sandwich is made of bread.
+toast is made of bread.
+a hamburger is made of beef.
+a sausage is made of meat.
+ham is made of pork.
+bacon is made of pork.
+a steak is made of beef.
+sushi is made of rice and fish.
+a salad is made of lettuce and tomato.
+soup is made of vegetables.
+a stew is made of meat and vegetables.
+an omelette is made of eggs.
+mayonnaise is made of eggs and oil.
+ketchup is made of tomatoes.
+jam is made of fruit and sugar.
+honey is made of nectar.
+cream is made of milk.
+tofu is made of soy.
+hummus is made of chickpeas.
+falafel is made of chickpeas.
+guacamole is made of avocado.
+popcorn is made of corn.
+a tortilla is made of corn.
+beef is a meat.
+pork is a meat.
+ham is a meat.
+bacon is a meat.
+a steak is a meat.
+pizza is an italian food.
+pasta is an italian food.
+lasagna is an italian food.
+sushi is a japanese food.
+ramen is a japanese food.
+a taco is a mexican food.
+a burrito is a mexican food.
+guacamole is a mexican food.
+curry is an indian food.
+a samosa is an indian food.
+naan is an indian bread.
+paella is a spanish food.
+a croissant is a french food.
+a pretzel is a german food.
+a bratwurst is a german sausage.
+goulash is a hungarian food.
+a kebab is a turkish food.
+hummus is a lebanese food.
+a dumpling is a chinese food.
+kimchi is a korean food.
+moussaka is a greek food.
+feta is a greek cheese.
+borscht is a russian soup.
+a waffle is a belgian food.
+haggis is a scottish food.
+a scone is a british food.
+a hamburger is an american food.
+a pavlova is an australian dessert.
+cheddar is a cheese.
+brie is a cheese.
+mozzarella is an italian cheese.
+gouda is a dutch cheese.
+parmesan is an italian cheese.
+a bagel is a bread.
+a baguette is a bread.
+beer is a drink.
+cider is a drink.
+lemonade is a drink.
+whisky is a drink.
+vodka is a drink.
+rum is a drink.
+gin is a drink.
+sake is a drink.
+tequila is a drink.
+champagne is a wine.
+a smoothie is a drink.
+a milkshake is a drink.
+vodka is russian.
+sake is japanese.
+whisky is scottish.
+tequila is mexican.
+champagne is french.
+beer is made of barley.
+cider is made of apples.
+lemonade is made of lemons.
+sake is made of rice.
+tequila is made of agave.
+tea is made of leaves.
+coffee is made of beans.
+juice is made of fruit.
+a smoothie is made of fruit.
+a milkshake is made of milk.
+beer is bitter.
+coffee is bitter.
+lemonade is sweet.
+breakfast is a meal.
+lunch is a meal.
+dinner is a meal.
+supper is a meal.
+a dessert is sweet.
+a cake is a dessert.
+an apple is on a tree.
+a cherry is on a tree.
+an orange is on a tree.
+a grape is on a vine.
+a pumpkin is on a vine.
+a pea is in a pod.
+a pod has peas.
+a potato is in the ground.
+a carrot is in the ground.
+a coconut is on a palm.
+wheat is in a field.
+honey is in a hive.

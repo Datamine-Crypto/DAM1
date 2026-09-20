@@ -1,0 +1,19 @@
+# A tale opens with once upon a time, with a comma after it or none. The words tell nothing of the
+# world: the sentence is read as begun at the word after them. Held out lines tell of things the
+# learned lines never tell of.
+once upon a time, there was a little car named beep. => car -> {is} -> little | what was the car named? = beep
+once upon a time, there was a little car named beep. => car -> {is} -> little | is the car little? = yes
+once upon a time there was a big dog called rex. => dog -> {is} -> big | what was the dog called? = rex
+once upon a time, there was a small boat named luna. => boat -> {is} -> small | what was the boat named? = luna
+once upon a time, there was a big bear called bruno. => bear -> {is} -> big | is the bear big? = yes
+once upon a time there was a little train named pip. => train -> {is} -> little | what was the train named? = pip
+once upon a time, there was a small cat called mimi. => cat -> {is} -> small | is the cat big? = no
+once upon a time, a king lived in a castle. => | where did the king live? = castle
+once upon a time a girl lived in a village. => | who lived in the village? = girl
+once upon a time, tom had a red kite. => tom -> kite -> {is} -> {color} -> red | what color is the kite? = red
+once upon a time, there was a big ship named nora. => ship -> {is} -> big | what was the ship named? = nora
+once upon a time there was a small fox called finn. => fox -> {is} -> small | is the fox small? = yes
+test: once upon a time, there was a little robot named zed. => robot -> {is} -> little | what was the robot named? = zed
+test: once upon a time there was a big horse called duke. => horse -> {is} -> big | is the horse big? = yes
+test: once upon a time, a queen lived in a tower. => | where did the queen live? = tower
+test: once upon a time, anna had a blue ball. => anna -> ball -> {is} -> {color} -> blue | what color is the ball? = blue

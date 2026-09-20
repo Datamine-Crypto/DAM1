@@ -1,0 +1,26 @@
+# What a thing is and what it does in one sentence: a clock is a device that measures time. The word
+# that, said after what the thing is, sends the reading back to the thing, so the verb after it is said
+# of the clock and not of the device. The verbs are ones few other lessons use, so they are read by
+# their ending and their place, and held out lines use things and verbs the learned lines never use.
+seed: 90-everyday
+a clock is a device that measures time. a scale is a tool that weighs fruit. => clock -> {is} -> device; clock -> {measure} -> time; scale -> {is} -> tool; scale -> {weigh} -> fruit | what measures time? = clock; what is a clock? = device; what does a clock measure? = time; what weighs fruit? = scale; what is a scale? = tool; what does a scale weigh? = fruit
+a heater is a thing that warms rooms. a fridge is a machine that cools food. => heater -> {is} -> thing; heater -> {warm} -> rooms; fridge -> {is} -> machine; fridge -> {cool} -> food | what warms rooms? = heater; what cools food? = fridge; what is a fridge? = machine; what does a fridge cool? = food; what does a heater warm? = rooms
+a guard is a person that watches gates. a baker is a person that cooks bread. => guard -> {is} -> person; guard -> {watch} -> gates; baker -> {is} -> person; baker -> {cook} -> bread | who watches gates? = guard; who cooks bread? = baker; what is a baker? = person; what does a baker cook? = bread; what does a guard watch? = gates
+a hose is a thing that sprays water. a net is a thing that catches fish. => hose -> {is} -> thing; hose -> {spray} -> water; net -> {is} -> thing; net -> {catch} -> fish | what sprays water? = hose; what catches fish? = net; what is a hose? = thing; what does a net catch? = fish; what does a hose spray? = water
+turn: a ruler is a tool that measures length what measures length => ruler -> {is} -> tool; ruler -> {measure} -> length | ruler
+turn: a broom is a tool that sweeps floors what is a broom => broom -> {is} -> tool; broom -> {sweep} -> floors | tool
+test: a kettle is a pot that boils water. a fan is a machine that cools rooms. => kettle -> {is} -> pot; kettle -> {boil} -> water; fan -> {is} -> machine; fan -> {cool} -> rooms | what boils water? = kettle; what is a kettle? = pot; what does a kettle boil? = water; what cools rooms? = fan; what is a fan? = machine
+test: a farmer is a person that grows corn. a dryer is a machine that heats clothes. => farmer -> {is} -> person; farmer -> {grow} -> corn; dryer -> {is} -> machine; dryer -> {heat} -> clothes | who grows corn? = farmer; what heats clothes? = dryer; what is a dryer? = machine; what does a farmer grow? = corn
+test: turn: a thermometer is a device that measures heat what measures heat => thermometer -> {is} -> device; thermometer -> {measure} -> heat | thermometer
+a clock is a useful device. a drill is a noisy tool. => clock -> {is} -> device; drill -> {is} -> tool | what is a clock? = device; what is a drill? = tool; is a drill noisy? = yes; is a clock useful? = yes
+a lamp is a handy thing. a mole is a shy animal. => lamp -> {is} -> thing; mole -> {is} -> animal | what is a lamp? = thing; what is a mole? = shy, animal; is a mole shy? = yes
+the sky is an unobstructed view upward from the surface of the earth. => sky -> {is} -> view | what is the sky? = view
+a canyon is a vast valley between the cliffs. => canyon -> {is} -> valley | what is a canyon? = valley
+test: a sofa is a comfy seat. a wasp is a nasty insect. => sofa -> {is} -> seat; wasp -> {is} -> insect | what is a sofa? = seat; what is a wasp? = insect; is a wasp nasty? = yes
+test: a lagoon is a shallow lake near the sea. => lagoon -> {is} -> lake | what is a lagoon? = shallow, lake
+# The same with things the seeds already know the kind of: the describing word still only describes.
+a bee is a busy insect. a shark is a scary fish. => bee -> {is} -> insect; shark -> {is} -> fish | what is a bee? = busy, insect; what is a shark? = fish; is a bee busy? = yes
+an owl is a wise bird. a fox is a sly mammal. => owl -> {is} -> bird; fox -> {is} -> mammal | what is an owl? = wise, bird; what is a fox? = mammal; is an owl wise? = yes
+test: a moth is a dusty insect. a crow is a cheeky bird. => moth -> {is} -> insect; crow -> {is} -> bird | what is a moth? = insect; what is a crow? = bird
+a pond is a small lake near a field. => pond -> {is} -> lake | what is a pond? = small, lake
+a creek is a small river near a wood. => creek -> {is} -> river | what is a creek? = small, river

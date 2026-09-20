@@ -1,0 +1,14 @@
+# Shapes the reading one word at a time does not reach yet without an idea: a place said before the thing, and a deed that passes a thing on. Kept here until the tree for them is agreed.
+seed: 90-everyday
+seed: 18-qualities
+inside the tent is a lamp. => lamp -> {in} -> tent | where is the lamp? = tent
+on the desk is a pen. => pen -> {in} -> desk | where is the pen? = desk
+under the bridge is a boat. => boat -> {in} -> bridge | where is the boat? = bridge
+test: on the roof is a bird. => bird -> {in} -> roof | where is the bird? = roof
+then: tom gives the car to ann. => ann -> {has} -> car; not tom -> {has} -> car | who has the car? = ann; what does ann have? = car
+then: sam gives the pen to kim. => kim -> {has} -> pen; not sam -> {has} -> pen | who has the pen? = kim
+then: ben gives the hat to lily. => lily -> {has} -> hat; not ben -> {has} -> hat | who has the hat? = lily; what does lily have? = hat
+then: nina gives the doll to paul. => paul -> {has} -> doll; not nina -> {has} -> doll | who has the doll? = paul
+test: then: max gives the kite to sue. => sue -> {has} -> kite; not max -> {has} -> kite | who has the kite? = sue
+then: ben gives the pen to kim. => kim -> {has} -> pen; not ben -> {has} -> pen | does ben have the pen? = no; does kim have the pen? = yes; what does ben have? = {nothing}
+test: then: joe gives the book to sue. => sue -> {has} -> book; not joe -> {has} -> book | does sue have the book? = yes; what does joe have? = {nothing}

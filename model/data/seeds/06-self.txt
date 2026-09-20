@@ -1,0 +1,2 @@
+# The statements of data/facts/06-self.txt the cursor tree holds, one path each, written by build-seeds.mjs.
+you {name} dam1

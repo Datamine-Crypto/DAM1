@@ -1,0 +1,34 @@
+# Lines asking what comes next: "next:", a text, "=>", then the words that should follow.
+# Alternatives are parted by commas. The text is read onto the stack with no question, and the
+# network's prediction of the next input item, said and read one item at a time, must begin with
+# one alternative whole. A network that predicts no input item reports these lines as not
+# applicable, and they never count in the quiz's score.
+next: one two three => four
+next: two three four => five
+next: three four five => six
+next: 2 4 6 => 8
+next: 1 2 3 => 4
+next: 10 11 12 => 13
+next: 2 3 4 => 5
+next: 3 4 5 => 6
+next: 5 6 7 => 8
+next: 6 7 8 => 9
+next: seven eight nine => ten
+next: four five => six
+next: five six seven => eight
+next: monday tuesday wednesday => thursday
+next: tuesday wednesday thursday => friday
+next: january february march => april
+next: february march april => may
+next: a b c => d
+next: b c d => e
+next: michael has 3 marbles. he takes one and throws it. he takes the second and throws it. => he takes the third and throws it
+next: anna has 3 apples. she eats one and smiles. she eats the second and smiles. => she eats the third and smiles
+test: next: four five six => seven
+test: next: 3 6 9 => 12
+test: next: wednesday thursday friday => saturday
+test: next: march april may => june
+test: next: c d e => f
+test: next: tom has 3 cups. he fills one and drinks it. he fills the second and drinks it. => he fills the third and drinks it
+test: next: 1 2 3 cuatro => 5
+test: next: one two three cuatro => five

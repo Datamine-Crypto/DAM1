@@ -1,0 +1,3 @@
+# where is mary after she went twice: the garden, the only place she stands in.
+mary went to the kitchen. mary went to the garden. => garden:the(true) -> mary | where is mary? = garden
+test: zorp went to the flib. zorp went to the mork. => mork:the(true) -> zorp | where is zorp? = mork

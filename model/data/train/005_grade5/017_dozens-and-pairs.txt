@@ -1,0 +1,23 @@
+# Dozens and pairs: a pair is 2 things and a dozen is 12 things, so some pairs or dozens of a thing are
+# that many times 2 or 12 of it.
+# The traced turns stay single lessons. Each scene tells how many things two or three people have, then
+# asks many dozens and pairs, each count, how many dozens or pairs a count makes, and a person the scene
+# never told.
+seed: measures
+turn: how many eggs are in a dozen? => | 12
+turn: how many eggs are in 2 dozen? => | 24
+turn: how many is half a dozen? => | 6
+tom has 24 eggs. ann has 6 shoes. sam has 2 socks. => {number:value(24)}; tom -> {has} -> egg:quantity(24); {number:value(6)}; ann -> {has} -> shoe:quantity(6); {number:value(2)}; sam -> {has} -> sock:quantity(2) | how many eggs are in a dozen? = 12; how many eggs are in 2 dozen? = 24; how many socks are in a pair? = 2; how many shoes are in 3 pairs? = 6; how many is half a dozen? = 6; how many eggs are in 4 dozen? = 48; how many shoes are in 2 pairs? = 4; how many eggs does tom have? = 24; how many shoes does ann have? = 6; how many socks does sam have? = 2; how many dozen eggs does tom have? = 2; how many eggs does lily have? = {nothing}
+lily has 12 cakes. fred has 10 gloves. => {number:value(12)}; lily -> {has} -> cake:quantity(12); {number:value(10)}; fred -> {has} -> glove:quantity(10) | how many is half a dozen? = 6; how many cakes are in a dozen? = 12; how many cakes are in 2 dozen? = 24; how many gloves are in 4 pairs? = 8; how many socks are in 6 pairs? = 12; how many eggs are in a dozen? = 12; how many shoes are in 3 pairs? = 6; how many cakes does lily have? = 12; how many gloves does fred have? = 10; how many pairs of gloves does fred have? = 5; how many cakes does tom have? = {nothing}
+test: turn: how many cookies are in 3 dozen? => | 36
+test: kim has 36 cookies. joe has 8 boots. => {number:value(36)}; kim -> {has} -> cookie:quantity(36); {number:value(8)}; joe -> {has} -> boot:quantity(8) | how many cookies are in 3 dozen? = 36; how many gloves are in 5 pairs? = 10; how many boots are in 4 pairs? = 8; how many cookies are in a dozen? = 12; how many cookies does kim have? = 36; how many boots does joe have? = 8; how many dozen cookies does kim have? = 3; how many cookies does zoe have? = {nothing}
+# Some dozens or pairs asked cold of other things, so the count is read from its place before the word.
+turn: how many pens are in 4 dozen => | 48
+turn: how many buns are in 5 dozen => | 60
+turn: how many rolls are in 10 dozen => | 120
+turn: how many gloves are in 3 pairs => | 6
+turn: how many socks are in 6 pairs => | 12
+test: turn: how many cups are in 6 dozen => | 72
+test: turn: how many boots are in 4 pairs => | 8
+turn: how many buns are in a dozen? => | 12
+turn: how many shoes are in a pair? => | 2

@@ -1,0 +1,8 @@
+# The statements of data/facts/10-day-parts.txt the cursor tree holds, one path each, written by build-seeds.mjs.
+yesterday {successor} today
+today {successor} tomorrow
+morning {in} today
+afternoon {in} today
+evening {in} today
+morning {successor} afternoon
+afternoon {successor} evening

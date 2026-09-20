@@ -1,0 +1,10 @@
+# Things of one kind told apart by their place in an order: the first cup and the second cup are two
+# cups, each with what it has and what it is, beside a count of them all. A question that names the
+# place asks of that one. Held out lines use kinds, places and things the learned lines never join.
+there are three cups. the second cup has the key. the first cup has a coin. => | what does the second cup have? = key; what does the first cup have? = coin; how many cups are there? = 3
+the first box is red. the second box is blue. => | what color is the second box? = blue; what color is the first box? = red
+there are two bags. the first bag has a pen. the second bag has a map. => | what does the first bag have? = pen; what does the second bag have? = map; how many bags are there? = 2
+the third car is green. the first car is white. => | what color is the third car? = green; what color is the first car? = white
+the second jar has a ring. the third jar has a stone. => | what does the third jar have? = stone; what does the second jar have? = ring
+test: there are three doors. the third door has a bell. the first door has a lock. => | what does the third door have? = bell; what does the first door have? = lock; how many doors are there? = 3
+test: the first hat is black. the second hat is yellow. => | what color is the first hat? = black; what color is the second hat? = yellow

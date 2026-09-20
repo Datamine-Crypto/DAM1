@@ -1,0 +1,14 @@
+# Travel time: something that goes a distance every hour needs as many hours as that distance fits into
+# the whole way, so the hours are the distance over the speed. The traced line and the turns stay as
+# single lessons; each scene tells who has or rides what, then asks many travel times and the riders.
+turn: how many hours does a car take to go 150 kilometers at 50 kilometers an hour? => | 3
+turn: how many hours does a man take to walk 12 miles at 4 miles an hour? => | 3
+turn: how many hours does a train take to go 300 kilometers at 60 kilometers an hour? => | 5
+turn: how many hours does a bike take to go 40 miles at 10 miles an hour? => | 4
+turn: how many hours does a boat take to go 120 kilometers at 60 kilometers an hour? => | 2
+turn: how many hours does a van take to go 180 kilometers at 90 kilometers an hour? => | 2
+tom has a car. ann has a bike. => tom -> {has} -> car; ann -> {has} -> bike | how many hours does a car take to go 150 kilometers at 50 kilometers an hour? = 3; how many hours does a bike take to go 40 miles at 10 miles an hour? = 4; how many hours does a car take to go 100 kilometers at 50 kilometers an hour? = 2; how many hours does a bike take to go 30 miles at 10 miles an hour? = 3; how many hours does a man take to walk 12 miles at 4 miles an hour? = 3; who has the car? = tom; who has the bike? = ann; what does tom have? = car; does ann have a car? = no
+sam is on the train. kim is on the boat. max is in the van. => sam -> {on} -> train; kim -> {on} -> boat; max -> {in} -> van | how many hours does a train take to go 300 kilometers at 60 kilometers an hour? = 5; how many hours does a boat take to go 120 kilometers at 60 kilometers an hour? = 2; how many hours does a van take to go 180 kilometers at 90 kilometers an hour? = 2; how many hours does a train take to go 120 kilometers at 60 kilometers an hour? = 2; how many hours does a van take to go 270 kilometers at 90 kilometers an hour? = 3; how many hours does a man take to walk 8 miles at 4 miles an hour? = 2; where is sam? = train; where is max? = van; is kim on the train? = no; who is on the boat? = kim
+test: zoe is on the bus. ben is on the ship. => zoe -> {on} -> bus; ben -> {on} -> ship | how many hours does a bus take to go 160 kilometers at 80 kilometers an hour? = 2; how many hours does a girl take to walk 18 miles at 3 miles an hour? = 6; how many hours does a bus take to go 240 kilometers at 80 kilometers an hour? = 3; how many hours does a ship take to go 90 kilometers at 30 kilometers an hour? = 3; how many hours does a girl take to walk 9 miles at 3 miles an hour? = 3; where is zoe? = bus; where is ben? = ship; is ben on the bus? = no
+test: turn: how many hours does a bus take to go 160 kilometers at 80 kilometers an hour? => | 2
+test: turn: how many hours does a girl take to walk 18 miles at 3 miles an hour? => | 6

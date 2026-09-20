@@ -1,0 +1,3 @@
+# corn is red: is adds is on the corn, red is a color, so it is set as the color under is.
+corn is red. => corn -> {is} -> {color} -> red
+test: flib is blue. => flib -> {is} -> {color} -> blue

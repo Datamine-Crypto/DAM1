@@ -1,0 +1,15 @@
+# Months apart: the months of the year come in order and wrap round, so the months until a named month
+# are counted forward from this month, and some months from now is that many months on.
+# The turns tell this month and ask one span each. Each scene tells this month and what two people have,
+# then asks months until, months on and months ago, round the end of the year too, and the counts.
+seed: 21-verb-forms
+seed: 11-order
+turn: the month is october. how many months until december? => month -> {october} | 2
+turn: the month is november. how many months until february? => month -> {november} | 3
+turn: the month is march. what month will it be in 4 months? => month -> {march} | july
+turn: the month is january. what month was it 2 months ago? => month -> {january} | november
+the month is october. tom has 3 apples. ann has 5 apples. => month -> {october}; tom -> {has} -> apple:quantity(3); {number:value(3)}; ann -> {has} -> apple:quantity(5); {number:value(5)} | how many months until december? = 2; what month will it be in 4 months? = february; what month was it 2 months ago? = august; how many months until january? = 3; what month will it be in 3 months? = january; what month was it 5 months ago? = may; how many apples does tom have? = 3; how many apples do tom and ann have? = 8; who has more apples? = ann
+the month is march. kim has 6 cards. joe has 2 cards. => month -> {march}; kim -> {has} -> card:quantity(6); {number:value(6)}; joe -> {has} -> card:quantity(2); {number:value(2)} | what month will it be in 4 months? = july; how many months until june? = 3; what month was it 2 months ago? = january; how many months until december? = 9; what month was it 4 months ago? = november; what month will it be in 10 months? = january; how many cards does kim have? = 6; how many more cards does kim have than joe? = 4; who has fewer cards? = joe
+test: turn: the month is june. how many months until september? => month -> {june} | 3
+test: turn: the month is august. what month will it be in 5 months? => month -> {august} | january
+test: the month is june. zoe has 7 shells. ben has 4 shells. => month -> {june}; zoe -> {has} -> shell:quantity(7); {number:value(7)}; ben -> {has} -> shell:quantity(4); {number:value(4)} | how many months until september? = 3; what month will it be in 5 months? = november; what month was it 3 months ago? = march; how many months until january? = 7; how many shells do zoe and ben have? = 11; who has more shells? = zoe; what month will it be in 8 months? = february; how many shells does ben have? = 4

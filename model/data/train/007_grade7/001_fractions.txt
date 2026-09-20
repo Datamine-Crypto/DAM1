@@ -1,0 +1,16 @@
+# Fractions of a number: a third of a number is it divided into 3 equal parts, a quarter into 4 and a
+# fifth into 5, so two thirds of a number are two of those parts.
+# The turns ask one fraction each. Each scene tells what three people have, then asks fractions of the
+# numbers and of each one's count, each count, a total, and yes or no.
+seed: measures
+turn: what is a third of 12? => | 4
+turn: what is a quarter of 20? => | 5
+turn: what is one fifth of 35? => | 7
+turn: what is two thirds of 9? => | 6
+turn: what is three quarters of 8? => | 6
+tom has 12 apples. ann has 20 apples. sam has 35 pears. => tom -> {has} -> apple:quantity(12); {number:value(12)}; ann -> {has} -> apple:quantity(20); {number:value(20)}; sam -> {has} -> pear:quantity(35); {number:value(35)} | what is a third of 12? = 4; what is a quarter of 20? = 5; what is one fifth of 35? = 7; how many apples does tom have? = 12; how many apples does ann have? = 20; how many pears does sam have? = 35; how many apples do tom and ann have? = 32; what is a third of tom's apples? = 4; what is a quarter of ann's apples? = 5; what is one fifth of sam's pears? = 7; what is two thirds of 12? = 8; what is three quarters of 20? = 15; does tom have pears? = no
+kim has 9 cards. joe has 8 cards. lily has 30 stamps. => kim -> {has} -> card:quantity(9); {number:value(9)}; joe -> {has} -> card:quantity(8); {number:value(8)}; lily -> {has} -> stamp:quantity(30); {number:value(30)} | what is two thirds of 9? = 6; what is three quarters of 8? = 6; what is one fifth of 30? = 6; what is a third of 9? = 3; what is a quarter of 8? = 2; how many cards does kim have? = 9; how many cards does joe have? = 8; how many stamps does lily have? = 30; how many cards do kim and joe have? = 17; what is two thirds of kim's cards? = 6; what is three quarters of joe's cards? = 6; does lily have cards? = no
+test: turn: what is a third of 30? => | 10
+test: turn: what is a quarter of 16? => | 4
+test: turn: what is two fifths of 10? => | 4
+test: zoe has 15 shells. ben has 16 shells. max has 10 coins. => zoe -> {has} -> shell:quantity(15); {number:value(15)}; ben -> {has} -> shell:quantity(16); {number:value(16)}; max -> {has} -> coin:quantity(10); {number:value(10)} | what is a third of 15? = 5; what is a quarter of 16? = 4; what is two fifths of 10? = 4; how many shells does zoe have? = 15; how many shells do zoe and ben have? = 31; what is a quarter of ben's shells? = 4; what is one fifth of max's coins? = 2; does max have shells? = no

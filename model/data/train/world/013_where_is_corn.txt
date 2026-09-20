@@ -1,0 +1,4 @@
+# where is corn: find the corn, get its location, the bag it stands in.
+corn in bag. => bag -> corn | where is corn? = bag
+dax in vop. => vop -> dax | where is dax? = vop
+test: flib in mork. => mork -> flib | where is flib? = mork

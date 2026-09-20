@@ -1,0 +1,275 @@
+# Living things: kinds of animals and plants, their parts, homes, young, sounds and food, and the body.
+a dog is a mammal.
+a cat is a mammal.
+a cow is a mammal.
+a horse is a mammal.
+a whale is a mammal.
+a bat is a mammal.
+a human is a mammal.
+a mouse is a mammal.
+an elephant is a mammal.
+a lion is a mammal.
+a tiger is a mammal.
+a bear is a mammal.
+a monkey is a mammal.
+a pig is a mammal.
+a sheep is a mammal.
+a goat is a mammal.
+a dolphin is a mammal.
+a rabbit is a mammal.
+a fox is a mammal.
+a wolf is a mammal.
+a deer is a mammal.
+a camel is a mammal.
+a giraffe is a mammal.
+a kangaroo is a mammal.
+a robin is a bird.
+an eagle is a bird.
+a duck is a bird.
+a hen is a bird.
+an owl is a bird.
+a penguin is a bird.
+a parrot is a bird.
+a sparrow is a bird.
+a swan is a bird.
+a crow is a bird.
+a pigeon is a bird.
+an ostrich is a bird.
+a salmon is a fish.
+a shark is a fish.
+a trout is a fish.
+a goldfish is a fish.
+a tuna is a fish.
+a cod is a fish.
+a snake is a reptile.
+a lizard is a reptile.
+a crocodile is a reptile.
+a turtle is a reptile.
+a frog is an amphibian.
+a toad is an amphibian.
+an ant is an insect.
+a bee is an insect.
+a fly is an insect.
+a beetle is an insect.
+a butterfly is an insect.
+a mosquito is an insect.
+a wasp is an insect.
+a spider is an arachnid.
+a spider is not an insect.
+a worm is an animal.
+a snail is an animal.
+a mammal is an animal.
+a bird is an animal.
+a fish is an animal.
+a reptile is an animal.
+an insect is an animal.
+an amphibian is an animal.
+a mammal has hair.
+a mammal has a backbone.
+a bird has feathers.
+a bird has wings.
+a bird has a beak.
+a bird has 2 legs.
+a fish has fins.
+a fish has gills.
+a fish has scales.
+a reptile has scales.
+an insect has 6 legs.
+a spider has 8 legs.
+a dog has 4 legs.
+a cat has 4 legs.
+a horse has 4 legs.
+a cow has 4 legs.
+a snake has 0 legs.
+a dog has a tail.
+a cat has a tail.
+a cat has whiskers.
+an elephant has a trunk.
+an elephant has tusks.
+a rhino has a horn.
+a deer has antlers.
+a bee has a sting.
+a camel has a hump.
+a kangaroo has a pouch.
+a fish lives in water.
+a whale lives in the sea.
+a shark lives in the sea.
+a bird lives in a nest.
+a bee lives in a hive.
+a bear lives in a den.
+a fox lives in a den.
+a rabbit lives in a burrow.
+an ant lives in a colony.
+a spider lives in a web.
+a lion lives in africa.
+an elephant lives in africa.
+a giraffe lives in africa.
+a tiger lives in asia.
+a panda lives in china.
+a kangaroo lives in australia.
+a penguin lives in antarctica.
+a camel lives in the desert.
+a monkey lives in the jungle.
+a frog lives in the pond.
+a puppy is a young dog.
+a kitten is a young cat.
+a calf is a young cow.
+a foal is a young horse.
+a lamb is a young sheep.
+a piglet is a young pig.
+a chick is a young hen.
+a duckling is a young duck.
+a cub is a young bear.
+a kid is a young goat.
+a joey is a young kangaroo.
+a tadpole is a young frog.
+a caterpillar is a young butterfly.
+a dog says woof.
+a cat says meow.
+a cow says moo.
+a sheep says baa.
+a duck says quack.
+a hen says cluck.
+a pig says oink.
+a lion says roar.
+a horse says neigh.
+a frog says croak.
+a bee says buzz.
+an owl says hoot.
+a crow says caw.
+a lion eats meat.
+a tiger eats meat.
+a wolf eats meat.
+a shark eats fish.
+a cow eats grass.
+a sheep eats grass.
+a horse eats grass.
+a rabbit eats carrots.
+a monkey eats bananas.
+a panda eats bamboo.
+a bird eats worms.
+a cat eats fish.
+a bee eats nectar.
+a bee has honey.
+a cow has milk.
+a hen has eggs.
+a sheep has wool.
+a rose is a flower.
+a tulip is a flower.
+a daisy is a flower.
+a lily is a flower.
+a sunflower is a flower.
+an oak is a tree.
+a pine is a tree.
+a palm is a tree.
+a maple is a tree.
+a birch is a tree.
+a tree is a plant.
+a flower is a plant.
+grass is a plant.
+moss is a plant.
+a fern is a plant.
+a cactus is a plant.
+a cactus lives in the desert.
+a tree has roots.
+a tree has a trunk.
+a tree has branches.
+a tree has leaves.
+a tree has bark.
+a flower has petals.
+a plant has roots.
+a plant has a stem.
+leaves are green.
+a rose is red.
+a daisy is white.
+a sunflower is yellow.
+a violet is purple.
+a human has 206 bones.
+a human has 2 lungs.
+a human has 1 heart.
+a human has 2 kidneys.
+a human has 32 teeth.
+a human has 2 eyes.
+a human has 2 ears.
+a human has 10 fingers.
+a human has 10 toes.
+a human has a brain.
+a human has a skull.
+a hand has 5 fingers.
+a foot has 5 toes.
+the heart is an organ.
+the brain is an organ.
+the liver is an organ.
+the skin is an organ.
+the skin is the largest organ.
+the brain is in the head.
+the heart is in the chest.
+the lungs are in the chest.
+the stomach is in the belly.
+the teeth are in the mouth.
+the tongue is in the mouth.
+blood is red.
+bones are white.
+bones are hard.
+skin is soft.
+a doctor helps people.
+a nurse helps people.
+a vet helps animals.
+
+# More birds, trees and flowers, each read and checked by the reader before it was added.
+a heron is a bird.
+a stork is a bird.
+an ibis is a bird.
+a crane is a bird.
+a kingfisher is a bird.
+a magpie is a bird.
+a jay is a bird.
+a finch is a bird.
+a wren is a bird.
+a starling is a bird.
+a lark is a bird.
+a quail is a bird.
+a pheasant is a bird.
+a turkey is a bird.
+a kiwi is a bird.
+a cockatoo is a bird.
+a budgie is a bird.
+a seagull is a bird.
+an ash is a tree.
+a yew is a tree.
+a hazel is a tree.
+an alder is a tree.
+an aspen is a tree.
+a sycamore is a tree.
+a chestnut is a tree.
+a cypress is a tree.
+a larch is a tree.
+a poplar is a tree.
+an iris is a flower.
+a peony is a flower.
+a marigold is a flower.
+a carnation is a flower.
+a jasmine is a flower.
+a violet is a flower.
+a hyacinth is a flower.
+a crocus is a flower.
+a magnolia is a flower.
+a hibiscus is a flower.
+
+# More counted parts, each read and checked by the reader before it was added.
+an elephant has 4 legs.
+a giraffe has 4 legs.
+a zebra has 4 legs.
+a rabbit has 4 legs.
+a mouse has 4 legs.
+an ostrich has 2 legs.
+an owl has 2 legs.
+a parrot has 2 legs.
+a kangaroo has 2 legs.
+a duck has 2 wings.
+an owl has 2 wings.
+an eagle has 2 wings.
+a monkey has 2 arms.
+an elephant has 1 trunk.
+a unicorn has 1 horn.
+a camel has 1 hump.

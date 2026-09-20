@@ -1,0 +1,370 @@
+# The statements of data/facts/61-animals.txt the cursor tree holds, one path each, written by build-seeds.mjs.
+koala {is} mammal
+sloth {is} mammal
+cheetah {is} mammal
+leopard {is} mammal
+jaguar {is} mammal
+lynx {is} mammal
+puma {is} mammal
+hyena {is} mammal
+zebra {is} mammal
+rhino {is} mammal
+hippo {is} mammal
+bison {is} mammal
+moose {is} mammal
+reindeer {is} mammal
+gazelle {is} mammal
+wildebeest {is} mammal
+llama {is} mammal
+alpaca {is} mammal
+donkey {is} mammal
+mule {is} mammal
+pony {is} mammal
+yak {is} mammal
+ox {is} mammal
+bull {is} mammal
+boar {is} mammal
+hedgehog {is} mammal
+mole {is} mammal
+squirrel {is} mammal
+beaver {is} mammal
+otter {is} mammal
+seal {is} mammal
+walrus {is} mammal
+orca {is} mammal
+manatee {is} mammal
+narwhal {is} mammal
+panda {is} mammal
+gorilla {is} mammal
+chimpanzee {is} mammal
+orangutan {is} mammal
+baboon {is} mammal
+lemur {is} mammal
+gibbon {is} mammal
+armadillo {is} mammal
+anteater {is} mammal
+raccoon {is} mammal
+skunk {is} mammal
+badger {is} mammal
+hamster {is} mammal
+rat {is} mammal
+shrew {is} mammal
+porcupine {is} mammal
+capybara {is} mammal
+wombat {is} mammal
+platypus {is} mammal
+meerkat {is} mammal
+mongoose {is} mammal
+coyote {is} mammal
+dingo {is} mammal
+warthog {is} mammal
+hare {is} mammal
+primate {is} mammal
+rodent {is} mammal
+marsupial {is} mammal
+stallion {is} horse
+hawk {is} bird
+falcon {is} bird
+vulture {is} bird
+condor {is} bird
+flamingo {is} bird
+pelican {is} bird
+gull {is} bird
+albatross {is} bird
+puffin {is} bird
+emu {is} bird
+goose {is} bird
+rooster {is} bird
+chicken {is} bird
+peacock {is} bird
+hummingbird {is} bird
+woodpecker {is} bird
+canary {is} bird
+raven {is} bird
+dove {is} bird
+toucan {is} bird
+macaw {is} bird
+kookaburra {is} bird
+cardinal {is} bird
+carp {is} fish
+pike {is} fish
+eel {is} fish
+swordfish {is} fish
+sailfish {is} fish
+piranha {is} fish
+seahorse {is} fish
+stingray {is} fish
+clownfish {is} fish
+cobra {is} reptile
+viper {is} reptile
+rattlesnake {is} reptile
+anaconda {is} reptile
+chameleon {is} reptile
+komodo {is} reptile
+alligator {is} reptile
+tortoise {is} reptile
+mamba {is} reptile
+newt {is} amphibian
+salamander {is} amphibian
+axolotl {is} amphibian
+grasshopper {is} insect
+dragonfly {is} insect
+ladybird {is} insect
+termite {is} insect
+cockroach {is} insect
+flea {is} insect
+hornet {is} insect
+bumblebee {is} insect
+scorpion {is} arachnid
+tick {is} arachnid
+tarantula {is} arachnid
+arachnid {is} animal
+octopus {is} mollusc
+squid {is} mollusc
+clam {is} mollusc
+oyster {is} mollusc
+slug {is} mollusc
+mollusc {is} animal
+crab {is} crustacean
+lobster {is} crustacean
+shrimp {is} crustacean
+krill {is} crustacean
+crustacean {is} animal
+starfish {is} animal
+jellyfish {is} animal
+sponge {is} animal
+coral {is} animal
+centipede {is} animal
+leech {is} worm
+wasp -> {leg:quantity(6)}
+bee -> {leg:quantity(6)}
+fly -> {leg:quantity(6)}
+beetle -> {leg:quantity(6)}
+butterfly -> {leg:quantity(6)}
+mosquito -> {leg:quantity(6)}
+grasshopper -> {leg:quantity(6)}
+ladybird -> {leg:quantity(6)}
+cockroach -> {leg:quantity(6)}
+scorpion -> {leg:quantity(8)}
+tick -> {leg:quantity(8)}
+tarantula -> {leg:quantity(8)}
+crab -> {leg:quantity(10)}
+lobster -> {leg:quantity(10)}
+shrimp -> {leg:quantity(10)}
+starfish -> {arm:quantity(5)}
+squid -> {arm:quantity(10)}
+chicken -> {leg:quantity(2)}
+duck -> {leg:quantity(2)}
+penguin -> {leg:quantity(2)}
+human -> {leg:quantity(2)}
+human -> {arm:quantity(2)}
+lizard -> {leg:quantity(4)}
+frog -> {leg:quantity(4)}
+turtle -> {leg:quantity(4)}
+tortoise -> {leg:quantity(4)}
+crocodile -> {leg:quantity(4)}
+sheep -> {leg:quantity(4)}
+pig -> {leg:quantity(4)}
+goat -> {leg:quantity(4)}
+deer -> {leg:quantity(4)}
+lion -> {leg:quantity(4)}
+tiger -> {leg:quantity(4)}
+bear -> {leg:quantity(4)}
+worm -> {leg:quantity(0)}
+fish -> {leg:quantity(0)}
+whale -> {leg:quantity(0)}
+dolphin -> {leg:quantity(0)}
+slug -> {leg:quantity(0)}
+jellyfish -> {leg:quantity(0)}
+snail -> {foot:quantity(1)}
+bird -> {wing:quantity(2)}
+bee -> {wing:quantity(4)}
+fly -> {wing:quantity(2)}
+butterfly -> {wing:quantity(4)}
+dragonfly -> {wing:quantity(4)}
+bat -> {wing:quantity(2)}
+spider -> {eye:quantity(8)}
+bee -> {eye:quantity(5)}
+cow -> {stomach:quantity(4)}
+horse -> {hoove:quantity(4)}
+cow -> {horn:quantity(2)}
+goat -> {horn:quantity(2)}
+deer -> {antler:quantity(2)}
+dog -> {teeth:quantity(42)}
+cat -> {teeth:quantity(30)}
+wolf {say} howl
+snake {say} hiss
+turkey {say} gobble
+goose {say} honk
+mouse {say} squeak
+pigeon {say} coo
+dove {say} coo
+sparrow {say} chirp
+chick {say} peep
+bear {say} growl
+tiger {say} roar
+fly {say} buzz
+mosquito {say} buzz
+parrot {say} squawk
+peregrine -> {is} -> fastest
+peregrine {is} bird
+sailfish -> {is} -> fastest
+ostrich -> {is} -> heaviest
+ostrich {is} bird
+anaconda -> {is} -> heaviest
+anaconda {is} snake
+crocodile -> {is} -> biggest
+crocodile {is} reptile
+komodo -> {is} -> biggest
+komodo {is} lizard
+sloth -> {is} -> slowest
+cheetah -> {is} -> fastest
+gorilla -> {is} -> biggest
+gorilla {is} primate
+kangaroo -> {is} -> biggest
+kangaroo {is} marsupial
+capybara -> {is} -> biggest
+capybara {is} rodent
+shrew -> {is} -> smallest
+albatross -> {is} -> biggest
+albatross {is} seabird
+tiger -> {is} -> biggest
+tiger {is} cat
+mosquito -> {is} -> deadliest
+mosquito {is} animal
+jungle {king} lion
+sloth -> {is} -> {speed} -> slow
+sloth -> {lazy}
+fox -> {clever}
+fox -> {sly}
+owl -> {wise}
+parrot -> {colorful}
+peacock -> {colorful}
+swan -> {is} -> {color} -> white
+dove -> {is} -> {color} -> white
+raven -> {is} -> {color} -> black
+crow -> {is} -> {color} -> black
+flamingo -> {is} -> {color} -> pink
+canary -> {is} -> {color} -> yellow
+cardinal -> {is} -> {color} -> red
+ladybird -> {is} -> {color} -> red
+frog -> {is} -> {color} -> green
+crocodile -> {is} -> {color} -> green
+elephant -> {is} -> {color} -> grey
+rhino -> {is} -> {color} -> grey
+tiger -> {is} -> {color} -> orange
+goldfish -> {is} -> {color} -> orange
+lion -> {strong}
+lion -> {dangerous}
+shark -> {dangerous}
+cobra -> {dangerous}
+cobra -> {poisonous}
+viper -> {poisonous}
+scorpion -> {poisonous}
+mosquito -> {dangerous}
+hippo -> {dangerous}
+tiger -> {wild}
+dog {is} pet
+cat {is} pet
+hamster {is} pet
+rabbit {is} pet
+goldfish {is} pet
+parrot {is} pet
+dog -> {tame}
+dog -> {loyal}
+monkey -> {playful}
+dolphin -> {clever}
+parrot -> {noisy}
+mule -> {stubborn}
+donkey -> {stubborn}
+rabbit -> {timid}
+ant -> {busy}
+bee -> {busy}
+ant -> {strong}
+tortoise -> {is} -> {speed} -> slow
+hare -> {is} -> {speed} -> fast
+falcon -> {is} -> {speed} -> fast
+whale -> {is} -> {size} -> big
+elephant -> {is} -> {size} -> big
+skunk -> {smelly}
+jellyfish -> {soft}
+hedgehog -> {prickly}
+zebra {has} stripes
+tiger {has} stripes
+wasp {has} stripes
+leopard {has} spots
+ladybird {has} spots
+hedgehog {has} spines
+porcupine {has} quills
+crab {has} claws
+lobster {has} claws
+scorpion {has} sting
+cobra {has} fangs
+turtle {has} shell
+tortoise {has} shell
+snail {has} shell
+oyster {has} shell
+oyster {has} pearl
+squid {has} ink
+penguin {has} flippers
+seal {has} flippers
+whale {has} blowhole
+shark {has} fin
+horse {has} mane
+lion {has} mane
+goat {has} beard
+walrus {has} tusks
+boar {has} tusks
+narwhal {has} tusk
+moose {has} antlers
+swan {young} cygnet
+goose {young} gosling
+deer {young} fawn
+owl {young} owlet
+eagle {young} eaglet
+hare {young} leveret
+seal {young} pup
+fish {young} fry
+fly {young} maggot
+insect {young} larva
+turtle {young} hatchling
+turkey {young} poult
+koala {like} eucalyptus
+squirrel {like} nuts
+mouse {like} cheese
+bear {like} honey
+cat {like} milk
+dog {like} bones
+horse {like} apples
+bird {like} seeds
+hedgehog {like} slugs
+anteater {like} ants
+giraffe {like} leaves
+hummingbird {like} nectar
+halibut {is} fish
+mackerel {is} fish
+sardine {is} fish
+herring {is} fish
+anchovy {is} fish
+catfish {is} fish
+perch {is} fish
+haddock {is} fish
+barracuda {is} fish
+flounder {is} fish
+gecko {is} reptile
+iguana {is} reptile
+python {is} reptile
+boa {is} reptile
+skink {is} reptile
+terrapin {is} reptile
+cricket {is} insect
+moth {is} insect
+cicada {is} insect
+firefly {is} insect
+gnat {is} insect
+mantis {is} insect
+louse {is} insect
+weevil {is} insect
+tadpole {is} amphibian
+bullfrog {is} amphibian
+caecilian {is} amphibian

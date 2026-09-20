@@ -1,0 +1,14 @@
+# Letters in order: the alphabet runs from a to z, so the letter after one is the next in the alphabet
+# and the letter before it the one earlier, a having none before and z none after.
+# The turns ask one letter each. Each scene tells what two or three people have, then asks the letters
+# after and before, what each one has, who has each thing, and yes or no.
+seed: 11-order
+turn: what letter comes after c? {eom} => | d
+turn: what letter comes before m? {eom} => | l
+turn: what letter comes after y? {eom} => | z
+turn: which letter is before b? {eom} => | a
+tom has a cat. ann has a dog. sam has a hat. => tom owns cat; ann owns dog; sam owns hat | what letter comes after c? = d; what letter comes before m? = l; what letter comes after y? = z; which letter is before b? = a; what letter comes after d? = e; what letter comes before d? = c; what does tom have? = cat; who has the dog? = ann; what does sam have? = hat; does ann have a cat? = no
+lily has a kite. max has a ball. => lily owns kite; max owns ball | what letter comes after k? = l; what letter comes before b? = a; what letter comes after m? = n; what letter comes before z? = y; which letter is before h? = g; what does lily have? = kite; who has the ball? = max; does max have a kite? = no; what letter comes after a? = b
+test: turn: what letter comes after p? {eom} => | q
+test: turn: what letter comes before k? {eom} => | j
+test: zoe has a pen. ben has a jar. => zoe owns pen; ben owns jar | what letter comes after p? = q; what letter comes before k? = j; what letter comes before p? = o; what letter comes after j? = k; what does zoe have? = pen; who has the jar? = ben; does zoe have a jar? = no; which letter is before q? = p

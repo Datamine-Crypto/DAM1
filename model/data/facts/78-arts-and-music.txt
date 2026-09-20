@@ -1,0 +1,269 @@
+# Arts and music: composers and their works, instruments, painters and paintings, dance, film and buildings.
+the composer of carmen is bizet.
+the composer of aida is verdi.
+the composer of rigoletto is verdi.
+the composer of tosca is puccini.
+the composer of turandot is puccini.
+the composer of fidelio is beethoven.
+the composer of lohengrin is wagner.
+the composer of parsifal is wagner.
+the composer of tannhauser is wagner.
+the composer of salome is strauss.
+the composer of elektra is strauss.
+the composer of norma is bellini.
+the composer of giselle is adam.
+the composer of coppelia is delibes.
+the composer of petrushka is stravinsky.
+the composer of bolero is ravel.
+the composer of finlandia is sibelius.
+the composer of the nutcracker is tchaikovsky.
+the composer of the firebird is stravinsky.
+the composer of the messiah is handel.
+the composer of the planets is holst.
+the composer of the creation is haydn.
+the composer of the eroica is beethoven.
+the composer of the pastoral is beethoven.
+the composer of the unfinished is schubert.
+the composer of the pathetique is tchaikovsky.
+the composer of the resurrection is mahler.
+the composer of the requiem is mozart.
+tchaikovsky is the composer of swan lake.
+mozart is the composer of the magic flute.
+mozart is the composer of don giovanni.
+verdi is the composer of la traviata.
+puccini is the composer of la boheme.
+puccini is the composer of madama butterfly.
+beethoven is the composer of fur elise.
+beethoven is the composer of the moonlight sonata.
+vivaldi is the composer of the four seasons.
+orff is the composer of carmina burana.
+grieg is the composer of peer gynt.
+debussy is the composer of clair de lune.
+bach is the composer of the brandenburg concertos.
+strauss is the composer of the blue danube.
+bernstein is the composer of west side story.
+carmen is an opera.
+aida is an opera.
+rigoletto is an opera.
+tosca is an opera.
+turandot is an opera.
+fidelio is an opera.
+lohengrin is an opera.
+parsifal is an opera.
+salome is an opera.
+giselle is a ballet.
+coppelia is a ballet.
+petrushka is a ballet.
+the nutcracker is a ballet.
+the firebird is a ballet.
+the eroica is a symphony.
+the pastoral is a symphony.
+the unfinished is a symphony.
+the pathetique is a symphony.
+the resurrection is a symphony.
+the messiah is an oratorio.
+the creation is an oratorio.
+the planets is a suite.
+an opera has singers.
+an opera has an orchestra.
+a ballet has dancers.
+a symphony has 4 movements.
+a musical has songs.
+mahler was a composer.
+mahler was austrian.
+dvorak was a composer.
+dvorak was czech.
+grieg was a composer.
+grieg was norwegian.
+sibelius was a composer.
+sibelius was finnish.
+bizet was a composer.
+bernstein was a composer.
+ravel was a composer.
+orff was a composer.
+morricone was a composer.
+beethoven was deaf.
+mozart was a prodigy.
+a violin is an instrument.
+a cello is an instrument.
+a harp is an instrument.
+a guitar is an instrument.
+a piano is an instrument.
+a flute is an instrument.
+a clarinet is an instrument.
+a saxophone is an instrument.
+a trumpet is an instrument.
+a drum is an instrument.
+a sitar is an instrument.
+a bagpipe is an instrument.
+a didgeridoo is an instrument.
+a flute is a woodwind.
+a clarinet is a woodwind.
+an oboe is a woodwind.
+a saxophone is a woodwind.
+a piccolo is a woodwind.
+a trumpet is made of brass.
+a trombone is made of brass.
+a tuba is made of brass.
+a drum is percussion.
+a cymbal is percussion.
+a xylophone is percussion.
+a piano has 88 keys.
+a guitar has 6 strings.
+a violin has 4 strings.
+a harp has 47 strings.
+a trumpet has 3 valves.
+a drum has a skin.
+a violin has a bow.
+a cello is bigger than a violin.
+a piccolo is smaller than a flute.
+a piccolo is the smallest woodwind.
+a sitar is indian.
+a bagpipe is scottish.
+a didgeridoo is australian.
+an orchestra has instruments.
+an orchestra has a conductor.
+a choir has singers.
+a quartet has 4 players.
+jazz is music.
+reggae is music.
+jazz is american.
+reggae is jamaican.
+flamenco is spanish.
+the tango is a dance.
+the waltz is a dance.
+the samba is a dance.
+flamenco is a dance.
+ballet is a dance.
+the tango is argentinian.
+the samba is brazilian.
+the waltz is austrian.
+a ballerina is a dancer.
+elvis is the same as presley.
+the beatles was a band.
+the beatles was english.
+the beatles has 4 members.
+hendrix was a guitarist.
+paganini was a violinist.
+leonardo is the painter of mona lisa.
+leonardo is the painter of the last supper.
+the painter of guernica is picasso.
+the painter of the scream is munch.
+the painter of the kiss is klimt.
+the painter of nighthawks is hopper.
+the painter of primavera is botticelli.
+the painter of the milkmaid is vermeer.
+the painter of the gleaners is millet.
+the painter of ophelia is millais.
+the painter of the ambassadors is holbein.
+the painter of the swing is fragonard.
+rembrandt is the painter of the night watch.
+velazquez is the painter of las meninas.
+hokusai is the painter of the great wave.
+cezanne is the painter of the card players.
+constable is the painter of the hay wain.
+turner is the painter of the fighting temeraire.
+seurat is the painter of la grande jatte.
+michelangelo is the painter of the sistine chapel.
+the sculptor of the thinker is rodin.
+the sculptor of the pieta is michelangelo.
+michelangelo is the sculptor of david.
+guernica is a painting.
+the scream is a painting.
+the kiss is a painting.
+nighthawks is a painting.
+primavera is a painting.
+the milkmaid is a painting.
+the gleaners is a painting.
+the ambassadors is a painting.
+the thinker is a sculpture.
+the pieta is a sculpture.
+the guggenheim is a museum.
+the guggenheim is in manhattan.
+manet was a painter.
+degas was a painter.
+klimt was a painter.
+magritte was a painter.
+miro was a painter.
+hopper was a painter.
+hokusai was a painter.
+constable was a painter.
+monet was an impressionist.
+renoir was an impressionist.
+degas was an impressionist.
+picasso was a cubist.
+braque was a cubist.
+dali was a surrealist.
+magritte was a surrealist.
+miro was a surrealist.
+munch was an expressionist.
+kandinsky was an expressionist.
+impressionism is a movement.
+cubism is a movement.
+surrealism is a movement.
+expressionism is a movement.
+the renaissance was a period.
+baroque is a style.
+gothic is a style.
+donatello was a sculptor.
+bernini was a sculptor.
+a painting is art.
+a sculpture is art.
+a portrait is a painting.
+a sculptor has a chisel.
+a gallery has paintings.
+the director of jaws is spielberg.
+the director of psycho is hitchcock.
+the director of avatar is cameron.
+the director of inception is nolan.
+the director of the godfather is coppola.
+the director of the shining is kubrick.
+spielberg is the director of jurassic park.
+lucas is the director of star wars.
+tarantino is the director of pulp fiction.
+kubrick was a director.
+scorsese is a director.
+tarantino is a director.
+nolan is a director.
+brando was an actor.
+hepburn was an actress.
+jaws is a film.
+shrek is a film.
+the godfather is a film.
+the shining is a film.
+jaws has a shark.
+hollywood has studios.
+bollywood is in mumbai.
+an oscar is an award.
+the oscars is a ceremony.
+pixar is a studio.
+mickey is a mouse.
+foster is an architect.
+brunelleschi was an architect.
+wren was an architect.
+gaudi is the architect of the sagrada familia.
+the architect of the parthenon is ictinus.
+pei is the architect of the louvre pyramid.
+the architect of the gherkin is foster.
+eiffel is the engineer of the eiffel tower.
+a cathedral is a church.
+a dome is a roof.
+an arch is a curve.
+a column is a pillar.
+a mosque has a dome.
+a mosque has a minaret.
+a gargoyle is a statue.
+
+# More instruments, each read and checked by the reader before it was added.
+a trombone is an instrument.
+a tuba is an instrument.
+an oboe is an instrument.
+a harmonica is an instrument.
+an accordion is an instrument.
+a banjo is an instrument.
+a ukulele is an instrument.
+a xylophone is an instrument.
+a tambourine is an instrument.
+an organ is an instrument.
+a bassoon is an instrument.
+a viola is an instrument.

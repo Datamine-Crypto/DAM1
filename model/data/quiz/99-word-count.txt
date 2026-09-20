@@ -1,0 +1,13 @@
+# Counting words: a sentence is written with words, counted one by one, so the words in a quoted
+# sentence are counted by the words between its quotation marks. The turns stay as single chat turns;
+# each scene tells who has what, then asks the words in many quoted sentences, some of them the
+# scene's own sentences, and the things.
+turn: how many words are in "the cat sat"? {eom} => | 3
+turn: how many words are in "i like red apples"? {eom} => | 4
+turn: how many words are in the sentence "dogs run"? {eom} => | 2
+turn: how many words are in "my little sister has a red kite"? {eom} => | 7
+tom has a red kite. ann has a cat. => tom owns kite; kite is red; ann owns cat | how many words are in "the cat sat"? = 3; how many words are in "i like red apples"? = 4; how many words are in the sentence "dogs run"? = 2; how many words are in "my little sister has a red kite"? = 7; how many words are in "tom has a red kite"? = 5; how many words are in the sentence "ann has a cat"? = 4; who has the kite? = tom; what color is the kite? = red; what does ann have? = cat
+sam has a big dog. lily has 2 birds. => sam owns dog; dog is big; 2 = 2; lily owns birds; birds is 2 | how many words are in "the big dog"? = 3; how many words are in the sentence "sam has a big dog"? = 5; how many words are in "lily has 2 birds"? = 4; how many words are in the sentence "dogs run"? = 2; how many words are in "the cat sat"? = 3; how many words are in "i like red apples"? = 4; how many birds does lily have? = 2; who has the dog? = sam; is the dog big? = yes
+test: zoe has a hat. ben has a hot cup. => zoe owns hat; ben owns cup; cup is hot | how many words are in "birds can fly high"? = 4; how many words are in the sentence "the sun is hot"? = 4; how many words are in "zoe has a hat"? = 4; how many words are in the sentence "ben has a hot cup"? = 5; how many words are in "a hot cup"? = 3; who has the hat? = zoe; what does ben have? = cup; is the cup hot? = yes
+test: turn: how many words are in "birds can fly high"? {eom} => | 4
+test: turn: how many words are in the sentence "the sun is hot"? {eom} => | 4

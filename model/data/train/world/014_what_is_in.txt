@@ -1,0 +1,4 @@
+# what is in the bag: find the bag, get what stands inside it.
+corn in bag. => bag -> corn | what is in the bag? = corn
+dax in vop. => vop -> dax | what is in the vop? = dax
+test: flib in mork. => mork -> flib | what is in the mork? = flib

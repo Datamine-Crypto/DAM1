@@ -1,0 +1,3 @@
+# mary went to the kitchen: went grabs mary, the kitchen appears and takes her.
+mary went to the kitchen. => kitchen:the(true) -> mary
+test: zorp went to the flib. => flib:the(true) -> zorp

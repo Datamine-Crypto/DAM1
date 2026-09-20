@@ -1,0 +1,16 @@
+# More qualities a thing joins: happy, sad, tired, hungry, angry, young, slow, wet, dry, clean,
+# dirty, full, empty, open, closed, loud, quiet; and a quality that is not there answers no.
+# Each line is a scene: four or five things each with a quality, then many questions (what has a
+# quality, does a thing have it, and its opposite or another quality, which answers no).
+tom is happy. ann is sad. the dog is tired. the cat is hungry. the man is angry. => tom is happy; ann is sad; dog is tired; cat is hungry; man is angry | who is happy? = tom; who is sad? = ann; what is hungry? = cat; what is tired? = dog; who is angry? = man; is the dog hungry? = no; is the dog tired? = yes; is the cat hungry? = yes; is tom sad? = no; is ann happy? = no; is the man happy? = no; is sam happy? = no
+the boy is young. the snail is slow. the road is wet. the towel is dry. the cup is clean. => boy is young; snail is slow; road is wet; towel is dry; cup is clean | who is young? = boy; what is slow? = snail; what is wet? = road; what is dry? = towel; what is clean? = cup; is the cup dirty? = no; is the cup clean? = yes; is the road dry? = no; is the towel wet? = no; is the snail young? = no
+the shoe is dirty. the glass is full. the box is empty. the door is open. => shoe is dirty; glass is full; box is empty; door is open | what is dirty? = shoe; what is full? = glass; what is empty? = box; what is open? = door; is the glass empty? = no; is the glass full? = yes; is the box full? = no; is the door open? = yes; is the door closed? = no; is the shoe clean? = no
+the window is closed. the music is loud. the room is quiet. the baby is happy. the grass is wet. => window is closed; music is loud; room is quiet; baby is happy; grass is wet | is the window open? = no; is the window closed? = yes; what is loud? = music; what is quiet? = room; is the baby sad? = no; who is happy? = baby; what is wet? = grass; is the music quiet? = no; is the room loud? = no; is the grass dry? = no
+the jar is empty. the street is wet. the bottle is empty. the bread is dry. => jar is empty; street is wet; bottle is empty; bread is dry | is the jar full? = no; is the bottle full? = no; is the jar empty? = yes; is the bottle empty? = yes; what is empty? = bottle, jar; what is wet? = street; is the street dry? = no; what is dry? = bread; is the bread wet? = no
+turn: tom is tired ann is happy is tom tired {eom} => tom is tired; ann is happy | yes
+turn: the door is open the box is full is the door closed {eom} => door is open; box is full | no
+turn: the box is closed the cup is clean is the box open {eom} => box is closed; cup is clean | no
+turn: the shop is closed the road is wet is the shop open {eom} => shop is closed; road is wet | no
+turn: the window is open the room is quiet is the window closed {eom} => window is open; room is quiet | no
+test: sam is hungry. ben is tired. the floor is wet. the cup is empty. => sam is hungry; ben is tired; floor is wet; cup is empty | who is hungry? = sam; who is tired? = ben; is ben hungry? = no; is sam tired? = no; what is wet? = floor; is the floor dry? = no; is the cup full? = no; is the cup empty? = yes; what is empty? = cup
+test: turn: the gate is closed the pond is full is the gate open {eom} => gate is closed; pond is full | no

@@ -1,0 +1,280 @@
+# Sports and games: what each one is, where and with what it is played, who plays it, and famous players.
+football is a sport.
+basketball is a sport.
+baseball is a sport.
+tennis is a sport.
+golf is a sport.
+cricket is a sport.
+rugby is a sport.
+hockey is a sport.
+volleyball is a sport.
+boxing is a sport.
+wrestling is a sport.
+swimming is a sport.
+running is a sport.
+cycling is a sport.
+rowing is a sport.
+sailing is a sport.
+skiing is a sport.
+skating is a sport.
+surfing is a sport.
+climbing is a sport.
+diving is a sport.
+fencing is a sport.
+archery is a sport.
+judo is a sport.
+karate is a sport.
+taekwondo is a sport.
+gymnastics is a sport.
+athletics is a sport.
+badminton is a sport.
+squash is a sport.
+polo is a sport.
+lacrosse is a sport.
+handball is a sport.
+netball is a sport.
+softball is a sport.
+bowling is a sport.
+curling is a sport.
+snowboarding is a sport.
+skateboarding is a sport.
+triathlon is a sport.
+sumo is a sport.
+kickboxing is a sport.
+weightlifting is a sport.
+canoeing is a sport.
+kayaking is a sport.
+bobsleigh is a sport.
+luge is a sport.
+biathlon is a sport.
+pentathlon is a sport.
+decathlon is a sport.
+racing is a sport.
+hurling is a sport.
+kabaddi is a sport.
+parkour is a sport.
+motocross is a sport.
+karting is a sport.
+windsurfing is a sport.
+paragliding is a sport.
+skydiving is a sport.
+orienteering is a sport.
+soccer is the same as football.
+football is the most popular sport.
+football is played with a ball.
+tennis is played with a racket.
+golf is played with a club.
+cricket is played with a bat.
+baseball is played with a bat.
+hockey is played with a stick.
+badminton is played with a shuttlecock.
+volleyball is played with a ball.
+basketball is played with a ball.
+rugby is played with a ball.
+polo is played with a mallet.
+lacrosse is played with a stick.
+squash is played with a racket.
+snooker is played with a cue.
+billiards is played with a cue.
+curling is played with stones.
+hurling is played with a hurley.
+a football is a ball.
+a basketball is a ball.
+a baseball is a ball.
+a volleyball is a ball.
+a racket has strings.
+a surfboard is a board.
+a javelin is a spear.
+a discus is a disc.
+a football team has 11 players.
+a cricket team has 11 players.
+a hockey team has 11 players.
+a rugby team has 15 players.
+a basketball team has 5 players.
+a baseball team has 9 players.
+a volleyball team has 6 players.
+a handball team has 7 players.
+a netball team has 7 players.
+a polo team has 4 players.
+a lacrosse team has 10 players.
+a futsal team has 5 players.
+a kabaddi team has 7 players.
+a curling team has 4 players.
+a relay team has 4 runners.
+football is on a pitch.
+cricket is on a pitch.
+rugby is on a pitch.
+hockey is on a pitch.
+tennis is on a court.
+basketball is on a court.
+badminton is on a court.
+volleyball is on a court.
+squash is on a court.
+golf is on a course.
+baseball is on a diamond.
+boxing is in a ring.
+sumo is in a ring.
+wrestling is on a mat.
+judo is on a mat.
+skiing is on snow.
+snowboarding is on snow.
+skating is on ice.
+curling is on ice.
+swimming is in a pool.
+diving is in a pool.
+surfing is on waves.
+sailing is on water.
+rowing is on water.
+athletics is on a track.
+cycling is on a road.
+bowling is in an alley.
+polo is on a field.
+climbing is on rock.
+a stadium has seats.
+a pitch has 2 goals.
+a goal has a net.
+a tennis court has a net.
+a golf course has 18 holes.
+a referee has a whistle.
+a team has a captain.
+a football match has 90 minutes.
+there are 2 halves in a football match.
+a wicket has 3 stumps.
+a marathon is a race.
+a marathon is the longest race.
+a sprint is a race.
+a medal is a prize.
+a trophy is a prize.
+gold is the first prize.
+silver is the second prize.
+bronze is the third prize.
+a jockey is a rider.
+a boxer has gloves.
+a draw is the same as a tie.
+a boxer is a fighter.
+a sprinter is a runner.
+the olympics is a competition.
+the olympics has medals.
+the olympics has a torch.
+the olympic flag has 5 rings.
+the birthplace of the olympics is greece.
+the olympics is the biggest competition.
+the paralympics is a competition.
+wimbledon is a tournament.
+wimbledon is in london.
+wimbledon has grass.
+wimbledon is the oldest tournament.
+the sport of wimbledon is tennis.
+tennis has 4 grand slams.
+the masters is a tournament.
+the masters is in augusta.
+the sport of the masters is golf.
+the derby is a race.
+the derby is in epsom.
+the ashes is a competition.
+the sport of the ashes is cricket.
+the nba is a league.
+the nba is american.
+the sport of the nba is basketball.
+the mlb is a league.
+the sport of the mlb is baseball.
+the nhl is a league.
+the sport of the nhl is hockey.
+chess is a game.
+chess has 2 players.
+chess has 32 pieces.
+a chessboard has 64 squares.
+checkmate is a win.
+checkers is a game.
+checkers is the same as draughts.
+backgammon is a game.
+a deck has 52 cards.
+a deck has 4 suits.
+a suit has 13 cards.
+a die has 6 faces.
+a domino is a tile.
+dominoes is a game.
+monopoly is a game.
+scrabble is a game.
+mahjong is a game.
+shogi is a game.
+sudoku is a puzzle.
+sudoku has 81 cells.
+a crossword is a puzzle.
+a jigsaw is a puzzle.
+tetris is a game.
+playstation is a console.
+a yoyo is a toy.
+a kite is a toy.
+a doll is a toy.
+lego is a toy.
+darts is a game.
+a dartboard has 20 numbers.
+snooker is a game.
+bowling has 10 pins.
+beckham was a footballer.
+beckham is english.
+zidane was a footballer.
+zidane is french.
+mbappe is a footballer.
+neymar is a footballer.
+pele has 3 world cups.
+maradona has a world cup.
+messi has a world cup.
+tyson was a boxer.
+tyson is american.
+pacquiao was a boxer.
+pacquiao is filipino.
+bolt is the fastest man.
+bolt has 8 gold medals.
+owens was a sprinter.
+owens was american.
+kipchoge is a runner.
+kipchoge is kenyan.
+phelps has 28 medals.
+the sport of federer is tennis.
+federer has 20 grand slams.
+the sport of nadal is tennis.
+nadal has 22 grand slams.
+the sport of djokovic is tennis.
+the sport of serena is tennis.
+serena has 23 grand slams.
+the sport of jordan is basketball.
+jordan has 6 championships.
+the sport of lebron is basketball.
+bradman was a cricketer.
+bradman was australian.
+tendulkar was a cricketer.
+tendulkar is indian.
+merckx was a cyclist.
+merckx is belgian.
+schumacher has 7 titles.
+senna was a driver.
+senna was brazilian.
+senna has 3 titles.
+verstappen is a driver.
+verstappen is dutch.
+woods is a golfer.
+woods is american.
+mcilroy is a golfer.
+mcilroy is irish.
+biles is a gymnast.
+biles is american.
+comaneci was a gymnast.
+comaneci is romanian.
+carlsen is a grandmaster.
+carlsen is norwegian.
+kasparov is a grandmaster.
+kasparov is russian.
+fischer was a grandmaster.
+fischer was american.
+anand is a grandmaster.
+anand is indian.
+
+# More games, each read and checked by the reader before it was added.
+go is a game.
+poker is a game.
+bingo is a game.
+solitaire is a game.
+tag is a game.
+charades is a game.

@@ -1,0 +1,3 @@
+# a plim goes to a quorn: a makes a new thing and keeps the tag.
+a plim goes to a quorn. => quorn:a(true) -> plim:a(true)
+test: a zorp goes to a flib. => flib:a(true) -> zorp:a(true)

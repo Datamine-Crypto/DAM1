@@ -1,0 +1,16 @@
+# The middle number: put some numbers in order from the smallest to the biggest, and the one in the
+# middle is the middle number, or median.
+# The turns ask one middle number each. Each scene tells how many of one thing three or five people have,
+# then asks middle numbers, each count, who has the most and the fewest, and a total.
+turn: what is the middle number of 3, 9 and 5? => | 5
+turn: what is the median of 10, 2 and 7? => | 7
+turn: what is the median of 1, 8, 4, 6 and 2? => | 4
+turn: what is the middle number of 20, 30 and 25? => | 25
+turn: what is the middle number of 7, 2, 9, 4 and 5? => | 5
+turn: what is the median of 21, 25, 22, 24 and 23? => | 23
+turn: what is the middle number of 16, 12, 18, 10 and 14? => | 14
+tom has 3 apples. ann has 9 apples. sam has 5 apples. => tom -> {has} -> apple:quantity(3); {number:value(3)}; ann -> {has} -> apple:quantity(9); {number:value(9)}; sam -> {has} -> apple:quantity(5); {number:value(5)} | what is the middle number of 3, 9 and 5? = 5; what is the median of 10, 2 and 7? = 7; what is the median of 1, 8, 4, 6 and 2? = 4; how many apples does tom have? = 3; how many apples does ann have? = 9; how many apples does sam have? = 5; who has the most apples? = ann; who has the fewest apples? = tom; how many apples do tom and ann have? = 12; what is the middle number of 20, 30 and 25? = 25; what is the median of 3, 9 and 5? = 5
+kim has 7 cards. joe has 2 cards. lily has 9 cards. max has 4 cards. sue has 5 cards. => kim -> {has} -> card:quantity(7); {number:value(7)}; joe -> {has} -> card:quantity(2); {number:value(2)}; lily -> {has} -> card:quantity(9); {number:value(9)}; max -> {has} -> card:quantity(4); {number:value(4)}; sue -> {has} -> card:quantity(5); {number:value(5)} | what is the middle number of 7, 2, 9, 4 and 5? = 5; what is the median of 21, 25, 22, 24 and 23? = 23; what is the middle number of 16, 12, 18, 10 and 14? = 14; how many cards does kim have? = 7; how many cards does lily have? = 9; who has the most cards? = lily; who has the fewest cards? = joe; how many cards do kim and joe have? = 9; what is the median of 7, 2, 9, 4 and 5? = 5; how many cards does sue have? = 5
+test: turn: what is the median of 9, 3 and 6? => | 6
+test: turn: what is the middle number of 11, 15, 12, 14 and 13? => | 13
+test: zoe has 9 shells. ben has 3 shells. tim has 6 shells. => zoe -> {has} -> shell:quantity(9); {number:value(9)}; ben -> {has} -> shell:quantity(3); {number:value(3)}; tim -> {has} -> shell:quantity(6); {number:value(6)} | what is the median of 9, 3 and 6? = 6; what is the middle number of 11, 15, 12, 14 and 13? = 13; how many shells does ben have? = 3; who has the most shells? = zoe; who has the fewest shells? = ben; how many shells do zoe and ben have? = 12; what is the middle number of 9, 3 and 6? = 6; how many shells does tim have? = 6

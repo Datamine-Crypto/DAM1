@@ -1,0 +1,20 @@
+# Vowels: the letters a, e, i, o and u are vowels and the other letters are consonants, so the vowels
+# in a word are counted by its letters that are vowels. The turns stay as single chat turns; each
+# scene tells things with short names, then asks vowels and consonants in many words, which letters
+# are vowels, and the things.
+seed: 11-order
+tom has an apple. ann has a banana. sam has a cat. => tom owns apple; ann owns banana; sam owns cat | how many vowels are in the word apple? = 2; how many vowels are in banana? = 3; how many consonants are in the word cat? = 2; is e a vowel? = yes; is t a vowel? = no; how many vowels are in cat? = 1; how many consonants are in banana? = 3; how many consonants are in apple? = 3; what does tom have? = apple; who has the banana? = ann
+the sun is hot. the tree is tall. the bed is big. => sun is hot; tree is tall; bed is big | how many consonants are in sun? = 2; how many consonants are in tree? = 2; how many vowels are in tiger? = 2; how many consonants are in bed? = 2; how many vowels are in sun? = 1; how many vowels are in tree? = 2; is a a vowel? = yes; is b a vowel? = no; what is hot? = sun; what is tall? = tree
+turn: how many vowels are in the word apple? {eom} => | 2
+turn: how many vowels are in banana? {eom} => | 3
+turn: how many consonants are in the word cat? {eom} => | 2
+turn: is e a vowel? {eom} => | yes
+turn: is t a vowel? {eom} => | no
+turn: how many consonants are in sun? {eom} => | 2
+turn: how many consonants are in tree? {eom} => | 2
+turn: how many vowels are in tiger? {eom} => | 2
+turn: how many consonants are in bed? {eom} => | 2
+test: ben has an orange. zoe has a dog. => ben owns orange; zoe owns dog | how many vowels are in the word orange? = 3; how many consonants are in dog? = 2; is o a vowel? = yes; how many vowels are in dog? = 1; how many consonants are in orange? = 3; is k a vowel? = no; who has the dog? = zoe; what does ben have? = orange
+test: turn: how many vowels are in the word orange? {eom} => | 3
+test: turn: how many consonants are in dog? {eom} => | 2
+test: turn: is o a vowel? {eom} => | yes

@@ -1,0 +1,27 @@
+# The statements of data/facts/18-comparison-forms.txt the cursor tree holds, one path each, written by build-seeds.mjs.
+taller {opposite} shorter
+bigger {opposite} smaller
+older {opposite} younger
+faster {opposite} slower
+higher {opposite} lower
+hotter {opposite} colder
+heavier {opposite} lighter
+taller {top} tallest
+bigger {top} biggest
+older {top} oldest
+higher {top} highest
+denser {top} densest
+heavier {top} heaviest
+lighter {top} lightest
+longer {top} longest
+shorter {top} shortest
+smaller {top} smallest
+younger {top} youngest
+faster {top} fastest
+slower {top} slowest
+lower {top} lowest
+hotter {top} hottest
+colder {top} coldest
+heavier {more} weight
+lighter {less} weight
+longer {opposite} shorter

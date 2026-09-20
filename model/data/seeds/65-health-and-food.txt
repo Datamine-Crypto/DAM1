@@ -1,0 +1,49 @@
+# The statements of data/facts/65-health-and-food.txt the cursor tree holds, one path each, written by build-seeds.mjs.
+person {need} sleep
+water -> {good}
+sleep -> {good}
+exercise -> {good}
+fruit -> {good}
+sugar -> {bad}
+smoking -> {bad}
+alcohol -> {bad}
+salt -> {bad}
+fat -> {bad}
+apple {has} vitamins
+orange {has} vitamins
+lemon {has} vitamins
+milk {has} calcium
+cheese {has} calcium
+meat {has} protein
+fish {has} protein
+egg {has} protein
+bread {has} carbohydrates
+rice {has} carbohydrates
+pasta {has} carbohydrates
+potato {has} carbohydrates
+butter {has} fat
+oil {has} fat
+sugar {has} calories
+person -> {sen:quantity(5)}
+heart {is} muscle
+brain -> {soft}
+bone -> {hard}
+person -> {bone:quantity(206)}
+child -> {teeth:quantity(20)}
+adult -> {teeth:quantity(32)}
+dentist {help} teeth
+surgeon {help} people
+hospital {has} doctors
+hospital {has} beds
+pharmacy {has} medicine
+aspirin {is} medicine
+penicillin {is} medicine
+vaccine {is} medicine
+virus -> {is} -> {size} -> small
+bacterium -> {is} -> {size} -> small
+flu {is} illness
+malaria {is} illness
+cancer {is} illness
+fever -> {is} -> {temperature} -> hot
+cough {is} sound
+wound {need} bandage

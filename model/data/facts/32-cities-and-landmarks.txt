@@ -1,0 +1,528 @@
+# Cities and landmarks: the big cities and the country each is in, and famous places and where they are.
+london is a city.
+london is in england.
+paris is a city.
+paris is in france.
+berlin is a city.
+berlin is in germany.
+madrid is a city.
+madrid is in spain.
+rome is a city.
+rome is in italy.
+vienna is a city.
+vienna is in austria.
+amsterdam is a city.
+amsterdam is in netherlands.
+brussels is a city.
+brussels is in belgium.
+lisbon is a city.
+lisbon is in portugal.
+dublin is a city.
+dublin is in ireland.
+athens is a city.
+athens is in greece.
+warsaw is a city.
+warsaw is in poland.
+prague is a city.
+prague is in czechia.
+budapest is a city.
+budapest is in hungary.
+stockholm is a city.
+stockholm is in sweden.
+oslo is a city.
+oslo is in norway.
+copenhagen is a city.
+copenhagen is in denmark.
+helsinki is a city.
+helsinki is in finland.
+moscow is a city.
+moscow is in russia.
+kyiv is a city.
+kyiv is in ukraine.
+istanbul is a city.
+istanbul is in turkey.
+barcelona is a city.
+barcelona is in spain.
+seville is a city.
+seville is in spain.
+cordoba is a city.
+cordoba is in spain.
+milan is a city.
+milan is in italy.
+venice is a city.
+venice is in italy.
+florence is a city.
+florence is in italy.
+naples is a city.
+naples is in italy.
+pisa is a city.
+pisa is in italy.
+pompeii is a city.
+pompeii is in italy.
+munich is a city.
+munich is in germany.
+hamburg is a city.
+hamburg is in germany.
+cologne is a city.
+cologne is in germany.
+porto is a city.
+porto is in portugal.
+lyon is a city.
+lyon is in france.
+marseille is a city.
+marseille is in france.
+geneva is a city.
+geneva is in switzerland.
+zurich is a city.
+zurich is in switzerland.
+edinburgh is a city.
+edinburgh is in scotland.
+glasgow is a city.
+glasgow is in scotland.
+manchester is a city.
+manchester is in england.
+liverpool is a city.
+liverpool is in england.
+cardiff is a city.
+cardiff is in wales.
+antwerp is a city.
+antwerp is in belgium.
+krakow is a city.
+krakow is in poland.
+petersburg is a city.
+petersburg is in russia.
+bucharest is a city.
+bucharest is in romania.
+belgrade is a city.
+belgrade is in serbia.
+tokyo is a city.
+tokyo is in japan.
+osaka is a city.
+osaka is in japan.
+kyoto is a city.
+kyoto is in japan.
+beijing is a city.
+beijing is in china.
+shanghai is a city.
+shanghai is in china.
+guangzhou is a city.
+guangzhou is in china.
+shenzhen is a city.
+shenzhen is in china.
+lhasa is a city.
+lhasa is in china.
+seoul is a city.
+seoul is in korea.
+pyongyang is a city.
+pyongyang is in korea.
+taipei is a city.
+taipei is in taiwan.
+manila is a city.
+manila is in philippines.
+jakarta is a city.
+jakarta is in indonesia.
+bangkok is a city.
+bangkok is in thailand.
+hanoi is a city.
+hanoi is in vietnam.
+saigon is a city.
+saigon is in vietnam.
+singapore is a city.
+delhi is a city.
+delhi is in india.
+mumbai is a city.
+mumbai is in india.
+kolkata is a city.
+kolkata is in india.
+bangalore is a city.
+bangalore is in india.
+agra is a city.
+agra is in india.
+karachi is a city.
+karachi is in pakistan.
+lahore is a city.
+lahore is in pakistan.
+dhaka is a city.
+dhaka is in bangladesh.
+kathmandu is a city.
+kathmandu is in nepal.
+colombo is a city.
+colombo is in asia.
+tehran is a city.
+tehran is in iran.
+baghdad is a city.
+baghdad is in iraq.
+damascus is a city.
+damascus is in syria.
+beirut is a city.
+beirut is in lebanon.
+jerusalem is a city.
+jerusalem is in israel.
+arabia is a peninsula.
+arabia is in asia.
+riyadh is a city.
+riyadh is in arabia.
+mecca is a city.
+mecca is in arabia.
+dubai is a city.
+dubai is in emirates.
+yangon is a city.
+yangon is in myanmar.
+cairo is a city.
+cairo is in egypt.
+alexandria is a city.
+alexandria is in egypt.
+giza is a city.
+giza is in egypt.
+lagos is a city.
+nairobi is a city.
+nairobi is in kenya.
+johannesburg is a city.
+johannesburg is in africa.
+pretoria is a city.
+pretoria is in africa.
+casablanca is a city.
+casablanca is in morocco.
+rabat is a city.
+rabat is in morocco.
+kinshasa is a city.
+kinshasa is in congo.
+timbuktu is a city.
+timbuktu is in mali.
+chicago is a city.
+chicago is in usa.
+houston is a city.
+houston is in usa.
+philadelphia is a city.
+philadelphia is in usa.
+miami is a city.
+miami is in usa.
+atlanta is a city.
+atlanta is in usa.
+boston is a city.
+boston is in usa.
+seattle is a city.
+seattle is in usa.
+washington is a city.
+washington is in usa.
+honolulu is a city.
+honolulu is in hawaii.
+toronto is a city.
+toronto is in canada.
+montreal is a city.
+montreal is in canada.
+vancouver is a city.
+vancouver is in canada.
+mexico is a city.
+guadalajara is a city.
+guadalajara is in mexico.
+havana is a city.
+havana is in cuba.
+kingston is a city.
+kingston is in jamaica.
+santiago is a city.
+santiago is in chile.
+lima is a city.
+lima is in peru.
+bogota is a city.
+bogota is in colombia.
+brasilia is a city.
+brasilia is in brazil.
+rio is a city.
+rio is in brazil.
+panama is a city.
+guatemala is a city.
+sydney is a city.
+sydney is in australia.
+melbourne is a city.
+melbourne is in australia.
+brisbane is a city.
+brisbane is in australia.
+perth is a city.
+perth is in australia.
+auckland is a city.
+auckland is in oceania.
+tokyo is the largest city.
+tokyo is the largest city of asia.
+moscow is the largest city of europe.
+lagos is the largest city of africa.
+lagos is the largest city of nigeria.
+istanbul is the largest city of turkey.
+sydney is the largest city of australia.
+auckland is the largest city of new zealand.
+mumbai is the largest city of india.
+shanghai is the largest city of china.
+karachi is the largest city of pakistan.
+saigon is the largest city of vietnam.
+dubai is the largest city of emirates.
+johannesburg is the largest city of south africa.
+casablanca is the largest city of morocco.
+toronto is the largest city of canada.
+zurich is the largest city of switzerland.
+the colosseum is an amphitheater.
+the pantheon is a temple.
+the pantheon is in rome.
+the louvre is a museum.
+the louvre is in paris.
+the louvre is the largest museum.
+versailles is a palace.
+versailles is in france.
+chambord is a castle.
+chambord is in france.
+the sphinx is a statue.
+the sphinx is in egypt.
+the pyramids are tombs.
+karnak is a temple.
+karnak is in egypt.
+the alhambra is a palace.
+the alhambra is in spain.
+the escorial is a palace.
+the escorial is in spain.
+the prado is a museum.
+the prado is in madrid.
+the mezquita is a mosque.
+the mezquita is in cordoba.
+the hermitage is a museum.
+the hermitage is in petersburg.
+the bolshoi is a theater.
+the bolshoi is in moscow.
+the kremlin is a fortress.
+the uffizi is a museum.
+the uffizi is in florence.
+the rialto is a bridge.
+the rialto is in venice.
+the duomo is a cathedral.
+the duomo is in milan.
+pisa has a tower.
+the tate is a museum.
+the tate is in london.
+buckingham is a palace.
+buckingham is in london.
+westminster is in london.
+the shard is a tower.
+the shard is in london.
+windsor is a castle.
+windsor is in england.
+stonehenge is a monument.
+stonehenge is in england.
+edinburgh has a castle.
+the parthenon is a temple.
+the acropolis is a citadel.
+the reichstag is a building.
+the reichstag is in berlin.
+the pergamon is a museum.
+the pergamon is in berlin.
+neuschwanstein is a castle.
+neuschwanstein is in germany.
+schonbrunn is a palace.
+schonbrunn is in vienna.
+the atomium is a monument.
+the atomium is in brussels.
+the rijksmuseum is a museum.
+the rijksmuseum is in amsterdam.
+the tivoli is a park.
+the tivoli is in copenhagen.
+topkapi is a palace.
+topkapi is in istanbul.
+the bosphorus is a strait.
+the bosphorus is in istanbul.
+petra is a city.
+petra is in jordan.
+masada is a fortress.
+masada is in israel.
+the kaaba is a shrine.
+the kaaba is in mecca.
+angkor is a temple.
+angkor is in cambodia.
+borobudur is a temple.
+borobudur is in indonesia.
+the shwedagon is a pagoda.
+the shwedagon is in yangon.
+the potala is a palace.
+the potala is in lhasa.
+himeji is a castle.
+himeji is in japan.
+the merlion is a statue.
+the merlion is in singapore.
+the petronas are towers.
+the petronas are in malaysia.
+suez is a canal.
+suez is in egypt.
+the smithsonian is a museum.
+the smithsonian is in washington.
+the capitol is a building.
+the capitol is in washington.
+rushmore is a monument.
+rushmore is in usa.
+yellowstone is a park.
+yellowstone is in usa.
+california is a state.
+california is in usa.
+texas is a state.
+texas is in usa.
+florida is a state.
+florida is in usa.
+alaska is a state.
+alaska is in usa.
+hawaii is a state.
+hawaii is in usa.
+yosemite is a park.
+yosemite is in california.
+alcatraz is a prison.
+alcatraz is in california.
+hollywood is in california.
+the alamo is a fort.
+the alamo is in texas.
+manhattan is an island.
+manhattan is in usa.
+broadway is a street.
+broadway is in manhattan.
+toronto has a tower.
+the sugarloaf is a mountain.
+the sugarloaf is in rio.
+the moai are statues.
+the moai are in chile.
+uluru is a rock.
+uluru is in australia.
+the serengeti is a park.
+the serengeti is in tanzania.
+the kruger is a park.
+the kruger is in africa.
+
+# More cities, each a city and in its country, read and checked by the reader before they were added.
+bern is a city.
+bern is in switzerland.
+accra is a city.
+accra is in ghana.
+dakar is a city.
+dakar is in senegal.
+ankara is a city.
+ankara is in turkey.
+izmir is a city.
+izmir is in turkey.
+quito is a city.
+quito is in ecuador.
+caracas is a city.
+caracas is in venezuela.
+chennai is a city.
+chennai is in india.
+hyderabad is a city.
+hyderabad is in india.
+pune is a city.
+pune is in india.
+nagoya is a city.
+nagoya is in japan.
+sapporo is a city.
+sapporo is in japan.
+wuhan is a city.
+wuhan is in china.
+chengdu is a city.
+chengdu is in china.
+adelaide is a city.
+adelaide is in australia.
+calgary is a city.
+calgary is in canada.
+ottawa is a city.
+ottawa is in canada.
+quebec is a city.
+quebec is in canada.
+dallas is a city.
+dallas is in usa.
+denver is a city.
+denver is in usa.
+detroit is a city.
+detroit is in usa.
+toulouse is a city.
+toulouse is in france.
+bordeaux is a city.
+bordeaux is in france.
+frankfurt is a city.
+frankfurt is in germany.
+stuttgart is a city.
+stuttgart is in germany.
+dresden is a city.
+dresden is in germany.
+leipzig is a city.
+leipzig is in germany.
+rotterdam is a city.
+rotterdam is in netherlands.
+valencia is a city.
+valencia is in spain.
+bilbao is a city.
+bilbao is in spain.
+turin is a city.
+turin is in italy.
+genoa is a city.
+genoa is in italy.
+bologna is a city.
+bologna is in italy.
+palermo is a city.
+palermo is in italy.
+gdansk is a city.
+gdansk is in poland.
+riga is a city.
+riga is in latvia.
+tallinn is a city.
+tallinn is in estonia.
+vilnius is a city.
+vilnius is in lithuania.
+minsk is a city.
+minsk is in belarus.
+sofia is a city.
+sofia is in bulgaria.
+zagreb is a city.
+zagreb is in croatia.
+ljubljana is a city.
+ljubljana is in slovenia.
+bratislava is a city.
+bratislava is in slovakia.
+tbilisi is a city.
+tbilisi is in georgia.
+yerevan is a city.
+yerevan is in armenia.
+baku is a city.
+baku is in azerbaijan.
+tashkent is a city.
+tashkent is in uzbekistan.
+almaty is a city.
+almaty is in kazakhstan.
+doha is a city.
+doha is in qatar.
+muscat is a city.
+muscat is in oman.
+amman is a city.
+amman is in jordan.
+khartoum is a city.
+khartoum is in sudan.
+tunis is a city.
+tunis is in tunisia.
+marrakesh is a city.
+marrakesh is in morocco.
+mombasa is a city.
+mombasa is in kenya.
+kampala is a city.
+kampala is in uganda.
+kigali is a city.
+kigali is in rwanda.
+harare is a city.
+harare is in zimbabwe.
+lusaka is a city.
+lusaka is in zambia.
+luanda is a city.
+luanda is in angola.
+maputo is a city.
+maputo is in mozambique.
+windhoek is a city.
+windhoek is in namibia.
+montevideo is a city.
+montevideo is in uruguay.
+asuncion is a city.
+asuncion is in paraguay.
+medellin is a city.
+medellin is in colombia.
+cusco is a city.
+cusco is in peru.
+manaus is a city.
+manaus is in brazil.
+recife is a city.
+recife is in brazil.

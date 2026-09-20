@@ -1,0 +1,556 @@
+# Countries: what each one is, the continent it is in, and its capital.
+algeria is a country.
+algeria is in africa.
+algiers is the capital of algeria.
+angola is a country.
+angola is in africa.
+luanda is the capital of angola.
+benin is a country.
+benin is in africa.
+botswana is a country.
+botswana is in africa.
+gaborone is the capital of botswana.
+ouagadougou is the capital of burkina faso.
+burundi is a country.
+burundi is in africa.
+gitega is the capital of burundi.
+cameroon is a country.
+cameroon is in africa.
+yaounde is the capital of cameroon.
+praia is the capital of cape verde.
+chad is a country.
+chad is in africa.
+ndjamena is the capital of chad.
+comoros is a country.
+comoros is in africa.
+moroni is the capital of comoros.
+congo is a country.
+congo is in africa.
+kinshasa is the capital of congo.
+djibouti is a country.
+djibouti is in africa.
+egypt is a country.
+malabo is the capital of equatorial guinea.
+eritrea is a country.
+eritrea is in africa.
+asmara is the capital of eritrea.
+eswatini is a country.
+eswatini is in africa.
+mbabane is the capital of eswatini.
+ethiopia is a country.
+gabon is a country.
+gabon is in africa.
+libreville is the capital of gabon.
+gambia is a country.
+gambia is in africa.
+banjul is the capital of gambia.
+ghana is a country.
+ghana is in africa.
+accra is the capital of ghana.
+guinea is a country.
+guinea is in africa.
+conakry is the capital of guinea.
+bissau is the capital of guinea bissau.
+yamoussoukro is the capital of ivory coast.
+kenya is a country.
+lesotho is a country.
+lesotho is in africa.
+maseru is the capital of lesotho.
+liberia is a country.
+liberia is in africa.
+monrovia is the capital of liberia.
+libya is a country.
+libya is in africa.
+tripoli is the capital of libya.
+madagascar is a country.
+madagascar is in africa.
+antananarivo is the capital of madagascar.
+malawi is a country.
+malawi is in africa.
+lilongwe is the capital of malawi.
+mali is a country.
+mali is in africa.
+bamako is the capital of mali.
+mauritania is a country.
+mauritania is in africa.
+nouakchott is the capital of mauritania.
+mauritius is a country.
+mauritius is in africa.
+morocco is a country.
+rabat is the capital of morocco.
+mozambique is a country.
+mozambique is in africa.
+maputo is the capital of mozambique.
+namibia is a country.
+namibia is in africa.
+windhoek is the capital of namibia.
+niger is a country.
+niger is in africa.
+niamey is the capital of niger.
+nigeria is a country.
+rwanda is a country.
+rwanda is in africa.
+kigali is the capital of rwanda.
+senegal is a country.
+senegal is in africa.
+dakar is the capital of senegal.
+seychelles is a country.
+seychelles is in africa.
+victoria is the capital of seychelles.
+freetown is the capital of sierra leone.
+somalia is a country.
+somalia is in africa.
+mogadishu is the capital of somalia.
+pretoria is the capital of south africa.
+juba is the capital of south sudan.
+sudan is a country.
+sudan is in africa.
+khartoum is the capital of sudan.
+tanzania is a country.
+tanzania is in africa.
+dodoma is the capital of tanzania.
+togo is a country.
+togo is in africa.
+lome is the capital of togo.
+tunisia is a country.
+tunisia is in africa.
+tunis is the capital of tunisia.
+uganda is a country.
+uganda is in africa.
+kampala is the capital of uganda.
+zambia is a country.
+zambia is in africa.
+lusaka is the capital of zambia.
+zimbabwe is a country.
+zimbabwe is in africa.
+harare is the capital of zimbabwe.
+afghanistan is a country.
+afghanistan is in asia.
+kabul is the capital of afghanistan.
+armenia is a country.
+armenia is in asia.
+yerevan is the capital of armenia.
+azerbaijan is a country.
+azerbaijan is in asia.
+baku is the capital of azerbaijan.
+bahrain is a country.
+bahrain is in asia.
+manama is the capital of bahrain.
+bangladesh is a country.
+bangladesh is in asia.
+dhaka is the capital of bangladesh.
+bhutan is a country.
+bhutan is in asia.
+thimphu is the capital of bhutan.
+brunei is a country.
+brunei is in asia.
+cambodia is a country.
+cambodia is in asia.
+china is a country.
+cyprus is a country.
+cyprus is in europe.
+nicosia is the capital of cyprus.
+georgia is a country.
+georgia is in asia.
+tbilisi is the capital of georgia.
+india is a country.
+indonesia is a country.
+indonesia is in asia.
+iran is a country.
+iraq is a country.
+israel is a country.
+israel is in asia.
+japan is a country.
+jordan is a country.
+jordan is in asia.
+amman is the capital of jordan.
+kazakhstan is a country.
+kazakhstan is in asia.
+astana is the capital of kazakhstan.
+korea is a country.
+pyongyang is the capital of north korea.
+seoul is the capital of south korea.
+kuwait is a country.
+kuwait is in asia.
+kyrgyzstan is a country.
+kyrgyzstan is in asia.
+bishkek is the capital of kyrgyzstan.
+laos is a country.
+laos is in asia.
+vientiane is the capital of laos.
+lebanon is a country.
+lebanon is in asia.
+beirut is the capital of lebanon.
+malaysia is a country.
+malaysia is in asia.
+maldives is a country.
+maldives is in asia.
+mongolia is a country.
+mongolia is in asia.
+ulaanbaatar is the capital of mongolia.
+myanmar is a country.
+myanmar is in asia.
+naypyidaw is the capital of myanmar.
+nepal is a country.
+nepal is in asia.
+kathmandu is the capital of nepal.
+oman is a country.
+oman is in asia.
+muscat is the capital of oman.
+pakistan is a country.
+pakistan is in asia.
+philippines is a country.
+philippines is in asia.
+qatar is a country.
+qatar is in asia.
+doha is the capital of qatar.
+russia is a country.
+riyadh is the capital of saudi arabia.
+singapore is a country.
+singapore is in asia.
+colombo is the capital of sri lanka.
+syria is a country.
+syria is in asia.
+damascus is the capital of syria.
+taiwan is a country.
+taiwan is in asia.
+taipei is the capital of taiwan.
+tajikistan is a country.
+tajikistan is in asia.
+dushanbe is the capital of tajikistan.
+thailand is a country.
+dili is the capital of east timor.
+turkey is a country.
+turkey is in asia.
+turkmenistan is a country.
+turkmenistan is in asia.
+ashgabat is the capital of turkmenistan.
+emirates is a country.
+emirates is in asia.
+uzbekistan is a country.
+uzbekistan is in asia.
+tashkent is the capital of uzbekistan.
+vietnam is a country.
+yemen is a country.
+yemen is in asia.
+sanaa is the capital of yemen.
+albania is a country.
+albania is in europe.
+tirana is the capital of albania.
+andorra is a country.
+andorra is in europe.
+austria is a country.
+austria is in europe.
+belarus is a country.
+belarus is in europe.
+minsk is the capital of belarus.
+belgium is a country.
+belgium is in europe.
+bosnia is a country.
+bosnia is in europe.
+sarajevo is the capital of bosnia.
+britain is a country.
+britain is in europe.
+london is the capital of britain.
+london is the capital of united kingdom.
+england is a country.
+england is in britain.
+scotland is a country.
+scotland is in britain.
+edinburgh is the capital of scotland.
+wales is a country.
+wales is in britain.
+cardiff is the capital of wales.
+belfast is the capital of northern ireland.
+bulgaria is a country.
+bulgaria is in europe.
+sofia is the capital of bulgaria.
+croatia is a country.
+croatia is in europe.
+zagreb is the capital of croatia.
+czechia is a country.
+czechia is in europe.
+denmark is a country.
+denmark is in europe.
+estonia is a country.
+estonia is in europe.
+tallinn is the capital of estonia.
+finland is a country.
+finland is in europe.
+france is a country.
+germany is a country.
+greece is a country.
+hungary is a country.
+hungary is in europe.
+iceland is a country.
+iceland is in europe.
+reykjavik is the capital of iceland.
+ireland is a country.
+ireland is in europe.
+italy is a country.
+kosovo is a country.
+kosovo is in europe.
+pristina is the capital of kosovo.
+latvia is a country.
+latvia is in europe.
+riga is the capital of latvia.
+liechtenstein is a country.
+liechtenstein is in europe.
+vaduz is the capital of liechtenstein.
+lithuania is a country.
+lithuania is in europe.
+vilnius is the capital of lithuania.
+luxembourg is a country.
+luxembourg is in europe.
+malta is a country.
+malta is in europe.
+valletta is the capital of malta.
+moldova is a country.
+moldova is in europe.
+chisinau is the capital of moldova.
+monaco is a country.
+monaco is in europe.
+montenegro is a country.
+montenegro is in europe.
+podgorica is the capital of montenegro.
+netherlands is a country.
+netherlands is in europe.
+amsterdam is the capital of netherlands.
+holland is a country.
+holland is in europe.
+macedonia is a country.
+macedonia is in europe.
+skopje is the capital of macedonia.
+norway is a country.
+poland is a country.
+portugal is a country.
+romania is a country.
+romania is in europe.
+bucharest is the capital of romania.
+serbia is a country.
+serbia is in europe.
+belgrade is the capital of serbia.
+slovakia is a country.
+slovakia is in europe.
+bratislava is the capital of slovakia.
+slovenia is a country.
+slovenia is in europe.
+ljubljana is the capital of slovenia.
+spain is a country.
+sweden is a country.
+switzerland is a country.
+switzerland is in europe.
+ukraine is a country.
+ukraine is in europe.
+vatican is a country.
+vatican is in rome.
+antigua is a country.
+antigua is in america.
+argentina is a country.
+bahamas is a country.
+bahamas is in america.
+nassau is the capital of bahamas.
+barbados is a country.
+barbados is in america.
+bridgetown is the capital of barbados.
+belize is a country.
+belize is in america.
+belmopan is the capital of belize.
+bolivia is a country.
+bolivia is in america.
+sucre is the capital of bolivia.
+brazil is a country.
+canada is a country.
+chile is a country.
+colombia is a country.
+cuba is a country.
+dominica is a country.
+dominica is in america.
+roseau is the capital of dominica.
+ecuador is a country.
+ecuador is in america.
+quito is the capital of ecuador.
+grenada is a country.
+grenada is in america.
+guatemala is a country.
+guatemala is in america.
+guyana is a country.
+guyana is in america.
+georgetown is the capital of guyana.
+haiti is a country.
+haiti is in america.
+honduras is a country.
+honduras is in america.
+tegucigalpa is the capital of honduras.
+jamaica is a country.
+jamaica is in america.
+kingston is the capital of jamaica.
+mexico is a country.
+nicaragua is a country.
+nicaragua is in america.
+managua is the capital of nicaragua.
+panama is a country.
+panama is in america.
+paraguay is a country.
+paraguay is in america.
+asuncion is the capital of paraguay.
+peru is a country.
+castries is the capital of saint lucia.
+suriname is a country.
+suriname is in america.
+paramaribo is the capital of suriname.
+trinidad is a country.
+trinidad is in america.
+usa is a country.
+usa is in america.
+washington is the capital of usa.
+washington is the capital of united states.
+uruguay is a country.
+uruguay is in america.
+montevideo is the capital of uruguay.
+venezuela is a country.
+venezuela is in america.
+caracas is the capital of venezuela.
+oceania is a continent.
+australia is a country.
+australia is in oceania.
+fiji is a country.
+fiji is in oceania.
+suva is the capital of fiji.
+kiribati is a country.
+kiribati is in oceania.
+tarawa is the capital of kiribati.
+majuro is the capital of marshall islands.
+micronesia is a country.
+micronesia is in oceania.
+palikir is the capital of micronesia.
+nauru is a country.
+nauru is in oceania.
+yaren is the capital of nauru.
+wellington is the capital of new zealand.
+palau is a country.
+palau is in oceania.
+ngerulmud is the capital of palau.
+papua is a country.
+papua is in oceania.
+samoa is a country.
+samoa is in oceania.
+apia is the capital of samoa.
+honiara is the capital of solomon islands.
+tonga is a country.
+tonga is in oceania.
+nukualofa is the capital of tonga.
+tuvalu is a country.
+tuvalu is in oceania.
+funafuti is the capital of tuvalu.
+vanuatu is a country.
+vanuatu is in oceania.
+a country has a flag.
+a country has borders.
+a continent has countries.
+russia is the largest country of europe.
+china is the largest country of asia.
+algeria is the largest country of africa.
+canada is the largest country of america.
+australia is the largest country of oceania.
+vatican is the smallest country.
+vatican is the smallest country of europe.
+nauru is the smallest country of oceania.
+maldives is the smallest country of asia.
+seychelles is the smallest country of africa.
+there are 195 countries in the world.
+there are 54 countries in africa.
+there are 44 countries in europe.
+there are 48 countries in asia.
+there are 35 countries in america.
+there are 14 countries in oceania.
+usa has 50 states.
+india has 28 states.
+germany has 16 states.
+australia has 6 states.
+brazil has 26 states.
+mexico has 32 states.
+nigeria has 36 states.
+canada has 10 provinces.
+china has 23 provinces.
+switzerland has 26 cantons.
+japan has 47 prefectures.
+britain has 4 countries.
+china is bigger than india.
+india is bigger than argentina.
+australia is bigger than india.
+brazil is bigger than australia.
+algeria is bigger than congo.
+kazakhstan is bigger than algeria.
+france is bigger than spain.
+spain is bigger than germany.
+germany is bigger than italy.
+italy is bigger than britain.
+russia is bigger than canada.
+usa is bigger than brazil.
+mexico is bigger than indonesia.
+britain has a prime minister.
+canada has a prime minister.
+australia has a prime minister.
+india has a prime minister.
+japan has a prime minister.
+italy has a prime minister.
+spain has a prime minister.
+sweden has a prime minister.
+norway has a prime minister.
+denmark has a prime minister.
+netherlands has a prime minister.
+belgium has a prime minister.
+israel has a prime minister.
+pakistan has a prime minister.
+greece has a prime minister.
+portugal has a prime minister.
+ireland has a prime minister.
+poland has a prime minister.
+hungary has a prime minister.
+czechia has a prime minister.
+thailand has a prime minister.
+malaysia has a prime minister.
+singapore has a prime minister.
+bangladesh has a prime minister.
+nepal has a prime minister.
+ethiopia has a prime minister.
+finland has a prime minister.
+iceland has a prime minister.
+luxembourg has a prime minister.
+jamaica has a prime minister.
+britain is a kingdom.
+spain is a kingdom.
+sweden is a kingdom.
+norway is a kingdom.
+denmark is a kingdom.
+netherlands is a kingdom.
+belgium is a kingdom.
+thailand is a kingdom.
+morocco is a kingdom.
+jordan is a kingdom.
+bhutan is a kingdom.
+cambodia is a kingdom.
+tonga is a kingdom.
+eswatini is a kingdom.
+lesotho is a kingdom.
+bahrain is a kingdom.
+britain is an island.
+ireland is an island.
+jamaica is an island.
+malta is an island.
+cyprus is an island.
+madagascar is an island.
+singapore is an island.
+bahrain is an island.
+taiwan is an island.
+fiji is an island.
+samoa is an island.
+tonga is an island.
+nauru is an island.
+barbados is an island.
+dominica is an island.
+grenada is an island.
+mauritius is an island.
+antigua is an island.
+trinidad is an island.

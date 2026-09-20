@@ -1,0 +1,8 @@
+# The chats live only in the visitor's browser, so their addresses show nothing to a
+# crawler. The relay path is not a page.
+User-agent: *
+Allow: /
+Disallow: /chat/
+Disallow: /api/
+
+Sitemap: https://datamine.network/sitemap.xml

@@ -1,0 +1,3 @@
+# mary went to the kitchen, then to the garden: she is taken out of the kitchen and put in the garden.
+mary went to the kitchen. mary went to the garden. => garden:the(true) -> mary; not kitchen:the(true) -> mary
+test: zorp went to the flib. zorp went to the mork. => mork:the(true) -> zorp; not flib:the(true) -> zorp

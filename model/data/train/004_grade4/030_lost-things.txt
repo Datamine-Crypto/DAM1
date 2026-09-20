@@ -1,0 +1,10 @@
+# A thing someone lost is put where they stand, and since the story never told that place the
+# thing carries the tag assumed, so a person sees it is a guess. Held out lines use people and
+# things the learned lines never use.
+john is in the garage. he lost his car. => garage -> car -> {assumed} | where is john? = garage
+anna is in the park. she lost her hat. => park -> hat -> {assumed} | where is the hat? = park
+tom is in the kitchen. tom lost the key. => kitchen -> key -> {assumed} | where is the key? = kitchen
+mia is in the garden. she is sad because she lost her ball. => garden -> ball -> {assumed} | how does mia feel? = sad
+ben is in the office. he lost his pen. => office -> pen -> {assumed} | where is ben? = office
+test: sara is in the shop. she lost her ring. => shop -> ring -> {assumed} | where is the ring? = shop
+test: leo is in the hall. he is sad because he lost his book. => hall -> book -> {assumed} | how does leo feel? = sad

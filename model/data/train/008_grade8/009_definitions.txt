@@ -1,0 +1,13 @@
+# Definitions: a name means a step the physics knows, or another defined name, and may carry a number to work
+# in after, as hj means sqrt, or tk means hj times 3. The tree holds the definition as facts of the name, and the
+# answering step for definitions runs the meaning on the number set, so a name a person made runs as its own step
+# and a name defined through another name runs the chain.
+hj means sqrt. => hj -> {means} -> sqrt | what is hj of 16? = 4; what is hj of 81? = 9
+ab means abs. => ab -> {means} -> abs | what is ab of -7? = 7; what is ab of 3? = 3
+hj means sqrt. tk means hj times 3. => hj -> {means} -> sqrt; tk -> {means} -> hj; tk -> {times} -> 3 | what is tk of 16? = 12; what is hj of 16? = 4; what is tk of 4? = 6
+ab means abs. tp means ab plus 10. => ab -> {means} -> abs; tp -> {means} -> ab; tp -> {plus} -> 10 | what is tp of -5? = 15; what is ab of -5? = 5
+turn: hj means sqrt. what is hj of 25? => hj -> {means} -> sqrt | 5
+turn: ab means abs. what is ab of -3? => ab -> {means} -> abs | 3
+test: hj means sqrt. tk means hj times 2. => hj -> {means} -> sqrt; tk -> {means} -> hj; tk -> {times} -> 2 | what is tk of 9? = 6; what is hj of 9? = 3
+test: ab means abs. tm means ab minus 1. => ab -> {means} -> abs; tm -> {means} -> ab; tm -> {minus} -> 1 | what is tm of -4? = 3
+test: turn: ab means abs. what is ab of -8? => ab -> {means} -> abs | 8

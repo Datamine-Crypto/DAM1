@@ -1,0 +1,14 @@
+# Comparing stated measures: things given a length, a height or a weight in the same unit are compared
+# by their numbers, so the one with the larger number is longer, taller or heavier.
+# The turns tell two measures, which the network writes as the scenes state them, and ask one. Each scene tells two lengths or heights and two weights, then
+# asks which is longer or taller, shorter, heavier and lighter, each measure, yes and no, and the difference.
+turn: the rope is 5 meters long. the string is 3 meters long. which is longer? {eom} => rope is 5; string is 3 | rope
+turn: the rope is 5 meters long. the string is 3 meters long. which is shorter? {eom} => rope is 5; string is 3 | string
+turn: the box weighs 10 kilos. the bag weighs 4 kilos. which is heavier? {eom} => box weighs 10; bag weighs 4 | box
+turn: the box weighs 10 kilos. the bag weighs 4 kilos. which is lighter? {eom} => box weighs 10; bag weighs 4 | bag
+turn: the tree is 12 meters tall. the house is 8 meters tall. which is taller? {eom} => tree is 12; house is 8 | tree
+the rope is 5 meters long. the string is 3 meters long. the box weighs 10 kilos. the bag weighs 4 kilos. => rope is 5; 5 = 5; string is 3; 3 = 3; box weighs 10; 10 = 10; bag weighs 4; 4 = 4 | which is longer? = rope; which is shorter? = string; which is heavier? = box; which is lighter? = bag; how long is the rope? = 5; how long is the string? = 3; how much does the box weigh? = 10; how much does the bag weigh? = 4; is the rope longer than the string? = yes; is the bag heavier than the box? = no; how much longer is the rope than the string? = 2; how much heavier is the box than the bag? = 6
+the tree is 12 meters tall. the house is 8 meters tall. the sack weighs 15 kilos. the crate weighs 25 kilos. => tree is 12; 12 = 12; house is 8; 8 = 8; sack weighs 15; 15 = 15; crate weighs 25; 25 = 25 | which is taller? = tree; which is shorter? = house; which is heavier? = crate; which is lighter? = sack; how tall is the tree? = 12; how tall is the house? = 8; is the house taller than the tree? = no; is the crate heavier than the sack? = yes; how much taller is the tree than the house? = 4; how much heavier is the crate than the sack? = 10
+test: turn: the road is 20 meters long. the path is 7 meters long. which is longer? {eom} => road is 20; path is 7 | road
+test: turn: the dog weighs 30 kilos. the cat weighs 5 kilos. which is lighter? {eom} => dog weighs 30; cat weighs 5 | cat
+test: the road is 20 meters long. the path is 7 meters long. the dog weighs 30 kilos. the cat weighs 5 kilos. => road is 20; 20 = 20; path is 7; 7 = 7; dog weighs 30; 30 = 30; cat weighs 5; 5 = 5 | which is longer? = road; which is lighter? = cat; which is shorter? = path; which is heavier? = dog; how long is the road? = 20; how much does the cat weigh? = 5; how much longer is the road than the path? = 13; is the cat heavier than the dog? = no

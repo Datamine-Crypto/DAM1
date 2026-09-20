@@ -1,0 +1,12 @@
+# Plurals: more than one of a thing is said with its plural, usually the word with s added, and the
+# singular is the word for one. Each scene tells who has which things, then asks plurals and singulars
+# of those words and who has them; the turns stay as single chat turns.
+tom has a cat. ann has a box. sam has a baby. => tom -> {has} -> cat; ann -> {has} -> box; sam -> {has} -> baby | what is the plural of cat? = cats; what is the plural of box? = boxes; what is the plural of baby? = babies; what is the singular of dogs? = dog; what is the singular of cats? = cat; what is the singular of boxes? = box; what is the singular of babies? = baby; what is the plural of dog? = dogs; who has the cat? = tom; who has a box? = ann; what does sam have? = baby
+kim has 2 dogs. joe has a bus. lily has a pony. => {number:value(2)}; kim -> {has} -> dog:quantity(2); joe -> {has} -> bus; lily -> {has} -> pony | what is the plural of bus? = buses; what is the plural of pony? = ponies; what is the plural of dog? = dogs; what is the singular of dogs? = dog; what is the singular of buses? = bus; what is the singular of ponies? = pony; what is the plural of cat? = cats; how many dogs does kim have? = 2; who has a bus? = joe; what does lily have? = pony
+turn: what is the plural of cat? => | cats
+turn: what is the plural of box? => | boxes
+turn: what is the plural of baby? => | babies
+turn: what is the singular of dogs? => | dog
+test: zoe has a fox. ben has 2 cups. max has a cherry. => zoe -> {has} -> fox; {number:value(2)}; ben -> {has} -> cup:quantity(2); max -> {has} -> cherry | what is the plural of fox? = foxes; what is the singular of cups? = cup; what is the plural of cherry? = cherries; what is the singular of foxes? = fox; what is the plural of cup? = cups; what is the singular of cherries? = cherry; how many cups does ben have? = 2; who has the fox? = zoe
+test: turn: what is the plural of fox? => | foxes
+test: turn: what is the singular of cups? => | cup

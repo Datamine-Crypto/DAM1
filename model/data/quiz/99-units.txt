@@ -1,0 +1,16 @@
+# Units of time: a larger unit holds a fixed number of a smaller one, so a count of the larger unit
+# holds that many times as many of the smaller, asked with how many of the smaller are in it. The
+# traced lines and the turns stay as single lessons; each scene tells how much time several people
+# have, then asks many of those counts in smaller units, and each count.
+seed: measures
+turn: how many minutes are in 2 hours? {eom} => | 120
+turn: how many hours are in 3 days? {eom} => | 72
+turn: how many days are in 2 weeks? {eom} => | 14
+turn: how many seconds are in 5 minutes? {eom} => | 300
+turn: how many months are in 2 years? {eom} => | 24
+tom has 2 hours. ann has 3 days. => 2 = 2; tom owns hours; hours is 2; 3 = 3; ann owns days; days is 3 | how many minutes are in 2 hours? = 120; how many hours are in 3 days? = 72; how many days are in 2 weeks? = 14; how many seconds are in 5 minutes? = 300; how many months are in 2 years? = 24; how many minutes are in 1 hour? = 60; how many hours are in 2 days? = 48; how many days are in 1 week? = 7; how many hours does tom have? = 2; how many days does ann have? = 3
+kim has 2 weeks. joe has 5 minutes. lily has 2 years. => 2 = 2; kim owns weeks; weeks is 2; 5 = 5; joe owns minutes; minutes is 5; lily owns years; years is 2 | how many days are in 2 weeks? = 14; how many seconds are in 5 minutes? = 300; how many months are in 2 years? = 24; how many minutes are in 2 hours? = 120; how many hours are in 3 days? = 72; how many days are in 3 weeks? = 21; how many months are in 3 years? = 36; how many seconds are in 2 minutes? = 120; how many weeks does kim have? = 2; how many years does lily have? = 2
+test: zoe has 4 weeks. ben has 3 hours. => 4 = 4; zoe owns weeks; weeks is 4; 3 = 3; ben owns hours; hours is 3 | how many days are in 4 weeks? = 28; how many minutes are in 3 hours? = 180; how many hours are in 1 day? = 24; how many seconds are in 3 minutes? = 180; how many months are in 4 years? = 48; how many hours are in 4 days? = 96; how many weeks does zoe have? = 4; how many hours does ben have? = 3
+test: turn: how many days are in 4 weeks? {eom} => | 28
+test: turn: how many minutes are in 3 hours? {eom} => | 180
+test: turn: how many hours are in 1 day? {eom} => | 24

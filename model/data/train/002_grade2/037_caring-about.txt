@@ -1,0 +1,14 @@
+# What someone cares about stands under the verb, about left out, and a word that names the doer
+# again, himself or herself, is the doer. Only and just add nothing. Held out lines use people the
+# learned lines never use.
+anna cares about tom. => anna -> {care} -> tom | who cares about tom? = anna
+john is evil. he only cares about himself. => john -> {care} -> john | who does john care about? = john
+mia cares about her dog. => mia -> {care} -> dog | who cares about the dog? = mia
+ben only cares about money. => ben -> {care} -> money | what does ben care about? = money
+sara cares about the garden. => sara -> {care} -> garden | who cares about the garden? = sara
+leo just cares about himself. => leo -> {care} -> leo | who does leo care about? = leo
+nina cares about herself. => nina -> {care} -> nina | who does nina care about? = nina
+tom cares about anna. anna cares about ben. => anna -> {care} -> ben | who cares about ben? = anna
+test: omar cares about lily. => omar -> {care} -> lily | who cares about lily? = omar
+test: the king is cruel. he only cares about himself. => king -> {care} -> king | who does the king care about? = king
+test: ruth just cares about her cat. => ruth -> {care} -> cat | what does ruth care about? = cat

@@ -1,0 +1,19 @@
+# Arithmetic as a chat types it: the words plus, minus, times and divided are signs by their
+# form like the symbols, and a question that names nothing but works out a number answers it.
+# A math scene gives several values at once (the result, x, y, n), then asks many questions over
+# them in words and in signs: each value, sums, differences, products and quotients of two values.
+# A turn with no statement stays a calculator turn.
+turn: what is 2 + 2 {eom} => | 4
+turn: what is 3 * 4 {eom} => | 12
+turn: what is 10 - 6 {eom} => | 4
+turn: what is 9 / 3 {eom} => | 3
+2 plus 3 = result . 4 times 2 = x . 9 minus 4 = y . => result = 5; x = 8; y = 5; 2 = 2; 3 = 3; 4 = 4; 9 = 9 | what is the result? = 5; what is x? = 8; what is y? = 5; what is x plus y? = 13; what is x + y? = 13; what is x minus y? = 3; what is x - the result? = 3; what is the result times 2? = 10; what is x divided by 2? = 4; what is x / 4? = 2; what is y times x? = 40; what is the result plus y? = 10; what is x times 3? = 24; what is 2 + 2? = 4; what is 3 * 4? = 12
+8 divided by 2 = result . 6 divided by 3 = n . 5 times 3 = x . => result = 4; n = 2; x = 15; 8 = 8; 2 = 2; 6 = 6; 3 = 3; 5 = 5 | what is the result? = 4; what is n? = 2; what is x? = 15; what is the result plus n? = 6; what is the result times n? = 8; what is x minus the result? = 11; what is x divided by 3? = 5; what is the result divided by n? = 2; what is x + n? = 17; what is x - 5? = 10; what is n times n? = 4; what is x / 5? = 3; what is 10 - 6? = 4; what is 9 / 3? = 3
+turn: what is 2 plus 2 {eom} => | 4
+turn: what is 5 times 3 {eom} => | 15
+turn: how much is 2 + 3 {eom} => | 5
+turn: how much is 4 * 2 {eom} => | 8
+test: turn: what is 7 + 8 {eom} => | 15
+test: 3 times 3 = result . 7 plus 8 = y . => result = 9; y = 15; 3 = 3; 7 = 7; 8 = 8 | what is the result? = 9; what is y? = 15; what is y minus the result? = 6; what is the result plus y? = 24; what is y divided by 3? = 5; what is the result times 2? = 18; what is y - 5? = 10; what is the result / 3? = 3; what is 6 * 7? = 42
+test: turn: how much is 6 * 7 {eom} => | 42
+test: turn: what is 12 divided by 4 {eom} => | 3

@@ -1,0 +1,13 @@
+# Two steps: a question can take a number through two steps, halving or doubling it first and then
+# adding or taking away, each step done on what the one before gave. The traced lines and the turns
+# stay as single lessons; each scene tells what several people have, then asks many two-step sums,
+# the counts and totals.
+turn: what is double 4 plus 3? {eom} => | 11
+turn: what is half of 10 plus 2? {eom} => | 7
+turn: what is double 6 minus 5? {eom} => | 7
+turn: what is half of 20 minus 4? {eom} => | 6
+tom has 4 apples. ann has 10 apples. sam has 6 apples. => 4 = 4; tom owns apples; apples is 4; 10 = 10; ann owns apples; apples is 10; 6 = 6; sam owns apples; apples is 6 | what is double 4 plus 3? = 11; what is half of 10 plus 2? = 7; what is double 6 minus 5? = 7; what is half of 20 minus 4? = 6; what is double 10 plus 1? = 21; what is half of 6 plus 4? = 7; what is double 4 minus 2? = 6; how many apples does sam have? = 6; who has the most apples? = ann; how many apples do tom and sam have? = 10
+kim has 20 cards. joe has 5 cards. lily has 12 cards. => 20 = 20; kim owns cards; cards is 20; 5 = 5; joe owns cards; cards is 5; 12 = 12; lily owns cards; cards is 12 | what is half of 20 minus 4? = 6; what is double 5 plus 2? = 12; what is half of 12 minus 1? = 5; what is double 6 minus 5? = 7; what is double 4 plus 3? = 11; what is half of 20 plus 3? = 13; how many cards does kim have? = 20; who has the fewest cards? = joe; how many more cards does kim have than lily? = 8
+test: zoe has 9 stickers. ben has 8 stickers. => 9 = 9; zoe owns stickers; stickers is 9; 8 = 8; ben owns stickers; stickers is 8 | what is double 9 plus 1? = 19; what is half of 8 minus 3? = 1; what is double 8 minus 6? = 10; what is half of 8 plus 5? = 9; what is double 9 minus 4? = 14; how many stickers does zoe have? = 9; who has more stickers? = zoe; how many stickers do zoe and ben have? = 17
+test: turn: what is double 9 plus 1? {eom} => | 19
+test: turn: what is half of 8 minus 3? {eom} => | 1

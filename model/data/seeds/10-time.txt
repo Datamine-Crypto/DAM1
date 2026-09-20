@@ -1,0 +1,73 @@
+# The statements of data/facts/10-time.txt the cursor tree holds, one path each, written by build-seeds.mjs.
+minute:quantity(1) {equal} second:quantity(60)
+hour:quantity(1) {equal} minute:quantity(60)
+day:quantity(1) {equal} hour:quantity(24)
+week:quantity(1) {equal} day:quantity(7)
+year:quantity(1) {equal} month:quantity(12)
+year:quantity(1) {equal} day:quantity(365)
+year:quantity(1) {equal} week:quantity(52)
+year -> {season:quantity(4)}
+decade:quantity(1) {equal} year:quantity(10)
+century:quantity(1) {equal} year:quantity(100)
+millennium:quantity(1) {equal} year:quantity(1000)
+january -> {day:quantity(31)}
+february -> {day:quantity(28)}
+march -> {day:quantity(31)}
+april -> {day:quantity(30)}
+may -> {day:quantity(31)}
+june -> {day:quantity(30)}
+july -> {day:quantity(31)}
+august -> {day:quantity(31)}
+september -> {day:quantity(30)}
+october -> {day:quantity(31)}
+november -> {day:quantity(30)}
+december -> {day:quantity(31)}
+monday {is} day
+tuesday {is} day
+wednesday {is} day
+thursday {is} day
+friday {is} day
+saturday {is} day
+sunday {is} day
+monday -> {is} -> first
+tuesday -> {is} -> second
+wednesday -> {is} -> third
+thursday -> {is} -> fourth
+friday -> {is} -> fifth
+saturday -> {is} -> sixth
+sunday -> {is} -> seventh
+january {is} month
+february {is} month
+march {is} month
+april {is} month
+may {is} month
+june {is} month
+july {is} month
+august {is} month
+september {is} month
+october {is} month
+november {is} month
+december {is} month
+january -> {is} -> first
+february -> {is} -> second
+march -> {is} -> third
+spring {is} season
+summer {is} season
+autumn {is} season
+winter {is} season
+summer -> {is} -> {temperature} -> hot
+winter -> {is} -> {temperature} -> cold
+spring -> {is} -> {temperature} -> warm
+autumn -> {is} -> {temperature} -> cool
+morning -> {early}
+night -> {dark}
+day -> {light}
+noon {in} day
+midnight {in} night
+afternoon {successor} evening
+morning {successor} afternoon
+yesterday {successor} today
+today {successor} tomorrow
+morning {in} today
+afternoon {in} today
+evening {in} today

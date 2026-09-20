@@ -1,0 +1,18 @@
+# Numbers in words: a number up to ninety nine is said with the word for its tens and the word for its
+# ones, so 42 is forty two, and the words said back give the number.
+# The turns ask one number each. Each scene tells what two or three people have, then asks the counts and
+# a total in words, number words back as digits, each count, how many more, and who has more or fewer.
+seed: 22-tens-words
+turn: what is 42 in words? => | forty -> two
+turn: what is 17 in words? => | seventeen
+turn: what is 90 in words? => | ninety
+turn: what number is sixty three? => | 63
+tom has 42 apples. ann has 17 apples. sam has 90 pens. => tom -> {has} -> apple:quantity(42); {number:value(42)}; ann -> {has} -> apple:quantity(17); {number:value(17)}; sam -> {has} -> pen:quantity(90); {number:value(90)} | what is 42 in words? = forty -> two; what is 17 in words? = seventeen; what is 90 in words? = ninety; what number is sixty three? = 63; how many apples does tom have? = 42; how many apples do tom and ann have? = 59; how many pens does sam have? = 90; what is 59 in words? = fifty -> nine; who has more apples? = tom; how many more apples does tom have than ann? = 25
+kim has 25 cards. joe has 30 cards. => kim -> {has} -> card:quantity(25); {number:value(25)}; joe -> {has} -> card:quantity(30); {number:value(30)} | what is 25 in words? = twenty -> five; what is 30 in words? = thirty; what number is thirty four? = 34; what number is eleven? = 11; how many cards does kim have? = 25; how many cards do kim and joe have? = 55; what is 55 in words? = fifty -> five; who has fewer cards? = kim; how many more cards does joe have than kim? = 5
+test: turn: what is 58 in words? => | fifty -> eight
+test: turn: what number is twenty one? => | 21
+test: zoe has 58 shells. ben has 21 shells. => zoe -> {has} -> shell:quantity(58); {number:value(58)}; ben -> {has} -> shell:quantity(21); {number:value(21)} | what is 58 in words? = fifty -> eight; what number is twenty one? = 21; what is 21 in words? = twenty -> one; what number is fifty eight? = 58; how many shells do zoe and ben have? = 79; what is 79 in words? = seventy -> nine; who has more shells? = zoe; how many shells does ben have? = 21
+turn: what number is forty two => | 42
+turn: what number is sixty three => | 63
+turn: what number is ninety one => | 91
+turn: what number is thirty seven => | 37

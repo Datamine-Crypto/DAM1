@@ -1,0 +1,15 @@
+# Always, sometimes, usually, super and totally add nothing to what is told, and never denies it.
+# A count before two nouns is the count of the first: a five car garage is a garage of five cars.
+# Held out lines use people and things the learned lines never use.
+john was always super sad. => john -> {is} -> {feeling} -> sad | how did john feel? = sad
+anna is never late. => | is anna late? = no
+the soup is too hot. => soup -> {is} -> {temperature} -> hot | is the soup hot? = yes
+tom is usually happy. => tom -> {is} -> {feeling} -> happy | how does tom feel? = happy
+mia is sometimes tired. => mia -> {is} -> {feeling} -> tired | who is tired? = mia
+ben is never angry. => | is ben angry? = no
+the dog is totally calm. => dog -> {is} -> {feeling} -> calm | is the dog calm? = yes
+i have a 5 car garage. => user -> garage -> {of} -> car | what do i have? = garage
+tom has a two door car. => tom -> car -> {of} -> door | what does tom have? = car
+test: sara was always super happy. => sara -> {is} -> {feeling} -> happy | how did sara feel? = happy
+test: leo is never sad. => | is leo sad? = no
+test: anna has a three room house. => anna -> house -> {of} -> room | what does anna have? = house

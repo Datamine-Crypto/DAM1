@@ -1,0 +1,11 @@
+# Manners: what is said back to a greeting or to thanks.
+the reply of hi is hello.
+the reply of hello is hello.
+the reply of hey is hello.
+the reply of thanks is welcome.
+the reply of bye is goodbye.
+the reply of goodbye is goodbye.
+the reply of thank is welcome.
+the reply of morning is hello.
+the reply of evening is hello.
+the reply of welcome is hello.

@@ -1,0 +1,120 @@
+# Things that come in order, each the successor of the one before it: the days of the week, the months of the year and the seasons
+# wrap round, and the alphabet runs from a to z. The successors are listed last first, the order the reader reads them best in.
+monday is a day.
+tuesday is a day.
+wednesday is a day.
+thursday is a day.
+friday is a day.
+saturday is a day.
+sunday is a day.
+january is a month.
+february is a month.
+march is a month.
+april is a month.
+may is a month.
+june is a month.
+july is a month.
+august is a month.
+september is a month.
+october is a month.
+november is a month.
+december is a month.
+spring is a season.
+summer is a season.
+autumn is a season.
+winter is a season.
+the successor of y is z.
+the successor of x is y.
+the successor of w is x.
+the successor of v is w.
+the successor of u is v.
+the successor of t is u.
+the successor of s is t.
+the successor of r is s.
+the successor of q is r.
+the successor of p is q.
+the successor of o is p.
+the successor of n is o.
+the successor of m is n.
+the successor of l is m.
+the successor of k is l.
+the successor of j is k.
+the successor of i is j.
+the successor of h is i.
+the successor of g is h.
+the successor of f is g.
+the successor of e is f.
+the successor of d is e.
+the successor of c is d.
+the successor of b is c.
+the successor of a is b.
+the successor of autumn is winter.
+the successor of summer is autumn.
+the successor of spring is summer.
+the successor of winter is spring.
+the successor of november is december.
+the successor of october is november.
+the successor of september is october.
+the successor of august is september.
+the successor of july is august.
+the successor of june is july.
+the successor of may is june.
+the successor of april is may.
+the successor of march is april.
+the successor of february is march.
+the successor of january is february.
+the successor of december is january.
+the successor of saturday is sunday.
+the successor of friday is saturday.
+the successor of thursday is friday.
+the successor of wednesday is thursday.
+the successor of tuesday is wednesday.
+the successor of monday is tuesday.
+the successor of sunday is monday.
+the first day of the week is monday.
+the second day of the week is tuesday.
+the third day of the week is wednesday.
+the fourth day of the week is thursday.
+the fifth day of the week is friday.
+the sixth day of the week is saturday.
+the seventh day of the week is sunday.
+the last day of the week is sunday.
+the first month of the year is january.
+the second month of the year is february.
+the third month of the year is march.
+the fourth month of the year is april.
+the fifth month of the year is may.
+the sixth month of the year is june.
+the seventh month of the year is july.
+the eighth month of the year is august.
+the ninth month of the year is september.
+the tenth month of the year is october.
+the eleventh month of the year is november.
+the twelfth month of the year is december.
+the last month of the year is december.
+a is a vowel.
+e is a vowel.
+i is a vowel.
+o is a vowel.
+u is a vowel.
+b is a consonant.
+c is a consonant.
+d is a consonant.
+f is a consonant.
+g is a consonant.
+h is a consonant.
+j is a consonant.
+k is a consonant.
+l is a consonant.
+m is a consonant.
+n is a consonant.
+p is a consonant.
+q is a consonant.
+r is a consonant.
+s is a consonant.
+t is a consonant.
+v is a consonant.
+w is a consonant.
+x is a consonant.
+y is a consonant.
+z is a consonant.

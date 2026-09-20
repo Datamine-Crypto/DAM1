@@ -1,0 +1,45 @@
+seed: 21-verb-forms
+seed: 90-everyday
+seed: 18-qualities
+seed: 17-speakers
+turn: three cats are in a box where are the cats => cat -> {in} -> box; cat:quantity(3); three -> {equal} -> {number:value(3)} | box
+turn: the dog is in the garden where is the dog => dog -> {in} -> garden | garden
+turn: tom likes ann who likes ann => tom -> {like} -> ann | tom
+turn: the key is in the box what is in the box => key -> {in} -> box | key
+turn: the ball is in the bag where is the ball => ball -> {in} -> bag | bag
+turn: the book is in the car where is the book => book -> {in} -> car | car
+turn: ben likes kim who likes kim => ben -> {like} -> kim | ben
+turn: the dog chased the cat who chased the cat => dog -> {chase} -> cat -> {time} -> {past} | dog
+turn: two dogs are in the park how many dogs are in the park => dog -> {in} -> park; dog:quantity(2); two -> {equal} -> {number:value(2)} | 2
+turn: i have three dogs how many dogs do i have => user -> {has} -> dog:quantity(3); three -> {equal} -> {number:value(3)} | 3
+turn: we have five pens how many pens do we have => we -> {has} -> pen:quantity(5); five -> {equal} -> {number:value(5)} | 5
+turn: i have 6 birds how many birds do i have => user -> {has} -> bird:quantity(6); {number:value(6)} | 6
+turn: we have 3 keys how many keys do we have => we -> {has} -> key:quantity(3); {number:value(3)} | 3
+turn: 2 + 4 = sum what is the sum => sum -> {equal} -> {number:value(6)}; {number:value(2)}; {number:value(4)} | 6
+turn: 6 + 1 = sum what is the sum => sum -> {equal} -> {number:value(7)}; {number:value(6)}; {number:value(1)} | 7
+test: turn: the cat is in the house where is the cat => cat -> {in} -> house | house
+test: turn: ann likes tom who likes tom => ann -> {like} -> tom | ann
+test: turn: the pen is in the bag what is in the bag => pen -> {in} -> bag | pen
+test: turn: the lamp is red what color is the lamp => lamp -> {red} | red
+test: turn: we have two keys how many keys do we have => we -> {has} -> key:quantity(2); two -> {equal} -> {number:value(2)} | 2
+test: turn: i have 9 cats how many cats do i have => user -> {has} -> cat:quantity(9); {number:value(9)} | 9
+test: turn: i have a bird my bird is blue what color is my bird => user -> {has} -> bird -> {blue} | blue
+test: turn: 5 + 3 = sum what is the sum => sum -> {equal} -> {number:value(8)}; {number:value(5)}; {number:value(3)} | 8
+test: turn: 6 * 7 = => | 42
+test: turn: 10 / 2 = => | 5
+test: turn: ( 4 + 4 ) * 2 = => | 16
+test: the cup is blue. i have four birds. i am in the kitchen. => cup -> {blue}; user -> {has} -> bird; user -> {in} -> kitchen; bird:quantity(4); four -> {equal} -> {number:value(4)} | what color is the cup? = blue; how many birds do i have? = 4; where am i? = kitchen; what do i have? = bird; what is blue? = cup; what is in the kitchen? = user; is the cup in the kitchen? = no; who has the birds? = user
+test: the cat, the dog and the bird are in the garden. i am ben. yesterday ann went to the school. => cat -> {in} -> garden; dog -> {in} -> garden; bird -> {in} -> garden; user -> {is} -> ben; ann -> {in} -> school; ann -> {go} -> school -> {time} -> {past} | what is in the garden? = bird, cat, dog; who am i? = ben; where is ann? = school; where is the dog? = garden; where is the bird? = garden; what is in the school? = ann; is the cat in the school? = no; where is tom? = {nothing}
+test: the dog and the bird chased the cat. the key is in the small bag. you are in the park. => dog -> {chase} -> cat -> {time} -> {past}; bird -> {chase} -> cat -> {time} -> {past}; key -> {in} -> bag -> {small}; you -> {in} -> park | who chased the cat? = bird, dog; what is small? = bag; where are you? = park; where is the key? = bag; what is in the bag? = key; what is in the park? = you; who chased the key? = {nothing}; is the bag in the park? = no
+test: 7 birds are in the tree. i have a cat. my cat is white. the pen is in the cup which is on the desk. => bird -> {in} -> tree; bird:quantity(7); {number:value(7)}; user -> {has} -> cat -> {white}; pen -> {in} -> cup -> {in} -> desk | how many birds are in the tree? = 7; what color is my cat? = white; where is the cup? = desk; where are the birds? = tree; what do i have? = cat; where is the pen? = cup; what is white? = cat; is the cup white? = no
+test: 5 + 2 = sum . 7 * 3 = result . => sum -> {equal} -> {number:value(7)}; {number:value(5)}; {number:value(2)}; result -> {equal} -> {number:value(21)}; {number:value(7)}; {number:value(3)} | what is the sum? = 7; what is the result? = 21
+test: 9 / 3 = result . 6 + 2 = sum . => result -> {equal} -> {number:value(3)}; {number:value(9)}; {number:value(3)}; sum -> {equal} -> {number:value(8)}; {number:value(6)}; {number:value(2)} | what is the result? = 3; what is the sum? = 8
+test: 10 - 4 = result . 1 + 5 = sum . => result -> {equal} -> {number:value(6)}; {number:value(10)}; {number:value(4)}; sum -> {equal} -> {number:value(6)}; {number:value(1)}; {number:value(5)} | what is the result? = 6; what is the sum? = 6
+test: ( 1 + 2 ) * 3 = result . 4 + 3 = sum . => result -> {equal} -> {number:value(9)}; {number:value(1)}; {number:value(2)}; {number:value(3)}; sum -> {equal} -> {number:value(7)}; {number:value(4)} | what is the result? = 9; what is the sum? = 7
+test: 1 + 2 * 3 = result . 2 + 5 = sum . => result -> {equal} -> {number:value(7)}; {number:value(1)}; {number:value(2)}; {number:value(3)}; sum -> {equal} -> {number:value(7)}; {number:value(5)} | what is the result? = 7; what is the sum? = 7
+test: ben went to the house with his cat. a large tree is in the garden. now the dog is in the house. => ben -> {in} -> house; ben -> {has} -> cat -> {in} -> house; tree -> {in} -> garden; tree -> {large}; dog -> {in} -> house; ben -> {go} -> house -> {time} -> {past} | where is the cat? = house; what is large? = tree; where is the dog? = house; where is ben? = house; who had the cat? = ben; what is in the house? = ben, cat, dog; where is the tree? = garden; is the cat large? = no
+test: there are four birds and two cats in the tree. ben is in the park. ann is with him. => bird -> {in} -> tree; bird:quantity(4); cat -> {in} -> tree; cat:quantity(2); four -> {equal} -> {number:value(4)}; two -> {equal} -> {number:value(2)}; ben -> {in} -> park; ann -> {in} -> park | how many birds are in the tree? = 4; where is ann? = park; how many cats are in the tree? = 2; where are the birds? = tree; where is ben? = park; what is in the park? = ann, ben; are the cats in the park? = no; where is tom? = {nothing}
+test: you have a cat. your cat is white. ben found the pen. ben wrote a song. => you -> {has} -> cat -> {white}; ben -> {find} -> pen -> {time} -> {past}; ben -> {write} -> song -> {time} -> {past} | what color is your cat? = white; who found the pen? = ben; who wrote the song? = ben; what do you have? = cat; what is white? = cat; who found the song? = {nothing}; who wrote the pen? = {nothing}; is the pen white? = no
+test: ben became a farmer. ben is at home. the dog came back to the garden. => ben -> {is} -> farmer; ben -> {at} -> home; dog -> {in} -> garden | what is ben? = farmer; where is ben? = home; where is the dog? = garden; is ben a farmer? = yes; what is in the garden? = dog; is the dog a farmer? = no; is ben in the garden? = no; where is ann? = {nothing}
+test: you like birds. ben lives in rome. the bird sleeps in the tree. => you -> {like} -> birds; ben -> {in} -> rome; bird -> {in} -> tree | what do you like? = birds; where does ben live? = rome; where does the bird sleep? = tree; where is ben? = rome; where is the bird? = tree; what does ben like? = {nothing}; where does ann live? = {nothing}; what is in rome? = ben
+test: the game is at 6. the song is about love. we like cats. => game -> {in} -> 6; {number:value(6)}; song -> {about} -> love; we -> {like} -> cats | when is the game? = 6; what is the song about? = love; is the game at 6? = yes; is the game at 5? = no; what is the game about? = {nothing}; what is the film about? = {nothing}; when is the party? = {nothing}; what do we like? = cats

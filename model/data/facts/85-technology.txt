@@ -1,0 +1,72 @@
+# Technology: machines, computers and what they are made of.
+a computer is a machine.
+a robot is a machine.
+a car is a machine.
+a plane is a machine.
+a clock is a machine.
+a phone is a machine.
+a computer has a processor.
+a computer has memory.
+a computer has a screen.
+a computer has a keyboard.
+a computer has a disk.
+a phone has a battery.
+a phone has a screen.
+a laptop is a computer.
+a tablet is a computer.
+a server is a computer.
+a processor is a chip.
+a chip is made of silicon.
+silicon is made of sand.
+memory is made of chips.
+software is a program.
+a program is code.
+code is text.
+a file is data.
+a byte has 8 bits.
+a kilobyte has 1024 bytes.
+a megabyte has 1024 kilobytes.
+a gigabyte has 1024 megabytes.
+the internet is a network.
+a network has computers.
+a website is on the internet.
+an email is a message.
+a browser is a program.
+a password is a secret.
+a virus is bad software.
+a keyboard has keys.
+a mouse has buttons.
+a screen has pixels.
+a pixel is a dot.
+a camera has a lens.
+a printer has paper.
+a battery has energy.
+a bulb is a light.
+a lamp is a light.
+a heater is hot.
+a fan has blades.
+a motor is a machine.
+an engine needs fuel.
+petrol is a fuel.
+diesel is a fuel.
+coal is a fuel.
+gas is a fuel.
+wood is a fuel.
+a cable is made of wires.
+a plug is in a socket.
+a switch is on or off.
+a circuit has a switch.
+electricity is in wires.
+a solar panel is made of silicon.
+a windmill has blades.
+a dam has water.
+a bridge is made of steel.
+steel is made of iron and carbon.
+a skyscraper is tall.
+a rocket is fast.
+a satellite is in space.
+the wheel is an invention.
+the printing press is an invention.
+the telephone is an invention.
+the light bulb is an invention.
+the computer is an invention.

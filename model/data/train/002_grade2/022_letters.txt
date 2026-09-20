@@ -1,0 +1,13 @@
+# Letters in a word: a word is written with letters, counted one by one, and its first and last letter
+# are the ones it starts and ends with.
+# The turns ask one word each. Each scene tells what two or three people have, then asks the letters of
+# each thing's name, the first and the last letter, who has each thing, and yes or no.
+turn: how many letters are in cat? => | 3
+turn: how many letters are in the word elephant? => | 8
+turn: what is the first letter of dog? => | d
+turn: what is the last letter of house? => | e
+tom has a cat. ann has a dog. sam has a house. => tom -> {has} -> cat; ann -> {has} -> dog; sam -> {has} -> house | how many letters are in cat? = 3; what is the first letter of dog? = d; what is the last letter of house? = e; what does tom have? = cat; who has the dog? = ann; what is the first letter of cat? = c; what is the last letter of dog? = g; how many letters are in house? = 5; how many letters are in the word dog? = 3; does sam have a cat? = no
+lily has an elephant. max has a kite. => lily -> {has} -> elephant; max -> {has} -> kite | how many letters are in the word elephant? = 8; how many letters are in kite? = 4; what is the first letter of elephant? = e; what is the last letter of kite? = e; what is the first letter of kite? = k; what is the last letter of elephant? = t; what does lily have? = elephant; who has the kite? = max; does max have an elephant? = no
+test: turn: how many letters are in banana? => | 6
+test: turn: what is the first letter of apple? => | a
+test: zoe has a banana. ben has an apple. => zoe -> {has} -> banana; ben -> {has} -> apple | how many letters are in banana? = 6; what is the first letter of apple? = a; what is the last letter of banana? = a; how many letters are in apple? = 5; what is the first letter of banana? = b; what does zoe have? = banana; who has the apple? = ben; does zoe have an apple? = no

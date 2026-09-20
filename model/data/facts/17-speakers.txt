@@ -1,0 +1,12 @@
+# The two people of a chat: the user, who types, and the assistant, who answers. The words a chat
+# says for them stand for them: i, me, my, mine and myself are the user, and you, your and yours are
+# the assistant, so a fact told with i is written on the user and a question with you asks about the
+# assistant.
+the self of i is user.
+the self of me is user.
+the self of my is user.
+the self of mine is user.
+the self of myself is user.
+the self of you is assistant.
+the self of your is assistant.
+the self of yours is assistant.

@@ -1,0 +1,59 @@
+# The earth: land, water, weather and what the ground is made of.
+the earth is round.
+the earth has 7 continents.
+the earth has 5 oceans.
+the earth has a core.
+the core is hot.
+the core is made of iron.
+the crust is made of rock.
+the earth has an atmosphere.
+the atmosphere is made of air.
+the sea is salty.
+a lake has fresh water.
+a river has fresh water.
+rain is water.
+snow is frozen water.
+hail is frozen rain.
+a cloud is made of water.
+fog is a cloud.
+wind is moving air.
+a storm has wind.
+a storm has rain.
+a hurricane is a storm.
+a tornado is a storm.
+thunder is a sound.
+lightning is electricity.
+a rainbow has 7 colors.
+a volcano has lava.
+lava is hot.
+lava is melted rock.
+a jungle is wet.
+a jungle is hot.
+the arctic is cold.
+the tropics are hot.
+the poles are cold.
+a mountain is high.
+a valley is low.
+an island has water around it.
+a coast is next to the sea.
+a beach is made of sand.
+soil is made of rock and plants.
+granite is a rock.
+marble is a rock.
+limestone is a rock.
+sandstone is a rock.
+chalk is a rock.
+gold is in rock.
+oil is in the ground.
+coal is in the ground.
+iron is in the ground.
+salt is in the sea.
+the tide is the sea moving.
+the north is cold.
+the south is warm.
+a map has a north.
+the equator is a line.
+the equator is in the middle.
+a hemisphere is half the earth.
+a continent is big.
+an island is small.

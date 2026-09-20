@@ -1,0 +1,23 @@
+# A question read as a tree: what adds the question node, color and is and the thing go under it as a statement
+# would put them, and the answer matches that tree against the story.
+seed: 90-everyday
+seed: 18-qualities
+corn is red. => corn -> {is} -> red | what color is corn? = red
+the car is blue. => car -> {is} -> blue | what color is the car? = blue
+the sky is blue. => sky -> {is} -> blue | what color is the sky? = blue
+milk is white. => milk -> {is} -> white | what color is milk? = white
+the hat is green. => hat -> {is} -> green | what color is the hat? = green
+the dog is big. => dog -> {is} -> big | what size is the dog? = big
+the mouse is tiny. => mouse -> {is} -> tiny | what size is the mouse? = tiny
+the tree is tall. => tree -> {is} -> tall | what size is the tree? = tall
+the pen is black. => pen -> {is} -> black | what color is the pen? = black
+the kite is orange. => kite -> {is} -> orange | what color is the kite? = orange
+the cat is in the box. => cat -> {in} -> box | where is the cat? = box; what is in the box? = cat
+corn in bag. => corn -> {in} -> bag | where is corn? = bag; what is in the bag? = corn
+the key is in the drawer. => key -> {in} -> drawer | where is the key? = drawer; what is in the drawer? = key
+test: the zorp is purple. => zorp -> {is} -> purple | what color is the zorp? = purple
+test: grunk is pink. => grunk -> {is} -> pink | what color is grunk? = pink
+test: the wexel is huge. => wexel -> {is} -> huge | what size is the wexel? = huge
+test: the plim is grey. => plim -> {is} -> grey | what color is the plim? = grey
+test: the vosk is in the trelm. => vosk -> {in} -> trelm | where is the vosk? = trelm; what is in the trelm? = vosk
+test: flib in mork. => flib -> {in} -> mork | where is flib? = mork; what is in the mork? = flib

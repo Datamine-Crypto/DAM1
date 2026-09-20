@@ -1,0 +1,60 @@
+# Language: letters, words, books and how writing is put together.
+there are 26 letters in the alphabet.
+there are 5 vowels in the alphabet.
+there are 21 consonants in the alphabet.
+a word has letters.
+a sentence has words.
+a sentence has a verb.
+a paragraph has sentences.
+a page has paragraphs.
+a book has a title.
+a book has an author.
+a story has a beginning.
+a story has an end.
+a noun is a word.
+a verb is a word.
+an adjective is a word.
+a noun is a name.
+a verb is an action.
+an adjective is a quality.
+a question has an answer.
+a question ends with a question mark.
+a sentence ends with a full stop.
+a poem has lines.
+a poem has verses.
+a song has words.
+a song has music.
+a letter is a message.
+a dictionary has words.
+a dictionary has meanings.
+english is a language.
+french is a language.
+spanish is a language.
+chinese is a language.
+arabic is a language.
+latin is an old language.
+greek is an old language.
+english has 26 letters.
+chinese has characters.
+a translator knows 2 languages.
+a writer has books.
+a poet has poems.
+a reader reads books.
+shakespeare has plays.
+homer has poems.
+a bookshop has books.
+
+# More languages, each read and checked by the reader before it was added.
+german is a language.
+italian is a language.
+russian is a language.
+japanese is a language.
+portuguese is a language.
+hindi is a language.
+korean is a language.
+dutch is a language.
+greek is a language.
+turkish is a language.
+swahili is a language.
+polish is a language.
+latin is a language.

@@ -1,0 +1,3 @@
+# is the car red: find the car, check red on it.
+the car is red. => car:the(true) -> {is} -> {color} -> red | is the car red? = yes; is the car blue? = no
+test: the zorp is green. => zorp:the(true) -> {is} -> {color} -> green | is the zorp green? = yes; is the zorp black? = no

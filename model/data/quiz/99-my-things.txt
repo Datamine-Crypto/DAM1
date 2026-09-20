@@ -1,0 +1,14 @@
+# My things: the speaker's own thing is told and asked with my, as his and her are for a name. A
+# statement about my thing keeps what the thing is, where it is or who it is; a question about my
+# thing is answered from it, and with nothing when the thing was never told.
+# Each scene tells two or three of my things or my kin, then asks where each thing is, its color, what
+# is in each place, yes and no, and a thing or a quality never told, which is nothing. Each turn tells
+# one thing and asks for another.
+i have a key. my key is in the drawer. i have a bike. my bike is blue. => i owns key; key in drawer; i owns bike; bike is blue | where is my key? = drawer; what is in the drawer? = key; what color is my bike? = blue; what is blue? = bike; is my key in the drawer? = yes; is my bike red? = no; is my key blue? = no; where is my bike? = nothing; what color is my key? = nothing; where is my phone? = nothing
+i have a hat. my hat is on the bed. i have a cup. my cup is green. => i owns hat; hat in bed; i owns cup; cup is green | where is my hat? = bed; what color is my cup? = green; what is green? = cup; is my hat on the bed? = yes; is my cup green? = yes; is my cup blue? = no; where is my cup? = nothing; what color is my hat? = nothing; where is my key? = nothing
+i have a dog. ann likes tea. ann is my sister. => i owns dog; ann likes tea; ann is sister | what do i have? = dog; where is my key? = nothing; who is ann? = sister; what does ann like? = tea; does ann like tea? = yes; is ann my sister? = yes; do i have a cat? = no; where is my dog? = nothing; what does tom like? = nothing; who is tom? = nothing
+my phone is in the bag. my pen is black. => phone in bag; pen is black | where is my phone? = bag; what is in the bag? = phone; what color is my pen? = black; what is black? = pen; is my phone in the bag? = yes; is my pen red? = no; where is my pen? = nothing; what color is my phone? = nothing
+turn: my phone is in the bag where is my key {eom} => phone in bag | nothing
+test: i have a coat. my coat is in the car. i have a kite. my kite is red. => i owns coat; coat in car; i owns kite; kite is red | where is my coat? = car; what color is my kite? = red; what is in the car? = coat; what is red? = kite; is my coat in the car? = yes; is my kite blue? = no; where is my kite? = nothing; what color is my coat? = nothing
+test: my book is on the table. tom is my brother. => book in table; tom is brother | where is my book? = table; what is tom? = brother; who is tom? = brother; is my book on the table? = yes; is tom my brother? = yes; is my book on the bed? = no; where is my coat? = nothing; who is ann? = nothing
+test: turn: my kite is red where is my phone {eom} => kite is red | nothing

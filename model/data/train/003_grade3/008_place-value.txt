@@ -1,0 +1,14 @@
+# Place value: a whole number is written with digits, and each digit counts ones, tens or hundreds by
+# its place, so the tens digit of 45 is 4 and the ones digit is 5. The traced lines and the turns stay as
+# single lessons; each scene tells what several people have, then asks the digits of those counts.
+turn: how many tens are in 45? => | 4
+turn: how many ones are in 45? => | 5
+turn: how many hundreds are in 372? => | 3
+turn: what is the tens digit of 81? => | 8
+turn: what is the ones digit of 93? => | 3
+tom has 45 pens. ann has 372 cards. sam has 81 coins. sue has 93 stamps. => {number:value(45)}; tom -> {has} -> pen:quantity(45); {number:value(372)}; ann -> {has} -> card:quantity(372); {number:value(81)}; sam -> {has} -> coin:quantity(81); {number:value(93)}; sue -> {has} -> stamp:quantity(93) | how many tens are in 45? = 4; how many ones are in 45? = 5; how many hundreds are in 372? = 3; what is the tens digit of 81? = 8; what is the ones digit of 93? = 3; what is the tens digit of 372? = 7; what is the ones digit of 372? = 2; how many ones are in 81? = 1; what is the tens digit of 93? = 9; how many pens does tom have? = 45; how many coins does sam have? = 81
+kim has 29 apples. joe has 516 beads. lily has 74 shells. => {number:value(29)}; kim -> {has} -> apple:quantity(29); {number:value(516)}; joe -> {has} -> bead:quantity(516); {number:value(74)}; lily -> {has} -> shell:quantity(74) | how many tens are in 29? = 2; how many ones are in 29? = 9; how many hundreds are in 516? = 5; what is the tens digit of 516? = 1; what is the ones digit of 516? = 6; what is the tens digit of 74? = 7; what is the ones digit of 74? = 4; how many ones are in 74? = 4; how many beads does joe have? = 516; how many shells does lily have? = 74
+test: zoe has 67 cards. ben has 905 coins. max has 58 marbles. => {number:value(67)}; zoe -> {has} -> card:quantity(67); {number:value(905)}; ben -> {has} -> coin:quantity(905); {number:value(58)}; max -> {has} -> marble:quantity(58) | how many tens are in 67? = 6; how many hundreds are in 905? = 9; what is the ones digit of 58? = 8; how many ones are in 67? = 7; what is the tens digit of 58? = 5; what is the ones digit of 905? = 5; what is the tens digit of 905? = 0; how many marbles does max have? = 58
+test: turn: how many tens are in 67? => | 6
+test: turn: how many hundreds are in 905? => | 9
+test: turn: what is the ones digit of 58? => | 8

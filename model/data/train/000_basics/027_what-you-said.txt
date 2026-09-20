@@ -1,0 +1,16 @@
+# What you said: a chat asks about the answer it just got. The answer stands under the question node
+# in the tree, so the step to the last answer reads it back, and a second question about the same
+# thing is answered from the tree again.
+seed: 30-geography
+turn: what is the capital of france? => | paris
+then: turn: what did you say? => | paris
+then: turn: what did you answer? => | paris
+turn: where is japan? => | asia
+then: turn: what did you say? => | asia
+turn: what is the capital of italy? => | rome
+then: turn: what did you answer? => | rome
+then: turn: say it again? => | rome
+test: turn: where is brazil? => | america
+test: then: turn: what did you say? => | america
+test: turn: what is the capital of spain? => | madrid
+test: then: turn: what did you answer? => | madrid

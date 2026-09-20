@@ -1,0 +1,13 @@
+# Dollars and cents: a dollar is 100 cents, so some dollars and some cents together are the dollars
+# times 100 with the cents added, and some cents are that many hundredths of a dollar.
+# The traced turns stay single lessons. Each scene tells how many dollars or cents two or three people
+# have, then asks many sums of dollars and cents in cents and cents in dollars, each amount, what an
+# amount is worth in the other unit, a sum, who has more, and a person the scene never told.
+seed: measures
+turn: how many cents are in 2 dollars and 50 cents? => | 250
+turn: how many cents are in 3 dollars? => | 300
+turn: how many dollars are 400 cents? => | 4
+tom has 3 dollars. ann has 50 cents. sam has 2 dollars. => {number:value(3)}; tom -> {has} -> dollar:quantity(3); {number:value(50)}; ann -> {has} -> cent:quantity(50); {number:value(2)}; sam -> {has} -> dollar:quantity(2) | how many cents are in 2 dollars and 50 cents? = 250; how many cents are in 3 dollars? = 300; how many cents are in 1 dollar and 5 cents? = 105; how many dollars are 400 cents? = 4; how many cents are in 2 dollars? = 200; how many dollars are 300 cents? = 3; how many dollars does tom have? = 3; how many cents does ann have? = 50; how many dollars do tom and sam have? = 5; who has more dollars? = tom; how many cents does tom have? = 300; how many cents does sam have? = 200; how many dollars does lily have? = {nothing}
+lily has 4 dollars. fred has 5 cents. rose has 600 cents. => {number:value(4)}; lily -> {has} -> dollar:quantity(4); {number:value(5)}; fred -> {has} -> cent:quantity(5); {number:value(600)}; rose -> {has} -> cent:quantity(600) | how many dollars are 600 cents? = 6; how many cents are in 4 dollars? = 400; how many cents are in 4 dollars and 5 cents? = 405; how many cents are in 1 dollar and 5 cents? = 105; how many dollars are 400 cents? = 4; how many cents are in 2 dollars and 50 cents? = 250; how many dollars does lily have? = 4; how many cents does rose have? = 600; how many dollars does rose have? = 6; how many cents does fred have? = 5; how many cents do fred and rose have? = 605; how many dollars does tom have? = {nothing}
+test: turn: how many cents are in 4 dollars and 25 cents? => | 425
+test: kim has 7 dollars. joe has 25 cents. => {number:value(7)}; kim -> {has} -> dollar:quantity(7); {number:value(25)}; joe -> {has} -> cent:quantity(25) | how many cents are in 4 dollars and 25 cents? = 425; how many dollars are 700 cents? = 7; how many cents are in 7 dollars? = 700; how many cents are in 7 dollars and 25 cents? = 725; how many dollars does kim have? = 7; how many cents does joe have? = 25; how many cents does kim have? = 700; how many dollars does zoe have? = {nothing}

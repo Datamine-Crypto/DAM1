@@ -1,0 +1,34 @@
+# Changing hands: giving, taking, buying, selling, losing, finding and getting. A thing has one
+# owner now, under {has}; the thing is grabbed from the old owner and dropped under the new one, and the
+# grab stamps the old fact with the time past: after "tom gives the car to ann", ann -> {has} -> car
+# and tom -> {has} -> car(time: past). A lost thing is stamped the same way, until
+# someone finds it. A then line is read on the state the line above it left; a scene of several
+# sentences does the same inside one text, and a thing that changes hands twice has both past
+# owners as timed values, in the order they had it. Questions ask who has it now, who had it before, whether
+# the old owner still has it (no), what each owner has (nothing when it all went), and how many
+# things an owner has after the change.
+seed: 21-verb-forms
+tom has a car. => tom -> {has} -> car | who has the car? = tom
+then: tom gives the car to ann. => ann -> {has} -> car; tom -> {has} -> car -> {time} -> {past}; not tom -> {has} -> car | who has the car? = ann; who had the car before? = tom; does tom have the car? = no; what does tom have? = {nothing}; what does ann have? = car
+sam has a kite. lily has a ball. => sam -> {has} -> kite; lily -> {has} -> ball | who has the kite? = sam; who has the ball? = lily
+then: lily takes the kite from sam. => lily -> {has} -> kite; sam -> {has} -> kite -> {time} -> {past}; not sam -> {has} -> kite | who has the kite? = lily; who had the kite before? = sam; does sam have the kite? = no; what does lily have? = ball, kite; how many things does lily have? = 2; what does sam have? = {nothing}
+kim has a hat. => kim -> {has} -> hat | who has the hat? = kim
+then: joe buys the hat from kim. => joe -> {has} -> hat; kim -> {has} -> hat -> {time} -> {past}; not kim -> {has} -> hat | who has the hat? = joe; who had the hat before? = kim; does kim have the hat? = no; what does joe have? = hat
+max has a bike. => max -> {has} -> bike | who has the bike? = max
+then: max sells the bike to sue. => sue -> {has} -> bike; max -> {has} -> bike -> {time} -> {past}; not max -> {has} -> bike | who has the bike? = sue; who had the bike before? = max; does max have a bike? = no; what does sue have? = bike; what does max have? = {nothing}
+ben has a coin. ben has a ring. => ben -> {has} -> coin; ben -> {has} -> ring | how many things does ben have? = 2
+then: ben loses the coin. => ben -> {has} -> coin -> {time} -> {past}; not ben -> {has} -> coin | does ben have a coin? = no; who had the coin before? = ben; what does ben have? = ring; how many things does ben have? = 1; who has the coin? = {nothing}
+then: zoe finds the coin. => zoe -> {has} -> coin; ben -> {has} -> coin -> {time} -> {past}; not ben -> {has} -> coin | who has the coin? = zoe; who had the coin before? = ben; does zoe have a coin? = yes; does ben have a coin? = no; what does zoe have? = coin
+tom has a book. ann has a cup. tom gives the book to ann. => ann -> {has} -> cup; ann -> {has} -> book; tom -> {has} -> book -> {time} -> {past}; not tom -> {has} -> book | who has the book? = ann; who had the book before? = tom; does tom have a book? = no; what does ann have? = cup, book; what does tom have? = {nothing}; how many things does ann have? = 2
+rose has a pen. tim takes the pen. tim gives the pen to kim. => kim -> {has} -> pen; rose -> {has} -> pen -> {time} -> {past}; tim -> {has} -> pen -> {time} -> {past}; not rose -> {has} -> pen; not tim -> {has} -> pen | who has the pen? = kim; who had the pen before? = rose, tim; does tim have the pen? = no; does rose have the pen? = no; what does kim have? = pen
+sue has a dog. sue sells the dog to max. max gives the dog to joe. => joe -> {has} -> dog; sue -> {has} -> dog -> {time} -> {past}; max -> {has} -> dog -> {time} -> {past}; not sue -> {has} -> dog; not max -> {has} -> dog | who has the dog? = joe; who had the dog before? = sue, max; does sue have a dog? = no; does max have a dog? = no; what does joe have? = dog
+lily has a key. lily loses the key. ben finds the key. => ben -> {has} -> key; lily -> {has} -> key -> {time} -> {past}; not lily -> {has} -> key | who has the key? = ben; who had the key before? = lily; does lily have a key? = no; what does ben have? = key; what does lily have? = {nothing}
+zoe gets a scarf. zoe gets a coat. zoe gives the scarf to tom. => zoe -> {has} -> coat; tom -> {has} -> scarf; zoe -> {has} -> scarf -> {time} -> {past}; not zoe -> {has} -> scarf | what does zoe have? = coat; who has the scarf? = tom; who had the scarf before? = zoe; does zoe have a scarf? = no; how many things does zoe have? = 1
+turn: kim has a ball and kim gives the ball to sam who has the ball => sam -> {has} -> ball; kim -> {has} -> ball -> {time} -> {past}; not kim -> {has} -> ball | sam
+turn: ann has a kite and ann loses the kite who had the kite before => ann -> {has} -> kite -> {time} -> {past}; not ann -> {has} -> kite | ann
+test: joe has a car. => joe -> {has} -> car | who has the car? = joe
+test: then: joe gives the car to rose. => rose -> {has} -> car; joe -> {has} -> car -> {time} -> {past}; not joe -> {has} -> car | who has the car? = rose; who had the car before? = joe; does joe have a car? = no; what does rose have? = car; what does joe have? = {nothing}
+test: tim has a hat. tim has a coin. tim loses the hat. => tim -> {has} -> coin; tim -> {has} -> hat -> {time} -> {past}; not tim -> {has} -> hat | does tim have a hat? = no; who had the hat before? = tim; what does tim have? = coin; how many things does tim have? = 1; who has the hat? = {nothing}
+test: max has a doll. max sells the doll to lily. lily gives the doll to ben. => ben -> {has} -> doll; max -> {has} -> doll -> {time} -> {past}; lily -> {has} -> doll -> {time} -> {past}; not max -> {has} -> doll; not lily -> {has} -> doll | who has the doll? = ben; who had the doll before? = max, lily; does lily have a doll? = no; does max have a doll? = no; what does ben have? = doll
+test: sue has a cup. zoe takes the cup from sue. => zoe -> {has} -> cup; sue -> {has} -> cup -> {time} -> {past}; not sue -> {has} -> cup | who has the cup? = zoe; who had the cup before? = sue; does sue have a cup? = no; what does zoe have? = cup
+test: turn: tom has a pen and tom sells the pen to kim who had the pen before => kim -> {has} -> pen; tom -> {has} -> pen -> {time} -> {past}; not tom -> {has} -> pen | tom

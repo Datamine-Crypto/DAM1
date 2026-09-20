@@ -1,0 +1,18 @@
+# Adjectives that measure one scale from its two ends, so a comparison told with the one is the
+# same comparison from the other end with the other.
+the opposite of tall is short.
+the opposite of big is small.
+the opposite of old is young.
+the opposite of fast is slow.
+the opposite of heavy is light.
+the opposite of high is low.
+the opposite of hot is cold.
+the opposite of deep is shallow.
+the opposite of rich is poor.
+the opposite of taller is shorter.
+the opposite of bigger is smaller.
+the opposite of older is younger.
+the opposite of faster is slower.
+the opposite of heavier is lighter.
+the opposite of higher is lower.
+the opposite of hotter is colder.

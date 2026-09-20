@@ -1,0 +1,91 @@
+# Words: opposites, and things that are the same.
+the opposite of hot is cold.
+the opposite of big is small.
+the opposite of up is down.
+the opposite of wet is dry.
+the opposite of fast is slow.
+the opposite of day is night.
+the opposite of open is closed.
+the opposite of tall is short.
+the opposite of old is young.
+the opposite of new is old.
+the opposite of happy is sad.
+the opposite of good is bad.
+the opposite of light is dark.
+the opposite of heavy is light.
+the opposite of full is empty.
+the opposite of clean is dirty.
+the opposite of loud is quiet.
+the opposite of hard is soft.
+the opposite of rich is poor.
+the opposite of strong is weak.
+the opposite of left is right.
+the opposite of in is out.
+the opposite of on is off.
+the opposite of yes is no.
+the opposite of black is white.
+the opposite of long is short.
+the opposite of wide is narrow.
+the opposite of deep is shallow.
+the opposite of early is late.
+the opposite of first is last.
+the opposite of north is south.
+the opposite of east is west.
+the opposite of top is bottom.
+the opposite of front is back.
+the opposite of near is far.
+the opposite of before is after.
+the opposite of more is less.
+the opposite of true is false.
+the opposite of alive is dead.
+the opposite of thick is thin.
+the opposite of sweet is sour.
+the opposite of push is pull.
+the opposite of buy is sell.
+the opposite of give is take.
+the opposite of win is lose.
+the opposite of laugh is cry.
+the opposite of begin is end.
+the opposite of love is hate.
+the opposite of friend is enemy.
+the opposite of question is answer.
+the opposite of high is low.
+the opposite of inside is outside.
+the opposite of over is under.
+the opposite of always is never.
+the opposite of asleep is awake.
+the opposite of brave is afraid.
+the opposite of cheap is expensive.
+the opposite of hungry is full.
+the opposite of safe is dangerous.
+the opposite of same is different.
+a couch is the same as a sofa.
+a car is the same as an automobile.
+a cap is the same as a hat.
+big is the same as large.
+small is the same as little.
+fast is the same as quick.
+happy is the same as glad.
+sad is the same as unhappy.
+begin is the same as start.
+end is the same as finish.
+shut is the same as closed.
+a road is the same as a street.
+a shop is the same as a store.
+a boat is the same as a ship.
+a kid is the same as a child.
+a home is the same as a house.
+a rock is the same as a stone.
+a bag is the same as a sack.
+a cup is the same as a mug.
+a gift is the same as a present.
+a mistake is the same as an error.
+a task is the same as a job.
+a doctor is the same as a physician.
+a lawyer is the same as an attorney.
+a bike is the same as a bicycle.
+a plane is the same as an airplane.
+a phone is the same as a telephone.
+a photo is the same as a picture.
+a movie is the same as a film.
+a tv is the same as a television.

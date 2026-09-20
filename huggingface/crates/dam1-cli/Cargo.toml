@@ -1,0 +1,25 @@
+[package]
+name = "dam1-cli"
+version = "0.1.0"
+edition = "2024"
+license = "AGPL-3.0-or-later"
+description = "The dam1 binary: the model tool with the spec's settings wired in"
+repository = "https://github.com/Datamine-Crypto/DAM1"
+publish = false
+
+[[bin]]
+name = "dam1"
+path = "src/main.rs"
+
+[dependencies]
+premise = "0.1.5"
+dam-core = { path = "../../../model/crates/dam-core" }
+dam-console = { path = "../../../model/crates/dam-console" }
+dam1-hub = { path = "../dam1-hub" }
+spec = { path = "../../../model/crates/spec" }
+
+[dev-dependencies]
+dam-page = { path = "../../../model/crates/dam-page" }
+dam1 = { path = "../dam1" }
+safetensors = "0.8"
+serde_json = "1"

@@ -1,0 +1,4 @@
+# corn in bag, what is in the bag, where is corn: what -> {in} -> bag reads the thing whose in holds the bag;
+# where -> {is} -> corn reads the newest place corn is at.
+corn in bag. => corn -> {in} -> bag | what is in the bag? = corn; where is corn? = bag
+test: flib in mork. => flib -> {in} -> mork | what is in the mork? = flib; where is flib? = mork

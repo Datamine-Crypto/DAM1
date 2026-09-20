@@ -1,0 +1,4 @@
+# The points of the compass, each told as the opposite of the one across from it, both ways, so a
+# step one way is known as a step back the other way.
+the opposite of north is south.
+the opposite of east is west.

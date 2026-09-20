@@ -1,0 +1,10 @@
+# The word for the tens of a number between twenty and ninety nine: its tens digit names it, as the 4 of 42 is forty,
+# so a number is said in words as the word for its tens and then the word for its last digit.
+the tens of 2 is twenty.
+the tens of 3 is thirty.
+the tens of 4 is forty.
+the tens of 5 is fifty.
+the tens of 6 is sixty.
+the tens of 7 is seventy.
+the tens of 8 is eighty.
+the tens of 9 is ninety.

@@ -1,0 +1,14 @@
+# Decomposition: a count of one thing is a property of its node, and a sentence about one of them writes the fact
+# said of it on that node, the whole count as it was. tom has 3 balls is tom -> {has} -> ball(quantity: 3); one of
+# the balls is red adds color: red to the ball, the whole count as it was. Each scene tells a count, then singles one
+# out, then asks the whole count, the fact, and the owner.
+seed: 90-everyday
+seed: 18-qualities
+tom has 3 balls. => tom -> {has} -> ball:quantity(3); {number:value(3)} | how many balls does tom have? = 3; who has the balls? = tom
+then: one of the balls is red. => tom -> {has} -> ball -> {red} | how many balls does tom have? = 3; what color is the ball? = red; who has the red ball? = tom
+ann has 5 apples. => ann -> {has} -> apple:quantity(5); {number:value(5)} | how many apples does ann have? = 5
+then: one of the apples is green. => ann -> {has} -> apple -> {green} | how many apples does ann have? = 5; what color is the apple? = green; who has the green apple? = ann
+sam has 2 pens. => sam -> {has} -> pen:quantity(2); {number:value(2)} | how many pens does sam have? = 2
+then: one of the pens is blue. => sam -> {has} -> pen -> {blue} | how many pens does sam have? = 2; what color is the pen? = blue; who has the blue pen? = sam
+test: lily has 4 hats. => lily -> {has} -> hat:quantity(4); {number:value(4)} | how many hats does lily have? = 4
+test: then: one of the hats is black. => lily -> {has} -> hat -> {black} | how many hats does lily have? = 4; what color is the hat? = black; who has the black hat? = lily

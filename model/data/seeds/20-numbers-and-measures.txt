@@ -1,0 +1,38 @@
+# The statements of data/facts/20-numbers-and-measures.txt the cursor tree holds, one path each, written by build-seeds.mjs.
+triangle -> {side:quantity(3)}
+square -> {side:quantity(4)}
+rectangle -> {side:quantity(4)}
+pentagon -> {side:quantity(5)}
+hexagon -> {side:quantity(6)}
+octagon -> {side:quantity(8)}
+cube -> {face:quantity(6)}
+cube -> {edge:quantity(12)}
+cube -> {corner:quantity(8)}
+circle -> {degree:quantity(360)}
+triangle -> {degree:quantity(180)}
+triangle {is} shape
+square {is} shape
+circle {is} shape
+rectangle {is} shape
+circle -> {round}
+ball -> {round}
+dozen -> {equal} -> {number:value(12)}
+pair -> {equal} -> {number:value(2)}
+score -> {equal} -> {number:value(20)}
+gross -> {equal} -> {number:value(144)}
+million -> {equal} -> {number:value(1000000)}
+centimeter:quantity(1) {equal} millimeter:quantity(10)
+meter:quantity(1) {equal} centimeter:quantity(100)
+kilometer:quantity(1) {equal} meter:quantity(1000)
+kilogram:quantity(1) {equal} gram:quantity(1000)
+ton:quantity(1) {equal} kilogram:quantity(1000)
+liter:quantity(1) {equal} milliliter:quantity(1000)
+foot:quantity(1) {equal} inch:quantity(12)
+yard:quantity(1) {equal} feet:quantity(3)
+pound:quantity(1) {equal} ounce:quantity(16)
+byte:quantity(1) {equal} bit:quantity(8)
+kilobyte:quantity(1) {equal} byte:quantity(1024)
+meter {is} measure
+liter {is} measure
+kilogram {is} measure
+second {is} measure

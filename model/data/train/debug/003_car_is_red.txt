@@ -1,0 +1,3 @@
+# the car is red: the copula takes its own step, {children add: is type: property}, and red is the value under is.
+the car is red. => car:the(true) -> {is} -> red
+test: the zorp is blick. => zorp:the(true) -> {is} -> blick

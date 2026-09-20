@@ -1,0 +1,4 @@
+# the cat is in the box: the copula adds is on the cat, the place word after it adds the location under the
+# cat, and the box is the value under it; the is stays empty.
+the cat is in the box. => cat:the(true) -> {in} -> box:the(true)
+test: the wexel is in the tornd. => wexel:the(true) -> {in} -> tornd:the(true)

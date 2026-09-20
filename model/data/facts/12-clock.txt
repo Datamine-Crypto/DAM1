@@ -1,0 +1,13 @@
+# The hours on a clock face, each the successor of the one before it, twelve followed by one, in the order of the clock.
+the successor of 12 is 1.
+the successor of 1 is 2.
+the successor of 2 is 3.
+the successor of 3 is 4.
+the successor of 4 is 5.
+the successor of 5 is 6.
+the successor of 6 is 7.
+the successor of 7 is 8.
+the successor of 8 is 9.
+the successor of 9 is 10.
+the successor of 10 is 11.
+the successor of 11 is 12.

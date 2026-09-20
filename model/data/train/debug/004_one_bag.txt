@@ -1,0 +1,4 @@
+# one bag named twice: a value that names a thing is a mention of it; bag is red finds no bag under the world,
+# makes one, links the two mentions to it and writes red on it, so both sentences mean the one bag.
+corn in bag. carrot in bag. bag is red. => corn -> {in} -> bag; carrot -> {in} -> bag; bag -> {is} -> red
+test: zorp in flib. grunk in flib. flib is blick. => zorp -> {in} -> flib; grunk -> {in} -> flib; flib -> {is} -> blick

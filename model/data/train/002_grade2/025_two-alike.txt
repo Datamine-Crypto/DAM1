@@ -1,0 +1,13 @@
+# Two things of one name told apart by a quality: the red ball is in the box and the blue ball is in
+# the bag are two balls, since a ball that is red is not the blue one. A question names the one it
+# asks of by its quality. Held out lines use things, qualities and places the learned lines never use.
+seed: 90-everyday
+seed: 18-qualities
+the red ball is in the box. the blue ball is in the bag. => ball -> {in} -> box; ball -> {in} -> bag | where is the red ball? = box; where is the blue ball? = bag; what is in the bag? = ball; what is in the box? = ball
+the big dog is in the garden. the small dog is in the house. => dog -> {in} -> garden; dog -> {in} -> house | where is the big dog? = garden; where is the small dog? = house; what is in the house? = dog
+the green cup is on the table. the white cup is on the shelf. => cup -> {on} -> table; cup -> {on} -> shelf | where is the green cup? = table; where is the white cup? = shelf; what is on the shelf? = cup
+tom has the black hat. ann has the yellow hat. => tom -> {has} -> hat; ann -> {has} -> hat | who has the black hat? = tom; who has the yellow hat? = ann; what does ann have? = hat
+turn: the old key is in the drawer the new key is in the bag where is the new key => key -> {in} -> drawer; key -> {in} -> bag | bag
+test: the pink kite is in the car. the brown kite is in the shed. => kite -> {in} -> car; kite -> {in} -> shed | where is the pink kite? = car; where is the brown kite? = shed; what is in the shed? = kite
+test: sam has the long rope. kim has the short rope. => sam -> {has} -> rope; kim -> {has} -> rope | who has the long rope? = sam; who has the short rope? = kim
+test: turn: the hot pan is on the stove the cold pan is in the sink where is the cold pan => pan -> {on} -> stove; pan -> {in} -> sink | sink

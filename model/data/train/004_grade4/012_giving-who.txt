@@ -1,0 +1,30 @@
+# Who gave what to whom, as the bAbI three-argument stories ask it. Giving keeps the giver as well as
+# the new owner, so who gave the thing, what one gave another, who received the thing and who one
+# gave it to are all answered. The question reads as the story does: gave turns the owning round.
+# Each scene tells two or three givings of different things, then asks every giving from each end,
+# who has each thing now, and a thing no one gave.
+seed: 21-verb-forms
+fred gave the football to jeff. mary gave the milk to bill. jeff gave the apple to fred. => jeff -> {has} -> football; not mary -> {has} -> milk; mary -> {has} -> milk -> {time} -> {past}; bill -> {has} -> milk; not jeff -> {has} -> apple; jeff -> {has} -> apple -> {time} -> {past}; not fred -> {has} -> football; fred -> {has} -> football -> {time} -> {past}; fred -> {has} -> apple | who gave the football to jeff? = fred; who received the football? = jeff; who gave the milk to bill? = mary; what did mary give to bill? = milk; who did jeff give the apple to? = fred; who received the apple? = fred; what did fred give to jeff? = football; what did jeff give to fred? = apple; who received the milk? = bill; who did mary give the milk to? = bill; who did fred give the football to? = jeff; who gave the apple to fred? = jeff; who has the football? = jeff; who has the milk? = bill; what does fred have? = apple; does mary have the milk? = no; what did sandra give to bill? = {nothing}
+bill gave the football to mary. fred picked up the milk. fred gave the milk to jeff. => not bill -> {has} -> football; bill -> {has} -> football -> {time} -> {past}; mary -> {has} -> football; not fred -> {has} -> milk; fred -> {has} -> milk -> {time} -> {past}; jeff -> {has} -> milk | who gave the football to mary? = bill; what did bill give to mary? = football; who gave the milk to jeff? = fred; who received the milk? = jeff; who received the football? = mary; who did bill give the football to? = mary; what did fred give to jeff? = milk; who did fred give the milk to? = jeff; who has the milk? = jeff; does fred have the milk? = no; what does mary have? = football; who gave the apple to jeff? = {nothing}
+mary gave the apple to jeff. jeff gave the apple to bill. fred gave the milk to bill. => not fred -> {has} -> milk; fred -> {has} -> milk -> {time} -> {past}; bill -> {has} -> apple; bill -> {has} -> milk; not mary -> {has} -> apple; mary -> {has} -> apple -> {time} -> {past}; not jeff -> {has} -> apple; jeff -> {has} -> apple -> {time} -> {past} | who received the apple? = bill; who gave the apple to bill? = jeff; who gave the milk to bill? = fred; who received the milk? = bill; who gave the apple to jeff? = mary; what did fred give to bill? = milk; what did jeff give to bill? = apple; who did mary give the apple to? = jeff; who has the apple? = bill; does jeff have the apple? = no; does bill have the milk? = yes; who gave the football to bill? = {nothing}
+bill gave the apple to jeff. mary gave the football to fred. => not bill -> {has} -> apple; bill -> {has} -> apple -> {time} -> {past}; jeff -> {has} -> apple; not mary -> {has} -> football; mary -> {has} -> football -> {time} -> {past}; fred -> {has} -> football | who gave the apple to jeff? = bill; who received the apple? = jeff; who gave the football to fred? = mary; who received the football? = fred; what did bill give to jeff? = apple; what did mary give to fred? = football; who did bill give the apple to? = jeff; who did mary give the football to? = fred; who has the apple? = jeff; does bill have the apple? = no; what does fred have? = football; who received the milk? = {nothing}
+test: jeff gave the milk to mary. bill gave the apple to fred. => not jeff -> {has} -> milk; jeff -> {has} -> milk -> {time} -> {past}; mary -> {has} -> milk; not bill -> {has} -> apple; bill -> {has} -> apple -> {time} -> {past}; fred -> {has} -> apple | who gave the milk to mary? = jeff; who received the milk? = mary; what did bill give to fred? = apple; who received the apple? = fred; what did jeff give to mary? = milk; who gave the apple to fred? = bill; who did jeff give the milk to? = mary; who has the apple? = fred; does jeff have the milk? = no; who received the football? = {nothing}
+tom has a car. he gave it to bob. => bob -> {has} -> car | who has the car? = bob; who had the car before bob? = tom; does tom have the car? = no
+ann has a kite. she gave it to sue. sue gave the kite to max. => max -> {has} -> kite | who has the kite? = max; who had the kite before max? = sue; who had the kite before sue? = ann
+mary had the milk. mary gave the milk to fred. => fred -> {has} -> milk | who had the milk before fred? = mary; who has the milk? = fred
+test: kim has a drum. she gave it to joe. joe gave the drum to lily. => lily -> {has} -> drum | who has the drum? = lily; who had the drum before lily? = joe; who had the drum before joe? = kim
+turn: tom had a car he gave it to bob who has the car => bob -> {has} -> car | bob
+turn: ann has a kite she gave it to sue who has the kite => sue -> {has} -> kite | sue
+turn: sam had a ball he gave it to kim who had the ball before kim => kim -> {has} -> ball | sam
+turn: mary has a book she gave it to fred does mary have the book => fred -> {has} -> book | no
+test: turn: joe had a drum he gave it to lily who has the drum => lily -> {has} -> drum | lily
+test: turn: zoe has a ring she gave it to ben who had the ring before ben => ben -> {has} -> ring | zoe
+# The one given to said right after the verb, before the thing: mary gave john a book. The thing goes to that one.
+mary gave john a book. => | who has the book? = john; what does john have? = book
+tom gave ann a kite. sam gave ben a cap. => | who has the kite? = ann; who has the cap? = ben; what does ann have? = kite
+i gave tom an apple. => | who has the apple? = tom
+lucy has a pen. lucy gave max the pen. => | who has the pen? = max
+turn: ann gave sam a ball who has the ball => | sam
+test: kim gave joe a map. => | who has the map? = joe; what does joe have? = map
+test: i gave emma a ring. => | who has the ring? = emma
+test: turn: tom gave lily a drum who has the drum => | lily

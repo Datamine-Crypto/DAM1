@@ -1,0 +1,252 @@
+# Books and authors: who wrote each book, what kind of book it is, and who the writers were.
+the author of hamlet is shakespeare.
+the author of macbeth is shakespeare.
+the author of othello is shakespeare.
+the author of the tempest is shakespeare.
+the author of the iliad is homer.
+the author of the odyssey is homer.
+the author of the aeneid is virgil.
+the author of metamorphoses is ovid.
+the author of the inferno is dante.
+the author of the decameron is boccaccio.
+the author of quixote is cervantes.
+the author of candide is voltaire.
+the author of emile is rousseau.
+the author of tartuffe is moliere.
+the author of the misanthrope is moliere.
+the author of phaedra is racine.
+the author of cyrano is rostand.
+the author of faust is goethe.
+the author of the trial is kafka.
+the author of the metamorphosis is kafka.
+the author of the stranger is camus.
+the author of nausea is sartre.
+the author of germinal is zola.
+the author of nana is zola.
+the author of buddenbrooks is mann.
+the author of siddhartha is hesse.
+the author of steppenwolf is hesse.
+the author of zarathustra is nietzsche.
+the author of leviathan is hobbes.
+the author of the prince is machiavelli.
+the author of the republic is plato.
+the author of the symposium is plato.
+the author of poetics is aristotle.
+the author of the meditations is aurelius.
+the author of the confessions is augustine.
+the author of the analects is confucius.
+the author of the histories is herodotus.
+the author of oedipus is sophocles.
+the author of antigone is sophocles.
+the author of medea is euripides.
+the author of lysistrata is aristophanes.
+the author of the oresteia is aeschylus.
+the author of principia is newton.
+the author of the elements is euclid.
+the author of the rubaiyat is khayyam.
+the author of gitanjali is tagore.
+the author of genji is murasaki.
+the author of emma is austen.
+the author of persuasion is austen.
+the author of middlemarch is eliot.
+the author of ivanhoe is scott.
+the author of kidnapped is stevenson.
+the author of frankenstein is shelley.
+the author of ulysses is joyce.
+the author of dubliners is joyce.
+the author of salome is wilde.
+the author of pygmalion is shaw.
+the author of tess is hardy.
+the author of nostromo is conrad.
+the author of kim is kipling.
+the author of gulliver is swift.
+the author of pamela is richardson.
+the author of alice is carroll.
+the author of jabberwocky is carroll.
+the author of the hobbit is tolkien.
+the author of the silmarillion is tolkien.
+the author of narnia is lewis.
+the author of matilda is dahl.
+the author of heidi is spyri.
+the author of cinderella is perrault.
+the author of tarzan is burroughs.
+the author of walden is thoreau.
+the author of the pearl is steinbeck.
+the author of beloved is morrison.
+the author of ariel is plath.
+the author of howl is ginsberg.
+the author of lolita is nabokov.
+the author of the idiot is dostoevsky.
+the author of the gambler is dostoevsky.
+the author of the overcoat is gogol.
+the author of onegin is pushkin.
+the author of resurrection is tolstoy.
+the author of the seagull is chekhov.
+the author of dune is herbert.
+the author of foundation is asimov.
+the author of neuromancer is gibson.
+the author of solaris is lem.
+the author of the alchemist is coelho.
+the author of the godfather is puzo.
+the author of jaws is benchley.
+the author of psycho is bloch.
+the author of atonement is mcewan.
+the author of disgrace is coetzee.
+the author of ficciones is borges.
+the author of the crucible is miller.
+the author of ozymandias is shelley.
+the author of daffodils is wordsworth.
+the author of the tyger is blake.
+the author of invictus is henley.
+hamlet is a play.
+macbeth is a play.
+othello is a play.
+the tempest is a play.
+the iliad is a poem.
+the odyssey is a poem.
+the aeneid is a poem.
+the inferno is a poem.
+beowulf is a poem.
+the decameron is a book.
+quixote is a novel.
+candide is a novel.
+tartuffe is a play.
+phaedra is a play.
+cyrano is a play.
+faust is a play.
+the trial is a novel.
+the stranger is a novel.
+germinal is a novel.
+siddhartha is a novel.
+steppenwolf is a novel.
+leviathan is a book.
+oedipus is a play.
+antigone is a play.
+medea is a play.
+lysistrata is a play.
+emma is a novel.
+persuasion is a novel.
+middlemarch is a novel.
+ivanhoe is a novel.
+kidnapped is a novel.
+frankenstein is a novel.
+dracula is a novel.
+ulysses is a novel.
+salome is a play.
+pygmalion is a play.
+nostromo is a novel.
+kim is a novel.
+the hobbit is a novel.
+matilda is a novel.
+pinocchio is a novel.
+heidi is a novel.
+walden is a book.
+beloved is a novel.
+lolita is a novel.
+the idiot is a novel.
+onegin is a poem.
+dune is a novel.
+neuromancer is a novel.
+solaris is a novel.
+the alchemist is a novel.
+the godfather is a novel.
+the crucible is a play.
+ozymandias is a poem.
+daffodils is a poem.
+the tyger is a poem.
+invictus is a poem.
+howl is a poem.
+jabberwocky is a poem.
+milton wrote paradise lost.
+chaucer wrote the canterbury tales.
+dickens wrote oliver twist.
+dickens wrote great expectations.
+bronte wrote jane eyre.
+bronte wrote wuthering heights.
+tolstoy wrote anna karenina.
+flaubert wrote madame bovary.
+hugo wrote les miserables.
+melville wrote moby dick.
+twain wrote tom sawyer.
+twain wrote huckleberry finn.
+defoe wrote robinson crusoe.
+stevenson wrote treasure island.
+kipling wrote the jungle book.
+barrie wrote peter pan.
+alcott wrote little women.
+orwell wrote animal farm.
+fitzgerald wrote the great gatsby.
+rowling wrote harry potter.
+doyle wrote sherlock holmes.
+wilde wrote dorian gray.
+pasternak wrote doctor zhivago.
+ibsen wrote peer gynt.
+ovid was a poet.
+boccaccio was a writer.
+moliere was a playwright.
+racine was a playwright.
+rostand was a playwright.
+zola was a writer.
+flaubert was a writer.
+dumas was a writer.
+balzac was a writer.
+proust was a writer.
+mann was a writer.
+hesse was a writer.
+schiller was a writer.
+brecht was a playwright.
+hobbes was a philosopher.
+aurelius was a philosopher.
+herodotus was a historian.
+euripides was a playwright.
+aristophanes was a playwright.
+aeschylus was a playwright.
+khayyam was a poet.
+murasaki was a writer.
+eliot was a writer.
+scott was a writer.
+stevenson was a writer.
+shelley was a poet.
+stoker was a writer.
+shaw was a playwright.
+hardy was a writer.
+conrad was a writer.
+kipling was a writer.
+swift was a writer.
+defoe was a writer.
+carroll was a writer.
+lewis was a writer.
+dahl was a writer.
+collodi was a writer.
+perrault was a writer.
+thoreau was a writer.
+morrison was a writer.
+plath was a poet.
+ginsberg was a poet.
+nabokov was a writer.
+gogol was a writer.
+chekhov was a playwright.
+herbert was a writer.
+asimov was a writer.
+coelho is a writer.
+borges was a writer.
+miller was a playwright.
+wordsworth was a poet.
+keats was a poet.
+tennyson was a poet.
+whitman was a poet.
+dickinson was a poet.
+frost was a poet.
+yeats was a poet.
+beckett was a playwright.
+bronte was a writer.
+melville was a writer.
+barrie was a playwright.
+alcott was a writer.
+pasternak was a writer.
+aesop was a writer.
+atwood is a writer.
+eco was a writer.
+rushdie is a writer.
+achebe was a writer.
+grimm was a writer.

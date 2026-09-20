@@ -1,0 +1,2 @@
+# The statements of data/facts/12-clock.txt the cursor tree holds, one path each, written by build-seeds.mjs.
+{number:value(12)} -> {successor} -> {number:value(1)} -> {successor} -> {number:value(2)} -> {successor} -> {number:value(3)} -> {successor} -> {number:value(4)} -> {successor} -> {number:value(5)} -> {successor} -> {number:value(6)} -> {successor} -> {number:value(7)} -> {successor} -> {number:value(8)} -> {successor} -> {number:value(9)} -> {successor} -> {number:value(10)} -> {successor} -> {number:value(11)} -> {successor} -> {number:value(12)}

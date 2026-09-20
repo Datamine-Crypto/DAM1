@@ -1,0 +1,54 @@
+# The first shape of the reading one word at a time: something in something. A line passes when the tree
+# holds the path after the arrow. The learned lines use everyday names; the held out lines use names no
+# lesson and no seed says, so a pass there is the pattern and never the word.
+seed: 90-everyday
+corn in bag. => corn -> {in} -> bag
+the cat is in the box. => cat -> {in} -> box
+the pen is in the cup. => pen -> {in} -> cup
+the key is in the drawer. => key -> {in} -> drawer
+milk in jar. => milk -> {in} -> jar
+the book is in the bag. => book -> {in} -> bag
+a spoon is in the bowl. => spoon -> {in} -> bowl
+the ball is in the yard. => ball -> {in} -> yard
+sand in bucket. => sand -> {in} -> bucket
+the fish is in the tank. => fish -> {in} -> tank
+the coin is in the jar. => coin -> {in} -> jar
+rice in pot. => rice -> {in} -> pot
+the shoe is in the closet. => shoe -> {in} -> closet
+the frog is in the pond. => frog -> {in} -> pond
+water in glass. => water -> {in} -> glass
+the toy is in the box. => toy -> {in} -> box
+the dog is in the garden. => dog -> {in} -> garden
+a bird is in the tree. => bird -> {in} -> tree
+salt in bowl. => salt -> {in} -> bowl
+the hat is in the car. => hat -> {in} -> car
+the sock is in the basket. => sock -> {in} -> basket
+the egg is in the nest. => egg -> {in} -> nest
+tea in cup. => tea -> {in} -> cup
+the lamp is in the tent. => lamp -> {in} -> tent
+the map is in the desk. => map -> {in} -> desk
+soup in pan. => soup -> {in} -> pan
+the ring is in the box. => ring -> {in} -> box
+the bike is in the shed. => bike -> {in} -> shed
+the apple is in the bowl. => apple -> {in} -> bowl
+bread in basket. => bread -> {in} -> basket
+test: the zorp is in the blick. => zorp -> {in} -> blick
+test: grunk in flib. => grunk -> {in} -> flib
+test: the wexel is in the tornd. => wexel -> {in} -> tornd
+test: a plim is in the quorn. => plim -> {in} -> quorn
+test: vosk in trelm. => vosk -> {in} -> trelm
+test: the dabber is in the mork. => dabber -> {in} -> mork
+test: the flonk is in the sprig. => flonk -> {in} -> sprig
+test: yeb in crund. => yeb -> {in} -> crund
+test: the knab is in the lorsh. => knab -> {in} -> lorsh
+test: a snerl is in the vint. => snerl -> {in} -> vint
+test: the poddle is in the gramb. => poddle -> {in} -> gramb
+test: hix in blorn. => hix -> {in} -> blorn
+test: the marlow is in the kesk. => marlow -> {in} -> kesk
+test: the trub is in the fennick. => trub -> {in} -> fennick
+test: quill in drask. => quill -> {in} -> drask
+test: the ember is in the vault. => ember -> {in} -> vault
+test: the lantern is in the cellar. => lantern -> {in} -> cellar
+test: the violin is in the attic. => violin -> {in} -> attic
+test: pepper in jug. => pepper -> {in} -> jug
+test: the kitten is in the barn. => kitten -> {in} -> barn

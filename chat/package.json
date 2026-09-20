@@ -1,0 +1,30 @@
+{
+  "name": "datamine-chat",
+  "private": true,
+  "license": "AGPL-3.0-or-later",
+  "version": "1.0.0",
+  "description": "A chat with the reader: a prompt in, the reader's reply back, every chat kept in the browser.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@mui/icons-material": "9.3.1",
+    "@mui/material": "9.3.1",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "zustand": "^5.0.8"
+  },
+  "devDependencies": {
+    "@types/react": "19.2.17",
+    "@types/react-dom": "19.2.3",
+    "@vitejs/plugin-react": "^6.0.3",
+    "typescript": "^5.9.0",
+    "vite": "^8.1.0"
+  }
+}

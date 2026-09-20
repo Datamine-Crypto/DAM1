@@ -1,0 +1,60 @@
+# Measures: what one of a unit is worth in the unit its kind is counted in, so a question can count in one unit and answer in another. Time in seconds, length in kilometers, weight in grams, volume in liters, money in dollars.
+a minute is 60 seconds.
+an hour is 3600 seconds.
+a day is 86400 seconds.
+a week is 604800 seconds.
+a year is 12 months.
+a meter is 0.001 kilometers.
+a centimeter is 0.00001 kilometers.
+a gram is 1 grams.
+a kilogram weighs 1000 grams.
+a liter is 1 liters.
+a milliliter is 0.001 liters.
+a dollar is 1 dollars.
+a cent is 0.01 dollars.
+a penny is 0.01 dollars.
+a nickel is 0.05 dollars.
+a dime is 0.1 dollars.
+a quarter is 0.25 dollars.
+a dozen is 12.
+a pair is 2.
+a half is 0.5.
+a third is 0.3333333.
+a fifth is 0.2.
+an eighth is 0.125.
+a tenth is 0.1.
+minutes are 60 seconds.
+hours are 3600 seconds.
+days are 86400 seconds.
+weeks are 604800 seconds.
+years are 12 months.
+meters are 0.001 kilometers.
+centimeters are 0.00001 kilometers.
+grams are 1 grams.
+kilograms weigh 1000 grams.
+liters are 1 liters.
+milliliters are 0.001 liters.
+dollars are 1 dollars.
+cents are 0.01 dollars.
+pennies are 0.01 dollars.
+nickels are 0.05 dollars.
+dimes are 0.1 dollars.
+quarters are 0.25 dollars.
+dozens are 12.
+pairs are 2.
+halves are 0.5.
+thirds are 0.3333333.
+fifths are 0.2.
+eighths are 0.125.
+tenths are 0.1.
+a penny is 1 cents.
+pennies are 1 cents.
+a nickel is 5 cents.
+nickels are 5 cents.
+a dime is 10 cents.
+dimes are 10 cents.
+a quarter is 25 cents.
+quarters are 25 cents.
+a dollar is 100 cents.
+dollars are 100 cents.
+a quarter is 0.25.

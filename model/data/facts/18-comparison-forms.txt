@@ -1,0 +1,29 @@
+# Comparisons told as orders: a comparative and its opposite are each other's inverse, told both ways,
+# so a chain told with the one is the same chain read from the other end with the other, and the
+# superlative is the top of the chain its comparative draws.
+the opposite of taller is shorter.
+the opposite of bigger is smaller.
+the opposite of older is younger.
+the opposite of faster is slower.
+the opposite of higher is lower.
+the opposite of hotter is colder.
+the opposite of heavier is lighter.
+the top of taller is tallest.
+the top of bigger is biggest.
+the top of older is oldest.
+the top of higher is highest.
+the top of denser is densest.
+the top of heavier is heaviest.
+the top of lighter is lightest.
+the top of longer is longest.
+the top of shorter is shortest.
+the top of smaller is smallest.
+the top of younger is youngest.
+the top of faster is fastest.
+the top of slower is slowest.
+the top of lower is lowest.
+the top of hotter is hottest.
+the top of colder is coldest.
+heavier means more weight.
+lighter means less weight.
+the opposite of longer is shorter.

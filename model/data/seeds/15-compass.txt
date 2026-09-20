@@ -1,0 +1,3 @@
+# The statements of data/facts/15-compass.txt the cursor tree holds, one path each, written by build-seeds.mjs.
+north {opposite} south
+east {opposite} west

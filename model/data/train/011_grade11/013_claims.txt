@@ -1,0 +1,17 @@
+# Claims: what someone said, thinks or believes is held under the sayer as a path of plain values, and the
+# fact stands on its own, so a question of whether the sayer was right compares the claim with the fact, and
+# a question of what was said, thought or believed reads the claim back.
+seed: 21-verb-forms
+seed: 90-everyday
+seed: 18-qualities
+tom said the ball is red. the ball is blue. => tom -> {say} -> ball -> {red}; ball -> {blue} | was tom right? = no; what color did tom say the ball is? = red; what color is the ball? = blue
+ann said the cat is in the garden. the cat is in the garden. => ann -> {say} -> cat -> {in} -> garden; cat -> {in} -> garden | was ann right? = yes; where did ann say the cat is? = garden; where is the cat? = garden
+sam said the box is big. the box is small. => sam -> {say} -> box -> {big}; box -> {small} | was sam right? = no; what did sam say the box is? = big; what is the box? = small
+kim said the dog is brown. the dog is brown. => kim -> {say} -> dog -> {brown}; dog -> {brown} | was kim right? = yes; what color did kim say the dog is? = brown
+ben thinks the key is in the drawer. the key is in the box. => ben -> {think} -> key -> {in} -> drawer; key -> {in} -> box | was ben right? = no; where does ben think the key is? = drawer; where is the key? = box
+eve believes the hat is green. the hat is green. => eve -> {believe} -> hat -> {green}; hat -> {green} | was eve right? = yes; what color does eve believe the hat is? = green; what color is the hat? = green
+joe thinks the cup is white. the cup is black. => joe -> {think} -> cup -> {white}; cup -> {black} | was joe right? = no; what color does joe think the cup is? = white; what color is the cup? = black
+mia said the pen is in the bag. the pen is in the bag. => mia -> {say} -> pen -> {in} -> bag; pen -> {in} -> bag | was mia right? = yes; where did mia say the pen is? = bag; where is the pen? = bag
+test: lily said the hat is green. the hat is red. => lily -> {say} -> hat -> {green}; hat -> {red} | was lily right? = no; what color did lily say the hat is? = green; what color is the hat? = red
+test: max said the key is in the box. the key is in the box. => max -> {say} -> key -> {in} -> box; key -> {in} -> box | was max right? = yes; where is the key? = box
+test: zoe thinks the bike is red. the bike is blue. => zoe -> {think} -> bike -> {red}; bike -> {blue} | was zoe right? = no; what color does zoe think the bike is? = red; what color is the bike? = blue

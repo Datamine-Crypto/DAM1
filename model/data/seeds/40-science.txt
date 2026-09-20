@@ -1,0 +1,130 @@
+# The statements of data/facts/40-science.txt the cursor tree holds, one path each, written by build-seeds.mjs.
+water {is} liquid
+ice {is} solid
+steam {is} gas
+water -> {wet}
+ice -> {is} -> {temperature} -> cold
+steam -> {is} -> {temperature} -> hot
+water {material} hydrogen
+water {material} oxygen
+salt {material} sodium
+salt {material} chlorine
+air {material} nitrogen
+air {material} oxygen
+diamond {material} carbon
+coal {material} carbon
+rust {material} iron
+rust {material} oxygen
+sand {material} silicon
+sand {material} oxygen
+gold -> {is} -> {material} -> metal
+silver -> {is} -> {material} -> metal
+iron -> {is} -> {material} -> metal
+copper -> {is} -> {material} -> metal
+aluminium -> {is} -> {material} -> metal
+lead -> {is} -> {material} -> metal
+tin -> {is} -> {material} -> metal
+zinc -> {is} -> {material} -> metal
+mercury -> {is} -> {material} -> metal
+mercury {is} liquid
+oxygen {is} gas
+hydrogen {is} gas
+nitrogen {is} gas
+helium {is} gas
+neon {is} gas
+carbon {is} element
+oxygen {is} element
+hydrogen {is} element
+gold {is} element
+iron {is} element
+hydrogen -> {is} -> lightest
+hydrogen -> {is} -> first
+helium -> {is} -> second
+helium {is} element
+table -> {element:quantity(118)}
+gold -> {is} -> {color} -> yellow
+silver -> {is} -> {color} -> white
+copper -> {is} -> {color} -> red
+iron -> {is} -> {color} -> grey
+sulfur -> {is} -> {color} -> yellow
+diamond -> {is} -> hardest
+diamond {is} mineral
+magnet {material} iron
+copper {is} conductor
+silver {is} conductor
+gold {is} conductor
+rubber {is} insulator
+glass {is} insulator
+wood {is} insulator
+sun {is} star
+sun -> {is} -> {temperature} -> hot
+light -> {is} -> {speed} -> fast
+sound {need} air
+plant {need} water
+plant {need} light
+plant {need} air
+person {need} water
+person {need} air
+person {need} food
+fire {need} air
+fire {need} fuel
+fire -> {is} -> {temperature} -> hot
+smoke {material} carbon
+atom {has} nucleus
+atom {has} electrons
+nucleus {has} protons
+nucleus {has} neutrons
+atom -> {is} -> {size} -> small
+cell -> {is} -> {size} -> small
+cell {has} nucleus
+molecule {material} atoms
+water {is} molecule
+force {is} push
+gravity {is} force
+magnet {is} force
+matter {has} mass
+solid -> {matter}
+liquid -> {matter}
+gas -> {matter}
+heat -> {energy}
+light -> {energy}
+sound -> {energy}
+electricity -> {energy}
+volt {is} measure
+ampere {is} measure
+watt {is} measure
+newton {is} measure
+joule {is} measure
+kelvin {is} measure
+thermometer {has} mercury
+compass {has} needle
+lens {material} glass
+mirror {material} glass
+wire {material} copper
+bulb {material} glass
+platinum -> {is} -> {material} -> metal
+nickel -> {is} -> {material} -> metal
+titanium -> {is} -> {material} -> metal
+tungsten -> {is} -> {material} -> metal
+chromium -> {is} -> {material} -> metal
+cobalt -> {is} -> {material} -> metal
+magnesium -> {is} -> {material} -> metal
+sodium -> {is} -> {material} -> metal
+potassium -> {is} -> {material} -> metal
+uranium -> {is} -> {material} -> metal
+argon {is} gas
+chlorine {is} gas
+fluorine {is} gas
+methane {is} gas
+radon {is} gas
+krypton {is} gas
+xenon {is} gas
+nitrogen {is} element
+silver {is} element
+copper {is} element
+sulfur {is} element
+calcium {is} element
+silicon {is} element
+neon {is} element
+zinc {is} element
+tin {is} element

@@ -1,0 +1,13 @@
+# Parts of an hour: an hour is 60 minutes, so half an hour is 30 minutes, a quarter of an hour 15 and
+# three quarters of an hour 45; the same parts of a day are parts of its 24 hours. The traced lines
+# stay as single lessons; each scene tells two units, then asks for many parts of them.
+seed: measures
+turn: how many minutes are in half an hour? {eom} => | 30
+turn: how many minutes are in a quarter of an hour? {eom} => | 15
+turn: how many minutes are in three quarters of an hour? {eom} => | 45
+an hour is 60 minutes. a day is 24 hours. => hour is 60; 60 = 60; day is 24; 24 = 24 | how many minutes are in half an hour? = 30; how many minutes are in a quarter of an hour? = 15; how many minutes are in three quarters of an hour? = 45; how many hours are in half a day? = 12; how many minutes are in an hour? = 60; how many hours are in a day? = 24; how many hours are in three quarters of a day? = 18; how many hours are in half a day and a quarter of a day? = 18
+a minute is 60 seconds. a day is 24 hours. => minute is 60; 60 = 60; day is 24; 24 = 24 | how many seconds are in half a minute? = 30; how many seconds are in a quarter of a minute? = 15; how many seconds are in three quarters of a minute? = 45; how many hours are in half a day? = 12; how many minutes are in half an hour? = 30; how many minutes are in a quarter of an hour? = 15; how many hours are in three quarters of a day? = 18; how many seconds are in half a minute and a quarter of a minute? = 45
+turn: how many hours are in half a day? {eom} => | 12
+test: turn: how many minutes are in half an hour and a quarter of an hour? {eom} => | 45
+test: an hour is 60 minutes. a minute is 60 seconds. => hour is 60; 60 = 60; minute is 60 | how many minutes are in half an hour and a quarter of an hour? = 45; how many hours are in a quarter of a day? = 6; how many seconds are in a quarter of a minute? = 15; how many minutes are in three quarters of an hour? = 45; how many seconds are in half a minute? = 30; how many hours are in half a day? = 12; how many minutes are in an hour? = 60; how many minutes are in three quarters of an hour and a quarter of an hour? = 60
+test: turn: how many hours are in a quarter of a day? {eom} => | 6

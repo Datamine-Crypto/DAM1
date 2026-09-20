@@ -1,0 +1,32 @@
+# Powers and functions: ^ binds tighter than * and /, a power of a power is taken from the
+# right, and a function acts on the bracketed part after it. Every sign is read by its form.
+# A math scene gives several values at once (the result, x, y), then asks many questions over them:
+# each value, and powers, roots, sums and differences of the values. A turn with no statement stays
+# a calculator turn.
+2 ^ 3 = result . 3 ^ 2 = x . 2 * 3 ^ 2 = y . => result -> {equal} -> {number:value(8)}; x -> {equal} -> {number:value(9)}; y -> {equal} -> {number:value(18)}; {number:value(2)}; {number:value(3)} | what is the result? = 8; what is x? = 9; what is y? = 18; what is x + y? = 27; what is y - x? = 9; what is the result * x? = 72; what is y / x? = 2; what is x ^ 2? = 81; what is the result ^ 2? = 64; what is sqrt ( x )? = 3; what is y - the result? = 10; what is the result + x? = 17; what is 3 * 2 ^ 2? = 12
+turn: what is 3 * 2 ^ 2? => | 12
+turn: what is 4 * 2 ^ 3? => | 32
+turn: what is 2 + 3 ^ 2? => | 11
+( 2 ^ 3 ) ^ 2 = result . 2 ^ 3 ^ 2 = x . sqrt ( 16 ) = y . => result -> {equal} -> {number:value(64)}; x -> {equal} -> {number:value(512)}; y -> {equal} -> {number:value(4)}; {number:value(2)}; {number:value(3)}; {number:value(16)} | what is the result? = 64; what is x? = 512; what is y? = 4; what is x / the result? = 8; what is sqrt ( the result )? = 8; what is y ^ 2? = 16; what is the result / y? = 16; what is x - the result? = 448; what is y * y? = 16; what is sqrt ( y )? = 2; what is the result + y? = 68; what is 2 ^ 10? = 1024
+sqrt ( 9 ) = result . abs ( 0 - 5 ) = x . abs ( 3 - 7 ) = y . => result -> {equal} -> {number:value(3)}; x -> {equal} -> {number:value(5)}; y -> {equal} -> {number:value(4)}; {number:value(9)}; {number:value(0)}; {number:value(5)}; {number:value(3)}; {number:value(7)} | what is the result? = 3; what is x? = 5; what is y? = 4; what is x ^ 2? = 25; what is y - x? = -1; what is abs ( y - x )? = 1; what is the result * y? = 12; what is x + y + the result? = 12; what is the result ^ 2 + y ^ 2? = 25; what is x - y? = 1; what is sqrt ( 25 )? = 5
+sin ( 0 ) = result . cos ( 0 ) = x . 3 ^ 3 = y . => result -> {equal} -> {number:value(0)}; x -> {equal} -> {number:value(1)}; y -> {equal} -> {number:value(27)}; {number:value(0)}; {number:value(3)} | what is the result? = 0; what is x? = 1; what is y? = 27; what is x + the result? = 1; what is y * x? = 27; what is sqrt ( y * 3 )? = 9; what is abs ( the result - y )? = 27; what is cos ( the result )? = 1; what is x - y? = -26; what is y / 3? = 9; what is cos ( 0 ) + 1? = 2
+turn: what is 2 ^ 10? => | 1024
+turn: what is sqrt ( 25 )? => | 5
+turn: sin ( 0 ) = => | 0
+turn: what is cos ( 0 ) + 1? => | 2
+# A number that is not whole is answered to three decimals.
+turn: what is 7 / 2? => | 3.5
+turn: cos ( 2 ) = => | -0.416
+turn: what is sqrt ( 2 )? => | 1.414
+# Past every number: dividing by nothing answers infinity, and the word reads back as that number.
+turn: 1 / 0 = => | infinity
+turn: what is 5 / 0? => | infinity
+turn: what is infinity + 1? => | infinity
+test: 5 ^ 2 = result . sqrt ( 49 ) = x . abs ( 2 - 9 ) = y . => result -> {equal} -> {number:value(25)}; x -> {equal} -> {number:value(7)}; y -> {equal} -> {number:value(7)}; {number:value(5)}; {number:value(2)}; {number:value(49)}; {number:value(9)} | what is the result? = 25; what is x? = 7; what is y? = 7; what is x * y? = 49; what is the result - x? = 18; what is sqrt ( the result )? = 5; what is x ^ 2? = 49; what is the result + y? = 32; what is x - y? = 0
+test: turn: what is sqrt ( 49 )? => | 7
+test: turn: what is 2 * 3 ^ 2? => | 18
+test: turn: what is abs ( 2 - 9 )? => | 7
+test: turn: cos ( 0 ) = => | 1
+test: turn: what is 1 / 4? => | 0.25
+test: turn: sin ( 1 ) = => | 0.841
+test: turn: what is 2 / 0? => | infinity

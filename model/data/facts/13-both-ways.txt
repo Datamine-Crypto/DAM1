@@ -1,0 +1,4 @@
+# One pair of opposites and one pair of the same, each told once: the cursor reads a relation from either end,
+# so a quiz file seeded with them states its own pairs once and asks each from both ends.
+the opposite of up is down.
+big is the same as large.

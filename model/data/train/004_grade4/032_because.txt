@@ -1,0 +1,13 @@
+# The clause after because tells why: the thing the first clause told of holds the thing the second
+# clause told of under because, and why asks for it. Held out lines use people and things the learned
+# lines never use.
+john is in the garage. he is sad because he lost his car. => john -> {because} -> car | why is john sad? = car
+grandma is mad because the bucket fell. => grandma -> {because} -> bucket | why is grandma mad? = bucket
+the dog is in the house because the cat is in the garden. => dog -> {because} -> cat | where is the cat? = garden
+anna is happy because she has a kite. => anna -> {because} -> kite | why is anna happy? = kite
+tom is tired because the baby cried. => tom -> {because} -> baby | why is tom tired? = baby
+mia is sad because the doll fell. => mia -> {because} -> doll | why is mia sad? = doll
+the boy is scared because the dog barked. => boy -> {because} -> dog | why is the boy scared? = dog
+test: sara is glad because she has a drum. => sara -> {because} -> drum | why is sara glad? = drum
+test: leo is angry because the vase fell. => leo -> {because} -> vase | why is leo angry? = vase
+test: the girl is sad because the frog jumped. => girl -> {because} -> frog | why is the girl sad? = frog

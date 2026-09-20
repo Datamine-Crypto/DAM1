@@ -1,0 +1,13 @@
+# Activities in the past and with a partner: what a person did is an activity with the time past, as a
+# place someone left, and what they do with someone holds the partner under the activity, so who did
+# tom swim with and where did kim swim read the activity's partner and its place.
+seed: 21-verb-forms
+kim swam in the lake. => kim -> {activity} -> swim -> {in} -> lake; kim -> {activity} -> swim -> {time} -> {past} | where did kim swim? = lake; what did kim do? = swim
+tom plays football with ben. => tom -> {activity} -> play -> {of} -> football; tom -> {activity} -> play -> {with} -> ben | what does tom play? = football; who does tom play with? = ben
+ann ran in the park with sue. => ann -> {activity} -> run -> {in} -> park; ann -> {activity} -> run -> {with} -> sue; ann -> {activity} -> run -> {time} -> {past} | where did ann run? = park; who did ann run with? = sue
+max sings with lily. => max -> {activity} -> sing -> {with} -> lily | who does max sing with? = lily; what does max do? = sing
+joe swims in the sea with sam. => joe -> {activity} -> swim -> {in} -> sea; joe -> {activity} -> swim -> {with} -> sam | where does joe swim? = sea; who does joe swim with? = sam
+lucy danced at the club. => lucy -> {activity} -> dance -> {in} -> club; lucy -> {activity} -> dance -> {time} -> {past} | where did lucy dance? = club; what did lucy do? = dance
+test: omar swam in the river with nina. => omar -> {activity} -> swim -> {in} -> river; omar -> {activity} -> swim -> {with} -> nina; omar -> {activity} -> swim -> {time} -> {past} | where did omar swim? = river; who did omar swim with? = nina
+test: zoe plays tennis with amy. => zoe -> {activity} -> play -> {of} -> tennis; zoe -> {activity} -> play -> {with} -> amy | what does zoe play? = tennis; who does zoe play with? = amy
+test: ben ran in the hall. => ben -> {activity} -> run -> {in} -> hall; ben -> {activity} -> run -> {time} -> {past} | where did ben run? = hall; what did ben do? = run

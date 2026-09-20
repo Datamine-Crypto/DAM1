@@ -1,0 +1,85 @@
+# Society: leaders, law, money, work and the things people build together.
+a president is a leader.
+a king is a leader.
+a queen is a leader.
+a mayor is a leader.
+a prime minister is a leader.
+a country has a government.
+a government has laws.
+a law is a rule.
+a judge is in a court.
+a lawyer is in a court.
+a court has a judge.
+a policeman helps people.
+a fireman helps people.
+a soldier is in an army.
+an army has soldiers.
+a democracy has elections.
+a vote is a choice.
+a citizen has rights.
+a citizen has duties.
+money is made of paper.
+a coin is money.
+a dollar is money.
+a euro is money.
+a pound is money.
+a bank has money.
+a bank has accounts.
+a tax is money.
+a price is money.
+a salary is money.
+a company has workers.
+a boss has workers.
+a worker has a job.
+a job has a salary.
+a shop has goods.
+a market has shops.
+a customer has money.
+a farmer has a farm.
+a farm has animals.
+a farm has crops.
+wheat is a crop.
+rice is a crop.
+corn is a crop.
+a factory has machines.
+a factory has goods.
+a school has teachers.
+a school has students.
+a student has books.
+a university has professors.
+a professor has students.
+a library has books.
+a museum has art.
+a theater has plays.
+a cinema has films.
+a church is a building.
+a temple is a building.
+a mosque is a building.
+a city has streets.
+a city has houses.
+a city has a mayor.
+a village is small.
+a city is big.
+a capital is a city.
+a road has cars.
+a bridge is over water.
+a tunnel is under the ground.
+a port has ships.
+an airport has planes.
+a station has trains.
+a family has parents.
+a family has children.
+a mother is a parent.
+a father is a parent.
+a son is a child.
+a daughter is a child.
+a brother is a sibling.
+a sister is a sibling.
+a grandmother is old.
+a baby is young.
+a wedding has a bride.
+a wedding has a groom.
+a husband has a wife.
+a wife has a husband.
+a friend is good.
+an enemy is bad.

@@ -1,0 +1,12 @@
+# Remainders: dividing a whole number by another shares it into equal groups, and what is left over
+# when no more whole groups fit is the remainder. The traced line and the turns stay as single
+# lessons; each scene tells what several people have, then asks remainders, the counts and totals.
+turn: what is the remainder of 17 divided by 5? {eom} => | 2
+turn: what is the remainder of 20 divided by 6? {eom} => | 2
+turn: what is left over from 9 divided by 4? {eom} => | 1
+turn: what is the remainder of 12 divided by 3? {eom} => | 0
+tom has 17 sweets. ann has 20 sweets. sam has 9 sweets. => 17 = 17; tom owns sweets; sweets is 17; 20 = 20; ann owns sweets; sweets is 20; 9 = 9; sam owns sweets; sweets is 9 | what is the remainder of 17 divided by 5? = 2; what is the remainder of 20 divided by 6? = 2; what is left over from 9 divided by 4? = 1; what is the remainder of 17 divided by 3? = 2; what is the remainder of 20 divided by 7? = 6; what is left over from 9 divided by 2? = 1; how many sweets does ann have? = 20; how many sweets does tom have? = 17; who has the fewest sweets? = sam; how many sweets do tom and sam have? = 26
+kim has 12 cards. joe has 14 cards. lily has 25 cards. => 12 = 12; kim owns cards; cards is 12; 14 = 14; joe owns cards; cards is 14; 25 = 25; lily owns cards; cards is 25 | what is the remainder of 12 divided by 3? = 0; what is the remainder of 14 divided by 4? = 2; what is the remainder of 25 divided by 7? = 4; what is left over from 25 divided by 5? = 0; what is left over from 14 divided by 3? = 2; what is the remainder of 17 divided by 5? = 2; how many cards does joe have? = 14; who has the most cards? = lily; how many more cards does lily have than kim? = 13; how many cards do kim and joe have? = 26
+test: zoe has 23 stickers. ben has 11 stickers. => 23 = 23; zoe owns stickers; stickers is 23; 11 = 11; ben owns stickers; stickers is 11 | what is the remainder of 23 divided by 7? = 2; what is left over from 11 divided by 2? = 1; what is the remainder of 23 divided by 5? = 3; what is left over from 11 divided by 4? = 3; what is the remainder of 23 divided by 4? = 3; how many stickers does ben have? = 11; who has more stickers? = zoe; how many stickers do zoe and ben have? = 34
+test: turn: what is the remainder of 23 divided by 7? {eom} => | 2
+test: turn: what is left over from 11 divided by 2? {eom} => | 1

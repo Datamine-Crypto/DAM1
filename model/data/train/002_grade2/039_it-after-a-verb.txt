@@ -1,0 +1,16 @@
+# It right after a verb stands for the newest thing told that is no person and not the doer: bob
+# went to the school, he loves it there. What time is it reads back the time the story said it is.
+# Held out lines use people and things the learned lines never use.
+bob went to the school. he loves it there. => bob -> {love} -> school | what does bob love? = school
+anna has a ball. she likes it. => anna -> {like} -> ball | what does anna like? = ball
+it is 12pm. => it -> {is} -> 12pm | what time is it? = 12pm
+tom loves his car. => tom -> {love} -> car | who loves his car? = tom
+tom loves his car. => tom -> {love} -> car | what does tom love? = car
+mia went to the park. she likes it there. => mia -> {like} -> park | what does mia like? = park
+ben has a kite. he loves it. => ben -> {love} -> kite | what does ben love? = kite
+it is 9am. => it -> {is} -> 9am | what time is it? = 9am
+anna likes her dog. => anna -> {like} -> dog | who likes her dog? = anna
+test: sara went to the zoo. she loves it there. => sara -> {love} -> zoo | what does sara love? = zoo
+test: leo has a drum. he likes it. => leo -> {like} -> drum | what does leo like? = drum
+test: it is 7pm. => it -> {is} -> 7pm | what time is it? = 7pm
+test: omar loves his boat. => omar -> {love} -> boat | who loves his boat? = omar

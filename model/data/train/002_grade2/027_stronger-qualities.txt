@@ -1,0 +1,31 @@
+# Words that only make a quality stronger: very, really, quite, so, extremely. They name no thing and
+# point at nothing, so a thing that is very tall is tall, and the question asks of the quality alone.
+# Held out lines use people, things and qualities the learned lines never use with these words.
+seed: 18-qualities
+tom is very tall. => tom -> {is} -> {size} -> tall | is tom tall? = yes; is tom small? = no
+the soup is really hot. => soup -> {is} -> {temperature} -> hot | is the soup hot? = yes; is the soup cold? = no
+ann is so happy. => ann -> {is} -> {feeling} -> happy | is ann happy? = yes; how is ann? = happy
+i am very hungry. => | am i hungry? = yes; how am i? = hungry
+the box is quite big. sam is very sad. => box -> {is} -> {size} -> big; sam -> {is} -> {feeling} -> sad | is the box big? = yes; is sam sad? = yes; how is sam? = sad; is sam happy? = no
+the car is really fast. the tea is very cold. => car -> {is} -> {speed} -> fast; tea -> {is} -> {temperature} -> cold | is the car fast? = yes; is the tea cold? = yes; is the tea hot? = no
+the dog is extremely small. i am so tired. => dog -> {is} -> {size} -> small; user -> {is} -> {feeling} -> tired | is the dog small? = yes; am i tired? = yes; how am i? = tired
+my house is very big. my cat is really old. => | is my house big? = yes; is my cat old? = yes
+turn: i am really happy how am i => | happy
+turn: the soup is very hot is the soup hot => | yes
+test: kim is very angry. => kim -> {is} -> {feeling} -> angry | is kim angry? = yes; how is kim? = angry
+test: the oven is extremely hot. the lake is quite cold. => oven -> {is} -> {temperature} -> hot; lake -> {is} -> {temperature} -> cold | is the oven hot? = yes; is the lake cold? = yes; is the lake hot? = no
+test: i am so sad. => user -> {is} -> {feeling} -> sad | am i sad? = yes; how am i? = sad
+test: the train is really slow. => train -> {is} -> {speed} -> slow | is the train slow? = yes; is the train fast? = no
+test: turn: i am very tired am i tired => | yes
+# Words that make a quality weaker, a bit and a little: the thing is still so.
+i am a bit tired. => | am i tired? = yes; how am i? = tired
+the soup is a little cold. => | is the soup cold? = yes; is the soup hot? = no
+tom is a bit sad. the box is a little heavy. => | is tom sad? = yes; how is tom? = sad; is the box heavy? = yes
+test: ann is a little angry. => | is ann angry? = yes; how is ann? = angry
+test: the tea is a bit hot. => | is the tea hot? = yes; is the tea cold? = no
+sam is a bit angry. the bag is a little heavy. => | is sam angry? = yes; how is sam? = angry; is the bag heavy? = yes
+the room is a bit cold. lucy is a little tired. => | is the room cold? = yes; is lucy tired? = yes; how is lucy? = tired
+the pan is a bit hot. the mat is a little wet. => | is the pan hot? = yes; how is the pan? = hot; is the mat wet? = yes
+kim is a bit shy. => | is kim shy? = yes; how is kim? = shy
+ann is a bit sad. the bag is a little heavy. => | is ann sad? = yes; how is ann? = sad; is the bag heavy? = yes
+ben is a bit cold. the box is a little full. => | is ben cold? = yes; how is ben? = cold; is the box full? = yes

@@ -1,0 +1,11 @@
+# Comparing fractions: a whole cut into fewer equal parts has bigger parts, so a half is bigger than a
+# third, and a third bigger than a quarter; the smaller part is the one cut into more.
+# Each scene tells three people who each have a part, then asks which of two parts is bigger or smaller
+# (both ways round), who has each part, what each has, yes and no, and a part the scene never gave.
+# One turn of each kind stays a chat turn.
+seed: measures
+turn: which is bigger, a half or a quarter? {eom} => | half
+tom has a half. ann has a quarter. sam has a third. => tom owns half; ann owns quarter; sam owns third | which is bigger, a half or a quarter? = half; which is bigger, a quarter or a third? = third; which is smaller, a half or a quarter? = quarter; which is smaller, a third or a quarter? = quarter; which is bigger, a third or a half? = half; which is smaller, a third or a fifth? = fifth; which is smaller, a half or a tenth? = tenth; who has the half? = tom; who has the quarter? = ann; what does sam have? = third; does sam have a third? = yes; does ann have a half? = no; who has the tenth? = nothing
+lily has a fifth. rose has a tenth. fred has a half. => lily owns fifth; rose owns tenth; fred owns half | which is smaller, a half or a tenth? = tenth; which is bigger, a fifth or a tenth? = fifth; which is smaller, a fifth or a half? = fifth; which is bigger, a tenth or a half? = half; which is smaller, a third or a fifth? = fifth; which is bigger, a quarter or a fifth? = quarter; who has the fifth? = lily; who has the tenth? = rose; what does fred have? = half; does rose have a tenth? = yes; does lily have a half? = no; who has the quarter? = nothing
+test: turn: which is bigger, a fifth or a half? {eom} => | half
+test: kim has an eighth. joe has a quarter. zoe has a half. => kim owns eighth; joe owns quarter; zoe owns half | which is bigger, a fifth or a half? = half; which is smaller, a quarter or an eighth? = eighth; which is bigger, a quarter or an eighth? = quarter; which is smaller, an eighth or a half? = eighth; who has the eighth? = kim; what does zoe have? = half; does joe have a quarter? = yes; does kim have a half? = no; who has the third? = nothing

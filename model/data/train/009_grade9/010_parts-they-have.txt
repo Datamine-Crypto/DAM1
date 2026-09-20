@@ -1,0 +1,30 @@
+# What the seeds say a kind of thing has, asked with no story at all: how many legs does a dog have.
+# The answer is the count the seeds give the part on the kind. Held out lines ask of kinds and parts
+# the learned lines never ask of.
+seed: 61-animals
+turn: how many legs does a dog have => | 4
+turn: how many legs does a bird have => | 2
+turn: how many legs does a spider have => | 8
+turn: how many legs does a cow have => | 4
+turn: how many legs does an elephant have => | 4
+turn: how many legs does a rabbit have => | 4
+turn: how many wings does a duck have => | 2
+turn: how many wings does an owl have => | 2
+turn: how many eyes does a human have => | 2
+turn: how many legs does a zebra have? => | 4
+turn: how many wings does a bat have? => | 2
+ann has a dog. => ann -> {has} -> dog | how many legs does a dog have? = 4; how many legs does a spider have? = 8; how many wings does a duck have? = 2; who has a dog? = ann
+tom is in the garden. => tom -> {in} -> garden | how many legs does a bird have? = 2; how many legs does a cow have? = 4; where is tom? = garden; how many wings does an owl have? = 2
+test: turn: how many legs does a cat have => | 4
+test: turn: how many legs does a horse have => | 4
+test: turn: how many legs does a mouse have => | 4
+test: turn: how many wings does an eagle have => | 2
+test: turn: how many fingers does a hand have => | 5
+test: kim has a cat. => kim -> {has} -> cat | how many legs does a cat have? = 4; how many legs does a giraffe have? = 4; how many wings does a fly have? = 2
+# Holders whose name is also a word of doing, a fly, a duck: the thing asked of stands after the article.
+turn: how many legs does a fly have => | 6
+turn: how many legs does a duck have => | 2
+turn: how many wings does a bee have => | 4
+turn: how many legs does a bee have => | 6
+test: turn: how many eyes does a bee have => | 5
+turn: how many wheels does a bike have => | 2

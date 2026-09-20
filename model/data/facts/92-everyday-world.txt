@@ -1,0 +1,77 @@
+# Where common things are and what they are, as people ask about them in a chat.
+a star is in the sky.
+the sun is in the sky.
+a cloud is in the sky.
+a rainbow is in the sky.
+a plane is in the sky.
+a whale is in the ocean.
+a shark is in the ocean.
+a teacher is in the school.
+a doctor is in the hospital.
+a nurse is in the hospital.
+a cook is in the kitchen.
+a stove is in the kitchen.
+a fridge is in the kitchen.
+a bath is in the bathroom.
+a lion is in the zoo.
+a penguin is in the antarctic.
+a camel is in the desert.
+a monkey is in the jungle.
+a heart is in the chest.
+a brain is in the head.
+a tooth is in the mouth.
+the earth is a planet.
+mars is a planet.
+rain is water.
+ice is water.
+steam is water.
+a river is water.
+bread is food.
+rice is food.
+cheese is food.
+an apple is a fruit.
+a banana is a fruit.
+a grape is a fruit.
+a carrot is a vegetable.
+a potato is a vegetable.
+an onion is a vegetable.
+a hammer is a tool.
+a saw is a tool.
+a piano is an instrument.
+a guitar is an instrument.
+a drum is an instrument.
+a shirt is clothing.
+a hat is clothing.
+a chair is furniture.
+a table is furniture.
+a bus is a vehicle.
+a truck is a vehicle.
+a bike is a vehicle.
+football is a sport.
+tennis is a sport.
+chess is a game.
+english is a language.
+a week has 7 days.
+a year has 12 months.
+a day has 24 hours.
+an hour has 60 minutes.
+a minute has 60 seconds.
+a hand has 5 fingers.
+a foot has 5 toes.
+a car has 4 wheels.
+a bike has 2 wheels.
+a human has 2 legs.
+a human has 2 arms.
+a human has 2 eyes.
+a human has 2 ears.
+a bee makes honey.
+a cow makes milk.
+a hen makes eggs.
+a baker makes bread.
+a farmer grows food.
+a pilot flies planes.
+a doctor helps patients.
+a teacher teaches students.
+the sun gives light.
+a lamp gives light.
+fire gives heat.

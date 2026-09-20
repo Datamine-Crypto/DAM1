@@ -1,0 +1,14 @@
+# Yes and no about having: do i have, does tom have, does the box have, is there.
+# Each line is a scene: a few owners and things at places, then many yes and no questions about
+# them (a thing that is there, one that is not, an owner the scene does not name) and a few asking what.
+seed: 21-verb-forms
+seed: 17-speakers
+i have a dog. we have a car. there is a cat in the garden. => user -> {has} -> dog; we -> {has} -> car; cat -> {in} -> garden | do i have a dog? = yes; do i have a cat? = no; do we have a car? = yes; do we have a bike? = no; is there a cat in the garden? = yes; is there a dog in the garden? = no; is there a car in the garden? = no; does tom have a dog? = no; what do i have? = dog; what do we have? = car; where is the cat? = garden; what is in the garden? = cat
+tom had a bike. ann had a ball. there is a key in the box. => tom -> {has} -> bike; ann -> {has} -> ball; key -> {in} -> box | did tom have a bike? = yes; did tom have a car? = no; did ann have a ball? = yes; did ann have a bike? = no; did tom have a ball? = no; did sam have a bike? = no; is there a key in the box? = yes; is there a pen in the box? = no; what did tom have? = bike; who had the ball? = ann; what is in the box? = key; where is the key? = box
+turn: i have a dog tom has a cat do i have a dog => user -> {has} -> dog; tom -> {has} -> cat | yes
+turn: we have a car ann has a bike do we have a car => we -> {has} -> car; ann -> {has} -> bike | yes
+turn: i have a cat we have a boat do i have a cat => user -> {has} -> cat; we -> {has} -> boat | yes
+turn: we have a dog i have a kite do we have a bike => we -> {has} -> dog; user -> {has} -> kite | no
+turn: there is a cat in the garden there is a key in the box is there a dog in the garden => cat -> {in} -> garden; key -> {in} -> box | no
+test: i have a bird. there is a lamp in the room. sue had a hat. => user -> {has} -> bird; lamp -> {in} -> room; sue -> {has} -> hat | do i have a bird? = yes; do i have a fish? = no; is there a lamp in the room? = yes; is there a bed in the room? = no; did sue have a hat? = yes; did sue have a bird? = no; what is in the room? = lamp; what do i have? = bird
+test: turn: we have a boat i have a hat do we have a boat => we -> {has} -> boat; user -> {has} -> hat | yes

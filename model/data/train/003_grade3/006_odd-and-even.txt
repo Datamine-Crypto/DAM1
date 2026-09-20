@@ -1,0 +1,16 @@
+seed: parity
+# Odd and even: a whole number that two divides with nothing left over is even, and one that leaves one
+# over is odd, asked with is a number odd or even.
+# The turns ask one number each. Each scene tells what two or three people have, then asks odd and even
+# of the numbers and of a total, each count, how many more, and who has more or fewer.
+turn: is 7 odd? => | yes
+turn: is 8 even? => | yes
+turn: is 4 odd? => | no
+turn: is 9 even? => | no
+turn: is 12 odd or even? => | even
+tom has 7 apples. ann has 6 apples. sam has 12 pens. => tom -> {has} -> apple:quantity(7); {number:value(7)}; ann -> {has} -> apple:quantity(6); {number:value(6)}; sam -> {has} -> pen:quantity(12); {number:value(12)} | is 7 odd? = yes; is 8 even? = yes; is 4 odd? = no; is 9 even? = no; is 12 odd or even? = even; is 7 odd or even? = odd; is 6 odd? = no; how many apples does tom have? = 7; how many apples do tom and ann have? = 13; is 13 odd? = yes; how many pens does sam have? = 12; who has more apples? = tom
+kim has 5 cards. joe has 10 cards. lily has 11 stamps. => kim -> {has} -> card:quantity(5); {number:value(5)}; joe -> {has} -> card:quantity(10); {number:value(10)}; lily -> {has} -> stamp:quantity(11); {number:value(11)} | is 5 odd? = yes; is 10 even? = yes; is 11 odd or even? = odd; is 10 odd? = no; is 5 even? = no; how many cards does kim have? = 5; how many cards do kim and joe have? = 15; how many more cards does joe have than kim? = 5; how many stamps does lily have? = 11; who has fewer cards? = kim
+test: turn: is 15 odd? => | yes
+test: turn: is 20 even? => | yes
+test: turn: is 3 odd or even? => | odd
+test: zoe has 20 shells. ben has 3 shells. => zoe -> {has} -> shell:quantity(20); {number:value(20)}; ben -> {has} -> shell:quantity(3); {number:value(3)} | is 15 odd? = yes; is 20 even? = yes; is 3 odd or even? = odd; is 20 odd? = no; is 3 even? = no; how many shells do zoe and ben have? = 23; is 23 odd? = yes; who has more shells? = zoe

@@ -1,0 +1,238 @@
+# Myths and religions: gods, heroes, creatures, faiths, holy books and places, and festivals.
+zeus is a god.
+zeus is greek.
+zeus is the king of the gods.
+zeus is the god of the sky.
+zeus is the ruler of olympus.
+zeus has a thunderbolt.
+hera is the queen of the gods.
+hera is the wife of zeus.
+poseidon is the god of the sea.
+poseidon has a trident.
+hades is the god of the underworld.
+athena is the goddess of wisdom.
+apollo is the god of music.
+apollo is the son of zeus.
+artemis is the goddess of the hunt.
+aphrodite is the goddess of love.
+ares is the god of war.
+hermes is the messenger of the gods.
+hephaestus is the god of the forge.
+dionysus is the god of wine.
+demeter is the goddess of the harvest.
+persephone is the queen of the underworld.
+a muse is a goddess.
+the styx is a river.
+charon is a ferryman.
+the oracle is in delphi.
+delphi is in greece.
+jupiter is the same as zeus.
+juno is the same as hera.
+neptune is the same as poseidon.
+pluto is the same as hades.
+minerva is the same as athena.
+mars is the same as ares.
+venus is the same as aphrodite.
+mercury is the same as hermes.
+vulcan is the same as hephaestus.
+bacchus is the same as dionysus.
+diana is the same as artemis.
+janus is the god of doors.
+janus has 2 faces.
+odin is norse.
+odin is the ruler of asgard.
+odin is the god of wisdom.
+odin has 2 ravens.
+thor is norse.
+thor is the god of thunder.
+thor is the son of odin.
+thor has a hammer.
+the hammer of thor is mjolnir.
+loki is the god of mischief.
+freya is the goddess of beauty.
+heimdall is the guardian of the bifrost.
+fenrir is a wolf.
+sleipnir is a horse.
+sleipnir has 8 legs.
+yggdrasil is a tree.
+valhalla is a hall.
+ragnarok is a battle.
+a valkyrie is a warrior.
+a valkyrie is female.
+ra is egyptian.
+ra is the god of the sun.
+osiris is the god of the afterlife.
+osiris is the husband of isis.
+isis is the goddess of magic.
+horus is the son of osiris.
+anubis is the god of the dead.
+anubis is a jackal.
+thoth is the god of writing.
+bastet is the goddess of cats.
+bastet is a cat.
+a mummy is in a tomb.
+vishnu is a god.
+shiva is the god of destruction.
+brahma is the god of creation.
+ganesh is the god of beginnings.
+ganesh has a trunk.
+lakshmi is the goddess of wealth.
+saraswati is the goddess of knowledge.
+krishna is a god.
+hanuman is a god.
+hanuman is a monkey.
+rama is the hero of the ramayana.
+hercules is a hero.
+hercules has 12 labors.
+hercules is the same as heracles.
+perseus is a hero.
+the argo is the ship of jason.
+achilles is a hero.
+achilles is the hero of the iliad.
+odysseus is a hero.
+odysseus is the hero of the odyssey.
+odysseus is the king of ithaca.
+ulysses is the same as odysseus.
+arthur is the king of camelot.
+the sword of arthur is excalibur.
+excalibur is a sword.
+merlin is a wizard.
+camelot is a castle.
+lancelot is a knight.
+daedalus is the inventor of the labyrinth.
+icarus is the son of daedalus.
+icarus has wings.
+the labyrinth is in crete.
+the minotaur is a monster.
+the minotaur is in the labyrinth.
+midas is the king of phrygia.
+aladdin has a lamp.
+a genie is a spirit.
+a genie is in a lamp.
+a centaur is a creature.
+a mermaid is a creature.
+a mermaid has a tail.
+a unicorn is a creature.
+a unicorn has a horn.
+a dragon is a creature.
+a dragon has wings.
+a phoenix is a bird.
+pegasus has wings.
+cerberus is a dog.
+cerberus has 3 heads.
+the hydra is a monster.
+the hydra has 9 heads.
+medusa is a gorgon.
+a cyclops has an eye.
+a fairy is a creature.
+a vampire is a monster.
+a vampire has fangs.
+dracula is a vampire.
+a ghost is a spirit.
+a leprechaun is irish.
+nessie is a monster.
+an angel has wings.
+a myth is a story.
+a legend is a story.
+a fable is a story.
+a fable has a moral.
+grimm wrote tales.
+christianity is a religion.
+islam is a religion.
+judaism is a religion.
+hinduism is a religion.
+buddhism is a religion.
+sikhism is a religion.
+shinto is a religion.
+taoism is a religion.
+jainism is a religion.
+confucianism is a philosophy.
+christianity is the biggest religion.
+hinduism is the oldest religion.
+judaism is older than christianity.
+christianity is older than islam.
+buddhism is older than christianity.
+the founder of christianity is jesus.
+the founder of sikhism is nanak.
+the founder of judaism is abraham.
+the founder of protestantism is luther.
+protestantism is christian.
+the bible is a book.
+the quran is a book.
+the torah is a book.
+the book of christianity is the bible.
+the book of islam is the quran.
+the book of judaism is the torah.
+the bible has 2 testaments.
+the quran has 114 chapters.
+there are 10 commandments in the bible.
+there are 12 apostles in the bible.
+the quran is arabic.
+arabic is the language of islam.
+hebrew is the language of judaism.
+the cross is the symbol of christianity.
+the crescent is the symbol of islam.
+the star is the symbol of judaism.
+the om is the symbol of hinduism.
+the wheel is the symbol of buddhism.
+the birthplace of jesus is bethlehem.
+christmas is the birthday of jesus.
+the prophet of islam is muhammad.
+the birthplace of muhammad is mecca.
+buddha was a prince.
+the birthplace of buddha is lumbini.
+lumbini is in nepal.
+luther was a monk.
+judas was a traitor.
+the pope is the leader of the catholic church.
+the pope lives in the vatican.
+a catholic is a christian.
+a protestant is a christian.
+zen is buddhist.
+a lama is a monk.
+tibet is buddhist.
+hinduism is indian.
+an imam is in a mosque.
+a rabbi is in a synagogue.
+a church has a priest.
+a mosque has an imam.
+a synagogue has a rabbi.
+a monastery has monks.
+a bishop is a priest.
+a pagoda is a temple.
+a church has a cross.
+mecca is holy.
+the hajj is a pilgrimage.
+the hajj is in mecca.
+jerusalem is holy.
+varanasi is in india.
+the ganges is holy.
+islam has 5 pillars.
+buddhism has 4 truths.
+ramadan is a month.
+christmas is a festival.
+christmas is in december.
+easter is a festival.
+easter is in spring.
+eid is a festival.
+diwali is a festival.
+diwali is hindu.
+diwali is the festival of lights.
+holi is the festival of colors.
+hanukkah is a festival.
+hanukkah is jewish.
+hanukkah has 8 days.
+passover is jewish.
+lent has 40 days.
+halloween is in october.
+thanksgiving is in november.
+thanksgiving is american.
+santa has a sleigh.
+santa lives in lapland.
+a hymn is a song.
+a parable is a story.
+hell is hot.
+an angel is in heaven.
+a devil is in hell.
+the menorah is a lamp.
+a sikh has a turban.

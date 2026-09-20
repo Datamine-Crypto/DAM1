@@ -1,0 +1,3 @@
+# what does tom have and who has apples: what he has stands inside him, and he is where the apples stand.
+tom has 3 apples. => tom -> apple:quantity(3) | what does tom have? = apple; who has apples? = tom
+test: zorp has 4 flibs. => zorp -> flib:quantity(4) | what does zorp have? = flib; who has flibs? = zorp

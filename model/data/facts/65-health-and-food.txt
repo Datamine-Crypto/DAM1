@@ -1,0 +1,61 @@
+# Health and food: what the body needs, what is good and bad for it, and who helps.
+a person needs sleep.
+water is good.
+sleep is good.
+exercise is good.
+fruit is good.
+vegetables are good.
+sugar is bad.
+smoking is bad.
+alcohol is bad.
+salt is bad.
+fat is bad.
+an apple has vitamins.
+an orange has vitamins.
+a lemon has vitamins.
+milk has calcium.
+cheese has calcium.
+meat has protein.
+fish has protein.
+an egg has protein.
+beans have protein.
+bread has carbohydrates.
+rice has carbohydrates.
+pasta has carbohydrates.
+a potato has carbohydrates.
+butter has fat.
+oil has fat.
+sugar has calories.
+a person has 5 senses.
+the eye is for sight.
+the ear is for hearing.
+the nose is for smell.
+the tongue is for taste.
+the skin is for touch.
+the heart is a muscle.
+the brain is soft.
+a bone is hard.
+a person has 206 bones.
+a child has 20 teeth.
+an adult has 32 teeth.
+a doctor helps sick people.
+a nurse helps sick people.
+a dentist helps teeth.
+a surgeon helps people.
+a hospital has doctors.
+a hospital has beds.
+a pharmacy has medicine.
+aspirin is a medicine.
+penicillin is a medicine.
+a vaccine is a medicine.
+a virus is small.
+a bacterium is small.
+the flu is an illness.
+malaria is an illness.
+cancer is an illness.
+a fever is hot.
+a cough is a sound.
+a wound needs a bandage.
+a broken bone needs a cast.
+a healthy person is strong.
+a sick person is weak.

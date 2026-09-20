@@ -1,0 +1,13 @@
+# Order in a line: people named in a line stand in the order they are named, so the first named is
+# first and the last named is last, and who is before or after follows from that order.
+# The turns tell a line, whose places the network writes as the scenes state them, and ask one place. Each scene tells three or four people with their places, then
+# asks who has each place, yes and no for each place, a place no one has, and a person never told.
+turn: tom, ann and sam stand in a line. who is first? => tom -> {is} -> first; ann -> {is} -> second; sam -> {is} -> third; sam -> {is} -> last | tom
+turn: tom, ann and sam stand in a line. who is last? => tom -> {is} -> first; ann -> {is} -> second; sam -> {is} -> third; sam -> {is} -> last | sam
+turn: ben, lily and max stand in a line. who is first? => ben -> {is} -> first; lily -> {is} -> second; max -> {is} -> third; max -> {is} -> last | ben
+turn: ben, lily and max stand in a line. who is last? => ben -> {is} -> first; lily -> {is} -> second; max -> {is} -> third; max -> {is} -> last | max
+tom is first. ann is second. sam is third. => tom -> {is} -> first; ann -> {is} -> second; sam -> {is} -> third | who is first? = tom; who is second? = ann; who is third? = sam; is tom first? = yes; is ann first? = no; is sam third? = yes; is ann second? = yes; is tom third? = no; who is fourth? = {nothing}; is kim first? = no
+ben is first. lily is second. max is third. joe is fourth. => ben -> {is} -> first; lily -> {is} -> second; max -> {is} -> third; joe -> {is} -> fourth | who is first? = ben; who is second? = lily; who is third? = max; who is fourth? = joe; is ben first? = yes; is max second? = no; is joe fourth? = yes; is lily third? = no; who is fifth? = {nothing}; is sue first? = no
+test: turn: zoe, kim and joe stand in a line. who is first? => zoe -> {is} -> first; kim -> {is} -> second; joe -> {is} -> third; joe -> {is} -> last | zoe
+test: turn: zoe, kim and joe stand in a line. who is last? => zoe -> {is} -> first; kim -> {is} -> second; joe -> {is} -> third; joe -> {is} -> last | joe
+test: zoe is first. kim is second. tim is third. => zoe -> {is} -> first; kim -> {is} -> second; tim -> {is} -> third | who is first? = zoe; who is second? = kim; who is third? = tim; is zoe first? = yes; is tim first? = no; is kim second? = yes; who is fourth? = {nothing}; is ben first? = no

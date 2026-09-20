@@ -1,0 +1,23 @@
+# Not having, written into the tree rather than left out of it. Has no and does not have are a count
+# of 0 under the thing, the same shape as any count: sam -> {has} -> kite:quantity(0). A thing
+# an owner had and has no more (no longer has, lost) is removed, and the physics files the fact as a
+# value with the time past, lily -> {has} -> ball(time: past), so who had it before still answers,
+# found by findPast. Each scene mixes having and not having, then asks yes
+# and no, how many (0 for a thing not had), who has (nothing when no one has it now), who had it
+# before, what does X have (nothing when X has nothing now), and how many things after a loss.
+seed: 21-verb-forms
+tom has a car. tom has no bike. => tom -> {has} -> car; tom -> {has} -> bike:quantity(0) | does tom have a car? = yes; does tom have a bike? = no; how many bikes does tom have? = 0; what does tom have? = car; who has the bike? = {nothing}
+ann does not have a dog. ann has a cat. => ann -> {has} -> dog:quantity(0); ann -> {has} -> cat | does ann have a dog? = no; does ann have a cat? = yes; how many dogs does ann have? = 0; what does ann have? = cat; who has the dog? = {nothing}
+sam has no kite. => sam -> {has} -> kite:quantity(0) | does sam have a kite? = no; how many kites does sam have? = 0; what does sam have? = {nothing}; who has the kite? = {nothing}
+lily had a ball. lily no longer has the ball. => lily -> {has} -> ball -> {time} -> {past} | does lily have a ball? = no; who had the ball before? = lily; who has the ball? = {nothing}; what does lily have? = {nothing}
+kim has a hat. kim has a pen. kim no longer has the hat. => kim -> {has} -> hat -> {time} -> {past}; kim -> {has} -> pen | does kim have a hat? = no; does kim have a pen? = yes; who had the hat before? = kim; what does kim have? = pen; how many things does kim have? = 1
+joe has a coin. max does not have a coin. => joe -> {has} -> coin; max -> {has} -> coin:quantity(0) | who has the coin? = joe; does max have a coin? = no; how many coins does max have? = 0; does joe have a coin? = yes; what does max have? = {nothing}
+sue has a book. sue has a cup. sue lost the cup. => sue -> {has} -> book; sue -> {has} -> cup -> {time} -> {past} | does sue have a cup? = no; who had the cup before? = sue; what does sue have? = book; who has the cup? = {nothing}; how many things does sue have? = 1
+ben has a dog. zoe has no dog. zoe has a cat. => ben -> {has} -> dog; zoe -> {has} -> dog:quantity(0); zoe -> {has} -> cat | does zoe have a dog? = no; does ben have a dog? = yes; how many dogs does zoe have? = 0; who has the cat? = zoe; what does zoe have? = cat
+rose has no car. tim has a car. => rose -> {has} -> car:quantity(0); tim -> {has} -> car | who has the car? = tim; does rose have a car? = no; how many cars does rose have? = 0; what does rose have? = {nothing}; does tim have a car? = yes
+turn: tom has a kite and tom has no ball does tom have a ball => tom -> {has} -> kite; tom -> {has} -> ball:quantity(0) | no
+turn: ann had a coin and ann no longer has the coin who had the coin before => ann -> {has} -> coin -> {time} -> {past} | ann
+test: zoe has a bike. zoe has no car. => zoe -> {has} -> bike; zoe -> {has} -> car:quantity(0) | does zoe have a car? = no; how many cars does zoe have? = 0; does zoe have a bike? = yes; what does zoe have? = bike; who has the car? = {nothing}
+test: max does not have a hat. sue has a hat. => max -> {has} -> hat:quantity(0); sue -> {has} -> hat | who has the hat? = sue; does max have a hat? = no; how many hats does max have? = 0; what does max have? = {nothing}
+test: tim has a ball. tim has a pen. tim no longer has the pen. => tim -> {has} -> ball; tim -> {has} -> pen -> {time} -> {past} | does tim have a pen? = no; who had the pen before? = tim; what does tim have? = ball; how many things does tim have? = 1; who has the pen? = {nothing}
+test: turn: kim has no dog how many dogs does kim have => kim -> {has} -> dog:quantity(0) | 0

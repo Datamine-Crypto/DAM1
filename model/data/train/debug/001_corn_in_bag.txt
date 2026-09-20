@@ -1,0 +1,5 @@
+# corn in bag: the first content word is found at the world, or made; the place word on the thing adds the
+# location relation; the next content word is the value under it. The test line is the same case with names
+# no lesson and no seed says.
+corn in bag. => corn -> {in} -> bag
+test: zorp in flib. => zorp -> {in} -> flib

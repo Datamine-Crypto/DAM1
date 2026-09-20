@@ -1,0 +1,43 @@
+# The statements of data/facts/50-astronomy.txt the cursor tree holds, one path each, written by build-seeds.mjs.
+earth {is} planet
+moon {is} satellite
+mercury {is} planet
+venus {is} planet
+mars {is} planet
+jupiter {is} planet
+saturn {is} planet
+uranus {is} planet
+neptune {is} planet
+sun -> {planet:quantity(8)}
+jupiter -> {is} -> largest
+mercury -> {is} -> smallest
+mercury -> {is} -> closest
+neptune -> {is} -> farthest
+mercury -> {is} -> first
+venus -> {is} -> second
+earth -> {is} -> third
+mars -> {is} -> fourth
+jupiter -> {is} -> fifth
+saturn -> {is} -> sixth
+uranus -> {is} -> seventh
+neptune -> {is} -> eighth
+mars -> {is} -> {color} -> red
+earth -> {is} -> {color} -> blue
+moon -> {is} -> {color} -> grey
+sun -> {is} -> {color} -> yellow
+venus -> {is} -> {temperature} -> hot
+mars -> {is} -> {temperature} -> cold
+neptune -> {is} -> {color} -> blue
+saturn {has} rings
+jupiter -> {moon:quantity(95)}
+saturn -> {moon:quantity(146)}
+mars -> {moon:quantity(2)}
+earth -> {moon:quantity(1)}
+comet {has} tail
+star -> {is} -> {temperature} -> hot
+galaxy {has} stars
+sun {in} galaxy
+moon {in} sky
+telescope {material} glass
+astronaut {has} suit
+armstrong {was} astronaut

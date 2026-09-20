@@ -1,0 +1,16 @@
+[package]
+name = "dam1-hub"
+version = "0.1.0"
+edition = "2024"
+license = "AGPL-3.0-or-later"
+description = "The DAM1 model tool's commands: export a cursor network and the permanent state as a Hugging Face model folder, check it against its source, pull it from the hub and talk with it"
+repository = "https://github.com/Datamine-Crypto/DAM1"
+publish = false
+
+[dependencies]
+premise = "0.1.5"
+dam-core = { path = "../../../model/crates/dam-core" }
+dam-console = { path = "../../../model/crates/dam-console" }
+dam-page = { path = "../../../model/crates/dam-page" }
+dam1 = { path = "../dam1" }
+hf-hub = { version = "0.4.3", default-features = false, features = ["ureq"] }

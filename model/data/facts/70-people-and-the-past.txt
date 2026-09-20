@@ -1,0 +1,68 @@
+# People and the past, in the shapes the quiz reads.
+einstein was a scientist.
+newton was a scientist.
+darwin was a scientist.
+galileo was a scientist.
+curie was a scientist.
+pasteur was a scientist.
+edison was an inventor.
+bell was an inventor.
+gutenberg was an inventor.
+shakespeare was a writer.
+dickens was a writer.
+tolstoy was a writer.
+austen was a writer.
+homer was a poet.
+dante was a poet.
+mozart was a composer.
+beethoven was a composer.
+bach was a composer.
+chopin was a composer.
+picasso was a painter.
+leonardo was a painter.
+monet was a painter.
+rembrandt was a painter.
+michelangelo was a sculptor.
+plato was a philosopher.
+aristotle was a philosopher.
+socrates was a philosopher.
+napoleon was the emperor of france.
+caesar was the ruler of rome.
+cleopatra was the queen of egypt.
+victoria was the queen of england.
+elizabeth was the queen of england.
+lincoln was the president of america.
+washington was the president of america.
+gandhi was the leader of india.
+mandela was the president of southafrica.
+columbus was a sailor.
+magellan was a sailor.
+cook was a sailor.
+gagarin was an astronaut.
+einstein was german.
+newton was english.
+shakespeare was english.
+mozart was austrian.
+picasso was spanish.
+leonardo was italian.
+napoleon was french.
+gandhi was indian.
+the age of rome is old.
+the age of egypt is old.
+the age of greece is old.
+the pyramids are in egypt.
+the pyramids are old.
+the colosseum is in rome.
+the colosseum is old.
+the parthenon is in athens.
+the tower is in paris.
+the wall is in china.
+the wall is long.
+the kremlin is in moscow.
+the acropolis is in athens.
+rome was an empire.
+egypt was a kingdom.
+greece was a democracy.
+a roman is a soldier.
+a viking is a sailor.
+an egyptian is a builder.

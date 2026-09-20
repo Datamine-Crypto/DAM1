@@ -1,0 +1,26 @@
+# Missing numbers in a sum: a number that some other number is added to, taken from, or multiplied by
+# to make a total is found by undoing the step, so what plus 4 makes 10 is 10 less 4.
+# The turns ask one missing number each. Each scene tells what three people have, then asks missing
+# numbers, each count, how many more one has than another, a total and who has more.
+turn: what number plus 4 makes 10? => | 6
+turn: what number times 3 makes 12? => | 4
+turn: what number minus 5 makes 2? => | 7
+turn: 8 plus what number makes 15? => | 7
+tom has 4 apples. ann has 10 apples. sam has 3 pens. => tom -> {has} -> apple:quantity(4); {number:value(4)}; ann -> {has} -> apple:quantity(10); {number:value(10)}; sam -> {has} -> pen:quantity(3); {number:value(3)} | what number plus 4 makes 10? = 6; what number times 3 makes 12? = 4; what number minus 5 makes 2? = 7; 8 plus what number makes 15? = 7; how many apples does tom have? = 4; how many apples does ann have? = 10; how many more apples does ann have than tom? = 6; how many apples do tom and ann have? = 14; what number plus 3 makes 10? = 7; what number times 4 makes 12? = 3; how many pens does sam have? = 3
+kim has 5 cards. joe has 12 cards. lily has 2 stamps. => kim -> {has} -> card:quantity(5); {number:value(5)}; joe -> {has} -> card:quantity(12); {number:value(12)}; lily -> {has} -> stamp:quantity(2); {number:value(2)} | what number plus 5 makes 12? = 7; what number minus 2 makes 5? = 7; what number times 2 makes 12? = 6; 5 plus what number makes 12? = 7; how many cards does kim have? = 5; how many more cards does joe have than kim? = 7; how many cards do kim and joe have? = 17; how many stamps does lily have? = 2; who has more cards? = joe
+test: turn: what number plus 9 makes 20? => | 11
+test: turn: what number times 6 makes 30? => | 5
+test: zoe has 9 shells. ben has 20 shells. tim has 6 coins. => zoe -> {has} -> shell:quantity(9); {number:value(9)}; ben -> {has} -> shell:quantity(20); {number:value(20)}; tim -> {has} -> coin:quantity(6); {number:value(6)} | what number plus 9 makes 20? = 11; what number times 6 makes 30? = 5; how many more shells does ben have than zoe? = 11; how many shells do zoe and ben have? = 29; 6 plus what number makes 20? = 14; how many coins does tim have? = 6; who has fewer shells? = zoe; what number minus 6 makes 9? = 15
+# More missing numbers asked cold, with other numbers in each place.
+turn: what number plus 7 makes 12? => | 5
+turn: what number plus 15 makes 40? => | 25
+turn: what number times 4 makes 28? => | 7
+turn: what number times 9 makes 45? => | 5
+turn: what number times 2 makes 36? => | 18
+turn: what number minus 8 makes 11? => | 19
+turn: what number minus 3 makes 30? => | 33
+turn: 6 plus what number makes 14? => | 8
+turn: 20 plus what number makes 27? => | 7
+test: turn: what number times 8 makes 56? => | 7
+test: turn: what number minus 6 makes 9? => | 15
+test: turn: 12 plus what number makes 30? => | 18

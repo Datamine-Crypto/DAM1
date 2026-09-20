@@ -1,0 +1,25 @@
+[workspace]
+resolver = "3"
+members = [
+    "crates/app",
+    "crates/dam-cli",
+    "crates/dam-card",
+    "crates/dam-console",
+    "crates/dam-core",
+    "crates/dam-page",
+    "crates/dam-web",
+    "crates/spec",
+]
+
+[profile.test]
+opt-level = 3
+incremental = true
+
+[profile.release]
+incremental = true
+
+[profile.teach]
+inherits = "release"
+incremental = false
+lto = "fat"
+codegen-units = 1

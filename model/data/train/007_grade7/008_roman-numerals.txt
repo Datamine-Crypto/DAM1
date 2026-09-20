@@ -1,0 +1,15 @@
+# Roman numerals: i is 1, v is 5, x is 10, l is 50, c is 100, d is 500 and m is 1000; the letters are
+# added from the biggest, and a smaller letter before a bigger one is taken away from it. The turns
+# stay as single chat turns; each scene tells what several people have, then asks numerals both ways,
+# the counts and who has the most.
+seed: 13-roman-numerals
+turn: what number is the roman numeral x? => | 10
+turn: what number is the roman numeral iv? => | 4
+turn: what number is the roman numeral xii? => | 12
+turn: what is 9 in roman numerals? => | ix
+turn: what is 15 in roman numerals? => | xv
+tom has 10 apples. ann has 4 apples. sam has 12 apples. => {number:value(10)}; tom -> {has} -> apple:quantity(10); {number:value(4)}; ann -> {has} -> apple:quantity(4); {number:value(12)}; sam -> {has} -> apple:quantity(12) | what number is the roman numeral x? = 10; what number is the roman numeral iv? = 4; what number is the roman numeral xii? = 12; what is 9 in roman numerals? = ix; what is 15 in roman numerals? = xv; what is 4 in roman numerals? = iv; what is 12 in roman numerals? = xii; what number is the roman numeral ix? = 9; how many apples does tom have? = 10; who has the most apples? = sam; how many apples do tom and ann have? = 14
+kim has 9 cards. joe has 15 cards. lily has 6 cards. => {number:value(9)}; kim -> {has} -> card:quantity(9); {number:value(15)}; joe -> {has} -> card:quantity(15); {number:value(6)}; lily -> {has} -> card:quantity(6) | what is 9 in roman numerals? = ix; what is 15 in roman numerals? = xv; what is 6 in roman numerals? = vi; what number is the roman numeral vi? = 6; what number is the roman numeral xv? = 15; what number is the roman numeral x? = 10; what is 10 in roman numerals? = x; how many cards does lily have? = 6; who has the fewest cards? = lily; how many more cards does joe have than kim? = 6
+test: zoe has 19 stickers. ben has 40 stickers. => {number:value(19)}; zoe -> {has} -> sticker:quantity(19); {number:value(40)}; ben -> {has} -> sticker:quantity(40) | what number is the roman numeral xix? = 19; what is 40 in roman numerals? = xl; what is 19 in roman numerals? = xix; what number is the roman numeral xl? = 40; what number is the roman numeral xi? = 11; what is 20 in roman numerals? = xx; how many stickers does ben have? = 40; who has more stickers? = ben
+test: turn: what number is the roman numeral xix? => | 19
+test: turn: what is 40 in roman numerals? => | xl

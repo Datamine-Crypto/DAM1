@@ -1,0 +1,18 @@
+# Where a country is: the geography seeds say which continent each country is in, so where is a
+# country asks for the continent it is in. A person told to be in a country is in that country, so
+# where is the person asks for the country. A chat turn asks where a country is with or without its mark.
+seed: 30-geography
+seed: 31-countries
+ann is in china. => ann in china | where is ann? = china; where is china? = asia; where is france? = europe; where is india? = asia; is china in asia? = yes; is france in asia? = no
+tom is in germany. => tom in germany | where is tom? = germany; where is germany? = europe; where is korea? = asia; where is greece? = europe; is germany in europe? = yes; is india in europe? = no
+sam is in nepal. => sam in nepal | where is sam? = nepal; where is nepal? = asia; where is finland? = europe; where is thailand? = asia; where is denmark? = europe
+turn: where is china? {eom} => | asia
+turn: where is france? {eom} => | europe
+turn: where is india {eom} => | asia
+turn: where is germany {eom} => | europe
+turn: where is vietnam? {eom} => | asia
+turn: where is austria {eom} => | europe
+test: turn: where is japan? {eom} => | asia
+test: turn: where is japan {eom} => | asia
+test: turn: where is belgium? {eom} => | europe
+test: lily is in japan. => lily in japan | where is lily? = japan; where is japan? = asia; where is croatia? = europe

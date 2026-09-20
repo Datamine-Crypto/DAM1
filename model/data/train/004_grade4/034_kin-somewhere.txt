@@ -1,0 +1,13 @@
+# A person named only by what they are to someone, my sister, becomes a thing of the story when the
+# sentence says where they are or where they went, so they can be found there. Held out lines use
+# people and places the learned lines never use.
+my sister lives in berlin. => berlin -> sister | where does my sister live? = berlin
+tom's brother works in london. => london -> brother | where does tom's brother work? = london
+my aunt is in the garden. => garden -> aunt | where is my aunt? = garden
+ann's cousin went to the park. => park -> cousin | where is ann's cousin? = park
+my father sat on the bench. => bench -> father | where is my father? = bench
+test: my uncle lives in rome. => rome -> uncle | where does my uncle live? = rome
+test: leo's mother is in the kitchen. => kitchen -> mother | where is leo's mother? = kitchen
+ben's sister is in the shop. => shop -> sister | where is ben's sister? = shop
+mia's father is in the garden. => garden -> father | where is mia's father? = garden
+tom's aunt is in the hall. => hall -> aunt | where is tom's aunt? = hall

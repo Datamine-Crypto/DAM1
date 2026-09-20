@@ -1,0 +1,10 @@
+# The parts of a day a story names: yesterday, then today with its morning, afternoon and evening in it, then tomorrow,
+# each day the successor of the one before it and each part of today the successor of the part before it, so a fact
+# told for the afternoon comes after one told for the morning whatever order the story tells them in.
+the successor of yesterday is today.
+the successor of today is tomorrow.
+the morning is in today.
+the afternoon is in today.
+the evening is in today.
+the successor of morning is afternoon.
+the successor of afternoon is evening.

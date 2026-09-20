@@ -1,0 +1,16 @@
+# The most common number: of some numbers named, the one named more times than any other is the most
+# common, or the mode.
+# The turns ask one mode each. Each scene tells how many of one thing four people have, two of them the
+# same, then asks modes, each count, who has the most and the fewest, and a total.
+turn: which number comes up most often in 2, 3, 3 and 5? {eom} => | 3
+turn: what is the mode of 4, 7, 7, 7 and 1? {eom} => | 7
+turn: what is the mode of 9, 2, 9 and 6? {eom} => | 9
+turn: which number comes up most often in 1, 1, 8, 8 and 8? {eom} => | 8
+turn: what is the mode of 3, 8, 8 and 1? {eom} => | 8
+turn: what is the mode of 7, 7, 4 and 9? {eom} => | 7
+turn: what is the mode of 2, 5, 1 and 5? {eom} => | 5
+tom has 2 apples. ann has 3 apples. sam has 3 apples. lily has 5 apples. => tom owns apples; apples is 2; 2 = 2; ann owns apples; apples is 3; 3 = 3; sam owns apples; lily owns apples; apples is 5; 5 = 5 | which number comes up most often in 2, 3, 3 and 5? = 3; what is the mode of 4, 7, 7, 7 and 1? = 7; what is the mode of 9, 2, 9 and 6? = 9; how many apples does tom have? = 2; how many apples does ann have? = 3; how many apples does sam have? = 3; who has the most apples? = lily; who has the fewest apples? = tom; how many apples do tom and lily have? = 7; what is the mode of 2, 3, 3 and 5? = 3; which number comes up most often in 1, 1, 8, 8 and 8? = 8
+kim has 8 cards. joe has 7 cards. lily has 8 cards. max has 4 cards. => kim owns cards; cards is 8; 8 = 8; joe owns cards; cards is 7; 7 = 7; lily owns cards; max owns cards; cards is 4; 4 = 4 | what is the mode of 3, 8, 8 and 1? = 8; what is the mode of 7, 7, 4 and 9? = 7; what is the mode of 2, 5, 1 and 5? = 5; what is the mode of 8, 7, 8 and 4? = 8; how many cards does kim have? = 8; how many cards does max have? = 4; who has the fewest cards? = max; how many cards do kim and joe have? = 15; which number comes up most often in 8, 7, 8 and 4? = 8; how many cards does joe have? = 7
+test: turn: what is the mode of 5, 6, 6 and 2? {eom} => | 6
+test: turn: which number comes up most often in 4, 4, 3 and 2? {eom} => | 4
+test: zoe has 6 shells. ben has 5 shells. tim has 6 shells. sue has 2 shells. => zoe owns shells; shells is 6; 6 = 6; ben owns shells; shells is 5; 5 = 5; tim owns shells; sue owns shells; shells is 2; 2 = 2 | what is the mode of 5, 6, 6 and 2? = 6; which number comes up most often in 4, 4, 3 and 2? = 4; what is the mode of 6, 5, 6 and 2? = 6; how many shells does ben have? = 5; who has the fewest shells? = sue; how many shells do zoe and sue have? = 8; how many shells does tim have? = 6; which number comes up most often in 6, 5, 6 and 2? = 6

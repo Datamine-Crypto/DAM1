@@ -1,0 +1,118 @@
+# Questions asked cold, with no story at all, as a person opens a chat: the color of a common thing,
+# what an animal says, what a thing is, a capital, an opposite, what comes next. Every answer is in
+# the seeds. Held out lines ask of things the learned lines never ask of.
+seed: 91-common-colors
+seed: 60-living-things
+seed: 30-geography
+seed: 92-everyday-world
+turn: what color is grass => | green
+turn: what color is the sky => | blue
+turn: what color is snow => | white
+turn: what color is a lemon => | yellow
+turn: what color is coal => | black
+turn: what color is a tomato => | red
+turn: is grass green => | yes
+turn: is snow black => | no
+turn: is coal black => | yes
+turn: what does a dog say => | woof
+turn: what does a cow say => | moo
+turn: what does a duck say => | quack
+turn: what is a dog => | mammal
+turn: what is a rose => | flower
+turn: what is an owl => | bird
+turn: what is a tulip => | flower
+turn: what is the capital of spain => | madrid
+turn: what is the capital of egypt => | cairo
+turn: what is the capital of japan => | tokyo
+turn: where is rome => | italy
+turn: where is tokyo => | japan
+turn: what is the opposite of fast => | slow
+turn: what is the opposite of open => | closed
+turn: what is the opposite of big => | small
+turn: what comes after tuesday => | wednesday
+turn: what comes before friday => | thursday
+turn: what month comes after march => | april
+turn: how many sides does a triangle have => | 3
+turn: how many sides does a hexagon have => | 6
+test: turn: what color is milk => | white
+test: turn: what color is a carrot => | orange
+test: turn: what color is blood => | red
+test: turn: is the sky blue => | yes
+test: turn: is milk black => | no
+test: turn: what does a cat say => | meow
+test: turn: what does a snake say => | hiss
+test: turn: what is a cat => | mammal
+test: turn: what is a daisy => | flower
+test: turn: what is the capital of italy => | rome
+test: turn: what is the capital of france => | paris
+test: turn: where is paris => | france
+test: turn: what is the opposite of hot => | cold
+test: turn: what is the opposite of up => | down
+test: turn: what comes after thursday => | friday
+test: turn: what month comes after june => | july
+test: turn: how many sides does a square have => | 4
+turn: what is the first month => | january
+turn: what is the last month => | december
+turn: what is the first day => | monday
+turn: what language do they speak in spain => | spanish
+turn: what language do they speak in italy => | italian
+turn: what language do they speak in japan => | japanese
+turn: what currency do they use in japan => | yen
+test: turn: what is the last day => | sunday
+test: turn: what language do they speak in france => | french
+test: turn: what language do they speak in germany => | german
+turn: what is the opposite of down => | up
+turn: what is the opposite of out => | in
+test: turn: what is the opposite of off => | on
+turn: what is the opposite of back => | front
+turn: what is the opposite of before => | after
+turn: where are the stars => | sky
+turn: where is the sun => | sky
+turn: where is a whale => | ocean
+turn: where is a doctor => | hospital
+turn: where is the fridge => | kitchen
+turn: where is a camel => | desert
+turn: what is a guitar => | instrument
+turn: what is a hammer => | tool
+turn: what is rain => | water
+turn: what is tennis => | sport
+turn: how many wheels does a car have => | 4
+turn: what makes honey => | bee
+turn: what does a bee make => | honey
+test: turn: where are the clouds => | sky
+test: turn: where is a shark => | ocean
+test: turn: where is a nurse => | hospital
+test: turn: where is the stove => | kitchen
+test: turn: what is a drum => | instrument
+test: turn: what is football => | sport
+test: turn: what is cheese => | food
+test: turn: how many wheels does a bike have => | 2
+test: turn: what makes milk => | cow
+# More things said with no article and asked what they are, so the reading is of the shape and not of the word.
+turn: what is bread => | food
+turn: what is rice => | grain
+turn: what is ice => | solid
+turn: what is golf => | sport
+turn: what is english => | language
+test: turn: what is steam => | gas
+test: turn: what is chess => | game
+test: turn: what is oxygen => | gas
+# What the seeds rank, asked cold with its kind: a superlative or an ordinal beside the kind of thing.
+seed: 50-astronomy
+seed: 33-rivers-mountains-seas
+seed: 61-animals
+turn: what is the largest planet => | jupiter
+turn: what is the smallest planet => | mercury
+turn: what is the longest river => | nile
+turn: what is the tallest mountain => | everest
+turn: what is the largest ocean => | pacific
+turn: what is the fastest bird => | peregrine
+turn: what is the third planet => | earth
+turn: what is the fifth planet => | jupiter
+turn: what is the sixth planet => | saturn
+test: turn: what is the largest desert => | sahara
+test: turn: what is the largest country => | russia
+test: turn: what is the smallest continent => | australia
+test: turn: what is the fastest mammal => | cheetah
+test: turn: what is the fourth planet => | mars
+test: turn: what is the second planet => | venus

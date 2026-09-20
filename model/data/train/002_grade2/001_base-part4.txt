@@ -1,0 +1,181 @@
+seed: 21-verb-forms
+seed: 18-qualities
+seed: 17-speakers
+two is a number. seven is a number. seven dogs are in the park. => two -> {is} -> number; seven -> {is} -> number; dog -> {in} -> park; dog:quantity(7); two -> {equal} -> {number:value(2)}; seven -> {equal} -> {number:value(7)} | where are the dogs? = park; how many dogs are in the park? = 7; is two a number? = yes; is seven a number? = yes; what is in the park? = dog; is seven a color? = no; are the dogs in the house? = no; where are the cats? = {nothing}
+red is a color. pink is a color. the pink hat is in the box. => red -> {is} -> color; pink -> {is} -> color; hat -> {pink}; hat -> {in} -> box | what is in the box? = hat; where is the hat? = box; what is pink? = hat; is pink a color? = yes; what color is the hat? = pink; is the hat red? = no; is red a color? = yes; what is red? = {nothing}
+blue is a color. grey is a color. the grey cat is in the room. => blue -> {is} -> color; grey -> {is} -> color; cat -> {grey}; cat -> {in} -> room | where is the cat? = room; what is grey? = cat; what color is the cat? = grey; is the cat blue? = no; is grey a color? = yes; what is in the room? = cat; is blue a color? = yes; where is the dog? = {nothing}
+red is a color. white is a color. the white dog is in the garden. => red -> {is} -> color; white -> {is} -> color; dog -> {white}; dog -> {in} -> garden | where is the dog? = garden; what is white? = dog; what color is the dog? = white; is the dog red? = no; is white a color? = yes; what is in the garden? = dog; is red a color? = yes; where is the cat? = {nothing}
+green is a color. black is a color. the black bag is on the bed. => green -> {is} -> color; black -> {is} -> color; bag -> {black}; bag -> {on} -> bed | what is in the bed? = bag; where is the bag? = bed; what is black? = bag; what color is the bag? = black; is the bag green? = no; is black a color? = yes; is green a color? = yes; what is on the bed? = bag
+the garden is a place. the park is a place. the dog is in the park. => garden -> {is} -> place; dog -> {in} -> park -> {is} -> place | where is the dog? = park; is the park a place? = yes; is the garden a place? = yes; what is in the park? = dog; is the dog a place? = no; what is in the garden? = {nothing}; is the dog in the garden? = no; where is the cat? = {nothing}
+the box is a thing. the cup is a thing. the pen is in the cup. => box -> {is} -> thing; pen -> {in} -> cup -> {is} -> thing | what is in the cup? = pen; where is the pen? = cup; is the cup a thing? = yes; is the box a thing? = yes; what is in the box? = {nothing}; is the pen in the box? = no; is the box a place? = no; where is the key? = {nothing}
+three is a number. eight is a number. eight keys are in the box. => three -> {is} -> number; eight -> {is} -> number; key -> {in} -> box; key:quantity(8); three -> {equal} -> {number:value(3)}; eight -> {equal} -> {number:value(8)} | where are the keys? = box; how many keys are in the box? = 8; is eight a number? = yes; is three a number? = yes; what is in the box? = key; is three a color? = no; are the keys in the bag? = no; where are the pens? = {nothing}
+the cat is not in the house but in the garden. the key is not in the box but in the bag. there is no ball in the car. => cat -> {in} -> garden; key -> {in} -> bag | where is the cat? = garden; where is the key? = bag; is the ball in the car? = no; is the cat in the house? = no; is the key in the box? = no; what is in the garden? = cat; what is in the bag? = key; where is the ball? = {nothing}; what is in the car? = {nothing}
+there is no cat in the garden. there is no key in the box. no dog is in the house. the pen is in the bag. => pen -> {in} -> bag | is the cat in the garden? = no; is the key in the box? = no; is the dog in the house? = no; where is the pen? = bag; what is in the garden? = {nothing}; what is in the box? = {nothing}; what is in the house? = {nothing}; is the pen in the bag? = yes; where is the cat? = {nothing}
+the number two. the number three. => two -> {equal} -> {number:value(2)}; three -> {equal} -> {number:value(3)}
+two dogs are in the garden. three keys are in the box. four pens are in the bag. => dog -> {in} -> garden; dog:quantity(2); two -> {equal} -> {number:value(2)}; key -> {in} -> box; key:quantity(3); three -> {equal} -> {number:value(3)}; pen -> {in} -> bag; pen:quantity(4); four -> {equal} -> {number:value(4)} | how many dogs are in the garden? = 2; how many keys are in the box? = 3; how many pens are in the bag? = 4; where are the dogs? = garden; where are the keys? = box; where are the pens? = bag; what is in the box? = key; are the pens in the box? = no
+# The same counts written in digits. A digit word reads with the row of a known digit and is worth
+# the number it writes, so a digit never seen in the quiz still counts (held out: 7 and 9).
+2 dogs are in the park. 3 keys are in the box. => dog -> {in} -> park; dog:quantity(2); {number:value(2)}; key -> {in} -> box; key:quantity(3); {number:value(3)} | how many dogs are in the park? = 2; how many keys are in the box? = 3; where are the dogs? = park; where are the keys? = box; what is in the park? = dog; what is in the box? = key; are the keys in the park? = no; where are the cats? = {nothing}
+# What each token should do, from the hand-written reference in the test
+# the_arithmetic_lines_pass_when_written_by_hand: the numbers put what they are worth on the stack,
+# "+" does nothing because both are already there, "=" adds them, and "sum" names a group and takes
+# the total.
+#
+# These lines have always scored 0, and not because the answer comes out wrong. Measured on the
+# readers of the time: "1" reads as refer in all five at 94%, the space is empty at the start of a
+# sentence so there is no earlier group to hold, and the reading is dead by the second token. The
+# statements cannot pay anything until three programs and four rows are right at once.
+#
+# The trace pays for each row on its own, because a learned behaviour with an empty program is a
+# no-op that keeps the reading alive rather than killing it. Measured: with these rows and every
+# program empty, the statements score 0.0 and the trace scores 1.0.
+#
+# The weakness this had, and how it showed. Learned1 to Learned4 once all returned the token
+# "learned", and Settle shared "doNothing" with Skip. Evolution found the hole at once: given a
+# trace asking for "learned" three times it put Learned1 on all three, and "+" took Settle, so the
+# whole trace scored while the reading died at the second word and computed nothing. One program
+# cannot be PushValue and AddValues together. The vocabulary now names each slot and separates
+# ending a sentence from doing nothing, so neither shortcut scores.
+#
+# That makes the trace harder to satisfy rather than easier: only the right slot earns credit now.
+# It is the right trade, because a foothold that cannot finish is worth nothing, but it is a trade.
+#
+# Measured after the counts were added, with --invent so programs can actually change (without it
+# they are copied through untouched, which silently wasted three runs): 1200 rounds at population
+# 400 found learnedA = [PushValue] in BOTH islands independently, and one of them also found
+# AddValues at the head of learnedB. Neither program had ever been found before; the baseline
+# readers have learnedA empty. So the counts do what they were built to do.
+#
+# learnedC stayed empty in both islands, and that is NOT a bad draw waiting to come good. TakeValue
+# reads the top of the stack instead of popping it, and sets a value on a group without touching the
+# focus, so it changes nothing a trace can see: the counts are identical with and without it. No
+# amount of searching finds a program that earns nothing. Rewarding it needs an assertion about the
+# groups, which does not exist yet.
+#
+# The count after "sum" is 1 for the same reason, and it used to say 0. That was worse than a wrong
+# number: only a reading that had pushed nothing at all could satisfy it, so the assertion meant to
+# teach the last step was paying readers for the broken state instead.
+#
+# Also still missing at that point: one row falls back to Settle in each reader, and the values
+# are not whole numbers (0.000 and 2.517, 2.314 and 0.492), so nothing reaches a statement and the
+# lines score 0. The run traded, too: the three comparative lines started passing, "a bigger box is
+# in the house" fell from 83% to 33%, and held-out lines went from 98.9% to 97.0%.
+#
+# SOLVED once the last three things were in place: worth on the sum token, values
+# walked over the integers, and [ChooseName, TakeValue] drawable as a pair. Two seeds, 600 rounds
+# each, population 400, 2 islands, --invent. All four readers across both seeds hold learnedC =
+# [choose_name, take_value] and values 1=1, 2=2. Seed 1: all four lines 94.2%, weighted 99.1%.
+# Seed 2: all four lines 100%, including the held-out one, weighted 99.6%, held-out lines 99.6%.
+# These lines had scored 0.0% for as long as they had existed.
+# Weighted, because the trace was shaped right and still too small to find. Three lines among 318
+# learned ones are worth 0.0008 of the mean score for the first row fix, which sits under the noise
+# of any other mutation in the same child: 400 rounds of evolution improved everything around them
+# and moved these not at all.
+#
+# Evolution selects on the 255 training lines (every fifth learned line is held for validation),
+# whose weight is 282 with these three at 10. So arithmetic is 10.6% of the training signal, and
+# the same first fix is worth about 0.009, roughly eleven times as much. 20 was tried first and is
+# too much: 19.2%, enough that a reader could profitably abandon fifty ordinary lines to win these
+# three. (An earlier version of this comment said 8.7% and 16%, computed over all 318 learned lines,
+# which is not the set that decides.) The rows involved (1, 2, +, =, sum) appear almost nowhere
+# else, so the damage a fix can do elsewhere is small, but the share still has to stay honest.
+#
+# Only the learned lines are weighted. The held-out line keeps weight 1 so the reported test score
+# stays comparable with every earlier run.
+# A digit reads as a number word does (the same learned slot, a group worth its number), so that
+# digits count things as well as add, and a digit never seen still reads as one by its form.
+# A digit reads as a number word does (the same learned slot, a group worth its number), so that
+# digits count things as well as add, and a digit never seen still reads as one by its form.
+# Each sum scene names two results, "sum" and "result", so one scene asks for both.
+1 + 1 = sum . 2 + 3 = result . => sum -> {equal} -> {number:value(2)}; {number:value(1)}; result -> {equal} -> {number:value(5)}; {number:value(2)}; {number:value(3)} | what is the sum? = 2; what is the result? = 5
+1 + 2 = sum . 4 + 4 = result . => sum -> {equal} -> {number:value(3)}; {number:value(1)}; {number:value(2)}; result -> {equal} -> {number:value(8)}; {number:value(4)} | what is the sum? = 3; what is the result? = 8
+2 + 2 = sum . 3 + 1 = result . => sum -> {equal} -> {number:value(4)}; {number:value(2)}; result -> {equal} -> {number:value(4)}; {number:value(3)}; {number:value(1)} | what is the sum? = 4; what is the result? = 4
+# A verb names a relation the way "bigger" does: a label pointer from the subject, completed by
+# the object, and the question "who likes ann?" is the same edge with an unknown at one end.
+tom likes ann. the dog chased the cat. the cat chased the bird. => tom -> {like} -> ann; dog -> {chase} -> cat -> {time} -> {past}; cat -> {chase} -> bird -> {time} -> {past} | who likes ann? = tom; who chased the cat? = dog; who chased the bird? = cat; who likes the cat? = {nothing}; who chased ann? = {nothing}; who likes tom? = {nothing}; who likes the bird? = {nothing}; who chased the dog? = {nothing}
+# Two clauses with a verb each: "and" reopens the last pointer, as in the two-clause lines above,
+# and the second subject starts its own relation. Two subjects, one verb: the name waiting
+# alongside stands in the same relation.
+ann likes tom. tom likes ann and ann likes ben. the cat and the bird chased the mouse. => tom -> {like} -> ann -> {like} -> tom; tom -> {like} -> ann -> {like} -> ben; cat -> {chase} -> mouse -> {time} -> {past}; bird -> {chase} -> mouse -> {time} -> {past} | who likes tom? = ann; who likes ben? = ann; who likes ann? = tom; who chased the mouse? = bird, cat; who likes kim? = {nothing}; who chased ben? = {nothing}; who likes the mouse? = {nothing}; who chased tom? = {nothing}
+# One verb, two objects: "and" reopens the relation with its name, so the second name takes it
+# from the same subject.
+the dog and the cat chased the bird. tom likes ann and ben. ann likes kim. => dog -> {chase} -> bird -> {time} -> {past}; cat -> {chase} -> bird -> {time} -> {past}; tom -> {like} -> ann -> {like} -> kim; tom -> {like} -> ben | who chased the bird? = cat, dog; who likes ben? = tom; who likes ann? = tom; who likes kim? = ann; who chased the dog? = {nothing}; who likes the bird? = {nothing}; who likes tom? = {nothing}; who chased ann? = {nothing}
+the dog chased the cat and the bird. kim likes ben. emma likes jack. => dog -> {chase} -> cat -> {time} -> {past}; dog -> {chase} -> bird -> {time} -> {past}; kim -> {like} -> ben; emma -> {like} -> jack | who chased the bird? = dog; who chased the cat? = dog; who likes ben? = kim; who likes jack? = emma; who likes kim? = {nothing}; who chased the dog? = {nothing}; who chased ben? = {nothing}; who likes emma? = {nothing}
+the dog chased the cat and the cat chased the bird. ben likes ann. kim likes tom. => dog -> {chase} -> cat -> {time} -> {past}; cat -> {chase} -> bird -> {time} -> {past}; ben -> {like} -> ann; kim -> {like} -> tom | who chased the bird? = cat; who chased the cat? = dog; who likes ann? = ben; who likes tom? = kim; who chased the dog? = {nothing}; who likes ben? = {nothing}; who chased the mouse? = {nothing}; who likes kim? = {nothing}
+# Number words add like digits: "two" runs the counting program (push its number), "=" adds, so
+# the adder has to live in the "=" slot rather than in the digit's push.
+the number one. the number five. => one -> {equal} -> {number:value(1)}; five -> {equal} -> {number:value(5)}
+i have 4 dogs. five cats are in the house. => user -> {has} -> dog:quantity(4); {number:value(4)}; cat -> {in} -> house; cat:quantity(5); five -> {equal} -> {number:value(5)} | how many dogs do i have? = 4; what do i have? = dog; how many cats are in the house? = 5; where are the cats? = house; who has the dogs? = user; what is in the house? = cat; are the dogs in the house? = no; where are the dogs? = {nothing}
+the number six. the number seven. => six -> {equal} -> {number:value(6)}; seven -> {equal} -> {number:value(7)}
+six cats are in the house. seven birds are in the tree. => cat -> {in} -> house; cat:quantity(6); six -> {equal} -> {number:value(6)}; bird -> {in} -> tree; bird:quantity(7); seven -> {equal} -> {number:value(7)} | how many cats are in the house? = 6; how many birds are in the tree? = 7; where are the cats? = house; where are the birds? = tree; what is in the house? = cat; what is in the tree? = bird; are the birds in the house? = no; where are the dogs? = {nothing}
+the number eight. the number nine. the number ten. => eight -> {equal} -> {number:value(8)}; nine -> {equal} -> {number:value(9)}; ten -> {equal} -> {number:value(10)}
+eight keys are in the bag. nine dogs are in the park. ten pens are in the box. => key -> {in} -> bag; key:quantity(8); eight -> {equal} -> {number:value(8)}; dog -> {in} -> park; dog:quantity(9); nine -> {equal} -> {number:value(9)}; pen -> {in} -> box; pen:quantity(10); ten -> {equal} -> {number:value(10)} | how many keys are in the bag? = 8; how many dogs are in the park? = 9; how many pens are in the box? = 10; where are the keys? = bag; where are the dogs? = park; where are the pens? = box; what is in the bag? = key; are the pens in the park? = no
+# The sum asked for: "what is the sum" is answered with the number the sum carries, since the
+# sum joined no group.
+3 + 4 = sum . 5 + 1 = result . => sum -> {equal} -> {number:value(7)}; {number:value(3)}; {number:value(4)}; result -> {equal} -> {number:value(6)}; {number:value(5)}; {number:value(1)} | what is the sum? = 7; what is the result? = 6
+# The other signs, read by their form like the digits: an operation waits until one that binds
+# no tighter follows or the sum ends, and a bracket is worked out first. The "+" above works the
+# same way now (the trace names the slot that operates by the sign), and "=" applies what waits.
+2 * 3 = result . 4 + 5 = sum . => result -> {equal} -> {number:value(6)}; {number:value(2)}; {number:value(3)}; sum -> {equal} -> {number:value(9)}; {number:value(4)}; {number:value(5)} | what is the result? = 6; what is the sum? = 9
+9 - 4 = result . 2 + 6 = sum . => result -> {equal} -> {number:value(5)}; {number:value(9)}; {number:value(4)}; sum -> {equal} -> {number:value(8)}; {number:value(2)}; {number:value(6)} | what is the result? = 5; what is the sum? = 8
+8 / 2 = result . 1 + 3 = sum . => result -> {equal} -> {number:value(4)}; {number:value(8)}; {number:value(2)}; sum -> {equal} -> {number:value(4)}; {number:value(1)}; {number:value(3)} | what is the result? = 4; what is the sum? = 4
+6 / 2 = result . 5 + 5 = sum . => result -> {equal} -> {number:value(3)}; {number:value(6)}; {number:value(2)}; sum -> {equal} -> {number:value(10)}; {number:value(5)} | what is the result? = 3; what is the sum? = 10
+8 / 4 = result . 3 + 3 = sum . => result -> {equal} -> {number:value(2)}; {number:value(8)}; {number:value(4)}; sum -> {equal} -> {number:value(6)}; {number:value(3)} | what is the result? = 2; what is the sum? = 6
+2 + 3 * 4 = result . 7 + 1 = sum . => result -> {equal} -> {number:value(14)}; {number:value(2)}; {number:value(3)}; {number:value(4)}; sum -> {equal} -> {number:value(8)}; {number:value(7)}; {number:value(1)} | what is the result? = 14; what is the sum? = 8
+( 2 + 3 ) * 4 = result . 2 + 7 = sum . => result -> {equal} -> {number:value(20)}; {number:value(2)}; {number:value(3)}; {number:value(4)}; sum -> {equal} -> {number:value(9)}; {number:value(7)} | what is the result? = 20; what is the sum? = 9
+6 * ( 1 + 2 ) = result . 4 + 2 = sum . => result -> {equal} -> {number:value(18)}; {number:value(6)}; {number:value(1)}; {number:value(2)}; sum -> {equal} -> {number:value(6)}; {number:value(4)} | what is the result? = 18; what is the sum? = 6
+# A sum asked bare, as a chat types it: the signs applied and the number answered.
+turn: 2 + 2 = => | 4
+turn: 3 * 5 = => | 15
+two + two = sum . 3 + 2 = result . => sum -> {equal} -> {number:value(4)}; two -> {equal} -> {number:value(2)}; result -> {equal} -> {number:value(5)}; {number:value(3)}; {number:value(2)} | what is the sum? = 4; what is the result? = 5
+one + two = sum . 4 * 2 = result . => sum -> {equal} -> {number:value(3)}; one -> {equal} -> {number:value(1)}; two -> {equal} -> {number:value(2)}; result -> {equal} -> {number:value(8)}; {number:value(4)}; {number:value(2)} | what is the sum? = 3; what is the result? = 8
+two + three = sum . 9 - 3 = result . => sum -> {equal} -> {number:value(5)}; two -> {equal} -> {number:value(2)}; three -> {equal} -> {number:value(3)}; result -> {equal} -> {number:value(6)}; {number:value(9)}; {number:value(3)} | what is the sum? = 5; what is the result? = 6
+# A list of three: the comma holds a name alongside the next, as "and" does, and the place at
+# the end takes them all.
+the cat and the dog are in the park. tom, ann and ben are in the house. => cat -> {in} -> park; dog -> {in} -> park; tom -> {in} -> house; ann -> {in} -> house; ben -> {in} -> house | what is in the park? = cat, dog; what is in the house? = ann, ben, tom; where is tom? = house; where is the cat? = park; where is ann? = house; where is the dog? = park; is ben in the park? = no; where is kim? = {nothing}
+the key, the pen and the cup are in the box. the cat and the dog are black. => key -> {in} -> box; pen -> {in} -> box; cup -> {in} -> box; cat -> {black}; dog -> {black} | what is in the box? = cup, key, pen; what is black? = cat, dog; where is the key? = box; where is the cup? = box; is the cat black? = yes; is the key black? = no; what color is the dog? = black; where is the cat? = {nothing}
+the key and the pen are in the box. the cup and the book are on the table. => key -> {in} -> box; pen -> {in} -> box; cup -> {in} -> table; book -> {on} -> table | what is in the box? = key, pen; what is in the table? = book, cup; where is the key? = box; where is the book? = table; where is the pen? = box; where is the cup? = table; what is on the table? = book, cup; is the cup in the box? = no
+red is a color. the ball is red. tom had a bike. the bike is red. => red -> {is} -> color; ball -> {red}; tom -> {has} -> bike -> {red} | the color of the ball is = red; what color is the ball? = red; tom had a = bike; the color of the bike is = red; what color is the bike? = red; who had the bike? = tom; what is red? = ball, bike; is red a color? = yes
+blue is a color. the car is blue. the box is big. the key is in the box. => blue -> {is} -> color; car -> {blue}; box -> {big}; key -> {in} -> box | the color of the car is = blue; the size of the box is = big; the key is in the = box; what color is the car? = blue; what is big? = box; where is the key? = box; is the car big? = no; what is in the box? = key
+# The question "the color of X is" ends in "is" and the answer fills what X joined; it is easy to
+# lose when other rows move, so a few scenes carry weight for it.
+# "what color is X" without anyone having said that the color is a color: the answer is still
+# what X joined, so the word "color" in the question must not demand a class the world lacks.
+the ball is green. the door is white. water is red. => ball -> {green}; door -> {white}; water -> {red} | the color of the ball is = green; the color of the door is = white; what color is water? = red; what color is the ball? = green; what color is the door? = white; the color of water is = red; what is white? = door; is the ball red? = no
+the grass is green. the sky is blue. the bag is black. => grass -> {green}; sky -> {blue}; bag -> {black} | what color is the grass? = green; what color is the sky? = blue; what color is the bag? = black; the color of the sky is = blue; what is black? = bag; is the grass blue? = no; the color of the grass is = green; what is green? = grass
+the ball is yellow. the day is in the year. the day has a night. => ball -> {yellow}; day -> {in} -> year; day -> {has} -> night | what color is the ball? = yellow; what is in the year? = day; what does the day have? = night; where is the day? = year; the color of the ball is = yellow; what has a night? = day; is the ball in the year? = no; what does the ball have? = {nothing}
+the work is in the city. the end is in the song. => work -> {in} -> city; end -> {in} -> song | where is the work? = city; where is the end? = song; what is in the city? = work; what is in the song? = end; is the work in the song? = no; where is the time? = {nothing}; is the end in the song? = yes; what is in the film? = {nothing}
+the work is in the film. the year is in the song. => work -> {in} -> film; year -> {in} -> song | what is in the film? = work; where is the work? = film; where is the year? = song; what is in the song? = year; is the year in the film? = no; where is the end? = {nothing}; is the work in the film? = yes; what is in the city? = {nothing}
+the end is in the film. the time is in the city. => end -> {in} -> film; time -> {in} -> city | what is in the film? = end; where is the end? = film; where is the time? = city; what is in the city? = time; is the end in the city? = no; is the time in the film? = no; where is the work? = {nothing}; is the time in the city? = yes
+# How the world is, not just how sentences are. Every form here was measured against the readers of
+# the time before being written: taxonomy, containment and part-of all read correctly with words no reader
+# has ever seen, because the default row guesses "name" for an unknown word (97% to 100% in every
+# reader). Three forms are deliberately absent. Causal and temporal facts keep nothing ("ice melts
+# because it is warm." builds an empty space), counted facts are mangled ("a week has seven days."
+# becomes "seven in week" and loses the days), and "what does X have?" retrieved nothing when these
+# were first written, so the questions also ask "what is in X?" and "what has Y?".
+# A kind joins another kind, then a thing joins the kind. "the dog" is what makes the second
+# sentence point at the dog already known: with "a dog" the reader mints a second group and rex
+# never reaches animal, though both readings print the same two statements. So a scene asks
+# through a chain only where "the" joins it.
+a dog is an animal. rex is the dog. a cat is an animal. tom is the cat. => dog -> {is} -> animal; rex -> {is} -> dog; cat -> {is} -> animal; tom -> {is} -> cat | is a dog an animal? = yes; is rex an animal? = yes; what is rex? = dog; what is a cat? = animal; is tom an animal? = yes; what is tom? = cat; is rex a cat? = no; is tom a dog? = no; is a cat an animal? = yes
+a cow is an animal. bella is the cow. a duck is an animal. max is the duck. => cow -> {is} -> animal; bella -> {is} -> cow; duck -> {is} -> animal; max -> {is} -> duck | is a cow an animal? = yes; is bella an animal? = yes; what is bella? = cow; is max an animal? = yes; what is max? = duck; is bella a duck? = no; is a duck an animal? = yes; is max a cow? = no
+a sheep is an animal. a bird is an animal. an oak is a tree. a tree is a plant. => sheep -> {is} -> animal; bird -> {is} -> animal; tree -> {is} -> plant; oak -> {is} -> tree | is a sheep an animal? = yes; is a bird an animal? = yes; is an oak a tree? = yes; what is a tree? = plant; what is a sheep? = animal; is a bird a plant? = no; is a tree an animal? = no; what is an oak? = tree
+gold is a metal. iron is a metal. copper is a metal. water is a liquid. => gold -> {is} -> metal; iron -> {is} -> metal; copper -> {is} -> metal; water -> {is} -> liquid | is gold a metal? = yes; what is iron? = metal; what is copper? = metal; is water a liquid? = yes; what is water? = liquid; is water a metal? = no; is iron a liquid? = no; what is gold? = metal
+a lily is a flower. a pine is a tree. a metal is hard. gold is the metal. => lily -> {is} -> flower; pine -> {is} -> tree; gold -> {is} -> metal -> {is} -> hard | what is a lily? = flower; what is a pine? = tree; is gold hard? = yes; what is gold? = metal; is a lily a tree? = no; is a pine a flower? = no; is gold a flower? = no; is a metal hard? = yes
+seed: 90-everyday
+a tulip is a flower. the tulip is yellow. the heart is in the body. => tulip -> {is} -> flower; tulip -> {yellow}; heart -> {in} -> body | is the tulip a flower? = yes; what is yellow? = tulip; where is the heart? = body; what color is the tulip? = yellow; what is in the body? = heart; is the heart yellow? = no; is the tulip in the body? = no; where is the tulip? = {nothing}
+seed:
+# Places, which are containment all the way down, and parts of a thing, which the reader holds as
+# what the thing has.
+paris is in france. france is in europe. a tree has leaves. a hand has fingers. => paris -> {in} -> france -> {in} -> europe; tree -> {has} -> leaves; hand -> {has} -> fingers | where is paris? = france; what is in europe? = france; what has leaves? = tree; what has fingers? = hand; where is france? = europe; what is in france? = paris; what does a tree have? = leaves; what does a hand have? = fingers
+london is in england. england is in europe. a bird has wings. a car has an engine. => london -> {in} -> england -> {in} -> europe; bird -> {has} -> wings; car -> {has} -> engine | where is london? = england; what does a bird have? = wings; what has wings? = bird; what does a car have? = engine; where is england? = europe; what is in england? = london; what is in europe? = england; what has an engine? = car
+pink is a color. the hat is pink. => pink -> {is} -> color; hat -> {pink} | what is pink? = hat; what color is the hat? = pink; is pink a color? = yes
+green is a color. the green mug is on the desk. => green -> {is} -> color; mug -> {green}; mug -> {on} -> desk | what is green? = mug; what color is the mug? = green; what is on the desk? = mug
+silver is a color. the spoon is silver. the sky is grey. => silver -> {is} -> color; spoon -> {silver}; sky -> {grey} | what is silver? = spoon; what color is the spoon? = silver; is silver a color? = yes; what is grey? = sky
+beige is a color. the beige coat is on the chair. => beige -> {is} -> color; coat -> {beige}; coat -> {on} -> chair | what is beige? = coat; what color is the coat? = beige; is beige a color? = yes
+tom had a kite. it flew away. the door is red. violet is a color. the scarf is violet. => door -> {red}; violet -> {is} -> color; scarf -> {violet} | what is red? = door; what color is the scarf? = violet; is violet a color? = yes; what is violet? = scarf
+crimson is a color. maroon is a color. the crimson flag is on the wall. => crimson -> {is} -> color; flag -> {crimson}; flag -> {on} -> wall | what is on the wall? = flag; what is crimson? = flag; what color is the flag? = crimson
+the bag is in the hall. turquoise is a color. the vase is turquoise. ann has a pen. => bag -> {in} -> hall; vase -> {turquoise}; ann -> {has} -> pen | what is turquoise? = vase; where is the bag? = hall; who has the pen? = ann
+gold is a color. the crown is gold. the sea is blue. => gold -> {is} -> color; crown -> {gold}; sea -> {blue} | what is gold? = crown; what color is the crown? = gold; what is blue? = sea; is gold a color? = yes
+orange is a color. the orange scarf is on the hook. => orange -> {is} -> color; scarf -> {orange}; scarf -> {on} -> hook | what is orange? = scarf; what color is the scarf? = orange

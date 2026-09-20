@@ -1,0 +1,13 @@
+# The number between: whole numbers come in order, so the number between two numbers one apart from
+# a middle one is that middle number, the one after the smaller and before the bigger.
+# The turns ask one number each. Each scene tells what two or three people have, two counts one apart
+# from a middle number, then asks the numbers between, each count, a total, how many more, and who has more.
+turn: what number is between 6 and 8? => | 7
+turn: what number comes between 19 and 21? => | 20
+turn: what number is between 100 and 98? => | 99
+turn: which number is between 3 and 5? => | 4
+tom has 6 apples. ann has 8 apples. sam has 20 pens. => tom -> {has} -> apple:quantity(6); {number:value(6)}; ann -> {has} -> apple:quantity(8); {number:value(8)}; sam -> {has} -> pen:quantity(20); {number:value(20)} | what number is between 6 and 8? = 7; what number comes between 19 and 21? = 20; what number is between 100 and 98? = 99; which number is between 3 and 5? = 4; how many apples does tom have? = 6; how many apples does ann have? = 8; how many apples do tom and ann have? = 14; how many more apples does ann have than tom? = 2; how many pens does sam have? = 20; who has more apples? = ann
+kim has 12 cards. joe has 14 cards. lily has 50 stamps. => kim -> {has} -> card:quantity(12); {number:value(12)}; joe -> {has} -> card:quantity(14); {number:value(14)}; lily -> {has} -> stamp:quantity(50); {number:value(50)} | what number is between 12 and 14? = 13; which number is between 49 and 51? = 50; what number comes between 13 and 15? = 14; how many cards does kim have? = 12; how many cards do kim and joe have? = 26; how many more cards does joe have than kim? = 2; how many stamps does lily have? = 50; who has fewer cards? = kim; what number is between 14 and 12? = 13
+test: turn: what number is between 41 and 43? => | 42
+test: turn: what number comes between 9 and 11? => | 10
+test: zoe has 41 shells. ben has 43 shells. => zoe -> {has} -> shell:quantity(41); {number:value(41)}; ben -> {has} -> shell:quantity(43); {number:value(43)} | what number is between 41 and 43? = 42; what number comes between 9 and 11? = 10; how many shells do zoe and ben have? = 84; how many more shells does ben have than zoe? = 2; who has more shells? = ben; what number is between 43 and 41? = 42; how many shells does zoe have? = 41; which number is between 8 and 10? = 9

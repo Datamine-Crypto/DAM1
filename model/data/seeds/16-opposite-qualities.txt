@@ -1,0 +1,5 @@
+# The statements of data/facts/16-opposite-qualities.txt the cursor tree holds, one path each, written by build-seeds.mjs.
+absent {opposite} present
+dead {opposite} alive
+open {opposite} closed
+full {opposite} empty

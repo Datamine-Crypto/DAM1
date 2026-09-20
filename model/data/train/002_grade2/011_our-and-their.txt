@@ -1,0 +1,12 @@
+# Our and their: the owner marked by reference, as his, her and my are, for we and for a pair.
+# Each line is a scene: two owned things, each with a color, then many questions (the color of our
+# or their thing, what has a color, who has it, what we have, and yes and no).
+seed: 90-everyday
+seed: 18-qualities
+we have a cat. our cat is white. we have a car. our car is red. => we -> {has} -> cat -> {white}; we -> {has} -> car -> {red} | what color is our cat? = white; what color is our car? = red; what color is the cat? = white; what is white? = cat; what is red? = car; is our car red? = yes; is our cat red? = no; do we have a cat? = yes; do we have a dog? = no; what do we have? = car, cat
+we have a bag. our bag is brown. tom and ann have a dog. their dog is brown. => we -> {has} -> bag -> {brown}; tom -> {has} -> dog; ann -> {has} -> dog; dog -> {brown} | what color is our bag? = brown; what color is their dog? = brown; what is brown? = bag, dog; who has the dog? = ann, tom; whose dog is brown? = ann, tom; does tom have a dog? = yes; does ann have a dog? = yes; do we have a dog? = no; do we have a bag? = yes; what does tom have? = dog
+turn: we have a bike our bike is blue we have a hat our hat is red what color is our bike => we -> {has} -> bike -> {blue}; we -> {has} -> hat -> {red} | blue
+turn: we have a house our house is red we have a cat our cat is white what color is our house => we -> {has} -> house -> {red}; we -> {has} -> cat -> {white} | red
+turn: we have a kite our kite is yellow we have a car our car is green what color is our kite => we -> {has} -> kite -> {yellow}; we -> {has} -> car -> {green} | yellow
+test: we have a dog. our dog is black. sam and lily have a kite. their kite is green. => we -> {has} -> dog -> {black}; sam -> {has} -> kite; lily -> {has} -> kite; kite -> {green} | what color is our dog? = black; what color is their kite? = green; what is black? = dog; who has the kite? = lily, sam; whose kite is green? = lily, sam; does sam have a kite? = yes; do we have a dog? = yes; do we have a kite? = no
+test: turn: we have a boat our boat is green we have a cup our cup is pink what color is our boat => we -> {has} -> boat -> {green}; we -> {has} -> cup -> {pink} | green

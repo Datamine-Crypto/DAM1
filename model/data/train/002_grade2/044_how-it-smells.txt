@@ -1,0 +1,10 @@
+# A quality after a verb with no article says what the verb tells, and so does not end the clause:
+# the bathroom smells bad, and how it smells is that quality. Held out lines use things and qualities
+# the learned lines never use.
+my bathroom smells so bad. => user -> bathroom -> {smell} -> bad | how does the bathroom smell? = bad
+the soup tastes good. => soup -> {taste} -> good | how does the soup taste? = good
+the bread smells fresh. => bread -> {smell} -> fresh | how does the bread smell? = fresh
+the music sounds loud. => music -> {sound} -> loud | how does the music sound? = loud
+the cloth feels soft. => cloth -> {feel} -> soft | how does the cloth feel? = soft
+test: the milk smells sour. => milk -> {smell} -> sour | how does the milk smell? = sour
+test: the floor feels rough. => floor -> {feel} -> rough | how does the floor feel? = rough

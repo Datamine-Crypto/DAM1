@@ -1,0 +1,14 @@
+# Years: a birth year is a fact of a person and the year is a fact of the world, so an age is the year less
+# the birth year, a year of birth is the year less the age, and a future age adds the years to come.
+seed: 21-verb-forms
+tom was born in 2010. it is 2020. => tom -> {born} -> 2010; year -> {is} -> 2020; {number:value(2010)}; {number:value(2020)} | how old is tom? = 10; when was tom born? = 2010; what year is it? = 2020
+ann was born in 2005. it is 2020. => ann -> {born} -> 2005; year -> {is} -> 2020; {number:value(2005)}; {number:value(2020)} | how old is ann? = 15; how old will ann be in 5 years? = 20; when was ann born? = 2005
+sam is 12 years old. it is 2024. => sam -> {old} -> year:quantity(12); year -> {is} -> 2024; {number:value(12)}; {number:value(2024)} | when was sam born? = 2012; how old will sam be in 3 years? = 15; how old was sam 2 years ago? = 10
+kim was born in 1990. it is 2024. => kim -> {born} -> 1990; year -> {is} -> 2024; {number:value(1990)}; {number:value(2024)} | how old is kim? = 34; how old was kim in 2000? = 10
+ben was born in 2015. it is 2023. => ben -> {born} -> 2015; year -> {is} -> 2023; {number:value(2015)}; {number:value(2023)} | how old is ben? = 8; how old will ben be in 2 years? = 10; when was ben born? = 2015
+eve is 30 years old. it is 2022. => eve -> {old} -> year:quantity(30); year -> {is} -> 2022; {number:value(30)}; {number:value(2022)} | when was eve born? = 1992; how old will eve be in 10 years? = 40; how old was eve 5 years ago? = 25
+joe was born in 1980. it is 2020. => joe -> {born} -> 1980; year -> {is} -> 2020; {number:value(1980)}; {number:value(2020)} | how old is joe? = 40; how old was joe in 2000? = 20; what year is it? = 2020
+mia is 7 years old. it is 2025. => mia -> {old} -> year:quantity(7); year -> {is} -> 2025; {number:value(7)}; {number:value(2025)} | when was mia born? = 2018; how old will mia be in 3 years? = 10
+test: lily was born in 2008. it is 2020. => lily -> {born} -> 2008; year -> {is} -> 2020; {number:value(2008)}; {number:value(2020)} | how old is lily? = 12; how old will lily be in 4 years? = 16
+test: max is 9 years old. it is 2021. => max -> {old} -> year:quantity(9); year -> {is} -> 2021; {number:value(9)}; {number:value(2021)} | when was max born? = 2012; how old will max be in 6 years? = 15
+test: zoe was born in 2000. it is 2023. => zoe -> {born} -> 2000; year -> {is} -> 2023; {number:value(2000)}; {number:value(2023)} | how old is zoe? = 23; how old was zoe in 2010? = 10

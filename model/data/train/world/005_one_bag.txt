@@ -1,0 +1,4 @@
+# one bag named twice: the second corn and the bag find the bag already in the world.
+corn in bag. carrot in bag. bag is red. => bag -> corn; bag -> carrot; bag -> {is} -> {color} -> red
+dax in vop. wug in vop. vop is green. => vop -> dax; vop -> wug; vop -> {is} -> {color} -> green
+test: zorp in flib. grunk in flib. flib is blue. => flib -> zorp; flib -> grunk; flib -> {is} -> {color} -> blue

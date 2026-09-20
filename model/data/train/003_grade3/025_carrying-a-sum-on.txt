@@ -1,0 +1,19 @@
+# Carrying a sum on: a chat asks a sum, then types a sign and a number alone, which works on the answer
+# just said, as a person keeps a calculation going. Each chain starts with a sum as a turn and goes on
+# with then turns of one sign and one number, so the network learns that a bare sign continues from the
+# last number it answered.
+turn: what is 84 * 55? => | 4620
+then: turn: / 2? => | 2310
+then: turn: + 10? => | 2320
+turn: what is 12 + 8? => | 20
+then: turn: * 3? => | 60
+then: turn: - 15? => | 45
+turn: what is 100 - 40? => | 60
+then: turn: / 4? => | 15
+then: turn: * 2? => | 30
+turn: what is 7 * 6? => | 42
+then: turn: + 8? => | 50
+then: turn: / 5? => | 10
+test: turn: what is 9 * 9? => | 81
+test: then: turn: - 1? => | 80
+test: then: turn: / 8? => | 10

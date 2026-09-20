@@ -1,0 +1,16 @@
+# A holder said to hold two things holds both: the and after the first takes the holder up again.
+# Held out lines use holders and things the learned lines never use.
+the garage holds a bike and a car. => garage -> car | what is in the garage? = bike, car
+the box contains a pen and a key. => box -> key | what is in the box? = pen, key
+the bag holds a book and a cup. => bag -> cup | what is in the bag? = book, cup
+the drawer contains a spoon and a fork. => drawer -> fork | what is in the drawer? = spoon, fork
+the shed holds a rake and a spade. => shed -> spade | what is in the shed? = rake, spade
+test: the basket holds an apple and a pear. => basket -> pear | what is in the basket? = apple, pear
+test: the case contains a ring and a coin. => case -> coin | what is in the case? = ring, coin
+the tin contains a nut and a bolt. => tin -> bolt | what is in the tin? = nut, bolt
+the pot holds a plant and a stone. => pot -> stone | what is in the pot? = plant, stone
+the jar contains a bead and a pin. => jar -> pin | what is in the jar? = bead, pin
+the crate contains a lamp and a rug. => crate -> rug | what is in the crate? = lamp, rug
+the chest contains a map and a key. => chest -> key | what is in the chest? = map, key
+the tank contains a fish and a plant. => tank -> plant | what is in the tank? = fish, plant
+the purse contains a card and a note. => purse -> note | what is in the purse? = card, note

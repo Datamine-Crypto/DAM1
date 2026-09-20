@@ -1,0 +1,21 @@
+# An order to label a thing says what it is: label grandma as a cool person reads as grandma is a
+# cool person. A trait, evil, brave or shy, is a quality of its own kind. Held out lines use names
+# and traits the learned lines never use.
+label grandma as a cool person. => grandma -> {is} -> person | who is a person? = grandma
+label the car as fast. => car -> {is} -> fast | is the car fast? = yes
+label tom as a hero. => tom -> {is} -> hero | what is tom? = hero
+grandma is 99 years old. label grandma as old. => grandma -> {is} -> old | is grandma old? = yes
+label the box as heavy. => box -> {is} -> heavy | is the box heavy? = yes
+label anna as a doctor. => anna -> {is} -> doctor | what is anna? = doctor
+the wolf is evil. => wolf -> {is} -> {trait} -> evil | is the wolf evil? = yes
+anna is brave and clever. => anna -> {is} -> {trait} -> clever | who is brave? = anna
+john is evil. => john -> {is} -> {trait} -> evil | who is evil? = john
+the fox is shy. the owl is wise. => owl -> {is} -> {trait} -> wise | who is shy? = fox
+label ben as lazy. => ben -> {is} -> {trait} -> lazy | is ben lazy? = yes
+test: label the dog as friendly. => dog -> {is} -> {trait} -> friendly | is the dog friendly? = yes
+test: label mia as a pilot. => mia -> {is} -> pilot | what is mia? = pilot
+test: the king is cruel. => king -> {is} -> {trait} -> cruel | who is cruel? = king
+test: leo is polite and funny. => leo -> {is} -> {trait} -> funny | is leo polite? = yes
+the streets are dangerous. => streets -> {is} -> {trait} -> dangerous | are the streets dangerous? = yes
+the road is safe. => road -> {is} -> {trait} -> safe | is the road safe? = yes
+test: the shop is busy. => shop -> {is} -> {trait} -> busy | is the shop busy? = yes

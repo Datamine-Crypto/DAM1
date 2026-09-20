@@ -1,0 +1,4 @@
+# corn in bag: corn appears, in grabs it, bag appears and he drops the corn into it.
+corn in bag. => bag -> corn
+dax in vop. => vop -> dax
+test: flib in mork. => mork -> flib

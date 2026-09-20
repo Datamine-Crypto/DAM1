@@ -1,0 +1,329 @@
+# Rivers, mountains, seas, lakes, deserts, islands and volcanoes: what each one is and where it is.
+the volga is a river.
+the volga is in russia.
+the volga is the longest river of europe.
+the yangtze is a river.
+the yangtze is in china.
+the yangtze is the longest river of asia.
+the mississippi is a river.
+the mississippi is in usa.
+the mississippi is the longest river of usa.
+the missouri is a river.
+the missouri is in usa.
+the colorado is a river.
+the colorado is in usa.
+the hudson is a river.
+the hudson is in usa.
+the rhine is a river.
+the rhine is in germany.
+the rhone is a river.
+the rhone is in france.
+the loire is a river.
+the loire is in france.
+the loire is the longest river of france.
+the elbe is a river.
+the elbe is in germany.
+the po is a river.
+the po is in italy.
+the po is the longest river of italy.
+the tiber is a river.
+the tiber is in rome.
+the tagus is a river.
+the tagus is in portugal.
+the ebro is a river.
+the ebro is in spain.
+the vistula is a river.
+the vistula is in poland.
+the dnieper is a river.
+the dnieper is in ukraine.
+the don is a river.
+the don is in russia.
+the severn is a river.
+the severn is in britain.
+the severn is the longest river of britain.
+the shannon is a river.
+the shannon is in ireland.
+the indus is a river.
+the indus is in pakistan.
+the brahmaputra is a river.
+the brahmaputra is in asia.
+the mekong is a river.
+the mekong is in asia.
+the euphrates is a river.
+the euphrates is in iraq.
+the tigris is a river.
+the tigris is in iraq.
+the zambezi is a river.
+the zambezi is in africa.
+the limpopo is a river.
+the limpopo is in africa.
+the murray is a river.
+the murray is in australia.
+the murray is the longest river of australia.
+the mackenzie is a river.
+the mackenzie is in canada.
+the yukon is a river.
+the yukon is in canada.
+the parana is a river.
+the parana is in argentina.
+the orinoco is a river.
+the orinoco is in venezuela.
+the lena is a river.
+the lena is in russia.
+the yenisei is a river.
+the yenisei is in russia.
+the amur is a river.
+the amur is in asia.
+the irrawaddy is a river.
+the irrawaddy is in myanmar.
+the nile is the longest river of africa.
+the amazon is the longest river of america.
+a river has banks.
+a river has a mouth.
+k2 is a mountain.
+k2 is in pakistan.
+kangchenjunga is a mountain.
+kangchenjunga is in nepal.
+lhotse is a mountain.
+lhotse is in nepal.
+makalu is a mountain.
+makalu is in nepal.
+annapurna is a mountain.
+annapurna is in nepal.
+everest is in nepal.
+everest is the tallest mountain of asia.
+denali is a mountain.
+denali is in alaska.
+denali is the tallest mountain of usa.
+aconcagua is a mountain.
+aconcagua is in argentina.
+aconcagua is the tallest mountain of america.
+elbrus is a mountain.
+elbrus is in russia.
+elbrus is the tallest mountain of europe.
+kilimanjaro is in tanzania.
+kilimanjaro is the tallest mountain of africa.
+kosciuszko is a mountain.
+kosciuszko is in australia.
+kosciuszko is the tallest mountain of australia.
+vinson is a mountain.
+vinson is in antarctica.
+vinson is the tallest mountain of antarctica.
+fuji is the tallest mountain of japan.
+the matterhorn is a mountain.
+the matterhorn is in the alps.
+olympus is a mountain.
+olympus is in greece.
+ararat is a mountain.
+ararat is in turkey.
+sinai is a mountain.
+sinai is in egypt.
+snowdon is a mountain.
+snowdon is in wales.
+whitney is a mountain.
+whitney is in california.
+logan is a mountain.
+logan is in canada.
+damavand is a mountain.
+damavand is in iran.
+toubkal is a mountain.
+toubkal is in morocco.
+chimborazo is a mountain.
+chimborazo is in ecuador.
+huascaran is a mountain.
+huascaran is in peru.
+a mountain has a peak.
+a range has mountains.
+the alps are a range.
+the andes are a range.
+the andes are the longest range.
+the himalayas are a range.
+the himalayas are the tallest range.
+the rockies are a range.
+the rockies are in america.
+the pyrenees are a range.
+the pyrenees are in europe.
+the urals are a range.
+the urals are in russia.
+the carpathians are a range.
+the carpathians are in europe.
+the appalachians are a range.
+the appalachians are in usa.
+the caucasus is a range.
+the caucasus is in asia.
+the dolomites are a range.
+the dolomites are in italy.
+the apennines are a range.
+the apennines are in italy.
+the cascades are a range.
+the cascades are in usa.
+the zagros are a range.
+the zagros are in iran.
+the ghats are a range.
+the ghats are in india.
+the atlas is a range.
+the atlas is in morocco.
+the drakensberg is a range.
+the drakensberg is in africa.
+the arctic is the smallest ocean.
+the pacific is the deepest ocean.
+the mediterranean is in europe.
+the baltic is in europe.
+the caribbean is a sea.
+the caribbean is in america.
+the adriatic is a sea.
+the adriatic is in europe.
+the aegean is a sea.
+the aegean is in europe.
+the ionian is a sea.
+the ionian is in europe.
+hormuz is a strait.
+hormuz is in asia.
+malacca is a strait.
+malacca is in asia.
+the caspian is a lake.
+the caspian is in asia.
+the caspian is the largest lake.
+baikal is a lake.
+baikal is in russia.
+baikal is the deepest lake.
+superior is a lake.
+superior is in usa.
+superior is the largest lake of america.
+huron is a lake.
+huron is in canada.
+erie is a lake.
+erie is in usa.
+michigan is a lake.
+michigan is in usa.
+titicaca is a lake.
+titicaca is in peru.
+tanganyika is a lake.
+tanganyika is in africa.
+ladoga is a lake.
+ladoga is in russia.
+ladoga is the largest lake of europe.
+balaton is a lake.
+balaton is in hungary.
+a lake has a shore.
+the kalahari is a desert.
+the kalahari is in africa.
+the atacama is a desert.
+the atacama is in chile.
+the atacama is the driest desert.
+the namib is a desert.
+the namib is in namibia.
+the mojave is a desert.
+the mojave is in usa.
+the thar is a desert.
+the thar is in india.
+the karakum is a desert.
+the karakum is in turkmenistan.
+the taklamakan is a desert.
+the taklamakan is in china.
+the negev is a desert.
+the negev is in israel.
+a desert has sand.
+antarctica is the coldest continent.
+antarctica is the driest continent.
+madagascar is the largest island of africa.
+borneo is an island.
+borneo is in asia.
+borneo is the largest island of asia.
+sumatra is an island.
+sumatra is in indonesia.
+java is an island.
+java is in indonesia.
+bali is an island.
+bali is in indonesia.
+sulawesi is an island.
+sulawesi is in indonesia.
+honshu is an island.
+honshu is in japan.
+honshu is the largest island of japan.
+hokkaido is an island.
+hokkaido is in japan.
+okinawa is an island.
+okinawa is in japan.
+luzon is an island.
+luzon is in philippines.
+tasmania is an island.
+tasmania is in australia.
+sardinia is an island.
+sardinia is in italy.
+corsica is an island.
+corsica is in france.
+crete is an island.
+crete is in greece.
+mallorca is an island.
+mallorca is in spain.
+tenerife is an island.
+tenerife is in spain.
+zanzibar is an island.
+zanzibar is in tanzania.
+baffin is an island.
+baffin is in canada.
+newfoundland is an island.
+newfoundland is in canada.
+hawaii is an island.
+tahiti is an island.
+tahiti is in the pacific.
+bermuda is an island.
+bermuda is in the atlantic.
+hispaniola is an island.
+hispaniola is in the caribbean.
+britain is the largest island of europe.
+a volcano is a mountain.
+a volcano has a crater.
+vesuvius is a volcano.
+vesuvius is in italy.
+etna is a volcano.
+etna is in sicily.
+etna is the tallest volcano of europe.
+stromboli is a volcano.
+stromboli is in italy.
+krakatoa is in indonesia.
+pinatubo is a volcano.
+pinatubo is in philippines.
+popocatepetl is a volcano.
+popocatepetl is in mexico.
+kilauea is a volcano.
+kilauea is in hawaii.
+cotopaxi is a volcano.
+cotopaxi is in ecuador.
+hekla is a volcano.
+hekla is in iceland.
+teide is a volcano.
+teide is in tenerife.
+rainier is a volcano.
+rainier is in usa.
+erebus is a volcano.
+erebus is in antarctica.
+fuji is a volcano.
+kilimanjaro is a volcano.
+niagara is a waterfall.
+niagara is in america.
+iguazu is a waterfall.
+iguazu is in brazil.
+the nile is longer than the amazon.
+the amazon is longer than the yangtze.
+the yangtze is longer than the mississippi.
+the mississippi is longer than the volga.
+the volga is longer than the danube.
+the danube is longer than the rhine.
+the rhine is longer than the thames.
+everest is higher than k2.
+k2 is higher than kilimanjaro.
+kilimanjaro is higher than elbrus.
+elbrus is higher than fuji.
+the atlantic is bigger than the arctic.
+the pacific is deeper than the atlantic.
+the caspian is bigger than superior.
+baikal is deeper than superior.
+asia is bigger than africa.
+america is bigger than africa.
+africa is bigger than europe.
+antarctica is bigger than europe.
+the sahara is bigger than the gobi.
+greenland is bigger than borneo.
+borneo is bigger than madagascar.

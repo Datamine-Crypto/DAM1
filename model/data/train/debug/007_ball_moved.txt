@@ -1,0 +1,4 @@
+# the ball is in the box, then in the bag: a thing stands in one place, the newest, and the place it left
+# keeps it with the time past.
+the ball is in the box. the ball is in the bag. => ball -> {in} -> bag; ball -> {in} -> box -> {time} -> {past} | where is the ball? = bag; where was the ball? = box
+test: the zorp is in the flib. the zorp is in the mork. => zorp -> {in} -> mork; zorp -> {in} -> flib -> {time} -> {past} | where is the zorp? = mork; where was the zorp? = flib

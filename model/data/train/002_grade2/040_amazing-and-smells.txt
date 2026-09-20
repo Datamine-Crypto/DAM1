@@ -1,0 +1,16 @@
+# A trait that ends like a verb's form, amazing, boring or exciting, is a quality and no deed. A verb
+# with of after it, smelled of flowers, holds what comes after of. Held out lines use words the
+# learned lines never use.
+you are amazing. => you -> {is} -> {trait} -> amazing | are you amazing? = yes
+john is a friend. friends are amazing. => friends -> {is} -> {trait} -> amazing | are friends amazing? = yes
+the movie is boring. => movie -> {is} -> {trait} -> boring | is the movie boring? = yes
+tom had a red car. his car smelled of flowers. => tom -> car -> {smell} -> flowers | what did the car smell of? = flowers
+the book is interesting. => book -> {is} -> {trait} -> interesting | is the book interesting? = yes
+anna is caring and lovely. => anna -> {is} -> {trait} -> lovely | who is caring? = anna
+the game was exciting. => game -> {is} -> {trait} -> exciting | was the game exciting? = yes
+the kitchen smelled of bread. => kitchen -> {smell} -> bread -> {time} -> {past} | what did the kitchen smell of? = bread
+the soup tasted of salt. => soup -> {taste} -> salt -> {time} -> {past} | what did the soup taste of? = salt
+test: the trip was wonderful. => trip -> {is} -> {trait} -> wonderful | was the trip wonderful? = yes
+test: the noise is annoying. => noise -> {is} -> {trait} -> annoying | is the noise annoying? = yes
+test: the room smelled of roses. => room -> {smell} -> roses -> {time} -> {past} | what did the room smell of? = roses
+test: mia is charming. => mia -> {is} -> {trait} -> charming | who is charming? = mia

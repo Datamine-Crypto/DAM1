@@ -1,0 +1,17 @@
+# Negative numbers: a minus with nothing before it takes from nothing, so - 5 is a number below
+# nothing, and the signs go on working with it.
+# A math scene gives several values at once (the result, x, y), some of them below nothing, then
+# asks many questions over them: each value, sums, differences, products, a minus before a value and
+# abs. A turn with no statement stays a calculator turn.
+- 5 + 3 = result . 2 * - 3 = x . 2 - - 3 = y . => result = -2; x = -6; y = 5; 5 = 5; 3 = 3; 2 = 2 | what is the result? = -2; what is x? = -6; what is y? = 5; what is x + y? = -1; what is the result * x? = 12; what is y - x? = 11; what is x - y? = -11; what is abs ( x )? = 6; what is the result - y? = -7; what is x / the result? = 3; what is - x? = 6; what is y * - 1? = -5
+( - 2 ) ^ 2 = result . 3 - 10 = x . - 4 + 1 = y . => result = 4; x = -7; y = -3; 2 = 2; 3 = 3; 10 = 10; 4 = 4; 1 = 1 | what is the result? = 4; what is x? = -7; what is y? = -3; what is x + y? = -10; what is x * y? = 21; what is the result + x? = -3; what is y - x? = 4; what is abs ( x )? = 7; what is x * 2? = -14; what is the result * y? = -12; what is y ^ 2? = 9; what is 8 / - 2? = -4
+turn: what is - 4 + 1 {eom} => | -3
+turn: - 7 * 2 = {eom} => | -14
+turn: what is abs ( - 9 ) {eom} => | 9
+turn: what is 3 - 10 {eom} => | -7
+turn: 3 * - 2 = {eom} => | -6
+turn: 4 * - 3 = {eom} => | -12
+turn: 8 / - 2 = {eom} => | -4
+test: - 1 + 1 = result . - 6 / 2 = x . 5 * - 1 = y . => result = 0; x = -3; y = -5; 1 = 1; 6 = 6; 2 = 2; 5 = 5 | what is the result? = 0; what is x? = -3; what is y? = -5; what is x + y? = -8; what is x * y? = 15; what is y - x? = -2; what is abs ( y )? = 5; what is the result - y? = 5; what is x - 4? = -7
+test: turn: what is - 6 / 2 {eom} => | -3
+test: turn: 5 * - 1 = {eom} => | -5

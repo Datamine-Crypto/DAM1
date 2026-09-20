@@ -1,0 +1,16 @@
+# Scaling amounts: an amount that serves some people serves twice as many when it is doubled, so the
+# amount for more people is the amount times the new people over the old. The traced line and the
+# turns stay as single lessons; each scene tells what several people have, then asks many scalings
+# and the counts.
+turn: how many eggs are needed for 8 people at 2 eggs for 4 people? {eom} => | 4
+turn: how many cups are needed for 6 people at 3 cups for 2 people? {eom} => | 9
+turn: how many apples are needed for 10 people at 5 apples for 5 people? {eom} => | 10
+turn: how many eggs are needed for 3 people at 6 eggs for 9 people? {eom} => | 2
+turn: how many eggs are needed for 3 people at 12 eggs for 6 people? {eom} => | 6
+turn: how many cups are needed for 5 people at 20 cups for 10 people? {eom} => | 10
+turn: how many pears are needed for 4 people at 6 pears for 12 people? {eom} => | 2
+tom has 2 eggs. ann has 3 cups. sam has 5 apples. => 2 = 2; tom owns eggs; eggs is 2; 3 = 3; ann owns cups; cups is 3; 5 = 5; sam owns apples; apples is 5 | how many eggs are needed for 8 people at 2 eggs for 4 people? = 4; how many cups are needed for 6 people at 3 cups for 2 people? = 9; how many apples are needed for 10 people at 5 apples for 5 people? = 10; how many eggs are needed for 16 people at 2 eggs for 4 people? = 8; how many cups are needed for 4 people at 3 cups for 2 people? = 6; how many apples are needed for 15 people at 5 apples for 5 people? = 15; how many eggs does tom have? = 2; how many cups does ann have? = 3; how many apples does sam have? = 5; who has the cups? = ann
+kim has 6 eggs. joe has 12 eggs. lily has 20 cups. max has 6 pears. => 6 = 6; kim owns eggs; eggs is 6; 12 = 12; joe owns eggs; eggs is 12; 20 = 20; lily owns cups; cups is 20; max owns pears; pears is 6 | how many eggs are needed for 3 people at 6 eggs for 9 people? = 2; how many eggs are needed for 3 people at 12 eggs for 6 people? = 6; how many cups are needed for 5 people at 20 cups for 10 people? = 10; how many pears are needed for 4 people at 6 pears for 12 people? = 2; how many eggs are needed for 12 people at 6 eggs for 9 people? = 8; how many eggs are needed for 2 people at 12 eggs for 6 people? = 4; how many eggs does joe have? = 12; how many eggs do kim and joe have? = 18; who has more eggs? = joe; who has the pears? = max
+test: zoe has 4 cups. ben has 8 apples. => 4 = 4; zoe owns cups; cups is 4; 8 = 8; ben owns apples; apples is 8 | how many cups are needed for 12 people at 4 cups for 3 people? = 16; how many apples are needed for 2 people at 8 apples for 4 people? = 4; how many cups are needed for 6 people at 4 cups for 3 people? = 8; how many apples are needed for 8 people at 8 apples for 4 people? = 16; how many cups are needed for 9 people at 4 cups for 3 people? = 12; how many cups does zoe have? = 4; how many apples does ben have? = 8; who has the apples? = ben
+test: turn: how many cups are needed for 12 people at 4 cups for 3 people? {eom} => | 16
+test: turn: how many apples are needed for 2 people at 8 apples for 4 people? {eom} => | 4

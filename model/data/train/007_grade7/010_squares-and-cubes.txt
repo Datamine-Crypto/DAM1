@@ -1,0 +1,23 @@
+# Squares and cubes: a number squared is the number times itself and a number cubed is the number
+# times itself and times itself again. The traced lines and the turns stay as single lessons; each
+# scene tells what several people have, then asks many squares and cubes, the counts and totals.
+turn: what is 5 squared? => | 25
+turn: what is 3 cubed? => | 27
+turn: what is the square of 7? => | 49
+turn: what is the cube of 2? => | 8
+tom has 5 apples. ann has 3 apples. sam has 7 apples. => {number:value(5)}; tom -> {has} -> apple:quantity(5); {number:value(3)}; ann -> {has} -> apple:quantity(3); {number:value(7)}; sam -> {has} -> apple:quantity(7) | what is 5 squared? = 25; what is 3 cubed? = 27; what is the square of 7? = 49; what is the cube of 2? = 8; what is 3 squared? = 9; what is the square of 5? = 25; what is 2 cubed? = 8; what is the cube of 3? = 27; how many apples does sam have? = 7; who has the fewest apples? = ann; how many apples do tom and ann have? = 8
+kim has 6 cards. joe has 2 cards. lily has 10 cards. => {number:value(6)}; kim -> {has} -> card:quantity(6); {number:value(2)}; joe -> {has} -> card:quantity(2); {number:value(10)}; lily -> {has} -> card:quantity(10) | what is 6 squared? = 36; what is the cube of 2? = 8; what is 10 squared? = 100; what is the square of 6? = 36; what is 10 cubed? = 1000; what is 5 squared? = 25; what is the square of 7? = 49; how many cards does lily have? = 10; who has the most cards? = lily; how many more cards does lily have than joe? = 8
+test: zoe has 9 stickers. ben has 4 stickers. => {number:value(9)}; zoe -> {has} -> sticker:quantity(9); {number:value(4)}; ben -> {has} -> sticker:quantity(4) | what is 9 squared? = 81; what is the cube of 4? = 64; what is 4 squared? = 16; what is the square of 9? = 81; what is 4 cubed? = 64; what is 8 squared? = 64; how many stickers does zoe have? = 9; who has more stickers? = zoe
+test: turn: what is 9 squared? => | 81
+test: turn: what is the cube of 4? => | 64
+# More squares and cubes asked cold, in both wordings, so the number of times it is multiplied is read from the word.
+turn: what is the cube of 3? => | 27
+turn: what is the cube of 5? => | 125
+turn: what is the square of 6? => | 36
+turn: what is the square of 9? => | 81
+turn: what is 2 cubed? => | 8
+turn: what is 10 cubed? => | 1000
+turn: what is 7 squared? => | 49
+test: turn: what is the cube of 6? => | 216
+test: turn: what is the square of 12? => | 144
+test: turn: what is 5 cubed? => | 125

@@ -1,0 +1,12 @@
+# Amounts left: a count someone has, then some of it eaten, spent, lost or sold, kept as a relation from
+# the one who had it to the number taken, and the question how many are left, which is the count less
+# everything taken, as a person works it out.
+# Each scene tells two people, a man and a woman so he and she each point back at one, then asks what
+# is left, what each had and took away, who has each thing, yes and no, and a person the scene never
+# told. The chat turns stay turns.
+tom has 10 apples. he eats 4. lily has 6 pens. she loses 2. => 10 = 10; 4 = 4; apples is 10; tom eats 4; tom owns apples; 2 = 2; 6 = 6; lily loses 2; lily owns pens; pens is 6 | how many apples does tom have left? = 6; how many pens does lily have left? = 4; how many apples did tom have? = 10; how many pens did lily have? = 6; how many apples did tom eat? = 4; how many pens did lily lose? = 2; who has the apples? = tom; who has the pens? = lily; what does tom have? = apples; does tom have apples? = yes; does lily have apples? = no; how many hats does joe have left? = nothing
+sam has 12 dollars. he spends 5. ann has 8 sweets. she sells 3. => 12 = 12; 5 = 5; dollars is 12; sam owns dollars; sam spends 5; 3 = 3; 8 = 8; ann owns sweets; ann sells 3; sweets is 8 | how many dollars does sam have left? = 7; how many sweets does ann have left? = 5; how many dollars did sam have? = 12; how many sweets did ann have? = 8; how many dollars did sam spend? = 5; how many sweets did ann sell? = 3; who has the dollars? = sam; who has the sweets? = ann; what does ann have? = sweets; does ann have sweets? = yes; does sam have sweets? = no; how many pens does rose have left? = nothing
+turn: tom has 10 apples. he eats 4. how many apples does tom have left? {eom} => | 6
+turn: sam has 12 dollars. he spends 5. how many dollars does sam have left? {eom} => | 7
+test: ben has 9 cookies. he eats 3. zoe has 20 dollars. she spends 8. => 3 = 3; 9 = 9; ben eats 3; ben owns cookies; cookies is 9; 20 = 20; 8 = 8; dollars is 20; zoe owns dollars; zoe spends 8 | how many cookies does ben have left? = 6; how many dollars does zoe have left? = 12; how many cookies did ben have? = 9; how many cookies did ben eat? = 3; how many dollars did zoe spend? = 8; who has the cookies? = ben; what does zoe have? = dollars; does ben have dollars? = no; how many pens does max have left? = nothing
+test: turn: kim has 7 cards. she loses 2. how many cards does kim have left? {eom} => | 5

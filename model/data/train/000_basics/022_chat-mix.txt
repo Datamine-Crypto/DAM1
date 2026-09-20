@@ -1,0 +1,38 @@
+# A chat the way a person types it: world questions, a story, sums, follow-ups, all on one stack.
+seed: 21-verb-forms
+seed: 30-geography
+seed: 80-words
+seed: 11-order
+seed: 12-clock
+seed: 90-everyday
+seed: 18-qualities
+turn: where is japan? => | asia
+then: tom has a car. => tom -> {has} -> car | who has the car? = tom; what does tom have? = car
+then: turn: what is 2 * 5? => | 10
+then: tom gave the car to jane. => jane -> {has} -> car; tom -> {has} -> car -> {time} -> {past} | who has the car? = jane; who gave the car? = tom
+then: turn: what is the capital of japan? => | tokyo
+turn: what is the capital of germany? => | berlin
+then: ann has three apples. => ann -> {has} -> apple:quantity(3); three -> {equal} -> {number:value(3)} | how many apples does ann have? = 3; who has apples? = ann
+then: turn: what is the opposite of cold? => | hot
+then: ann gave an apple to sam. => sam -> {has} -> apple | who has an apple? = sam
+then: turn: is berlin in germany? => | yes
+turn: is a whale a fish? => | no
+then: the cat is in the box. => cat -> {in} -> box | where is the cat? = box; what is in the box? = cat
+then: turn: what is 12 * 12? => | 144
+then: the cat went to the garden. => cat -> {in} -> garden; cat -> {in} -> box -> {time} -> {past}; cat -> {go} -> garden -> {time} -> {past} | where is the cat? = garden; where was the cat? = box
+then: turn: is the cat in the box? => | no
+turn: what day comes after monday? => | tuesday
+then: kim has a red hat. => kim -> {has} -> hat -> {red} | what color is the hat? = red; who has the hat? = kim
+then: turn: what is 100 / 4? => | 25
+then: turn: is the hat blue? => | no
+then: the hat is in the bag. => hat -> {in} -> bag | where is the hat? = bag; who has the hat? = kim
+turn: what is 3 o'clock plus 2 hours? => | 5
+then: ben has two dogs. => ben -> {has} -> dog:quantity(2); two -> {equal} -> {number:value(2)} | how many dogs does ben have? = 2
+then: turn: where is egypt? => | africa
+then: the dogs are in the park. => dog -> {in} -> park | where are the dogs? = park
+then: turn: how many dogs are in the park? => | 2
+test: turn: where is brazil? => | america
+test: then: lily has a pen. => lily -> {has} -> pen | who has the pen? = lily
+test: then: turn: what is 7 * 8? => | 56
+test: then: lily gave the pen to ben. => ben -> {has} -> pen; lily -> {has} -> pen -> {time} -> {past} | who has the pen? = ben; who gave the pen? = lily
+test: then: turn: what is the capital of brazil? => | brasilia

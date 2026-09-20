@@ -1,0 +1,3 @@
+# what color is corn: find the corn, get its property of the kind color.
+corn is red. => corn -> {is} -> {color} -> red | what color is corn? = red
+test: flib is blue. => flib -> {is} -> {color} -> blue | what color is flib? = blue

@@ -1,0 +1,15 @@
+# A count of a counted group, three of the cars or two of them, is a smaller group of the same name
+# inside the group, and what is said next is told of the smaller group: five cars hold three red
+# cars and stay five. Held out lines use things and counts the learned lines never use.
+5 cars are in the lot. 3 of the cars are red. => lot -> car -> car -> {is} -> {color} -> red | how many cars are red? = 3
+5 cars are in the lot. 3 of the cars are red. => lot -> car -> car -> {is} -> {color} -> red | how many cars are in the lot? = 5
+tom has five apples. two of the apples are green. => tom -> apple -> apple -> {is} -> {color} -> green | how many apples does tom have? = 5
+tom has five apples. two of the apples are green. => tom -> apple -> apple -> {is} -> {color} -> green | how many apples are green? = 2
+6 cars are in the lot. two of them are red. => lot -> car -> car -> {is} -> {color} -> red | how many cars are red? = 2
+anna has eight balloons. three of them are blue. => anna -> balloon -> balloon -> {is} -> {color} -> blue | how many balloons are blue? = 3
+anna has eight balloons. three of them are blue. => anna -> balloon -> balloon -> {is} -> {color} -> blue | how many balloons does anna have? = 8
+ten birds are in the tree. four of the birds are small. => tree -> bird -> bird -> {is} -> {size} -> small | how many birds are small? = 4
+seven cups are on the table. two of them are big. => table -> cup -> cup -> {is} -> {size} -> big | how many cups are on the table? = 7
+test: 9 boats are in the harbor. 4 of the boats are white. => harbor -> boat -> boat -> {is} -> {color} -> white | how many boats are white? = 4
+test: ben has six marbles. two of them are yellow. => ben -> marble -> marble -> {is} -> {color} -> yellow | how many marbles does ben have? = 6
+test: twelve eggs are in the basket. five of them are brown. => basket -> egg -> egg -> {is} -> {color} -> brown | how many eggs are brown? = 5

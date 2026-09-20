@@ -1,0 +1,173 @@
+# Geography: capitals, continents, oceans, rivers, mountains, languages and money.
+paris is the capital of france.
+london is the capital of england.
+rome is the capital of italy.
+berlin is the capital of germany.
+madrid is the capital of spain.
+lisbon is the capital of portugal.
+athens is the capital of greece.
+vienna is the capital of austria.
+bern is the capital of switzerland.
+brussels is the capital of belgium.
+amsterdam is the capital of holland.
+copenhagen is the capital of denmark.
+oslo is the capital of norway.
+stockholm is the capital of sweden.
+helsinki is the capital of finland.
+dublin is the capital of ireland.
+warsaw is the capital of poland.
+prague is the capital of czechia.
+budapest is the capital of hungary.
+moscow is the capital of russia.
+kyiv is the capital of ukraine.
+ankara is the capital of turkey.
+cairo is the capital of egypt.
+nairobi is the capital of kenya.
+pretoria is the capital of southafrica.
+lagos is in nigeria.
+abuja is the capital of nigeria.
+tokyo is the capital of japan.
+beijing is the capital of china.
+seoul is the capital of korea.
+delhi is the capital of india.
+islamabad is the capital of pakistan.
+bangkok is the capital of thailand.
+hanoi is the capital of vietnam.
+jakarta is the capital of indonesia.
+manila is the capital of philippines.
+canberra is the capital of australia.
+wellington is the capital of newzealand.
+ottawa is the capital of canada.
+washington is the capital of america.
+havana is the capital of cuba.
+brasilia is the capital of brazil.
+buenosaires is the capital of argentina.
+santiago is the capital of chile.
+lima is the capital of peru.
+bogota is the capital of colombia.
+tehran is the capital of iran.
+baghdad is the capital of iraq.
+riyadh is the capital of saudiarabia.
+jerusalem is the capital of israel.
+france is in europe.
+england is in europe.
+italy is in europe.
+germany is in europe.
+spain is in europe.
+portugal is in europe.
+greece is in europe.
+poland is in europe.
+sweden is in europe.
+norway is in europe.
+russia is in europe.
+egypt is in africa.
+kenya is in africa.
+nigeria is in africa.
+morocco is in africa.
+ethiopia is in africa.
+japan is in asia.
+china is in asia.
+india is in asia.
+korea is in asia.
+thailand is in asia.
+vietnam is in asia.
+iran is in asia.
+iraq is in asia.
+canada is in america.
+mexico is in america.
+brazil is in america.
+argentina is in america.
+chile is in america.
+peru is in america.
+colombia is in america.
+cuba is in america.
+europe is a continent.
+asia is a continent.
+africa is a continent.
+america is a continent.
+australia is a continent.
+antarctica is a continent.
+asia is the largest continent.
+australia is the smallest continent.
+antarctica is cold.
+africa is hot.
+the pacific is an ocean.
+the atlantic is an ocean.
+the arctic is an ocean.
+the pacific is the largest ocean.
+the pacific is bigger than the atlantic.
+the mediterranean is a sea.
+the baltic is a sea.
+the nile is a river.
+the nile is in egypt.
+the nile is the longest river.
+the amazon is a river.
+the amazon is in brazil.
+the amazon is the biggest river.
+the thames is a river.
+the thames is in london.
+the seine is a river.
+the seine is in paris.
+the danube is a river.
+the danube is in europe.
+the ganges is a river.
+the ganges is in india.
+everest is a mountain.
+everest is in asia.
+everest is the tallest mountain.
+kilimanjaro is a mountain.
+kilimanjaro is in africa.
+fuji is a mountain.
+fuji is in japan.
+the alps are in europe.
+the andes are in america.
+the himalayas are in asia.
+the sahara is a desert.
+the sahara is in africa.
+the sahara is the largest desert.
+the gobi is a desert.
+the gobi is in asia.
+a desert is dry.
+a desert is hot.
+greenland is an island.
+greenland is the largest island.
+iceland is an island.
+cuba is an island.
+japan is an island.
+sicily is an island.
+sicily is in italy.
+french is the language of france.
+english is the language of england.
+english is the language of america.
+spanish is the language of spain.
+spanish is the language of mexico.
+german is the language of germany.
+italian is the language of italy.
+portuguese is the language of portugal.
+portuguese is the language of brazil.
+chinese is the language of china.
+japanese is the language of japan.
+russian is the language of russia.
+arabic is the language of egypt.
+hindi is the language of india.
+the euro is the currency of france.
+the euro is the currency of germany.
+the euro is the currency of italy.
+the pound is the currency of england.
+the dollar is the currency of america.
+the dollar is the currency of canada.
+the yen is the currency of japan.
+the yuan is the currency of china.
+the rupee is the currency of india.
+the ruble is the currency of russia.
+the peso is the currency of mexico.
+the real is the currency of brazil.
+china has the most people.
+india has many people.
+russia is the largest country.
+china is bigger than japan.
+russia is bigger than china.
+brazil is bigger than argentina.
+the north pole is cold.
+the south pole is cold.
+the equator is hot.

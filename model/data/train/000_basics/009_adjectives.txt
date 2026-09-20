@@ -1,0 +1,18 @@
+# A quality said before the thing: has a red kite, a big dog is in the yard. The thing gets both
+# facts, its owner or place and its quality.
+seed: 90-everyday
+seed: 18-qualities
+ben has a red kite. => ben -> {has} -> kite -> {red} | what color is the kite? = red; who has the kite? = ben; what does ben have? = kite
+sam has a big dog. => sam -> {has} -> dog -> {big} | what size is the dog? = big; who has the dog? = sam
+ann has a blue bike. the bike is in the shed. => ann -> {has} -> bike -> {in} -> shed; ann -> {has} -> bike -> {blue} | what color is the bike? = blue; where is the bike? = shed; who has the bike? = ann
+a big dog is in the yard. => dog -> {big}; dog -> {in} -> yard | where is the dog? = yard; what is big? = dog
+the small cat is on the mat. => cat -> {small}; cat -> {on} -> mat | where is the cat? = mat; what is small? = cat
+tom has a green hat. ann has a red car. => tom -> {has} -> hat -> {green}; ann -> {has} -> car -> {red} | who has the car? = ann; what color is the hat? = green; what does tom have? = hat
+the red ball is in the box. => ball -> {red}; ball -> {in} -> box | what is in the box? = ball; what color is the ball? = red
+lily has an old book. => lily -> {has} -> book -> {old} | who has the book? = lily; what does lily have? = book
+the tall man has a black dog. => man -> {tall}; man -> {has} -> dog -> {black} | who has the dog? = man; what color is the dog? = black
+kim has a little bird. it is yellow. => kim -> {has} -> bird -> {is} -> little; kim -> {has} -> bird -> {yellow} | what is yellow? = bird; who has the bird? = kim
+test: max has a white cat. => max -> {has} -> cat -> {white} | what color is the cat? = white; who has the cat? = max
+test: a brown horse is in the field. => horse -> {brown}; horse -> {in} -> field | where is the horse? = field; what is brown? = horse
+test: sue has a pink cup. the cup is on the desk. => sue -> {has} -> cup -> {on} -> desk; sue -> {has} -> cup -> {pink} | where is the cup? = desk; what color is the cup? = pink
+test: the orange is orange. => orange -> {orange} | what color is the orange? = orange; is the orange orange? = yes

@@ -1,0 +1,18 @@
+# Two nouns in a row after an article name one thing by the last noun: the car garage is a garage,
+# the tool box is a box, and the first noun is kept under of. Held out lines use pairs the learned
+# lines never use.
+john went to the car garage. => garage -> john; garage -> {of} -> car | where is john? = garage
+the key is in the tool box. => box -> key; box -> {of} -> tool | where is the key? = box
+anna sat on the park bench. => bench -> anna; bench -> {of} -> park | where is anna? = bench
+tom has a toy car. => tom -> car -> {of} -> toy | what does tom have? = car
+the cat is in the garden shed. => shed -> cat; shed -> {of} -> garden | where is the cat? = shed
+mia went to the bus station. => station -> mia; station -> {of} -> bus | where is mia? = station
+the milk is in the kitchen cupboard. => cupboard -> milk | where is the milk? = cupboard
+ben has a school bag. => ben -> bag -> {of} -> school | what does ben have? = bag
+the ball is in the toy box. => box -> ball; box -> {of} -> toy | where is the ball? = box
+test: sara went to the train station. => station -> sara; station -> {of} -> train | where is sara? = station
+test: the coin is in the desk drawer. => drawer -> coin; drawer -> {of} -> desk | where is the coin? = drawer
+test: leo has a garden chair. => leo -> chair -> {of} -> garden | what does leo have? = chair
+there was a little car named beep. john went to the car garage. => garage -> john; garage -> {of} -> car | where is john? = garage
+the tool is on the table. the key is in the tool box. => box -> key; box -> {of} -> tool | where is the key? = box
+test: the bus is red. mia went to the bus station. => station -> mia; station -> {of} -> bus | where is mia? = station

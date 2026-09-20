@@ -1,0 +1,277 @@
+# Home and jobs: workers and their places and tools, rooms and furniture, clothes, vehicles, money and the family.
+a doctor is in a hospital.
+a nurse is in a hospital.
+a surgeon is in a hospital.
+a teacher is in a school.
+a professor is in a university.
+a student is in a class.
+a pilot is in a plane.
+a chef is in a kitchen.
+a waiter is in a restaurant.
+a baker is in a bakery.
+a cashier is in a shop.
+a dentist is in a clinic.
+a vet is in a clinic.
+a farmer is on a farm.
+a sailor is on a ship.
+a captain is on a ship.
+a fisherman is on a boat.
+a driver is in a car.
+a mechanic is in a garage.
+a miner is in a mine.
+a scientist is in a lab.
+a librarian is in a library.
+a manager is in an office.
+an actor is in a theater.
+a dancer is on a stage.
+a singer is on a stage.
+a priest is in a church.
+a monk is in a monastery.
+an astronaut is in a rocket.
+a jockey is on a horse.
+a gardener is in a garden.
+a guard is at a gate.
+a banker is in a bank.
+a worker is in a factory.
+a lifeguard is on a beach.
+a referee is on a pitch.
+a chef is a cook.
+a surgeon is a doctor.
+a dentist is a doctor.
+a vet is a doctor.
+a professor is a teacher.
+a manager is a boss.
+a physicist is a scientist.
+an astronomer is a scientist.
+a poet is a writer.
+a novelist is a writer.
+a journalist is a writer.
+a singer is a musician.
+a pianist is a musician.
+an actor is a performer.
+a sculptor is an artist.
+a painter is an artist.
+a carpenter is a builder.
+a soldier is a fighter.
+a librarian helps readers.
+a waiter helps diners.
+a guide helps tourists.
+a coach helps athletes.
+a lawyer helps clients.
+a pharmacist helps patients.
+a lifeguard helps swimmers.
+a tutor helps students.
+a hammer is a tool.
+a saw is a tool.
+a drill is a tool.
+a screwdriver is a tool.
+a wrench is a tool.
+a spade is a tool.
+a shovel is a tool.
+a rake is a tool.
+a hoe is a tool.
+an axe is a tool.
+a chisel is a tool.
+a ladder is a tool.
+a hammer is for nails.
+a saw is for wood.
+a drill is for holes.
+a screwdriver is for screws.
+a wrench is for bolts.
+a spade is for digging.
+an axe is for chopping.
+a needle is for sewing.
+a broom is for sweeping.
+a knife is for cutting.
+a pen is for writing.
+a brush is for painting.
+a kettle is for tea.
+an oven is for baking.
+a fridge is for food.
+a bed is for sleeping.
+a chair is for sitting.
+a wallet is for money.
+a key is for a lock.
+a towel is for drying.
+soap is for washing.
+a toothbrush is for teeth.
+an umbrella is for rain.
+a clock is for time.
+a hammer has a handle.
+a saw has teeth.
+a knife has a blade.
+a nail is made of metal.
+a screw is made of metal.
+a saw is sharp.
+an axe is sharp.
+a needle is sharp.
+a hammer is heavy.
+a chef has a knife.
+a carpenter has a hammer.
+a carpenter has a saw.
+a plumber has a wrench.
+a gardener has a spade.
+a writer has a pen.
+a photographer has a camera.
+a fisherman has a net.
+a barber has scissors.
+a scientist has a microscope.
+a doctor has a stethoscope.
+a nurse has a uniform.
+a policeman has a badge.
+a fireman has a hose.
+a miner has a pick.
+a shepherd has sheep.
+an astronaut has a helmet.
+a waiter has a tray.
+a baker has an oven.
+a teacher has a blackboard.
+a lounge is a room.
+an attic is a room.
+a cellar is a room.
+a basement is a room.
+a shower is in a bathroom.
+a mirror is in a bathroom.
+a towel is in a bathroom.
+an oven is in a kitchen.
+a wardrobe is in a bedroom.
+a pillow is on a bed.
+a blanket is on a bed.
+a sofa is in a lounge.
+a tv is in a lounge.
+a desk is in an office.
+a computer is on a desk.
+a carpet is on a floor.
+a clock is on a wall.
+a chimney is on a roof.
+a cellar is under a house.
+an attic is under a roof.
+a garage has a car.
+a door has a handle.
+a door has a lock.
+a window has glass.
+a wall is made of bricks.
+a roof is made of tiles.
+a floor is made of wood.
+a house has a kitchen.
+a house has a garden.
+a flat is a home.
+a cottage is a house.
+a hut is a house.
+a mansion is a house.
+a tent is a shelter.
+an igloo is made of ice.
+a chair is a seat.
+a sofa is a seat.
+a stool is a seat.
+a bench is a seat.
+a table is furniture.
+a bed is furniture.
+a desk is furniture.
+a sofa is bigger than a chair.
+a bed is bigger than a sofa.
+a hat is a garment.
+a shirt is a garment.
+a coat is a garment.
+a sock is a garment.
+a glove is a garment.
+a scarf is a garment.
+a sweater is a garment.
+a garment is clothing.
+a hat is on a head.
+a shoe is on a foot.
+a sock is on a foot.
+a glove is on a hand.
+a scarf is on a neck.
+a tie is on a neck.
+a belt is on a waist.
+a ring is on a finger.
+a watch is on a wrist.
+a coat is warm.
+a sweater is warm.
+a boot is a shoe.
+a sandal is a shoe.
+a jacket is a coat.
+a shoe is made of leather.
+a boot is made of leather.
+silk is soft.
+wool is warm.
+a button is on a shirt.
+a taxi is a car.
+a lorry is a truck.
+a scooter is a vehicle.
+a motorcycle is a vehicle.
+a motorcycle has 2 wheels.
+a tractor is a vehicle.
+an ambulance is a vehicle.
+a yacht is a boat.
+a tram is on rails.
+a subway is under the ground.
+a helicopter is in the air.
+a submarine is under the sea.
+a ship is on the sea.
+a tractor is on a farm.
+a helicopter has a rotor.
+an ambulance has a siren.
+a bus has a driver.
+a train has carriages.
+a ship has a captain.
+a plane has a pilot.
+a car has brakes.
+a bike has a chain.
+a bike has a saddle.
+a wheel is round.
+a car needs petrol.
+a plane needs a runway.
+a ship is bigger than a boat.
+a truck is bigger than a car.
+a bus is bigger than a car.
+a bike is lighter than a car.
+a train is longer than a bus.
+a helicopter is slower than a plane.
+a dollar has 100 cents.
+a euro has 100 cents.
+a pound has 100 pence.
+a rupee has 100 paise.
+a yen is money.
+a rupee is money.
+a peso is money.
+a yuan is money.
+a rouble is money.
+a cent is a coin.
+a penny is a coin.
+a wallet has money.
+a banknote is made of paper.
+a yen is japanese.
+a rupee is indian.
+a yuan is chinese.
+a peso is mexican.
+a rouble is russian.
+a grandfather is a grandparent.
+a grandmother is a grandparent.
+an uncle is a relative.
+an aunt is a relative.
+a cousin is a relative.
+a nephew is a relative.
+a niece is a relative.
+a husband is a man.
+a wife is a woman.
+a widow is a woman.
+a bride is a woman.
+a groom is a man.
+an orphan is a child.
+a teenager is young.
+a grandparent is old.
+a boy is a child.
+a girl is a child.
+a parent has a child.
+
+# More tools, each read and checked by the reader before it was added.
+a spanner is a tool.
+pliers are a tool.
+a mallet is a tool.
+a file is a tool.
+a trowel is a tool.
+a crowbar is a tool.
+a level is a tool.
+a vice is a tool.

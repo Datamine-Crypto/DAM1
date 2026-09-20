@@ -1,0 +1,20 @@
+# Words that point back: it and he or she bring forward a node an earlier word or an earlier input left
+# on the stack, so a fact about it is written on the node it points to.
+seed: 90-everyday
+seed: 18-qualities
+tom has a car. it is red. => tom -> {has} -> car -> {is} -> red | what color is the car? = red; who has the car? = tom
+ann has a hat. it is blue. => ann -> {has} -> hat -> {is} -> blue | what color is the hat? = blue; what does ann have? = hat
+sam has a bike. he is tall. => sam -> {has} -> bike; sam -> {is} -> tall | what size is sam? = tall; who has the bike? = sam
+kim has a kite. she is happy. => kim -> {has} -> kite; kim -> {is} -> happy | what does kim have? = kite; how does kim feel? = happy
+ben has a boat. it is fast. => ben -> {has} -> boat -> {is} -> fast | what does ben have? = boat; how fast is the boat? = fast
+the cat is in the box. it is black. => cat -> {in} -> box; cat -> {is} -> black | where is the cat? = box
+lily has a cup. => lily -> {has} -> cup | who has the cup? = lily
+then: it is green. => lily -> {has} -> cup -> {is} -> green | what color is the cup? = green
+paul has a drum. => paul -> {has} -> drum | what does paul have? = drum
+then: he is loud. => paul -> {is} -> loud | how does paul feel? = loud
+nina has a doll. she is kind. => nina -> {has} -> doll; nina -> {is} -> kind | how does nina feel? = kind; who has the doll? = nina
+omar has a map. it is old. => omar -> {has} -> map -> {is} -> old | what does omar have? = map
+test: max has a sled. it is new. => max -> {has} -> sled -> {is} -> new | what does max have? = sled
+test: sue has a flute. she is small. => sue -> {has} -> flute; sue -> {is} -> small | who has the flute? = sue
+test: joe has a pen. => joe -> {has} -> pen | who has the pen? = joe
+test: then: it is black. => joe -> {has} -> pen -> {is} -> black | what color is the pen? = black

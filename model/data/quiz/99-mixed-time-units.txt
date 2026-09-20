@@ -1,0 +1,14 @@
+# Mixed units of time: some of a larger unit and some of a smaller one together are the larger counted in
+# the smaller with the smaller added, as some weeks and days are the weeks times seven with the days added.
+# The turns ask one mixed amount each. Each scene tells two units of time with how many of the smaller are
+# in the larger, then asks that number back, plain amounts, and several mixed amounts of each unit.
+seed: 10-time
+turn: how many days are in 3 weeks and 2 days? {eom} => | 23
+turn: how many minutes are in 1 hour and 15 minutes? {eom} => | 75
+turn: how many hours are in 2 days and 5 hours? {eom} => | 53
+turn: how many seconds are in 2 minutes and 10 seconds? {eom} => | 130
+there are 7 days in a week. there are 60 minutes in an hour. => days in week; days is 7; 7 = 7; minutes in hour; minutes is 60; 60 = 60 | how many days are in 3 weeks and 2 days? = 23; how many minutes are in 1 hour and 15 minutes? = 75; how many days are in a week? = 7; how many minutes are in an hour? = 60; how many days are in 4 weeks and 5 days? = 33; how many minutes are in 2 hours and 30 minutes? = 150; how many days are in 2 weeks? = 14; how many minutes are in 3 hours? = 180
+there are 24 hours in a day. there are 60 seconds in a minute. => hours in day; hours is 24; 24 = 24; seconds in minute; seconds is 60; 60 = 60 | how many hours are in 2 days and 5 hours? = 53; how many seconds are in 2 minutes and 10 seconds? = 130; how many hours are in a day? = 24; how many seconds are in a minute? = 60; how many hours are in 3 days and 2 hours? = 74; how many seconds are in 4 minutes and 20 seconds? = 260; how many hours are in 2 days? = 48; how many seconds are in 5 minutes? = 300
+test: turn: how many days are in 2 weeks and 3 days? {eom} => | 17
+test: turn: how many minutes are in 3 hours and 20 minutes? {eom} => | 200
+test: there are 60 minutes in an hour. there are 7 days in a week. => minutes in hour; minutes is 60; 60 = 60; days in week; days is 7; 7 = 7 | how many days are in 2 weeks and 3 days? = 17; how many minutes are in 3 hours and 20 minutes? = 200; how many days are in 5 weeks and 4 days? = 39; how many minutes are in 4 hours and 10 minutes? = 250; how many days are in a week? = 7; how many minutes are in an hour? = 60; how many days are in 3 weeks? = 21; how many minutes are in 2 hours? = 120

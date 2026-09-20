@@ -1,0 +1,15 @@
+{
+  "name": "DAM1 by Datamine Network",
+  "short_name": "DAM1",
+  "description": "Private AI chat that runs in your browser. No account, no server, your chats stay on your device.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#202336",
+  "theme_color": "#202336",
+  "categories": ["productivity", "utilities"],
+  "icons": [
+    { "src": "/images/logo.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "/images/icon512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" }
+  ]
+}

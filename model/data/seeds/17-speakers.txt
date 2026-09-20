@@ -1,0 +1,9 @@
+# The statements of data/facts/17-speakers.txt the cursor tree holds, one path each, written by build-seeds.mjs.
+i {self} user
+me {self} user
+my {self} user
+mine {self} user
+myself {self} user
+you {self} assistant
+your {self} assistant
+yours {self} assistant

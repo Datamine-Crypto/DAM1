@@ -1,0 +1,13 @@
+# Left over in groups: some things put into groups of the same size fill as many whole groups as fit,
+# and the things that do not fill a group are the ones left over.
+# The turns ask one count left over each. Each scene tells what two or three people have, then asks what
+# is left over from the numbers and from each one's things, each count, a total, and yes or no.
+turn: how many of 23 children are left over in teams of 5? {eom} => | 3
+turn: how many of 20 eggs are left over in boxes of 6? {eom} => | 2
+turn: how many of 16 chairs are left over in rows of 4? {eom} => | 0
+turn: how many of 35 apples are left over in bags of 10? {eom} => | 5
+tom has 23 marbles. ann has 20 eggs. sam has 16 chairs. => tom owns marbles; marbles is 23; 23 = 23; ann owns eggs; eggs is 20; 20 = 20; sam owns chairs; chairs is 16; 16 = 16 | how many of 23 children are left over in teams of 5? = 3; how many of 20 eggs are left over in boxes of 6? = 2; how many of 16 chairs are left over in rows of 4? = 0; how many marbles does tom have? = 23; how many eggs does ann have? = 20; how many of tom's marbles are left over in bags of 5? = 3; how many of ann's eggs are left over in boxes of 6? = 2; how many of sam's chairs are left over in rows of 4? = 0; how many of ann's eggs are left over in boxes of 3? = 2; how many chairs does sam have? = 16; does tom have eggs? = no
+kim has 35 apples. joe has 27 apples. lily has 19 pens. => kim owns apples; apples is 35; 35 = 35; joe owns apples; apples is 27; 27 = 27; lily owns pens; pens is 19; 19 = 19 | how many of 35 apples are left over in bags of 10? = 5; how many apples does kim have? = 35; how many apples do kim and joe have? = 62; how many of kim's apples are left over in bags of 10? = 5; how many of joe's apples are left over in bags of 10? = 7; how many of joe's apples are left over in bags of 5? = 2; how many of lily's pens are left over in boxes of 4? = 3; how many of 19 pens are left over in boxes of 6? = 1; how many pens does lily have? = 19; who has more apples? = kim
+test: turn: how many of 14 children are left over in teams of 3? {eom} => | 2
+test: turn: how many of 50 eggs are left over in boxes of 12? {eom} => | 2
+test: zoe has 14 cards. ben has 50 eggs. => zoe owns cards; cards is 14; 14 = 14; ben owns eggs; eggs is 50; 50 = 50 | how many of 14 children are left over in teams of 3? = 2; how many of 50 eggs are left over in boxes of 12? = 2; how many cards does zoe have? = 14; how many eggs does ben have? = 50; how many of zoe's cards are left over in packs of 3? = 2; how many of ben's eggs are left over in boxes of 12? = 2; how many of 50 eggs are left over in boxes of 7? = 1; does zoe have eggs? = no

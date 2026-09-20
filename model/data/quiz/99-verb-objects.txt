@@ -1,0 +1,9 @@
+# Asking for the one a deed was done to: who did ann help asks the relation helped from ann, the
+# plain verb after did naming the told past form, so the answer is the other end of the relation.
+# Regular verbs only, where the told form is the plain verb with ed; every plain verb has two
+# learned lines so it reads with a row of its own. Each scene tells four deeds by different people,
+# then asks the one each deed was done to, the one who did it, and a deed not told.
+kim helped joe. joe called kim. eve visited ray. ray liked the book. => kim helped joe; joe called kim; eve visited ray; ray liked book | who did kim help? = joe; who did joe call? = kim; who did eve visit? = ray; what did ray like? = book; who helped joe? = kim; who called kim? = joe; who visited ray? = eve; who liked the book? = ray; who did joe help? = nothing
+eve helped the nurse. ray called the baker. kim visited the sailor. joe liked the tea. => eve helped nurse; ray called baker; kim visited sailor; joe liked tea | who did eve help? = nurse; who did ray call? = baker; who did kim visit? = sailor; what did joe like? = tea; who helped the nurse? = eve; who called the baker? = ray; who visited the sailor? = kim; who liked the tea? = joe; who did eve call? = nothing
+ray helped eve. kim called ray. eve visited joe. kim liked the cake. => ray helped eve; kim called ray; eve visited joe; kim liked cake | who did ray help? = eve; who did kim call? = ray; who did eve visit? = joe; what did kim like? = cake; who helped eve? = ray; who called ray? = kim; who visited joe? = eve; who liked the cake? = kim; who did ray call? = nothing
+test: eve helped kim. joe visited the baker. ray called eve. => eve helped kim; joe visited baker; ray called eve | who did eve help? = kim; who did joe visit? = baker; who did ray call? = eve; who helped kim? = eve; who visited the baker? = joe; who called eve? = ray; what did joe like? = nothing; who did kim help? = nothing

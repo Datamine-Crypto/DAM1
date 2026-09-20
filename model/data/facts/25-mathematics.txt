@@ -1,0 +1,80 @@
+# Mathematics: numbers and their kinds, in the shapes the reader has.
+1 is odd.
+2 is even.
+3 is odd.
+4 is even.
+5 is odd.
+6 is even.
+7 is odd.
+8 is even.
+9 is odd.
+10 is even.
+2 is a prime.
+3 is a prime.
+5 is a prime.
+7 is a prime.
+11 is a prime.
+13 is a prime.
+17 is a prime.
+19 is a prime.
+23 is a prime.
+29 is a prime.
+31 is a prime.
+37 is a prime.
+41 is a prime.
+43 is a prime.
+47 is a prime.
+2 is the smallest prime.
+2 is the only even prime.
+4 is a square.
+9 is a square.
+16 is a square.
+25 is a square.
+36 is a square.
+49 is a square.
+64 is a square.
+81 is a square.
+100 is a square.
+8 is a cube.
+27 is a cube.
+64 is a cube.
+125 is a cube.
+1000 is a cube.
+0 is nothing.
+a half is 0.5.
+a quarter is 0.25.
+a third is 0.333.
+a tenth is 0.1.
+a percent is a hundredth.
+pi is 3.14159.
+the root of 4 is 2.
+the root of 9 is 3.
+the root of 16 is 4.
+the root of 25 is 5.
+the root of 100 is 10.
+a sum is an answer.
+a product is an answer.
+a difference is an answer.
+a quotient is an answer.
+a fraction has a numerator.
+a fraction has a denominator.
+an equation has 2 sides.
+a triangle has 3 angles.
+a square has 4 angles.
+a square has 4 equal sides.
+a rectangle has 4 right angles.
+a circle has a center.
+a circle has a radius.
+a circle has a diameter.
+a diameter is twice a radius.
+a sphere is round.
+a cube has 6 square faces.
+a line is straight.
+a curve is not straight.
+geometry is mathematics.
+algebra is mathematics.
+arithmetic is mathematics.
+a number is even or odd.
+a prime has 2 divisors.
+zero is even.
+infinity is not a number.

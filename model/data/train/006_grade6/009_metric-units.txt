@@ -1,0 +1,16 @@
+# Metric units: a kilometer is 1000 meters, a meter 100 centimeters, a kilogram 1000 grams and a liter
+# 1000 milliliters, so some of the larger unit hold that many times as many of the smaller.
+# The turns ask one conversion each. Each scene tells two units with how many of the smaller are in the
+# larger, then asks that number back and the smaller count in several amounts of each larger unit.
+seed: 20-numbers-and-measures
+seed: 10-time
+seed: measures
+turn: how many grams are in 2 kilograms? => | 2000
+turn: how many centimeters are in 3 meters? => | 300
+turn: how many milliliters are in 4 liters? => | 4000
+turn: how many meters are in 5 kilometers? => | 5000
+there are 1000 grams in a kilogram. there are 100 centimeters in a meter. => kilogram:quantity(1) {equal} gram:quantity(1000); {number:value(1000)}; meter:quantity(1) {equal} centimeter:quantity(100); {number:value(100)} | how many grams are in 2 kilograms? = 2000; how many centimeters are in 3 meters? = 300; how many grams are in a kilogram? = 1000; how many centimeters are in a meter? = 100; how many grams are in 5 kilograms? = 5000; how many centimeters are in 4 meters? = 400; how many centimeters are in 10 meters? = 1000; how many grams are in 3 kilograms? = 3000
+there are 1000 milliliters in a liter. there are 1000 meters in a kilometer. => liter:quantity(1) {equal} milliliter:quantity(1000); {number:value(1000)}; kilometer:quantity(1) {equal} meter:quantity(1000) | how many milliliters are in 4 liters? = 4000; how many meters are in 5 kilometers? = 5000; how many milliliters are in a liter? = 1000; how many meters are in a kilometer? = 1000; how many milliliters are in 2 liters? = 2000; how many meters are in 3 kilometers? = 3000; how many milliliters are in 9 liters? = 9000; how many meters are in 8 kilometers? = 8000
+test: turn: how many centimeters are in 7 meters? => | 700
+test: turn: how many grams are in 6 kilograms? => | 6000
+test: there are 100 centimeters in a meter. there are 1000 grams in a kilogram. => meter:quantity(1) {equal} centimeter:quantity(100); {number:value(100)}; kilogram:quantity(1) {equal} gram:quantity(1000); {number:value(1000)} | how many centimeters are in 7 meters? = 700; how many grams are in 6 kilograms? = 6000; how many centimeters are in 2 meters? = 200; how many grams are in 4 kilograms? = 4000; how many grams are in a kilogram? = 1000; how many centimeters are in 5 meters? = 500; how many grams are in 9 kilograms? = 9000; how many centimeters are in a meter? = 100

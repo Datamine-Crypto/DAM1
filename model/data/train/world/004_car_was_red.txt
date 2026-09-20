@@ -1,0 +1,3 @@
+# the car was red: was adds is dated past.
+the car was red. => car:the(true) -> {is}:time(past) -> {color} -> red
+test: the zorp was green. => zorp:the(true) -> {is}:time(past) -> {color} -> green

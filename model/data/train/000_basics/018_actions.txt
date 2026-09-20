@@ -1,0 +1,27 @@
+# Action games: a world holds things in places and states, then a text tells a set of actions the
+# network has to carry out on the tree in order, as opening a box, taking the key out of it and
+# carrying it to another room. The expected shape checks every action was done and nothing else
+# changed, and the questions ask what the actions left: who has the key, where it is, whether the
+# box is open. Held out lines use names and things the learned lines never use.
+world: key -> {in} -> box -> {closed} | is the box open? = no; where is the key? = box
+then: tom opens the box. tom takes the key. => box -> {open}; not box -> {closed}; tom -> {has} -> key; not key -> {in} -> box | is the box open? = yes; who has the key? = tom; is the key in the box? = no; does tom have the key? = yes
+world: coin -> {in} -> jar -> {in} -> kitchen; coin -> {in} -> jar -> {closed} | where is the jar? = kitchen
+then: ann opens the jar. ann takes the coin. ann goes to the garden. => jar -> {open}; not jar -> {closed}; ann -> {has} -> coin; not coin -> {in} -> jar; ann -> {in} -> garden | who has the coin? = ann; where is ann? = garden; is the jar open? = yes; is the coin in the jar? = no
+world: ball -> {in} -> bag -> {in} -> hall | where is the ball? = bag
+then: sam takes the ball. sam goes to the yard. sam drops the ball. => not sam -> {has} -> ball; not ball -> {in} -> bag; ball -> {in} -> yard; sam -> {in} -> yard | where is the ball? = yard; does sam have the ball? = no; where is sam? = yard; is the ball in the bag? = no
+world: cup -> {in} -> shelf; door -> {closed} | is the door open? = no
+then: kim opens the door. kim goes to the kitchen. kim takes the cup. => door -> {open}; not door -> {closed}; kim -> {in} -> kitchen; kim -> {has} -> cup; not cup -> {in} -> shelf | is the door open? = yes; who has the cup? = kim; where is kim? = kitchen; is the cup in the shelf? = no
+world: hat -> {in} -> closet -> {closed} | where is the hat? = closet
+then: ben opens the closet. ben takes the hat. ben closes the closet. => closet -> {closed}; not closet -> {open}; ben -> {has} -> hat; not hat -> {in} -> closet | is the closet open? = no; who has the hat? = ben; is the hat in the closet? = no
+world: pen -> {in} -> desk | where is the pen? = desk
+then: lily takes the pen. lily gives the pen to max. => max -> {has} -> pen; not lily -> {has} -> pen; not pen -> {in} -> desk | who has the pen? = max; does lily have the pen? = no; is the pen in the desk? = no
+world: egg -> {in} -> basket -> {in} -> barn | where is the egg? = basket
+then: joe goes to the barn. joe takes the egg. joe goes to the house. => joe -> {in} -> house; not joe -> {in} -> barn; joe -> {has} -> egg; not egg -> {in} -> basket | where is joe? = house; who has the egg? = joe; is joe in the barn? = no; is the egg in the basket? = no
+world: sock -> {in} -> drawer -> {closed} | is the drawer open? = no
+then: sue opens the drawer. sue takes the sock. sue closes the drawer. sue gives the sock to tom. => drawer -> {closed}; not drawer -> {open}; tom -> {has} -> sock; not sue -> {has} -> sock; not sock -> {in} -> drawer | who has the sock? = tom; is the drawer open? = no; does sue have the sock? = no
+test: world: harp -> {in} -> case -> {closed} | is the case open? = no; where is the harp? = case
+test: then: nina opens the case. nina takes the harp. => case -> {open}; not case -> {closed}; nina -> {has} -> harp; not harp -> {in} -> case | is the case open? = yes; who has the harp? = nina; is the harp in the case? = no
+test: world: vase -> {in} -> crate -> {in} -> attic | where is the vase? = crate
+test: then: paul goes to the attic. paul takes the vase. paul goes to the porch. paul drops the vase. => paul -> {in} -> porch; not paul -> {in} -> attic; not paul -> {has} -> vase; not vase -> {in} -> crate; vase -> {in} -> porch | where is the vase? = porch; does paul have the vase? = no; where is paul? = porch
+test: world: mug -> {in} -> cupboard -> {closed} | is the cupboard open? = no
+test: then: rosa opens the cupboard. rosa takes the mug. rosa closes the cupboard. rosa gives the mug to nina. => cupboard -> {closed}; not cupboard -> {open}; nina -> {has} -> mug; not rosa -> {has} -> mug; not mug -> {in} -> cupboard | who has the mug? = nina; is the cupboard open? = no; does rosa have the mug? = no

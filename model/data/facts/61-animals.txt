@@ -1,0 +1,513 @@
+# Animals: more kinds of animals with their classes, homes, legs, sounds, sizes, speeds, young and qualities.
+a koala is a mammal.
+a sloth is a mammal.
+a cheetah is a mammal.
+a leopard is a mammal.
+a jaguar is a mammal.
+a lynx is a mammal.
+a puma is a mammal.
+a hyena is a mammal.
+a zebra is a mammal.
+a rhino is a mammal.
+a hippo is a mammal.
+a bison is a mammal.
+a moose is a mammal.
+a reindeer is a mammal.
+a gazelle is a mammal.
+a wildebeest is a mammal.
+a llama is a mammal.
+an alpaca is a mammal.
+a donkey is a mammal.
+a mule is a mammal.
+a pony is a mammal.
+a yak is a mammal.
+an ox is a mammal.
+a bull is a mammal.
+a boar is a mammal.
+a hedgehog is a mammal.
+a mole is a mammal.
+a squirrel is a mammal.
+a beaver is a mammal.
+an otter is a mammal.
+a seal is a mammal.
+a walrus is a mammal.
+an orca is a mammal.
+a manatee is a mammal.
+a narwhal is a mammal.
+a panda is a mammal.
+a gorilla is a mammal.
+a chimpanzee is a mammal.
+an orangutan is a mammal.
+a baboon is a mammal.
+a lemur is a mammal.
+a gibbon is a mammal.
+an armadillo is a mammal.
+an anteater is a mammal.
+a raccoon is a mammal.
+a skunk is a mammal.
+a badger is a mammal.
+a hamster is a mammal.
+a rat is a mammal.
+a shrew is a mammal.
+a porcupine is a mammal.
+a capybara is a mammal.
+a wombat is a mammal.
+a platypus is a mammal.
+a meerkat is a mammal.
+a mongoose is a mammal.
+a coyote is a mammal.
+a dingo is a mammal.
+a warthog is a mammal.
+a hare is a mammal.
+a primate is a mammal.
+a rodent is a mammal.
+a marsupial is a mammal.
+a stallion is a horse.
+a hawk is a bird.
+a falcon is a bird.
+a vulture is a bird.
+a condor is a bird.
+a flamingo is a bird.
+a pelican is a bird.
+a gull is a bird.
+an albatross is a bird.
+a puffin is a bird.
+an emu is a bird.
+a goose is a bird.
+a rooster is a bird.
+a chicken is a bird.
+a peacock is a bird.
+a hummingbird is a bird.
+a woodpecker is a bird.
+a canary is a bird.
+a raven is a bird.
+a dove is a bird.
+a toucan is a bird.
+a macaw is a bird.
+a kookaburra is a bird.
+a cardinal is a bird.
+a carp is a fish.
+a pike is a fish.
+an eel is a fish.
+a swordfish is a fish.
+a sailfish is a fish.
+a piranha is a fish.
+a seahorse is a fish.
+a stingray is a fish.
+a clownfish is a fish.
+a cobra is a reptile.
+a viper is a reptile.
+a rattlesnake is a reptile.
+an anaconda is a reptile.
+a chameleon is a reptile.
+a komodo is a reptile.
+an alligator is a reptile.
+a tortoise is a reptile.
+a mamba is a reptile.
+a newt is an amphibian.
+a salamander is an amphibian.
+an axolotl is an amphibian.
+a grasshopper is an insect.
+a dragonfly is an insect.
+a ladybird is an insect.
+a termite is an insect.
+a cockroach is an insect.
+a flea is an insect.
+a hornet is an insect.
+a bumblebee is an insect.
+a scorpion is an arachnid.
+a tick is an arachnid.
+a tarantula is an arachnid.
+an arachnid is an animal.
+an octopus is a mollusc.
+a squid is a mollusc.
+a clam is a mollusc.
+an oyster is a mollusc.
+a slug is a mollusc.
+a mollusc is an animal.
+a crab is a crustacean.
+a lobster is a crustacean.
+a shrimp is a crustacean.
+krill is a crustacean.
+a crustacean is an animal.
+a starfish is an animal.
+a jellyfish is an animal.
+a sponge is an animal.
+coral is an animal.
+a centipede is an animal.
+a leech is a worm.
+a koala lives in australia.
+a wombat lives in australia.
+an emu lives in australia.
+a platypus lives in australia.
+a dingo lives in australia.
+a kookaburra lives in australia.
+a sloth lives in the jungle.
+a jaguar lives in the jungle.
+a toucan lives in the jungle.
+a macaw lives in the jungle.
+an anaconda lives in the jungle.
+a piranha lives in the amazon.
+a llama lives in south america.
+an alpaca lives in south america.
+a capybara lives in south america.
+a condor lives in the andes.
+a zebra lives in africa.
+a hyena lives in africa.
+a hippo lives in africa.
+a rhino lives in africa.
+a gorilla lives in africa.
+a chimpanzee lives in africa.
+a cheetah lives in africa.
+a leopard lives in africa.
+a meerkat lives in africa.
+a warthog lives in africa.
+a gazelle lives in africa.
+a wildebeest lives in africa.
+a baboon lives in africa.
+a mamba lives in africa.
+an ostrich lives in africa.
+a lemur lives in madagascar.
+an orangutan lives in borneo.
+a komodo lives in indonesia.
+a cobra lives in india.
+a peacock lives in india.
+a mongoose lives in india.
+a yak lives in tibet.
+a bison lives in america.
+a raccoon lives in america.
+a coyote lives in america.
+a skunk lives in america.
+an armadillo lives in america.
+a rattlesnake lives in america.
+a puma lives in america.
+a moose lives in canada.
+an alligator lives in florida.
+a reindeer lives in the arctic.
+a walrus lives in the arctic.
+a narwhal lives in the arctic.
+an orca lives in the sea.
+a seal lives in the sea.
+a crab lives in the sea.
+an octopus lives in the sea.
+a lobster lives in the sea.
+a jellyfish lives in the sea.
+a starfish lives in the sea.
+a seahorse lives in the sea.
+a clownfish lives in a reef.
+an otter lives in a river.
+a beaver lives in a river.
+a trout lives in a river.
+a carp lives in a pond.
+a newt lives in a pond.
+a pike lives in a lake.
+a squirrel lives in a tree.
+a mole lives in the ground.
+a hedgehog lives in a hedge.
+a badger lives in a sett.
+a rat lives in a sewer.
+a hamster lives in a cage.
+a goldfish lives in a bowl.
+a bat lives in a cave.
+a wolf lives in the forest.
+a deer lives in the forest.
+a termite lives in a mound.
+a wasp lives in a nest.
+a scorpion lives in the desert.
+a puffin lives on a cliff.
+a goat lives on a mountain.
+a wasp has 6 legs.
+a bee has 6 legs.
+a fly has 6 legs.
+a beetle has 6 legs.
+a butterfly has 6 legs.
+a mosquito has 6 legs.
+a grasshopper has 6 legs.
+a ladybird has 6 legs.
+a cockroach has 6 legs.
+a scorpion has 8 legs.
+a tick has 8 legs.
+a tarantula has 8 legs.
+a crab has 10 legs.
+a lobster has 10 legs.
+a shrimp has 10 legs.
+a starfish has 5 arms.
+a squid has 10 arms.
+there are 8 arms on an octopus.
+there are 6 legs on an ant.
+there are 2 tusks on an elephant.
+a chicken has 2 legs.
+a duck has 2 legs.
+a penguin has 2 legs.
+a human has 2 legs.
+a human has 2 arms.
+a lizard has 4 legs.
+a frog has 4 legs.
+a turtle has 4 legs.
+a tortoise has 4 legs.
+a crocodile has 4 legs.
+a sheep has 4 legs.
+a pig has 4 legs.
+a goat has 4 legs.
+a deer has 4 legs.
+a lion has 4 legs.
+a tiger has 4 legs.
+a bear has 4 legs.
+a worm has 0 legs.
+a fish has 0 legs.
+a whale has 0 legs.
+a dolphin has 0 legs.
+a slug has 0 legs.
+a jellyfish has 0 legs.
+a snail has 1 foot.
+a bird has 2 wings.
+a bee has 4 wings.
+a fly has 2 wings.
+a butterfly has 4 wings.
+a dragonfly has 4 wings.
+a bat has 2 wings.
+a spider has 8 eyes.
+a bee has 5 eyes.
+a cow has 4 stomachs.
+a horse has 4 hooves.
+a cow has 2 horns.
+a goat has 2 horns.
+a deer has 2 antlers.
+a dog has 42 teeth.
+a cat has 30 teeth.
+a wolf says howl.
+a snake says hiss.
+a turkey says gobble.
+a goose says honk.
+a mouse says squeak.
+a pigeon says coo.
+a dove says coo.
+a sparrow says chirp.
+a chick says peep.
+a bear says growl.
+a tiger says roar.
+a fly says buzz.
+a mosquito says buzz.
+a parrot says squawk.
+an elephant is heavier than a horse.
+an elephant is taller than a horse.
+a giraffe is taller than an elephant.
+a whale is bigger than an elephant.
+a whale is heavier than an elephant.
+a hippo is heavier than a horse.
+a rhino is heavier than a cow.
+a gorilla is stronger than a human.
+a bear is heavier than a lion.
+a lion is stronger than a hyena.
+a tiger is bigger than a lion.
+a cheetah is faster than a lion.
+a cheetah is faster than a horse.
+a cheetah is faster than a gazelle.
+a gazelle is faster than a lion.
+a horse is faster than a human.
+a kangaroo is faster than a human.
+a hare is faster than a tortoise.
+a tortoise is slower than a hare.
+a snail is slower than a tortoise.
+a falcon is faster than an eagle.
+an eagle is bigger than a hawk.
+an ostrich is bigger than an eagle.
+a swan is bigger than a duck.
+an albatross is bigger than a gull.
+a turkey is heavier than a chicken.
+a hummingbird is smaller than a sparrow.
+a mouse is smaller than a rat.
+a cat is bigger than a mouse.
+a dog is bigger than a cat.
+a wolf is bigger than a fox.
+a moose is bigger than a deer.
+a bison is heavier than a cow.
+a camel is taller than a horse.
+a horse is taller than a pony.
+a llama is bigger than an alpaca.
+an ox is stronger than a horse.
+a horse is stronger than a donkey.
+a gorilla is bigger than a chimpanzee.
+a shark is bigger than a salmon.
+a whale is bigger than a shark.
+a sailfish is faster than a shark.
+an orca is bigger than a dolphin.
+a walrus is heavier than a seal.
+a crocodile is bigger than a lizard.
+a crocodile is bigger than an alligator.
+an anaconda is longer than a cobra.
+a hornet is bigger than a wasp.
+a butterfly is bigger than a fly.
+a flea is smaller than an ant.
+the blue whale is the heaviest animal.
+the blue whale is the loudest animal.
+the peregrine is the fastest bird.
+the sailfish is the fastest fish.
+the whale shark is the biggest fish.
+an ostrich is the heaviest bird.
+an anaconda is the heaviest snake.
+a crocodile is the biggest reptile.
+a komodo is the biggest lizard.
+a sloth is the slowest mammal.
+a cheetah is the fastest mammal.
+a gorilla is the biggest primate.
+a kangaroo is the biggest marsupial.
+a capybara is the biggest rodent.
+a shrew is the smallest mammal.
+an albatross is the biggest seabird.
+a tiger is the biggest cat.
+a mosquito is the deadliest animal.
+a bat is the only flying mammal.
+a lion is the king of the jungle.
+a sloth is slow.
+a sloth is lazy.
+a fox is clever.
+a fox is sly.
+an owl is wise.
+a parrot is colorful.
+a peacock is colorful.
+a swan is white.
+a dove is white.
+a raven is black.
+a crow is black.
+a flamingo is pink.
+a canary is yellow.
+a cardinal is red.
+a ladybird is red.
+a frog is green.
+a crocodile is green.
+an elephant is grey.
+a rhino is grey.
+a tiger is orange.
+a goldfish is orange.
+a lion is strong.
+a lion is dangerous.
+a shark is dangerous.
+a cobra is dangerous.
+a cobra is poisonous.
+a viper is poisonous.
+a scorpion is poisonous.
+a mosquito is dangerous.
+a hippo is dangerous.
+a tiger is wild.
+a dog is a pet.
+a cat is a pet.
+a hamster is a pet.
+a rabbit is a pet.
+a goldfish is a pet.
+a parrot is a pet.
+a dog is tame.
+a dog is loyal.
+a monkey is playful.
+a dolphin is clever.
+a parrot is noisy.
+a mule is stubborn.
+a donkey is stubborn.
+a rabbit is timid.
+an ant is busy.
+a bee is busy.
+an ant is strong.
+a tortoise is slow.
+a hare is fast.
+a falcon is fast.
+a whale is big.
+an elephant is big.
+a skunk is smelly.
+a jellyfish is soft.
+a hedgehog is prickly.
+a zebra has stripes.
+a tiger has stripes.
+a wasp has stripes.
+a leopard has spots.
+a ladybird has spots.
+an eagle has sharp eyes.
+a cat has sharp claws.
+a lion has sharp teeth.
+a shark has sharp teeth.
+an owl has big eyes.
+a rabbit has long ears.
+a giraffe has a long neck.
+an elephant has big ears.
+a kangaroo has strong legs.
+a peacock has a long tail.
+a squirrel has a bushy tail.
+a pig has a curly tail.
+a cat has soft fur.
+a bear has thick fur.
+a hedgehog has spines.
+a porcupine has quills.
+a crab has claws.
+a lobster has claws.
+a scorpion has a sting.
+a cobra has fangs.
+a turtle has a shell.
+a tortoise has a shell.
+a snail has a shell.
+an oyster has a shell.
+an oyster has a pearl.
+a squid has ink.
+a penguin has flippers.
+a seal has flippers.
+a whale has a blowhole.
+a shark has a fin.
+a horse has a mane.
+a lion has a mane.
+a goat has a beard.
+a walrus has tusks.
+a boar has tusks.
+a narwhal has a tusk.
+a moose has antlers.
+a robin has a red breast.
+a cygnet is the young of a swan.
+a gosling is the young of a goose.
+a fawn is the young of a deer.
+an owlet is the young of an owl.
+an eaglet is the young of an eagle.
+a leveret is the young of a hare.
+a pup is the young of a seal.
+a fry is the young of a fish.
+a maggot is the young of a fly.
+a larva is the young of an insect.
+a hatchling is the young of a turtle.
+a poult is the young of a turkey.
+a koala likes eucalyptus.
+a squirrel likes nuts.
+a mouse likes cheese.
+a bear likes honey.
+a cat likes milk.
+a dog likes bones.
+a horse likes apples.
+a bird likes seeds.
+a hedgehog likes slugs.
+an anteater likes ants.
+a giraffe likes leaves.
+a hummingbird likes nectar.
+
+# More fish, reptiles, insects and amphibians, each read and checked by the reader before it was added.
+a halibut is a fish.
+a mackerel is a fish.
+a sardine is a fish.
+a herring is a fish.
+an anchovy is a fish.
+a catfish is a fish.
+a perch is a fish.
+a haddock is a fish.
+a barracuda is a fish.
+a flounder is a fish.
+a gecko is a reptile.
+an iguana is a reptile.
+a python is a reptile.
+a boa is a reptile.
+a skink is a reptile.
+a terrapin is a reptile.
+a cricket is an insect.
+a moth is an insect.
+a cicada is an insect.
+a firefly is an insect.
+a gnat is an insect.
+a mantis is an insect.
+a louse is an insect.
+a weevil is an insect.
+a tadpole is an amphibian.
+a bullfrog is an amphibian.
+a caecilian is an amphibian.

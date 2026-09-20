@@ -1,0 +1,4 @@
+# corn is red, what color is corn: what adds the question node, color and is and corn go under it as a
+# statement would put them, what -> color -> {is} -> corn, and the answer reads corn's quality of that kind.
+corn is red. => corn -> {is} -> red | what color is corn? = red
+test: zorp is purple. => zorp -> {is} -> purple | what color is zorp? = purple

@@ -1,0 +1,31 @@
+# Search games: each line states a world the tree holds and the stack does not, the way a person
+# knows where things are without the telling in mind. A name can stand on many nodes, as a ball tom
+# owns and a ball in a box, and only one of them holds what a question asks. When a node holds
+# nothing, the network looks at the next node of that name, as a person looks in the next box. Held
+# out lines use names and things the learned lines never use.
+world: ball -> {in} -> box; tom -> {has} -> ball; ann -> {has} -> ball | where is the ball? = box
+world: tom -> {has} -> cup; cup -> {in} -> bag; sam -> {has} -> cup | where is the cup? = bag
+world: ann -> {has} -> key; ben -> {has} -> key; key -> {in} -> drawer | where is the key? = drawer
+world: lily -> {has} -> hat -> {in} -> closet | where is the hat? = closet
+world: kim -> {has} -> pen -> {in} -> desk | where is the pen? = desk
+world: max -> {has} -> book; sue -> {has} -> book; joe -> {has} -> book; book -> {in} -> shelf | where is the book? = shelf
+world: joe -> {has} -> coin; coin -> {in} -> jar; tom -> {has} -> coin | where is the coin? = jar
+world: sam -> {has} -> doll; ann -> {has} -> doll; doll -> {in} -> crib | where is the doll? = crib
+world: toy -> {in} -> chest; ben -> {has} -> toy; lily -> {has} -> toy | where is the toy? = chest
+world: kim -> {has} -> sock -> {in} -> basket | where is the sock? = basket
+world: tom -> {has} -> shoe; ann -> {has} -> shoe; shoe -> {in} -> hall | where is the shoe? = hall
+world: sue -> {has} -> cake; cake -> {in} -> oven; max -> {has} -> cake | where is the cake? = oven
+world: tom -> {has} -> box; box -> {hold} -> ball; ann -> {has} -> box | what does the box hold? = ball
+world: box -> {hold} -> key; sam -> {has} -> box; kim -> {has} -> box | what does the box hold? = key
+world: ann -> {has} -> bag; ben -> {has} -> bag; bag -> {hold} -> apple | what does the bag hold? = apple
+world: lily -> {has} -> jar -> {hold} -> coin | what does the jar hold? = coin
+world: joe -> {has} -> basket; max -> {has} -> basket; sue -> {has} -> basket; basket -> {hold} -> egg | what does the basket hold? = egg
+world: tom -> {has} -> cup -> {hold} -> milk | what does the cup hold? = milk
+world: kim -> {has} -> chest; chest -> {hold} -> gold; ann -> {has} -> chest | what does the chest hold? = gold
+world: sam -> {has} -> drawer; ben -> {has} -> drawer; drawer -> {hold} -> spoon | what does the drawer hold? = spoon
+test: world: ring -> {in} -> purse; nina -> {has} -> ring; paul -> {has} -> ring | where is the ring? = purse
+test: world: nina -> {has} -> kite -> {in} -> garage | where is the kite? = garage
+test: world: paul -> {has} -> lamp; rosa -> {has} -> lamp; lamp -> {in} -> attic | where is the lamp? = attic
+test: world: rosa -> {has} -> crate; nina -> {has} -> crate; crate -> {hold} -> marble | what does the crate hold? = marble
+test: world: paul -> {has} -> tray -> {hold} -> pear | what does the tray hold? = pear
+test: world: nina -> {has} -> pot; pot -> {hold} -> soup; rosa -> {has} -> pot | what does the pot hold? = soup

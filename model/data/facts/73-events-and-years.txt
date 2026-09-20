@@ -1,0 +1,211 @@
+# Events, empires and rulers: when each event was, what it was, and who ruled where.
+the moonlanding was in 1969.
+the moonlanding was a mission.
+the titanic was in 1912.
+the titanic was a ship.
+the mayflower was in 1620.
+the mayflower was a ship.
+sputnik was in 1957.
+sputnik was a satellite.
+vostok was in 1961.
+voyager was in 1977.
+challenger was in 1986.
+chernobyl was in 1986.
+chernobyl was an accident.
+fukushima was in 2011.
+hiroshima was in 1945.
+hiroshima is a city.
+nagasaki was in 1945.
+tunguska was in 1908.
+waterloo was in 1815.
+waterloo was a battle.
+hastings was in 1066.
+hastings was a battle.
+trafalgar was in 1805.
+trafalgar was a battle.
+austerlitz was in 1805.
+gettysburg was in 1863.
+gettysburg was a battle.
+agincourt was in 1415.
+agincourt was a battle.
+culloden was in 1746.
+yorktown was in 1781.
+yorktown was a battle.
+lexington was in 1775.
+the alamo was a battle.
+verdun was in 1916.
+verdun was a battle.
+the somme was in 1916.
+the somme was a battle.
+stalingrad was in 1942.
+stalingrad was a battle.
+normandy was in 1944.
+normandy was an invasion.
+dunkirk was in 1940.
+dunkirk was a retreat.
+the blitz was in 1940.
+the blitz was a bombing.
+guernica was in 1937.
+the armistice was in 1918.
+the armistice was a truce.
+nuremberg was in 1945.
+the crusades was in 1096.
+the crusades was a war.
+the reformation was in 1517.
+the reformation was a movement.
+the schism was in 1054.
+the schism was a split.
+the hijra was in 622.
+the plague was in 1347.
+the plague was a pandemic.
+the armada was in 1588.
+the armada was a fleet.
+the declaration was in 1776.
+the declaration was a document.
+the bastille was in 1789.
+the bastille was a prison.
+jamestown was in 1607.
+jamestown was a colony.
+sarajevo was in 1914.
+the anschluss was in 1938.
+prohibition was in 1920.
+prohibition was a ban.
+the depression was in 1929.
+the depression was a crisis.
+watergate was in 1972.
+watergate was a scandal.
+woodstock was in 1969.
+woodstock was a festival.
+the partition was in 1947.
+the partition was a split.
+perestroika was in 1985.
+brexit was in 2016.
+brexit was a vote.
+nato was in 1949.
+nato is an alliance.
+byzantium was an empire.
+byzantium was in turkey.
+persia was an empire.
+persia was in iran.
+babylon was an empire.
+babylon was in iraq.
+assyria was an empire.
+assyria was in iraq.
+carthage was an empire.
+carthage was in tunisia.
+macedon was a kingdom.
+macedon was in greece.
+sparta was a city.
+sparta was in greece.
+troy was a city.
+troy was in turkey.
+constantinople was a city.
+constantinople was in turkey.
+britain was an empire.
+spain was an empire.
+portugal was an empire.
+france was an empire.
+russia was an empire.
+austria was an empire.
+japan was an empire.
+china was an empire.
+mali was an empire.
+ethiopia was an empire.
+mexico was an empire.
+peru was an empire.
+mongolia was an empire.
+augustus was the emperor of rome.
+constantine was the emperor of rome.
+justinian was the emperor of byzantium.
+charlemagne was the king of the franks.
+alexander was the king of macedon.
+leonidas was the king of sparta.
+hannibal was the general of carthage.
+cyrus was the king of persia.
+hammurabi was the king of babylon.
+ramses was the pharaoh of egypt.
+tutankhamun was the pharaoh of egypt.
+nefertiti was the queen of egypt.
+david was the king of israel.
+solomon was the king of israel.
+attila was the ruler of the huns.
+genghis was the ruler of mongolia.
+qin was the emperor of china.
+hirohito was the emperor of japan.
+akbar was the emperor of india.
+ashoka was the emperor of india.
+saladin was the sultan of egypt.
+suleiman was the sultan of turkey.
+montezuma was the emperor of mexico.
+atahualpa was the emperor of peru.
+alfred was the king of england.
+william was the king of england.
+henry was the king of england.
+richard was the king of england.
+louis was the king of france.
+frederick was the king of prussia.
+peter was the emperor of russia.
+catherine was the empress of russia.
+nicholas was the emperor of russia.
+jefferson was the president of america.
+roosevelt was the president of america.
+kennedy was the president of america.
+reagan was the president of america.
+obama was the president of america.
+biden was the president of america.
+trump is the president of america.
+churchill was the leader of britain.
+thatcher was the leader of britain.
+starmer is the leader of britain.
+mitterrand was the president of france.
+macron is the president of france.
+bismarck was the leader of germany.
+hitler was the leader of germany.
+merkel was the leader of germany.
+merz is the leader of germany.
+lenin was the leader of russia.
+stalin was the leader of russia.
+gorbachev was the leader of russia.
+putin is the president of russia.
+mao was the leader of china.
+xi is the president of china.
+nehru was the leader of india.
+modi is the leader of india.
+mussolini was the leader of italy.
+franco was the ruler of spain.
+castro was the leader of cuba.
+ataturk was the president of turkey.
+nasser was the president of egypt.
+trudeau was the leader of canada.
+charles is the king of england.
+felipe is the king of spain.
+naruhito is the emperor of japan.
+zelensky is the president of ukraine.
+lula is the president of brazil.
+netanyahu is the leader of israel.
+leo is a pope.
+muhammad was the founder of islam.
+buddha was the founder of buddhism.
+freud was the founder of psychoanalysis.
+ataturk was the founder of turkey.
+coubertin was the founder of the olympics.
+romulus was the founder of rome.
+a pharaoh is a ruler.
+a sultan is a ruler.
+a dictator is a ruler.
+a pope is a leader.
+a knight is a soldier.
+a samurai is a warrior.
+a gladiator is a fighter.
+a pirate is a sailor.
+a spartan is a soldier.
+a pyramid is a tomb.
+a mummy is a body.
+a crusade is a war.
+an empire is big.
+a knight has a sword.
+a castle has walls.
+a knight lives in a castle.
+a dynasty is a family.
+a colony is a settlement.
+a treaty is an agreement.

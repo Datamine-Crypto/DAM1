@@ -1,0 +1,10 @@
+# What two things said together are: john and tom are friends makes one group that holds them both, and what
+# they are together is written on the group, since neither of them is friends by himself. A quality said
+# before the kind belongs to the group as well. Held out lines use names and kinds the learned lines never use.
+seed: 16-names
+john and tom are friends. => {group} -> {items} -> john; {group} -> {items} -> tom; {group} -> {is} -> friends
+test: zorp and flib are friends. => {group} -> {items} -> zorp; {group} -> {items} -> flib; {group} -> {is} -> friends
+john and i are best friends. => {group} -> {items} -> john; {group} -> {items} -> user; {group} -> {is} -> friends -> {is} -> best
+test: zorp and i are best friends. => {group} -> {items} -> zorp; {group} -> {items} -> user; {group} -> {is} -> friends -> {is} -> best
+ann and mia are sisters. => {group} -> {items} -> ann; {group} -> {items} -> mia; {group} -> {is} -> sisters
+test: kim and sara are neighbours. => {group} -> {items} -> kim; {group} -> {items} -> sara; {group} -> {is} -> neighbours

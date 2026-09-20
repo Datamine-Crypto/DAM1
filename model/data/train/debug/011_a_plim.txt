@@ -1,0 +1,4 @@
+# a plim goes to a quorn: a sets a flag that makes the next thing a new one, even when one of the name exists,
+# and a value under a is a fresh node with no link to a known thing.
+a plim goes to a quorn. => plim:a(true) -> {go} -> quorn:a(true)
+test: a zorp goes to a flib. => zorp:a(true) -> {go} -> flib:a(true)

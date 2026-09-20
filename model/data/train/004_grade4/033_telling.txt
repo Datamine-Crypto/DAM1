@@ -1,0 +1,12 @@
+# A verb of telling reaches someone without giving them the thing: tom told ann a story is tom's
+# deed, and ann is only who heard it. Held out lines use people and things the learned lines never
+# use.
+tom told ann a story. => tom -> {tell} -> story -> {time} -> {past} | what did tom tell? = story
+ann read tom a poem. => ann -> {read} -> poem -> {time} -> {past} | what did ann read? = poem
+mia taught ben a song. => mia -> {teach} -> song -> {time} -> {past} | what did mia teach? = song
+tom read ann a book. => tom -> {read} -> book -> {time} -> {past} | what did tom read? = book
+sara told leo a joke. => sara -> {tell} -> joke -> {time} -> {past} | what did sara tell? = joke
+tom gave ann a book. => ann -> book -> {owner} -> ann | who has the book? = ann
+test: omar told nina a secret. => omar -> {tell} -> secret -> {time} -> {past} | what did omar tell? = secret
+test: kim taught leo a rule. => kim -> {teach} -> rule -> {time} -> {past} | what did kim teach? = rule
+test: ruth gave omar a pen. => omar -> pen -> {owner} -> omar | who has the pen? = omar

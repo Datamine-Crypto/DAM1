@@ -1,0 +1,20 @@
+# Today from its neighbours: yesterday is the day before today and tomorrow the day after, so once
+# yesterday or tomorrow is told, today is the day after yesterday or the day before tomorrow. The
+# turns stay as single chat turns; each scene tells yesterday or tomorrow, and a place or the other
+# neighbour, then asks today, the neighbours, yes or no, and the place.
+seed: 10-time
+seed: 21-verb-forms
+seed: 11-order
+yesterday was sunday. tomorrow is tuesday. => yesterday -> {sunday}; tomorrow -> {tuesday} | what day is today? = monday; what day is it today? = monday; what day was yesterday? = sunday; what day is tomorrow? = tuesday; is today monday? = yes; is today sunday? = no; was yesterday sunday? = yes; is tomorrow monday? = no
+tomorrow is friday. tom is in the kitchen. => tomorrow -> {friday}; tom -> {in} -> kitchen | what day is today? = thursday; what day is it today? = thursday; what day is tomorrow? = friday; is today thursday? = yes; is today friday? = no; is tomorrow friday? = yes; is tomorrow saturday? = no; where is tom? = kitchen
+yesterday was saturday. ann is in the garden. => yesterday -> {saturday}; ann -> {in} -> garden | what day is it today? = sunday; what day is today? = sunday; what day was yesterday? = saturday; what day is tomorrow? = monday; is today sunday? = yes; is today saturday? = no; was yesterday saturday? = yes; where is ann? = garden
+yesterday was tuesday. sam is in the office. => yesterday -> {tuesday}; sam -> {in} -> office | what day is tomorrow? = thursday; what day is today? = wednesday; what day is it today? = wednesday; what day was yesterday? = tuesday; is today wednesday? = yes; is today tuesday? = no; is tomorrow wednesday? = no; where is sam? = office
+turn: yesterday was sunday. what day is today? => yesterday -> {sunday} | monday
+turn: tomorrow is friday. what day is today? => tomorrow -> {friday} | thursday
+turn: yesterday was saturday. what day is it today? => yesterday -> {saturday} | sunday
+turn: tomorrow is monday. what day is it today? => tomorrow -> {monday} | sunday
+turn: yesterday was tuesday. what day is tomorrow? => yesterday -> {tuesday} | thursday
+test: tomorrow is sunday. zoe is in the bedroom. => tomorrow -> {sunday}; zoe -> {in} -> bedroom | what day was yesterday? = friday; what day is today? = saturday; what day is it today? = saturday; what day is tomorrow? = sunday; is today saturday? = yes; is today sunday? = no; is tomorrow sunday? = yes; where is zoe? = bedroom
+test: turn: yesterday was wednesday. what day is today? => yesterday -> {wednesday} | thursday
+test: turn: tomorrow is tuesday. what day is today? => tomorrow -> {tuesday} | monday
+test: turn: tomorrow is sunday. what day was yesterday? => tomorrow -> {sunday} | friday

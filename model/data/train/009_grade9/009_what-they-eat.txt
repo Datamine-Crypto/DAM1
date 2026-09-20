@@ -1,0 +1,17 @@
+# What animals eat, asked of the facts the eating seeds hold: every food under the animal's eats relation is
+# listed, one food of a kind is picked by the kind word, and a food is checked. A plural names the animal,
+# and the foods are said in the singular, as the tree holds them; a wolf is asked in the singular, since its
+# plural is not built by dropping a letter.
+seed: 63-eating
+turn: what does a wolf eat? => | meat, deer, moose, elk, rabbit, salmon
+turn: what does a lion eat? => | meat, zebra, antelope, buffalo
+turn: what do bears eat? => | salmon, berry, honey
+turn: does a wolf eat salmon? => | yes
+turn: does a cow eat salmon? => | no
+turn: what does a panda eat? => | bamboo
+turn: which fish does a wolf eat? => | salmon
+turn: what do frogs eat? => | fly, worm
+test: turn: what do owls eat? => | mouse, vole
+test: turn: does a bear eat honey? => | yes
+test: turn: what does a koala eat? => | eucalyptus
+test: turn: which mammal does a lion eat? => | zebra, antelope

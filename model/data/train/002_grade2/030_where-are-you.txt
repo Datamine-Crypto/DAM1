@@ -1,0 +1,14 @@
+# The network's own place: it stands at the thing the talk is about, and asked where it is it names
+# that thing, the one the last sentence told of first. Held out lines tell of things the learned lines
+# never tell of.
+the car is red. => | where are you? = car
+tom has a dog. => | where are you? = tom
+ann went to the park. => | where are you? = ann
+the key is in the drawer. the lamp is green. => | where are you? = lamp
+the bird is small. => | where are you? = bird
+the cup is full. the plate is clean. => | where are you? = plate
+turn: the soup is hot where are you => | soup
+test: the door is open. => | where are you? = door
+test: ben has a parrot. => | where are you? = ben
+test: the box is in the garden. the hat is black. => | where are you? = hat
+test: turn: the tea is cold where are you => | tea

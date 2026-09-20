@@ -1,0 +1,32 @@
+# The statements of data/facts/measures.txt the cursor tree holds, one path each, written by build-seeds.mjs.
+minute:quantity(1) {equal} second:quantity(60)
+hour:quantity(1) {equal} second:quantity(3600)
+day:quantity(1) {equal} second:quantity(86400)
+week:quantity(1) {equal} second:quantity(604800)
+year:quantity(1) {equal} month:quantity(12)
+meter:quantity(1) {equal} kilometer:quantity(0.001)
+centimeter:quantity(1) {equal} kilometer:quantity(0.00001)
+gram:quantity(1) {equal} gram:quantity(1)
+kilogram -> {weigh} -> gram -> {quantity:value(1000)}
+liter:quantity(1) {equal} liter:quantity(1)
+milliliter:quantity(1) {equal} liter:quantity(0.001)
+dollar:quantity(1) {equal} dollar:quantity(1)
+cent:quantity(1) {equal} dollar:quantity(0.01)
+penny:quantity(1) {equal} dollar:quantity(0.01)
+nickel:quantity(1) {equal} dollar:quantity(0.05)
+dime:quantity(1) {equal} dollar:quantity(0.1)
+quarter:quantity(1) {equal} dollar:quantity(0.25)
+dozen -> {equal} -> {number:value(12)}
+pair -> {equal} -> {number:value(2)}
+half -> {equal} -> {number:value(0.5)}
+third -> {equal} -> {number:value(0.3333333)}
+fifth -> {equal} -> {number:value(0.2)}
+eighth -> {equal} -> {number:value(0.125)}
+tenth -> {equal} -> {number:value(0.1)}
+kilograms -> {weigh} -> gram -> {quantity:value(1000)}
+penny:quantity(1) {equal} cent:quantity(1)
+nickel:quantity(1) {equal} cent:quantity(5)
+dime:quantity(1) {equal} cent:quantity(10)
+quarter:quantity(1) {equal} cent:quantity(25)
+dollar:quantity(1) {equal} cent:quantity(100)
+quarter -> {equal} -> {number:value(0.25)}

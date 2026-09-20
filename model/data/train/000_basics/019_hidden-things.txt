@@ -1,0 +1,23 @@
+# Hidden things games: a text tells what the network knows, and the world holds more than it was
+# told, as marbles in a bag it never counted. A hidden node is nothing a find reaches and nothing a
+# count counts until the network walks to it, so what it knows stays what it was told until it looks
+# again: john told 3 marbles has 4 in the bag, and john's coin, ring and key are three things until
+# the hat behind them is seen. Held out lines use names and things the learned lines never use.
+john has 3 marbles. => john -> {has} -> marble:quantity(3) | how many marbles does john have? = 3
+then: world: not john -> {has} -> marble:quantity(3); john -> {has} -> marble:quantity(4) | look again, how many marbles does john have? = 4
+ann has 2 cards. => ann -> {has} -> card:quantity(2) | how many cards does ann have? = 2
+then: world: not ann -> {has} -> card:quantity(2); ann -> {has} -> card:quantity(5) | look again, how many cards does ann have? = 5
+john has a coin. john has a ring. john has a key. => john -> {has} -> coin; john -> {has} -> ring; john -> {has} -> key | how many things does john have? = 3; does john have a hat? = no
+then: world: john -> {has} -> hat | look again, does john have a hat? = yes; look again, how many things does john have? = 4
+kim has a dog. kim has a cat. => kim -> {has} -> dog; kim -> {has} -> cat | how many pets does kim have? = 2; does kim have a bird? = no
+then: world: kim -> {has} -> hamster | look again, does kim have a hamster? = yes; look again, how many pets does kim have? = 3
+the box holds a pen. the box holds a cup. => box -> {hold} -> pen; box -> {hold} -> cup | how many things does the box hold? = 2; does the box hold a coin? = no
+then: world: box -> {hold} -> coin | look again, does the box hold a coin? = yes; look again, how many things does the box hold? = 3
+sam has 6 pens. => sam -> {has} -> pen:quantity(6) | how many pens does sam have? = 6
+then: world: not sam -> {has} -> pen:quantity(6); sam -> {has} -> pen:quantity(4) | look again, how many pens does sam have? = 4
+test: nina has 5 shells. => nina -> {has} -> shell:quantity(5) | how many shells does nina have? = 5
+test: then: world: not nina -> {has} -> shell:quantity(5); nina -> {has} -> shell:quantity(7) | look again, how many shells does nina have? = 7
+test: paul has a drum. paul has a flute. => paul -> {has} -> drum; paul -> {has} -> flute | how many things does paul have? = 2; does paul have a harp? = no
+test: then: world: paul -> {has} -> harp | look again, does paul have a harp? = yes; look again, how many things does paul have? = 3
+test: the crate holds a vase. the crate holds a lamp. => crate -> {hold} -> vase; crate -> {hold} -> lamp | how many things does the crate hold? = 2; does the crate hold a mug? = no
+test: then: world: crate -> {hold} -> mug | look again, does the crate hold a mug? = yes; look again, how many things does the crate hold? = 3

@@ -1,0 +1,47 @@
+# What animals eat, one food a sentence in the singular, as the tree holds a thing by its singular name, so
+# a question of what a wolf eats lists every food under its eats relation; the kinds of the foods are stated
+# too, so a question of which fish or which mammal picks the food of that kind.
+a wolf eats deer.
+a wolf eats moose.
+a wolf eats elk.
+a wolf eats rabbit.
+a wolf eats salmon.
+a lion eats zebra.
+a lion eats antelope.
+a lion eats buffalo.
+a bear eats salmon.
+a bear eats berry.
+a bear eats honey.
+a cow eats grass.
+a cow eats hay.
+a rabbit eats grass.
+a rabbit eats carrot.
+a panda eats bamboo.
+a koala eats eucalyptus.
+a frog eats fly.
+a frog eats worm.
+an owl eats mouse.
+an owl eats vole.
+a shark eats tuna.
+a shark eats seal.
+a whale eats krill.
+a giraffe eats leaf.
+a squirrel eats nut.
+a squirrel eats acorn.
+a deer is a mammal.
+a moose is a mammal.
+an elk is a mammal.
+a rabbit is a mammal.
+a zebra is a mammal.
+an antelope is a mammal.
+a seal is a mammal.
+a mouse is a mammal.
+a vole is a mammal.
+a salmon is a fish.
+a tuna is a fish.
+a fly is an insect.
+a worm is an animal.
+a carrot is a plant.
+grass is a plant.
+bamboo is a plant.
+a berry is a fruit.

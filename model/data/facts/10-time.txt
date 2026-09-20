@@ -1,0 +1,83 @@
+# Time and the calendar. Plain sentences in the shapes the quiz taught, one fact a line.
+there are 60 seconds in a minute.
+there are 60 minutes in an hour.
+there are 24 hours in a day.
+there are 7 days in a week.
+there are 12 months in a year.
+there are 365 days in a year.
+there are 52 weeks in a year.
+there are 4 seasons in a year.
+there are 10 years in a decade.
+there are 100 years in a century.
+there are 1000 years in a millennium.
+there are 31 days in january.
+there are 28 days in february.
+there are 31 days in march.
+there are 30 days in april.
+there are 31 days in may.
+there are 30 days in june.
+there are 31 days in july.
+there are 31 days in august.
+there are 30 days in september.
+there are 31 days in october.
+there are 30 days in november.
+there are 31 days in december.
+a week has 7 days.
+a year has 12 months.
+a day has 24 hours.
+an hour has 60 minutes.
+a minute has 60 seconds.
+monday is a day.
+tuesday is a day.
+wednesday is a day.
+thursday is a day.
+friday is a day.
+saturday is a day.
+sunday is a day.
+monday is the first day.
+tuesday is the second day.
+wednesday is the third day.
+thursday is the fourth day.
+friday is the fifth day.
+saturday is the sixth day.
+sunday is the seventh day.
+january is a month.
+february is a month.
+march is a month.
+april is a month.
+may is a month.
+june is a month.
+july is a month.
+august is a month.
+september is a month.
+october is a month.
+november is a month.
+december is a month.
+january is the first month.
+february is the second month.
+march is the third month.
+december is the last month.
+spring is a season.
+summer is a season.
+autumn is a season.
+winter is a season.
+summer is hot.
+winter is cold.
+spring is warm.
+autumn is cool.
+the morning is early.
+the night is dark.
+the day is light.
+noon is in the day.
+midnight is in the night.
+the successor of afternoon is evening.
+the successor of morning is afternoon.
+the successor of yesterday is today.
+the successor of today is tomorrow.
+the morning is in today.
+the afternoon is in today.
+the evening is in today.
+weeks are 7 days.
+days are 24 hours.
+hours are 60 minutes.
+minutes are 60 seconds.

@@ -1,0 +1,36 @@
+# More of the same shapes with many names, both articles and every question word, so a network leans
+# on the shape of a sentence rather than on the words it saw. Held out lines use names and things no
+# learned line of any shapes file uses.
+seed: 90-everyday
+seed: 18-qualities
+rex has a bone. the bone is white. => rex -> {has} -> bone -> {is} -> white | what does rex have? = bone; who has the bone? = rex; what color is the bone? = white
+nina has a doll. a doll is small. => nina -> {has} -> doll -> {is} -> small | who has the doll? = nina; what size is the doll? = small; what does nina have? = doll
+the fish is in a tank. the tank is clean. => fish -> {in} -> tank -> {is} -> clean | where is the fish? = tank; what is in the tank? = fish
+a mouse is in the hole. => mouse -> {in} -> hole | where is the mouse? = hole; what is in the hole? = mouse
+paul has a boat. the boat is fast. => paul -> {has} -> boat -> {is} -> fast | what does paul have? = boat; who has the boat? = paul
+the shoe is in the closet. emma has the shoe. => emma -> {has} -> shoe -> {in} -> closet | where is the shoe? = closet; who has the shoe? = emma; what does emma have? = shoe
+leo has a drum. => leo -> {has} -> drum | what does leo have? = drum; who has the drum? = leo
+the apple is in a bowl. the apple is red. => apple -> {in} -> bowl; apple -> {is} -> red | where is the apple? = bowl; what color is the apple? = red; what is in the bowl? = apple
+zoe has a lamp. the lamp is bright. => zoe -> {has} -> lamp -> {is} -> bright | who has the lamp? = zoe; what does zoe have? = lamp
+the sock is in the basket. => sock -> {in} -> basket | where is the sock? = basket; what is in the basket? = sock
+omar has a map. the map is old. => omar -> {has} -> map -> {is} -> old | what does omar have? = map; who has the map? = omar
+the ring holds a stone. the stone is blue. => ring -> {hold} -> stone; stone -> {is} -> blue | what is in the ring? = stone; where is the stone? = ring; what color is the stone? = blue
+ivy has a cat. the cat is in a basket. => ivy -> {has} -> cat -> {in} -> basket | who has the cat? = ivy; where is the cat? = basket; what does ivy have? = cat
+the egg is in the nest. a bird has the nest. => egg -> {in} -> nest; bird -> {has} -> nest | where is the egg? = nest; who has the nest? = bird; what is in the nest? = egg
+carl has a cup. mia has a spoon. => carl -> {has} -> cup; mia -> {has} -> spoon | who has the spoon? = mia; what does carl have? = cup; who has the cup? = carl
+the toy is in a box. the box is brown. => toy -> {in} -> box -> {is} -> brown | where is the toy? = box; what color is the box? = brown
+tina has a pen. the pen is black. => tina -> {has} -> pen -> {is} -> black | what does tina have? = pen; what color is the pen? = black; who has the pen? = tina
+the coat is in the car. => coat -> {in} -> car | where is the coat? = car; what is in the car? = coat
+hugo has a horse. the horse is tall. => hugo -> {has} -> horse -> {is} -> tall | who has the horse? = hugo; what size is the horse? = tall
+the pan holds rice. the rice is hot. => pan -> {hold} -> rice; rice -> {is} -> hot | what is in the pan? = rice; where is the rice? = pan
+test: dora has a flute. the flute is silver. => dora -> {has} -> flute -> {is} -> silver | what does dora have? = flute; who has the flute? = dora; what color is the flute? = silver
+test: the seed is in a pot. => seed -> {in} -> pot | where is the seed? = pot; what is in the pot? = seed
+test: finn has a sled. rosa has a kite. => finn -> {has} -> sled; rosa -> {has} -> kite | who has the kite? = rosa; what does finn have? = sled
+test: the cup holds tea. the tea is warm. => cup -> {hold} -> tea; tea -> {is} -> warm | what is in the cup? = tea; where is the tea? = cup
+the lamp is bright. => lamp -> {is} -> bright | is the lamp bright? = yes
+the sky is clear. => sky -> {is} -> clear | is the sky clear? = yes
+the room is warm. => room -> {is} -> {temperature} -> warm | is the room warm? = yes
+the road is wide. => road -> {is} -> wide | is the road wide? = yes
+the paper is thin. => paper -> {is} -> thin | is the paper thin? = yes
+the lamp is bright. the room is dark. => lamp -> {is} -> bright | is the lamp bright? = yes; is the room dark? = yes
+the star is bright. => star -> {is} -> bright | is the star bright? = yes

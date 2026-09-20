@@ -1,0 +1,29 @@
+# Mixed turns: a chat asks about the world, then tells a story, then asks about the story, then asks about
+# the world again, all on one stack. Each chain starts with a turn and goes on with then lines, so the
+# network learns that a statement after an answered question is written like any other and that a
+# question after a story reads the story first. The world questions read the seeds every chat starts from.
+seed: 21-verb-forms
+seed: 30-geography
+seed: 80-words
+seed: 90-everyday
+seed: 18-qualities
+turn: where is japan? => | asia
+then: tom has a car. => tom -> {has} -> car | who has the car? = tom; what does tom have? = car
+then: turn: where is france? => | europe
+then: tom gave the car to ann. => ann -> {has} -> car; tom -> {has} -> car -> {time} -> {past} | who has the car? = ann; who gave the car? = tom
+turn: what is the capital of france? => | paris
+then: ann has a red hat. => ann -> {has} -> hat -> {red} | what color is the hat? = red; who has the hat? = ann
+then: turn: what is the opposite of hot? => | cold
+then: the hat is in the box. => hat -> {in} -> box | where is the hat? = box; what is in the box? = hat
+turn: where is italy? => | europe
+then: sam has a dog. the dog is brown. => sam -> {has} -> dog -> {brown} | what color is the dog? = brown; who has the dog? = sam
+then: turn: what is the capital of italy? => | rome
+then: sam gave the dog to kim. => kim -> {has} -> dog; sam -> {has} -> dog -> {time} -> {past} | who has the dog? = kim; who gave the dog? = sam
+turn: what is the opposite of big? => | small
+then: the cat is in the garden. => cat -> {in} -> garden | where is the cat? = garden; what is in the garden? = cat
+then: turn: where is egypt? => | africa
+then: the cat went to the house. => cat -> {in} -> house; cat -> {in} -> garden -> {time} -> {past}; cat -> {go} -> house -> {time} -> {past} | where is the cat? = house; where was the cat? = garden
+test: turn: where is spain? => | europe
+test: then: lily has a pen. => lily -> {has} -> pen | who has the pen? = lily; what does lily have? = pen
+test: then: turn: what is the capital of spain? => | madrid
+test: then: lily gave the pen to ben. => ben -> {has} -> pen; lily -> {has} -> pen -> {time} -> {past} | who has the pen? = ben; who gave the pen? = lily

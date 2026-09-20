@@ -1,0 +1,36 @@
+# Partial search games: each game states a world the tree holds and the stack does not, then a text
+# adds a thing of the same name as one the world holds, or a new place or owner. The stack shows
+# only the thing the text added, and the question asks about what the world holds, so the network
+# has to take it that the world holds more than the stack shows, look past the thing it just wrote,
+# and search the tree for the node that holds the answer. Held out lines use names and things the
+# learned lines never use.
+seed: 90-everyday
+seed: 18-qualities
+world: ball -> {in} -> box | where is the ball? = box
+then: ann has a ball. => ann -> {has} -> ball | where is the ball? = box; who has the ball? = ann
+world: cup -> {in} -> bag | where is the cup? = bag
+then: tom has a cup. => tom -> {has} -> cup | who has the cup? = tom; where is the cup? = bag
+world: ann -> {has} -> key -> {in} -> drawer | who has the key? = ann
+then: sam has a key. => sam -> {has} -> key | where is the key? = drawer
+world: pen -> {in} -> desk | where is the pen? = desk
+then: kim has a pen. the pen is blue. => kim -> {has} -> pen -> {blue} | what color is the pen? = blue; where is the pen? = desk
+world: box -> {hold} -> coin | what does the box hold? = coin
+then: lily has a box. => lily -> {has} -> box | who has the box? = lily; what does the box hold? = coin
+world: jar -> {hold} -> jam | what does the jar hold? = jam
+then: max has a jar. the jar is big. => max -> {has} -> jar -> {big} | what size is the jar? = big; what does the jar hold? = jam
+world: tom -> {has} -> ball -> {red} | what color is the ball? = red
+then: ann has a ball. => ann -> {has} -> ball | who has the red ball? = tom; who has the ball? = ann
+world: sue -> {has} -> hat -> {green} | who has the green hat? = sue
+then: joe has a blue hat. => joe -> {has} -> hat -> {blue} | who has the blue hat? = joe; who has the green hat? = sue
+world: ball -> {in} -> box -> {in} -> shed | where is the box? = shed
+then: ben has a ball. => ben -> {has} -> ball | where is the ball? = box; where is the box? = shed
+world: dog -> {in} -> yard; cat -> {in} -> house | where is the cat? = house
+then: kim has a dog. => kim -> {has} -> dog | where is the dog? = yard; where is the cat? = house
+test: world: lamp -> {in} -> attic | where is the lamp? = attic
+test: then: nina has a lamp. => nina -> {has} -> lamp | where is the lamp? = attic; who has the lamp? = nina
+test: world: paul -> {has} -> drum -> {in} -> closet | who has the drum? = paul
+test: then: rosa has a drum. => rosa -> {has} -> drum | where is the drum? = closet
+test: world: crate -> {hold} -> marble | what does the crate hold? = marble
+test: then: paul has a crate. the crate is pink. => paul -> {has} -> crate -> {pink} | what color is the crate? = pink; what does the crate hold? = marble
+test: world: nina -> {has} -> mug -> {purple} | who has the purple mug? = nina
+test: then: rosa has a mug. => rosa -> {has} -> mug | who has the purple mug? = nina; who has the mug? = rosa

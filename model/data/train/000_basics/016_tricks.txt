@@ -1,0 +1,31 @@
+# Trick games: questions built to mislead. A question names an owner who has something else, a
+# thing only the question names, a colour the thing does not have, or a name one letter away from
+# the right one; a silent change touches someone else, or is undone by the next; a count is asked of
+# the wrong person. The answer is what the tree holds, never the word the question dangles, so the
+# network has to search and check instead of echoing. Held out lines use names and things the
+# learned lines never use.
+seed: 90-everyday
+seed: 18-qualities
+john has a hat. ann has a coat. => john -> {has} -> hat; ann -> {has} -> coat | does ann have a hat? = no; does john have a coat? = no; who has the hat? = john; who has the coat? = ann
+tom has a red hat. => tom -> {has} -> hat -> {red} | who has the blue hat? = {nothing}; who has the red hat? = tom; is the hat blue? = no
+the cat is in the garden. => cat -> {in} -> garden | where is the dog? = {nothing}; is the dog in the garden? = no; where is the cat? = garden
+the ball is in the box. the bell is in the bag. => ball -> {in} -> box; bell -> {in} -> bag | where is the bell? = bag; where is the ball? = box; is the ball in the bag? = no
+kim has a dog. => kim -> {has} -> dog | does kim have a cat? = no
+then: world: sam -> {has} -> cat | check again, does kim have a cat? = no; who has the cat? = sam; does kim have a dog? = yes
+the key is in the drawer. => key -> {in} -> drawer | where is the key? = drawer
+then: world: key -> {in} -> bag; not key -> {in} -> drawer | check again, where is the key? = bag
+then: world: key -> {in} -> drawer; not key -> {in} -> bag | check again, where is the key? = drawer; is the key in the bag? = no
+tom has a car. => tom -> {has} -> car | who has the car? = tom
+then: world: ann -> {has} -> car; not tom -> {has} -> car | does tom still have the car? = no; who has the car? = ann
+ben has 3 apples. ann has 3 pears. => ben -> {has} -> apple:quantity(3); ann -> {has} -> pear:quantity(3) | how many pears does ben have? = {nothing}; how many apples does ann have? = {nothing}; how many apples does ben have? = 3
+sue has a pen. the pen is blue. => sue -> {has} -> pen -> {blue} | what color is the cup? = {nothing}; who has the cup? = {nothing}; what color is the pen? = blue
+max has a kite. joe has a kite. => max -> {has} -> kite; joe -> {has} -> kite | does lily have a kite? = no; does joe have a kite? = yes
+the milk is in the jar. => milk -> {in} -> jar | is the milk in the cup? = no; what is in the cup? = {nothing}; what is in the jar? = milk
+test: nina has a drum. paul has a flute. => nina -> {has} -> drum; paul -> {has} -> flute | does paul have a drum? = no; does nina have a flute? = no; who has the flute? = paul
+test: rosa has a pink mug. => rosa -> {has} -> mug -> {pink} | who has the purple mug? = {nothing}; who has the pink mug? = rosa; is the mug purple? = no
+test: the lamp is in the attic. => lamp -> {in} -> attic | where is the vase? = {nothing}; is the vase in the attic? = no; where is the lamp? = attic
+test: paul has a vase. => paul -> {has} -> vase | does paul have a harp? = no
+test: then: world: nina -> {has} -> harp | check again, does paul have a harp? = no; who has the harp? = nina; does paul have a vase? = yes
+test: the tray is in the porch. => tray -> {in} -> porch | where is the tray? = porch
+test: then: world: tray -> {in} -> shed; not tray -> {in} -> porch | check again, where is the tray? = shed
+test: then: world: tray -> {in} -> porch; not tray -> {in} -> shed | check again, where is the tray? = porch; is the tray in the shed? = no

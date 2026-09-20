@@ -1,0 +1,20 @@
+# Units counted back up: a larger unit of time holds a number of a smaller one, so some of the smaller
+# unit make that many over the number the larger one holds. The traced line and the turns stay as
+# single lessons; each scene tells how much time several people have, then asks many of those counts
+# back in larger units, and each count.
+seed: 20-numbers-and-measures
+seed: 10-time
+seed: measures
+turn: how many hours are 120 minutes? => | 2
+turn: how many minutes are 180 seconds? => | 3
+turn: how many days are 48 hours? => | 2
+turn: how many weeks are 21 days? => | 3
+turn: how many minutes are 120 seconds? => | 2
+turn: how many weeks are 14 days? => | 2
+turn: how many years are 48 months? => | 4
+turn: how many years are 60 months? => | 5
+tom has 120 minutes. ann has 180 seconds. => {number:value(120)}; tom -> {has} -> minute:quantity(120); {number:value(180)}; ann -> {has} -> second:quantity(180) | how many hours are 120 minutes? = 2; how many minutes are 180 seconds? = 3; how many days are 48 hours? = 2; how many weeks are 21 days? = 3; how many minutes are 120 seconds? = 2; how many weeks are 14 days? = 2; how many hours are 60 minutes? = 1; how many minutes are 60 seconds? = 1; how many minutes does tom have? = 120; how many seconds does ann have? = 180
+kim has 48 hours. joe has 21 days. => {number:value(48)}; kim -> {has} -> hour:quantity(48); {number:value(21)}; joe -> {has} -> day:quantity(21) | how many days are 48 hours? = 2; how many weeks are 21 days? = 3; how many weeks are 14 days? = 2; how many hours are 120 minutes? = 2; how many days are 72 hours? = 3; how many weeks are 28 days? = 4; how many minutes are 180 seconds? = 3; how many hours does kim have? = 48; how many days does joe have? = 21
+test: zoe has 300 minutes. ben has 24 months. => {number:value(300)}; zoe -> {has} -> minute:quantity(300); {number:value(24)}; ben -> {has} -> month:quantity(24) | how many hours are 300 minutes? = 5; how many years are 24 months? = 2; how many hours are 180 minutes? = 3; how many years are 36 months? = 3; how many days are 96 hours? = 4; how many weeks are 35 days? = 5; how many minutes does zoe have? = 300; how many months does ben have? = 24
+test: turn: how many hours are 300 minutes? => | 5
+test: turn: how many years are 24 months? => | 2

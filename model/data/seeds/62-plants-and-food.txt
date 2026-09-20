@@ -1,0 +1,248 @@
+# The statements of data/facts/62-plants-and-food.txt the cursor tree holds, one path each, written by build-seeds.mjs.
+willow {is} tree
+elm {is} tree
+beech {is} tree
+cedar {is} tree
+fir {is} tree
+spruce {is} tree
+redwood {is} tree
+sequoia {is} tree
+baobab {is} tree
+eucalyptus {is} tree
+orchid {is} flower
+daffodil {is} flower
+poppy {is} flower
+lavender {is} flower
+buttercup {is} flower
+dandelion {is} flower
+bluebell {is} flower
+snowdrop {is} flower
+lotus {is} flower
+bamboo {is} grass
+shrub {is} plant
+bush {is} plant
+vine {is} plant
+weed {is} plant
+herb {is} plant
+ivy {is} plant
+seaweed {is} plant
+reed {is} plant
+nettle {is} weed
+thistle {is} weed
+mushroom {is} fungus
+toadstool {is} fungus
+yeast {is} fungus
+mold {is} fungus
+daffodil -> {is} -> {color} -> yellow
+poppy -> {is} -> {color} -> red
+lavender -> {is} -> {color} -> purple
+bluebell -> {is} -> {color} -> blue
+snowdrop -> {is} -> {color} -> white
+dandelion -> {is} -> {color} -> yellow
+buttercup -> {is} -> {color} -> yellow
+moss -> {is} -> {color} -> green
+ivy -> {is} -> {color} -> green
+rose {has} thorns
+cactus {has} spines
+oak {has} acorns
+pine {has} cones
+palm {has} coconuts
+vine {has} grapes
+bush {has} berries
+flower {has} scent
+clover -> {leave:quantity(3)}
+redwood -> {is} -> tallest
+sequoia -> {is} -> biggest
+oak -> {strong}
+sunflower -> {is} -> {size} -> tall
+cactus -> {prickly}
+lotus {in} water
+reed {in} water
+seaweed {in} sea
+mushroom {in} forest
+wheat {is} grain
+rice {is} grain
+corn {is} grain
+barley {is} grain
+rye {is} grain
+millet {is} grain
+quinoa {is} grain
+grain {is} seed
+cereal {material} grain
+porridge {material} oats
+pasta {material} flour
+noodle {material} flour
+kiwi {is} fruit
+avocado {is} fruit
+apricot {is} fruit
+fig {is} fruit
+coconut {is} fruit
+pomegranate {is} fruit
+raspberry {is} fruit
+blueberry {is} fruit
+blackberry {is} fruit
+cranberry {is} fruit
+grapefruit {is} fruit
+watermelon {is} fruit
+tangerine {is} fruit
+lime {is} fruit
+olive {is} fruit
+berry {is} fruit
+kiwi -> {is} -> {color} -> green
+avocado -> {is} -> {color} -> green
+apricot -> {is} -> {color} -> orange
+raspberry -> {is} -> {color} -> red
+blueberry -> {is} -> {color} -> blue
+blackberry -> {is} -> {color} -> black
+cranberry -> {is} -> {color} -> red
+watermelon -> {is} -> {color} -> green
+tangerine -> {is} -> {color} -> orange
+fig -> {is} -> {color} -> purple
+pomegranate -> {is} -> {color} -> red
+coconut -> {is} -> {color} -> brown
+pear -> {is} -> {color} -> green
+mango -> {sweet}
+strawberry -> {sweet}
+lime -> {sour}
+grapefruit -> {bitter}
+nut {is} seed
+almond {is} nut
+walnut {is} nut
+peanut {is} nut
+cashew {is} nut
+hazelnut {is} nut
+pistachio {is} nut
+chestnut {is} nut
+pecan {is} nut
+leek {is} vegetable
+turnip {is} vegetable
+radish {is} vegetable
+beetroot {is} vegetable
+spinach {is} vegetable
+kale {is} vegetable
+broccoli {is} vegetable
+cauliflower {is} vegetable
+celery {is} vegetable
+asparagus {is} vegetable
+artichoke {is} vegetable
+zucchini {is} vegetable
+parsnip {is} vegetable
+yam {is} vegetable
+garlic {is} vegetable
+eggplant {is} vegetable
+chili {is} pepper
+lentil {is} legume
+chickpea {is} legume
+soybean {is} legume
+legume {is} plant
+beetroot -> {is} -> {color} -> red
+spinach -> {is} -> {color} -> green
+broccoli -> {is} -> {color} -> green
+cauliflower -> {is} -> {color} -> white
+radish -> {is} -> {color} -> red
+chili -> {is} -> {temperature} -> hot
+garlic -> {strong}
+basil {is} herb
+mint {is} herb
+parsley {is} herb
+rosemary {is} herb
+cinnamon {is} spice
+ginger {is} spice
+turmeric {is} spice
+saffron {is} spice
+vanilla {is} spice
+mustard -> {is} -> {color} -> yellow
+mustard -> {is} -> {temperature} -> hot
+saffron -> {is} -> {color} -> yellow
+turmeric -> {is} -> {color} -> yellow
+cinnamon -> {is} -> {color} -> brown
+ginger -> {is} -> {temperature} -> hot
+cake {material} flour
+cake {material} sugar
+biscuit {material} flour
+biscuit {material} butter
+pancake {material} flour
+pancake {material} eggs
+pizza {material} dough
+pizza {material} cheese
+dough {material} flour
+dough {material} water
+sandwich {material} bread
+toast {material} bread
+hamburger {material} beef
+sausage {material} meat
+ham {material} pork
+bacon {material} pork
+steak {material} beef
+sushi {material} rice
+sushi {material} fish
+salad {material} lettuce
+salad {material} tomato
+soup {material} vegetables
+stew {material} meat
+stew {material} vegetables
+omelette {material} eggs
+mayonnaise {material} eggs
+mayonnaise {material} oil
+ketchup {material} tomatoes
+jam {material} fruit
+jam {material} sugar
+honey {material} nectar
+cream {material} milk
+tofu {material} soy
+hummus {material} chickpeas
+falafel {material} chickpeas
+guacamole {material} avocado
+popcorn {material} corn
+tortilla {material} corn
+beef {is} meat
+pork {is} meat
+ham {is} meat
+bacon {is} meat
+steak {is} meat
+cheddar {is} cheese
+brie {is} cheese
+bagel {is} bread
+baguette {is} bread
+beer {is} drink
+cider {is} drink
+lemonade {is} drink
+whisky {is} drink
+vodka {is} drink
+rum {is} drink
+gin {is} drink
+sake {is} drink
+tequila {is} drink
+champagne {is} wine
+smoothie {is} drink
+milkshake {is} drink
+vodka {is} russian
+sake {is} japanese
+whisky -> {scottish}
+tequila -> {mexican}
+champagne {is} french
+beer {material} barley
+cider {material} apples
+lemonade {material} lemons
+sake {material} rice
+tequila {material} agave
+tea {material} leaves
+coffee {material} beans
+juice {material} fruit
+smoothie {material} fruit
+milkshake {material} milk
+beer -> {bitter}
+coffee -> {bitter}
+lemonade -> {sweet}
+breakfast {is} meal
+lunch {is} meal
+dinner {is} meal
+supper {is} meal
+dessert -> {sweet}
+cake {is} dessert
+pea {in} pod
+pod {has} peas
+potato {in} ground
+carrot {in} ground
+wheat {in} field
+honey {in} hive

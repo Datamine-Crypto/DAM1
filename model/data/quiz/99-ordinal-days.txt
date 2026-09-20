@@ -1,0 +1,16 @@
+# Ordinal days and months: the week starts on monday and the year on january, so the first, second or
+# last day of the week and month of the year are counted in that order. Each scene tells today and
+# tomorrow, then asks many places in the week and the year; the turns stay as single chat turns.
+seed: 11-order
+today is monday. tomorrow is tuesday. => today is monday; tomorrow is tuesday | what is the first day of the week? = monday; what is the third day of the week? = wednesday; what is the last day of the week? = sunday; what is the fourth day of the week? = thursday; what is the fifth day of the week? = friday; what is the first month of the year? = january; what is the fifth month of the year? = may; what is the last month of the year? = december; what is the third month of the year? = march; what is the eighth month of the year? = august; what day is today? = monday; what day is tomorrow? = tuesday
+today is friday. tomorrow is saturday. => today is friday; tomorrow is saturday | what is the seventh day of the week? = sunday; what is the fifth day of the week? = friday; what is the first day of the week? = monday; what is the last day of the week? = sunday; what is the sixth month of the year? = june; what is the second month of the year? = february; what is the fourth month of the year? = april; what is the ninth month of the year? = september; what is the twelfth month of the year? = december; what is the last month of the year? = december; what day is today? = friday; what day is tomorrow? = saturday
+turn: what is the first day of the week? {eom} => | monday
+turn: what is the third day of the week? {eom} => | wednesday
+turn: what is the last day of the week? {eom} => | sunday
+turn: what is the first month of the year? {eom} => | january
+turn: what is the fifth month of the year? {eom} => | may
+turn: what is the last month of the year? {eom} => | december
+test: today is sunday. tomorrow is monday. => today is sunday; tomorrow is monday | what is the second day of the week? = tuesday; what is the sixth day of the week? = saturday; what is the tenth month of the year? = october; what is the seventh month of the year? = july; what is the eleventh month of the year? = november; what is the third day of the week? = wednesday; what is the first month of the year? = january; what is the last day of the week? = sunday; what day is today? = sunday; what day is tomorrow? = monday
+test: turn: what is the second day of the week? {eom} => | tuesday
+test: turn: what is the tenth month of the year? {eom} => | october
+test: turn: what is the sixth day of the week? {eom} => | saturday

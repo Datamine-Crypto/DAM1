@@ -1,0 +1,16 @@
+[package]
+name = "dam-cli"
+version = "0.1.0"
+edition = "2024"
+license = "AGPL-3.0-or-later"
+publish = false
+
+[[bin]]
+name = "dam"
+path = "src/main.rs"
+
+[dependencies]
+premise = "0.1.5"
+dam-core = { path = "../dam-core" }
+dam-console = { path = "../dam-console" }
+spec = { path = "../spec" }

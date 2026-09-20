@@ -1,0 +1,12 @@
+# Price of many: things that each cost the same cost that price once for each thing, so some things at
+# a price each cost the price times how many there are. The traced line and the turns stay as single
+# lessons; each scene tells the price of several things, then asks what many of them cost and each price.
+turn: how much do 5 pens cost at 2 dollars each? {eom} => | 10
+turn: how much do 3 books cost at 7 dollars each? {eom} => | 21
+turn: how much do 4 apples cost at 25 cents each? {eom} => | 100
+turn: how much do 6 cups cost at 3 dollars each? {eom} => | 18
+the pen costs 2 dollars. the book costs 7 dollars. the cup costs 3 dollars. => pen is 2; 2 = 2; book is 7; 7 = 7; cup is 3; 3 = 3 | how much do 5 pens cost at 2 dollars each? = 10; how much do 3 books cost at 7 dollars each? = 21; how much do 6 cups cost at 3 dollars each? = 18; how much do 4 apples cost at 25 cents each? = 100; how much do 2 pens cost at 2 dollars each? = 4; how much do 10 cups cost at 3 dollars each? = 30; how much does the pen cost? = 2; how much is the book? = 7; how much does the cup cost? = 3
+the apple costs 25 cents. the kite costs 6 dollars. => apple is 25; 25 = 25; kite is 6; 6 = 6 | how much do 4 apples cost at 25 cents each? = 100; how much do 5 pens cost at 2 dollars each? = 10; how much do 3 kites cost at 6 dollars each? = 18; how much do 2 apples cost at 25 cents each? = 50; how much do 3 books cost at 7 dollars each? = 21; how much do 4 kites cost at 6 dollars each? = 24; how much does the kite cost? = 6; how much is the apple? = 25
+test: the ball costs 4 dollars. the hat costs 15 dollars. => ball is 4; 4 = 4; hat is 15; 15 = 15 | how much do 8 balls cost at 4 dollars each? = 32; how much do 2 hats cost at 15 dollars each? = 30; how much do 3 hats cost at 15 dollars each? = 45; how much do 5 balls cost at 4 dollars each? = 20; how much do 10 balls cost at 4 dollars each? = 40; how much does the hat cost? = 15; how much is the ball? = 4; how much do 4 hats cost at 15 dollars each? = 60
+test: turn: how much do 8 balls cost at 4 dollars each? {eom} => | 32
+test: turn: how much do 2 hats cost at 15 dollars each? {eom} => | 30

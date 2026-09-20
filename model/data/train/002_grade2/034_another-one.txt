@@ -1,0 +1,17 @@
+# Another thing of a name someone already has is a second thing of that name, so they have two.
+# One of them, then the other, tells each of the two apart: one of my cars is blue, the other is red.
+# Held out lines use owners and things the learned lines never use.
+i have a car. i have another car. => user -> car -> {owner} -> user | how many cars do i have? = 2
+tom has a dog. tom has another dog. => tom -> dog -> {owner} -> tom | how many dogs does tom have? = 2
+tom has a dog. => tom -> dog -> {owner} -> tom | how many dogs does tom have? = 1
+i have a car. i have another car. one of my cars is blue. the other is red. => user -> car -> {is} -> {color} -> red | how many cars do i have? = 2
+i have a car. i have another car. one of my cars is blue. the other car is red. => user -> car -> {is} -> {color} -> blue | how many cars do i have? = 2
+tom has a dog. tom has another dog. one of his dogs is big. the other is small. => tom -> dog -> {is} -> {size} -> small | how many dogs does tom have? = 2
+anna has a hat. anna has another hat. => anna -> hat -> {owner} -> anna | how many hats does anna have? = 2
+ben has a kite. ben has another kite. one of his kites is green. the other is white. => ben -> kite -> {is} -> {color} -> white | how many kites does ben have? = 2
+i have a pen. i have another pen. one of my pens is black. the other pen is pink. => user -> pen -> {is} -> {color} -> pink | how many pens do i have? = 2
+sara has a cat. sara has another cat. one of her cats is old. the other is young. => sara -> cat -> {is} -> {age} -> young | how many cats does sara have? = 2
+test: i have a bike. i have another bike. => user -> bike -> {owner} -> user | how many bikes do i have? = 2
+test: leo has a boat. leo has another boat. one of his boats is yellow. the other is brown. => leo -> boat -> {is} -> {color} -> brown | how many boats does leo have? = 2
+test: i have a cup. i have another cup. one of my cups is small. the other cup is big. => user -> cup -> {is} -> {size} -> big | how many cups do i have? = 2
+test: mia has a bird. => mia -> bird -> {owner} -> mia | how many birds does mia have? = 1

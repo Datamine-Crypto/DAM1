@@ -1,0 +1,9 @@
+# The opposite of is stated once for both ends: the opposite of hot is cold answers what is the
+# opposite of cold as well as what is the opposite of hot, since the cursor reads a relation from
+# either end; the seeded pair is told once too.
+# Each scene tells two pairs, each once, then asks each opposite from both ends, yes and no, and the
+# opposite of a word the scene never told, which the seeds answer when they know it.
+seed: 13-both-ways
+the opposite of hot is cold. the opposite of big is small. => hot -> {opposite} -> cold; big -> {opposite} -> small | what is the opposite of hot? = cold; what is the opposite of cold? = hot; what is the opposite of small? = big; what is the opposite of big? = small; is cold the opposite of hot? = yes; is hot the opposite of cold? = yes; is big the opposite of small? = yes; is small the opposite of hot? = no; is cold the opposite of big? = no; what is the opposite of wet? = dry
+the opposite of wet is dry. the opposite of fast is slow. => wet -> {opposite} -> dry; fast -> {opposite} -> slow | what is the opposite of dry? = wet; what is the opposite of wet? = dry; what is the opposite of slow? = fast; what is the opposite of fast? = slow; is dry the opposite of wet? = yes; is wet the opposite of dry? = yes; is slow the opposite of fast? = yes; is fast the opposite of wet? = no; is dry the opposite of slow? = no; what is the opposite of hot? = cold
+test: the opposite of loud is quiet. the opposite of light is dark. => loud -> {opposite} -> quiet; light -> {opposite} -> dark | what is the opposite of quiet? = loud; what is the opposite of dark? = light; what is the opposite of loud? = quiet; what is the opposite of light? = dark; is quiet the opposite of loud? = yes; is dark the opposite of loud? = no; is loud the opposite of quiet? = yes; what is the opposite of soft? = hard

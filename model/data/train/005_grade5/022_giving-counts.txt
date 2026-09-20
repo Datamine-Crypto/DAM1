@@ -1,0 +1,14 @@
+# Counts given away: lily has 5 pens and gave 2 to max leaves lily 3 and gives max 2. The count given is
+# taken off the giver's group, named or not, and the one given to holds a group of that many. Held out
+# lines use people, things and numbers the learned lines never use.
+seed: 90-everyday
+seed: 21-verb-forms
+lily has 5 pens. she gave 2 to max. => lily -> {has} -> pen; max -> {has} -> pen | how many pens does lily have? = 3; how many pens does max have? = 2; who has 2 pens? = max
+ben has 9 cards. he gave 4 cards to zoe. => ben -> {has} -> card; zoe -> {has} -> card | how many cards does ben have? = 5; how many cards does zoe have? = 4; who has 4 cards? = zoe
+tom has 10 apples. he gave 3 apples to ann. he gave 2 apples to sam. => tom -> {has} -> apple; ann -> {has} -> apple; sam -> {has} -> apple | how many apples does tom have? = 5; how many apples does ann have? = 3; how many apples does sam have? = 2
+sue has 8 coins. she gave 6 to joe. => sue -> {has} -> coin; joe -> {has} -> coin | how many coins does sue have? = 2; how many coins does joe have? = 6
+turn: mary has 7 books she gave 2 books to fred how many books does mary have => mary -> {has} -> book; fred -> {has} -> book | 5
+turn: bill has 6 cups he gave 1 cup to jeff how many cups does jeff have => bill -> {has} -> cup; jeff -> {has} -> cup | 1
+test: kim has 12 shells. she gave 5 to dan. => kim -> {has} -> shell; dan -> {has} -> shell | how many shells does kim have? = 7; how many shells does dan have? = 5
+test: rose has 20 stamps. she gave 8 stamps to bill. => rose -> {has} -> stamp; bill -> {has} -> stamp | how many stamps does rose have? = 12; how many stamps does bill have? = 8
+test: turn: joe has 15 marbles he gave 9 marbles to ann how many marbles does joe have => joe -> {has} -> marble; ann -> {has} -> marble | 6

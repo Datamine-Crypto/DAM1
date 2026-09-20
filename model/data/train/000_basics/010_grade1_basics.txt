@@ -1,0 +1,28 @@
+# The Grade 1 concepts in their simplest shapes, so the network that Grade 1 starts from has seen
+# each once: counting, adding and taking away as chat turns, kinds of kinds, whose things, prices and
+# their total, and a chat turn that tells and asks at once.
+seed: 90-everyday
+seed: 18-qualities
+seed: 17-speakers
+there are 3 cats in the box. => cat -> {in} -> box; cat:quantity(3); {number:value(3)} | how many cats are in the box? = 3; where are the cats? = box
+there are 4 dogs in the yard. => dog -> {in} -> yard; dog:quantity(4); {number:value(4)} | how many dogs are in the yard? = 4
+i have 2 pens. => user -> {has} -> pen:quantity(2); {number:value(2)} | how many pens do i have? = 2
+tom has 5 apples. => tom -> {has} -> apple:quantity(5); {number:value(5)} | how many apples does tom have? = 5; who has the apples? = tom
+turn: what is 2 + 3? => | 5
+turn: what is 7 - 2? => | 5
+turn: what is 4 plus 4? => | 8
+turn: what is 9 minus 3? => | 6
+turn: 6 + 1 = => | 7
+turn: 8 - 5 = => | 3
+a cat is an animal. a kitten is a cat. => cat -> {is} -> animal; kitten -> {is} -> cat | is a kitten an animal? = yes; is a kitten a cat? = yes; is a cat a kitten? = no; what is a kitten? = cat
+an apple is a fruit. a fruit is food. => fruit -> {is} -> food; apple -> {is} -> fruit | is an apple food? = yes; is a fruit an apple? = no
+tom's dog is big. => tom -> {has} -> dog -> {big} | who has the dog? = tom; what size is the dog? = big
+ann's cat is black. => ann -> {has} -> cat -> {black} | whose cat is black? = ann; what color is the cat? = black
+a pen costs 2 dollars. a cup costs 3 dollars. => pen -> {cost} -> dollar:quantity(2); {number:value(2)}; cup -> {cost} -> dollar:quantity(3); {number:value(3)} | how much is the pen? = 2; how much do the pen and the cup cost in total? = 5
+turn: tom has a cat where is the cat => tom -> {has} -> cat | {nothing}
+turn: the cup is on the table where is the cup => cup -> {on} -> table | table
+turn: there are 3 birds in the tree how many birds are in the tree => bird -> {in} -> tree; bird:quantity(3); {number:value(3)} | 3
+test: there are 6 fish in the pond. => pond -> {has} -> fish:quantity(6); {number:value(6)} | how many fish are in the pond? = 6
+test: turn: what is 5 + 4? => | 9
+test: a puppy is a dog. a dog is an animal. => dog -> {is} -> animal; puppy -> {is} -> dog | is a puppy an animal? = yes
+test: ben's hat is red. => ben -> {has} -> hat -> {red} | who has the hat? = ben

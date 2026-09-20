@@ -1,0 +1,207 @@
+# Inventions and discoveries: the year each one came, what it is, and who made it.
+the telephone was in 1876.
+the lightbulb was in 1879.
+the phonograph was in 1877.
+the radio was in 1895.
+the television was in 1926.
+the airplane was in 1903.
+printing was in 1440.
+the telescope was in 1608.
+the microscope was in 1590.
+dynamite was in 1867.
+penicillin was in 1928.
+the vaccine was in 1796.
+the telegraph was in 1837.
+the battery was in 1800.
+the locomotive was in 1825.
+the steamboat was in 1807.
+the bicycle was in 1817.
+the rocket was in 1926.
+the jet was in 1939.
+the balloon was in 1783.
+the parachute was in 1797.
+the elevator was in 1853.
+the camera was in 1826.
+cinema was in 1895.
+the piano was in 1700.
+the saxophone was in 1846.
+the barometer was in 1643.
+the stethoscope was in 1816.
+aspirin was in 1897.
+the typewriter was in 1868.
+the zipper was in 1893.
+the gramophone was in 1887.
+the thermos was in 1892.
+the microwave was in 1945.
+the laser was in 1960.
+the microchip was in 1958.
+paper was in 105.
+the calculator was in 1642.
+braille was in 1824.
+esperanto was in 1887.
+velcro was in 1941.
+nylon was in 1935.
+bakelite was in 1907.
+the hovercraft was in 1955.
+insulin was in 1921.
+radium was in 1898.
+tetris was in 1984.
+the lightbulb is an invention.
+the phonograph is an invention.
+the radio is an invention.
+the television is an invention.
+the airplane is an invention.
+the car is an invention.
+the microscope is an invention.
+dynamite is an invention.
+the vaccine is an invention.
+the web is an invention.
+the telegraph is an invention.
+the battery is an invention.
+the locomotive is an invention.
+the steamboat is an invention.
+the bicycle is an invention.
+the motorcycle is an invention.
+the helicopter is an invention.
+the rocket is an invention.
+the jet is an invention.
+the balloon is an invention.
+the parachute is an invention.
+the elevator is an invention.
+the camera is an invention.
+cinema is an invention.
+the piano is an invention.
+the saxophone is an invention.
+the thermometer is an invention.
+the barometer is an invention.
+the stethoscope is an invention.
+the typewriter is an invention.
+the zipper is an invention.
+the gramophone is an invention.
+the thermos is an invention.
+the microwave is an invention.
+the transistor is an invention.
+the laser is an invention.
+the microchip is an invention.
+the calculator is an invention.
+velcro is an invention.
+nylon is an invention.
+the hovercraft is an invention.
+the submarine is an invention.
+the refrigerator is an invention.
+the seismograph is an invention.
+the inventor of the telephone is bell.
+the inventor of the lightbulb is edison.
+the inventor of the phonograph is edison.
+the inventor of the radio is marconi.
+the inventor of the television is baird.
+the inventor of the airplane is wright.
+the inventor of the car is benz.
+the inventor of the motorcycle is daimler.
+the inventor of printing is gutenberg.
+the inventor of the microscope is janssen.
+the inventor of dynamite is nobel.
+the inventor of the vaccine is jenner.
+the inventor of the web is berners.
+the inventor of the telegraph is morse.
+the inventor of the battery is volta.
+the inventor of the thermometer is galileo.
+the inventor of the barometer is torricelli.
+the inventor of the piano is cristofori.
+the inventor of the saxophone is sax.
+the inventor of the bicycle is drais.
+the inventor of the tyre is dunlop.
+the inventor of the typewriter is sholes.
+the inventor of the zipper is judson.
+the inventor of jeans is strauss.
+the inventor of the microwave is spencer.
+the inventor of the elevator is otis.
+the inventor of the helicopter is sikorsky.
+the inventor of the balloon is montgolfier.
+the inventor of the parachute is garnerin.
+the inventor of the rocket is goddard.
+the inventor of the jet is whittle.
+the inventor of the locomotive is stephenson.
+the inventor of the steamboat is fulton.
+the inventor of the submarine is drebbel.
+the inventor of the camera is niepce.
+the inventor of cinema is lumiere.
+the inventor of the gramophone is berliner.
+the inventor of the laser is maiman.
+the inventor of linux is torvalds.
+the inventor of java is gosling.
+the inventor of the iphone is jobs.
+the inventor of tetris is pajitnov.
+the inventor of the stethoscope is laennec.
+the inventor of aspirin is hoffmann.
+the inventor of bifocals is franklin.
+the inventor of the calculator is pascal.
+the inventor of logarithms is napier.
+the inventor of calculus is newton.
+the inventor of algebra is khwarizmi.
+the inventor of esperanto is zamenhof.
+the inventor of basketball is naismith.
+the inventor of volleyball is morgan.
+the inventor of lego is christiansen.
+the inventor of velcro is mestral.
+the inventor of nylon is carothers.
+the inventor of bakelite is baekeland.
+the inventor of the hovercraft is cockerell.
+the inventor of the dishwasher is cochrane.
+the inventor of the refrigerator is perkins.
+the inventor of the seismograph is zhang.
+the inventor of the dynamo is faraday.
+the inventor of the pen is biro.
+the inventor of the toothbrush is addis.
+the inventor of the crossword is wynne.
+the inventor of the razor is gillette.
+the inventor of the lawnmower is budding.
+the inventor of cornflakes is kellogg.
+the inventor of the photocopier is carlson.
+the inventor of the thermos is dewar.
+the inventor of the match is walker.
+the inventor of the kindergarten is froebel.
+the discoverer of penicillin is fleming.
+the discoverer of gravity is newton.
+the discoverer of oxygen is priestley.
+the discoverer of hydrogen is cavendish.
+the discoverer of radium is curie.
+the discoverer of polonium is curie.
+the discoverer of radioactivity is becquerel.
+the discoverer of the electron is thomson.
+the discoverer of the neutron is chadwick.
+the discoverer of the nucleus is rutherford.
+the discoverer of the proton is rutherford.
+the discoverer of the positron is anderson.
+the discoverer of fission is hahn.
+the discoverer of uranus is herschel.
+the discoverer of neptune is galle.
+the discoverer of pluto is tombaugh.
+the discoverer of ceres is piazzi.
+the discoverer of pulsars is burnell.
+the discoverer of insulin is banting.
+the discoverer of evolution is darwin.
+the discoverer of relativity is einstein.
+the discoverer of bacteria is leeuwenhoek.
+the discoverer of cells is hooke.
+the discoverer of circulation is harvey.
+the discoverer of heredity is mendel.
+the discoverer of dna is miescher.
+the discoverer of viruses is ivanovsky.
+the discoverer of vitamins is funk.
+the discoverer of electromagnetism is oersted.
+the discoverer of induction is faraday.
+the discoverer of superconductivity is onnes.
+the discoverer of helium is lockyer.
+the discoverer of argon is ramsay.
+the discoverer of neon is ramsay.
+the discoverer of chlorine is scheele.
+the discoverer of sodium is davy.
+the discoverer of potassium is davy.
+the discoverer of phosphorus is brand.
+the discoverer of the pacific is balboa.
+the discoverer of brazil is cabral.
+the discoverer of newfoundland is cabot.
+the discoverer of tasmania is tasman.
+the discoverer of troy is schliemann.
+the discoverer of tutankhamun is carter.

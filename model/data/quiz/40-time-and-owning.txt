@@ -1,0 +1,12 @@
+# When: a day or a month is a place a thing is at, and "when" asks for it as "where" asks for a
+# place. Owning said outright: "owns" is the owner's verb, and "who owns" asks for the owner.
+# Each line is a scene: a few events and owners, then many questions about them (when, what is
+# on a day, who owns, what an owner owns, how many, yes and no, and a thing the scene does not name).
+the meeting is on monday. the party is on friday. tom owns a car. => meeting in monday; party in friday; tom owns car | when is the meeting? = monday; when is the party? = friday; who owns the car? = tom; who has the car? = tom; what does tom own? = car; does tom own a car? = yes; does tom own a bike? = no; is the meeting on monday? = yes; is the party on monday? = no; what is on friday? = party; when is the game? = nothing; who owns the bike? = nothing
+the game is in june. the trip is in july. ann owns a bike. => game in june; trip in july; ann owns bike | when is the game? = june; when is the trip? = july; who owns the bike? = ann; who has the bike? = ann; what does ann own? = bike; is the trip in july? = yes; is the game in july? = no; what is in june? = game; does ann own a bike? = yes; does ann own a car? = no; does tom own a bike? = no; when is the fair? = nothing
+the concert is in april. the fair is in march. the festival is in october. tom owns two cats. => concert in april; fair in march; festival in october; tom owns cats; cats is two; two = 2 | when is the concert? = april; when is the fair? = march; when is the festival? = october; who owns the cats? = tom; how many cats does tom own? = 2; who owns a cat? = tom; does tom own cats? = yes; what is in october? = festival; what is in march? = fair; is the fair in april? = no; when is the party? = nothing
+turn: the party is on friday the game is on monday when is the party {eom} => party in friday; game in monday | friday
+turn: ann owns a bike tom owns a car who owns the bike {eom} => ann owns bike; tom owns car | ann
+turn: sue owns a cat ben owns a dog who owns the cat {eom} => sue owns cat; ben owns dog | sue
+test: the show is on sunday. the race is in may. ben owns a boat. => show in sunday; race in may; ben owns boat | when is the show? = sunday; when is the race? = may; who owns the boat? = ben; who has the boat? = ben; what does ben own? = boat; is the race in may? = yes; is the show in may? = no; what is on sunday? = show; does ben own a car? = no; when is the concert? = nothing
+test: turn: tom owns a dog sam owns a kite who owns the dog {eom} => tom owns dog; sam owns kite | tom

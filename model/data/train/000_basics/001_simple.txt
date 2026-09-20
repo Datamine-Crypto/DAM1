@@ -1,0 +1,17 @@
+# The self-loop's first lines: statements alone. A line passes when the permanent state holds the
+# shape after the arrow, whatever else it holds. Place, ownership and joining facts on one-word names.
+seed: 90-everyday
+seed: 18-qualities
+corn inside bag. => corn -> {inside} -> bag
+the cat is in the box. => cat -> {in} -> box
+the pen is in the cup. => pen -> {in} -> cup
+the key is in the drawer. => key -> {in} -> drawer
+tom has a car. => tom -> {has} -> car
+ann has a dog. => ann -> {has} -> dog
+sam has a hat. => sam -> {has} -> hat
+the car is red. => car -> {is} -> red
+the dog is big. => dog -> {is} -> big
+the ball is blue. => ball -> {is} -> blue
+test: the book is in the bag. => book -> {in} -> bag
+test: kim has a bike. => kim -> {has} -> bike
+test: the sky is blue. => sky -> {is} -> blue

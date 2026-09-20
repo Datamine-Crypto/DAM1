@@ -1,0 +1,19 @@
+# Percent of a number: percent means out of a hundred, so some percent of a number is that number
+# divided into a hundred equal parts and that many of the parts taken. Each scene tells what several
+# people have, then asks percents of those counts, the counts, and which count is largest; the turns
+# stay as single chat turns.
+tom has 80 dollars. ann has 200 dollars. sam has 40 dollars. => {number:value(80)}; tom -> {has} -> dollar:quantity(80); {number:value(200)}; ann -> {has} -> dollar:quantity(200); {number:value(40)}; sam -> {has} -> dollar:quantity(40) | what is 50 percent of 80? = 40; what is 10 percent of 200? = 20; what is 25% of 40? = 10; what is 50 percent of 200? = 100; what is 10 percent of 80? = 8; what is 25 percent of 200? = 50; how many dollars does tom have? = 80; how many dollars does sam have? = 40; who has the most dollars? = ann; how many more dollars does ann have than tom? = 120; how many dollars do tom and ann have? = 280; what is 50 percent of tom's dollars? = 40
+kim has 70 cards. joe has 50 cards. lily has 60 cards. max has 20 cards. => {number:value(70)}; kim -> {has} -> card:quantity(70); {number:value(50)}; joe -> {has} -> card:quantity(50); {number:value(60)}; lily -> {has} -> card:quantity(60); {number:value(20)}; max -> {has} -> card:quantity(20) | what is 30 percent of 70? = 21; what is 40 percent of 50? = 20; what is 5 percent of 60? = 3; what is 60 percent of 20? = 12; what is 100 percent of 7? = 7; what is 50 percent of 60? = 30; what is 10 percent of 70? = 7; how many cards does kim have? = 70; how many cards does max have? = 20; who has the fewest cards? = max; how many cards do kim and joe have? = 120; what is 40 percent of joe's cards? = 20
+turn: what is 50 percent of 80? => | 40
+turn: what is 10 percent of 200? => | 20
+turn: what is 25% of 40? => | 10
+turn: what is 100 percent of 7? => | 7
+turn: what is 30 percent of 70? => | 21
+turn: what is 40 percent of 50? => | 20
+turn: what is 5 percent of 60? => | 3
+turn: what is 60 percent of 20? => | 12
+test: zoe has 50 stickers. ben has 8 stickers. sue has 90 stickers. => {number:value(50)}; zoe -> {has} -> sticker:quantity(50); {number:value(8)}; ben -> {has} -> sticker:quantity(8); {number:value(90)}; sue -> {has} -> sticker:quantity(90) | what is 20 percent of 50? = 10; what is 75% of 8? = 6; what is 10 percent of 90? = 9; what is 50 percent of 8? = 4; what is 20 percent of 90? = 18; what is 25% of 8? = 2; how many stickers does sue have? = 90; who has the most stickers? = sue; what is 10 percent of sue's stickers? = 9
+test: turn: what is 20 percent of 50? => | 10
+test: turn: what is 75% of 8? => | 6
+turn: what is 75 % of 12? => | 9
+turn: what is 25 % of 8? => | 2

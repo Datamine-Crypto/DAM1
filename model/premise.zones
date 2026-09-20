@@ -1,0 +1,10 @@
+library = premise
+library = wasm-bindgen
+patterns = dam-core
+patterns = dam-console
+patterns = dam-card
+patterns = dam-page
+spec = spec
+app = app
+app = dam-cli
+app = dam-web

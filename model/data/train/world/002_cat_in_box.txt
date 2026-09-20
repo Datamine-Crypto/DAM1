@@ -1,0 +1,3 @@
+# the cat is in the box: the cat appears with the flag the, is adds is, in steps up to the cat and grabs it, the box appears and takes the cat.
+the cat is in the box. => box:the(true) -> cat:the(true)
+test: the wexel is in the tornd. => tornd:the(true) -> wexel:the(true)

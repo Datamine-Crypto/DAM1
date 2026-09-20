@@ -1,0 +1,24 @@
+# Two steps: a question can take a number through two steps, halving or doubling it first and then
+# adding or taking away, each step done on what the one before gave. The traced lines and the turns
+# stay as single lessons; each scene tells what several people have, then asks many two-step sums,
+# the counts and totals.
+turn: what is double 4 plus 3? => | 11
+turn: what is half of 10 plus 2? => | 7
+turn: what is double 6 minus 5? => | 7
+turn: what is half of 20 minus 4? => | 6
+tom has 4 apples. ann has 10 apples. sam has 6 apples. => {number:value(4)}; tom -> {has} -> apple:quantity(4); {number:value(10)}; ann -> {has} -> apple:quantity(10); {number:value(6)}; sam -> {has} -> apple:quantity(6) | what is double 4 plus 3? = 11; what is half of 10 plus 2? = 7; what is double 6 minus 5? = 7; what is half of 20 minus 4? = 6; what is double 10 plus 1? = 21; what is half of 6 plus 4? = 7; what is double 4 minus 2? = 6; how many apples does sam have? = 6; who has the most apples? = ann; how many apples do tom and sam have? = 10
+kim has 20 cards. joe has 5 cards. lily has 12 cards. => {number:value(20)}; kim -> {has} -> card:quantity(20); {number:value(5)}; joe -> {has} -> card:quantity(5); {number:value(12)}; lily -> {has} -> card:quantity(12) | what is half of 20 minus 4? = 6; what is double 5 plus 2? = 12; what is half of 12 minus 1? = 5; what is double 6 minus 5? = 7; what is double 4 plus 3? = 11; what is half of 20 plus 3? = 13; how many cards does kim have? = 20; who has the fewest cards? = joe; how many more cards does kim have than lily? = 8
+test: zoe has 9 stickers. ben has 8 stickers. => {number:value(9)}; zoe -> {has} -> sticker:quantity(9); {number:value(8)}; ben -> {has} -> sticker:quantity(8) | what is double 9 plus 1? = 19; what is half of 8 minus 3? = 1; what is double 8 minus 6? = 10; what is half of 8 plus 5? = 9; what is double 9 minus 4? = 14; how many stickers does zoe have? = 9; who has more stickers? = zoe; how many stickers do zoe and ben have? = 17
+test: turn: what is double 9 plus 1? => | 19
+test: turn: what is half of 8 minus 3? => | 1
+# More two-step sums asked cold, with other numbers in each place.
+turn: what is double 7 plus 2? => | 16
+turn: what is double 12 minus 4? => | 20
+turn: what is double 3 plus 9? => | 15
+turn: what is half of 6 plus 5? => | 8
+turn: what is half of 30 minus 7? => | 8
+turn: what is half of 14 plus 1? => | 8
+turn: what is half of 40 minus 12? => | 8
+test: turn: what is double 5 minus 3? => | 7
+test: turn: what is half of 12 plus 6? => | 12
+test: turn: what is half of 18 minus 2? => | 7

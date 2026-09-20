@@ -1,0 +1,72 @@
+# The statements of data/facts/25-mathematics.txt the cursor tree holds, one path each, written by build-seeds.mjs.
+{number:value(1)} -> {odd}
+{number:value(2)} -> {even}
+{number:value(3)} -> {odd}
+{number:value(4)} -> {even}
+{number:value(5)} -> {odd}
+{number:value(6)} -> {even}
+{number:value(7)} -> {odd}
+{number:value(8)} -> {even}
+{number:value(9)} -> {odd}
+{number:value(10)} -> {even}
+{number:value(2)} {is} prime
+{number:value(3)} {is} prime
+{number:value(5)} {is} prime
+{number:value(7)} {is} prime
+{number:value(11)} {is} prime
+{number:value(13)} {is} prime
+{number:value(17)} {is} prime
+{number:value(19)} {is} prime
+{number:value(23)} {is} prime
+{number:value(29)} {is} prime
+{number:value(31)} {is} prime
+{number:value(37)} {is} prime
+{number:value(41)} {is} prime
+{number:value(43)} {is} prime
+{number:value(47)} {is} prime
+{number:value(2)} -> {is} -> smallest
+{number:value(4)} {is} square
+{number:value(9)} {is} square
+{number:value(16)} {is} square
+{number:value(25)} {is} square
+{number:value(36)} {is} square
+{number:value(49)} {is} square
+{number:value(64)} {is} square
+{number:value(81)} {is} square
+{number:value(100)} {is} square
+{number:value(8)} {is} cube
+{number:value(27)} {is} cube
+{number:value(64)} {is} cube
+{number:value(125)} {is} cube
+{number:value(1000)} {is} cube
+{number:value(0)} -> {nothing}
+half -> {equal} -> {number:value(0.5)}
+quarter -> {equal} -> {number:value(0.25)}
+third -> {equal} -> {number:value(0.333)}
+tenth -> {equal} -> {number:value(0.1)}
+percent {is} hundredth
+pi -> {equal} -> {number:value(3.14159)}
+{number:value(4)} {root} {number:value(2)}
+{number:value(9)} {root} {number:value(3)}
+{number:value(16)} {root} {number:value(4)}
+{number:value(25)} {root} {number:value(5)}
+{number:value(100)} {root} {number:value(10)}
+sum {is} answer
+product {is} answer
+difference {is} answer
+quotient {is} answer
+fraction {has} numerator
+fraction {has} denominator
+equation -> {side:quantity(2)}
+triangle -> {angle:quantity(3)}
+square -> {angle:quantity(4)}
+circle {has} center
+circle {has} radius
+circle {has} diameter
+sphere -> {round}
+line -> {straight}
+geometry -> {mathematics}
+algebra -> {mathematics}
+arithmetic -> {mathematics}
+prime -> {divisor:quantity(2)}
+zero -> {even}

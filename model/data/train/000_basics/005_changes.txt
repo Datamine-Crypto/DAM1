@@ -1,0 +1,18 @@
+# Changes over time. A then line is read on the stack and the permanent state the line above it left,
+# so a later sentence changes what an earlier one said. A thing has one owner and one place: giving
+# a thing replaces its owner, and moving a thing replaces its place.
+tom has a car. => tom -> {has} -> car | who has the car? = tom
+the ball is in the box. => ball -> {in} -> box | where is the ball? = box
+then: the ball moves to the bag. => ball -> {in} -> bag; not ball -> {in} -> box | where is the ball? = bag; what is in the bag? = ball
+sam has a pen. => sam -> {has} -> pen | who has the pen? = sam
+the cat is in the house. => cat -> {in} -> house | where is the cat? = house
+then: the cat goes to the garden. => cat -> {in} -> garden; not cat -> {in} -> house | where is the cat? = garden
+ben has a hat. => ben -> {has} -> hat | what does ben have? = hat
+the key is in the drawer. => key -> {in} -> drawer | where is the key? = drawer
+then: the key moves to the cup. => key -> {in} -> cup; not key -> {in} -> drawer | where is the key? = cup
+nina has a doll. => nina -> {has} -> doll | who has the doll? = nina
+the fish is in the tank. => fish -> {in} -> tank | where is the fish? = tank
+then: the fish goes to the bowl. => fish -> {in} -> bowl; not fish -> {in} -> tank | where is the fish? = bowl; what is in the bowl? = fish
+test: max has a kite. => max -> {has} -> kite | who has the kite? = max
+test: the toy is in the car. => toy -> {in} -> car | where is the toy? = car
+test: then: the toy goes to the shelf. => toy -> {in} -> shelf; not toy -> {in} -> car | where is the toy? = shelf

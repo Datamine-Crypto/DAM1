@@ -1,0 +1,30 @@
+# More of the shapes the network missed on held out lines: two owners in one input, contains and
+# holds, giving to new names, pointing back with it, he and she, and what does someone have.
+seed: 90-everyday
+seed: 18-qualities
+jack has a bat. lucy has a ball. => jack -> {has} -> bat; lucy -> {has} -> ball | who has the ball? = lucy; what does jack have? = bat; who has the bat? = jack
+eva has a comb. adam has a brush. => eva -> {has} -> comb; adam -> {has} -> brush | what does adam have? = brush; who has the comb? = eva
+the dog has a toy. the cat has a bell. => dog -> {has} -> toy; cat -> {has} -> bell | what does the cat have? = bell; who has the toy? = dog
+mona has a scarf. the scarf is red. pete has a cap. => mona -> {has} -> scarf -> {red}; pete -> {has} -> cap | who has the cap? = pete; what does mona have? = scarf; what color is the scarf? = red
+the jar contains jam. => jam -> {in} -> jar | what is in the jar? = jam; where is the jam? = jar
+a sack contains flour. => flour -> {in} -> sack | where is the flour? = sack; what is in the sack? = flour
+the chest contains gold. the gold is old. => gold -> {in} -> chest; gold -> {old} | what is in the chest? = gold; where is the gold? = chest
+the bag holds apples. => apples -> {in} -> bag | what is in the bag? = apples; where are the apples? = bag
+the vase holds a rose. => rose -> {in} -> vase | where is the rose? = vase; what is in the vase? = rose
+ana has a book. => ana -> {has} -> book | who has the book? = ana
+then: ana gives the book to leo. => leo -> {has} -> book; not ana -> {has} -> book | who has the book? = leo; what does leo have? = book
+kai has a ring. => kai -> {has} -> ring | what does kai have? = ring
+then: kai gives the ring to mia. => mia -> {has} -> ring; not kai -> {has} -> ring | who has the ring? = mia
+the cup is in the sink. => cup -> {in} -> sink | where is the cup? = sink
+then: the cup moves to the shelf. => cup -> {in} -> shelf; not cup -> {in} -> sink | where is the cup? = shelf; what is in the shelf? = cup
+ray has a fish. it is gold. => ray -> {has} -> fish -> {gold} | what color is the fish? = gold; what does ray have? = fish
+lena has a bag. she is tall. => lena -> {has} -> bag; lena -> {tall} | what size is lena? = tall; who has the bag? = lena
+otto has a dog. he is old. => otto -> {has} -> dog; otto -> {old} | how is otto? = old; what does otto have? = dog
+the cat has a hat. it is blue. => cat -> {has} -> hat -> {blue} | what color is the hat? = blue; who has the hat? = cat
+bo has a kite. => bo -> {has} -> kite | who has the kite? = bo
+then: it is green. => bo -> {has} -> kite -> {green} | what color is the kite? = green
+test: ines has a mug. theo has a pen. => ines -> {has} -> mug; theo -> {has} -> pen | who has the pen? = theo; what does ines have? = mug
+test: the tin contains tea. => tea -> {in} -> tin | what is in the tin? = tea; where is the tea? = tin
+test: nick has a hat. => nick -> {has} -> hat | who has the hat? = nick
+test: then: nick gives the hat to zara. => zara -> {has} -> hat; not nick -> {has} -> hat | who has the hat? = zara; what does zara have? = hat
+test: gus has a boat. it is fast. => gus -> {has} -> boat -> {fast} | what does gus have? = boat

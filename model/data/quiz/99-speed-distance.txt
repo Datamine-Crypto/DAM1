@@ -1,0 +1,12 @@
+# Speed, distance and time: something that goes a distance every hour goes that distance once for each
+# hour it travels, so the distance is the speed times the hours. The traced line and the turns stay as
+# single lessons; each scene tells who has or rides what, then asks many distances and the riders.
+turn: how far does a car go in 3 hours at 50 kilometers an hour? {eom} => | 150
+turn: how far does a man walk in 2 hours at 4 miles an hour? {eom} => | 8
+turn: how far does a train go in 5 hours at 60 kilometers an hour? {eom} => | 300
+turn: how far does a bike go in 4 hours at 10 miles an hour? {eom} => | 40
+tom has a car. ann has a bike. => tom owns car; ann owns bike | how far does a car go in 3 hours at 50 kilometers an hour? = 150; how far does a bike go in 4 hours at 10 miles an hour? = 40; how far does a car go in 2 hours at 50 kilometers an hour? = 100; how far does a bike go in 3 hours at 10 miles an hour? = 30; how far does a man walk in 2 hours at 4 miles an hour? = 8; who has the car? = tom; who has the bike? = ann; what does ann have? = bike; does tom have a bike? = no
+sam is on the train. kim is on the boat. => sam in train; kim in boat | how far does a train go in 5 hours at 60 kilometers an hour? = 300; how far does a man walk in 2 hours at 4 miles an hour? = 8; how far does a boat go in 3 hours at 20 kilometers an hour? = 60; how far does a train go in 2 hours at 60 kilometers an hour? = 120; how far does a man walk in 3 hours at 4 miles an hour? = 12; where is sam? = train; where is kim? = boat; is kim on the train? = no; who is on the boat? = kim
+test: zoe is on the bus. ben is on the ship. => zoe in bus; ben in ship | how far does a bus go in 2 hours at 80 kilometers an hour? = 160; how far does a girl walk in 6 hours at 3 miles an hour? = 18; how far does a bus go in 3 hours at 80 kilometers an hour? = 240; how far does a ship go in 4 hours at 30 kilometers an hour? = 120; how far does a girl walk in 2 hours at 3 miles an hour? = 6; where is zoe? = bus; where is ben? = ship; is ben on the bus? = no
+test: turn: how far does a bus go in 2 hours at 80 kilometers an hour? {eom} => | 160
+test: turn: how far does a girl walk in 6 hours at 3 miles an hour? {eom} => | 18

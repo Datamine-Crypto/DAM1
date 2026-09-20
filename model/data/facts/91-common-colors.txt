@@ -1,0 +1,20 @@
+# The colors of common things, as a child is told them.
+grass is green.
+the sky is blue.
+snow is white.
+coal is black.
+milk is white.
+a lemon is yellow.
+a tomato is red.
+a carrot is orange.
+a cherry is red.
+a strawberry is red.
+a frog is green.
+a crow is black.
+a swan is white.
+chocolate is brown.
+a leaf is green.
+the sea is blue.
+a flamingo is pink.
+a plum is purple.
+an elephant is grey.

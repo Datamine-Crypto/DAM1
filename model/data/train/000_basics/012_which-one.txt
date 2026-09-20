@@ -1,0 +1,25 @@
+# Which one games: each line states a world the tree holds and the stack does not, where several
+# people own a thing of the same name and each thing has its own colour or size. A question asks who
+# owns the one with a given colour or size, so the network looks at a thing, checks it, and goes on
+# to the next thing of that name when the check says no. Held out lines use names, things and
+# colours the learned lines never use.
+seed: 90-everyday
+seed: 18-qualities
+world: tom -> {has} -> ball -> {red}; ann -> {has} -> ball -> {blue} | who owns the blue ball? = ann
+world: sam -> {has} -> cup -> {green}; ben -> {has} -> cup -> {red} | who owns the green cup? = sam
+world: kim -> {has} -> hat -> {blue}; lily -> {has} -> hat -> {yellow}; max -> {has} -> hat -> {red} | who owns the red hat? = max
+world: sue -> {has} -> car -> {big}; joe -> {has} -> car -> {small} | who owns the small car? = joe
+world: tom -> {has} -> bike -> {yellow}; ann -> {has} -> bike -> {green}; sam -> {has} -> bike -> {blue} | who owns the yellow bike? = tom
+world: ben -> {has} -> kite -> {red}; kim -> {has} -> kite -> {green} | who owns the green kite? = kim
+world: lily -> {has} -> ball -> {big}; max -> {has} -> ball -> {small}; sue -> {has} -> ball -> {red} | who owns the small ball? = max
+world: joe -> {has} -> cup -> {blue}; tom -> {has} -> cup -> {yellow} | who owns the blue cup? = joe
+world: ann -> {has} -> hat -> {green}; sam -> {has} -> hat -> {red}; ben -> {has} -> hat -> {blue} | who owns the blue hat? = ben
+world: kim -> {has} -> car -> {red}; lily -> {has} -> car -> {blue} | who owns the red car? = kim
+world: max -> {has} -> bike -> {big}; sue -> {has} -> bike -> {small} | who owns the big bike? = max
+world: joe -> {has} -> kite -> {yellow}; tom -> {has} -> kite -> {blue}; ann -> {has} -> kite -> {green} | who owns the green kite? = ann
+world: sam -> {has} -> ball -> {blue}; ben -> {has} -> ball -> {green} | who owns the green ball? = ben
+world: kim -> {has} -> cup -> {small}; lily -> {has} -> cup -> {big}; max -> {has} -> cup -> {red} | who owns the big cup? = lily
+test: world: nina -> {has} -> lamp -> {pink}; paul -> {has} -> lamp -> {purple} | who owns the purple lamp? = paul
+test: world: rosa -> {has} -> drum -> {purple}; nina -> {has} -> drum -> {pink}; paul -> {has} -> drum -> {orange} | who owns the pink drum? = nina
+test: world: paul -> {has} -> sock -> {orange}; rosa -> {has} -> sock -> {pink} | who owns the orange sock? = paul
+test: world: nina -> {has} -> mug -> {purple}; rosa -> {has} -> mug -> {orange}; paul -> {has} -> mug -> {pink} | who owns the pink mug? = paul

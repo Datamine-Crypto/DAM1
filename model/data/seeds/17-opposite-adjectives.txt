@@ -1,0 +1,17 @@
+# The statements of data/facts/17-opposite-adjectives.txt the cursor tree holds, one path each, written by build-seeds.mjs.
+tall {opposite} short
+big {opposite} small
+old {opposite} young
+fast {opposite} slow
+heavy {opposite} light
+high {opposite} low
+hot {opposite} cold
+deep {opposite} shallow
+rich {opposite} poor
+taller {opposite} shorter
+bigger {opposite} smaller
+older {opposite} younger
+faster {opposite} slower
+heavier {opposite} lighter
+higher {opposite} lower
+hotter {opposite} colder

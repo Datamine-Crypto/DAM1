@@ -1,0 +1,10 @@
+# The passive voice asks the same fact the other way round: who is ann liked by asks for the one whose
+# like holds ann, as who likes ann does, and who was the mouse chased by for the one whose chase holds
+# the mouse, with the time past. A past form after is or was is the deed's own form, not the tense of the
+# question. Each scene tells one liking now and one deed done, then asks each the passive way, the
+# active way, yes and no, and a passive of a thing no one holds.
+seed: 21-verb-forms
+tom likes ann. the cat chased the mouse. => tom -> {like} -> ann; cat -> {chase} -> mouse -> {time} -> {past} | who is ann liked by? = tom; who was the mouse chased by? = cat; who likes ann? = tom; is ann liked by tom? = yes; is tom liked by ann? = no; who is tom liked by? = {nothing}
+sue helps ben. the dog saw the bird. => sue -> {help} -> ben; dog -> {see} -> bird -> {time} -> {past} | who is ben helped by? = sue; who was the bird seen by? = dog; who helps ben? = sue; is ben helped by sue? = yes; is sue helped by ben? = no; who is sue helped by? = {nothing}
+kim calls joe. max met lily. => kim -> {call} -> joe; max -> {meet} -> lily -> {time} -> {past} | who is joe called by? = kim; who was lily met by? = max; who calls joe? = kim; is joe called by kim? = yes; is kim called by joe? = no; who was max met by? = {nothing}
+test: ann likes tom. the bird chased the cat. => ann -> {like} -> tom; bird -> {chase} -> cat -> {time} -> {past} | who is tom liked by? = ann; who was the cat chased by? = bird; who likes tom? = ann; is tom liked by ann? = yes; is ann liked by tom? = no; who is ann liked by? = {nothing}

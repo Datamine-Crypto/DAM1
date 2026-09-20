@@ -1,0 +1,24 @@
+# Clock time: on a clock with twelve hours, some hours after a time is that many hours on, and some
+# hours ago is that many hours back, the hours wrapping round past twelve.
+# The chat turns stay turns. Each scene tells the time once, then asks the time now and many times
+# some hours on and some hours ago. The reader reads no statement from it is 3 o'clock, so the scenes
+# expect no statements; one time a scene, since two would contradict.
+seed: 21-verb-forms
+seed: 12-clock
+turn: it is 3 o'clock. what time will it be in 2 hours? => it -> {time} -> clock:quantity(3) | 5
+turn: it is 11 o'clock. what time will it be in 3 hours? => it -> {time} -> clock:quantity(11) | 2
+turn: it is 9 o'clock. what time was it 4 hours ago? => it -> {time} -> clock:quantity(9) | 5
+turn: it is 1 o'clock. what time was it 2 hours ago? => it -> {time} -> clock:quantity(1) | 11
+turn: it is 9 o'clock. what time will it be in 5 hours? => it -> {time} -> clock:quantity(9) | 2
+turn: it is 12 o'clock. what time will it be in 3 hours? => it -> {time} -> clock:quantity(12) | 3
+turn: it is 4 o'clock. what time will it be in 9 hours? => it -> {time} -> clock:quantity(4) | 1
+it is 3 o'clock. => it -> {time} -> clock:quantity(3) | what time will it be in 2 hours? = 5; what time will it be in 3 hours? = 6; what time will it be in 9 hours? = 12; what time will it be in 10 hours? = 1; what time will it be in 12 hours? = 3; what time was it 2 hours ago? = 1; what time was it 4 hours ago? = 11; what time was it 3 hours ago? = 12; what time is it? = 3
+it is 11 o'clock. => it -> {time} -> clock:quantity(11) | what time will it be in 3 hours? = 2; what time will it be in 2 hours? = 1; what time will it be in 5 hours? = 4; what time will it be in 12 hours? = 11; what time will it be in 4 hours? = 3; what time was it 2 hours ago? = 9; what time was it 11 hours ago? = 12; what time was it 5 hours ago? = 6; what time is it? = 11
+it is 9 o'clock. => it -> {time} -> clock:quantity(9) | what time was it 4 hours ago? = 5; what time will it be in 5 hours? = 2; what time will it be in 3 hours? = 12; what time will it be in 2 hours? = 11; what time will it be in 6 hours? = 3; what time was it 9 hours ago? = 12; what time was it 10 hours ago? = 11; what time was it 2 hours ago? = 7; what time is it? = 9
+it is 1 o'clock. => it -> {time} -> clock:quantity(1) | what time was it 2 hours ago? = 11; what time was it 3 hours ago? = 10; what time was it 5 hours ago? = 8; what time will it be in 2 hours? = 3; what time will it be in 11 hours? = 12; what time will it be in 12 hours? = 1; what time will it be in 4 hours? = 5; what time was it 12 hours ago? = 1; what time is it? = 1
+it is 12 o'clock. => it -> {time} -> clock:quantity(12) | what time will it be in 3 hours? = 3; what time will it be in 12 hours? = 12; what time will it be in 5 hours? = 5; what time will it be in 7 hours? = 7; what time was it 2 hours ago? = 10; what time was it 6 hours ago? = 6; what time was it 11 hours ago? = 1; what time was it 3 hours ago? = 9; what time is it? = 12
+it is 4 o'clock. => it -> {time} -> clock:quantity(4) | what time will it be in 9 hours? = 1; what time will it be in 8 hours? = 12; what time will it be in 10 hours? = 2; what time will it be in 2 hours? = 6; what time was it 4 hours ago? = 12; what time was it 5 hours ago? = 11; what time was it 3 hours ago? = 1; what time was it 7 hours ago? = 9; what time is it? = 4
+test: turn: it is 6 o'clock. what time will it be in 5 hours? => it -> {time} -> clock:quantity(6) | 11
+test: turn: it is 10 o'clock. what time will it be in 4 hours? => it -> {time} -> clock:quantity(10) | 2
+test: it is 6 o'clock. => it -> {time} -> clock:quantity(6) | what time will it be in 5 hours? = 11; what time will it be in 6 hours? = 12; what time will it be in 7 hours? = 1; what time will it be in 3 hours? = 9; what time was it 6 hours ago? = 12; what time was it 8 hours ago? = 10; what time was it 2 hours ago? = 4; what time is it? = 6
+test: it is 10 o'clock. => it -> {time} -> clock:quantity(10) | what time will it be in 4 hours? = 2; what time will it be in 2 hours? = 12; what time will it be in 5 hours? = 3; what time will it be in 8 hours? = 6; what time was it 10 hours ago? = 12; what time was it 3 hours ago? = 7; what time was it 11 hours ago? = 11; what time is it? = 10

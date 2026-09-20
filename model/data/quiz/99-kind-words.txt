@@ -1,0 +1,14 @@
+# A word that names a relation after of names a kind when no of follows: french is the language
+# of france is a relation, english is a language joins english to the kind; the same for capital,
+# king, queen and president.
+# Each scene tells kinds and relations together, then asks each kind, each relation, yes and no, and
+# a relation the scene never told. Each turn tells two kinds and asks one.
+english is a language. french is the language of france. paris is a capital. paris is the capital of france. => english is language; french language france; paris is capital; paris capital france | what is english? = language; is english a language? = yes; what is the language of france? = french; what is paris? = capital; what is the capital of france? = paris; is paris a capital? = yes; is english the language of france? = no; is paris the capital of spain? = no; is paris a language? = no; what is the language of spain? = nothing; what is the capital of spain? = nothing
+arthur was a king. arthur is the king of camelot. victoria was a queen. lincoln was a president. => arthur is king; arthur king camelot; victoria is queen; lincoln is president | who was arthur? = king; who is the king of camelot? = arthur; is victoria a queen? = yes; what was lincoln? = president; who was victoria? = queen; was lincoln a president? = yes; is lincoln a king? = no; is arthur a king? = yes; who was lincoln? = president; is victoria a president? = no; who is the queen of camelot? = nothing
+berlin is a capital. madrid is a capital. dutch is a language. => berlin is capital; madrid is capital; dutch is language | is berlin a capital? = yes; what is madrid? = capital; is madrid a capital? = yes; what is berlin? = capital; what is dutch? = language; is dutch a language? = yes; is dutch a capital? = no; is berlin a language? = no; what is the capital of camelot? = nothing
+turn: german is a language berlin is a capital what is german {eom} => german is language; berlin is capital | language
+turn: elizabeth was a queen arthur was a king who was elizabeth {eom} => elizabeth is queen; arthur is king | queen
+turn: arthur was a king lincoln was a president who was arthur {eom} => arthur is king; lincoln is president | king
+turn: lincoln was a president victoria was a queen who was lincoln {eom} => lincoln is president; victoria is queen | president
+test: spanish is a language. rome is a capital. rome is the capital of italy. => spanish is language; rome is capital; rome capital italy | what is spanish? = language; is rome a capital? = yes; what is the capital of italy? = rome; what is rome? = capital; is spanish a language? = yes; is rome a language? = no; is spanish a capital? = no; what is the language of italy? = nothing
+test: turn: cleopatra was a queen nero was a king who was cleopatra {eom} => cleopatra is queen; nero is king | queen

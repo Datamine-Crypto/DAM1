@@ -1,0 +1,33 @@
+# The value of each number word, as statements the permanent state holds: a line seeded with this file
+# starts knowing that three is worth three without the words being heard.
+zero -> {equal} -> {number:value(0)}
+one -> {equal} -> {number:value(1)}
+two -> {equal} -> {number:value(2)}
+three -> {equal} -> {number:value(3)}
+four -> {equal} -> {number:value(4)}
+five -> {equal} -> {number:value(5)}
+six -> {equal} -> {number:value(6)}
+seven -> {equal} -> {number:value(7)}
+eight -> {equal} -> {number:value(8)}
+nine -> {equal} -> {number:value(9)}
+ten -> {equal} -> {number:value(10)}
+eleven -> {equal} -> {number:value(11)}
+twelve -> {equal} -> {number:value(12)}
+thirteen -> {equal} -> {number:value(13)}
+fourteen -> {equal} -> {number:value(14)}
+fifteen -> {equal} -> {number:value(15)}
+sixteen -> {equal} -> {number:value(16)}
+seventeen -> {equal} -> {number:value(17)}
+eighteen -> {equal} -> {number:value(18)}
+nineteen -> {equal} -> {number:value(19)}
+twenty -> {equal} -> {number:value(20)}
+thirty -> {equal} -> {number:value(30)}
+forty -> {equal} -> {number:value(40)}
+fifty -> {equal} -> {number:value(50)}
+sixty -> {equal} -> {number:value(60)}
+seventy -> {equal} -> {number:value(70)}
+eighty -> {equal} -> {number:value(80)}
+ninety -> {equal} -> {number:value(90)}
+hundred -> {equal} -> {number:value(100)}
+thousand -> {equal} -> {number:value(1000)}
+million -> {equal} -> {number:value(1000000)}

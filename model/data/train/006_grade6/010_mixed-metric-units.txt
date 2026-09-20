@@ -1,0 +1,17 @@
+# Mixed metric units: some of a larger metric unit and some of a smaller one together are the larger
+# counted in the smaller with the smaller added, as some meters and centimeters are the meters times a
+# hundred with the centimeters added.
+# The turns ask one mixed amount each. Each scene tells two units with how many of the smaller are in the
+# larger, then asks that number back, plain amounts, and several mixed amounts of each unit.
+seed: measures
+seed: 10-time
+seed: 20-numbers-and-measures
+turn: how many centimeters are in 2 meters and 30 centimeters? => | 230
+turn: how many grams are in 1 kilogram and 250 grams? => | 1250
+turn: how many meters are in 3 kilometers and 400 meters? => | 3400
+turn: how many milliliters are in 2 liters and 500 milliliters? => | 2500
+there are 100 centimeters in a meter. there are 1000 grams in a kilogram. => meter:quantity(1) {equal} centimeter:quantity(100); {number:value(100)}; kilogram:quantity(1) {equal} gram:quantity(1000); {number:value(1000)} | how many centimeters are in 2 meters and 30 centimeters? = 230; how many grams are in 1 kilogram and 250 grams? = 1250; how many centimeters are in a meter? = 100; how many grams are in a kilogram? = 1000; how many centimeters are in 3 meters and 15 centimeters? = 315; how many grams are in 2 kilograms and 500 grams? = 2500; how many centimeters are in 4 meters? = 400; how many grams are in 3 kilograms and 20 grams? = 3020
+there are 1000 meters in a kilometer. there are 1000 milliliters in a liter. => kilometer:quantity(1) {equal} meter:quantity(1000); {number:value(1000)}; liter:quantity(1) {equal} milliliter:quantity(1000) | how many meters are in 3 kilometers and 400 meters? = 3400; how many milliliters are in 2 liters and 500 milliliters? = 2500; how many meters are in a kilometer? = 1000; how many milliliters are in a liter? = 1000; how many meters are in 1 kilometer and 50 meters? = 1050; how many milliliters are in 4 liters and 250 milliliters? = 4250; how many meters are in 2 kilometers? = 2000; how many milliliters are in 1 liter and 900 milliliters? = 1900
+test: turn: how many centimeters are in 5 meters and 5 centimeters? => | 505
+test: turn: how many grams are in 4 kilograms and 100 grams? => | 4100
+test: there are 1000 grams in a kilogram. there are 100 centimeters in a meter. => kilogram:quantity(1) {equal} gram:quantity(1000); {number:value(1000)}; meter:quantity(1) {equal} centimeter:quantity(100); {number:value(100)} | how many centimeters are in 5 meters and 5 centimeters? = 505; how many grams are in 4 kilograms and 100 grams? = 4100; how many centimeters are in 6 meters and 40 centimeters? = 640; how many grams are in 7 kilograms and 300 grams? = 7300; how many grams are in 5 kilograms? = 5000; how many centimeters are in 9 meters and 12 centimeters? = 912; how many centimeters are in a meter? = 100; how many grams are in a kilogram? = 1000

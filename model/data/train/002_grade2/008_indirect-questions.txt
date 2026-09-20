@@ -1,0 +1,19 @@
+# Questions asked sideways: tell me where tom is, do you know what is in the box, can you tell
+# me who has the car. The words before the question word add nothing; the question is the rest.
+# Each line is a scene: a few facts, then many sideways questions about them, each fact asked
+# with more than one opening, and a thing the scene does not name.
+seed: 90-everyday
+seed: 18-qualities
+tom is in the house. the key is in the box. the cat is black. => tom -> {in} -> house; key -> {in} -> box; cat -> {black} | tell me where tom is? = house; do you know where tom is? = house; can you tell me where tom is? = house; do you know who is in the house? = tom; tell me what is in the box? = key; do you know what is in the box? = key; do you know where the key is? = box; tell me what is black? = cat; do you know what color the cat is? = black; tell me what color the cat is? = black; tell me where the dog is? = {nothing}
+ann has a car. tom likes ann. the dog is brown. => tom -> {like} -> ann -> {has} -> car; dog -> {brown} | can you tell me what ann has? = car; do you know what ann has? = car; can you tell me who has the car? = ann; do you know who has the car? = ann; tell me who likes ann? = tom; do you know who tom likes? = ann; do you know what color the dog is? = brown; can you tell me what color the dog is? = brown; tell me what is brown? = dog; tell me where the car is? = {nothing}
+the cup is in the box. the ball is in the bag. the hat is green. => cup -> {in} -> box; ball -> {in} -> bag; hat -> {green} | tell me where the cup is? = box; do you know where the cup is? = box; can you tell me what is in the box? = cup; tell me where the ball is? = bag; can you tell me where the ball is? = bag; do you know what is in the bag? = ball; do you know what color the hat is? = green; tell me what is green? = hat; tell me where the pen is? = {nothing}
+turn: tom is in the garden the cup is in the box tell me where tom is => tom -> {in} -> garden; cup -> {in} -> box | garden
+turn: the cup is on the table the dog is in the house do you know where the cup is => cup -> {on} -> table; dog -> {in} -> house | table
+turn: the dog is brown the cat is white can you tell me what color the dog is => dog -> {brown}; cat -> {white} | brown
+turn: the cat is in the house the key is in the bag tell me where the cat is => cat -> {in} -> house; key -> {in} -> bag | house
+turn: the dog is in the garden tom is in the house tell me where the dog is => dog -> {in} -> garden; tom -> {in} -> house | garden
+turn: the car is blue the bike is red do you know what color the car is => car -> {blue}; bike -> {red} | blue
+turn: the hat is green the cup is black do you know what color the hat is => hat -> {green}; cup -> {black} | green
+test: the pen is in the bag. sam has a kite. the rug is red. => pen -> {in} -> bag; sam -> {has} -> kite; rug -> {red} | tell me where the pen is? = bag; do you know where the pen is? = bag; do you know what is in the bag? = pen; can you tell me what sam has? = kite; can you tell me who has the kite? = sam; do you know what color the rug is? = red; tell me what is red? = rug; tell me where the cup is? = {nothing}
+test: turn: the bird is in the tree the fox is in the den tell me where the bird is => bird -> {in} -> tree; fox -> {in} -> den | tree
+test: turn: the ball is red the kite is yellow do you know what color the ball is => ball -> {red}; kite -> {yellow} | red

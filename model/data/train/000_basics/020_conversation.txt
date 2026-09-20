@@ -1,0 +1,27 @@
+# A conversation: chat turns follow one another on one stack, nothing cleared between them, as in the
+# chat page, so a turn is answered the same way whatever turn came before it: a sum after a place, a
+# place after a sum, a thing told in one turn and asked for in the next, with or without the mark.
+seed: 30-geography
+turn: where is japan? => | asia
+then: turn: what is 2 + 2? => | 4
+then: turn: where is france? => | europe
+then: turn: what is 7 - 3? => | 4
+then: turn: tom has a cat. => tom {has} cat |
+then: turn: who has the cat? => | tom
+turn: what is 5 + 4? => | 9
+then: turn: where is egypt? => | africa
+then: turn: what is 9 - 2 => | 7
+then: turn: the cup is on the table. => cup {in} table |
+then: turn: where is the cup? => | table
+then: turn: what is 3 + 6? => | 9
+turn: ann has a dog. => ann {has} dog |
+then: turn: what is 4 + 4? => | 8
+then: turn: who has the dog? => | ann
+then: turn: where is canada? => | america
+then: turn: what is 8 - 5? => | 3
+test: turn: where is brazil? => | america
+test: then: turn: what is 3 + 3? => | 6
+test: then: turn: where is italy? => | europe
+test: then: turn: sam has a ball. => sam {has} ball |
+test: then: turn: who has the ball? => | sam
+test: then: turn: what is 6 - 4? => | 2

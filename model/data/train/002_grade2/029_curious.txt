@@ -1,0 +1,14 @@
+# What the network is curious about: asked what it is curious about or interested in, it names the
+# newest thing it was told of, the one it knows least of and wants to hear more about. Held out lines
+# tell of things the learned lines never tell of.
+the car is red. => | what are you curious about? = car
+tom has a dog. => | what are you curious about? = dog
+ann went to the park. => | what are you interested in? = park
+my cat is called luna. => | what are you curious about? = cat
+the box is in the garden. sam has a kite. => | what are you curious about? = kite
+the door is open. => | what are you interested in? = door
+turn: the soup is hot what are you curious about => | soup
+test: the lamp is green. => | what are you curious about? = lamp
+test: ben has a parrot. => | what are you interested in? = parrot
+test: kim went to the zoo. => | what are you curious about? = zoo
+test: turn: the tea is cold what are you curious about => | tea

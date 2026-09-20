@@ -1,0 +1,29 @@
+# Check again games: a text tells the network some details, a question asks whether it remembers
+# one, and the world then changes with nothing on the stack, the way things move while nobody
+# tells. The next question asks again, so the network has to search the tree once more instead of
+# trusting the answer still on its stack: what it found before may be gone, and what it found nothing
+# of may be there now. Held out lines use names and things the learned lines never use.
+seed: 90-everyday
+seed: 18-qualities
+john has a coat. john has a scarf. => john -> {has} -> coat; john -> {has} -> scarf | do you remember if john has a hat? = no; does john have a coat? = yes
+then: world: john -> {has} -> hat | check again, does john have a hat? = yes; does john have a coat? = yes
+ann has a ball. => ann -> {has} -> ball | does ann have a ball? = yes; does ann have a kite? = no
+then: world: ann -> {has} -> kite | check again, does ann have a kite? = yes; what does ann have? = ball, kite
+the cat is in the garden. => cat -> {in} -> garden | where is the cat? = garden; is the cat in the house? = no
+then: world: cat -> {in} -> house; not cat -> {in} -> garden | check again, where is the cat? = house; is the cat in the garden? = no
+tom has a pen. => tom -> {has} -> pen | does tom have a pen? = yes; who has the pen? = tom
+then: world: sam -> {has} -> pen; not tom -> {has} -> pen | check again, who has the pen? = sam; does tom have a pen? = no
+the key is in the drawer. => key -> {in} -> drawer | do you remember where the key is? = drawer
+then: world: key -> {in} -> bag; not key -> {in} -> drawer | check again, where is the key? = bag; is the key in the drawer? = no
+kim has a dog. => kim -> {has} -> dog | do you remember if kim has a cat? = no; does kim have a dog? = yes
+then: world: kim -> {has} -> cat | check again, does kim have a cat? = yes; what does kim have? = dog, cat
+the ball is red. => ball -> {red} | what color is the ball? = red
+then: world: ball -> {blue}; not ball -> {red} | check again, what color is the ball? = blue; is the ball red? = no
+ben has 3 apples. => ben -> {has} -> apple:quantity(3) | how many apples does ben have? = 3
+then: world: ben -> {has} -> apple:quantity(5); not ben -> {has} -> apple:quantity(3) | check again, how many apples does ben have? = 5
+test: nina has a drum. nina has a flute. => nina -> {has} -> drum; nina -> {has} -> flute | do you remember if nina has a harp? = no; does nina have a drum? = yes
+test: then: world: nina -> {has} -> harp | check again, does nina have a harp? = yes; does nina have a flute? = yes
+test: the lamp is in the attic. => lamp -> {in} -> attic | do you remember where the lamp is? = attic
+test: then: world: lamp -> {in} -> porch; not lamp -> {in} -> attic | check again, where is the lamp? = porch; is the lamp in the attic? = no
+test: paul has a vase. => paul -> {has} -> vase | who has the vase? = paul
+test: then: world: rosa -> {has} -> vase; not paul -> {has} -> vase | check again, who has the vase? = rosa; does paul have a vase? = no

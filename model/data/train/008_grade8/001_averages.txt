@@ -1,0 +1,18 @@
+# Averages: the average of some numbers is their sum shared equally among them, so it is the numbers
+# added and divided by how many numbers there are.
+# The traced turns stay single lessons. Each scene tells what two or three people have, then asks many
+# averages and means, each count, sums, who has the most or more, how many more, and a person the scene
+# never told.
+turn: what is the average of 4, 6 and 8? => | 6
+turn: what is the average of 10 and 20? => | 15
+turn: what is the mean of 2, 3, 4 and 7? => | 4
+tom has 4 apples. ann has 6 apples. sam has 8 apples. => {number:value(4)}; {number:value(6)}; {number:value(8)}; tom -> {has} -> apple:quantity(4); ann -> {has} -> apple:quantity(6); sam -> {has} -> apple:quantity(8) | what is the average of 4, 6 and 8? = 6; what is the mean of 4, 6 and 8? = 6; what is the average of 5, 5 and 5? = 5; what is the average of 4 and 8? = 6; what is the average of 6 and 8? = 7; how many apples does tom have? = 4; how many apples does ann have? = 6; how many apples does sam have? = 8; how many apples do tom and ann have? = 10; how many apples do tom, ann and sam have? = 18; who has the most apples? = sam; who has the fewest apples? = tom; how many more apples does sam have than tom? = 4; how many apples does lily have? = {nothing}
+lily has 10 pens. rose has 20 pens. => {number:value(10)}; {number:value(20)}; lily -> {has} -> pen:quantity(10); rose -> {has} -> pen:quantity(20) | what is the average of 10 and 20? = 15; what is the mean of 10 and 20? = 15; what is the mean of 2, 3, 4 and 7? = 4; what is the average of 2, 3, 4 and 7? = 4; what is the average of 20 and 30? = 25; how many pens does lily have? = 10; how many pens does rose have? = 20; how many pens do lily and rose have? = 30; who has more pens? = rose; who has fewer pens? = lily; how many more pens does rose have than lily? = 10; how many pens does tom have? = {nothing}
+test: turn: what is the average of 1, 2 and 3? => | 2
+test: kim has 6 cards. joe has 12 cards. => {number:value(6)}; {number:value(12)}; kim -> {has} -> card:quantity(6); joe -> {has} -> card:quantity(12) | what is the average of 1, 2 and 3? = 2; what is the mean of 6 and 12? = 9; what is the average of 6 and 12? = 9; what is the mean of 3, 6 and 9? = 6; how many cards does kim have? = 6; how many cards do kim and joe have? = 18; who has more cards? = joe; how many more cards does joe have than kim? = 6; how many cards does zoe have? = {nothing}
+turn: what is the average of 3 and 9? => | 6
+turn: what is the mean of 5, 10 and 15? => | 10
+turn: what is the average of 2, 4, 6 and 8? => | 5
+turn: what is the mean of 7 and 13? => | 10
+test: turn: what is the average of 4 and 10? => | 7
+test: turn: what is the mean of 1, 5 and 9? => | 5

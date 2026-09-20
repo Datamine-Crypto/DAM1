@@ -1,0 +1,234 @@
+# Everyday things: colors, foods, materials, vehicles, rooms, jobs and what things have.
+red is a color.
+blue is a color.
+green is a color.
+yellow is a color.
+orange is a color.
+purple is a color.
+pink is a color.
+brown is a color.
+black is a color.
+white is a color.
+grey is a color.
+gray is a color.
+the sky is blue.
+the sea is blue.
+the grass is green.
+snow is white.
+milk is white.
+a cloud is white.
+coal is black.
+night is black.
+chocolate is brown.
+mud is brown.
+an apple is red.
+a tomato is red.
+a cherry is red.
+a strawberry is red.
+a banana is yellow.
+a lemon is yellow.
+an orange is orange.
+a carrot is orange.
+a pumpkin is orange.
+a lime is green.
+a pea is green.
+a cucumber is green.
+a plum is purple.
+a grape is purple.
+an eggplant is purple.
+a ruby is red.
+an emerald is green.
+a sapphire is blue.
+an apple is a fruit.
+a banana is a fruit.
+a pear is a fruit.
+a plum is a fruit.
+an orange is a fruit.
+a grape is a fruit.
+a lemon is a fruit.
+a cherry is a fruit.
+a peach is a fruit.
+a melon is a fruit.
+a strawberry is a fruit.
+a mango is a fruit.
+a pineapple is a fruit.
+a tomato is a fruit.
+a carrot is a vegetable.
+a potato is a vegetable.
+an onion is a vegetable.
+a pea is a vegetable.
+a bean is a vegetable.
+a cabbage is a vegetable.
+a lettuce is a vegetable.
+a cucumber is a vegetable.
+a pumpkin is a vegetable.
+a pepper is a vegetable.
+bread is a food.
+rice is a food.
+meat is a food.
+cheese is a food.
+an egg is a food.
+milk is a drink.
+water is a drink.
+tea is a drink.
+coffee is a drink.
+juice is a drink.
+wine is a drink.
+sugar is sweet.
+honey is sweet.
+a lemon is sour.
+salt is salty.
+pepper is hot.
+soup is hot.
+bread is made of flour.
+flour is made of wheat.
+cheese is made of milk.
+butter is made of milk.
+yogurt is made of milk.
+paper is made of wood.
+glass is made of sand.
+wine is made of grapes.
+chocolate is made of cocoa.
+sugar is made of cane.
+a coin is made of metal.
+a book is made of paper.
+a window is made of glass.
+a shirt is made of cotton.
+a sweater is made of wool.
+a ring is made of gold.
+a table is made of wood.
+a tire is made of rubber.
+a bottle is made of glass.
+a can is made of metal.
+a brick is made of clay.
+a candle is made of wax.
+a rope is made of fiber.
+a car is a vehicle.
+a bus is a vehicle.
+a bike is a vehicle.
+a train is a vehicle.
+a plane is a vehicle.
+a boat is a vehicle.
+a ship is a vehicle.
+a truck is a vehicle.
+a car has 4 wheels.
+a bicycle has 2 wheels.
+a tricycle has 3 wheels.
+a car has an engine.
+a car has a steering wheel.
+a bike has pedals.
+a plane has wings.
+a boat has a sail.
+a ship has an anchor.
+a train is on rails.
+a car is on the road.
+a boat is on the water.
+a plane is in the air.
+a plane is faster than a car.
+a car is faster than a bike.
+a train is faster than a bus.
+a rocket is faster than a plane.
+a bike is slower than a car.
+a truck is heavier than a car.
+a car is heavier than a bike.
+a kitchen is a room.
+a bedroom is a room.
+a bathroom is a room.
+a hall is a room.
+a kitchen is in a house.
+a bedroom is in a house.
+a bed is in a bedroom.
+a stove is in a kitchen.
+a fridge is in a kitchen.
+a bath is in a bathroom.
+a house has a roof.
+a house has a door.
+a house has windows.
+a house has walls.
+a room has walls.
+a room has a floor.
+a room has a ceiling.
+a clock has hands.
+a book has pages.
+a chair has legs.
+a table has legs.
+a shirt has sleeves.
+a shoe has laces.
+a lock needs a key.
+a knife is sharp.
+a pillow is soft.
+a rock is hard.
+a feather is light.
+a stone is heavy.
+a mountain is big.
+an ant is small.
+a giraffe is tall.
+a snail is slow.
+a cheetah is fast.
+a cheetah is the fastest animal.
+a giraffe is the tallest animal.
+a whale is the biggest animal.
+an ostrich is the biggest bird.
+a hummingbird is the smallest bird.
+an elephant is the biggest land animal.
+a teacher helps children.
+a baker has a bakery.
+a king has a crown.
+a queen has a crown.
+a soldier has a gun.
+a fisherman has a boat.
+a pilot has a plane.
+a driver has a car.
+a teacher has students.
+a shop has a door.
+a zoo has animals.
+a garden has flowers.
+a forest has trees.
+a street has houses.
+
+# More vehicles, each read and checked by the reader before it was added.
+a van is a vehicle.
+a taxi is a vehicle.
+a tram is a vehicle.
+a lorry is a vehicle.
+a helicopter is a vehicle.
+a submarine is a vehicle.
+a rocket is a vehicle.
+a canoe is a vehicle.
+a jeep is a vehicle.
+
+# More fruits, drinks and colors, each read and checked by the reader before it was added.
+a papaya is a fruit.
+a guava is a fruit.
+a lychee is a fruit.
+a nectarine is a fruit.
+a gooseberry is a fruit.
+a currant is a fruit.
+a date is a fruit.
+a quince is a fruit.
+a persimmon is a fruit.
+a passionfruit is a fruit.
+cocoa is a drink.
+soda is a drink.
+brandy is a drink.
+champagne is a drink.
+kombucha is a drink.
+espresso is a drink.
+violet is a color.
+indigo is a color.
+turquoise is a color.
+crimson is a color.
+scarlet is a color.
+beige is a color.
+maroon is a color.
+silver is a color.
+gold is a color.
+navy is a color.
+golden is a color.
+tan is a color.
+teal is a color.
+cyan is a color.
+magenta is a color.
+lavender is a color.
+olive is a color.
+cream is a color.

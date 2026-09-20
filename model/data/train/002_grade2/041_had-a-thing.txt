@@ -1,0 +1,17 @@
+# What someone had is theirs in the past: the owner tag of the thing carries the past, and the thing
+# still stands with them. Held out lines use people and things the learned lines never use.
+john had a box. => john -> box -> {owner} -> {time} -> {past} | who had the box? = john
+john had a box. => john -> box -> {owner} -> john | what did john have? = box
+anna had a red kite. => anna -> kite -> {owner} -> {time} -> {past} | what color was the kite? = red
+tom has a car. => tom -> car -> {owner} -> tom | who has the car? = tom
+mia had a dog. => mia -> dog -> {owner} -> {time} -> {past} | who had the dog? = mia
+ben had a big boat. => ben -> boat -> {owner} -> {time} -> {past} | what did ben have? = boat
+test: sara had a drum. => sara -> drum -> {owner} -> {time} -> {past} | who had the drum? = sara
+test: leo had a green hat. => leo -> hat -> {owner} -> {time} -> {past} | what color was the hat? = green
+test: omar has a bike. => omar -> bike -> {owner} -> omar | who has the bike? = omar
+holding 5 cards. => user -> card | how many cards do i have? = 5
+carrying two bags. => user -> bag | how many bags do i have? = 2
+holding a red cup. => user -> cup -> {is} -> {color} -> red | what color is my cup? = red
+having three coins. => user -> coin | how many coins do i have? = 3
+test: holding 4 keys. => user -> key | how many keys do i have? = 4
+test: carrying a green box. => user -> box -> {is} -> {color} -> green | what color is my box? = green

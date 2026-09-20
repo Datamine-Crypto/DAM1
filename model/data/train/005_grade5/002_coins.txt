@@ -1,0 +1,15 @@
+# Coins: a penny is worth 1 cent, a nickel 5 cents, a dime 10 cents and a quarter 25 cents, and a dollar
+# is 100 cents, so some coins of one kind are worth that many times the coin's cents.
+# The traced turns stay single lessons. Each scene tells how many coins of a kind two or three people
+# have, then asks what coins are worth, how many make another, each count, how many cents each has, a
+# sum, who has a kind, and a person the scene never told.
+seed: measures
+turn: how many cents is a dime worth? => | 10
+turn: how many cents are in 3 nickels? => | 15
+turn: how many pennies make a dime? => | 10
+tom has 3 nickels. ann has 2 quarters. sam has 5 dimes. => {number:value(3)}; tom -> {has} -> nickel:quantity(3); {number:value(2)}; ann -> {has} -> quarter:quantity(2); {number:value(5)}; sam -> {has} -> dime:quantity(5) | how many cents is a dime worth? = 10; how many cents are in 3 nickels? = 15; how many cents are in 2 quarters? = 50; how many cents are in a dollar? = 100; how many pennies make a dime? = 10; how many cents are in 5 dimes? = 50; how many cents is a quarter worth? = 25; how many nickels does tom have? = 3; how many quarters does ann have? = 2; how many dimes does sam have? = 5; how many cents does tom have? = 15; how many cents does sam have? = 50; how many cents do tom and ann have? = 65; who has the quarters? = ann; how many dimes does lily have? = {nothing}
+lily has 4 dimes. fred has 6 nickels. rose has 3 quarters. => {number:value(4)}; lily -> {has} -> dime:quantity(4); {number:value(6)}; fred -> {has} -> nickel:quantity(6); {number:value(3)}; rose -> {has} -> quarter:quantity(3) | how many cents is a penny worth? = 1; how many cents are in 6 nickels? = 30; how many cents are in 3 quarters? = 75; how many cents are in 2 dollars? = 200; how many pennies make a nickel? = 5; how many dimes make a dollar? = 10; how many cents are in a dollar? = 100; how many dimes does lily have? = 4; how many nickels does fred have? = 6; how many cents does rose have? = 75; how many cents does fred have? = 30; how many cents do lily and fred have? = 70; who has the nickels? = fred; how many quarters does tom have? = {nothing}
+test: turn: how many cents are in 4 dimes? => | 40
+test: kim has 4 dimes. joe has 2 nickels. => {number:value(4)}; kim -> {has} -> dime:quantity(4); {number:value(2)}; joe -> {has} -> nickel:quantity(2) | how many cents are in 4 dimes? = 40; how many nickels make a quarter? = 5; how many cents is a nickel worth? = 5; how many dimes does kim have? = 4; how many cents does kim have? = 40; how many cents does joe have? = 10; how many cents do kim and joe have? = 50; who has the nickels? = joe; how many pennies does zoe have? = {nothing}
+turn: how many nickels make a dime? => | 2
+turn: how many dimes make a dollar? => | 10

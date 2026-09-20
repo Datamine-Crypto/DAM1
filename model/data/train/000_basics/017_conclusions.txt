@@ -1,0 +1,29 @@
+# Conclusion games: no text states the answer, so the network has to draw it from two facts the
+# tree holds. A thing in a box that is in a shed is in the shed; a cat that is an animal makes felix
+# an animal when felix is a cat; a coin a bag holds belongs to whoever has the bag; ann is taller
+# than sam when she is taller than tom and tom is taller than sam. The second fact hangs under
+# another node of the name the first fact leads to, so the network searches on from the value it
+# found to the node where that value has its own facts. Held out lines use names and things the
+# learned lines never use.
+seed: 19-comparatives
+seed: 18-qualities
+the ball is in the box. the box is in the shed. => ball -> {in} -> box -> {in} -> shed | is the ball in the shed? = yes; where is the ball? = box; is the ball in the garden? = no
+the coin is in the jar. the jar is in the drawer. => coin -> {in} -> jar -> {in} -> drawer | is the coin in the drawer? = yes; is the coin in the bag? = no
+the cat is in the kitchen. the kitchen is in the house. => cat -> {in} -> kitchen -> {in} -> house | is the cat in the house? = yes; where is the cat? = kitchen
+felix is a cat. a cat is an animal. => cat -> {is} -> animal; felix -> {is} -> cat | is felix an animal? = yes; is felix a plant? = no; what is felix? = cat
+rex is a dog. a dog is a pet. => rex -> {is} -> dog -> {is} -> pet | is rex a pet? = yes; is rex a fish? = no
+tom has a bag. the bag holds a coin. => tom -> {has} -> bag -> {hold} -> coin | does tom have a coin? = yes; who has the coin? = tom; does tom have a ring? = no
+ann has a box. the box holds a doll. => ann -> {has} -> box -> {hold} -> doll | who has the doll? = ann; does ann have a doll? = yes
+kim has a jar. the jar holds jam. => kim -> {has} -> jar -> {hold} -> jam | does kim have jam? = yes; who has the jam? = kim
+ann is taller than tom. tom is taller than sam. => ann -> {tallerThan} -> tom; tom -> {tallerThan} -> sam | is ann taller than sam? = yes; is sam taller than ann? = no; who is taller than tom? = ann
+ben is older than kim. kim is older than joe. => ben -> {olderThan} -> kim; kim -> {olderThan} -> joe | is ben older than joe? = yes; is joe older than ben? = no
+the pen is in the cup. the cup is on the desk. => pen -> {in} -> cup -> {on} -> desk | is the pen on the desk? = yes; where is the cup? = desk
+world: key -> {in} -> bag -> {in} -> car | is the key in the car? = yes; where is the key? = bag
+world: milo -> {is} -> cat -> {is} -> animal | is milo an animal? = yes; what is milo? = cat
+world: sue -> {has} -> basket -> {hold} -> egg | does sue have an egg? = yes; who has the egg? = sue
+test: the lamp is in the crate. the crate is in the attic. => lamp -> {in} -> crate -> {in} -> attic | is the lamp in the attic? = yes; is the lamp in the porch? = no
+test: nina is a nurse. a nurse is a worker. => nina -> {is} -> nurse -> {is} -> worker | is nina a worker? = yes; is nina a pilot? = no
+test: paul has a crate. the crate holds a vase. => paul -> {has} -> crate -> {hold} -> vase | does paul have a vase? = yes; who has the vase? = paul
+test: rosa is faster than nina. nina is faster than paul. => rosa -> {fasterThan} -> nina; nina -> {fasterThan} -> paul | is rosa faster than paul? = yes; is paul faster than rosa? = no
+test: world: harp -> {in} -> case -> {in} -> van | is the harp in the van? = yes; where is the harp? = case
+test: world: rosa -> {has} -> tray -> {hold} -> pear | does rosa have a pear? = yes; who has the pear? = rosa

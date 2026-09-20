@@ -1,0 +1,52 @@
+# Numbers, shapes and measures.
+a triangle has 3 sides.
+a square has 4 sides.
+a rectangle has 4 sides.
+a pentagon has 5 sides.
+a hexagon has 6 sides.
+an octagon has 8 sides.
+a cube has 6 faces.
+a cube has 12 edges.
+a cube has 8 corners.
+there are 360 degrees in a circle.
+there are 180 degrees in a triangle.
+there are 90 degrees in a right angle.
+a triangle is a shape.
+a square is a shape.
+a circle is a shape.
+a rectangle is a shape.
+a circle is round.
+a ball is round.
+a square is not round.
+a dozen is 12.
+a pair is 2.
+a score is 20.
+a gross is 144.
+a million is 1000000.
+there are 10 millimeters in a centimeter.
+there are 100 centimeters in a meter.
+there are 1000 meters in a kilometer.
+there are 1000 grams in a kilogram.
+there are 1000 kilograms in a ton.
+there are 1000 milliliters in a liter.
+there are 12 inches in a foot.
+there are 3 feet in a yard.
+there are 16 ounces in a pound.
+there are 8 bits in a byte.
+there are 1024 bytes in a kilobyte.
+a meter is longer than a foot.
+a kilometer is longer than a mile.
+a kilogram is heavier than a pound.
+a ton is heavier than a kilogram.
+an hour is longer than a minute.
+a year is longer than a month.
+a meter is a measure.
+a liter is a measure.
+a kilogram is a measure.
+a second is a measure.
+centimeters are 10 millimeters.
+meters are 100 centimeters.
+kilometers are 1000 meters.
+kilograms are 1000 grams.
+tons are 1000 kilograms.
+liters are 1000 milliliters.

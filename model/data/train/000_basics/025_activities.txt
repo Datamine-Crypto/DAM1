@@ -1,0 +1,16 @@
+# Activities: what a person does, loves or likes to do is an activity of theirs, written under the
+# activity relation, with where it happens or what it is done to under the activity, so where does tom
+# swim finds tom's swim and its place, and what does john ride finds his ride and the bike.
+tom loves to swim in the river. => tom -> {activity} -> swim -> {in} -> river | where does tom swim? = river; what does tom love? = swim
+john has a bike. he loves to ride it. => john -> {has} -> bike; john -> {activity} -> ride -> {of} -> bike | what does john ride? = bike; what does john have? = bike
+ann likes to run in the park. => ann -> {activity} -> run -> {in} -> park | where does ann run? = park; what does ann like? = run
+kim loves to dance at the club. => kim -> {activity} -> dance -> {at} -> club | where does kim dance? = club; what does kim love? = dance
+max likes to read in the garden. => max -> {activity} -> read -> {in} -> garden | where does max read? = garden; what does max like? = read
+sue has a horse. she loves to ride it. => sue -> {has} -> horse; sue -> {activity} -> ride -> {of} -> horse | what does sue ride? = horse; what does sue love? = ride
+joe likes to fish at the lake. => joe -> {activity} -> fish -> {at} -> lake | where does joe fish? = lake
+then: turn: what does joe like? => | fish
+test: lily loves to swim in the sea. => lily -> {activity} -> swim -> {in} -> sea | where does lily swim? = sea; what does lily love? = swim
+test: ben has a kite. he loves to fly it. => ben -> {has} -> kite; ben -> {activity} -> fly -> {of} -> kite | what does ben fly? = kite; what does ben have? = kite
+test: zoe likes to sing in the hall. => zoe -> {activity} -> sing -> {in} -> hall | where does zoe sing? = hall
+beep loved to go in the park. => beep -> {activity} -> go -> {in} -> park | what did beep love? = go; where did beep go? = park
+test: zorp loved to swim in the lagoon. => zorp -> {activity} -> swim -> {in} -> lagoon | what did zorp love? = swim; where did zorp swim? = lagoon

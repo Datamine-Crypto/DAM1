@@ -1,0 +1,15 @@
+# It and they by kind: it points at the newest thing that is no person, even when a person was told
+# after it, and they at the two or more things told last. A quality a thing is, as tall, is no
+# thing, so the newest thing is the dog when the last sentence said tom is tall.
+seed: 21-verb-forms
+seed: 16-names
+seed: 90-everyday
+seed: 18-qualities
+tom has a dog. tom is tall. it is brown. => tom -> {has} -> dog; tom -> {tall}; tom -> {has} -> dog -> {brown} | what color is the dog? = brown; how big is tom? = tall
+ann has a cat. ann is happy. it is black. => ann -> {has} -> cat; ann -> {happy}; ann -> {has} -> cat -> {black} | what color is the cat? = black
+sam has a car. jane is tall. it is red. => sam -> {has} -> car; jane -> {tall}; sam -> {has} -> car -> {red} | what color is the car? = red; how big is jane? = tall
+the cup is on the table. the cup is small. it is green. => cup -> {on} -> table; cup -> {small}; cup -> {green} | what color is the cup? = green
+tom and jane have a boat. they are happy. => tom -> {has} -> boat; jane -> {has} -> boat; jane -> {happy}; tom -> {happy} | how does tom feel? = happy; how does jane feel? = happy
+sam and kim went to the park. they are tired. => sam -> {in} -> park; kim -> {in} -> park; kim -> {tired}; sam -> {tired}; kim -> {go} -> park -> {time} -> {past}; sam -> {go} -> park -> {time} -> {past} | how does kim feel? = tired
+test: max has a bike. max is short. it is blue. => max -> {has} -> bike; max -> {short}; max -> {has} -> bike -> {blue} | what color is the bike? = blue
+test: lily and joe have a kite. they are glad. => lily -> {has} -> kite; joe -> {has} -> kite; joe -> {glad}; lily -> {glad} | how does joe feel? = glad

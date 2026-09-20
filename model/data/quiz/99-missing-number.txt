@@ -1,0 +1,13 @@
+# Missing numbers in a sum: a number that some other number is added to, taken from, or multiplied by
+# to make a total is found by undoing the step, so what plus 4 makes 10 is 10 less 4.
+# The turns ask one missing number each. Each scene tells what three people have, then asks missing
+# numbers, each count, how many more one has than another, a total and who has more.
+turn: what number plus 4 makes 10? {eom} => | 6
+turn: what number times 3 makes 12? {eom} => | 4
+turn: what number minus 5 makes 2? {eom} => | 7
+turn: 8 plus what number makes 15? {eom} => | 7
+tom has 4 apples. ann has 10 apples. sam has 3 pens. => tom owns apples; apples is 4; 4 = 4; ann owns apples; apples is 10; 10 = 10; sam owns pens; pens is 3; 3 = 3 | what number plus 4 makes 10? = 6; what number times 3 makes 12? = 4; what number minus 5 makes 2? = 7; 8 plus what number makes 15? = 7; how many apples does tom have? = 4; how many apples does ann have? = 10; how many more apples does ann have than tom? = 6; how many apples do tom and ann have? = 14; what number plus 3 makes 10? = 7; what number times 4 makes 12? = 3; how many pens does sam have? = 3
+kim has 5 cards. joe has 12 cards. lily has 2 stamps. => kim owns cards; cards is 5; 5 = 5; joe owns cards; cards is 12; 12 = 12; lily owns stamps; stamps is 2; 2 = 2 | what number plus 5 makes 12? = 7; what number minus 2 makes 5? = 7; what number times 2 makes 12? = 6; 5 plus what number makes 12? = 7; how many cards does kim have? = 5; how many more cards does joe have than kim? = 7; how many cards do kim and joe have? = 17; how many stamps does lily have? = 2; who has more cards? = joe
+test: turn: what number plus 9 makes 20? {eom} => | 11
+test: turn: what number times 6 makes 30? {eom} => | 5
+test: zoe has 9 shells. ben has 20 shells. tim has 6 coins. => zoe owns shells; shells is 9; 9 = 9; ben owns shells; shells is 20; 20 = 20; tim owns coins; coins is 6; 6 = 6 | what number plus 9 makes 20? = 11; what number times 6 makes 30? = 5; how many more shells does ben have than zoe? = 11; how many shells do zoe and ben have? = 29; 6 plus what number makes 20? = 14; how many coins does tim have? = 6; who has fewer shells? = zoe; what number minus 6 makes 9? = 15

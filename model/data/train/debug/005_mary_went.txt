@@ -1,0 +1,5 @@
+# mary went to the kitchen: went adds a movement relation by its base form with its tense,
+# {children add: go type: movement time: past}; to and the point at nothing; the kitchen is the value under go.
+# where is mary reads the newest place under a movement or a location.
+mary went to the kitchen. => mary -> {go}:time(past) -> kitchen:the(true) | where is mary? = kitchen
+test: zorp went to the flib. => zorp -> {go}:time(past) -> flib:the(true) | where is zorp? = flib

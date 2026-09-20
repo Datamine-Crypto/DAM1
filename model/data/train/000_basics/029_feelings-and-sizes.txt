@@ -1,0 +1,17 @@
+# Feelings and sizes: a person is happy and tall at once, both under is. The seeds class the words,
+# happy a feeling and tall a size, so how does tom feel walks tom's values and keeps the one that is
+# a feeling, and how big is the box keeps the one that is a size.
+seed: 18-qualities
+seed: 90-everyday
+tom is happy. tom is tall. => tom -> {happy}; tom -> {tall} | how does tom feel? = happy; how big is tom? = tall
+ann is sad. ann is short. => ann -> {sad}; ann -> {short} | how does ann feel? = sad; how big is ann? = short
+the box is big. the box is cold. => box -> {big}; box -> {cold} | how big is the box? = big; how hot is the box? = cold
+sam is tired. sam is small. sam is fast. => sam -> {tired}; sam -> {small}; sam -> {fast} | how does sam feel? = tired; how big is sam? = small; how fast is sam? = fast
+the tea is hot. the tea is brown. => tea -> {hot}; tea -> {brown} | how hot is the tea? = hot; what color is the tea? = brown
+kim is tall. kim is glad. => kim -> {tall}; kim -> {glad} | how does kim feel? = glad; how big is kim? = tall
+test: max is angry. max is huge. => max -> {angry}; max -> {huge} | how does max feel? = angry; how big is max? = huge
+test: the car is slow. the car is red. => car -> {slow}; car -> {red} | how fast is the car? = slow; what color is the car? = red
+test: lily is calm. lily is tiny. => lily -> {calm}; lily -> {tiny} | how does lily feel? = calm; how big is lily? = tiny
+the bus is slow. the train is fast. => bus -> {slow}; train -> {fast} | how fast is the bus? = slow; how fast is the train? = fast; is the bus fast? = no
+the dog is big. the cat is small. => dog -> {big}; cat -> {small} | how big is the dog? = big; how big is the cat? = small
+the snail is slow. the horse is big. => snail -> {slow}; horse -> {big} | how fast is the snail? = slow; how big is the horse? = big

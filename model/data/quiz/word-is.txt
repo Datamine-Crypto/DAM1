@@ -1,0 +1,55 @@
+# The second shape of the reading one word at a time: something is something. The copula takes its own step
+# and makes the is node under the thing; the word after it is a value under is. The learned lines use everyday
+# names and qualities; the held out lines use names and qualities no lesson and no seed says.
+seed: 90-everyday
+seed: 18-qualities
+the car is red. => car -> {is} -> red
+the dog is big. => dog -> {is} -> big
+the ball is blue. => ball -> {is} -> blue
+the sky is blue. => sky -> {is} -> blue
+corn is yellow. => corn -> {is} -> yellow
+the cat is black. => cat -> {is} -> black
+the box is small. => box -> {is} -> small
+the tree is tall. => tree -> {is} -> tall
+milk is white. => milk -> {is} -> white
+the hat is green. => hat -> {is} -> green
+the soup is hot. => soup -> {is} -> hot
+the ice is cold. => ice -> {is} -> cold
+the map is old. => map -> {is} -> old
+the bike is new. => bike -> {is} -> new
+the ring is gold. => ring -> {is} -> gold
+the horse is fast. => horse -> {is} -> fast
+the snail is slow. => snail -> {is} -> slow
+the lamp is bright. => lamp -> {is} -> bright
+the drum is loud. => drum -> {is} -> loud
+the tank is clean. => tank -> {is} -> clean
+the road is long. => road -> {is} -> long
+the pen is black. => pen -> {is} -> black
+the coin is silver. => coin -> {is} -> silver
+the apple is red. => apple -> {is} -> red
+the room is warm. => room -> {is} -> warm
+the kite is orange. => kite -> {is} -> orange
+the shoe is brown. => shoe -> {is} -> brown
+the mouse is tiny. => mouse -> {is} -> tiny
+a stone is grey. => stone -> {is} -> grey
+the sock is pink. => sock -> {is} -> pink
+test: the zorp is blick. => zorp -> {is} -> blick
+test: grunk is flib. => grunk -> {is} -> flib
+test: the wexel is tornd. => wexel -> {is} -> tornd
+test: a plim is quorn. => plim -> {is} -> quorn
+test: vosk is trelm. => vosk -> {is} -> trelm
+test: the dabber is mork. => dabber -> {is} -> mork
+test: the flonk is sprig. => flonk -> {is} -> sprig
+test: yeb is crund. => yeb -> {is} -> crund
+test: the knab is lorsh. => knab -> {is} -> lorsh
+test: a snerl is vint. => snerl -> {is} -> vint
+test: the poddle is gramb. => poddle -> {is} -> gramb
+test: hix is blorn. => hix -> {is} -> blorn
+test: the marlow is kesk. => marlow -> {is} -> kesk
+test: the trub is fennick. => trub -> {is} -> fennick
+test: quill is drask. => quill -> {is} -> drask
+test: the ember is purple. => ember -> {is} -> purple
+test: the lantern is heavy. => lantern -> {is} -> heavy
+test: the violin is wooden. => violin -> {is} -> wooden
+test: pepper is spicy. => pepper -> {is} -> spicy
+test: the kitten is soft. => kitten -> {is} -> soft

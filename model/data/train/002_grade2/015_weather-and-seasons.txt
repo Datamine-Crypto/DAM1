@@ -1,0 +1,32 @@
+# Weather and seasons as qualities of a day or a season, and the sun's place.
+# Each line is a scene: the weather of a day and the qualities of a few seasons, then many questions
+# (what has a quality, does it have it or another one, and where the sun or the moon rises or sets).
+# The sun and the moon rise and set in different scenes, since the space holds one place for each.
+seed: 21-verb-forms
+seed: 90-everyday
+seed: 18-qualities
+today is sunny. summer is hot. winter is cold. the sun rises in the east. => today -> {sunny}; summer -> {hot}; winter -> {cold}; sun -> {in} -> east | is today sunny? = yes; is today rainy? = no; what is sunny? = today; what is cold? = winter; what is hot? = summer; is summer cold? = no; is summer hot? = yes; is winter hot? = no; is winter sunny? = no; where does the sun rise? = east
+today is rainy. yesterday was sunny. spring is warm. autumn is cool. the sun sets in the west. => today -> {rainy}; yesterday -> {sunny}; spring -> {warm}; autumn -> {cool}; sun -> {in} -> west | is today rainy? = yes; is today sunny? = no; what is rainy? = today; what was sunny? = yesterday; was yesterday rainy? = no; what is warm? = spring; what is cool? = autumn; is spring cool? = no; is autumn warm? = no; where does the sun set? = west
+spring is rainy. autumn is windy. summer is dry. winter is wet. the moon rises in the east. => spring -> {rainy}; autumn -> {windy}; summer -> {dry}; winter -> {wet}; moon -> {in} -> east | what is windy? = autumn; what is wet? = winter; what is dry? = summer; what is rainy? = spring; is autumn windy? = yes; is summer wet? = no; is spring dry? = no; is winter dry? = no; where does the moon rise? = east
+autumn is cloudy. spring is mild. today is cold. the moon sets in the west. => autumn -> {cloudy}; spring -> {mild}; today -> {cold}; moon -> {in} -> west | what is mild? = spring; what is cloudy? = autumn; is spring cloudy? = no; is autumn mild? = no; is today cold? = yes; what is cold? = today; is today mild? = no; where does the moon set? = west
+turn: today is cloudy winter is cold is today cloudy => today -> {cloudy}; winter -> {cold} | yes
+turn: winter is cold summer is hot is winter hot => winter -> {cold}; summer -> {hot} | no
+turn: today is rainy spring is warm is today rainy => today -> {rainy}; spring -> {warm} | yes
+turn: today is stormy autumn is cool is today stormy => today -> {is} -> stormy; autumn -> {cool} | yes
+turn: today is cold summer is dry is today cold => today -> {cold}; summer -> {dry} | yes
+test: today is windy. summer is sunny. winter is snowy. => today -> {windy}; summer -> {sunny}; winter -> {is} -> snowy | is today windy? = yes; is today sunny? = no; is today snowy? = no; what is windy? = today; what is snowy? = winter; what is sunny? = summer; is winter sunny? = no; is summer snowy? = no
+test: turn: today is foggy autumn is windy is today foggy => today -> {is} -> foggy; autumn -> {windy} | yes
+# A day word said after the clause only tells when: it stays the thing asked about.
+it is raining today. => | is it raining? = yes
+it is cold today. => | is it cold? = yes; is it hot? = no
+i am tired today. => | am i tired? = yes
+test: it is windy today. => | is it windy? = yes
+test: it is warm today. => | is it warm? = yes; is it cold? = no
+the sky is red today. => sky -> {is} -> {color} -> red; not sky -> {is} -> today | what is red? = sky; what color is the sky? = red
+the lake is cold today. tom is sad today. => lake -> {is} -> {temperature} -> cold; not lake -> {is} -> today | is the lake cold? = yes; is tom sad? = yes
+test: the grass is wet today. => not grass -> {is} -> today | is the grass wet? = yes
+the road is wet today. => not road -> {is} -> today | is the road wet? = yes
+the path is muddy today. the sand is dry today. => not path -> {is} -> today | is the path muddy? = yes; is the sand dry? = yes
+the floor is sticky today. => not floor -> {is} -> today | is the floor sticky? = yes
+the bench is wet today. => not bench -> {is} -> today | is the bench wet? = yes
+the step is icy today. the door is stuck today. => not step -> {is} -> today | is the step icy? = yes; is the door stuck? = yes

@@ -1,0 +1,4 @@
+library = premise
+patterns = dam1
+patterns = dam1-hub
+app = dam1-cli

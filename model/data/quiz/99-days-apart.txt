@@ -1,0 +1,25 @@
+# Days apart: the days of the week come in order and wrap round, so some days after today is that many
+# days on, some days ago is that many days back, and the days until a named day are counted forward.
+# The chat turns stay turns. Each scene tells today once, then asks today, many days some days on and
+# some days ago, and the days until several named days. One day a scene, since two would contradict.
+seed: 11-order
+turn: today is monday. what day will it be in 3 days? {eom} => | thursday
+turn: today is friday. what day will it be in 2 days? {eom} => | sunday
+turn: today is wednesday. what day was it 2 days ago? {eom} => | monday
+turn: today is tuesday. what day was it 3 days ago? {eom} => | saturday
+turn: today is monday. how many days until friday? {eom} => | 4
+turn: today is thursday. how many days until monday? {eom} => | 4
+turn: today is wednesday. how many days until sunday? {eom} => | 4
+turn: today is sunday. how many days until tuesday? {eom} => | 2
+today is monday. => today is monday | what day will it be in 3 days? = thursday; how many days until friday? = 4; what day will it be in 2 days? = wednesday; what day will it be in 6 days? = sunday; what day will it be in 7 days? = monday; what day was it 2 days ago? = saturday; what day was it 3 days ago? = friday; how many days until thursday? = 3; how many days until sunday? = 6; what day is today? = monday
+today is friday. => today is friday | what day will it be in 2 days? = sunday; what day will it be in 3 days? = monday; what day will it be in 5 days? = wednesday; what day was it 2 days ago? = wednesday; what day was it 4 days ago? = monday; how many days until monday? = 3; how many days until wednesday? = 5; how many days until sunday? = 2; what day is today? = friday
+today is wednesday. => today is wednesday | what day was it 2 days ago? = monday; how many days until sunday? = 4; what day will it be in 2 days? = friday; what day will it be in 4 days? = sunday; what day will it be in 6 days? = tuesday; what day was it 3 days ago? = sunday; how many days until monday? = 5; how many days until friday? = 2; what day is today? = wednesday
+today is tuesday. => today is tuesday | what day was it 3 days ago? = saturday; what day was it 2 days ago? = sunday; what day will it be in 3 days? = friday; what day will it be in 6 days? = monday; how many days until thursday? = 2; how many days until sunday? = 5; how many days until monday? = 6; what day is today? = tuesday
+today is thursday. => today is thursday | how many days until monday? = 4; how many days until saturday? = 2; how many days until wednesday? = 6; what day will it be in 2 days? = saturday; what day will it be in 4 days? = monday; what day was it 3 days ago? = monday; what day was it 5 days ago? = saturday; what day is today? = thursday
+today is sunday. => today is sunday | how many days until tuesday? = 2; how many days until friday? = 5; how many days until wednesday? = 3; what day will it be in 2 days? = tuesday; what day will it be in 5 days? = friday; what day was it 2 days ago? = friday; what day was it 4 days ago? = wednesday; what day is today? = sunday
+test: turn: today is sunday. what day will it be in 4 days? {eom} => | thursday
+test: turn: today is saturday. what day was it 2 days ago? {eom} => | thursday
+test: turn: today is tuesday. how many days until saturday? {eom} => | 4
+test: today is sunday. => today is sunday | what day will it be in 4 days? = thursday; what day will it be in 3 days? = wednesday; what day will it be in 6 days? = saturday; what day was it 3 days ago? = thursday; what day was it 5 days ago? = tuesday; how many days until saturday? = 6; how many days until monday? = 1; what day is today? = sunday
+test: today is saturday. => today is saturday | what day was it 2 days ago? = thursday; what day was it 5 days ago? = monday; what day will it be in 2 days? = monday; what day will it be in 4 days? = wednesday; what day will it be in 3 days? = tuesday; how many days until tuesday? = 3; how many days until friday? = 6; what day is today? = saturday
+test: today is tuesday. => today is tuesday | how many days until saturday? = 4; how many days until friday? = 3; how many days until wednesday? = 1; what day will it be in 4 days? = saturday; what day will it be in 2 days? = thursday; what day was it 4 days ago? = friday; what day was it 6 days ago? = wednesday; what day is today? = tuesday

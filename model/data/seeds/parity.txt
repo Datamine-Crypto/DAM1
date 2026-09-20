@@ -1,0 +1,12 @@
+# Which digits are odd and which are even. The parity of a whole number is the parity of its last digit,
+# which the cursor names with a step on the number's last letter and then looks up here.
+{number:value(0)} -> {even}
+{number:value(1)} -> {odd}
+{number:value(2)} -> {even}
+{number:value(3)} -> {odd}
+{number:value(4)} -> {even}
+{number:value(5)} -> {odd}
+{number:value(6)} -> {even}
+{number:value(7)} -> {odd}
+{number:value(8)} -> {even}
+{number:value(9)} -> {odd}

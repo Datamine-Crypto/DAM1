@@ -1,0 +1,15 @@
+# Going somewhere said with is and a going word: tom is going to rome moves tom as tom went to rome
+# does, and where is tom going asks where he is. Held out lines use people, going words and places the
+# learned lines never use together.
+tom is going to rome. => | where is tom going? = rome; where is tom? = rome
+we are going to paris. => | where are we going? = paris
+ann is walking to the park. sam is driving to the farm. => | where is ann? = park; where is sam? = farm; who is in the park? = ann
+i am going to the shop. => | where am i going? = shop
+lucy is flying to madrid. ben is going to the zoo. => | where is lucy going? = madrid; where is ben? = zoo; who is in the zoo? = ben
+turn: tom is going to the school where is tom going => | school
+test: kim is travelling to oslo. => | where is kim going? = oslo; where is kim? = oslo
+test: joe is walking to the lake. emma is going to the bank. => | where is joe? = lake; where is emma going? = bank
+test: turn: we are going to the beach where are we going => | beach
+max is travelling to paris. => | where is max going? = paris; where is max? = paris
+rose is returning to the farm. dan is moving to the city. => | where is rose going? = farm; where is dan? = city
+test: fred is flying to cairo. => | where is fred going? = cairo

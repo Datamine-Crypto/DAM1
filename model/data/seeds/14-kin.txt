@@ -1,0 +1,5 @@
+# The statements of data/facts/14-kin.txt the cursor tree holds, one path each, written by build-seeds.mjs.
+mother {is} parent
+father {is} parent
+grandmother {is} mother
+grandfather {is} father

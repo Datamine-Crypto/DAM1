@@ -1,0 +1,13 @@
+# More and less than a number: some more than a number is the number with that many added, and some
+# less than it is the number with that many taken away.
+# The turns ask one number each. Each scene tells what three people have, then asks more and less than
+# the numbers, each count, a total, how many more one has, and who has fewer or more.
+turn: what is 10 more than 35? => | 45
+turn: what is 1 less than 50? => | 49
+turn: what number is 100 more than 250? => | 350
+turn: what is 5 less than 12? => | 7
+tom has 35 apples. ann has 10 apples. sam has 50 pens. => tom -> {has} -> apple:quantity(35); {number:value(35)}; ann -> {has} -> apple:quantity(10); {number:value(10)}; sam -> {has} -> pen:quantity(50); {number:value(50)} | what is 10 more than 35? = 45; what is 1 less than 50? = 49; how many apples does tom have? = 35; how many apples do tom and ann have? = 45; how many more apples does tom have than ann? = 25; what is 10 less than 35? = 25; what number is 10 more than 50? = 60; what is 1 more than 50? = 51; how many pens does sam have? = 50; who has fewer apples? = ann
+kim has 12 cards. joe has 5 cards. lily has 250 stamps. => kim -> {has} -> card:quantity(12); {number:value(12)}; joe -> {has} -> card:quantity(5); {number:value(5)}; lily -> {has} -> stamp:quantity(250); {number:value(250)} | what is 5 less than 12? = 7; what is 5 more than 12? = 17; what number is 100 more than 250? = 350; what is 100 less than 250? = 150; how many cards does kim have? = 12; how many more cards does kim have than joe? = 7; how many cards do kim and joe have? = 17; how many stamps does lily have? = 250; who has more cards? = kim; what number is 1 less than 12? = 11
+test: turn: what is 20 more than 80? => | 100
+test: turn: what number is 3 less than 30? => | 27
+test: zoe has 80 shells. ben has 20 shells. tim has 30 coins. => zoe -> {has} -> shell:quantity(80); {number:value(80)}; ben -> {has} -> shell:quantity(20); {number:value(20)}; tim -> {has} -> coin:quantity(30); {number:value(30)} | what is 20 more than 80? = 100; what number is 3 less than 30? = 27; how many more shells does zoe have than ben? = 60; how many shells do zoe and ben have? = 100; what is 20 less than 80? = 60; what number is 3 more than 30? = 33; how many coins does tim have? = 30; who has fewer shells? = ben

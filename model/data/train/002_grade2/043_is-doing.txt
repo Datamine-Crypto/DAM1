@@ -1,0 +1,13 @@
+# Is and a going form of a verb say what someone does now: anna is reading a book is anna reads a
+# book, and the dog is sleeping is the dog's activity. Held out lines use doers and things the
+# learned lines never use.
+anna is reading a book. => anna -> {read} -> book | what does anna read? = book
+the dog is sleeping. => dog -> {activity} -> sleep | what does the dog do? = sleep
+tom is painting a picture. => tom -> {paint} -> picture | who paints the picture? = tom
+mia is eating an apple. => mia -> {eat} -> apple | what does mia eat? = apple
+the baby is crying. => baby -> {activity} -> cry | who cries? = baby
+ben is building a house. => ben -> {build} -> house | what does ben build? = house
+the frog is jumping. => frog -> {activity} -> jump | what does the frog do? = jump
+test: sara is writing a letter. => sara -> {write} -> letter | what does sara write? = letter
+test: the fox is sleeping. => fox -> {activity} -> sleep | what does the fox do? = sleep
+test: leo is drawing a boat. => leo -> {draw} -> boat | who draws the boat? = leo

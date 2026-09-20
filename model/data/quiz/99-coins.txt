@@ -1,0 +1,13 @@
+# Coins: a penny is worth 1 cent, a nickel 5 cents, a dime 10 cents and a quarter 25 cents, and a dollar
+# is 100 cents, so some coins of one kind are worth that many times the coin's cents.
+# The traced turns stay single lessons. Each scene tells how many coins of a kind two or three people
+# have, then asks what coins are worth, how many make another, each count, how many cents each has, a
+# sum, who has a kind, and a person the scene never told.
+seed: measures
+turn: how many cents is a dime worth? {eom} => | 10
+turn: how many cents are in 3 nickels? {eom} => | 15
+turn: how many pennies make a dime? {eom} => | 10
+tom has 3 nickels. ann has 2 quarters. sam has 5 dimes. => 3 = 3; tom owns nickels; nickels is 3; 2 = 2; ann owns quarters; quarters is 2; 5 = 5; sam owns dimes; dimes is 5 | how many cents is a dime worth? = 10; how many cents are in 3 nickels? = 15; how many cents are in 2 quarters? = 50; how many cents are in a dollar? = 100; how many pennies make a dime? = 10; how many cents are in 5 dimes? = 50; how many cents is a quarter worth? = 25; how many nickels does tom have? = 3; how many quarters does ann have? = 2; how many dimes does sam have? = 5; how many cents does tom have? = 15; how many cents does sam have? = 50; how many cents do tom and ann have? = 65; who has the quarters? = ann; how many dimes does lily have? = nothing
+lily has 4 pennies. fred has 6 nickels. rose has 3 quarters. => 4 = 4; lily owns pennies; pennies is 4; 6 = 6; fred owns nickels; nickels is 6; 3 = 3; rose owns quarters; quarters is 3 | how many cents is a penny worth? = 1; how many cents are in 6 nickels? = 30; how many cents are in 3 quarters? = 75; how many cents are in 2 dollars? = 200; how many pennies make a nickel? = 5; how many dimes make a dollar? = 10; how many cents are in a dollar? = 100; how many pennies does lily have? = 4; how many nickels does fred have? = 6; how many cents does rose have? = 75; how many cents does fred have? = 30; how many cents do lily and fred have? = 34; who has the nickels? = fred; how many quarters does tom have? = nothing
+test: turn: how many cents are in 4 dimes? {eom} => | 40
+test: kim has 4 dimes. joe has 2 nickels. => 4 = 4; kim owns dimes; dimes is 4; 2 = 2; joe owns nickels; nickels is 2 | how many cents are in 4 dimes? = 40; how many nickels make a quarter? = 5; how many cents is a nickel worth? = 5; how many dimes does kim have? = 4; how many cents does kim have? = 40; how many cents does joe have? = 10; how many cents do kim and joe have? = 50; who has the nickels? = joe; how many pennies does zoe have? = nothing

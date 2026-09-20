@@ -1,0 +1,13 @@
+# Tens and hundreds: ten ones make a ten, ten tens make a hundred and ten hundreds make a thousand, so
+# as many tens or hundreds make a number as fit in it whole; how many are in a number asks for its digit.
+# The traced lines and the turns stay as single lessons; each scene tells what several people have,
+# then asks how many ones, tens and hundreds make many numbers, the counts and totals.
+turn: how many tens make 100? => | 10
+turn: how many hundreds make 1000? => | 10
+turn: how many tens make 250? => | 25
+turn: how many ones make 30? => | 30
+tom has 100 apples. ann has 250 apples. sam has 30 apples. => {number:value(100)}; tom -> {has} -> apple:quantity(100); {number:value(250)}; ann -> {has} -> apple:quantity(250); {number:value(30)}; sam -> {has} -> apple:quantity(30) | how many tens make 100? = 10; how many tens make 250? = 25; how many ones make 30? = 30; how many hundreds make 1000? = 10; how many tens make 30? = 3; how many hundreds make 100? = 1; how many ones make 100? = 100; how many apples does ann have? = 250; who has the most apples? = ann; how many apples do tom and sam have? = 130
+kim has 1000 cards. joe has 400 cards. lily has 60 cards. => {number:value(1000)}; kim -> {has} -> card:quantity(1000); {number:value(400)}; joe -> {has} -> card:quantity(400); {number:value(60)}; lily -> {has} -> card:quantity(60) | how many hundreds make 1000? = 10; how many tens make 400? = 40; how many hundreds make 400? = 4; how many tens make 60? = 6; how many ones make 60? = 60; how many tens make 100? = 10; how many tens make 1000? = 100; how many cards does joe have? = 400; who has the fewest cards? = lily; how many more cards does kim have than joe? = 600
+test: zoe has 700 stickers. ben has 3000 stickers. => {number:value(700)}; zoe -> {has} -> sticker:quantity(700); {number:value(3000)}; ben -> {has} -> sticker:quantity(3000) | how many tens make 700? = 70; how many hundreds make 3000? = 30; how many hundreds make 700? = 7; how many tens make 3000? = 300; how many ones make 700? = 700; how many stickers does zoe have? = 700; who has more stickers? = ben; how many stickers do zoe and ben have? = 3700
+test: turn: how many tens make 700? => | 70
+test: turn: how many hundreds make 3000? => | 30

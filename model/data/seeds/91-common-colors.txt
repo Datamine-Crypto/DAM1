@@ -1,0 +1,20 @@
+# The statements of data/facts/91-common-colors.txt the cursor tree holds, one path each, written by build-seeds.mjs.
+grass -> {is} -> {color} -> green
+sky -> {is} -> {color} -> blue
+snow -> {is} -> {color} -> white
+coal -> {is} -> {color} -> black
+milk -> {is} -> {color} -> white
+lemon -> {is} -> {color} -> yellow
+tomato -> {is} -> {color} -> red
+carrot -> {is} -> {color} -> orange
+cherry -> {is} -> {color} -> red
+strawberry -> {is} -> {color} -> red
+frog -> {is} -> {color} -> green
+crow -> {is} -> {color} -> black
+swan -> {is} -> {color} -> white
+chocolate -> {is} -> {color} -> brown
+leaf -> {is} -> {color} -> green
+sea -> {is} -> {color} -> blue
+flamingo -> {is} -> {color} -> pink
+plum -> {is} -> {color} -> purple
+elephant -> {is} -> {color} -> grey

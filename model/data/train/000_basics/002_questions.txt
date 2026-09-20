@@ -1,0 +1,24 @@
+# The self-loop's questions: a line's text is one input, and each question after the bar is an input
+# of its own on the same stack and the same permanent state. The text passes when the state holds the
+# shape after the arrow; a question passes when the nodes it brought back from the state are exactly
+# its answer. Held out lines use other names, an article the learned lines rarely use, and words for a
+# place the learned lines never use.
+seed: 90-everyday
+seed: 18-qualities
+tom has a car. the car is red. => tom -> {has} -> car -> {is} -> red | who has the car? = tom; what color is the car? = red; what does tom have? = car
+the cat is in the box. the box is big. => cat -> {in} -> box -> {is} -> big | where is the cat? = box; what is in the box? = cat; what size is the box? = big
+ann has a dog. the dog is in the garden. => ann -> {has} -> dog -> {in} -> garden | who has the dog? = ann; where is the dog? = garden; what is in the garden? = dog
+the pen is in the cup. sam has the cup. => pen -> {in} -> cup; sam -> {has} -> cup | where is the pen? = cup; who has the cup? = sam; what is in the cup? = pen
+kim has a hat. the hat is blue. => kim -> {has} -> hat -> {is} -> blue | what does kim have? = hat; what color is the hat? = blue; who has the hat? = kim
+the key is in the drawer. the drawer is old. => key -> {in} -> drawer -> {is} -> old | where is the key? = drawer; what is in the drawer? = key
+ben has a ball. the ball is in the yard. => ben -> {has} -> ball -> {in} -> yard | who has the ball? = ben; where is the ball? = yard; what does ben have? = ball
+the bag holds corn. the corn is yellow. => bag -> {hold} -> corn; corn -> {is} -> yellow | what is in the bag? = corn; where is the corn? = bag; what color is the corn? = yellow
+lily has a bike. the bike is green. => lily -> {has} -> bike -> {is} -> green | who has the bike? = lily; what color is the bike? = green
+the book is on the table. the book is red. => book -> {on} -> table; book -> {is} -> red | where is the book? = table; what color is the book? = red
+tom has a car. ann has a bike. => tom -> {has} -> car; ann -> {has} -> bike | who has the car? = tom; who has the bike? = ann; what does ann have? = bike
+the jar holds a coin. the coin is gold. => jar -> {hold} -> coin; coin -> {is} -> gold | what is in the jar? = coin; where is the coin? = jar
+test: a frog is in a pond. the pond is small. => frog -> {in} -> pond -> {is} -> small | where is the frog? = pond; what is in the pond? = frog
+test: max has a kite. the kite is orange. => max -> {has} -> kite -> {is} -> orange | who has the kite? = max; what color is the kite? = orange; what does max have? = kite
+test: the box holds a toy. the toy is new. => box -> {hold} -> toy; toy -> {is} -> new | what is in the box? = toy; where is the toy? = box
+test: sue has a cup. joe has a hat. => sue -> {has} -> cup; joe -> {has} -> hat | who has the hat? = joe; what does sue have? = cup
+test: the milk is inside the fridge. => milk -> {inside} -> fridge | where is the milk? = fridge

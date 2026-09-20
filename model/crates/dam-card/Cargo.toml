@@ -1,0 +1,17 @@
+[package]
+name = "dam-card"
+version = "0.1.0"
+edition = "2024"
+license = "AGPL-3.0-or-later"
+publish = false
+
+[dependencies]
+premise = "0.1.5"
+dam-core = { path = "../dam-core" }
+cudarc = { version = "0.19", default-features = false, features = [
+    "std",
+    "driver",
+    "nvrtc",
+    "dynamic-loading",
+    "cuda-version-from-build-system",
+] }

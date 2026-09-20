@@ -1,0 +1,34 @@
+# The value of each number word, so a word such as twenty is worth its number from the facts and not by its form.
+# Every line has one shape, the digits first: the digits put their number on the stack and the word takes it.
+# The quiz teaches the shape in 00-base.txt, so the network reads these lines when a line is seeded with them.
+0 = zero .
+1 = one .
+2 = two .
+3 = three .
+4 = four .
+5 = five .
+6 = six .
+7 = seven .
+8 = eight .
+9 = nine .
+10 = ten .
+11 = eleven .
+12 = twelve .
+13 = thirteen .
+14 = fourteen .
+15 = fifteen .
+16 = sixteen .
+17 = seventeen .
+18 = eighteen .
+19 = nineteen .
+20 = twenty .
+30 = thirty .
+40 = forty .
+50 = fifty .
+60 = sixty .
+70 = seventy .
+80 = eighty .
+90 = ninety .
+100 = hundred .
+1000 = thousand .
+1000000 = million .

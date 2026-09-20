@@ -1,0 +1,15 @@
+[package]
+name = "dam1"
+version = "0.1.0"
+edition = "2024"
+license = "AGPL-3.0-or-later"
+description = "DAM1, the Datamine Network cursor network and the state every chat starts from, saved and loaded in the Hugging Face layout: safetensors weights beside a JSON config and the state's bytes"
+repository = "https://github.com/Datamine-Crypto/DAM1"
+publish = false
+
+[dependencies]
+premise = "0.1.5"
+dam-core = { path = "../../../model/crates/dam-core" }
+safetensors = "0.8"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"

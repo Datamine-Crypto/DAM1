@@ -1,0 +1,29 @@
+# Amounts left: a count someone has, then some of it eaten, spent, lost or sold, kept as a relation from
+# the one who had it to the number taken, and the question how many are left, which is the count less
+# everything taken, as a person works it out.
+# Each scene tells two people, a man and a woman so he and she each point back at one, then asks what
+# is left, what each had and took away, who has each thing, yes and no, and a person the scene never
+# told. The chat turns stay turns.
+seed: 21-verb-forms
+tom has 10 apples. he eats 4. lily has 6 pens. she loses 2. => {number:value(10)}; {number:value(4)}; tom -> {eat} -> 4; tom -> {has} -> apple:quantity(10); {number:value(2)}; {number:value(6)}; lily -> {lose} -> 2; lily -> {has} -> pen:quantity(6) | how many apples does tom have left? = 6; how many pens does lily have left? = 4; how many apples did tom have? = 10; how many pens did lily have? = 6; how many apples did tom eat? = 4; how many pens did lily lose? = 2; who has the apples? = tom; who has the pens? = lily; what does tom have? = apple; does tom have apples? = yes; does lily have apples? = no; how many hats does joe have left? = {nothing}
+sam has 12 dollars. he spends 5. ann has 8 sweets. she sells 3. => {number:value(12)}; {number:value(5)}; sam -> {has} -> dollar:quantity(12); sam -> {spend} -> 5; {number:value(3)}; {number:value(8)}; ann -> {has} -> sweet:quantity(8); ann -> {sell} -> 3 | how many dollars does sam have left? = 7; how many sweets does ann have left? = 5; how many dollars did sam have? = 12; how many sweets did ann have? = 8; how many dollars did sam spend? = 5; how many sweets did ann sell? = 3; who has the dollars? = sam; who has the sweets? = ann; what does ann have? = sweet; does ann have sweets? = yes; does sam have sweets? = no; how many pens does rose have left? = {nothing}
+turn: tom has 10 apples. he eats 4. how many apples does tom have left? => tom -> {has} -> apple:quantity(10); {number:value(10)}; tom -> {eat} -> 4; {number:value(4)} | 6
+turn: sam has 12 dollars. he spends 5. how many dollars does sam have left? => sam -> {has} -> dollar:quantity(12); {number:value(12)}; sam -> {spend} -> 5; {number:value(5)} | 7
+test: ben has 9 cookies. he eats 3. zoe has 20 dollars. she spends 8. => {number:value(3)}; {number:value(9)}; ben -> {eat} -> 3; ben -> {has} -> cookie:quantity(9); {number:value(20)}; {number:value(8)}; zoe -> {has} -> dollar:quantity(20); zoe -> {spend} -> 8 | how many cookies does ben have left? = 6; how many dollars does zoe have left? = 12; how many cookies did ben have? = 9; how many cookies did ben eat? = 3; how many dollars did zoe spend? = 8; who has the cookies? = ben; what does zoe have? = dollar; does ben have dollars? = no; how many pens does max have left? = {nothing}
+test: turn: kim has 7 cards. she loses 2. how many cards does kim have left? => kim -> {has} -> card:quantity(7); {number:value(7)}; kim -> {lose} -> 2; {number:value(2)} | 5
+ben has 6 apples. he ate 1. kim has 8 sweets. she ate 3. => ben -> {has} -> apple:quantity(6); kim -> {has} -> sweet:quantity(8) | how many apples does ben have left? = 5; how many sweets does kim have left? = 5
+sam had 12 dollars. he spent 5. ann has 9 cards. she lost 4. => sam -> {has} -> dollar:quantity(12); ann -> {has} -> card:quantity(9) | how many dollars does sam have left? = 7; how many cards does ann have left? = 5
+turn: joe had 10 coins he spent 4 how many coins does joe have left => | 6
+test: rose had 15 dollars. she spent 6. dan has 7 plums. he ate 2. => rose -> {has} -> dollar:quantity(15); dan -> {has} -> plum:quantity(7) | how many dollars does rose have left? = 9; how many plums does dan have left? = 5
+test: turn: max had 20 stickers he lost 5 how many stickers does max have left => | 15
+# The speaker's own amounts: i have some and i lose, spend or eat some.
+i have 8 stamps. i lost 3. => | how many stamps do i have left? = 5
+i have 10 pens. i lost 4. => | how many pens do i have left? = 6
+i have 6 plums. i ate 2. => | how many plums do i have left? = 4
+test: i have 5 coins. i lost 2. => | how many coins do i have left? = 3
+test: i had 9 cards. i sold 4. => | how many cards do i have left? = 5
+sara bought three apples. she lost one. => sara -> {has} -> apple:quantity(3); sara -> {lost} -> 1 | how many apples does sara have left? = 2; how many apples did sara buy? = 3
+tom won five cards. he lost two. => tom -> {has} -> card:quantity(5); tom -> {lost} -> 2 | how many cards does tom have left? = 3
+test: mia bought four pens. she lost one. => mia -> {has} -> pen:quantity(4); mia -> {lost} -> 1 | how many pens does mia have left? = 3
+ben bought six eggs. he lost two. => ben -> {has} -> egg:quantity(6); ben -> {lost} -> 2 | how many eggs does ben have left? = 4
+kim won three cups. she lost one. => kim -> {has} -> cup:quantity(3); kim -> {lost} -> 1 | how many cups does kim have left? = 2

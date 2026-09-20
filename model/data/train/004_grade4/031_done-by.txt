@@ -1,0 +1,18 @@
+# A deed told backward, the telephone was invented by bell, is the deed of the doer named after by:
+# bell invented the telephone, in the past. What the thing is said to be beside the deed stays its
+# own, superman is a superhero created by jerry. Held out lines use doers and things the learned
+# lines never use.
+the telephone was invented by bell. => bell -> {invent} -> telephone -> {time} -> {past} | who invented the telephone? = bell
+hamlet was written by shakespeare. => shakespeare -> {write} -> hamlet -> {time} -> {past} | who wrote hamlet? = shakespeare
+superman is a superhero created by jerry. => jerry -> {create} -> superman -> {time} -> {past} | who created superman? = jerry
+superman is a superhero created by jerry. => superman -> {is} -> superhero | what is superman? = superhero
+the cake was made by anna. => anna -> {make} -> cake -> {time} -> {past} | who made the cake? = anna
+the house was built by tom. => tom -> {build} -> house -> {time} -> {past} | who built the house? = tom
+the song was composed by mia. => mia -> {compose} -> song -> {time} -> {past} | who composed the song? = mia
+the picture was painted by ben. => ben -> {paint} -> picture -> {time} -> {past} | what did ben paint? = picture
+the robot was designed by sara. => sara -> {design} -> robot -> {time} -> {past} | who designed the robot? = sara
+the letter was written by leo. => leo -> {write} -> letter -> {time} -> {past} | what did leo write? = letter
+test: the radio was invented by marconi. => marconi -> {invent} -> radio -> {time} -> {past} | who invented the radio? = marconi
+test: the bridge was built by omar. => omar -> {build} -> bridge -> {time} -> {past} | who built the bridge? = omar
+test: batman is a hero created by bob. => bob -> {create} -> batman -> {time} -> {past} | who created batman? = bob
+test: the poem was written by ruth. => ruth -> {write} -> poem -> {time} -> {past} | what did ruth write? = poem

@@ -1,0 +1,14 @@
+[workspace]
+resolver = "3"
+members = [
+    "crates/dam1",
+    "crates/dam1-hub",
+    "crates/dam1-cli",
+]
+
+[profile.test]
+opt-level = 3
+incremental = true
+
+[profile.release]
+incremental = true

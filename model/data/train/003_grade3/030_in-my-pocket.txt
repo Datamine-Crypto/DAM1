@@ -1,0 +1,12 @@
+# A place said with my or his while something is on its way there belongs to that person: the keys
+# are in my pocket, so the pocket is mine. Held out lines use people and places the learned lines
+# never use.
+the keys are in my pocket. => pocket -> {owner} -> user | where are the keys? = pocket
+the pen is in his bag. => bag -> {owner} -> he | where is the pen? = bag
+the cat is in her garden. => garden -> {owner} -> she | where is the cat? = garden
+the ball is in my box. => box -> {owner} -> user | where is the ball? = box
+test: the key is in my drawer. => drawer -> {owner} -> user | where is the key? = drawer
+test: the book is in his room. => room -> {owner} -> he | where is the book? = room
+the coin is in my purse. => purse -> {owner} -> user | where is the coin? = purse
+the cup is in her bag. => bag -> {owner} -> she | where is the cup? = bag
+the map is in his car. => car -> {owner} -> he | where is the map? = car

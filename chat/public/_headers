@@ -1,0 +1,35 @@
+# Cloudflare Pages reads this file and sends these headers with every response.
+# The page loads nothing from other origins: scripts, styles, images, fonts and fetches are all
+# same-origin, so the Content Security Policy is locked to 'self'. Two exceptions are needed by
+# the build: 'wasm-unsafe-eval' lets the browser compile the reader, and 'unsafe-inline' for
+# styles is required by the Emotion runtime that Material UI uses to inject its CSS.
+/*
+  Content-Security-Policy: default-src 'none'; script-src 'self' 'wasm-unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; manifest-src 'self'; worker-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; object-src 'none'; upgrade-insecure-requests
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: no-referrer
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=(), browsing-topics=()
+  Cross-Origin-Opener-Policy: same-origin
+  Cross-Origin-Resource-Policy: same-origin
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+  Cache-Control: no-cache
+
+# Pages joins the values of a header set by several matching rules with a comma, so each path below
+# first detaches the Cache-Control of /* with `! Cache-Control` and then sets its own.
+
+# Hashed build assets never change under one name, so they may be cached for a year.
+/assets/*
+  ! Cache-Control
+  Cache-Control: public, max-age=31536000, immutable
+
+# The network, its classes and the state are replaced in place when the model is retrained; a short
+# cache keeps a retrain visible within a minute.
+/network.bin
+  ! Cache-Control
+  Cache-Control: public, max-age=60
+/network.json
+  ! Cache-Control
+  Cache-Control: public, max-age=60
+/state.bin
+  ! Cache-Control
+  Cache-Control: public, max-age=60

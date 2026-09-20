@@ -1,0 +1,28 @@
+# What a thing did with nothing it was done to and no place: the bucket fell, the dog barked. The
+# sentence ends right after the verb, and the deed is written under the doer's activity, in the past.
+# Asked who or what did it, the doer is named; asked what the doer did, the deed. Held out lines use
+# doers the learned lines never use.
+the bucket fell. => bucket -> {activity} -> fall | what fell? = bucket
+the bucket fell. => bucket -> {activity} -> fall | what did the bucket do? = fall
+the dog barked. => dog -> {activity} -> bark | who barked? = dog
+the baby cried. => baby -> {activity} -> cry | did the baby cry? = yes
+a bucket of jam fell. now grandma is mad. => grandma -> {is} -> mad | who is mad? = grandma
+a bucket of jam fell. now grandma is mad. => bucket -> {activity} -> fall | what fell? = bucket
+anna laughed. => anna -> {activity} -> laugh | who laughed? = anna
+anna laughed. the dog barked. => dog -> {activity} -> bark | did the dog laugh? = no
+the frog jumped. => frog -> {activity} -> jump | what did the frog do? = jump
+ben smiled. => ben -> {activity} -> smile | who smiled? = ben
+the vase fell. the cat jumped. => vase -> {activity} -> fall | what fell? = vase
+the vase fell. the cat jumped. => cat -> {activity} -> jump | who jumped? = cat
+the girl cried. her ball fell. => girl -> {activity} -> cry | who cried? = girl
+mia jumped. leo laughed. => leo -> {activity} -> laugh | did leo laugh? = yes
+test: the jar fell. => jar -> {activity} -> fall | what fell? = jar
+test: the fox barked. => fox -> {activity} -> bark | who barked? = fox
+test: nina smiled. => nina -> {activity} -> smile | what did nina do? = smile
+test: the lamp fell. the boy cried. => boy -> {activity} -> cry | who cried? = boy
+test: omar laughed. => omar -> {activity} -> laugh | did omar cry? = no
+the cat ran away. => cat -> {activity} -> run | what did the cat do? = run
+the bird flew away. => bird -> {activity} -> fly -> {time} -> {past} | what did the bird do? = fly
+tom walked away. => tom -> {activity} -> walk -> {time} -> {past} | what did tom do? = walk
+test: the dog ran away. => dog -> {activity} -> run | what did the dog do? = run
+test: mia walked away. => mia -> {activity} -> walk -> {time} -> {past} | what did mia do? = walk

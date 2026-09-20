@@ -1,0 +1,12 @@
+# Square roots: the square root of a number is the number that, times itself, makes it, so the square
+# root of 49 is 7 because 7 times 7 is 49. The turns stay as single chat turns; each scene tells what
+# several people have, then asks many square roots, the counts and who has the most.
+turn: what is the square root of 49? => | 7
+turn: what is the square root of 100? => | 10
+turn: what is the square root of 9? => | 3
+turn: what is the square root of 144? => | 12
+tom has 49 apples. ann has 100 apples. sam has 9 apples. => {number:value(49)}; tom -> {has} -> apple:quantity(49); {number:value(100)}; ann -> {has} -> apple:quantity(100); {number:value(9)}; sam -> {has} -> apple:quantity(9) | what is the square root of 49? = 7; what is the square root of 100? = 10; what is the square root of 9? = 3; what is the square root of 144? = 12; what is the square root of 16? = 4; what is the square root of 25? = 5; what is the square root of 36? = 6; how many apples does ann have? = 100; who has the fewest apples? = sam; how many apples do tom and sam have? = 58
+kim has 144 cards. joe has 81 cards. lily has 4 cards. => {number:value(144)}; kim -> {has} -> card:quantity(144); {number:value(81)}; joe -> {has} -> card:quantity(81); {number:value(4)}; lily -> {has} -> card:quantity(4) | what is the square root of 144? = 12; what is the square root of 81? = 9; what is the square root of 4? = 2; what is the square root of 49? = 7; what is the square root of 100? = 10; what is the square root of 121? = 11; how many cards does joe have? = 81; who has the most cards? = kim; how many more cards does kim have than joe? = 63
+test: zoe has 64 stickers. ben has 400 stickers. => {number:value(64)}; zoe -> {has} -> sticker:quantity(64); {number:value(400)}; ben -> {has} -> sticker:quantity(400) | what is the square root of 64? = 8; what is the square root of 1? = 1; what is the square root of 400? = 20; what is the square root of 169? = 13; what is the square root of 900? = 30; how many stickers does zoe have? = 64; who has more stickers? = ben; how many more stickers does ben have than zoe? = 336
+test: turn: what is the square root of 64? => | 8
+test: turn: what is the square root of 1? => | 1

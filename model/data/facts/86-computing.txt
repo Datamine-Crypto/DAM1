@@ -1,0 +1,234 @@
+# Computing: languages, systems, hardware, units, software, networks, companies, and the people and machines behind them.
+python is code.
+javascript is code.
+c is code.
+rust is code.
+html is code.
+css is code.
+sql is code.
+php is code.
+fortran is code.
+cobol is code.
+lisp is code.
+python is for programming.
+html is for webpages.
+css is for style.
+sql is for databases.
+javascript is for browsers.
+rust is for systems.
+swift is for iphones.
+kotlin is for android.
+linux is a system.
+windows is a system.
+macos is a system.
+android is a system.
+ios is a system.
+unix is a system.
+dos is a system.
+ubuntu is a system.
+linux is free.
+a system is software.
+a cpu is a processor.
+a gpu is a processor.
+a cpu has cores.
+a cpu is made of silicon.
+a chip has transistors.
+a keyboard is a device.
+a printer is a device.
+a monitor is a screen.
+a webcam is a camera.
+a router is a device.
+a modem is a device.
+a router is in a network.
+ram is memory.
+a cache is memory.
+an ssd is a disk.
+a disk is storage.
+a computer has a motherboard.
+a computer has a fan.
+a computer needs electricity.
+a laptop has a battery.
+a laptop has a touchpad.
+a smartphone is a phone.
+the iphone is a phone.
+a desktop is a computer.
+a supercomputer is a computer.
+a supercomputer is faster than a laptop.
+a computer is faster than a human.
+an ssd is faster than a disk.
+ram is faster than a disk.
+a cache is faster than ram.
+a calculator is a machine.
+an abacus is a calculator.
+an abacus is old.
+a console is a computer.
+the playstation is a console.
+the xbox is a console.
+the playstation is japanese.
+a server is in a datacenter.
+a datacenter has servers.
+a nibble has 4 bits.
+a terabyte has 1024 gigabytes.
+a petabyte has 1024 terabytes.
+a byte has 256 values.
+a byte is bigger than a bit.
+a gigabyte is bigger than a megabyte.
+a terabyte is bigger than a gigabyte.
+a bit is a digit.
+binary has 2 digits.
+decimal has 10 digits.
+hexadecimal has 16 digits.
+ascii is a code.
+unicode is a code.
+ascii has 128 characters.
+chrome is a browser.
+firefox is a browser.
+safari is a browser.
+an app is a program.
+a compiler is a program.
+an interpreter is a program.
+a compiler is for code.
+a database has tables.
+a spreadsheet is a program.
+a spreadsheet has cells.
+excel is a spreadsheet.
+a kernel is a program.
+git is a program.
+git is for code.
+a bug is an error.
+a patch is a fix.
+malware is bad software.
+a firewall is a filter.
+a login needs a password.
+an algorithm is a method.
+a function is code.
+a variable has a value.
+an array has elements.
+a string is text.
+an integer is a number.
+a file has a name.
+a folder has files.
+a directory is a folder.
+a backup is a copy.
+a chatbot is a program.
+eliza was a chatbot.
+siri is an assistant.
+chatgpt is a chatbot.
+ai is software.
+a url is an address.
+a domain is a name.
+http is a protocol.
+tcp is a protocol.
+wifi is wireless.
+bluetooth is wireless.
+a lan is a network.
+a packet is data.
+an email has a subject.
+a tweet is a message.
+a blog is a website.
+a website has pages.
+a webpage is a document.
+the web is on the internet.
+wikipedia is on the internet.
+youtube is a website.
+instagram is an app.
+whatsapp is an app.
+ibm is a company.
+intel is a company.
+nvidia is a company.
+samsung is a company.
+sony is a company.
+nokia is a company.
+oracle is a company.
+netflix is a company.
+meta is a company.
+huawei is a company.
+google is american.
+microsoft is american.
+samsung is korean.
+sony is japanese.
+nintendo is japanese.
+nokia is finnish.
+huawei is chinese.
+spotify is swedish.
+google owns youtube.
+google owns android.
+microsoft owns windows.
+microsoft owns github.
+meta owns facebook.
+meta owns instagram.
+alphabet owns google.
+apple owns ios.
+the founder of ibm is watson.
+the founder of intel is moore.
+the founder of oracle is ellison.
+the founder of nvidia is huang.
+the founder of hp is hewlett.
+the founder of bitcoin is nakamoto.
+the founder of linkedin is hoffman.
+the founder of netflix is hastings.
+the founder of youtube is hurley.
+the founder of twitter is dorsey.
+the inventor of the internet is cerf.
+torvalds wrote git.
+ritchie wrote c.
+thompson wrote unix.
+eich wrote javascript.
+hoare wrote rust.
+wirth wrote pascal.
+backus wrote fortran.
+mccarthy wrote lisp.
+knuth wrote tex.
+stallman wrote emacs.
+lovelace was the first programmer.
+hopper was a programmer.
+neumann was a mathematician.
+neumann was hungarian.
+dijkstra was a scientist.
+dijkstra was dutch.
+ritchie was a programmer.
+ritchie was american.
+torvalds is a programmer.
+torvalds is finnish.
+wozniak is an engineer.
+wozniak is american.
+knuth is a scientist.
+knuth is american.
+zuse was an inventor.
+zuse was german.
+wirth was a scientist.
+wirth was swiss.
+stallman is a programmer.
+gosling is canadian.
+engelbart was an inventor.
+engelbart was american.
+kilby was an inventor.
+kilby was american.
+shockley was a physicist.
+shockley was american.
+tomlinson was a programmer.
+tomlinson was american.
+cerf is an engineer.
+cerf is american.
+eniac was a computer.
+eniac was american.
+eniac was the first computer.
+eniac was in 1945.
+colossus was a computer.
+colossus was british.
+colossus was in 1944.
+the enigma was a machine.
+the enigma was german.
+the macintosh was a computer.
+the macintosh was in 1984.
+arpanet was a network.
+arpanet was in 1969.
+python was in 1991.
+windows was in 1985.
+chatgpt was in 2022.
+a programmer has a computer.
+a programmer needs a computer.
+a coder is a programmer.
+a developer is a programmer.
+a robot has sensors.
+a drone is a robot.

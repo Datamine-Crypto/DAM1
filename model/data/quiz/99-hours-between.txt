@@ -1,0 +1,16 @@
+# Hours between two times: on a clock with twelve hours, the hours from one time to a later one are
+# counted forward round the face, wrapping past twelve.
+# The turns ask one span each. Each scene tells what three people have, then asks the hours between
+# those numbers as clock times both ways round, each count, a total, how many more, and who has more.
+seed: 12-clock
+turn: how many hours are from 2 o'clock to 5 o'clock? {eom} => | 3
+turn: how many hours are from 11 o'clock to 2 o'clock? {eom} => | 3
+turn: how many hours are from 6 o'clock to 12 o'clock? {eom} => | 6
+turn: how many hours are from 9 o'clock to 4 o'clock? {eom} => | 7
+turn: how many hours are from 8 o'clock to 1 o'clock? {eom} => | 5
+turn: how many hours are from 12 o'clock to 4 o'clock? {eom} => | 4
+tom has 2 apples. ann has 5 apples. sam has 11 pens. => tom owns apples; apples is 2; 2 = 2; ann owns apples; apples is 5; 5 = 5; sam owns pens; pens is 11; 11 = 11 | how many hours are from 2 o'clock to 5 o'clock? = 3; how many hours are from 11 o'clock to 2 o'clock? = 3; how many hours are from 6 o'clock to 12 o'clock? = 6; how many hours are from 5 o'clock to 11 o'clock? = 6; how many hours are from 11 o'clock to 5 o'clock? = 6; how many apples does tom have? = 2; how many apples do tom and ann have? = 7; how many more apples does ann have than tom? = 3; how many pens does sam have? = 11; who has more apples? = ann
+kim has 9 cards. joe has 4 cards. lily has 8 stamps. => kim owns cards; cards is 9; 9 = 9; joe owns cards; cards is 4; 4 = 4; lily owns stamps; stamps is 8; 8 = 8 | how many hours are from 9 o'clock to 4 o'clock? = 7; how many hours are from 8 o'clock to 1 o'clock? = 5; how many hours are from 12 o'clock to 4 o'clock? = 4; how many hours are from 4 o'clock to 9 o'clock? = 5; how many hours are from 8 o'clock to 9 o'clock? = 1; how many cards does kim have? = 9; how many cards do kim and joe have? = 13; how many more cards does kim have than joe? = 5; how many stamps does lily have? = 8; who has fewer cards? = joe
+test: turn: how many hours are from 1 o'clock to 8 o'clock? {eom} => | 7
+test: turn: how many hours are from 10 o'clock to 3 o'clock? {eom} => | 5
+test: zoe has 10 shells. ben has 3 shells. tim has 8 coins. => zoe owns shells; shells is 10; 10 = 10; ben owns shells; shells is 3; 3 = 3; tim owns coins; coins is 8; 8 = 8 | how many hours are from 1 o'clock to 8 o'clock? = 7; how many hours are from 10 o'clock to 3 o'clock? = 5; how many hours are from 3 o'clock to 10 o'clock? = 7; how many hours are from 8 o'clock to 3 o'clock? = 7; how many shells do zoe and ben have? = 13; how many more shells does zoe have than ben? = 7; who has more shells? = zoe; how many coins does tim have? = 8

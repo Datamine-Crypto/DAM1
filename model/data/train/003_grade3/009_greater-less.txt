@@ -1,0 +1,14 @@
+# Greater and less: of two numbers, the bigger is greater than the smaller and the smaller is less than
+# the bigger, and a number is equal only to itself, whether the words or the signs say it.
+# The turns compare two numbers each. Each scene tells what three people have, then compares the numbers
+# in words and in signs, asks each count, who has more and fewer, and a total.
+turn: is 12 greater than 20? => | no
+turn: is 9 less than 15? => | yes
+turn: is 7 > 3? => | yes
+turn: is 4 < 2? => | no
+turn: is 6 equal to 6? => | yes
+tom has 12 apples. ann has 20 apples. sam has 9 pens. => tom -> {has} -> apple:quantity(12); {number:value(12)}; ann -> {has} -> apple:quantity(20); {number:value(20)}; sam -> {has} -> pen:quantity(9); {number:value(9)} | is 12 greater than 20? = no; is 9 less than 15? = yes; is 20 greater than 12? = yes; is 9 < 12? = yes; is 20 > 9? = yes; is 12 equal to 12? = yes; is 20 equal to 12? = no; how many apples does tom have? = 12; how many apples does ann have? = 20; who has more apples? = ann; who has fewer apples? = tom; how many pens does sam have? = 9
+kim has 7 cards. joe has 3 cards. lily has 6 stamps. => kim -> {has} -> card:quantity(7); {number:value(7)}; joe -> {has} -> card:quantity(3); {number:value(3)}; lily -> {has} -> stamp:quantity(6); {number:value(6)} | is 7 > 3? = yes; is 4 < 2? = no; is 6 equal to 6? = yes; is 3 greater than 7? = no; is 6 less than 7? = yes; is 3 < 6? = yes; is 7 equal to 3? = no; how many cards does kim have? = 7; how many stamps does lily have? = 6; who has more cards? = kim; who has fewer cards? = joe; how many cards do kim and joe have? = 10
+test: turn: is 30 greater than 25? => | yes
+test: turn: is 8 < 5? => | no
+test: zoe has 30 shells. ben has 25 shells. max has 8 coins. => zoe -> {has} -> shell:quantity(30); {number:value(30)}; ben -> {has} -> shell:quantity(25); {number:value(25)}; max -> {has} -> coin:quantity(8); {number:value(8)} | is 30 greater than 25? = yes; is 8 < 5? = no; is 25 > 30? = no; is 8 less than 25? = yes; is 30 equal to 30? = yes; who has more shells? = zoe; how many coins does max have? = 8; how many shells do zoe and ben have? = 55

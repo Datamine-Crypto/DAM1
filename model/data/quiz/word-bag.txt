@@ -1,0 +1,7 @@
+# One bag named twice: a value that names a thing the story later makes becomes a mention of it, so bag is red
+# after corn in bag and carrot in bag writes on the one bag that both sentences mean.
+seed: 90-everyday
+corn in bag. carrot in bag. bag is red. => corn -> {in} -> bag; carrot -> {in} -> bag; bag -> {is} -> red
+the cat is in the box. the dog is in the box. the box is big. => cat -> {in} -> box; dog -> {in} -> box; box -> {is} -> big
+test: zorp in flib. grunk in flib. flib is blick. => zorp -> {in} -> flib; grunk -> {in} -> flib; flib -> {is} -> blick
+test: the wexel is in the tornd. the plim is in the tornd. the tornd is quorn. => wexel -> {in} -> tornd; plim -> {in} -> tornd; tornd -> {is} -> quorn

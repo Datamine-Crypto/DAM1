@@ -1,0 +1,36 @@
+# Partial view games: each game states a world the tree holds and the stack does not, then a text
+# tells only part of what happens to it. The stack shows the text; the rest stays in the tree. A
+# question asks about the part the text told, the part it never told, or both together, so the
+# network has to take it that the thing the text names is the thing the world holds, and search the
+# tree for what the stack does not show. Held out lines use names and things the learned lines never
+# use.
+seed: 90-everyday
+seed: 18-qualities
+world: ball -> {in} -> box; cup -> {in} -> bag | where is the cup? = bag
+then: the ball moves to the shelf. => ball -> {in} -> shelf; not ball -> {in} -> box | where is the ball? = shelf; where is the cup? = bag
+world: key -> {in} -> drawer; pen -> {in} -> cup | where is the key? = drawer
+then: the pen moves to the desk. => pen -> {in} -> desk; not pen -> {in} -> cup | where is the pen? = desk; where is the key? = drawer
+world: tom -> {has} -> kite -> {in} -> garden | who has the kite? = tom
+then: ann has a hat. => ann -> {has} -> hat | who has the hat? = ann; where is the kite? = garden; who has the kite? = tom
+world: sam -> {has} -> bike -> {in} -> shed | where is the bike? = shed
+then: kim has a car. => kim -> {has} -> car | who has the bike? = sam; what does kim have? = car
+world: ball -> {in} -> box | where is the ball? = box
+then: the ball is red. => ball -> {red} | what color is the ball? = red; where is the ball? = box
+world: dog -> {in} -> yard | where is the dog? = yard
+then: the dog is big. => dog -> {big} | what size is the dog? = big; where is the dog? = yard
+world: tom -> {has} -> apple:quantity(3) | how many apples does tom have? = 3
+then: ann has 2 apples. => ann -> {has} -> apple:quantity(2) | how many apples does ann have? = 2; how many apples does tom have? = 3
+world: sam -> {has} -> pen:quantity(4) | how many pens does sam have? = 4
+then: kim has 5 pens. => kim -> {has} -> pen:quantity(5) | how many pens does kim have? = 5; how many pens does sam have? = 4
+world: tom -> {has} -> car | who has the car? = tom
+then: tom gives the car to ann. => ann -> {has} -> car; not tom -> {has} -> car | who has the car? = ann; what does ann have? = car
+world: ben -> {has} -> cap -> {in} -> hall | where is the cap? = hall
+then: ben gives the cap to lily. => lily -> {has} -> cap; not ben -> {has} -> cap | who has the cap? = lily; where is the cap? = hall
+test: world: lamp -> {in} -> attic; mug -> {in} -> sink | where is the mug? = sink
+test: then: the lamp moves to the porch. => lamp -> {in} -> porch; not lamp -> {in} -> attic | where is the lamp? = porch; where is the mug? = sink
+test: world: nina -> {has} -> drum -> {in} -> closet | who has the drum? = nina
+test: then: paul has a vase. => paul -> {has} -> vase | who has the vase? = paul; where is the drum? = closet
+test: world: sock -> {in} -> basket | where is the sock? = basket
+test: then: the sock is pink. => sock -> {pink} | what color is the sock? = pink; where is the sock? = basket
+test: world: rosa -> {has} -> tray | who has the tray? = rosa
+test: then: rosa gives the tray to paul. => paul -> {has} -> tray; not rosa -> {has} -> tray | who has the tray? = paul; what does paul have? = tray

@@ -1,0 +1,14 @@
+# Today, tomorrow and yesterday are names a day joins, and "what day" asks for the day.
+# Each line is a scene: today, tomorrow and yesterday in one week that agrees, then many questions
+# (what day each is, yes and no, and which name a day joins).
+seed: 10-time
+seed: 21-verb-forms
+today is monday. tomorrow is tuesday. yesterday was sunday. => today -> {monday}; tomorrow -> {tuesday}; yesterday -> {sunday} | what day is today? = monday; what day is tomorrow? = tuesday; what day was yesterday? = sunday; is today monday? = yes; is today tuesday? = no; is tomorrow tuesday? = yes; is tomorrow sunday? = no; was yesterday sunday? = yes; was yesterday monday? = no; what is monday? = today; what is tuesday? = tomorrow; what was sunday? = yesterday
+today is friday. tomorrow is saturday. yesterday was thursday. => today -> {friday}; tomorrow -> {saturday}; yesterday -> {thursday} | what day is today? = friday; what day is tomorrow? = saturday; what day was yesterday? = thursday; is today friday? = yes; is today thursday? = no; is tomorrow friday? = no; was yesterday thursday? = yes; what is saturday? = tomorrow; what is friday? = today; what was thursday? = yesterday
+today is thursday. tomorrow is friday. => today -> {thursday}; tomorrow -> {friday} | what day is today? = thursday; what day is tomorrow? = friday; is today thursday? = yes; is today friday? = no; is tomorrow friday? = yes; is tomorrow saturday? = no; what is friday? = tomorrow; what is thursday? = today
+today is saturday. yesterday was friday. => today -> {saturday}; yesterday -> {friday} | what day is today? = saturday; what day was yesterday? = friday; is today saturday? = yes; is today sunday? = no; was yesterday friday? = yes; was yesterday saturday? = no; what is saturday? = today; what was friday? = yesterday
+turn: today is monday tomorrow is tuesday what day is today => today -> {monday}; tomorrow -> {tuesday} | monday
+turn: tomorrow is friday today is thursday what day is tomorrow => tomorrow -> {friday}; today -> {thursday} | friday
+test: today is wednesday. yesterday was tuesday. => today -> {wednesday}; yesterday -> {tuesday} | what day is today? = wednesday; what day was yesterday? = tuesday; is today wednesday? = yes; is today tuesday? = no; was yesterday tuesday? = yes; was yesterday monday? = no; what is wednesday? = today; what was tuesday? = yesterday
+test: today is saturday. tomorrow is sunday. => today -> {saturday}; tomorrow -> {sunday} | what day is tomorrow? = sunday; what day is today? = saturday; is tomorrow sunday? = yes; is tomorrow monday? = no; is today sunday? = no; what is sunday? = tomorrow; what is saturday? = today; is today saturday? = yes
+test: turn: yesterday was monday today is tuesday what day was yesterday => yesterday -> {monday}; today -> {tuesday} | monday

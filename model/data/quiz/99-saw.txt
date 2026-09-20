@@ -1,0 +1,8 @@
+# Seeing: saw names the relation between who saw and what was seen, as wrote does, so who saw
+# sally asks the relation and is not read as a question about the tool. A saw is still a tool
+# when the text says so. Each scene tells two or three seeings, some with a saw as a tool, then asks
+# who saw each one, what a saw is, and a seeing not told.
+tom saw sally. ann saw a bird. max saw the dog. => tom saw sally; ann saw bird; max saw dog | who saw sally? = tom; who saw the bird? = ann; who saw the dog? = max; who saw a bird? = ann; who saw a dog? = max; who saw tom? = nothing; who saw the cat? = nothing; who saw max? = nothing
+a saw is a tool. tom saw sally. a hammer is a tool. => saw is tool; tom saw sally; hammer is tool | what is a saw? = tool; who saw sally? = tom; what is a hammer? = tool; is a saw a tool? = yes; is a hammer a tool? = yes; is a saw a bird? = no; who saw the hammer? = nothing; who saw tom? = nothing
+max saw the dog. ann saw a bird. the dog saw ann. => max saw dog; ann saw bird; dog saw ann | who saw the dog? = max; who saw the bird? = ann; who saw ann? = dog; who saw a bird? = ann; who saw max? = nothing; who saw sally? = nothing; is a dog a tool? = no; who saw a dog? = max
+test: ben saw a cat. lily saw tom. a saw is sharp. => ben saw cat; lily saw tom; saw is sharp | who saw the cat? = ben; who saw tom? = lily; who saw a cat? = ben; what is sharp? = saw; is a saw sharp? = yes; who saw lily? = nothing; who saw ben? = nothing; who saw the dog? = nothing

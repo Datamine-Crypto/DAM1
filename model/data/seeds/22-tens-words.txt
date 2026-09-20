@@ -1,0 +1,9 @@
+# The statements of data/facts/22-tens-words.txt the cursor tree holds, one path each, written by build-seeds.mjs.
+twenty -> {tens} -> {number:value(2)}
+thirty -> {tens} -> {number:value(3)}
+forty -> {tens} -> {number:value(4)}
+fifty -> {tens} -> {number:value(5)}
+sixty -> {tens} -> {number:value(6)}
+seventy -> {tens} -> {number:value(7)}
+eighty -> {tens} -> {number:value(8)}
+ninety -> {tens} -> {number:value(9)}

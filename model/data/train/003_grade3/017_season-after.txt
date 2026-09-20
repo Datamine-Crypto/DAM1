@@ -1,0 +1,14 @@
+# The season after and before: the seasons come in order and wrap round, spring, summer, autumn and
+# winter, so a season comes after the one before it and spring comes after winter. The turns stay as
+# single chat turns; each scene tells two things that happen in a season, then asks the season after
+# and before many seasons, and whose thing is in which season.
+seed: 11-order
+tom's party is in spring. ann's trip is in winter. => tom -> {has} -> party -> {in} -> spring; ann -> {has} -> trip -> {in} -> winter | what season comes after spring? = summer; what season comes after winter? = spring; what season comes before summer? = spring; what season comes before spring? = winter; what season comes after autumn? = winter; what season comes before autumn? = summer; whose party is in spring? = tom; whose trip is in winter? = ann; what is in spring? = party; what is in winter? = trip
+sam's game is in summer. kim's walk is in autumn. => sam -> {has} -> game -> {in} -> summer; kim -> {has} -> walk -> {in} -> autumn | what season comes before spring? = winter; what season comes after spring? = summer; what season comes after autumn? = winter; what season comes before summer? = spring; what season comes after winter? = spring; what season comes before autumn? = summer; whose game is in summer? = sam; whose walk is in autumn? = kim; what is in autumn? = walk; what is in summer? = game
+turn: what season comes after spring? => | summer
+turn: what season comes after winter? => | spring
+turn: what season comes before summer? => | spring
+turn: what season comes before spring? => | winter
+test: zoe's swim is in summer. ben's hike is in winter. => zoe -> {has} -> swim -> {in} -> summer; ben -> {has} -> hike -> {in} -> winter | what season comes after summer? = autumn; what season comes before winter? = autumn; what season comes after winter? = spring; what season comes before summer? = spring; whose swim is in summer? = zoe; whose hike is in winter? = ben; what is in winter? = hike; what is in summer? = swim
+test: turn: what season comes after summer? => | autumn
+test: turn: what season comes before winter? => | autumn

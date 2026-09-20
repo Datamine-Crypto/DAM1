@@ -1,0 +1,458 @@
+# Famous people: what each one was or is, and the nation each one came from.
+darwin was english.
+galileo was italian.
+curie was polish.
+pasteur was french.
+edison was american.
+bell was scottish.
+gutenberg was german.
+dickens was english.
+tolstoy was russian.
+austen was english.
+homer was greek.
+dante was italian.
+beethoven was german.
+bach was german.
+chopin was polish.
+monet was french.
+rembrandt was dutch.
+michelangelo was italian.
+plato was greek.
+aristotle was greek.
+socrates was greek.
+caesar was roman.
+cleopatra was egyptian.
+victoria was english.
+elizabeth was english.
+lincoln was american.
+washington was american.
+mandela was african.
+columbus was italian.
+magellan was portuguese.
+cook was english.
+armstrong was american.
+gagarin was russian.
+tesla was an inventor.
+tesla was serbian.
+marconi was an inventor.
+marconi was italian.
+wright was an inventor.
+wright was american.
+watt was an inventor.
+watt was scottish.
+nobel was an inventor.
+nobel was swedish.
+morse was an inventor.
+morse was american.
+franklin was an inventor.
+franklin was american.
+faraday was a scientist.
+faraday was english.
+maxwell was a scientist.
+maxwell was scottish.
+planck was a physicist.
+planck was german.
+bohr was a physicist.
+bohr was danish.
+heisenberg was a physicist.
+heisenberg was german.
+schrodinger was a physicist.
+schrodinger was austrian.
+fermi was a physicist.
+fermi was italian.
+feynman was a physicist.
+feynman was american.
+oppenheimer was a physicist.
+oppenheimer was american.
+hawking was a physicist.
+hawking was english.
+rutherford was a physicist.
+rutherford was british.
+lavoisier was a chemist.
+lavoisier was french.
+mendeleev was a chemist.
+mendeleev was russian.
+priestley was a chemist.
+priestley was english.
+harvey was a doctor.
+harvey was english.
+jenner was a doctor.
+jenner was english.
+fleming was a scientist.
+fleming was scottish.
+hippocrates was a doctor.
+hippocrates was greek.
+nightingale was a nurse.
+nightingale was english.
+freud was a psychologist.
+freud was austrian.
+jung was a psychologist.
+jung was swiss.
+mendel was a scientist.
+mendel was austrian.
+hubble was an astronomer.
+hubble was american.
+kepler was an astronomer.
+kepler was german.
+copernicus was an astronomer.
+copernicus was polish.
+euclid was a mathematician.
+euclid was greek.
+pythagoras was a mathematician.
+pythagoras was greek.
+archimedes was a mathematician.
+archimedes was greek.
+euler was a mathematician.
+euler was swiss.
+gauss was a mathematician.
+gauss was german.
+leibniz was a mathematician.
+leibniz was german.
+descartes was a philosopher.
+descartes was french.
+pascal was a mathematician.
+pascal was french.
+ramanujan was a mathematician.
+ramanujan was indian.
+goodall was a scientist.
+goodall was english.
+kant was a philosopher.
+kant was german.
+nietzsche was a philosopher.
+nietzsche was german.
+marx was a philosopher.
+marx was german.
+locke was a philosopher.
+locke was english.
+hume was a philosopher.
+hume was scottish.
+voltaire was a writer.
+voltaire was french.
+rousseau was a philosopher.
+rousseau was swiss.
+sartre was a philosopher.
+sartre was french.
+camus was a writer.
+camus was french.
+confucius was a philosopher.
+confucius was chinese.
+augustine was a philosopher.
+augustine was roman.
+machiavelli was a philosopher.
+machiavelli was italian.
+smith was an economist.
+smith was scottish.
+luther was a reformer.
+luther was german.
+buddha was a teacher.
+jesus was a preacher.
+jesus was jewish.
+muhammad was a leader.
+muhammad was arab.
+moses was a prophet.
+moses was jewish.
+teresa was a nun.
+teresa was albanian.
+francis was a pope.
+francis was argentinian.
+goethe was a writer.
+goethe was german.
+cervantes was a writer.
+cervantes was spanish.
+hugo was a writer.
+hugo was french.
+verne was a writer.
+verne was french.
+kafka was a writer.
+kafka was czech.
+dostoevsky was a writer.
+dostoevsky was russian.
+pushkin was a poet.
+pushkin was russian.
+joyce was a writer.
+joyce was irish.
+wilde was a writer.
+wilde was irish.
+orwell was a writer.
+orwell was english.
+tolkien was a writer.
+tolkien was english.
+rowling is a writer.
+rowling is english.
+christie was a writer.
+christie was english.
+doyle was a writer.
+doyle was scottish.
+milton was a poet.
+milton was english.
+chaucer was a poet.
+chaucer was english.
+byron was a poet.
+byron was english.
+blake was a poet.
+blake was english.
+twain was a writer.
+twain was american.
+poe was a writer.
+poe was american.
+hemingway was a writer.
+hemingway was american.
+fitzgerald was a writer.
+fitzgerald was american.
+steinbeck was a writer.
+steinbeck was american.
+ibsen was a playwright.
+ibsen was norwegian.
+andersen was a writer.
+andersen was danish.
+marquez was a writer.
+marquez was colombian.
+neruda was a poet.
+neruda was chilean.
+tagore was a poet.
+tagore was indian.
+rumi was a poet.
+rumi was persian.
+virgil was a poet.
+virgil was roman.
+sophocles was a playwright.
+sophocles was greek.
+murakami is a writer.
+murakami is japanese.
+haydn was a composer.
+haydn was austrian.
+handel was a composer.
+handel was german.
+vivaldi was a composer.
+vivaldi was italian.
+schubert was a composer.
+schubert was austrian.
+brahms was a composer.
+brahms was german.
+wagner was a composer.
+wagner was german.
+verdi was a composer.
+verdi was italian.
+puccini was a composer.
+puccini was italian.
+tchaikovsky was a composer.
+tchaikovsky was russian.
+stravinsky was a composer.
+stravinsky was russian.
+debussy was a composer.
+debussy was french.
+liszt was a composer.
+liszt was hungarian.
+strauss was a composer.
+strauss was austrian.
+gershwin was a composer.
+gershwin was american.
+raphael was a painter.
+raphael was italian.
+botticelli was a painter.
+botticelli was italian.
+vermeer was a painter.
+vermeer was dutch.
+velazquez was a painter.
+velazquez was spanish.
+goya was a painter.
+goya was spanish.
+dali was a painter.
+dali was spanish.
+cezanne was a painter.
+cezanne was french.
+renoir was a painter.
+renoir was french.
+matisse was a painter.
+matisse was french.
+turner was a painter.
+turner was english.
+munch was a painter.
+munch was norwegian.
+kandinsky was a painter.
+kandinsky was russian.
+pollock was a painter.
+pollock was american.
+warhol was a painter.
+warhol was american.
+kahlo was a painter.
+kahlo was mexican.
+banksy is a painter.
+banksy is english.
+rodin was a sculptor.
+rodin was french.
+gaudi was an architect.
+gaudi was spanish.
+eiffel was an engineer.
+eiffel was french.
+hadid was an architect.
+hadid was iraqi.
+charlemagne was a ruler.
+charlemagne was frankish.
+alexander was a conqueror.
+alexander was greek.
+genghis was a conqueror.
+genghis was mongolian.
+augustus was a ruler.
+augustus was roman.
+hannibal was a general.
+hannibal was carthaginian.
+saladin was a ruler.
+saladin was kurdish.
+suleiman was a ruler.
+suleiman was turkish.
+akbar was a ruler.
+akbar was indian.
+tutankhamun was a ruler.
+tutankhamun was egyptian.
+ramses was a ruler.
+ramses was egyptian.
+joan was a soldier.
+joan was french.
+cromwell was a ruler.
+cromwell was english.
+jefferson was a politician.
+jefferson was american.
+roosevelt was a politician.
+roosevelt was american.
+kennedy was a politician.
+kennedy was american.
+churchill was a politician.
+churchill was english.
+thatcher was a politician.
+thatcher was english.
+stalin was a dictator.
+stalin was georgian.
+lenin was a revolutionary.
+lenin was russian.
+mao was a leader.
+mao was chinese.
+hitler was a dictator.
+hitler was german.
+mussolini was a dictator.
+mussolini was italian.
+castro was a leader.
+castro was cuban.
+guevara was a revolutionary.
+guevara was argentinian.
+bolivar was a general.
+bolivar was venezuelan.
+gorbachev was a leader.
+gorbachev was russian.
+obama is a politician.
+obama is american.
+trump is a politician.
+trump is american.
+putin is a politician.
+putin is russian.
+modi is a politician.
+modi is indian.
+vespucci was an explorer.
+vespucci was italian.
+cortes was a conqueror.
+cortes was spanish.
+drake was a sailor.
+drake was english.
+livingstone was an explorer.
+livingstone was scottish.
+amundsen was an explorer.
+amundsen was norwegian.
+shackleton was an explorer.
+shackleton was irish.
+earhart was a pilot.
+earhart was american.
+lindbergh was a pilot.
+lindbergh was american.
+cousteau was an explorer.
+cousteau was french.
+tereshkova was an astronaut.
+tereshkova was russian.
+aldrin was an astronaut.
+aldrin was american.
+gates is a businessman.
+jobs was a businessman.
+musk is a businessman.
+musk is american.
+bezos is a businessman.
+bezos is american.
+zuckerberg is a businessman.
+ford was a businessman.
+ford was american.
+disney was a producer.
+disney was american.
+malala is an activist.
+malala is pakistani.
+thunberg is an activist.
+thunberg is swedish.
+parks was an activist.
+parks was american.
+tubman was an activist.
+tubman was american.
+malcolm was an activist.
+malcolm was american.
+chaplin was an actor.
+chaplin was english.
+monroe was an actress.
+monroe was american.
+presley was a singer.
+presley was american.
+lennon was a musician.
+lennon was english.
+mccartney is a musician.
+mccartney is english.
+dylan is a singer.
+dylan is american.
+madonna is a singer.
+madonna is american.
+jackson was a singer.
+jackson was american.
+sinatra was a singer.
+sinatra was american.
+pavarotti was a singer.
+pavarotti was italian.
+beyonce is a singer.
+beyonce is american.
+spielberg is a director.
+spielberg is american.
+hitchcock was a director.
+hitchcock was english.
+kurosawa was a director.
+kurosawa was japanese.
+hanks is an actor.
+hanks is american.
+dicaprio is an actor.
+dicaprio is american.
+oprah is a presenter.
+oprah is american.
+houdini was a magician.
+houdini was american.
+messi is a footballer.
+messi is argentinian.
+ronaldo is a footballer.
+ronaldo is portuguese.
+pele was a footballer.
+pele was brazilian.
+maradona was a footballer.
+maradona was argentinian.
+federer is an athlete.
+federer is swiss.
+nadal is an athlete.
+nadal is spanish.
+djokovic is an athlete.
+djokovic is serbian.
+serena is an athlete.
+serena is american.
+bolt is a runner.
+bolt is jamaican.
+phelps is a swimmer.
+phelps is american.
+lebron is an athlete.
+lebron is american.
+ali was a boxer.
+ali was american.
+schumacher is a driver.
+schumacher is german.
+hamilton is a driver.
+hamilton is english.
+the founder of amazon is bezos.
+the founder of spacex is musk.

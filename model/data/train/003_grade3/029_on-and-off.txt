@@ -1,0 +1,12 @@
+# On and off say whether a thing is working, not where it is: the lamp is on, and the one it undoes
+# is taken away. Held out lines use things the learned lines never use.
+the lamp is on. => lamp -> {is} -> on | is the lamp on? = yes
+the fan is on. the radio is off. => radio -> {is} -> off | is the radio on? = no; is the fan on? = yes
+the lamp is on. the lamp is off. => lamp -> {is} -> off | is the lamp on? = no
+the fan is on. the light is off. => fan -> {is} -> on | is the fan on? = yes; is the light on? = no
+the oven is on. => oven -> {is} -> on | is the oven on? = yes
+test: the heater is on. => heater -> {is} -> on | is the heater on? = yes
+test: the tap is off. the kettle is on. => kettle -> {is} -> on | is the kettle on? = yes; is the tap on? = no
+the tv is on. => tv -> {is} -> on | is the tv on? = yes
+the alarm is off. => alarm -> {is} -> off | is the alarm on? = no
+the stove is on. the tap is off. => stove -> {is} -> on | is the stove on? = yes; is the tap on? = no

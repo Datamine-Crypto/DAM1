@@ -1,0 +1,288 @@
+# Languages and money: the language and the currency of each country.
+english is the language of britain.
+english is the language of usa.
+english is the language of united states.
+english is the language of australia.
+english is the language of canada.
+english is the language of ireland.
+english is the language of new zealand.
+english is the language of jamaica.
+english is the language of nigeria.
+english is the language of ghana.
+english is the language of uganda.
+english is the language of zambia.
+english is the language of zimbabwe.
+english is the language of botswana.
+english is the language of namibia.
+english is the language of liberia.
+english is the language of sierra leone.
+english is the language of malawi.
+english is the language of singapore.
+english is the language of south sudan.
+english is the language of bahamas.
+english is the language of barbados.
+english is the language of trinidad.
+english is the language of fiji.
+english is the language of papua.
+spanish is the language of argentina.
+spanish is the language of chile.
+spanish is the language of colombia.
+spanish is the language of peru.
+spanish is the language of venezuela.
+spanish is the language of ecuador.
+spanish is the language of bolivia.
+spanish is the language of uruguay.
+spanish is the language of paraguay.
+spanish is the language of cuba.
+spanish is the language of dominican republic.
+spanish is the language of guatemala.
+spanish is the language of honduras.
+spanish is the language of el salvador.
+spanish is the language of nicaragua.
+spanish is the language of costa rica.
+spanish is the language of panama.
+french is the language of belgium.
+french is the language of monaco.
+french is the language of haiti.
+french is the language of senegal.
+french is the language of ivory coast.
+french is the language of mali.
+french is the language of niger.
+french is the language of chad.
+french is the language of burkina faso.
+french is the language of guinea.
+french is the language of cameroon.
+french is the language of gabon.
+french is the language of congo.
+portuguese is the language of angola.
+portuguese is the language of mozambique.
+arabic is the language of saudi arabia.
+arabic is the language of iraq.
+arabic is the language of syria.
+arabic is the language of jordan.
+arabic is the language of lebanon.
+arabic is the language of yemen.
+arabic is the language of oman.
+arabic is the language of emirates.
+arabic is the language of kuwait.
+arabic is the language of qatar.
+arabic is the language of bahrain.
+arabic is the language of libya.
+arabic is the language of tunisia.
+arabic is the language of algeria.
+arabic is the language of morocco.
+arabic is the language of sudan.
+arabic is the language of mauritania.
+german is the language of austria.
+german is the language of switzerland.
+dutch is the language of netherlands.
+dutch is the language of suriname.
+italian is the language of vatican.
+greek is the language of greece.
+greek is the language of cyprus.
+turkish is the language of turkey.
+russian is the language of belarus.
+ukrainian is the language of ukraine.
+polish is the language of poland.
+czech is the language of czechia.
+slovak is the language of slovakia.
+hungarian is the language of hungary.
+romanian is the language of romania.
+bulgarian is the language of bulgaria.
+serbian is the language of serbia.
+croatian is the language of croatia.
+slovene is the language of slovenia.
+albanian is the language of albania.
+lithuanian is the language of lithuania.
+latvian is the language of latvia.
+estonian is the language of estonia.
+finnish is the language of finland.
+swedish is the language of sweden.
+norwegian is the language of norway.
+danish is the language of denmark.
+icelandic is the language of iceland.
+maltese is the language of malta.
+catalan is the language of andorra.
+georgian is the language of georgia.
+armenian is the language of armenia.
+azeri is the language of azerbaijan.
+kazakh is the language of kazakhstan.
+uzbek is the language of uzbekistan.
+turkmen is the language of turkmenistan.
+kyrgyz is the language of kyrgyzstan.
+tajik is the language of tajikistan.
+persian is the language of iran.
+pashto is the language of afghanistan.
+hebrew is the language of israel.
+urdu is the language of pakistan.
+bengali is the language of bangladesh.
+sinhala is the language of sri lanka.
+nepali is the language of nepal.
+dzongkha is the language of bhutan.
+burmese is the language of myanmar.
+thai is the language of thailand.
+lao is the language of laos.
+khmer is the language of cambodia.
+vietnamese is the language of vietnam.
+malay is the language of malaysia.
+indonesian is the language of indonesia.
+tetum is the language of east timor.
+tagalog is the language of philippines.
+korean is the language of south korea.
+korean is the language of north korea.
+chinese is the language of taiwan.
+mongolian is the language of mongolia.
+swahili is the language of kenya.
+swahili is the language of tanzania.
+amharic is the language of ethiopia.
+somali is the language of somalia.
+tigrinya is the language of eritrea.
+zulu is the language of south africa.
+afrikaans is the language of namibia.
+malagasy is the language of madagascar.
+samoan is the language of samoa.
+tongan is the language of tonga.
+bislama is the language of vanuatu.
+the euro is the currency of spain.
+the euro is the currency of portugal.
+the euro is the currency of greece.
+the euro is the currency of austria.
+the euro is the currency of belgium.
+the euro is the currency of netherlands.
+the euro is the currency of ireland.
+the euro is the currency of finland.
+the euro is the currency of slovakia.
+the euro is the currency of slovenia.
+the euro is the currency of estonia.
+the euro is the currency of latvia.
+the euro is the currency of lithuania.
+the euro is the currency of luxembourg.
+the euro is the currency of malta.
+the euro is the currency of cyprus.
+the euro is the currency of croatia.
+the euro is the currency of monaco.
+the euro is the currency of vatican.
+the euro is the currency of andorra.
+the pound is the currency of britain.
+the pound is the currency of united kingdom.
+the pound is the currency of egypt.
+the pound is the currency of lebanon.
+the pound is the currency of syria.
+the pound is the currency of sudan.
+the dollar is the currency of usa.
+the dollar is the currency of united states.
+the dollar is the currency of australia.
+the dollar is the currency of new zealand.
+the dollar is the currency of singapore.
+the dollar is the currency of taiwan.
+the dollar is the currency of jamaica.
+the dollar is the currency of bahamas.
+the dollar is the currency of barbados.
+the dollar is the currency of trinidad.
+the dollar is the currency of ecuador.
+the dollar is the currency of el salvador.
+the dollar is the currency of fiji.
+the dollar is the currency of namibia.
+the dollar is the currency of liberia.
+the franc is the currency of switzerland.
+the franc is the currency of senegal.
+the franc is the currency of ivory coast.
+the franc is the currency of mali.
+the franc is the currency of niger.
+the franc is the currency of chad.
+the franc is the currency of burkina faso.
+the franc is the currency of benin.
+the franc is the currency of togo.
+the franc is the currency of guinea.
+the franc is the currency of cameroon.
+the franc is the currency of gabon.
+the franc is the currency of congo.
+the krone is the currency of norway.
+the krone is the currency of denmark.
+the krona is the currency of sweden.
+the krona is the currency of iceland.
+the zloty is the currency of poland.
+the forint is the currency of hungary.
+the koruna is the currency of czechia.
+the leu is the currency of romania.
+the lev is the currency of bulgaria.
+the lira is the currency of turkey.
+the hryvnia is the currency of ukraine.
+the ruble is the currency of belarus.
+the dinar is the currency of serbia.
+the dinar is the currency of algeria.
+the dinar is the currency of iraq.
+the dinar is the currency of jordan.
+the dinar is the currency of kuwait.
+the dinar is the currency of tunisia.
+the dinar is the currency of libya.
+the dinar is the currency of bahrain.
+the lek is the currency of albania.
+the lari is the currency of georgia.
+the dram is the currency of armenia.
+the manat is the currency of azerbaijan.
+the manat is the currency of turkmenistan.
+the tenge is the currency of kazakhstan.
+the som is the currency of kyrgyzstan.
+the somoni is the currency of tajikistan.
+the afghani is the currency of afghanistan.
+the tugrik is the currency of mongolia.
+the dirham is the currency of morocco.
+the dirham is the currency of emirates.
+the riyal is the currency of saudi arabia.
+the riyal is the currency of qatar.
+the riyal is the currency of yemen.
+the rial is the currency of iran.
+the rial is the currency of oman.
+the shekel is the currency of israel.
+the rupee is the currency of pakistan.
+the rupee is the currency of nepal.
+the rupee is the currency of sri lanka.
+the taka is the currency of bangladesh.
+the ngultrum is the currency of bhutan.
+the rupiah is the currency of indonesia.
+the ringgit is the currency of malaysia.
+the baht is the currency of thailand.
+the dong is the currency of vietnam.
+the won is the currency of south korea.
+the won is the currency of north korea.
+the kyat is the currency of myanmar.
+the riel is the currency of cambodia.
+the kip is the currency of laos.
+the peso is the currency of philippines.
+the peso is the currency of argentina.
+the peso is the currency of chile.
+the peso is the currency of colombia.
+the peso is the currency of cuba.
+the peso is the currency of uruguay.
+the peso is the currency of dominican republic.
+the sol is the currency of peru.
+the boliviano is the currency of bolivia.
+the guarani is the currency of paraguay.
+the bolivar is the currency of venezuela.
+the balboa is the currency of panama.
+the quetzal is the currency of guatemala.
+the lempira is the currency of honduras.
+the cordoba is the currency of nicaragua.
+the colon is the currency of costa rica.
+the gourde is the currency of haiti.
+the rand is the currency of south africa.
+the naira is the currency of nigeria.
+the cedi is the currency of ghana.
+the shilling is the currency of kenya.
+the shilling is the currency of uganda.
+the shilling is the currency of tanzania.
+the shilling is the currency of somalia.
+the birr is the currency of ethiopia.
+the nakfa is the currency of eritrea.
+the kwacha is the currency of zambia.
+the kwacha is the currency of malawi.
+the metical is the currency of mozambique.
+the kwanza is the currency of angola.
+the pula is the currency of botswana.
+the leone is the currency of sierra leone.
+the ouguiya is the currency of mauritania.
+the ariary is the currency of madagascar.
+the kina is the currency of papua.
+the tala is the currency of samoa.
+the vatu is the currency of vanuatu.

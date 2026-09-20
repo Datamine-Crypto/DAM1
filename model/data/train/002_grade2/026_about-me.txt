@@ -1,0 +1,42 @@
+# What a person tells a chat about themselves and asks back: their age, where they live, what they
+# like, what their kin and their pets are called, and where they put a thing. The speaker is the user,
+# so i and my read as the user's node. Held out lines use names, places and things the learned lines
+# never use.
+seed: 90-everyday
+i am 30 years old. tom is 25 years old. => user -> {old} -> year:quantity(30); tom -> {old} -> year:quantity(25) | how old am i? = 30; how old is tom? = 25
+i am 12 years old. my brother is 9 years old. => user -> {old} -> year:quantity(12) | how old am i? = 12
+i live in london. ann lives in rome. => user -> {in} -> london; ann -> {in} -> rome | where do i live? = london; where does ann live? = rome; who lives in rome? = ann
+i live in a small town. => user -> {in} -> town | where do i live? = town
+my sister is called kate. my brother is called joe. => user -> {sister} -> kate; user -> {brother} -> joe | what is my sister called? = kate; what is my brother called? = joe; who is my sister? = kate; what is the name of my brother? = joe
+my cat is called luna. my dog is called rex. => user -> {has} -> cat; user -> {has} -> dog | what is my cat called? = luna; what is my dog called? = rex; do i have a cat? = yes
+i like pizza. my favorite color is green. => user -> {like} -> pizza | what do i like? = pizza; what is my favorite color? = green
+i put the keys in the drawer. i put the phone on the desk. => keys -> {in} -> drawer; phone -> {on} -> desk | where are the keys? = drawer; where is the phone? = desk; what is in the drawer? = keys
+turn: i am 40 years old how old am i => user -> {old} -> year:quantity(40) | 40
+turn: i live in paris where do i live => user -> {in} -> paris | paris
+turn: my favorite color is blue what is my favorite color => | blue
+turn: i put the book in the bag where is the book => book -> {in} -> bag | bag
+turn: my sister is called ann what is my sister called => user -> {sister} -> ann | ann
+test: i am 8 years old. sam is 50 years old. => user -> {old} -> year:quantity(8); sam -> {old} -> year:quantity(50) | how old am i? = 8; how old is sam? = 50
+test: i live in berlin. => user -> {in} -> berlin | where do i live? = berlin
+test: my mother is called rose. my father is called dan. => user -> {mother} -> rose; user -> {father} -> dan | what is my mother called? = rose; what is my father called? = dan; who is my father? = dan
+test: i like music. my favorite color is red. => user -> {like} -> music | what do i like? = music; what is my favorite color? = red
+test: i put the wallet in the car. => wallet -> {in} -> car | where is the wallet? = car
+test: turn: i am 65 years old how old am i => user -> {old} -> year:quantity(65) | 65
+test: turn: i live in madrid where do i live => user -> {in} -> madrid | madrid
+test: turn: i put the ticket in the box where is the ticket => ticket -> {in} -> box | box
+my name is joe. i am a teacher. => user -> {name} -> joe | who am i? = joe; what is my name? = joe
+michael is my name. => user -> {name} -> michael | what is my name? = michael; who am i? = michael
+i am sarah. => | who am i? = sarah
+kate is my sister. anna is my name. => user -> {sister} -> kate; user -> {name} -> anna | who is my sister? = kate; what is my name? = anna; who am i? = anna
+turn: my name is peter who am i => user -> {name} -> peter | peter
+turn: i am lucy. who am i? => | lucy
+test: my name is oscar. => user -> {name} -> oscar | who am i? = oscar; what is my name? = oscar
+test: nina is my name. => user -> {name} -> nina | what is my name? = nina; who am i? = nina
+test: i am felix. => | who am i? = felix
+test: turn: my name is hugo who am i => user -> {name} -> hugo | hugo
+you have a dog. you like tea. => | what do you have? = dog; what do you like? = tea
+you like music. you have a bike. => | what do you like? = music; what do you have? = bike
+turn: i have a cat my cat is black what color is my cat => | black
+turn: i have a bike my bike is red what color is my bike => | red
+turn: i have a dog my dog is big is my dog big => | yes
+test: turn: i have a hat my hat is green what color is my hat => | green

@@ -1,0 +1,5 @@
+# The statements of data/facts/19-motives.txt the cursor tree holds, one path each, written by build-seeds.mjs.
+thirsty {goal} kitchen
+hungry {goal} kitchen
+tired {goal} bedroom
+bored {goal} garden

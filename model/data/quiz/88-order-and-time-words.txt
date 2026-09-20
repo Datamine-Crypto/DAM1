@@ -1,0 +1,15 @@
+# Order words and times of day: first, then, next, finally and at last mark the order and add
+# nothing; morning, noon, evening and night are times a thing is at.
+# Each line is a scene: a short story of moves, times and an order, then many questions (where a
+# thing is at the end, a place it left, when a thing is, who is first or second, and yes and no).
+first tom went to the shop. then tom went to the park. finally tom went home. tom is first. ann is second. => tom in home; tom is first; ann is second | where is tom? = home; is tom in the park? = no; is tom in the shop? = no; who is first? = tom; who is second? = ann; is tom first? = yes; is ann first? = no; is ann second? = yes; where is ann? = nothing
+first the cat was in the house. next the cat went to the garden. the shop is open in the morning. the party is in the evening. => cat in garden; shop in morning; party in evening | where is the cat? = garden; is the cat in the garden? = yes; is the cat in the house? = no; what is in the garden? = cat; when is the shop open? = morning; when is the party? = evening; is the party in the evening? = yes; is the party in the morning? = no; when is the game? = nothing
+at last the bus is at the station. the game is at night. sue is first. tom is second. => bus in station; game in night; sue is first; tom is second | where is the bus? = station; what is at the station? = bus; when is the game? = night; is the game at night? = yes; who is second? = tom; who is first? = sue; is tom first? = no; is sue first? = yes; when is the party? = nothing
+first ann was in the shop. then ann went to the bank. finally ann went home. at last the cat is in the house. => ann in home; cat in house | where is ann? = home; is ann in the bank? = no; is ann in the shop? = no; where is the cat? = house; is the cat in the house? = yes; what is in the house? = cat; is the cat in the shop? = no; where is tom? = nothing
+turn: first ann went to the park then ann went to the shop the game is at night where is ann {eom} => ann in shop; game in night | shop
+turn: the meeting is in the morning the party is at noon when is the meeting {eom} => meeting in morning; party in noon | morning
+turn: the party is at noon the dinner is in the evening when is the party {eom} => party in noon; dinner in evening | noon
+turn: the game is at night the lunch is at noon when is the game {eom} => game in night; lunch in noon | night
+turn: the lunch is at noon the game is at night when is the lunch {eom} => lunch in noon; game in night | noon
+test: first the dog was in the garden. then the dog went to the house. the show is in the evening. sam is first. ben is second. => dog in house; show in evening; sam is first; ben is second | where is the dog? = house; is the dog in the garden? = no; what is in the house? = dog; when is the show? = evening; who is second? = ben; who is first? = sam; is ben first? = no; when is the race? = nothing
+test: turn: the race is at noon the film is at night when is the race {eom} => race in noon; film in night | noon

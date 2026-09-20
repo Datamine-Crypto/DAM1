@@ -1,0 +1,13 @@
+# Multiples and factors: a number is a multiple of another when the other divides it with nothing left
+# over, and then the other is a factor of it.
+# The turns ask one multiple or factor each. Each scene tells what three people have, then asks multiples
+# and factors of the numbers, each count, a total, and who has more or fewer.
+turn: is 12 a multiple of 4? {eom} => | yes
+turn: is 15 a multiple of 4? {eom} => | no
+turn: is 3 a factor of 18? {eom} => | yes
+turn: is 7 a factor of 20? {eom} => | no
+tom has 12 apples. ann has 4 apples. sam has 18 pens. => tom owns apples; apples is 12; 12 = 12; ann owns apples; apples is 4; 4 = 4; sam owns pens; pens is 18; 18 = 18 | is 12 a multiple of 4? = yes; is 15 a multiple of 4? = no; is 3 a factor of 18? = yes; is 7 a factor of 20? = no; is 4 a factor of 12? = yes; is 18 a multiple of 4? = no; is 18 a multiple of 3? = yes; how many apples does tom have? = 12; how many apples do tom and ann have? = 16; how many pens does sam have? = 18; who has more apples? = tom
+kim has 20 cards. joe has 7 cards. lily has 15 stamps. => kim owns cards; cards is 20; 20 = 20; joe owns cards; cards is 7; 7 = 7; lily owns stamps; stamps is 15; 15 = 15 | is 20 a multiple of 7? = no; is 5 a factor of 15? = yes; is 5 a factor of 20? = yes; is 15 a multiple of 7? = no; is 20 a multiple of 5? = yes; is 7 a factor of 15? = no; how many cards does kim have? = 20; how many cards do kim and joe have? = 27; how many stamps does lily have? = 15; who has fewer cards? = joe
+test: turn: is 30 a multiple of 6? {eom} => | yes
+test: turn: is 5 a factor of 12? {eom} => | no
+test: zoe has 30 shells. ben has 6 shells. tim has 12 coins. => zoe owns shells; shells is 30; 30 = 30; ben owns shells; shells is 6; 6 = 6; tim owns coins; coins is 12; 12 = 12 | is 30 a multiple of 6? = yes; is 5 a factor of 12? = no; is 6 a factor of 12? = yes; is 12 a multiple of 5? = no; how many shells do zoe and ben have? = 36; how many coins does tim have? = 12; who has more shells? = zoe; is 30 a multiple of 12? = no

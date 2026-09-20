@@ -1,0 +1,27 @@
+# Having, in every plain form: has, have, have got, got, owns, belongs to, and a name with an
+# apostrophe (tom's car). Each is written as the one {has} relation, so the network learns that the
+# forms are one concept. Each scene tells a few owners, some with several things and some things
+# of one kind under several owners, then asks from every side: who has, who owns, whose, what does
+# X have, what does X own, does X have Y (yes and no), how many things does X have, and a thing no
+# one has. A list answer names the things in the order they were told.
+seed: 90-everyday
+seed: 18-qualities
+seed: 17-speakers
+tom has a car. => tom -> {has} -> car | who has the car? = tom; what does tom have? = car; does tom have a car? = yes; does tom have a bike? = no; who owns the car? = tom
+ann has got a dog. => ann -> {has} -> dog | who has the dog? = ann; what does ann have? = dog; does ann have a dog? = yes; whose dog is it? = ann
+sam owns a kite. => sam -> {has} -> kite | who owns the kite? = sam; who has the kite? = sam; what does sam own? = kite; does sam own a kite? = yes; does sam own a car? = no
+the ball belongs to lily. => lily -> {has} -> ball | who has the ball? = lily; whose ball is it? = lily; what does lily have? = ball; does lily have a ball? = yes; who owns the ball? = lily
+kim's hat is red. => kim -> {has} -> hat -> {red} | who has the hat? = kim; whose hat is red? = kim; what color is kim's hat? = red; what does kim have? = hat
+we have a boat. => we -> {has} -> boat | what do we have? = boat; do we have a boat? = yes; do we have a car? = no; who has the boat? = we
+i have a bike. => user -> {has} -> bike | what do i have? = bike; do i have a bike? = yes; do i have a boat? = no; who has the bike? = user
+tom has a ball. tom has a kite. tom has a pen. => tom -> {has} -> ball; tom -> {has} -> kite; tom -> {has} -> pen | what does tom have? = ball, kite, pen; how many things does tom have? = 3; does tom have a kite? = yes; does tom have a hat? = no; who has the pen? = tom
+joe has got a coin. the ring belongs to joe. joe owns a key. => joe -> {has} -> coin; joe -> {has} -> ring; joe -> {has} -> key | what does joe have? = coin, ring, key; how many things does joe have? = 3; who owns the ring? = joe; who has the key? = joe; does joe have a coin? = yes
+max has a dog. sue has a dog. ben has a cat. => max -> {has} -> dog; sue -> {has} -> dog; ben -> {has} -> cat | does max have a dog? = yes; does sue have a dog? = yes; does ben have a dog? = no; who has the cat? = ben; what does sue have? = dog; does ben have a cat? = yes
+rose's car is blue. tim's car is green. rose's cup is white. => rose -> {has} -> car -> {blue}; tim -> {has} -> car -> {green}; rose -> {has} -> cup -> {white} | what color is rose's car? = blue; what color is tim's car? = green; whose car is green? = tim; whose cup is white? = rose; what does rose have? = car, cup; how many things does rose have? = 2
+zoe has a book. the book is in the bag. the bag belongs to zoe. => zoe -> {has} -> book -> {in} -> bag; zoe -> {has} -> bag | who has the book? = zoe; where is the book? = bag; who owns the bag? = zoe; what does zoe have? = book, bag; does zoe have a bag? = yes; does zoe have a pen? = no
+turn: kim has a scarf and lily has got a coat who has the coat => kim -> {has} -> scarf; lily -> {has} -> coat | lily
+turn: the boat belongs to sam what does sam have => sam -> {has} -> boat | boat
+test: ben has got a bike. => ben -> {has} -> bike | who has the bike? = ben; what does ben have? = bike; does ben have a bike? = yes; does ben have a dog? = no; who owns the bike? = ben
+test: the kite belongs to zoe. zoe has a ball. => zoe -> {has} -> kite; zoe -> {has} -> ball | who owns the kite? = zoe; what does zoe have? = kite, ball; how many things does zoe have? = 2; does zoe have a ball? = yes; does zoe have a cup? = no
+test: max's dog is brown. joe's dog is black. max has a coin. => max -> {has} -> dog -> {brown}; joe -> {has} -> dog -> {black}; max -> {has} -> coin | whose dog is black? = joe; what color is max's dog? = brown; what does max have? = dog, coin; does joe have a coin? = no; who has the coin? = max
+test: turn: tim owns a car and rose has a bike who has the car => tim -> {has} -> car; rose -> {has} -> bike | tim

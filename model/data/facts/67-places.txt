@@ -1,0 +1,4 @@
+# Places seen from the other side: a relation word told as the opposite of another names
+# the same placing from the far end.
+the opposite of left is right.
+the opposite of above is below.

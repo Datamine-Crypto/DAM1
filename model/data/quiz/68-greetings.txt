@@ -1,0 +1,16 @@
+# Greetings and fillers a chat types add nothing to the space: the reader hears them and keeps
+# only what was said around them.
+# Each line is a scene: greetings mixed with a few things at their places, then many questions
+# (where each thing is, what is at a place, yes and no, and a thing the scene does not name).
+hello. tom is in the house. hi. the cat is in the garden. thanks. the key is in the box. => tom in house; cat in garden; key in box | where is tom? = house; where is the cat? = garden; where is the key? = box; who is in the house? = tom; what is in the garden? = cat; what is in the box? = key; is the cat in the garden? = yes; is there a key in the box? = yes; is tom in the garden? = no; is the key in the house? = no; where is the dog? = nothing
+please tell me where tom is. tom is in the park. ok. the dog is in the garden. hello there. the book is on the table. => tom in park; dog in garden; book in table | where is tom? = park; where is the dog? = garden; where is the book? = table; who is in the park? = tom; what is in the garden? = dog; what is on the table? = book; is tom in the park? = yes; is the book on the table? = yes; is the dog in the park? = no; where is the cup? = nothing
+thank you. the cup is in the kitchen. ok. the cat is in the box. please tell me where the key is. the key is in the bag. => cup in kitchen; cat in box; key in bag | where is the cup? = kitchen; where is the cat? = box; where is the key? = bag; what is in the kitchen? = cup; what is in the bag? = key; what is in the box? = cat; is the cat in the box? = yes; is the key in the box? = no; is the cup in the bag? = no; where is the dog? = nothing
+thank you. the pen is on the desk. hello. the dog is in the garden. hi. the book is in the bag. => pen in desk; dog in garden; book in bag | where is the pen? = desk; where is the dog? = garden; where is the book? = bag; what is on the desk? = pen; what is in the bag? = book; what is in the garden? = dog; is the dog in the garden? = yes; is the pen in the bag? = no; is the book on the desk? = no; where is the key? = nothing
+turn: hello tom is in the house the cup is in the box where is tom {eom} => tom in house; cup in box | house
+turn: hi the cat is on the bed the dog is in the garden where is the cat {eom} => cat in bed; dog in garden | bed
+turn: thanks where is tom {eom} => | nothing
+turn: ok the key is in the bag the pen is on the desk where is the key {eom} => key in bag; pen in desk | bag
+turn: hello the dog is in the house the cat is in the garden where is the dog {eom} => dog in house; cat in garden | house
+turn: ok the cup is on the table the book is in the bag where is the cup {eom} => cup in table; book in bag | table
+test: hello. the pen is in the bag. thanks. the bird is in the tree. ok. the frog is in the pond. => pen in bag; bird in tree; frog in pond | where is the pen? = bag; where is the bird? = tree; where is the frog? = pond; what is in the tree? = bird; what is in the bag? = pen; is the frog in the pond? = yes; is the pen in the tree? = no; where is the fish? = nothing
+test: turn: ok the ball is in the box the hat is on the bed where is the ball {eom} => ball in box; hat in bed | box

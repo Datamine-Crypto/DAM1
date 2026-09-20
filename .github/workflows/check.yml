@@ -1,0 +1,84 @@
+name: Check
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  gate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: dtolnay/rust-toolchain@1.97.1
+
+      - uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: model
+
+      - name: Install Premise
+        run: cargo install --git https://github.com/Datamine-Crypto/premise --rev d833f95a5d5900e98923ca2192c6fa6eae92a49c premise_gate premise_checker --locked
+
+      - name: Gate
+        working-directory: model
+        run: gate
+
+  chat:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: dtolnay/rust-toolchain@1.97.1
+        with:
+          targets: wasm32-unknown-unknown
+
+      - uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: model
+
+      - name: Install wasm-pack
+        run: cargo install wasm-pack --version 0.15.0 --locked
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: chat/package-lock.json
+
+      - name: Build the engine, the network and the state
+        run: NETWORK=model/data/network/release.bin sh scripts/build-chat.sh
+
+      - name: Install the chat's dependencies
+        working-directory: chat
+        run: npm ci
+
+      - name: Typecheck
+        working-directory: chat
+        run: npm run typecheck
+
+      - name: Build the chat
+        working-directory: chat
+        run: npm run build
+
+  model-tool:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: dtolnay/rust-toolchain@1.97.1
+
+      - uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: |
+            model
+            huggingface
+
+      - name: Round-trip tests of the model layout
+        working-directory: huggingface
+        run: cargo test --release --locked

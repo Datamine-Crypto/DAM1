@@ -1,0 +1,4 @@
+# tom has 3 red apples: a count and an adjective before their noun set flags, {setFlag type: quantity value: 3}
+# and {setFlag type: property value: red}; the apples take the count as their quantity and red as their color.
+tom has 3 red apples. => tom -> {has} -> apple:quantity(3); tom -> {has} -> apple -> {red} | how many apples does tom have? = 3; what color are the apples? = red
+test: zorp has 4 blue flibs. => zorp -> {has} -> flib:quantity(4); zorp -> {has} -> flib -> {blue} | how many flibs does zorp have? = 4; what color are the flibs? = blue

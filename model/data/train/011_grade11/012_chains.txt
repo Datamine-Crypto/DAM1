@@ -1,0 +1,17 @@
+# Chains of one relation: taller than, older than, heavier than, faster than, said of pairs, so a question
+# about two things the text never compares directly follows the chain, one hop at a time, and says yes only
+# when the chain leads from one to the other. A question against the chain says no. The top of a chain is
+# the thing nothing stands above by the relation.
+seed: 19-comparatives
+seed: 18-qualities
+tom is taller than ann. ann is taller than kim. => tom -> {tallerThan} -> ann; ann -> {tallerThan} -> kim | is tom taller than kim? = yes; is kim taller than tom? = no; who is taller than ann? = tom; who is the tallest? = tom
+the car is faster than the bike. the bike is faster than the cart. => car -> {fasterThan} -> bike; bike -> {fasterThan} -> cart | is the car faster than the cart? = yes; is the cart faster than the car? = no; what is the fastest? = car
+sue is older than max. max is older than ben. ben is older than joe. => sue -> {olderThan} -> max; max -> {olderThan} -> ben; ben -> {olderThan} -> joe | is sue older than joe? = yes; is joe older than sue? = no; is max older than joe? = yes; who is the oldest? = sue
+the box is heavier than the bag. the bag is heavier than the cup. => box -> {heavierThan} -> bag; bag -> {heavierThan} -> cup | is the box heavier than the cup? = yes; is the cup heavier than the box? = no; what is the heaviest? = box
+the elephant is heavier than the horse. the horse is heavier than the dog. the dog is heavier than the cat. => elephant -> {heavierThan} -> horse; horse -> {heavierThan} -> dog; dog -> {heavierThan} -> cat | is the elephant heavier than the cat? = yes; is the cat heavier than the horse? = no; what is the heaviest? = elephant; what is heavier than the dog? = horse
+amy is faster than bob. bob is faster than cal. => amy -> {fasterThan} -> bob; bob -> {fasterThan} -> cal | is amy faster than cal? = yes; is cal faster than amy? = no; who is the fastest? = amy; who is faster than cal? = bob
+the tower is taller than the house. the house is taller than the shed. the shed is taller than the hut. => tower -> {tallerThan} -> house; house -> {tallerThan} -> shed; shed -> {tallerThan} -> hut | is the tower taller than the hut? = yes; is the hut taller than the shed? = no; what is the tallest? = tower; is the house taller than the hut? = yes
+ivy is older than jon. jon is older than kay. => ivy -> {olderThan} -> jon; jon -> {olderThan} -> kay | is ivy older than kay? = yes; is kay older than jon? = no; who is the oldest? = ivy; who is older than kay? = jon
+test: rose is taller than lily. lily is taller than zoe. => rose -> {tallerThan} -> lily; lily -> {tallerThan} -> zoe | is rose taller than zoe? = yes; is zoe taller than rose? = no; who is the tallest? = rose
+test: the train is faster than the bus. the bus is faster than the boat. => train -> {fasterThan} -> bus; bus -> {fasterThan} -> boat | is the train faster than the boat? = yes; what is the fastest? = train
+test: the rock is heavier than the brick. the brick is heavier than the stone. the stone is heavier than the pebble. => rock -> {heavierThan} -> brick; brick -> {heavierThan} -> stone; stone -> {heavierThan} -> pebble | is the rock heavier than the pebble? = yes; is the pebble heavier than the brick? = no; what is the heaviest? = rock

@@ -1,0 +1,143 @@
+# Science: matter, elements, forces and the body of knowledge a school teaches.
+water is a liquid.
+ice is a solid.
+steam is a gas.
+water is wet.
+ice is cold.
+steam is hot.
+ice is frozen water.
+steam is hot water.
+water is made of hydrogen and oxygen.
+salt is made of sodium and chlorine.
+air is made of nitrogen and oxygen.
+a diamond is made of carbon.
+coal is made of carbon.
+rust is made of iron and oxygen.
+sand is made of silicon and oxygen.
+gold is a metal.
+silver is a metal.
+iron is a metal.
+copper is a metal.
+aluminium is a metal.
+lead is a metal.
+tin is a metal.
+zinc is a metal.
+mercury is a metal.
+mercury is a liquid.
+oxygen is a gas.
+hydrogen is a gas.
+nitrogen is a gas.
+helium is a gas.
+neon is a gas.
+carbon is an element.
+oxygen is an element.
+hydrogen is an element.
+gold is an element.
+iron is an element.
+hydrogen is the lightest element.
+hydrogen is the first element.
+helium is the second element.
+there are 118 elements in the table.
+gold is yellow.
+silver is white.
+copper is red.
+iron is grey.
+sulfur is yellow.
+gold is heavier than iron.
+lead is heavier than iron.
+iron is heavier than aluminium.
+iron is heavier than water.
+wood is lighter than water.
+oil is lighter than water.
+a diamond is harder than glass.
+glass is harder than wood.
+a diamond is the hardest mineral.
+a magnet is made of iron.
+a magnet has a north pole.
+a magnet has a south pole.
+a battery has a positive end.
+a battery has a negative end.
+copper is a conductor.
+silver is a conductor.
+gold is a conductor.
+rubber is an insulator.
+glass is an insulator.
+wood is an insulator.
+the sun is a star.
+the sun is hot.
+light is fast.
+light is faster than sound.
+sound is slower than light.
+sound needs air.
+a plant needs water.
+a plant needs light.
+a plant needs air.
+a person needs water.
+a person needs air.
+a person needs food.
+a fire needs air.
+a fire needs fuel.
+fire is hot.
+smoke is made of carbon.
+an atom has a nucleus.
+an atom has electrons.
+a nucleus has protons.
+a nucleus has neutrons.
+an atom is small.
+an atom is smaller than a cell.
+a cell is small.
+a cell has a nucleus.
+a molecule is made of atoms.
+water is a molecule.
+a force is a push.
+gravity is a force.
+a magnet is a force.
+matter has mass.
+a solid is matter.
+a liquid is matter.
+a gas is matter.
+heat is energy.
+light is energy.
+sound is energy.
+electricity is energy.
+a volt is a measure.
+an ampere is a measure.
+a watt is a measure.
+a newton is a measure.
+a joule is a measure.
+a kelvin is a measure.
+a thermometer has mercury.
+a compass has a needle.
+a lens is made of glass.
+a mirror is made of glass.
+a wire is made of copper.
+a bulb is made of glass.
+
+# More metals, gases and elements, each read and checked by the reader before it was added.
+platinum is a metal.
+nickel is a metal.
+titanium is a metal.
+tungsten is a metal.
+chromium is a metal.
+cobalt is a metal.
+magnesium is a metal.
+sodium is a metal.
+potassium is a metal.
+uranium is a metal.
+argon is a gas.
+chlorine is a gas.
+fluorine is a gas.
+methane is a gas.
+radon is a gas.
+krypton is a gas.
+xenon is a gas.
+nitrogen is an element.
+helium is an element.
+silver is an element.
+copper is an element.
+sulfur is an element.
+calcium is an element.
+silicon is an element.
+neon is an element.
+zinc is an element.
+tin is an element.

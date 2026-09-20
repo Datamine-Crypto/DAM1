@@ -1,0 +1,8 @@
+# The statements of data/facts/05-manners.txt the cursor tree holds, one path each, written by build-seeds.mjs.
+hi {reply} hello
+hey {reply} hello
+thank {reply} welcome
+morning {reply} hello
+evening {reply} hello
+thanks -> {reply} -> welcome -> {reply} -> hello -> {reply} -> hello
+bye -> {reply} -> goodbye -> {reply} -> goodbye

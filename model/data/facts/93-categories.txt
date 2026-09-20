@@ -1,0 +1,75 @@
+# The plain category of common things the other facts leave without one, as the explorer groups them: a person, an animal, food, a place, a time.
+a man is a person.
+a woman is a person.
+a baby is a person.
+a child is a person.
+a friend is a person.
+a teacher is a person.
+a doctor is a person.
+a nurse is a person.
+a farmer is a person.
+a cook is a person.
+a pilot is a person.
+a baker is a person.
+a guard is a person.
+a student is a person.
+a lamb is an animal.
+a dinosaur is an animal.
+a kitten is an animal.
+a puppy is an animal.
+a hound is an animal.
+a ladybug is an insect.
+pizza is a food.
+honey is a food.
+soup is a food.
+a cookie is a food.
+a sweet is a food.
+a house is a place.
+a school is a place.
+a hospital is a place.
+a shop is a place.
+a store is a place.
+a bank is a place.
+a library is a place.
+an office is a place.
+a garden is a place.
+a park is a place.
+a farm is a place.
+a zoo is a place.
+a forest is a place.
+a jungle is a place.
+a desert is a place.
+a mountain is a place.
+a beach is a place.
+a sea is a place.
+an ocean is a place.
+a lake is a place.
+a pond is a place.
+an island is a place.
+a city is a place.
+a town is a place.
+a street is a place.
+a road is a place.
+a bridge is a place.
+a castle is a place.
+a station is a place.
+an airport is a place.
+a harbour is a place.
+a garage is a place.
+a yard is a place.
+a cave is a place.
+a field is a place.
+a meadow is a place.
+morning is a time.
+noon is a time.
+afternoon is a time.
+evening is a time.
+night is a time.
+midnight is a time.
+a week is a time.
+a weekend is a time.
+a month is a time.
+a year is a time.
+a hour is a time.
+a minute is a time.
+a birthday is a time.

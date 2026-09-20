@@ -1,0 +1,275 @@
+# More words: opposites, young animals, groups, males and females, synonyms and homes.
+the opposite of accept is reject.
+the opposite of ancient is modern.
+the opposite of angel is devil.
+the opposite of arrive is depart.
+the opposite of attack is defend.
+the opposite of beautiful is ugly.
+the opposite of better is worse.
+the opposite of bitter is sweet.
+the opposite of borrow is lend.
+the opposite of boy is girl.
+the opposite of bright is dim.
+the opposite of brother is sister.
+the opposite of build is destroy.
+the opposite of careful is careless.
+the opposite of catch is throw.
+the opposite of child is adult.
+the opposite of clever is stupid.
+the opposite of common is rare.
+the opposite of correct is wrong.
+the opposite of dawn is dusk.
+the opposite of easy is difficult.
+the opposite of entrance is exit.
+the opposite of even is odd.
+the opposite of evil is good.
+the opposite of fail is succeed.
+the opposite of fat is slim.
+the opposite of float is sink.
+the opposite of floor is ceiling.
+the opposite of forget is remember.
+the opposite of forward is backward.
+the opposite of freeze is melt.
+the opposite of fresh is stale.
+the opposite of generous is selfish.
+the opposite of grow is shrink.
+the opposite of guilty is innocent.
+the opposite of heaven is hell.
+the opposite of hero is villain.
+the opposite of hill is valley.
+the opposite of horizontal is vertical.
+the opposite of huge is tiny.
+the opposite of husband is wife.
+the opposite of increase is decrease.
+the opposite of indoor is outdoor.
+the opposite of interesting is boring.
+the opposite of kind is cruel.
+the opposite of land is sea.
+the opposite of legal is illegal.
+the opposite of life is death.
+the opposite of lock is unlock.
+the opposite of loose is tight.
+the opposite of lucky is unlucky.
+the opposite of man is woman.
+the opposite of maximum is minimum.
+the opposite of morning is evening.
+the opposite of natural is artificial.
+the opposite of neat is messy.
+the opposite of nephew is niece.
+the opposite of noisy is silent.
+the opposite of past is future.
+the opposite of patient is impatient.
+the opposite of war is peace.
+the opposite of polite is rude.
+the opposite of positive is negative.
+the opposite of possible is impossible.
+the opposite of private is public.
+the opposite of problem is solution.
+the opposite of raw is cooked.
+the opposite of real is fake.
+the opposite of rough is smooth.
+the opposite of rural is urban.
+the opposite of sharp is blunt.
+the opposite of shout is whisper.
+the opposite of sick is healthy.
+the opposite of sit is stand.
+the opposite of smile is frown.
+the opposite of solid is liquid.
+the opposite of son is daughter.
+the opposite of speak is listen.
+the opposite of spend is save.
+the opposite of spring is autumn.
+the opposite of start is stop.
+the opposite of straight is curved.
+the opposite of success is failure.
+the opposite of summer is winter.
+the opposite of sun is moon.
+the opposite of sunrise is sunset.
+the opposite of teach is learn.
+the opposite of together is apart.
+the opposite of truth is lie.
+the opposite of uncle is aunt.
+the opposite of upper is lower.
+the opposite of upstairs is downstairs.
+the opposite of useful is useless.
+the opposite of victory is defeat.
+the opposite of visible is invisible.
+the opposite of warm is cool.
+the opposite of wealth is poverty.
+the opposite of wild is tame.
+the opposite of winner is loser.
+the opposite of wise is foolish.
+the opposite of work is rest.
+the opposite of grandfather is grandmother.
+the opposite of bride is groom.
+a gosling is a young goose.
+a cygnet is a young swan.
+a fawn is a young deer.
+an owlet is a young owl.
+an eaglet is a young eagle.
+a leveret is a young hare.
+a kit is a young fox.
+a pup is a young seal.
+a colt is a young horse.
+a larva is a young insect.
+a maggot is a young fly.
+a grub is a young beetle.
+a hatchling is a young turtle.
+a fledgling is a young bird.
+a fry is a young fish.
+a smolt is a young salmon.
+an elver is a young eel.
+a poult is a young turkey.
+a squab is a young pigeon.
+a cria is a young llama.
+a whelp is a young wolf.
+a hoglet is a young hedgehog.
+a porcupette is a young porcupine.
+a spiderling is a young spider.
+a puggle is a young platypus.
+an eyas is a young hawk.
+a peachick is a young peacock.
+a pinkie is a young mouse.
+a shoat is a young pig.
+a baby is a young human.
+a group of lions is a pride.
+a group of wolves is a pack.
+a group of birds is a flock.
+a group of fish is a school.
+a group of bees is a swarm.
+a group of cows is a herd.
+a group of geese is a gaggle.
+a group of crows is a murder.
+a group of owls is a parliament.
+a group of whales is a pod.
+a group of monkeys is a troop.
+a group of kittens is a litter.
+a group of penguins is a colony.
+a group of frogs is an army.
+a group of giraffes is a tower.
+a group of people is a crowd.
+a group of ships is a fleet.
+a group of soldiers is an army.
+a group of students is a class.
+a group of singers is a choir.
+a group of musicians is a band.
+a group of players is a team.
+a group of stars is a galaxy.
+a group of islands is an archipelago.
+a group of trees is a forest.
+a group of flowers is a bouquet.
+a group of cards is a deck.
+a group of thieves is a gang.
+a group of actors is a cast.
+a group of sailors is a crew.
+the female of a horse is a mare.
+the male of a horse is a stallion.
+the male of a cow is a bull.
+the male of a sheep is a ram.
+the female of a sheep is a ewe.
+the male of a pig is a boar.
+the female of a pig is a sow.
+the male of a chicken is a rooster.
+the female of a chicken is a hen.
+the male of a duck is a drake.
+the male of a goose is a gander.
+the male of a deer is a stag.
+the female of a deer is a doe.
+the female of a lion is a lioness.
+the female of a tiger is a tigress.
+the female of a fox is a vixen.
+the male of a goat is a billy.
+the female of a goat is a nanny.
+the male of a swan is a cob.
+the female of a peacock is a peahen.
+the male of a donkey is a jack.
+the female of a donkey is a jenny.
+the male of a cat is a tom.
+the male of a rabbit is a buck.
+the male of a whale is a bull.
+the male of an elephant is a bull.
+the male of a human is a man.
+the female of a human is a woman.
+a bull is male.
+a cow is female.
+a mare is female.
+a stallion is male.
+a boy is male.
+a girl is female.
+a man is male.
+a woman is female.
+huge is the same as enormous.
+smart is the same as clever.
+angry is the same as furious.
+afraid is the same as scared.
+brave is the same as courageous.
+wealthy is the same as rich.
+hard is the same as difficult.
+easy is the same as simple.
+fast is the same as rapid.
+tired is the same as weary.
+sick is the same as ill.
+old is the same as ancient.
+strange is the same as weird.
+boring is the same as dull.
+wrong is the same as incorrect.
+real is the same as genuine.
+far is the same as distant.
+loud is the same as noisy.
+dirty is the same as filthy.
+happy is the same as joyful.
+sad is the same as gloomy.
+strong is the same as powerful.
+weak is the same as feeble.
+begin is the same as commence.
+stop is the same as halt.
+buy is the same as purchase.
+fix is the same as repair.
+a cab is the same as a taxi.
+a lift is the same as an elevator.
+a flat is the same as an apartment.
+a lorry is the same as a truck.
+a biscuit is the same as a cookie.
+a sweet is the same as a candy.
+a jumper is the same as a sweater.
+a torch is the same as a flashlight.
+petrol is the same as gasoline.
+a pavement is the same as a sidewalk.
+a queue is the same as a line.
+a holiday is the same as a vacation.
+autumn is the same as fall.
+rubbish is the same as garbage.
+trousers is the same as pants.
+a pal is the same as a friend.
+a foe is the same as an enemy.
+a fridge is the same as a refrigerator.
+flu is the same as influenza.
+maths is the same as mathematics.
+the home of a horse is a stable.
+the home of a dog is a kennel.
+the home of a pig is a sty.
+the home of a cow is a barn.
+the home of a hen is a coop.
+the home of a sheep is a fold.
+the home of a beaver is a lodge.
+the home of a badger is a sett.
+the home of an otter is a holt.
+the home of a squirrel is a drey.
+the home of an eagle is an eyrie.
+the home of a mouse is a hole.
+the home of a snail is a shell.
+the home of a bat is a cave.
+the home of a pigeon is a loft.
+the home of a lion is a den.
+the home of a king is a palace.
+the home of a monk is a monastery.
+the home of a nun is a convent.
+the home of a soldier is a barracks.
+the home of a prisoner is a prison.
+the home of a nomad is a tent.
+the home of a sailor is a ship.
+the home of a farmer is a farmhouse.
+the home of an inuit is an igloo.
+the home of a car is a garage.
+the home of a plane is a hangar.
+the home of a train is a depot.

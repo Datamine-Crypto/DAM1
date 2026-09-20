@@ -1,0 +1,39 @@
+# Units of time: a larger unit holds a fixed number of a smaller one, so a count of the larger unit
+# holds that many times as many of the smaller, asked with how many of the smaller are in it. The
+# traced lines and the turns stay as single lessons; each scene tells how much time several people
+# have, then asks many of those counts in smaller units, and each count.
+seed: 20-numbers-and-measures
+seed: 10-time
+seed: measures
+turn: how many minutes are in 2 hours? => | 120
+turn: how many hours are in 3 days? => | 72
+turn: how many days are in 2 weeks? => | 14
+turn: how many seconds are in 5 minutes? => | 300
+turn: how many months are in 2 years? => | 24
+tom has 2 hours. ann has 3 days. => {number:value(2)}; tom -> {has} -> hour:quantity(2); {number:value(3)}; ann -> {has} -> day:quantity(3) | how many minutes are in 2 hours? = 120; how many hours are in 3 days? = 72; how many days are in 2 weeks? = 14; how many seconds are in 5 minutes? = 300; how many months are in 2 years? = 24; how many minutes are in 1 hour? = 60; how many hours are in 2 days? = 48; how many days are in 1 week? = 7; how many hours does tom have? = 2; how many days does ann have? = 3
+kim has 2 weeks. joe has 5 minutes. lily has 2 years. => {number:value(2)}; kim -> {has} -> week:quantity(2); {number:value(5)}; joe -> {has} -> minute:quantity(5); lily -> {has} -> year:quantity(2) | how many days are in 2 weeks? = 14; how many seconds are in 5 minutes? = 300; how many months are in 2 years? = 24; how many minutes are in 2 hours? = 120; how many hours are in 3 days? = 72; how many days are in 3 weeks? = 21; how many months are in 3 years? = 36; how many seconds are in 2 minutes? = 120; how many weeks does kim have? = 2; how many years does lily have? = 2
+test: zoe has 4 weeks. ben has 3 hours. => {number:value(4)}; zoe -> {has} -> week:quantity(4); {number:value(3)}; ben -> {has} -> hour:quantity(3) | how many days are in 4 weeks? = 28; how many minutes are in 3 hours? = 180; how many hours are in 1 day? = 24; how many seconds are in 3 minutes? = 180; how many months are in 4 years? = 48; how many hours are in 4 days? = 96; how many weeks does zoe have? = 4; how many hours does ben have? = 3
+test: turn: how many days are in 4 weeks? => | 28
+test: turn: how many minutes are in 3 hours? => | 180
+test: turn: how many hours are in 1 day? => | 24
+turn: how many days are in a week => | 7
+turn: how many hours are in a day => | 24
+turn: how many minutes are in an hour => | 60
+turn: how many seconds are in a minute => | 60
+turn: how many days are in a year? => | 365
+test: turn: how many months are in a year => | 12
+test: turn: how many weeks are in a year => | 52
+# The same question asked of other larger units, of time, length and weight, so the unit asked for is
+# read from its place in the question and not from the words.
+turn: how many years are in a decade => | 10
+turn: how many years are in a century => | 100
+turn: how many minutes are in a day => | 1440
+turn: how many hours are in a week => | 168
+turn: how many centimeters are in a meter => | 100
+turn: how many meters are in a kilometer => | 1000
+turn: how many grams are in a kilogram => | 1000
+test: turn: how many millimeters are in a centimeter => | 10
+test: turn: how many cents are in a dollar => | 100
+turn: how many months are in a year? => | 12
+turn: how many days are in a week? => | 7
+turn: how many hours are in a day? => | 24

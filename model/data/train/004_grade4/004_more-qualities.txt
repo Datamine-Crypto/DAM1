@@ -1,0 +1,26 @@
+# More qualities a thing joins: happy, sad, tired, hungry, angry, young, slow, wet, dry, clean,
+# dirty, full, empty, open, closed, loud, quiet; and a quality that is not there answers no.
+# Each line is a scene: four or five things each with a quality, then many questions (what has a
+# quality, does a thing have it, and its opposite or another quality, which answers no).
+seed: 90-everyday
+seed: 18-qualities
+tom is happy. ann is sad. the dog is tired. the cat is hungry. the man is angry. => tom -> {happy}; ann -> {sad}; dog -> {tired}; cat -> {hungry}; man -> {angry} | who is happy? = tom; who is sad? = ann; what is hungry? = cat; what is tired? = dog; who is angry? = man; is the dog hungry? = no; is the dog tired? = yes; is the cat hungry? = yes; is tom sad? = no; is ann happy? = no; is the man happy? = no; is sam happy? = no
+the boy is young. the snail is slow. the road is wet. the towel is dry. the cup is clean. => boy -> {young}; snail -> {slow}; road -> {wet}; towel -> {dry}; cup -> {clean} | who is young? = boy; what is slow? = snail; what is wet? = road; what is dry? = towel; what is clean? = cup; is the cup dirty? = no; is the cup clean? = yes; is the road dry? = no; is the towel wet? = no; is the snail young? = no
+the shoe is dirty. the glass is full. the box is empty. the door is open. => shoe -> {dirty}; glass -> {full}; box -> {empty}; door -> {open} | what is dirty? = shoe; what is full? = glass; what is empty? = box; what is open? = door; is the glass empty? = no; is the glass full? = yes; is the box full? = no; is the door open? = yes; is the door closed? = no; is the shoe clean? = no
+the window is closed. the music is loud. the room is quiet. the baby is happy. the grass is wet. => window -> {closed}; music -> {is} -> loud; room -> {is} -> quiet; baby -> {happy}; grass -> {wet} | is the window open? = no; is the window closed? = yes; what is loud? = music; what is quiet? = room; is the baby sad? = no; who is happy? = baby; what is wet? = grass; is the music quiet? = no; is the room loud? = no; is the grass dry? = no
+the jar is empty. the street is wet. the bottle is empty. the bread is dry. => jar -> {empty}; street -> {wet}; bottle -> {empty}; bread -> {dry} | is the jar full? = no; is the bottle full? = no; is the jar empty? = yes; is the bottle empty? = yes; what is empty? = bottle, jar; what is wet? = street; is the street dry? = no; what is dry? = bread; is the bread wet? = no
+turn: tom is tired ann is happy is tom tired => tom -> {tired}; ann -> {happy} | yes
+turn: the door is open the box is full is the door closed => door -> {open}; box -> {full} | no
+turn: the box is closed the cup is clean is the box open => box -> {closed}; cup -> {clean} | no
+turn: the shop is closed the road is wet is the shop open => shop -> {closed}; road -> {wet} | no
+turn: the window is open the room is quiet is the window closed => window -> {open}; room -> {is} -> quiet | no
+test: sam is hungry. ben is tired. the floor is wet. the cup is empty. => sam -> {hungry}; ben -> {tired}; floor -> {wet}; cup -> {empty} | who is hungry? = sam; who is tired? = ben; is ben hungry? = no; is sam tired? = no; what is wet? = floor; is the floor dry? = no; is the cup full? = no; is the cup empty? = yes; what is empty? = cup
+test: turn: the gate is closed the pond is full is the gate open => gate -> {closed}; pond -> {full} | no
+the lake is murky. the road is steep. => lake -> {murky}; road -> {steep} | is the lake murky? = yes; is the road steep? = yes; what is steep? = road; is the lake steep? = no
+the box is dusty. the gate is rusty. => box -> {dusty}; gate -> {rusty} | is the gate rusty? = yes; what is dusty? = box; is the box rusty? = no
+the path is muddy. the cave is gloomy. => path -> {muddy}; cave -> {gloomy} | is the path muddy? = yes; what is gloomy? = cave
+test: the cliff is jagged. the pond is slimy. => cliff -> {jagged}; pond -> {slimy} | is the cliff jagged? = yes; what is slimy? = pond; is the pond jagged? = no
+the river is deep. the pond is shallow. the street is narrow. => river -> {deep}; pond -> {shallow}; street -> {narrow} | is the river deep? = yes; what is shallow? = pond; is the street deep? = no; what is narrow? = street
+the canal is deep. the path is narrow. => canal -> {deep}; path -> {narrow} | is the canal deep? = yes; what is narrow? = path; is the path deep? = no
+the chair is low. the shelf is high. => chair -> {is} -> low | is the chair low? = yes; is the shelf high? = yes
+mia is happy. leo is sad. the bird is tired. the fox is hungry. the boy is angry. => mia -> {happy}; leo -> {sad}; bird -> {tired}; fox -> {hungry}; boy -> {angry} | who is happy? = mia; who is sad? = leo; who is angry? = boy; is the fox hungry? = yes

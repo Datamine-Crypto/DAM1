@@ -1,0 +1,12 @@
+# The range of some numbers: the range is how far the numbers spread, the biggest of them less the
+# smallest. The traced lines and the turns stay as single lessons; each scene tells what several
+# people have, then asks ranges, the counts, who has the most and the fewest, and the difference.
+turn: what is the range of 3, 9 and 5? {eom} => | 6
+turn: what is the range of 10, 4 and 7? {eom} => | 6
+turn: what is the range of 12 and 20? {eom} => | 8
+turn: what is the range of 5, 5 and 5? {eom} => | 0
+tom has 3 apples. ann has 9 apples. sam has 5 apples. => 3 = 3; tom owns apples; apples is 3; 9 = 9; ann owns apples; apples is 9; 5 = 5; sam owns apples; apples is 5 | what is the range of 3, 9 and 5? = 6; what is the range of 10, 4 and 7? = 6; what is the range of 5, 5 and 5? = 0; what is the range of 9 and 5? = 4; how many apples does tom have? = 3; how many apples does sam have? = 5; who has the most apples? = ann; who has the fewest apples? = tom; how many more apples does ann have than tom? = 6; how many apples do tom and ann have? = 12
+kim has 12 pens. joe has 20 pens. lily has 16 pens. => 12 = 12; kim owns pens; pens is 12; 20 = 20; joe owns pens; pens is 20; 16 = 16; lily owns pens; pens is 16 | what is the range of 12 and 20? = 8; what is the range of 12, 20 and 16? = 8; what is the range of 16 and 20? = 4; what is the range of 3, 9 and 5? = 6; how many pens does lily have? = 16; how many pens does joe have? = 20; who has the most pens? = joe; who has the fewest pens? = kim; how many more pens does joe have than kim? = 8; how many pens do kim and joe have? = 32
+test: zoe has 2 stickers. ben has 11 stickers. sue has 6 stickers. => 2 = 2; zoe owns stickers; stickers is 2; 11 = 11; ben owns stickers; stickers is 11; 6 = 6; sue owns stickers; stickers is 6 | what is the range of 2, 11 and 6? = 9; what is the range of 30, 15 and 25? = 15; what is the range of 11 and 6? = 5; how many stickers does sue have? = 6; who has the most stickers? = ben; who has the fewest stickers? = zoe; how many more stickers does ben have than zoe? = 9; how many stickers do zoe and sue have? = 8
+test: turn: what is the range of 2, 11 and 6? {eom} => | 9
+test: turn: what is the range of 30, 15 and 25? {eom} => | 15

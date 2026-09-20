@@ -1,0 +1,3 @@
+# there was a house. it was red: was before any thing sets the time flag, it steps to the house.
+there was a house. it was red. => house:a(true):time(past) -> {is}:time(past) -> {color} -> red
+test: there was a zorp. it was blue. => zorp:a(true):time(past) -> {is}:time(past) -> {color} -> blue

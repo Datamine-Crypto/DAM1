@@ -1,0 +1,3 @@
+# the ball is in the box, then in the bag: it moves out of the box.
+the ball is in the box. the ball is in the bag. => bag:the(true) -> ball:the(true); not box:the(true) -> ball:the(true)
+test: the plim is in the quorn. the plim is in the tornd. => tornd:the(true) -> plim:the(true); not quorn:the(true) -> plim:the(true)

@@ -1,0 +1,6 @@
+# Where an agent's state sends it, as the bAbI motivation stories tell it: a thirsty or hungry agent
+# goes to the kitchen, a tired one to the bedroom, a bored one to the garden.
+the goal of thirsty is the kitchen.
+the goal of hungry is the kitchen.
+the goal of tired is the bedroom.
+the goal of bored is the garden.

@@ -1,0 +1,18 @@
+# Place words: in, inside, on, under, near, holds and contains, before or after the thing, so a word
+# that names a place is read as a place wherever it stands. Every one puts the thing in the place.
+seed: 90-everyday
+seed: 18-qualities
+the milk is inside the jar. => milk -> {inside} -> jar | where is the milk? = jar; what is in the jar? = milk
+a spoon is inside the drawer. => spoon -> {inside} -> drawer | where is the spoon? = drawer
+the cat is on the bed. => cat -> {on} -> bed | where is the cat? = bed; what is in the bed? = cat
+the plate is on a table. => plate -> {on} -> table | where is the plate? = table
+the dog is under the chair. => dog -> {under} -> chair | where is the dog? = chair
+a ball is under the sofa. => ball -> {under} -> sofa | what is in the sofa? = ball
+the bike is near the gate. => bike -> {near} -> gate | where is the bike? = gate
+the box contains a hat. => box -> {contain} -> hat | what is in the box? = hat; where is the hat? = box
+a basket contains eggs. => basket -> {contain} -> eggs | where are the eggs? = basket
+the shelf holds a vase. => shelf -> {hold} -> vase | what is in the shelf? = vase
+the cake is inside the oven. the cake is hot. => cake -> {inside} -> oven; cake -> {is} -> hot | what is in the oven? = cake; where is the cake? = oven
+test: the key is inside the car. => key -> {inside} -> car | where is the key? = car
+test: a frog is under the leaf. => frog -> {under} -> leaf | where is the frog? = leaf
+test: the bowl contains soup. => bowl -> {contain} -> soup | what is in the bowl? = soup

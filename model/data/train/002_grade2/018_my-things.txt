@@ -1,0 +1,23 @@
+# My things: the speaker's own thing is told and asked with my, as his and her are for a name. A
+# statement about my thing puts the thing under the user's having with what it is or where it is, and my kin
+# is a relation of the user beside what the kin is; a question about my thing is answered from it, and with
+# nothing when the thing was never told.
+# Each scene tells two or three of my things or my kin, then asks where each thing is, its color, what
+# is in each place, yes and no, and a thing or a quality never told, which is nothing. Each turn tells
+# one thing and asks for another.
+seed: 90-everyday
+seed: 18-qualities
+seed: 17-speakers
+i have a key. my key is in the drawer. i have a bike. my bike is blue. => user -> {has} -> key -> {in} -> drawer; user -> {has} -> bike -> {blue} | where is my key? = drawer; what is in the drawer? = key; what color is my bike? = blue; what is blue? = bike; is my key in the drawer? = yes; is my bike red? = no; is my key blue? = no; where is my bike? = {nothing}; what color is my key? = {nothing}; where is my phone? = {nothing}
+i have a hat. my hat is on the bed. i have a cup. my cup is green. => user -> {has} -> hat -> {on} -> bed; user -> {has} -> cup -> {green} | where is my hat? = bed; what color is my cup? = green; what is green? = cup; is my hat on the bed? = yes; is my cup green? = yes; is my cup blue? = no; where is my cup? = {nothing}; what color is my hat? = {nothing}; where is my key? = {nothing}
+i have a dog. ann likes tea. ann is my sister. => user -> {has} -> dog; ann -> {like} -> tea; user -> {sister} -> ann | what do i have? = dog; where is my key? = {nothing}; who is ann? = sister; what does ann like? = tea; does ann like tea? = yes; is ann my sister? = yes; do i have a cat? = no; where is my dog? = {nothing}; what does tom like? = {nothing}; who is tom? = {nothing}
+my phone is in the bag. my pen is black. => user -> {has} -> phone -> {in} -> bag; user -> {has} -> pen -> {black} | where is my phone? = bag; what is in the bag? = phone; what color is my pen? = black; what is black? = pen; is my phone in the bag? = yes; is my pen red? = no; where is my pen? = {nothing}; what color is my phone? = {nothing}
+turn: my phone is in the bag where is my key => user -> {has} -> phone -> {in} -> bag | {nothing}
+test: i have a coat. my coat is in the car. i have a kite. my kite is red. => user -> {has} -> coat -> {in} -> car; user -> {has} -> kite -> {red} | where is my coat? = car; what color is my kite? = red; what is in the car? = coat; what is red? = kite; is my coat in the car? = yes; is my kite blue? = no; where is my kite? = {nothing}; what color is my coat? = {nothing}
+test: my book is on the table. tom is my brother. => user -> {has} -> book -> {on} -> table; user -> {brother} -> tom | where is my book? = table; what is tom? = brother; who is tom? = brother; is my book on the table? = yes; is tom my brother? = yes; is my book on the bed? = no; where is my coat? = {nothing}; who is ann? = {nothing}
+test: turn: my kite is red where is my phone => user -> {has} -> kite -> {red} | {nothing}
+# Kin of the speaker asked back with yes and no, each kin word with a name of its own.
+ben is my father. kate is my mother. => user -> {father} -> ben; user -> {mother} -> kate | is ben my father? = yes; is kate my mother? = yes; is ben my mother? = no; who is ben? = father
+lucy is my aunt. sam is my uncle. => user -> {aunt} -> lucy; user -> {uncle} -> sam | is lucy my aunt? = yes; is sam my uncle? = yes; is sam my aunt? = no; who is lucy? = aunt
+max is my brother. emma is my sister. => user -> {brother} -> max; user -> {sister} -> emma | is max my brother? = yes; is emma my sister? = yes; is max my sister? = no
+test: rosa is my cousin. paul is my uncle. => user -> {cousin} -> rosa; user -> {uncle} -> paul | is rosa my cousin? = yes; is paul my uncle? = yes; is rosa my uncle? = no

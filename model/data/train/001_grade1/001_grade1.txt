@@ -1,0 +1,62 @@
+# Grade 1: what a child of six is asked, in the shapes the reader knows. A milestone as much as
+# a lesson: score it alone with dam loop report --quiz data/train/001_grade1/001_grade1.txt. Held-out lines are
+# the exam; the rest teach.
+# Each line is a scene: two to five statements, then many questions about them, from several
+# wordings, both directions, yes and no, and things the scene does not name. Every question of
+# the earlier one-lesson lines is still asked, word for word, with the same answer. A chat turn
+# draws one answer, so the turn lines stay one question each.
+seed: 21-verb-forms
+seed: 10-time
+seed: number-words
+# Reading a short story.
+seed: 90-everyday
+seed: 18-qualities
+seed: 17-speakers
+ben has a red kite. the kite is in the sky. sam has a big dog. the dog is in the yard. => ben -> {has} -> kite -> {in} -> sky; ben -> {has} -> kite -> {red}; sam -> {has} -> dog -> {in} -> yard; sam -> {has} -> dog -> {big} | where is the kite? = sky; what color is the kite? = red; who has the kite? = ben; where is the dog? = yard; what is big? = dog; who has the dog? = sam; what does ben have? = kite; what does sam have? = dog; is the kite red? = yes; is the dog big? = yes; is the kite in the yard? = no; is the dog in the sky? = no; what is in the sky? = kite; what is in the yard? = dog; whose kite is red? = ben; does ben have a dog? = no; who has the cat? = {nothing}; where is the ball? = {nothing}
+tom has a big ball. the ball is in the garden. ann has a red car. the car is in the garage. => tom -> {has} -> ball -> {in} -> garden; tom -> {has} -> ball -> {big}; ann -> {has} -> car -> {in} -> garage; ann -> {has} -> car -> {red} | where is the ball? = garden; what is big? = ball; where is the car? = garage; what color is the car? = red; who has the ball? = tom; who has the car? = ann; who owns the car? = ann; what does tom have? = ball; what does ann have? = car; is the ball big? = yes; is the car red? = yes; is the car big? = no; is the ball in the garage? = no; what is in the garden? = ball; what is red? = car; whose car is red? = ann; does tom have a car? = no; where is the kite? = {nothing}
+the cat sat on the mat. the mat is blue. mom is in the kitchen. dad is in the garden. => cat -> {on} -> mat -> {blue}; mom -> {in} -> kitchen; dad -> {in} -> garden | where is the cat? = mat; what color is the mat? = blue; where is mom? = kitchen; where is dad? = garden; what is on the mat? = cat; is the mat blue? = yes; is the cat on the mat? = yes; who is in the kitchen? = mom; who is in the garden? = dad; is mom in the garden? = no; is dad in the kitchen? = no; what is blue? = mat; is the cat blue? = no; where is the dog? = {nothing}
+the boy sat on the chair. tom went to school. then tom went home. => boy -> {on} -> chair; tom -> {in} -> home; tom -> {go} -> school -> {time} -> {past}; tom -> {go} -> home -> {time} -> {past} | where is the boy? = chair; where is tom? = home; who is on the chair? = boy; is the boy on the chair? = yes; is tom on the chair? = no; is tom at home? = yes; is tom at school? = no; where is ann? = {nothing}
+the fish is in the bowl. the bowl is on the table. the frog is green. the frog is on the log. => fish -> {in} -> bowl -> {on} -> table; frog -> {green}; frog -> {on} -> log | where is the fish? = bowl; where is the bowl? = table; what is on the log? = frog; what color is the frog? = green; where is the frog? = log; what is in the bowl? = fish; what is on the table? = bowl; is the frog green? = yes; is the fish on the log? = no; is the fish on the table? = yes; what is green? = frog; is the bowl green? = no; where is the duck? = {nothing}
+pink is a color. ann has a doll. the doll is small. it is pink. => pink -> {is} -> color; ann -> {has} -> doll -> {small}; ann -> {has} -> doll -> {pink} | what color is the doll? = pink; what is small? = doll; who has the doll? = ann; what does ann have? = doll; is the doll small? = yes; is the doll pink? = yes; is the doll big? = no; is pink a color? = yes; whose doll is pink? = ann; does ann have a ball? = no; who has the ball? = {nothing}
+# Counting.
+there are 5 apples in the basket. there are 12 eggs in the box. three ducks are in the pond. i have 7 marbles. => apple -> {in} -> basket; apple:quantity(5); {number:value(5)}; egg -> {in} -> box; egg:quantity(12); {number:value(12)}; duck -> {in} -> pond; duck:quantity(3); three -> {equal} -> {number:value(3)}; user -> {has} -> marble:quantity(7); {number:value(7)} | how many apples are in the basket? = 5; how many eggs are in the box? = 12; how many ducks are in the pond? = three; how many marbles do i have? = 7; where are the apples? = basket; where are the eggs? = box; where are the ducks? = pond; what is in the basket? = apple; what is in the box? = egg; what is in the pond? = duck; are the eggs in the basket? = no; do i have marbles? = yes; do i have a dog? = no
+# Adding and taking away within twenty.
+turn: what is 8 + 5? => | 13
+turn: what is 9 + 9? => | 18
+turn: 12 - 4 = => | 8
+turn: what is 15 - 7? => | 8
+turn: what is 6 plus 6? => | 12
+turn: what is 20 minus 10? => | 10
+turn: 4 + 4 + 4 = => | 12
+# Colors, shapes and opposites.
+the sun is yellow. the grass is green. a ball is round. a box is square. => sun -> {yellow}; grass -> {green}; ball -> {is} -> round; box -> {is} -> square | what color is the sun? = yellow; what is green? = grass; what is round? = ball; what is square? = box; what color is the grass? = green; what is yellow? = sun; is the sun yellow? = yes; is the grass yellow? = no; is a ball round? = yes; is a box round? = no; is a ball square? = no; what color is the ball? = {nothing}
+the sun is hot. the ice is cold. the elephant is big. the mouse is small. => sun -> {hot}; ice -> {cold}; elephant -> {big}; mouse -> {small} | what is hot? = sun; what is cold? = ice; what is big? = elephant; what is small? = mouse; is the sun hot? = yes; is the ice hot? = no; is the ice cold? = yes; is the elephant big? = yes; is the elephant small? = no; is the mouse big? = no; is the mouse small? = yes; what color is the mouse? = {nothing}
+the sky is blue. the snow is white. the leaf is green. the soup is hot. => sky -> {blue}; snow -> {white}; leaf -> {green}; soup -> {hot} | what color is the sky? = blue; what is white? = snow; what color is the leaf? = green; what is hot? = soup; what color is the snow? = white; what is blue? = sky; what is green? = leaf; is the sky blue? = yes; is the snow blue? = no; is the soup hot? = yes; is the leaf hot? = no; what color is the soup? = {nothing}
+the cloud is white. the oven is hot. a cow is an animal. a carrot is a vegetable. => cloud -> {white}; oven -> {hot}; cow -> {is} -> animal; carrot -> {is} -> vegetable | what color is the cloud? = white; what is hot? = oven; is a cow an animal? = yes; is a carrot an animal? = no; what is white? = cloud; is the oven hot? = yes; is the cloud hot? = no; is a carrot a vegetable? = yes; is a cow a vegetable? = no; what is a cow? = animal; what is a carrot? = vegetable; what color is the oven? = {nothing}
+# What things are.
+yellow is a color. a banana is a fruit. the banana is yellow. a robin is a bird. a bird is an animal. => yellow -> {is} -> color; banana -> {is} -> fruit; banana -> {yellow}; robin -> {is} -> bird; bird -> {is} -> animal | what color is the banana? = yellow; is the banana a fruit? = yes; is a robin an animal? = yes; is a robin a bird? = yes; is a bird an animal? = yes; what is a robin? = bird; is the banana yellow? = yes; is yellow a color? = yes; is the banana a bird? = no; is a robin a fruit? = no; is an animal a robin? = no; what is yellow? = banana; what color is the robin? = {nothing}
+# Family.
+tom's sister is ann. ann's brother is tom. => tom -> {sister} -> ann; ann -> {brother} -> tom | who is tom's sister? = ann; who is ann's brother? = tom; is ann tom's sister? = yes; is tom ann's brother? = yes; is tom ann's sister? = no; is ann tom's brother? = no; who is tom's brother? = {nothing}; who is ann's sister? = {nothing}
+# Days and time.
+today is monday. tomorrow is tuesday. the party is at noon. => today -> {monday}; tomorrow -> {tuesday}; party -> {at} -> noon | what day is today? = monday; what day is tomorrow? = tuesday; when is the party? = noon; is today monday? = yes; is today tuesday? = no; is tomorrow tuesday? = yes; is tomorrow monday? = no; is the party at noon? = yes; when is the game? = {nothing}
+# Money and positions.
+a pen costs 2 dollars. a book costs 5 dollars. the hat is on the chair. the shoe is under the bed. => pen -> {cost} -> dollar:quantity(2); {number:value(2)}; book -> {cost} -> dollar:quantity(5); {number:value(5)}; hat -> {on} -> chair; shoe -> {under} -> bed | how much is the book? = 5; how much is the pen? = 2; where is the hat? = chair; where is the shoe? = bed; how much does the book cost? = 5; how much does the pen cost? = 2; how much do the pen and the book cost in total? = 7; what is on the chair? = hat; what is under the bed? = shoe; is the hat on the chair? = yes; is the shoe on the chair? = no; how much is the hat? = {nothing}
+# As a chat.
+turn: sam has a red ball where is the ball => sam -> {has} -> ball -> {red} | {nothing}
+turn: sam has a red ball what color is the ball => sam -> {has} -> ball -> {red} | red
+turn: the bird is in the nest where is the bird => bird -> {in} -> nest | nest
+turn: there are 6 cats in the barn how many cats are in the barn => cat -> {in} -> barn; cat:quantity(6); {number:value(6)} | 6
+turn: there are 5 dogs in the yard how many dogs are in the yard => dog -> {in} -> yard; dog:quantity(5); {number:value(5)} | 5
+turn: there are 7 fish in the lake how many fish are in the lake => lake -> {has} -> fish:quantity(7); {number:value(7)} | 7
+turn: there are 10 birds in the tree how many birds are in the tree => bird -> {in} -> tree; bird:quantity(10); {number:value(10)} | 10
+# The exam.
+test: ann has a blue bike. the bike is in the shed. the dog sat on the rug. the rug is red. => ann -> {has} -> bike -> {in} -> shed; ann -> {has} -> bike -> {blue}; dog -> {on} -> rug -> {red} | where is the bike? = shed; what color is the bike? = blue; where is the dog? = rug; what color is the rug? = red; who has the bike? = ann; what does ann have? = bike; what is in the shed? = bike; what is on the rug? = dog; is the bike blue? = yes; is the rug blue? = no; whose bike is blue? = ann; who has the rug? = {nothing}
+test: there are 9 pears in the bowl. four hens are in the coop. => pear -> {in} -> bowl; pear:quantity(9); {number:value(9)}; hen -> {in} -> coop; hen:quantity(4); four -> {equal} -> {number:value(4)} | how many pears are in the bowl? = 9; how many hens are in the coop? = four; where are the pears? = bowl; where are the hens? = coop; what is in the bowl? = pear; what is in the coop? = hen; are the hens in the bowl? = no; where are the eggs? = {nothing}
+test: turn: what is 7 + 6? => | 13
+test: turn: 14 - 5 = => | 9
+test: turn: what is 3 plus 9? => | 12
+test: the moon is white. the fire is hot. a pig is an animal. an apple is a fruit. => moon -> {white}; fire -> {hot}; pig -> {is} -> animal; apple -> {is} -> fruit | what color is the moon? = white; what is hot? = fire; is a pig an animal? = yes; is an apple an animal? = no; what is white? = moon; is the fire hot? = yes; is the moon hot? = no; is an apple a fruit? = yes; is a pig a fruit? = no; what is a pig? = animal; what is an apple? = fruit; what color is the fire? = {nothing}
+test: ben's sister is sue. today is friday. tomorrow is saturday. => ben -> {sister} -> sue; today -> {friday}; tomorrow -> {saturday} | who is ben's sister? = sue; what day is tomorrow? = saturday; what day is today? = friday; is sue ben's sister? = yes; is today friday? = yes; is tomorrow friday? = no; who is ben's brother? = {nothing}; who is sue's sister? = {nothing}
+test: a cup costs 3 dollars. the cap is on the hook. the sock is under the chair. => cup -> {cost} -> dollar:quantity(3); {number:value(3)}; cap -> {on} -> hook; sock -> {under} -> chair | how much is the cup? = 3; where is the cap? = hook; where is the sock? = chair; how much does the cup cost? = 3; what is on the hook? = cap; what is under the chair? = sock; is the cap on the hook? = yes; is the sock on the hook? = no; how much is the cap? = {nothing}
+test: turn: the cow is in the field where is the cow => cow -> {in} -> field | field
+test: turn: there are 8 ducks in the pond how many ducks are in the pond => duck -> {in} -> pond; duck:quantity(8); {number:value(8)} | 8

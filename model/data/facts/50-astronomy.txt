@@ -1,0 +1,58 @@
+# The sky: the sun, the planets, the moon and the stars.
+the earth is a planet.
+the moon is a satellite.
+mercury is a planet.
+venus is a planet.
+earth is a planet.
+mars is a planet.
+jupiter is a planet.
+saturn is a planet.
+uranus is a planet.
+neptune is a planet.
+pluto is a dwarf planet.
+the sun has 8 planets.
+jupiter is the largest planet.
+mercury is the smallest planet.
+mercury is the closest planet.
+neptune is the farthest planet.
+mercury is the first planet.
+venus is the second planet.
+earth is the third planet.
+mars is the fourth planet.
+jupiter is the fifth planet.
+saturn is the sixth planet.
+uranus is the seventh planet.
+neptune is the eighth planet.
+mars is red.
+the earth is blue.
+the moon is grey.
+the sun is yellow.
+venus is hot.
+mars is cold.
+neptune is blue.
+saturn has rings.
+jupiter has 95 moons.
+saturn has 146 moons.
+mars has 2 moons.
+the earth has 1 moon.
+the earth is bigger than the moon.
+the sun is bigger than the earth.
+jupiter is bigger than the earth.
+jupiter is bigger than saturn.
+the earth is bigger than mars.
+the moon is closer than the sun.
+the moon is smaller than the earth.
+the sun is hotter than the earth.
+a comet has a tail.
+a star is hot.
+a galaxy has stars.
+the sun is in a galaxy.
+the earth is in the solar system.
+the moon is in the sky.
+the stars are in the sky.
+a telescope is made of glass.
+an astronaut has a suit.
+armstrong was an astronaut.
+armstrong went to the moon.
+the sun rises in the east.
+the sun sets in the west.

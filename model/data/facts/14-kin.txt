@@ -1,0 +1,6 @@
+# Kin two generations apart: a mother and a father are parents, a grandmother is the mother of a
+# parent and a grandfather the father of a parent.
+a mother is a parent.
+a father is a parent.
+a grandmother is a mother.
+a grandfather is a father.

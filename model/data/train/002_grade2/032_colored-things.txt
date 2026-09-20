@@ -1,0 +1,14 @@
+# Things someone has, told with their colors before them, two or three joined with a comma and and.
+# The colors are the things', and the one who has them is asked for too. Held out lines use colors
+# and things the learned lines never use.
+i have red, yellow and golden crayons. => user -> crayons -> {is} -> {color} -> golden | what color are my crayons? = red, yellow, golden
+i have red, yellow and golden crayons. => user -> crayons -> {is} -> {color} -> red | who has the crayons? = user
+tom has red and blue crayons. => tom -> crayons -> {is} -> {color} -> blue | what color are the crayons? = red, blue
+anna has a teal hat and a cream scarf. => anna -> hat -> {is} -> {color} -> teal | what color is the scarf? = cream
+ben has green, white and pink marbles. => ben -> marbles -> {is} -> {color} -> pink | what color are the marbles? = green, white, pink
+i have black and white pens. => user -> pens -> {is} -> {color} -> white | what color are my pens? = black, white
+sara has an olive coat. => sara -> coat -> {is} -> {color} -> olive | what color is the coat? = olive
+mia has purple, orange and brown beads. => mia -> beads -> {is} -> {color} -> orange | who has the beads? = mia
+test: i have cyan, magenta and tan pencils. => user -> pencils -> {is} -> {color} -> tan | what color are my pencils? = cyan, magenta, tan
+test: leo has grey and lavender socks. => leo -> socks -> {is} -> {color} -> lavender | what color are the socks? = grey, lavender
+test: nina has a maroon bag. => nina -> bag -> {is} -> {color} -> maroon | who has the bag? = nina

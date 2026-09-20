@@ -1,0 +1,3 @@
+# does tom have apples: find tom, check the apples inside him.
+tom has 3 apples. => tom -> apple:quantity(3) | does tom have apples? = yes; does tom have pens? = no
+test: zorp has 4 flibs. => zorp -> flib:quantity(4) | does zorp have flibs? = yes; does zorp have morks? = no

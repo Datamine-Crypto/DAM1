@@ -1,0 +1,48 @@
+# The statements of data/facts/55-earth.txt the cursor tree holds, one path each, written by build-seeds.mjs.
+earth -> {round}
+earth -> {continent:quantity(7)}
+earth -> {ocean:quantity(5)}
+earth {has} core
+core -> {is} -> {temperature} -> hot
+core {material} iron
+crust {material} rock
+earth {has} atmosphere
+atmosphere {material} air
+sea -> {salty}
+rain {is} water
+cloud {material} water
+fog {is} cloud
+storm {has} wind
+storm {has} rain
+hurricane {is} storm
+tornado {is} storm
+thunder {is} sound
+lightning -> {electricity}
+rainbow -> {color:quantity(7)}
+volcano {has} lava
+lava -> {is} -> {temperature} -> hot
+jungle -> {wet}
+jungle -> {is} -> {temperature} -> hot
+arctic -> {is} -> {temperature} -> cold
+mountain -> {high}
+valley -> {low}
+beach {material} sand
+soil {material} rock
+soil {material} plants
+granite {is} rock
+marble {is} rock
+limestone {is} rock
+sandstone {is} rock
+chalk {is} rock
+gold {in} rock
+oil {in} ground
+coal {in} ground
+iron {in} ground
+salt {in} sea
+north -> {is} -> {temperature} -> cold
+south -> {is} -> {temperature} -> warm
+map {has} north
+equator {is} line
+equator {in} middle
+continent -> {is} -> {size} -> big
+island -> {is} -> {size} -> small

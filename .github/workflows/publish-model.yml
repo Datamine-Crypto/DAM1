@@ -1,0 +1,76 @@
+name: Publish model
+
+# Every push to main exports the release network as a Hugging Face model folder, checks the folder
+# against its sources and uploads it to the model repository. A tag v* also tags that version on the
+# hub. The state is made from the seeds SEEDS names, all for every seeds file, which is the state the word network is taught on. Needs the secret HF_TOKEN (a write token of the hub account) and, when the repository is not
+# DatamineNetwork/DAM1, the variable HF_REPO.
+
+on:
+  push:
+    branches: [main]
+    tags: ['v*']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: publish-model
+  cancel-in-progress: false
+
+env:
+  NETWORK: data/network/release.bin
+  SEEDS: all
+  HF_REPO: ${{ vars.HF_REPO || 'DatamineNetwork/DAM1' }}
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: dtolnay/rust-toolchain@1.97.1
+
+      - uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: |
+            model
+            huggingface
+
+      - name: Build the model tool
+        working-directory: huggingface
+        run: cargo build --release --locked
+
+      - name: Round-trip tests
+        working-directory: huggingface
+        run: cargo test --release --locked
+
+      - name: Export the model folder
+        working-directory: model
+        run: ../huggingface/target/release/dam1 export --network $NETWORK --out ../huggingface/model --commit ${{ github.sha }} --seeds $SEEDS
+
+      - name: Check the folder against its sources and grade it
+        working-directory: model
+        run: ../huggingface/target/release/dam1 check --model ../huggingface/model --network $NETWORK
+
+      - name: Add the card, the licence and the notice
+        run: cp huggingface/card/README.md LICENSE NOTICE.md huggingface/model/
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install the hub client
+        run: pip install --quiet 'huggingface_hub>=0.34'
+
+      - name: Upload to the hub
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: hf upload $HF_REPO huggingface/model . --repo-type model --commit-message "Built at ${{ github.sha }}" --delete '*'
+
+      - name: Tag the version on the hub
+        if: startsWith(github.ref, 'refs/tags/v')
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: hf repo tag create $HF_REPO ${{ github.ref_name }} --repo-type model

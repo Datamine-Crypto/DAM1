@@ -1,0 +1,15 @@
+# Weather and seasons as qualities of a day or a season, and the sun's place.
+# Each line is a scene: the weather of a day and the qualities of a few seasons, then many questions
+# (what has a quality, does it have it or another one, and where the sun or the moon rises or sets).
+# The sun and the moon rise and set in different scenes, since the space holds one place for each.
+today is sunny. summer is hot. winter is cold. the sun rises in the east. => today is sunny; summer is hot; winter is cold; sun in east | is today sunny? = yes; is today rainy? = no; what is sunny? = today; what is cold? = winter; what is hot? = summer; is summer cold? = no; is summer hot? = yes; is winter hot? = no; is winter sunny? = no; where does the sun rise? = east
+today is rainy. yesterday was sunny. spring is warm. autumn is cool. the sun sets in the west. => today is rainy; yesterday is sunny; spring is warm; autumn is cool; sun in west | is today rainy? = yes; is today sunny? = no; what is rainy? = today; what was sunny? = yesterday; was yesterday rainy? = no; what is warm? = spring; what is cool? = autumn; is spring cool? = no; is autumn warm? = no; where does the sun set? = west
+spring is rainy. autumn is windy. summer is dry. winter is wet. the moon rises in the east. => spring is rainy; autumn is windy; summer is dry; winter is wet; moon in east | what is windy? = autumn; what is wet? = winter; what is dry? = summer; what is rainy? = spring; is autumn windy? = yes; is summer wet? = no; is spring dry? = no; is winter dry? = no; where does the moon rise? = east
+autumn is cloudy. spring is mild. today is cold. the moon sets in the west. => autumn is cloudy; spring is mild; today is cold; moon in west | what is mild? = spring; what is cloudy? = autumn; is spring cloudy? = no; is autumn mild? = no; is today cold? = yes; what is cold? = today; is today mild? = no; where does the moon set? = west
+turn: today is cloudy winter is cold is today cloudy {eom} => today is cloudy; winter is cold | yes
+turn: winter is cold summer is hot is winter hot {eom} => winter is cold; summer is hot | no
+turn: today is rainy spring is warm is today rainy {eom} => today is rainy; spring is warm | yes
+turn: today is stormy autumn is cool is today stormy {eom} => today is stormy; autumn is cool | yes
+turn: today is cold summer is dry is today cold {eom} => today is cold; summer is dry | yes
+test: today is windy. summer is sunny. winter is snowy. => today is windy; summer is sunny; winter is snowy | is today windy? = yes; is today sunny? = no; is today snowy? = no; what is windy? = today; what is snowy? = winter; what is sunny? = summer; is winter sunny? = no; is summer snowy? = no
+test: turn: today is foggy autumn is windy is today foggy {eom} => today is foggy; autumn is windy | yes

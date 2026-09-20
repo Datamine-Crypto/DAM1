@@ -1,0 +1,25 @@
+seed: 21-verb-forms
+# A day out: a story told a sentence at a time, then questions asked one after the other, each its own
+# input, since the chat cuts a message at every sentence and reads them one by one on the same tree.
+# They points back at the two things the story told last, as he and she point at one, so what they
+# did is written on both, as an activity of each.
+tom and jane went to the park. => tom -> {in} -> park; jane -> {in} -> park; jane -> {go} -> park -> {time} -> {past}; tom -> {go} -> park -> {time} -> {past} | where is tom? = park; where is jane? = park
+then: they had fun. => tom -> {activity} -> fun; jane -> {activity} -> fun | who has fun? = jane, tom
+then: turn: who had fun? => | jane, tom
+then: turn: where did they go? => | park
+sam and lily went to the beach. => sam -> {in} -> beach; lily -> {in} -> beach; lily -> {go} -> beach -> {time} -> {past}; sam -> {go} -> beach -> {time} -> {past} | where is lily? = beach
+then: they had a picnic. => sam -> {activity} -> picnic; lily -> {activity} -> picnic | who has a picnic? = lily, sam
+then: turn: who had a picnic? => | lily, sam
+then: turn: where did they go? => | beach
+max and sue went to the shop. => max -> {in} -> shop; sue -> {in} -> shop; sue -> {go} -> shop -> {time} -> {past}; max -> {go} -> shop -> {time} -> {past} | where is max? = shop
+then: they had a nap. => max -> {activity} -> nap; sue -> {activity} -> nap | who has a nap? = max, sue
+then: turn: where did they go? => | shop
+then: turn: who had a nap? => | max, sue
+kim and joe went to the lake. => kim -> {in} -> lake; joe -> {in} -> lake; joe -> {go} -> lake -> {time} -> {past}; kim -> {go} -> lake -> {time} -> {past} | where is joe? = lake
+then: they had a swim. => kim -> {activity} -> swim; joe -> {activity} -> swim | who has a swim? = joe, kim
+then: turn: who had a swim? => | joe, kim
+then: turn: where did they go? => | lake
+test: nina and omar went to the farm. => nina -> {in} -> farm; omar -> {in} -> farm; omar -> {go} -> farm -> {time} -> {past}; nina -> {go} -> farm -> {time} -> {past} | where is nina? = farm
+test: then: they had a rest. => nina -> {activity} -> rest; omar -> {activity} -> rest | who has a rest? = nina, omar
+test: then: turn: who had a rest? => | nina, omar
+test: then: turn: where did they go? => | farm
