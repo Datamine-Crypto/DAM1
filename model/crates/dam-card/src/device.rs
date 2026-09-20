@@ -5,7 +5,7 @@ use std::sync::Arc;
 pub struct CardRuntime;
 source!(
     CardRuntime,
-    "NVIDIA's CUDA driver and its runtime compiler, reached through the cudarc crate: a context on the first card, kernels compiled from their text when a run first uses the card, and a stream that copies numbers to the card, launches a kernel over them and copies them back"
+    "NVIDIA's CUDA driver and its runtime compiler, reached through the cudarc crate: a context on the first card, kernels compiled from their text when a run first uses the card, and a stream that copies numbers to the card, launches a kernel over them and copies them back; the manifest names the version of CUDA instead of asking a toolkit for it, so the crate builds where no toolkit is installed and the driver and the runtime compiler are loaded only when a card is used, and that name follows the toolkit of the machine that trains, since it chooses which runtime compiler is looked for"
 );
 
 pub struct Card {
