@@ -22,7 +22,7 @@ test: turn: how many wings does an eagle have => | 2
 test: turn: how many fingers does a hand have => | 5
 test: kim has a cat. => kim -> {has} -> cat | how many legs does a cat have? = 4; how many legs does a giraffe have? = 4; how many wings does a fly have? = 2
 # Holders whose name is also a word of doing, a fly, a duck: the thing asked of stands after the article.
-turn: how many legs does a fly have => | 6
+turn: how many legs does a fly have =>  | 6
 turn: how many legs does a duck have => | 2
 turn: how many wings does a bee have => | 4
 turn: how many legs does a bee have => | 6

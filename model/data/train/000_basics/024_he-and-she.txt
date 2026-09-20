@@ -5,35 +5,35 @@ seed: 21-verb-forms
 seed: 16-names
 seed: 90-everyday
 seed: 18-qualities
-tom and jane went to the park. => tom -> {in} -> park; jane -> {in} -> park; jane -> {go} -> park -> {time} -> {past}; tom -> {go} -> park -> {time} -> {past} | where is tom? = park; where is jane? = park
+tom and jane went to the park. => jane -> {go}:time(past) -> park; tom -> {go}:time(past) -> park | where is tom? = park; where is jane? = park
 then: he had fun. => tom -> {activity} -> fun | who has fun? = tom
 then: she had a swim. => jane -> {activity} -> swim | who has a swim? = jane
 then: turn: who had fun? => | tom
-sam and lily went to the beach. => sam -> {in} -> beach; lily -> {in} -> beach; lily -> {go} -> beach -> {time} -> {past}; sam -> {go} -> beach -> {time} -> {past} | where is lily? = beach
+sam and lily went to the beach. => lily -> {go}:time(past) -> beach; sam -> {go}:time(past) -> beach | where is lily? = beach
 then: she had a picnic. => lily -> {activity} -> picnic | who has a picnic? = lily
 then: he had a nap. => sam -> {activity} -> nap | who has a nap? = sam
 then: turn: who had a nap? => | sam
-sue and max went to the shop. => sue -> {in} -> shop; max -> {in} -> shop; max -> {go} -> shop -> {time} -> {past}; sue -> {go} -> shop -> {time} -> {past} | where is max? = shop
+sue and max went to the shop. => max -> {go}:time(past) -> shop; sue -> {go}:time(past) -> shop | where is max? = shop
 then: he had a run. => max -> {activity} -> run | who has a run? = max
 then: she had a dance. => sue -> {activity} -> dance | who has a dance? = sue
 then: turn: who had a dance? => | sue
-kim and joe went to the lake. => kim -> {in} -> lake; joe -> {in} -> lake; joe -> {go} -> lake -> {time} -> {past}; kim -> {go} -> lake -> {time} -> {past} | where is joe? = lake
+kim and joe went to the lake. => joe -> {go}:time(past) -> lake; kim -> {go}:time(past) -> lake | where is joe? = lake
 then: she had a swim. => kim -> {activity} -> swim | who has a swim? = kim
 then: he had a rest. => joe -> {activity} -> rest | who has a rest? = joe
 then: turn: who had a rest? => | joe
-tom went to the park. jane went to the shop. => tom -> {in} -> park; jane -> {in} -> shop; tom -> {go} -> park -> {time} -> {past}; jane -> {go} -> shop -> {time} -> {past} | where is tom? = park; where is jane? = shop
+tom went to the park. jane went to the shop. => tom -> {go}:time(past) -> park; jane -> {go}:time(past) -> shop | where is tom? = park; where is jane? = shop
 then: turn: where is he? => | park
 then: turn: where is she? => | shop
 then: turn: is he in the shop? => | no
 then: his dog is brown. => tom -> {has} -> dog -> {brown} | what color is tom's dog? = brown
 then: her cat is black. => jane -> {has} -> cat -> {black} | what color is jane's cat? = black
 then: turn: what does he have? => | dog
-sam went to the lake. lily went to the hall. => sam -> {in} -> lake; lily -> {in} -> hall; sam -> {go} -> lake -> {time} -> {past}; lily -> {go} -> hall -> {time} -> {past} | where is sam? = lake
+sam went to the lake. lily went to the hall. => sam -> {go}:time(past) -> lake; lily -> {go}:time(past) -> hall | where is sam? = lake
 then: turn: where is she? => | hall
 then: turn: where is he? => | lake
 then: her bag is red. => lily -> {has} -> bag -> {red} | what color is lily's bag? = red
 then: turn: what does she have? => | bag
-test: nina and omar went to the farm. => nina -> {in} -> farm; omar -> {in} -> farm; omar -> {go} -> farm -> {time} -> {past}; nina -> {go} -> farm -> {time} -> {past} | where is nina? = farm
+test: nina and omar went to the farm. => omar -> {go}:time(past) -> farm; nina -> {go}:time(past) -> farm | where is nina? = farm
 test: then: he had a ride. => omar -> {activity} -> ride | who has a ride? = omar
 test: then: she had a walk. => nina -> {activity} -> walk | who has a walk? = nina
-test: then: turn: who had a walk? => | nina
+test: then: turn: who had a walk? =>  | nina

@@ -17,5 +17,6 @@ i bought a new phone. tom found an old coin. => | what did i buy? = phone; what 
 ann wants a big cake. sam saw a small bird. => | what does ann want? = cake; what did sam see? = bird
 lucy made a red kite. ben bought a fast bike. => | what did lucy make? = kite; what did ben buy? = bike
 turn: i bought a new car what did i buy => | car
+ann wants a red ball. ben needs a big cup. => ann -> {want} -> ball -> {red}; ben -> {need} -> cup -> {big} | what does ann want? = ball; what does ben need? = cup
 test: kim found a small key. joe wants a new hat. => | what did kim find? = key; what does joe want? = hat
 test: turn: i made a big pizza what did i make => | pizza

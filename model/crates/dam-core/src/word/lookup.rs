@@ -527,14 +527,15 @@ because!(newest_told, WordReading, "what a pronoun stands for when its gender do
 
 pub(super) fn newest_for(mind: &CursorMind, people: bool, pronoun: &str) -> Option<usize> {
     let asked = open_question(mind);
-    let fit = |n: usize| !mind.tree.node(n).gone && !mind.tree.node(n).name.starts_with(BRACE_OPEN_TEXT) && !tag_value(mind, n) && number_of(&mind.tree.node(n).name).is_none() && !super::mind::MEASURES.contains(&crate::cursor::bare_name(&mind.tree.node(mind.tree.node(n).parent).name).as_str()) && !mind.held.contains(&n) && mind.tree.node(n).link.is_none() && asked.is_none_or(|q| !inside(mind, n, q)) && person(mind, n) == people && gendered(mind, n, pronoun);
+    let fit = |n: usize| !mind.tree.node(n).gone && !mind.tree.node(n).name.starts_with(BRACE_OPEN_TEXT) && !tag_value(mind, n) && number_of(&mind.tree.node(n).name).is_none() && !super::mind::MEASURES.contains(&crate::cursor::bare_name(&mind.tree.node(mind.tree.node(n).parent).name).as_str()) && !mind.held.contains(&n) && mind.tree.node(n).link.is_none() && asked.is_none_or(|q| q != n && !inside(mind, n, q)) && person(mind, n) == people && gendered(mind, n, pronoun);
     let placing = !mind.held.is_empty() && flag_of(mind, super::mind::FLAG_PLACE).is_some();
     let before = mind.last_topic.filter(|&t| placing && !people && t < mind.tree.len() && fit(t));
     let topic = before.or(mind.first_mark.filter(|&t| t < mind.tree.len() && fit(t)));
-    let placed = |n: usize| !people && fit(n) && mind.tree.node(n).parent != 0 && !mind.tree.node(mind.tree.node(n).parent).name.starts_with(BRACE_OPEN_TEXT);
+    let gone_to = |n: usize| !people && !mind.tree.node(n).gone && !mind.tree.node(n).name.starts_with(BRACE_OPEN_TEXT) && !tag_value(mind, n) && !person(mind, n) && super::writing::going_relation(mind, mind.tree.node(n).parent) && asked.is_none_or(|q| q != n && !inside(mind, n, q));
+    let placed = |n: usize| gone_to(n) || !people && fit(n) && (went_to(mind, n).is_some() || mind.tree.node(n).parent != 0 && !mind.tree.node(mind.tree.node(n).parent).name.starts_with(BRACE_OPEN_TEXT));
     let topic = topic.or_else(|| (mind.tree.state..mind.tree.len()).rev().find(|&n| placed(n)));
     let top = |n: usize| people && mind.tree.node(n).parent == 0 && !mind.tree.node(n).gone && !mind.tree.node(n).name.starts_with(BRACE_OPEN_TEXT) && asked.is_none_or(|q| !inside(mind, n, q));
-    let moved = mind.first_mark.filter(|&t| people && t < mind.tree.len() && !mind.tree.node(t).gone && mind.tree.node(t).link.is_none() && !mind.tree.node(t).name.starts_with(BRACE_OPEN_TEXT) && mind.tree.node(t).parent != 0 && owner_of(mind, t).is_none() && own_child(mind, t, &step_item(FLAG_DEFINITE)).is_none() && own_child(mind, t, &step_item(FLAG_INDEFINITE)).is_none() && gendered(mind, t, pronoun) && number_of(&mind.tree.node(t).name).is_none());
+    let moved = mind.first_mark.filter(|&t| people && t < mind.tree.len() && !mind.tree.node(t).gone && mind.tree.node(t).link.is_none() && !mind.tree.node(t).name.starts_with(BRACE_OPEN_TEXT) && (mind.tree.node(t).parent != 0 || went_to(mind, t).is_some()) && owner_of(mind, t).is_none() && own_child(mind, t, &step_item(FLAG_DEFINITE)).is_none() && own_child(mind, t, &step_item(FLAG_INDEFINITE)).is_none() && gendered(mind, t, pronoun) && number_of(&mind.tree.node(t).name).is_none());
     topic.or_else(|| (mind.tree.state..mind.tree.len()).rev().find(|&n| fit(n))).or(moved).or_else(|| (mind.tree.state..mind.tree.len()).rev().find(|&n| top(n)))
 }
 because!(newest_for, WordReading, "what a pronoun stands for, for it while a thing is held to be placed the thing the sentence before was \
@@ -592,13 +593,48 @@ pub(super) fn speaker(mind: &CursorMind, n: usize) -> bool {
 because!(speaker, WordReading, "whether a thing is one of the two who speak, the user or the assistant, who have what stands inside them \
      as a person does");
 
-pub fn place_of(mind: &CursorMind, at: usize) -> Option<usize> {
-    let parent = (at != 0).then(|| mind.tree.node(at).parent).filter(|&p| p != 0 && Some(p) != open_question(mind) && !mind.tree.node(p).name.starts_with(BRACE_OPEN_TEXT))?;
-    let bare_named = own_child(mind, parent, &step_item(FLAG_DEFINITE)).is_none() && own_child(mind, parent, &step_item(FLAG_INDEFINITE)).is_none();
-    if person(mind, parent) || speaker(mind, parent) || (owner_of(mind, at) == Some(parent) && bare_named && mind.tree.node(parent).parent != 0) {
-        return place_of(mind, parent);
+pub fn goings(mind: &CursorMind, at: usize) -> Vec<usize> {
+    if at == 0 {
+        return Vec::new();
     }
-    (owner_of(mind, at) != Some(parent)).then_some(parent)
+    present_children(mind, at)
+        .into_iter()
+        .filter(|&c| mind.tree.story(c) && super::mind::MOVING.contains(&crate::cursor::bare_name(&mind.tree.node(c).name).as_str()))
+        .flat_map(|c| present_children(mind, c).into_iter().filter(|&v| !mind.tree.node(v).name.starts_with(BRACE_OPEN_TEXT)))
+        .collect()
+}
+because!(goings, WordReading, "the places a thing went to, oldest first, each one what a relation of moving carries, so where it is now is the last of them and where it was is the one before");
+
+pub fn goings_in_order(mind: &CursorMind, at: usize) -> Vec<usize> {
+    let mut walked = goings(mind, at);
+    let day = |n: usize| time_of_day(mind, mind.tree.node(n).parent).and_then(|t| super::mind::TIMES_OF_DAY.iter().position(|one| *one == t));
+    if walked.iter().all(|&n| day(n).is_some()) {
+        walked.sort_by_key(|&n| day(n));
+    }
+    walked
+}
+because!(goings_in_order, WordReading, "the places a thing went to in the order they were made: by the time of day each going carries when every one of them carries one, else the order the text told them in");
+
+pub fn went_to(mind: &CursorMind, at: usize) -> Option<usize> {
+    if at == 0 {
+        return None;
+    }
+    goings(mind, at).pop()
+}
+because!(went_to, WordReading, "the place a thing went to: what the newest relation of moving it carries holds, which says where it is when it stands inside nothing, since a going writes what was done and not a thing put into a place");
+
+pub fn place_of(mind: &CursorMind, at: usize) -> Option<usize> {
+    let parent = (at != 0).then(|| mind.tree.node(at).parent).filter(|&p| p != 0 && Some(p) != open_question(mind) && !mind.tree.node(p).name.starts_with(BRACE_OPEN_TEXT));
+    if let Some(parent) = parent {
+        let bare_named = own_child(mind, parent, &step_item(FLAG_DEFINITE)).is_none() && own_child(mind, parent, &step_item(FLAG_INDEFINITE)).is_none();
+        if person(mind, parent) || speaker(mind, parent) || (owner_of(mind, at) == Some(parent) && bare_named && mind.tree.node(parent).parent != 0) {
+            return place_of(mind, parent);
+        }
+    }
+    if let Some(gone) = went_to(mind, at) {
+        return Some(gone);
+    }
+    parent.filter(|&p| owner_of(mind, at) != Some(p))
 }
 because!(place_of, WordReading, "where a thing stands: the thing it stands inside, unless that is its owner, who has it rather than being \
      its place, or a person, a speaker or an owner told by a bare name that stands somewhere, who carries it where they stand, daniel and \
@@ -688,10 +724,24 @@ because!(counted_within, WordReading, "how many of a kind a thing holds: the cou
      it the count of a group not of that name times how many each one of the group holds, so a shop of five shelves with four boxes each \
      holds twenty boxes");
 
+pub(super) fn came_to(mind: &CursorMind, at: usize) -> Vec<usize> {
+    let named = |n: usize| crate::cursor::bare_name(&mind.tree.node(n).name);
+    (mind.tree.state..mind.tree.len())
+        .filter(|&n| !mind.tree.node(n).gone && went_to(mind, n).is_some_and(|place| place == at || named(place) == named(at)))
+        .collect()
+}
+because!(came_to, WordReading, "the things that went to a place: those whose newest relation of moving carries it, so who is in the park is answered from what was done and not from what stands inside the park");
+
 pub(super) fn held_or_owned(mind: &CursorMind, at: usize) -> Vec<usize> {
-    let mut things: Vec<usize> = present_children(mind, at).into_iter().filter(|&c| !mind.tree.node(c).name.starts_with(BRACE_OPEN_TEXT) && !trace(mind, c) && count_of(mind, c) > 0 && !to_come(mind, c)).collect();
+    let here = |c: usize| went_to(mind, c).is_none_or(|place| place == at || crate::cursor::bare_name(&mind.tree.node(place).name) == crate::cursor::bare_name(&mind.tree.node(at).name));
+    let mut things: Vec<usize> = present_children(mind, at).into_iter().filter(|&c| !mind.tree.node(c).name.starts_with(BRACE_OPEN_TEXT) && !trace(mind, c) && count_of(mind, c) > 0 && !to_come(mind, c) && here(c)).collect();
     let owned = (mind.tree.state..mind.tree.len()).filter(|&n| !mind.tree.node(n).gone && !things.contains(&n) && !things.iter().any(|&t| mind.tree.node(t).link == Some(n)) && owner_of(mind, n) == Some(at) && count_of(mind, n) > 0);
     things.extend(owned.collect::<Vec<_>>());
+    for one in came_to(mind, at) {
+        if !things.contains(&one) && !things.iter().any(|&t| mind.tree.node(t).link == Some(one)) {
+            things.push(one);
+        }
+    }
     things
 }
 because!(held_or_owned, WordReading, "the things a thing holds, standing inside it, and the things it owns that stand elsewhere, so what \

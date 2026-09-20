@@ -151,6 +151,23 @@ because!(CURIOUS_WORDS, WordGame, "the words that ask the network what it wants 
 const SELF_HOLDING: [&str; 3] = ["hold", "have", "carry"];
 because!(SELF_HOLDING, WordGame, "the verbs of having whose going form at the head of a sentence with no subject tells what the speaker has, holding five cards");
 
+fn going_open(mind: &CursorMind, at: usize) -> bool {
+    let named = |n: usize| crate::cursor::bare_name(&mind.tree.node(n).name);
+    at != 0 && mind.tree.node(at).name.starts_with(BRACE_OPEN_TEXT) && (named(at) == super::mind::GOING_RELATION || super::mind::MOVING.contains(&named(at).as_str()) && named(at) != super::mind::FITTING)
+}
+because!(going_open, WordGame, "whether the cursor stands on a going that has taken no place yet, where the word from names where the thing came and not where it went");
+
+fn going_moves(mind: &CursorMind, w: &str) -> Vec<WordMove> {
+    if verb_base(mind, w).is_some_and(|base| base == super::mind::FITTING) {
+        return vec![WordMove::Grab];
+    }
+    if past_form(mind, w) || w.ends_with(super::mind::PAST_END) {
+        return vec![WordMove::AddRelationPast];
+    }
+    vec![WordMove::AddRelation]
+}
+because!(going_moves, WordGame, "what a verb of moving has the reading do: the thing is taken, so the place after to can hold it, and a deed told in the past is written as a relation of its own, dated, so what was done and when it was done stay on the tree");
+
 fn going_bases(word: &str) -> Vec<String> {
     let Some(stem) = word.strip_suffix(super::mind::GOING_END) else { return Vec::new() };
     let mut bases = vec![stem.to_string(), format!("{stem}e")];
@@ -305,7 +322,8 @@ fn taught_word(mind: &CursorMind, w: &str) -> Vec<WordMove> {
     if done_here && w == super::mind::COMPANION {
         return vec![WordMove::AddRelation];
     }
-    if empty_verb && w == super::mind::INFINITIVE {
+    let going_here = { let named = crate::cursor::bare_name(&mind.tree.node(at).name); mind.tree.node(at).name.starts_with(BRACE_OPEN_TEXT) && (named == super::mind::GOING_RELATION || super::mind::MOVING.contains(&named.as_str()) && named != super::mind::FITTING) };
+    if empty_verb && w == super::mind::INFINITIVE && !going_here {
         return vec![WordMove::Activity];
     }
     let done_object = plain && held.is_none() && !punctuation(w) && (noun_word(mind, w) || super::mind::OBJECT_PRONOUNS.iter().any(|(said, _)| *said == w)) && !COPULA.contains(&w) && !place_word(w) && verb_base(mind, w).is_none()
@@ -463,7 +481,7 @@ fn taught_word(mind: &CursorMind, w: &str) -> Vec<WordMove> {
     if w == super::mind::JOINER && plain {
         return vec![WordMove::Join];
     }
-    if w == super::mind::SOURCE && held.is_some() {
+    if w == super::mind::SOURCE && (held.is_some() || going_open(mind, at)) {
         return vec![WordMove::FlagFrom];
     }
     if THING_PRONOUNS.contains(&w) && held.is_some() && flag_of(mind, super::mind::FLAG_PLACE).is_some() {
@@ -596,7 +614,7 @@ fn taught_word(mind: &CursorMind, w: &str) -> Vec<WordMove> {
     if let Some(base) = verb_base(mind, w) {
         let group = flag_of(mind, super::mind::FLAG_GROUP).is_some() && flag_of(mind, super::mind::FLAG_PLACE).is_none();
         if group && plain && MOVING.contains(&base.as_str()) {
-            return vec![WordMove::Grab];
+            return going_moves(mind, w);
         }
         if group && plain && super::mind::POSING.contains(&base.as_str()) {
             return vec![WordMove::PointNothing];
@@ -625,7 +643,10 @@ fn taught_word(mind: &CursorMind, w: &str) -> Vec<WordMove> {
         if super::mind::LOSING.contains(&base.as_str()) {
             return vec![WordMove::Release];
         }
-        return vec![if MOVING.contains(&base.as_str()) { WordMove::Grab } else if CONTAINING.contains(&base.as_str()) { WordMove::Contain } else if GIVING.contains(&base.as_str()) { WordMove::Hand } else if super::mind::TAKING.contains(&base.as_str()) { WordMove::Take } else if super::mind::DROPPING.contains(&base.as_str()) { WordMove::Release } else { WordMove::AddRelation }];
+        if MOVING.contains(&base.as_str()) {
+            return going_moves(mind, w);
+        }
+        return vec![if false { WordMove::Grab } else if CONTAINING.contains(&base.as_str()) { WordMove::Contain } else if GIVING.contains(&base.as_str()) { WordMove::Hand } else if super::mind::TAKING.contains(&base.as_str()) { WordMove::Take } else if super::mind::DROPPING.contains(&base.as_str()) { WordMove::Release } else { WordMove::AddRelation }];
     }
     let seeded_noun = mind.tree.named(w).any(|n| n != 0 && !mind.tree.node(n).gone && !mind.tree.story(n) && mind.tree.node(n).parent == 0) && !super::mind::comparison_known(mind, w);
     if on_is && !seeded_noun && w.ends_with(super::mind::COMPARISON_END) && (super::mind::comparison_known(mind, w) || (flag_of(mind, super::mind::FLAG_DEFINITE).is_none() && flag_of(mind, super::mind::FLAG_INDEFINITE).is_none())) && !quality_word(mind, w) && verb_base(mind, w).is_none() && !super::mind::role_word(mind, w) && !super::physics::owns_relation(mind, w, IS_FORM.trim().trim_matches(|c| c == crate::quiz::BRACE_OPEN || c == crate::quiz::BRACE_CLOSE)) {

@@ -184,6 +184,11 @@ pub fn world_form(mind: &CursorMind, statement: &str) -> Vec<String> {
         let b_named = shape_name(b_said);
         let past = b_named.tags.iter().find(|(k, _)| k == TIME_TAG_NAME).map(|(_, v)| format!("{TAG_MARK}{TIME_TAG_NAME}{TAG_VALUE_OPEN}{v}{TAG_VALUE_CLOSE}"));
         let b = &untimed(b_said);
+        if path[i + 1].tags.iter().any(|(k, _)| k == TIME_TAG_NAME) || bare_relation == super::mind::GOING_RELATION {
+            out.push(format!("{prefix}{a}{PATH_MARK}{}{PATH_MARK}{b_said}", names[i + 1]));
+            i += PATH_STRIDE;
+            continue;
+        }
         let a_past = format!("{a}{}", past.clone().unwrap_or_default());
         let moving = super::mind::MOVING.contains(&bare_relation.as_str());
         let written = if moving && past.is_some() {

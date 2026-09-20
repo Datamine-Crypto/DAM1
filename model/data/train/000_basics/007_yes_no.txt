@@ -6,7 +6,7 @@ tom has a car. the car is red. => tom -> {has} -> car -> {is} -> red | does tom 
 the cat is in the box. => cat -> {in} -> box | is the cat in the box? = yes; is the cat in the bag? = no; what is in the bag? = {nothing}
 ann has a dog. => ann -> {has} -> dog | does ann have a dog? = yes; does ann have a cat? = no; what does ann have? = dog
 the ball is in the box. => ball -> {in} -> box | where is the ball? = box
-then: the ball moves to the bag. => ball -> {in} -> bag; not ball -> {in} -> box | is the ball in the box? = no; what is in the box? = {nothing}; is the ball in the bag? = yes
+then: the ball moves to the bag. => ball -> {go}:method(move) -> bag | is the ball in the box? = no; what is in the box? = {nothing}; is the ball in the bag? = yes
 sam has a hat. the hat is green. => sam -> {has} -> hat -> {is} -> green | is the hat green? = yes; is the hat red? = no; does sam have a hat? = yes
 ben has a pen. => ben -> {has} -> pen | does ben have the pen? = yes
 the fish is in the tank. => fish -> {in} -> tank | is the fish in the tank? = yes; is the fish in the pond? = no

@@ -157,8 +157,9 @@ const ChatRow = memo(function ChatRow({ chat, active, onOpen, onMenu }: {
 export const Sidebar = memo(function Sidebar({ onNavigate }: { onNavigate: () => void }) {
   const chats = useChatStore(useShallow((state) => Object.values(state.chats)));
   const route = useChatStore((state) => state.route);
+  const game = useChatStore((state) => state.game);
   const actions = useChatStore(useShallow((state) => ({
-    newChat: state.newChat, openChat: state.openChat, openMind: state.openMind, openPrivacy: state.openPrivacy,
+    newChat: state.newChat, openMind: state.openMind, openPrivacy: state.openPrivacy,
     deleteChat: state.deleteChat, togglePin: state.togglePin, renameChat: state.renameChat,
   })));
 
@@ -172,14 +173,14 @@ export const Sidebar = memo(function Sidebar({ onNavigate }: { onNavigate: () =>
   const closeRename = useCallback(() => setRenaming(null), []);
 
   const onNew = useCallback(() => { actions.newChat(); onNavigate(); }, [actions, onNavigate]);
-  const onOpenChat = useCallback((id: string) => { actions.openChat(id); onNavigate(); }, [actions, onNavigate]);
+  const onOpenChat = useCallback((id: string) => { actions.openMind(id); onNavigate(); }, [actions, onNavigate]);
   const onOpenPrivacy = useCallback(() => { actions.openPrivacy(); onNavigate(); }, [actions, onNavigate]);
 
   const recentChats = useMemo(() => byRecent(chats), [chats]);
   const pinnedChats = useMemo(() => recentChats.filter((chat) => chat.pinned), [recentChats]);
   const otherChats = useMemo(() => recentChats.filter((chat) => !chat.pinned), [recentChats]);
 
-  const activeChatId = route.kind === 'chat' ? route.id : null;
+  const activeChatId = route.kind === 'chat' ? route.id : route.kind === 'mind' ? game : null;
 
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', height: '100%', minHeight: 0 }}>

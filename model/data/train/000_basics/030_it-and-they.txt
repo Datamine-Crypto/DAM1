@@ -10,6 +10,6 @@ ann has a cat. ann is happy. it is black. => ann -> {has} -> cat; ann -> {happy}
 sam has a car. jane is tall. it is red. => sam -> {has} -> car; jane -> {tall}; sam -> {has} -> car -> {red} | what color is the car? = red; how big is jane? = tall
 the cup is on the table. the cup is small. it is green. => cup -> {on} -> table; cup -> {small}; cup -> {green} | what color is the cup? = green
 tom and jane have a boat. they are happy. => tom -> {has} -> boat; jane -> {has} -> boat; jane -> {happy}; tom -> {happy} | how does tom feel? = happy; how does jane feel? = happy
-sam and kim went to the park. they are tired. => sam -> {in} -> park; kim -> {in} -> park; kim -> {tired}; sam -> {tired}; kim -> {go} -> park -> {time} -> {past}; sam -> {go} -> park -> {time} -> {past} | how does kim feel? = tired
+sam and kim went to the park. they are tired. => kim -> {tired}; sam -> {tired}; kim -> {go}:time(past) -> park; sam -> {go}:time(past) -> park | how does kim feel? = tired
 test: max has a bike. max is short. it is blue. => max -> {has} -> bike; max -> {short}; max -> {has} -> bike -> {blue} | what color is the bike? = blue
 test: lily and joe have a kite. they are glad. => lily -> {has} -> kite; joe -> {has} -> kite; joe -> {glad}; lily -> {glad} | how does joe feel? = glad

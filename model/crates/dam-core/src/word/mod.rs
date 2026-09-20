@@ -15,7 +15,7 @@ mod view;
 mod walks;
 mod written;
 
-pub use mind::{function_word, asked_sentence, closed_sentence, heard_word, node_kind, sentence_slots, word_at, WordEnglish};
+pub use mind::{function_word, asked_sentence, closed_sentence, heard_word, mark_word, node_kind, place_word, sentence_slots, word_at, WordEnglish, ARTICLE_FLAGS, ASKING, COPULA};
 pub use moves::{RecordClasses, WordMove, WordStep, ALL as WORD_MOVES, RECORD_MARK};
 pub use physics::{word_stepped, WordWorld, OWNER_TAG};
 pub use rows::{read_by_words, word_rows, WordRead, WordTrails, POINTED_MARK};

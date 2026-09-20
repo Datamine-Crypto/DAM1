@@ -30,7 +30,9 @@ pub(super) fn carried(mind: &mut CursorMind, step: &WordStep, word: &str, at: us
         }
         WordMove::Accompany => {
             if plain {
-                mind.held = vec![at];
+                let holder = mind.tree.node(at).parent;
+                let goer = (holder != 0 && super::writing::going_relation(mind, holder)).then(|| mind.tree.node(holder).parent).filter(|&one| one != 0);
+                mind.held = vec![goer.unwrap_or(at)];
                 mind.flags.push((super::mind::FLAG_WITH.to_string(), TRUE_TAG.to_string()));
             }
             landed_on(mind, step.act, plain.then_some(at));
@@ -149,7 +151,9 @@ pub(super) fn carried(mind: &mut CursorMind, step: &WordStep, word: &str, at: us
                     mind.held.push(at);
                 }
             } else if !(step.act == WordMove::Give && flag_of(mind, super::mind::FLAG_GROUP).is_some() && mind.held.contains(&at)) {
-                mind.held = vec![at];
+                let holder = mind.tree.node(at).parent;
+                let goer = (step.act == WordMove::Give && holder != 0 && super::writing::going_relation(mind, holder)).then(|| mind.tree.node(holder).parent).filter(|&one| one != 0);
+                mind.held = vec![goer.unwrap_or(at)];
             }
             if step.act == WordMove::Give {
                 let said = heard_text(mind);
@@ -343,10 +347,22 @@ pub(super) fn carried(mind: &mut CursorMind, step: &WordStep, word: &str, at: us
                 let named = |c: usize| mind.tree.node(c).link.is_none() && !mind.tree.node(c).name.starts_with(BRACE_OPEN_TEXT) && (person(mind, c) || (own_child(mind, c, &step_item(FLAG_DEFINITE)).is_none() && own_child(mind, c, &step_item(FLAG_INDEFINITE)).is_none() && quantity_tag_of(mind, c).is_empty()));
                 let placed_name = mind.first_mark.filter(|&t| t < mind.tree.len() && !mind.tree.node(t).gone && mind.tree.node(t).parent != 0 && !mind.tree.node(mind.tree.node(t).parent).name.starts_with(BRACE_OPEN_TEXT) && named(t) && number_of(&mind.tree.node(t).name).is_none());
                 let told_person = |n: &usize| !mind.tree.node(*n).gone && mind.tree.node(*n).link.is_none() && person(mind, *n) && open_question(mind).is_none_or(|q| !inside(mind, *n, q));
-                let together = |n: &usize| present_children(mind, mind.tree.node(*n).parent).into_iter().filter(|&c| named(c)).count() > 1;
+                let fellows = |p: usize| -> Vec<usize> {
+                    let holder = mind.tree.node(p).parent;
+                    let siblings: Vec<usize> = if holder == 0 { Vec::new() } else { present_children(mind, holder).into_iter().filter(|&c| named(c)).collect() };
+                    if siblings.len() > 1 {
+                        return siblings;
+                    }
+                    let place_name = |n: usize| super::lookup::went_to(mind, n).map(|place| crate::cursor::bare_name(&mind.tree.node(place).name));
+                    match place_name(p) {
+                        Some(place) => (mind.tree.state..mind.tree.len()).filter(|&m| !mind.tree.node(m).gone && named(m) && place_name(m).as_deref() == Some(place.as_str())).collect(),
+                        None => siblings,
+                    }
+                };
+                let together = |n: &usize| fellows(*n).len() > 1;
                 let newest = (mind.tree.state..mind.tree.len()).rev().filter(told_person).find(together).or_else(|| (mind.tree.state..mind.tree.len()).rev().find(told_person)).or(placed_name);
                 let topic_fits = mind.first_mark.is_none_or(|t| t < mind.tree.len() && (person(mind, t) || Some(t) == placed_name || present_children(mind, t).into_iter().any(|c| person(mind, c))));
-                newest.filter(|_| topic_fits).map(|p| present_children(mind, mind.tree.node(p).parent).into_iter().filter(|&c| named(c)).collect()).unwrap_or_default()
+                newest.filter(|_| topic_fits).map(fellows).unwrap_or_default()
             } else {
                 Vec::new()
             };
@@ -357,7 +373,7 @@ pub(super) fn carried(mind: &mut CursorMind, step: &WordStep, word: &str, at: us
                 landed_on(mind, step.act, owners.last().copied());
                 return true;
             }
-            if people.len() > 1 && people.iter().all(|&p| mind.tree.node(p).parent != 0) {
+            if people.len() > 1 && people.iter().all(|&p| mind.tree.node(p).parent != 0 || super::lookup::went_to(mind, p).is_some()) {
                 mind.held = people.clone();
                 mind.flags.push((super::mind::FLAG_GROUP.to_string(), TRUE_TAG.to_string()));
                 landed_on(mind, step.act, people.last().copied());
@@ -381,6 +397,18 @@ fn dropped(mind: &mut CursorMind, step: &WordStep, word: &str, at: usize, plain:
     let stands = super::mind::THING_PRONOUNS.contains(&word.as_str()) || super::mind::PERSON_PRONOUNS.contains(&word.as_str()) || super::mind::OBJECT_PRONOUNS.iter().any(|(p, _)| *p == word) || super::mind::SELF_WORDS.contains(&word.as_str()) || super::mind::YOU_WORDS.contains(&word.as_str());
     let named = plain && { let name = &*mind.tree.node(at).name; *name == *word || *name == *singular(&word) || mark_word(&word) || flag_of(mind, FLAG_HAND) == Some(TRUE_TAG) || stands };
     let Some(held) = held.filter(|_| named) else { landed_on(mind, step.act, None); return; };
+    if flag_of(mind, super::mind::FLAG_WITH).is_some() && super::lookup::went_to(mind, held).is_some() {
+        if at != held && !inside(mind, at, held) {
+            mind.tree.moved(at, None);
+            mind.tree.moved(at, Some(held));
+        }
+        super::writing::went_along(mind, held, at);
+        mind.held.clear();
+        mind.flags.clear();
+        landed_on(mind, step.act, Some(held));
+        return;
+    }
+
     if flag_of(mind, FLAG_QUANTITY).is_some_and(|q| number_of(q) == Some(f32::default())) && flag_of(mind, super::mind::FLAG_PLACE).is_some() && held != at {
         let mention = mind.tree.linked(at, held, false);
         added_under(mind, mention, &quantity_tag_named(f32::default()), false);
@@ -454,7 +482,7 @@ fn dropped(mind: &mut CursorMind, step: &WordStep, word: &str, at: usize, plain:
     }
     let taking = flag_of(mind, super::mind::FLAG_TAKE).is_some();
     let releasing = flag_of(mind, super::mind::FLAG_RELEASE).is_some();
-    let (moved, into) = if releasing { (at, mind.tree.node(held).parent) } else if giving || taking || flag_of(mind, FLAG_CONTAIN).is_some() { (at, held) } else { (held, at) };
+    let (moved, into) = if releasing { (at, super::lookup::place_of(mind, held).unwrap_or_else(|| mind.tree.node(held).parent)) } else if giving || taking || flag_of(mind, FLAG_CONTAIN).is_some() { (at, held) } else { (held, at) };
     if moved == into || inside(mind, into, moved) {
         landed_on(mind, step.act, None);
         return;

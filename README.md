@@ -32,7 +32,7 @@ which DAM1 is not; they run in float16 on an NVIDIA RTX 3080 Ti, DAM1 on the pro
 
 | Model | Parameters | Weights | Memory | Answered | Exact | One answer |
 |---|---:|---:|---:|---:|---:|---:|
-| **DAM1** | **5,593,620** | **22 MB** | **43 MB** | **99.6%** | **99.6%** | **3 ms** |
+| **DAM1** | **5,596,839** | **22 MB** | **43 MB** | **100.0%** | **100.0%** | **3 ms** |
 | Qwen2.5-0.5B-Instruct | 494,032,768 | 988 MB | 1.01 GB | 63.8% | 39.6% | 109 ms |
 | Qwen3-0.6B | 596,049,920 | 1.50 GB | 1.22 GB | 52.7% | 41.4% | 80 ms |
 | LFM2-350M | 354,483,968 | 709 MB | 727 MB | 52.2% | 44.1% | 53 ms |

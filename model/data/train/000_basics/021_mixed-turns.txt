@@ -22,7 +22,7 @@ then: sam gave the dog to kim. => kim -> {has} -> dog; sam -> {has} -> dog -> {t
 turn: what is the opposite of big? => | small
 then: the cat is in the garden. => cat -> {in} -> garden | where is the cat? = garden; what is in the garden? = cat
 then: turn: where is egypt? => | africa
-then: the cat went to the house. => cat -> {in} -> house; cat -> {in} -> garden -> {time} -> {past}; cat -> {go} -> house -> {time} -> {past} | where is the cat? = house; where was the cat? = garden
+then: the cat went to the house. => cat -> {in} -> garden; cat -> {go}:time(past) -> house | where is the cat? = house; where was the cat? = garden
 test: turn: where is spain? => | europe
 test: then: lily has a pen. => lily -> {has} -> pen | who has the pen? = lily; what does lily have? = pen
 test: then: turn: what is the capital of spain? => | madrid

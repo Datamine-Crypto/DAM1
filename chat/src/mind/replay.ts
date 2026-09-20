@@ -79,6 +79,9 @@ export const pictures = { moved: '🚶',
 export interface Place {
   name: string;
   inside: number | null;
+  // Whether the tree holds this thing at its top, where a path opens at it: the map draws such a thing
+  // at the top of its group as well as inside whatever holds it, and the reader walks to the top one.
+  rooted?: boolean;
   region: Region;
   // Small notes on the tile: how many, when, or a flag the story set on it.
   tags: string[];
@@ -389,15 +392,23 @@ function walked(turns: GameTurn[], ends: Map<string, Region>): Frame[] {
     }
     const freed = new Set<string>();
     for (const path of turn.wrote) {
-      const first = partsOf(path).find((part) => !part.startsWith('{'));
-      const only = first?.match(countedName);
+      const first = partsOf(path)[0];
+      if (first === undefined) continue;
+      // A path opens at a thing or at the group the story made, which is a thing of its own.
+      if (first.startsWith('{')) {
+        if (first.replace(/[{}]/g, '') === groupWord) freed.add(singular(groupWord));
+        continue;
+      }
+      const only = first.match(countedName);
       const name = only ? only[1] : first;
-      if (name && plainName.test(name)) freed.add(singular(name));
+      if (plainName.test(name)) freed.add(singular(name));
     }
     scene = { ...scene, places: scene.places.map((place) => {
-      if (place.inside === null || !freed.has(singular(place.name))) return place;
-      const holder = scene.places[place.inside];
-      return holds.has(`${singular(place.name)}>${singular(holder.name)}`) ? place : { ...place, inside: null };
+      if (!freed.has(singular(place.name))) return place;
+      const top = { ...place, rooted: true };
+      if (top.inside === null) return top;
+      const holder = scene.places[top.inside];
+      return holds.has(`${singular(place.name)}>${singular(holder.name)}`) ? top : { ...top, inside: null };
     }) };
     for (const path of turn.wrote) {
       const parts = partsOf(path);
@@ -493,6 +504,9 @@ function walked(turns: GameTurn[], ends: Map<string, Region>): Frame[] {
         else scene = { ...scene, places: scene.places.map((place, at) => (at === old ? { ...place, past: true } : place)) };
       } else if (from !== null && said.length > 0) tag(from, said[0] === 'time' ? `${pictures.time} when: ${said.slice(1).join(' ')}` : said.join(' '));
     }
+    // A thing this turn's paths open at is one the tree holds at its top, marked once the paths have made
+    // their tiles, so a thing the turn itself named is marked too.
+    scene = { ...scene, places: scene.places.map((place) => (freed.has(singular(place.name)) && place.rooted !== true ? { ...place, rooted: true } : place)) };
     // A past is with a line of this turn is that line, sophia was an angel; with no line it is the thing as it
     // stood then, alice was in wonderland, and the thing is drawn faded.
     for (const old of pastIs) {

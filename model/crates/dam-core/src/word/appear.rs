@@ -8,6 +8,28 @@ use super::physics::{WordWorld, TRUE_TAG, OWNER_TAG, CAUSE_TAG, NEAR_DAYS, GENDE
 use super::lookup::{present_children, tag_value, story_node, story_nodes, unseeded, holds, activity_word, has_relation, told_thing, own_child, kept_flag, newest_told, newest_for, inside, count_of, who_has, owner_of, held_or_owned, named_result};
 use super::written::{thing_made, added_under, flagged, dated};
 
+fn going_done(mind: &mut CursorMind) {
+    let goings: Vec<usize> = (mind.sentence_from..mind.tree.len())
+        .filter(|&n| !mind.tree.node(n).gone && super::writing::going_relation(mind, n))
+        .filter(|&n| present_children(mind, n).into_iter().all(|c| mind.tree.node(c).name.starts_with(BRACE_OPEN_TEXT)))
+        .collect();
+    for going in goings {
+        let named = crate::cursor::bare_name(&mind.tree.node(going).name);
+        let way = super::mind::verb_present(mind, &named).unwrap_or(named);
+        let doer = mind.tree.node(going).parent;
+        let past = own_child(mind, going, crate::cursor::TIME_RELATION).is_some();
+        mind.tree.moved(going, None);
+        if doer != 0 {
+            let doing = added_under(mind, doer, &step_item(super::mind::ACTIVITY), false);
+            let done = added_under(mind, doing, &way, false);
+            if past {
+                super::written::dated(mind, done);
+            }
+        }
+    }
+}
+because!(going_done, WordWorld, "a going that took no place by the end of its sentence written as what the thing did instead, the bird that flew away, since a verb of moving with no place after to says a deed and not a journey");
+
 fn kin_alone(mind: &mut CursorMind, word: &str) -> Option<usize> {
     let at = mind.at;
     let named = crate::cursor::bare_name(&mind.tree.node(at).name);
@@ -119,6 +141,16 @@ fn joined_noun(mind: &mut CursorMind, word: &str) -> Option<Option<usize>> {
         return None;
     }
     let made = (mind.sentence_from..mind.tree.len()).rev().find(|&n| !mind.tree.node(n).gone && *mind.tree.node(n).name == *first && !tag_value(mind, n) && mind.tree.node(n).link.is_none());
+    let gone_to = (mind.sentence_from..mind.tree.len()).rev().find(|&n| !mind.tree.node(n).gone && *mind.tree.node(n).name == *first && !tag_value(mind, n) && super::writing::going_relation(mind, mind.tree.node(n).parent));
+    if let Some(named) = made.is_none().then_some(gone_to).flatten() {
+        let going = mind.tree.node(named).parent;
+        mind.tree.moved(named, None);
+        let whole = mind.tree.added(going, word);
+        flagged(mind, whole);
+        let of = added_under(mind, whole, &step_item(super::mind::TOWARD), false);
+        added_under(mind, of, &first, true);
+        return Some(Some(whole));
+    }
     let Some(made) = made else {
         let placed = story_nodes(mind, &first).into_iter().flat_map(|old| present_children(mind, old)).find(|&m| mind.tree.node(m).link.is_none() && !mind.tree.node(m).name.starts_with(BRACE_OPEN_TEXT) && mind.before.iter().any(|said| **said == *mind.tree.node(m).name))?;
         let whole = thing_made(mind, word);
@@ -511,6 +543,9 @@ pub fn appeared(mind: &mut CursorMind, word: &str) -> Option<usize> {
             let at = mind.at;
             added_under(mind, at, &count, true);
         }
+    }
+    if mark_word(word) {
+        going_done(mind);
     }
     if mark_word(word) && open_question(mind).is_none() && held.is_none() {
         mind.at = 0;

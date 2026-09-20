@@ -5,6 +5,9 @@ export type Register = (nth: number, element: HTMLElement | null) => void;
 // How far a person dragged each tile from where the map put it, by the tile's name.
 export type Moved = Record<string, { x: number; y: number }>;
 export type OnMove = (name: string, x: number, y: number) => void;
+// The key a copy of a tile is dragged by: a thing the tree holds at its top is drawn at the top of its
+// group and inside what holds it, and each of the two is moved on its own.
+export const copyKey = (name: string): string => `${name} (copy)`;
 export const groupKey = (region: Region): string => `group:${region}`;
 // The bends a person put into a relation's line, in order from the tile it leaves, kept with the layout under one key a bend.
 const bendKey = (line: string, nth: number): string => `bend:${line}:${nth}`;

@@ -26,6 +26,6 @@ the fox trails the hare. the hound trails the fox. => fox -> {trail} -> hare; ho
 the sun heats the sea. the sea heats the air. => sun -> {heat} -> sea; sea -> {heat} -> air | what heats the sea? = sun; what does the sea heat? = air; what heats the air? = sea
 the rain fills the river. the river fills the lake. => rain -> {fill} -> river; river -> {fill} -> lake | what fills the river? = rain; what does the river fill? = lake; what fills the lake? = river
 # Verbs of moving that are also done to a thing one steers: with no place word after them the thing is what is steered.
-lena drives a bus. omar flies planes. => | who drives a bus? = lena; what does lena drive? = bus; who flies planes? = omar; what does omar fly? = planes
-a pilot flies a jet. a farmer drives a tractor. => | who flies a jet? = pilot; what does a farmer drive? = tractor
-test: nora drives a taxi. ivan flies a glider. => | who drives a taxi? = nora; what does ivan fly? = glider
+lena drives a bus. omar flies planes. =>  | who drives a bus? = lena; what does lena drive? = bus; who flies planes? = omar; what does omar fly? = planes
+a pilot flies a jet. a farmer drives a tractor. =>  | who flies a jet? = pilot; what does a farmer drive? = tractor
+test: nora drives a taxi. ivan flies a glider. =>  | who drives a taxi? = nora; what does ivan fly? = glider

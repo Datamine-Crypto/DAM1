@@ -27,7 +27,7 @@ are fixed operations of the engine; the network only chooses between them.
 What it knows is in the tree, where it can be read and changed, and not in the weights. The
 network learns only how to shape and read that memory. That is why it is small: it is not a
 transformer, it was not trained on a large corpus, and it does not write free text. These files
-hold 5,593,620 numbers, three networks of 1,864,540 numbers each that read by vote, and the
+hold 5,596,839 numbers, three networks of 1,865,613 numbers each that read by vote, and the
 permanent state the project's seeds make. It runs on a processor, and in a browser through
 WebAssembly, where the Datamine Network chat runs it with nothing sent to a server.
 
@@ -40,7 +40,7 @@ which DAM1 is not; they run in float16 on an NVIDIA RTX 3080 Ti, DAM1 on the pro
 
 | Model | Parameters | Weights | Memory | Answered | Exact | One answer |
 |---|---:|---:|---:|---:|---:|---:|
-| **DAM1** | **5,593,620** | **22 MB** | **43 MB** | **99.6%** | **99.6%** | **3 ms** |
+| **DAM1** | **5,596,839** | **22 MB** | **43 MB** | **100.0%** | **100.0%** | **3 ms** |
 | Qwen2.5-0.5B-Instruct | 494,032,768 | 988 MB | 1.01 GB | 63.8% | 39.6% | 109 ms |
 | Qwen3-0.6B | 596,049,920 | 1.50 GB | 1.22 GB | 52.7% | 41.4% | 80 ms |
 | LFM2-350M | 354,483,968 | 709 MB | 727 MB | 52.2% | 44.1% | 53 ms |
@@ -166,7 +166,7 @@ it is a Hugging Face dataset, so the card lists no `datasets`.
 - `model/data/train`: 274 lesson files in 16 folders, from basics and Grade 1 to Grade 12 and
   university, with the world lessons and the debug cases agreed while the design was made. Each
   line is text with the shape its tree should take and the answers expected. A line is either
-  learned or held out of training: 2,565 learned lines and 942 held-out lines. The 12 debug
+  learned or held out of training: 2,575 learned lines and 942 held-out lines. The 12 debug
   cases are graded and never trained on.
 - `model/data/facts` and `model/data/seeds`: plain fact sentences and the 60 seeds files built
   from them, told into the tree before anything is read. They are not used to train the network.
@@ -297,23 +297,23 @@ expected answer.
 |---|---:|---:|
 | Basics | 446 of 446 (100.0%) | 142 of 142 (100.0%) |
 | Grade 1 | 73 of 73 (100.0%) | 24 of 24 (100.0%) |
-| Grade 2 | 673 of 673 (100.0%) | 237 of 239 (99.2%) |
+| Grade 2 | 676 of 676 (100.0%) | 239 of 239 (100.0%) |
 | Grade 3 | 246 of 246 (100.0%) | 97 of 97 (100.0%) |
-| Grade 4 | 263 of 263 (100.0%) | 87 of 88 (98.9%) |
-| Grade 5 | 171 of 171 (100.0%) | 72 of 72 (100.0%) |
-| Grade 6 | 153 of 153 (100.0%) | 58 of 58 (100.0%) |
+| Grade 4 | 265 of 265 (100.0%) | 88 of 88 (100.0%) |
+| Grade 5 | 172 of 172 (100.0%) | 72 of 72 (100.0%) |
+| Grade 6 | 156 of 156 (100.0%) | 58 of 58 (100.0%) |
 | Grade 7 | 83 of 83 (100.0%) | 35 of 35 (100.0%) |
 | Grade 8 | 79 of 79 (100.0%) | 33 of 33 (100.0%) |
-| Grade 9 | 149 of 149 (100.0%) | 66 of 66 (100.0%) |
+| Grade 9 | 149 of 149 (100.0%) | 65 of 66 (98.5%) |
 | Grade 10 | 26 of 26 (100.0%) | 9 of 9 (100.0%) |
 | Grade 11 | 82 of 82 (100.0%) | 23 of 23 (100.0%) |
-| Grade 12 | 38 of 38 (100.0%) | 11 of 11 (100.0%) |
+| Grade 12 | 39 of 39 (100.0%) | 11 of 11 (100.0%) |
 | University | 47 of 47 (100.0%) | 13 of 13 (100.0%) |
 | World and debug cases | 36 of 36 (100.0%) | 32 of 32 (100.0%) |
-| **All** | **2565 of 2565 (100.0%)** | **939 of 942 (99.7%)** |
+| **All** | **2575 of 2575 (100.0%)** | **941 of 942 (99.9%)** |
 
-It reads every learned line of the curriculum. The three held-out lines it misses are in the
-lessons on shapes and on verbs, where the line asks for a word the learned lines never state.
+It reads every learned line of the curriculum. The one held-out line it misses is in the lesson
+on the parts a kind of thing has, which asks a part of a thing that is not a creature.
 
 The held-out lines use the same sentence shapes and many of the same words as the learned lines.
 They measure new words and numbers in taught shapes. They are not an independent benchmark. No

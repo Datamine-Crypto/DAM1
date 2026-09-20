@@ -6,6 +6,7 @@ seed: 18-qualities
 the red ball is in the box. the blue ball is in the bag. => ball -> {in} -> box; ball -> {in} -> bag | where is the red ball? = box; where is the blue ball? = bag; what is in the bag? = ball; what is in the box? = ball
 the big dog is in the garden. the small dog is in the house. => dog -> {in} -> garden; dog -> {in} -> house | where is the big dog? = garden; where is the small dog? = house; what is in the house? = dog
 the green cup is on the table. the white cup is on the shelf. => cup -> {on} -> table; cup -> {on} -> shelf | where is the green cup? = table; where is the white cup? = shelf; what is on the shelf? = cup
+the wet towel is on the rack. the dry towel is in the basket. => towel -> {on} -> rack; towel -> {in} -> basket | where is the wet towel? = rack; where is the dry towel? = basket; what is in the basket? = towel
 tom has the black hat. ann has the yellow hat. => tom -> {has} -> hat; ann -> {has} -> hat | who has the black hat? = tom; who has the yellow hat? = ann; what does ann have? = hat
 turn: the old key is in the drawer the new key is in the bag where is the new key => key -> {in} -> drawer; key -> {in} -> bag | bag
 test: the pink kite is in the car. the brown kite is in the shed. => kite -> {in} -> car; kite -> {in} -> shed | where is the pink kite? = car; where is the brown kite? = shed; what is in the shed? = kite

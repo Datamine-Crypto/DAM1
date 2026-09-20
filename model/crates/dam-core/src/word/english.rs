@@ -644,6 +644,15 @@ pub const TIMES_OF_DAY: [&str; 5] = ["yesterday", "morning", "afternoon", "eveni
 because!(TIMES_OF_DAY, WordEnglish, "the words that open a sentence with when its move was made, in the order of the day, so this \
      afternoon mary went to the cinema was after this morning whatever order the text told them in");
 
+pub const GOING_RELATION: &str = "go";
+because!(GOING_RELATION, WordEnglish, "the name every verb of moving writes its deed under, so a thing that walked, flew or journeyed to a      place carries one relation of going and a question about where it is reads them all alike");
+
+pub const FITTING: &str = "fit";
+because!(FITTING, WordEnglish, "the verb of moving that says a thing is held by a place and not that it went there, the pen fits in the      box, so it puts the thing inside as a place word does and writes no going");
+
+pub const METHOD_RELATION: &str = "method";
+because!(METHOD_RELATION, WordEnglish, "the name a going writes the way it was made under, walked, flew or drove, so every going is one      relation and how a thing got to a place is still on the tree to be asked for");
+
 pub const FLAG_WHEN: &str = "when";
 because!(FLAG_WHEN, WordEnglish, "the flag that the move of the sentence was made at the time its value names, kept on the thing that \
      moved");

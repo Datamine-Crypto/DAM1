@@ -15,6 +15,7 @@ import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogTitle from '@mui/material/DialogTitle';
 import InputBase from '@mui/material/InputBase';
+import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import List from '@mui/material/List';
 import ListItemButton from '@mui/material/ListItemButton';
@@ -58,8 +59,8 @@ export const MindGame = memo(function MindGame({ footnote }: { footnote: React.R
   const [chatShown, setChatShown] = useState(false);
   const [historyShown, setHistoryShown] = useState(false);
   const [speedShown, setSpeedShown] = useState(false);
-  // The play-back is folded away until a person asks for it, so the map is clear.
-  const [barShown, setBarShown] = useState(false);
+  // On a screen with room the speeds drop from the chip itself; on a narrow one they open as a dialog.
+  const [speedAt, setSpeedAt] = useState<HTMLElement | null>(null);
   useEffect(() => {
     const onShow = (): void => setChatShown(true);
     window.addEventListener(showChatEvent, onShow);
@@ -108,10 +109,29 @@ export const MindGame = memo(function MindGame({ footnote }: { footnote: React.R
   // A phone has no room for large buttons under the map, so they are small there and medium on a screen.
   const phone = useMediaQuery(useTheme().breakpoints.down('sm'));
   const buttonSize = phone ? 'small' : 'medium';
+  // A narrow screen has no room beside the map, so what was said opens as a dialog there and stands
+  // in a panel of its own on a wide one, shown or hidden by the same button.
+  const narrow = useMediaQuery(useTheme().breakpoints.down('md'));
+  // The play-back stands open where there is room for it, and is folded away on a narrow screen,
+  // where it would cover the map, until a person asks for it.
+  const [barShown, setBarShown] = useState(!narrow);
+  // The play-back follows the screen: folded away on a narrow one, where it would cover the map, and
+  // open again on a screen with room for it, whatever was chosen on the other.
+  useEffect(() => { setBarShown(!narrow); }, [narrow]);
+  const saidKey = 'mind-said';
+  const [saidShown, setSaidShown] = useState(() => { try { return window.localStorage.getItem(saidKey) !== 'no'; } catch { return true; } });
+  const showSaid = useCallback(() => {
+    setSaidShown((was) => {
+      const next = !was;
+      try { window.localStorage.setItem(saidKey, next ? 'yes' : 'no'); } catch { /* A browser that keeps nothing still shows the panel. */ }
+      return next;
+    });
+  }, []);
   // On a phone one of the map, the overview, the stack and the analytics is shown at a time.
   const [phoneTab, setPhoneTab] = useState(0);
   const [speed, setSpeed] = useState(1);
-  const [instant, setInstant] = useState(() => { try { return window.localStorage.getItem(instantKey) === 'yes'; } catch { return false; } });
+  // A new turn shows its answer at once unless the person asked to watch it played back.
+  const [instant, setInstant] = useState(() => { try { return window.localStorage.getItem(instantKey) !== 'no'; } catch { return true; } });
   const pickSpeed = useCallback((one: number | null) => {
     setInstant(one === null);
     if (one !== null) setSpeed(one);
@@ -250,6 +270,23 @@ export const MindGame = memo(function MindGame({ footnote }: { footnote: React.R
   }, [frames]);
   const idle: Frame = { turn: 0, word: 0, scene: { places: [], at: null, carries: null, owns: false, born: null, points: null, links: [], trail: [], notes: [], lit: [], curious: [] }, stack: [{ text: 'cursor', kind: 'cursor' }], note: '', says: [], doing: null, answers: false, heardSoFar: 0, movedSoFar: 0, kept: 0 };
 
+  // What was said in the game, the turn being played marked, each turn a way back to it and a way to take it back.
+  const turnList = (
+    <Box ref={history} sx={{ overflowY: 'auto', p: 1, display: 'flex', flexDirection: 'column', gap: 0.5 }}>
+      {turns.map((one, nth) => (
+                <Box key={nth} data-now={frame?.turn === nth ? 'yes' : undefined} onClick={() => toTurnEnd(nth)} sx={{
+                  cursor: 'pointer', borderRadius: 1, px: 1, py: 0.5, borderLeft: `3px solid ${frame?.turn === nth ? palette.linkInk : 'transparent'}`,
+                  background: frame?.turn === nth ? 'rgba(0, 255, 255, 0.08)' : 'transparent', '&:hover': { background: palette.hover },
+                }}>
+                  <IconButton size="small" aria-label={words.undo} disabled={thinking || recalling} onClick={(event) => { event.stopPropagation(); setUndoing(one.id); }} sx={{ float: 'right', ml: 0.5, p: 0.25, color: 'text.secondary', opacity: 0.6, '&:hover': { opacity: 1, color: '#ff8a80' } }}><CloseIcon sx={{ fontSize: 16 }} /></IconButton>
+                  <Typography sx={{ fontSize: { xs: '0.9375rem', md: '1.0625rem' }, overflowWrap: 'anywhere', fontStyle: one.world ? 'italic' : 'normal', color: one.world ? 'text.secondary' : 'text.primary' }}>{one.asked}{one.world && <Box component="span" sx={{ float: 'right', ml: 1, fontStyle: 'normal' }}>{words.worldMark}</Box>}</Typography>
+                  <Typography sx={{ fontSize: '0.6875rem', color: 'text.secondary' }}>{ago(one.at, now)}</Typography>
+                  {one.said && <Typography sx={{ fontSize: { xs: '0.9375rem', md: '1.0625rem' }, fontWeight: 600, color: palette.linkInk, overflowWrap: 'anywhere' }}>{one.said}</Typography>}
+                </Box>
+              ))}
+    </Box>
+  );
+
   return (
     <YouContext.Provider value={shownYou}>
     <Box sx={{ flex: 1, minHeight: 0, display: 'grid', gridTemplateColumns: { xs: '1fr', md: 'minmax(0, 1fr) 320px' }, gridTemplateRows: 'minmax(0, 1fr)', gap: { xs: 0, md: 1.5 }, px: { xs: 0, md: 2 }, pt: { xs: 0, md: 1.5 }, pb: 0 }}>
@@ -269,6 +306,15 @@ export const MindGame = memo(function MindGame({ footnote }: { footnote: React.R
         <Box sx={{ position: 'relative', minWidth: 0, minHeight: 0, display: { xs: phoneTab === 0 ? 'grid' : 'none', md: 'grid' } }}>
           <BuildStamp />
           <World2D scene={(frame ?? idle).scene} says={frame ? frame.says : [recalling ? words.recalling : thinking ? words.reading : words.empty]} doing={frame?.doing ?? null} beat={at} layoutKey={game ?? 'new'} output={frame?.answers ? turns[frame.turn]?.said || (turns[frame.turn]?.asks ? words.noAnswer : null) : null} question={frame && turns[frame.turn]?.asks ? turns[frame.turn].asked : null} answers={frame?.answers ?? false} />
+          {saidShown && turns.length > 0 && (
+          <Box sx={{
+            display: { xs: 'none', md: 'flex' }, flexDirection: 'column', position: 'absolute', left: 10, bottom: barShown ? 70 : 10, zIndex: 3,
+            width: 300, maxWidth: 'calc(100% - 20px)', maxHeight: barShown ? 'calc(100% - 90px)' : 'calc(100% - 20px)',
+            borderRadius: 2, background: 'rgba(10, 14, 28, 0.85)', border: `1px solid ${palette.divider}`, overflow: 'hidden',
+          }}>
+            {turnList}
+          </Box>
+          )}
           {barShown && (
           <Box sx={{ position: 'absolute', left: 10, bottom: 10, zIndex: 3, display: 'flex', alignItems: 'center', maxWidth: 'calc(100% - 20px)', gap: { xs: 0.25, md: 0.5 }, px: 1, py: 0.25, borderRadius: 999, background: 'rgba(10, 14, 28, 0.85)', border: `1px solid ${palette.divider}` }}>
         <IconButton size={buttonSize} onClick={() => { if (frame) toTurn(Math.max(frame.turn - (frames[at - 1]?.turn === frame.turn ? 0 : 1), 0)); }} disabled={!frame} aria-label="start of the turn"><SkipPreviousIcon fontSize={buttonSize} /></IconButton>
@@ -278,13 +324,13 @@ export const MindGame = memo(function MindGame({ footnote }: { footnote: React.R
         </IconButton>
         <IconButton size={buttonSize} onClick={() => { setPlaying(false); setAt((now) => Math.min(now + 1, last)); }} disabled={!frame || done} aria-label="next step"><ChevronRightIcon fontSize={buttonSize} /></IconButton>
         <IconButton size={buttonSize} onClick={() => { setPlaying(false); setAt(last); }} disabled={!frame || done} aria-label={words.toEnd}><FastForwardIcon fontSize={buttonSize} /></IconButton>
-        <IconButton size={buttonSize} onClick={() => setHistoryShown(true)} disabled={turns.length === 0} aria-label={words.history} title={words.history}><HistoryIcon fontSize={buttonSize} /></IconButton>
+        <IconButton size={buttonSize} onClick={() => { if (narrow) setHistoryShown(true); else showSaid(); }} disabled={turns.length === 0} aria-label={words.history} title={words.history} sx={{ color: !narrow && saidShown ? palette.linkInk : undefined }}><HistoryIcon fontSize={buttonSize} /></IconButton>
         <Box sx={{ width: '1px', alignSelf: 'stretch', background: palette.divider, mx: 0.5 }} />
-        <Chip label={instant ? words.instant : `${speed}x`} size="small" variant="outlined" onClick={() => setSpeedShown(true)} title={words.speed} sx={{ fontSize: '0.75rem' }} />
-        <IconButton size={buttonSize} onClick={() => setBarShown(false)} aria-label={words.foldControls} title={words.foldControls}><CloseIcon fontSize={buttonSize} /></IconButton>
+        <Chip label={instant ? words.instant : `${speed}x`} size="small" variant="outlined" onClick={(event: React.MouseEvent<HTMLElement>) => { if (narrow) setSpeedShown(true); else setSpeedAt(event.currentTarget); }} title={words.speed} sx={{ fontSize: '0.75rem' }} />
+        {narrow && <IconButton size={buttonSize} onClick={() => setBarShown(false)} aria-label={words.foldControls} title={words.foldControls}><CloseIcon fontSize={buttonSize} /></IconButton>}
           </Box>
           )}
-          {!barShown && (
+          {!barShown && narrow && (
             <IconButton size={buttonSize} onClick={() => setBarShown(true)} aria-label={words.controls} title={words.controls} sx={{
               position: 'absolute', left: 10, bottom: 10, zIndex: 3, background: 'rgba(10, 14, 28, 0.85)', border: `1px solid ${palette.divider}`,
             }}><TuneIcon fontSize={buttonSize} /></IconButton>
@@ -300,6 +346,12 @@ export const MindGame = memo(function MindGame({ footnote }: { footnote: React.R
         </DialogContent>
         <DialogActions><Button onClick={() => setChatShown(false)}>{words.close}</Button></DialogActions>
       </Dialog>
+      <Menu open={speedAt !== null} anchorEl={speedAt} onClose={() => setSpeedAt(null)} anchorOrigin={{ vertical: 'top', horizontal: 'left' }} transformOrigin={{ vertical: 'bottom', horizontal: 'left' }}>
+        <MenuItem selected={instant} onClick={() => { pickSpeed(null); setSpeedAt(null); }}>{words.instant}</MenuItem>
+        {speeds.map((one) => (
+          <MenuItem key={one} selected={!instant && one === speed} onClick={() => { pickSpeed(one); setSpeedAt(null); }}>{`${one}x`}</MenuItem>
+        ))}
+      </Menu>
       <Dialog open={speedShown} onClose={() => setSpeedShown(false)} maxWidth="xs" slotProps={{ paper: { sx: { borderRadius: 3 } } }}>
         <DialogTitle sx={{ fontSize: '1.125rem' }}>{words.speed}</DialogTitle>
         <DialogContent dividers sx={{ p: 0 }}>
@@ -318,22 +370,7 @@ export const MindGame = memo(function MindGame({ footnote }: { footnote: React.R
       <Dialog open={historyShown} onClose={() => setHistoryShown(false)} fullWidth maxWidth="sm" slotProps={{ paper: { sx: { borderRadius: 3 } } }}>
         <DialogTitle sx={{ fontSize: '1.125rem' }}>{words.history}</DialogTitle>
         <DialogContent dividers sx={{ p: 1 }}>
-            <Box ref={history} sx={{
-              overflowY: 'auto', p: 1,
-              display: 'flex', flexDirection: 'column', gap: 0.5,
-            }}>
-              {turns.map((one, nth) => (
-                <Box key={nth} data-now={frame?.turn === nth ? 'yes' : undefined} onClick={() => toTurnEnd(nth)} sx={{
-                  cursor: 'pointer', borderRadius: 1, px: 1, py: 0.5, borderLeft: `3px solid ${frame?.turn === nth ? palette.linkInk : 'transparent'}`,
-                  background: frame?.turn === nth ? 'rgba(0, 255, 255, 0.08)' : 'transparent', '&:hover': { background: palette.hover },
-                }}>
-                  <IconButton size="small" aria-label={words.undo} disabled={thinking || recalling} onClick={(event) => { event.stopPropagation(); setUndoing(one.id); }} sx={{ float: 'right', ml: 0.5, p: 0.25, color: 'text.secondary', opacity: 0.6, '&:hover': { opacity: 1, color: '#ff8a80' } }}><CloseIcon sx={{ fontSize: 16 }} /></IconButton>
-                  <Typography sx={{ fontSize: { xs: '0.9375rem', md: '1.0625rem' }, overflowWrap: 'anywhere', fontStyle: one.world ? 'italic' : 'normal', color: one.world ? 'text.secondary' : 'text.primary' }}>{one.asked}{one.world && <Box component="span" sx={{ float: 'right', ml: 1, fontStyle: 'normal' }}>{words.worldMark}</Box>}</Typography>
-                  <Typography sx={{ fontSize: '0.6875rem', color: 'text.secondary' }}>{ago(one.at, now)}</Typography>
-                  {one.said && <Typography sx={{ fontSize: { xs: '0.9375rem', md: '1.0625rem' }, fontWeight: 600, color: palette.linkInk, overflowWrap: 'anywhere' }}>{one.said}</Typography>}
-                </Box>
-              ))}
-            </Box>
+            {turnList}
         </DialogContent>
         <DialogActions>
           <Button onClick={() => setHistoryShown(false)} sx={{ textTransform: 'none', color: 'text.secondary' }}>{words.close}</Button>

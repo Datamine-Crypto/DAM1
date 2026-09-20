@@ -62,7 +62,19 @@ pub(super) fn told_back(mind: &mut CursorMind, step: &WordStep, word: &str, at: 
                 }
                 return true;
             }
-            let was = traces.into_iter().max().map(|t| mind.tree.node(t).parent).filter(|&p| p != 0).or_else(|| plain.then(|| who_has(mind, at)).flatten()).or_else(|| plain.then(|| place_of(mind, at)).flatten().filter(|_| !asks_who));
+            let earlier = || {
+                let places = super::lookup::goings_in_order(mind, at);
+                let asked: Vec<String> = open_question(mind).map(|q| present_children(mind, q).into_iter().map(|c| crate::cursor::bare_name(&mind.tree.node(c).name)).collect()).unwrap_or_default();
+                let named = places.iter().rposition(|&p| asked.iter().any(|one| *one == crate::cursor::bare_name(&mind.tree.node(p).name)));
+                let onward = asked.iter().any(|one| *one == super::mind::LATER);
+                match named {
+                    Some(at) if onward => places.get(at + 1).copied(),
+                    Some(at) => at.checked_sub(1).and_then(|before| places.get(before).copied()),
+                    None if places.len() >= super::physics::PAIR_LEAST => Some(places[places.len() - super::physics::PAIR_LEAST]),
+                    None => (!places.is_empty()).then(|| mind.tree.node(at).parent).filter(|&p| p != 0 && !mind.tree.node(p).name.starts_with(BRACE_OPEN_TEXT) && !person(mind, p)),
+                }
+            };
+            let was = traces.into_iter().max().map(|t| mind.tree.node(t).parent).filter(|&p| p != 0).or_else(|| plain.then(earlier).flatten()).or_else(|| plain.then(|| who_has(mind, at)).flatten()).or_else(|| plain.then(|| place_of(mind, at)).flatten().filter(|_| !asks_who));
             written_out(mind, step.act, was.map(|p| crate::cursor::bare_name(&mind.tree.node(p).name)));
         }
         WordMove::GetAbout => {
@@ -115,7 +127,13 @@ pub(super) fn told_back(mind: &mut CursorMind, step: &WordStep, word: &str, at: 
             if places.iter().all(|&n| rank(n).is_some()) {
                 places.sort_by_key(|&n| rank(n));
             }
-            let sequence: Vec<usize> = places.into_iter().map(|n| if n == at { now.unwrap_or(at) } else { mind.tree.node(n).parent }).collect();
+            let mut sequence: Vec<usize> = places.into_iter().map(|n| if n == at { now.unwrap_or(at) } else { mind.tree.node(n).parent }).collect();
+            if sequence.len() < super::physics::PAIR_LEAST && plain {
+                let walked = super::lookup::goings_in_order(mind, at);
+                if walked.len() >= super::physics::PAIR_LEAST {
+                    sequence = walked;
+                }
+            }
             let named = sequence.iter().rposition(|&p| *mind.tree.node(p).name == *word || crate::cursor::bare_name(&mind.tree.node(p).name) == word);
             let found = named.and_then(|i| if step.act == WordMove::GetBefore { i.checked_sub(1) } else { Some(i + 1) }).and_then(|i| sequence.get(i).copied());
             written_out(mind, step.act, found.map(|p| mind.tree.node(p).name.to_string()));
@@ -271,7 +289,8 @@ pub(super) fn told_back(mind: &mut CursorMind, step: &WordStep, word: &str, at: 
         }
         WordMove::GetChildren => {
             let asks_having = asks_having(mind);
-            let had = |c: usize| !asks_having || person(mind, at) || speaker(mind, at) || owner_of(mind, c) == Some(at);
+            let asks_who = open_question(mind).is_some_and(|q| *mind.tree.node(q).name == *super::mind::WHO_ASKED);
+            let had = |c: usize| (!asks_having || person(mind, at) || speaker(mind, at) || owner_of(mind, c) == Some(at)) && (!asks_who || person(mind, c) || speaker(mind, c) || owner_of(mind, c).is_none());
             let inside: Vec<String> = if plain { held_or_owned(mind, at).into_iter().filter(|&c| had(c)).map(|c| mind.tree.node(c).name.to_string()).collect() } else { Vec::new() };
             if inside.is_empty() {
                 written_out(mind, step.act, None);

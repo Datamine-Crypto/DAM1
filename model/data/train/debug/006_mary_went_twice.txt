@@ -1,4 +1,4 @@
 # mary went to the kitchen, then to the garden: a thing stands in one place, the newest, and the place it
 # left keeps it with the time past, so where is mary is the garden and where was mary is the kitchen.
-mary went to the kitchen. mary went to the garden. => mary -> {in} -> garden; mary -> {in} -> kitchen -> {time} -> {past} | where is mary? = garden; where was mary? = kitchen
-test: zorp went to the flib. zorp went to the mork. => zorp -> {in} -> mork; zorp -> {in} -> flib -> {time} -> {past} | where is zorp? = mork; where was zorp? = flib
+mary went to the kitchen. mary went to the garden. => mary -> {go}:time(past) -> garden; mary -> {go}:time(past) -> kitchen | where is mary? = garden; where was mary? = kitchen
+test: zorp went to the flib. zorp went to the mork. => zorp -> {go}:time(past) -> mork; zorp -> {go}:time(past) -> flib | where is zorp? = mork; where was zorp? = flib

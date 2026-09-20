@@ -183,10 +183,15 @@ export const World2D = memo(function World2D({ scene, says, doing, answers, beat
       const last = bends.length > 0 ? bends[bends.length - 1] : { x: cx, y: cy };
       const start = border(a, first.x - a.x, first.y - a.y);
       const end = border(b, last.x - b.x, last.y - b.y);
-      if (bends.length === 0 && (start >= 1 || end >= 1)) return [];
       const from = Math.min(start, 1);
       const to = Math.min(end, 1);
-      return [{ key, x1: a.x + (first.x - a.x) * from, y1: a.y + (first.y - a.y) * from, x2: b.x + (last.x - b.x) * to, y2: b.y + (last.y - b.y) * to, cx, cy, ax: a.x, ay: a.y, bx: b.x, by: b.y, bends, label: link.label, past: link.past === true }];
+      const x1 = a.x + (first.x - a.x) * from;
+      const y1 = a.y + (first.y - a.y) * from;
+      const x2 = b.x + (last.x - b.x) * to;
+      const y2 = b.y + (last.y - b.y) * to;
+      // A line shorter than this is between two tiles that touch, where it would say nothing.
+      if (bends.length === 0 && Math.hypot(x2 - x1, y2 - y1) < 10) return [];
+      return [{ key, x1, y1, x2, y2, cx, cy, ax: a.x, ay: a.y, bx: b.x, by: b.y, bends, label: link.label, past: link.past === true }];
     }));
     // Home is centred by a transform its offsets do not show.
     // At home he stands at the door of his house.
@@ -210,7 +215,8 @@ export const World2D = memo(function World2D({ scene, says, doing, answers, beat
   const onLines = new Set(scene.links.flatMap((link) => link.label.split(' ')));
   const tied = new Set<number>([...scene.links.flatMap((link) => [link.from, link.to]), ...scene.places.flatMap((place) => (place.inside === null ? [] : [place.inside]))]);
   const unshown = (at: number): boolean => onLines.has(scene.places[at].name) && !tied.has(at) && scene.at !== at && scene.carries !== at && scene.points !== at && scene.places[at].tags.length === 0;
-  const present = scene.places.filter((place, at) => place.inside === null && !unshown(at)).map((place) => place.region).filter((region, at, all) => all.indexOf(region) === at);
+  const atTop = (place: { inside: number | null; rooted?: boolean }): boolean => place.inside === null || place.rooted === true;
+  const present = scene.places.filter((place, at) => atTop(place) && !unshown(at)).map((place) => place.region).filter((region, at, all) => all.indexOf(region) === at);
   const left = present.filter((_, at) => at % 2 === 0);
   const right = present.filter((_, at) => at % 2 === 1);
   return (
@@ -278,7 +284,7 @@ export const World2D = memo(function World2D({ scene, says, doing, answers, beat
               <Typography sx={{ position: 'absolute', top: 6, left: 12, color: regionInks[region], fontSize: '0.75rem', letterSpacing: '0.04em', textTransform: 'uppercase' }}>
                 {regionNames[region]}
               </Typography>
-              {scene.places.map((place, at) => (place.inside === null && place.region === region && !unshown(at)
+              {scene.places.map((place, at) => (atTop(place) && place.region === region && !unshown(at)
                 ? <Tile key={at} places={scene.places} nth={at} born={scene.born} carried={scene.carries} lit={shown === null ? scene.lit : [...scene.lit, shown]} stood={scene.at} register={register} moved={moved} onMove={onMove} zoom={view.zoom} />
                 : null))}
             </Box>

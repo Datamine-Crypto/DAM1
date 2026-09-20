@@ -7,9 +7,9 @@
 seed: 90-everyday
 seed: 18-qualities
 world: ball -> {in} -> box; cup -> {in} -> bag | where is the cup? = bag
-then: the ball moves to the shelf. => ball -> {in} -> shelf; not ball -> {in} -> box | where is the ball? = shelf; where is the cup? = bag
+then: the ball moves to the shelf. => ball -> {go}:method(move) -> shelf | where is the ball? = shelf; where is the cup? = bag
 world: key -> {in} -> drawer; pen -> {in} -> cup | where is the key? = drawer
-then: the pen moves to the desk. => pen -> {in} -> desk; not pen -> {in} -> cup | where is the pen? = desk; where is the key? = drawer
+then: the pen moves to the desk. => pen -> {go}:method(move) -> desk | where is the pen? = desk; where is the key? = drawer
 world: tom -> {has} -> kite -> {in} -> garden | who has the kite? = tom
 then: ann has a hat. => ann -> {has} -> hat | who has the hat? = ann; where is the kite? = garden; who has the kite? = tom
 world: sam -> {has} -> bike -> {in} -> shed | where is the bike? = shed
@@ -27,7 +27,7 @@ then: tom gives the car to ann. => ann -> {has} -> car; not tom -> {has} -> car 
 world: ben -> {has} -> cap -> {in} -> hall | where is the cap? = hall
 then: ben gives the cap to lily. => lily -> {has} -> cap; not ben -> {has} -> cap | who has the cap? = lily; where is the cap? = hall
 test: world: lamp -> {in} -> attic; mug -> {in} -> sink | where is the mug? = sink
-test: then: the lamp moves to the porch. => lamp -> {in} -> porch; not lamp -> {in} -> attic | where is the lamp? = porch; where is the mug? = sink
+test: then: the lamp moves to the porch. => lamp -> {go}:method(move) -> porch | where is the lamp? = porch; where is the mug? = sink
 test: world: nina -> {has} -> drum -> {in} -> closet | who has the drum? = nina
 test: then: paul has a vase. => paul -> {has} -> vase | who has the vase? = paul; where is the drum? = closet
 test: world: sock -> {in} -> basket | where is the sock? = basket

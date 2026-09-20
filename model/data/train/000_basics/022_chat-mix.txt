@@ -19,9 +19,9 @@ then: turn: is berlin in germany? => | yes
 turn: is a whale a fish? => | no
 then: the cat is in the box. => cat -> {in} -> box | where is the cat? = box; what is in the box? = cat
 then: turn: what is 12 * 12? => | 144
-then: the cat went to the garden. => cat -> {in} -> garden; cat -> {in} -> box -> {time} -> {past}; cat -> {go} -> garden -> {time} -> {past} | where is the cat? = garden; where was the cat? = box
+then: the cat went to the garden. => cat -> {in} -> box; cat -> {go}:time(past) -> garden | where is the cat? = garden; where was the cat? = box
 then: turn: is the cat in the box? => | no
-turn: what day comes after monday? => | tuesday
+turn: what day comes after monday? =>  | tuesday
 then: kim has a red hat. => kim -> {has} -> hat -> {red} | what color is the hat? = red; who has the hat? = kim
 then: turn: what is 100 / 4? => | 25
 then: turn: is the hat blue? => | no

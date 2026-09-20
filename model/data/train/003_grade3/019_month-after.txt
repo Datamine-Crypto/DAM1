@@ -3,14 +3,14 @@
 # The turns ask one month each. Each scene tells what two people have, then asks the months after and
 # before, round the end of the year too, each count, a total, how many more, and who has more or fewer.
 seed: 11-order
-turn: what month comes after march? => | april
-turn: what month comes before june? => | may
-turn: what month comes after december? => | january
-turn: what month comes before january? => | december
+turn: what month comes after march? =>  | april
+turn: what month comes before june? =>  | may
+turn: what month comes after december? =>  | january
+turn: what month comes before january? =>  | december
 turn: this month is july. what month is next? => month -> {july} | august
 tom has 3 apples. ann has 6 apples. => tom -> {has} -> apple:quantity(3); {number:value(3)}; ann -> {has} -> apple:quantity(6); {number:value(6)} | what month comes after march? = april; what month comes before june? = may; what month comes after december? = january; what month comes before january? = december; what month comes after april? = may; what month comes before march? = february; how many apples does tom have? = 3; how many apples do tom and ann have? = 9; who has more apples? = ann; how many more apples does ann have than tom? = 3
 kim has 7 cards. joe has 8 cards. => kim -> {has} -> card:quantity(7); {number:value(7)}; joe -> {has} -> card:quantity(8); {number:value(8)} | what month comes after july? = august; what month comes before august? = july; what month comes after june? = july; what month comes before december? = november; what month comes after september? = october; how many cards does kim have? = 7; how many cards do kim and joe have? = 15; who has fewer cards? = kim; how many more cards does joe have than kim? = 1
-test: turn: what month comes after october? => | november
-test: turn: what month comes before february? => | january
+test: turn: what month comes after october? =>  | november
+test: turn: what month comes before february? =>  | january
 test: turn: this month is december. what month is next? => month -> {december} | january
 test: zoe has 10 shells. ben has 2 shells. => zoe -> {has} -> shell:quantity(10); {number:value(10)}; ben -> {has} -> shell:quantity(2); {number:value(2)} | what month comes after october? = november; what month comes before february? = january; what month comes before october? = september; what month comes after february? = march; how many shells do zoe and ben have? = 12; who has more shells? = zoe; how many shells does ben have? = 2; what month comes after november? = december

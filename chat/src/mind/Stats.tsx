@@ -123,6 +123,7 @@ export const Stats = memo(function Stats({ frame, turns, pick, onPick }: { frame
       <Box>
         <Stat label={words.stands}><Named name={scene.at === null ? words.home : scene.places[scene.at].name} /></Stat>
         <Stat label={words.holds}><Named name={scene.carries === null ? words.nothing : scene.places[scene.carries].name} /></Stat>
+        <Stat label={words.pointsAt}><Named name={scene.points === null ? words.nothing : scene.places[scene.points].name} /></Stat>
         <Stat label={words.notes}>
           <Box sx={{ display: 'flex', gap: 0.5, flexWrap: 'wrap', justifyContent: 'flex-end' }}>
             {scene.notes.length === 0 ? <Named name={words.nothing} /> : scene.notes.map((note, nth) => <Named key={`${note}-${nth}`} name={note} />)}

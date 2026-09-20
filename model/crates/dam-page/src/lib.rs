@@ -7,7 +7,7 @@ use dam::events::STACK_SLOTS;
 use dam::network::{NetworkClasses, Stacked};
 use dam::quiz::{punctuated, sentences};
 use dam::state::{context_bytes, context_mind, state_mind};
-use dam::word::{read_by_words, taught_words, WordStep, OWNER_TAG};
+use dam::word::{asked_sentence, mark_word, read_by_words, taught_words, WordStep, ARTICLE_FLAGS, ASKING, COPULA, OWNER_TAG};
 use dam::words::simple_words;
 use patterns::{because, source};
 use serde::Serialize;
@@ -176,12 +176,22 @@ pub fn described(text: &str) -> Result<String, String> {
 }
 because!(described, PageEngine, "a world described to the page and not said to the network: the teacher's own rules write each sentence into the chat's mind, exactly and with no move of the network, so a game can set a world the network has to explore, and what the description wrote is given back");
 
+fn asked_here(words: &[String]) -> bool {
+    let asks = words.iter().any(|w| ASKING.contains(&w.as_str()));
+    let last = words.iter().rev().find(|w| !mark_word(w));
+    let unfinished = last.is_some_and(|w| COPULA.contains(&w.as_str()) || ARTICLE_FLAGS.contains(&w.as_str()));
+    let asked = words.last().is_some_and(|w| *w == dam::quiz::QUESTION_END);
+    !asks && (unfinished || asked)
+}
+because!(asked_here, PageEngine, "whether a typed sentence is asked rather than told: one that stops on a copula or an article, where a statement cannot end, the hat is and the pen is in the, and one closed with a question mark that opens with no word that asks, capital of spain, both of which the reading answers once a word that asks stands before them");
+
 pub fn read(text: &str, steps: usize) -> Result<String, String> {
     with_engine(|engine| {
         let mut answer = Reading { steps: Vec::new(), output: Vec::new(), ended: true, told: Vec::new() };
         let before = story_paths(&engine.mind);
         for sentence in sentences(simple_words(text)) {
             let words = punctuated(sentence);
+            let words = if asked_here(&words) { asked_sentence(words) } else { words };
             let reading = read_by_words(&engine.mind, &words, (&engine.nets, &engine.words), steps);
             answer.steps.extend(reading.trail);
             answer.output.extend(reading.mind.output.iter().cloned());

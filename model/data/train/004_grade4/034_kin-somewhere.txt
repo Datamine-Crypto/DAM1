@@ -4,8 +4,9 @@
 my sister lives in berlin. => berlin -> sister | where does my sister live? = berlin
 tom's brother works in london. => london -> brother | where does tom's brother work? = london
 my aunt is in the garden. => garden -> aunt | where is my aunt? = garden
-ann's cousin went to the park. => park -> cousin | where is ann's cousin? = park
+ann's cousin went to the park. => cousin -> {go}:time(past) -> park | where is ann's cousin? = park
 my father sat on the bench. => bench -> father | where is my father? = bench
+sam's sister is in the office. => office -> sister | where is sam's sister? = office
 test: my uncle lives in rome. => rome -> uncle | where does my uncle live? = rome
 test: leo's mother is in the kitchen. => kitchen -> mother | where is leo's mother? = kitchen
 ben's sister is in the shop. => shop -> sister | where is ben's sister? = shop

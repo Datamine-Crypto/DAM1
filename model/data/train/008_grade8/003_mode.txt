@@ -2,15 +2,15 @@
 # common, or the mode.
 # The turns ask one mode each. Each scene tells how many of one thing four people have, two of them the
 # same, then asks modes, each count, who has the most and the fewest, and a total.
-turn: which number comes up most often in 2, 3, 3 and 5? => | 3
+turn: which number comes up most often in 2, 3, 3 and 5? =>  | 3
 turn: what is the mode of 4, 7, 7, 7 and 1? => | 7
 turn: what is the mode of 9, 2, 9 and 6? => | 9
-turn: which number comes up most often in 1, 1, 8, 8 and 8? => | 8
+turn: which number comes up most often in 1, 1, 8, 8 and 8? =>  | 8
 turn: what is the mode of 3, 8, 8 and 1? => | 8
 turn: what is the mode of 7, 7, 4 and 9? => | 7
 turn: what is the mode of 2, 5, 1 and 5? => | 5
 tom has 2 apples. ann has 3 apples. sam has 3 apples. lily has 5 apples. => tom -> {has} -> apple:quantity(2); {number:value(2)}; ann -> {has} -> apple:quantity(3); {number:value(3)}; sam -> {has} -> apple:quantity(3); lily -> {has} -> apple:quantity(5); {number:value(5)} | which number comes up most often in 2, 3, 3 and 5? = 3; what is the mode of 4, 7, 7, 7 and 1? = 7; what is the mode of 9, 2, 9 and 6? = 9; how many apples does tom have? = 2; how many apples does ann have? = 3; how many apples does sam have? = 3; who has the most apples? = lily; who has the fewest apples? = tom; how many apples do tom and lily have? = 7; what is the mode of 2, 3, 3 and 5? = 3; which number comes up most often in 1, 1, 8, 8 and 8? = 8
 kim has 8 cards. joe has 7 cards. lily has 8 cards. max has 4 cards. => kim -> {has} -> card:quantity(8); {number:value(8)}; joe -> {has} -> card:quantity(7); {number:value(7)}; lily -> {has} -> card:quantity(8); max -> {has} -> card:quantity(4); {number:value(4)} | what is the mode of 3, 8, 8 and 1? = 8; what is the mode of 7, 7, 4 and 9? = 7; what is the mode of 2, 5, 1 and 5? = 5; what is the mode of 8, 7, 8 and 4? = 8; how many cards does kim have? = 8; how many cards does max have? = 4; who has the fewest cards? = max; how many cards do kim and joe have? = 15; which number comes up most often in 8, 7, 8 and 4? = 8; how many cards does joe have? = 7
 test: turn: what is the mode of 5, 6, 6 and 2? => | 6
-test: turn: which number comes up most often in 4, 4, 3 and 2? => | 4
+test: turn: which number comes up most often in 4, 4, 3 and 2? =>  | 4
 test: zoe has 6 shells. ben has 5 shells. tim has 6 shells. sue has 2 shells. => zoe -> {has} -> shell:quantity(6); {number:value(6)}; ben -> {has} -> shell:quantity(5); {number:value(5)}; tim -> {has} -> shell:quantity(6); sue -> {has} -> shell:quantity(2); {number:value(2)} | what is the mode of 5, 6, 6 and 2? = 6; which number comes up most often in 4, 4, 3 and 2? = 4; what is the mode of 6, 5, 6 and 2? = 6; how many shells does ben have? = 5; who has the fewest shells? = sue; how many shells do zoe and sue have? = 8; how many shells does tim have? = 6; which number comes up most often in 6, 5, 6 and 2? = 6

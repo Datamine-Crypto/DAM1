@@ -1,4 +1,5 @@
 # the plim goes to the quorn: the sets a flag, {setFlag type: the value: true}, that the next find or add uses;
-# the plim is the known plim, or made when there is none, and keeps the tag; the quorn likewise.
+# the plim is the known plim, or made when there is none, and keeps the tag; the quorn likewise, and the
+# going is written under the plim with the quorn under it.
 the plim goes to the quorn. => plim:the(true) -> {go} -> quorn:the(true)
 test: the zorp goes to the flib. => zorp:the(true) -> {go} -> flib:the(true)

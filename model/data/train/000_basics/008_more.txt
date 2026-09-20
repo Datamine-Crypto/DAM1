@@ -16,7 +16,7 @@ then: ana gives the book to leo. => leo -> {has} -> book; not ana -> {has} -> bo
 kai has a ring. => kai -> {has} -> ring | what does kai have? = ring
 then: kai gives the ring to mia. => mia -> {has} -> ring; not kai -> {has} -> ring | who has the ring? = mia
 the cup is in the sink. => cup -> {in} -> sink | where is the cup? = sink
-then: the cup moves to the shelf. => cup -> {in} -> shelf; not cup -> {in} -> sink | where is the cup? = shelf; what is in the shelf? = cup
+then: the cup moves to the shelf. => cup -> {go}:method(move) -> shelf | where is the cup? = shelf; what is in the shelf? = cup
 ray has a fish. it is gold. => ray -> {has} -> fish -> {gold} | what color is the fish? = gold; what does ray have? = fish
 lena has a bag. she is tall. => lena -> {has} -> bag; lena -> {tall} | what size is lena? = tall; who has the bag? = lena
 otto has a dog. he is old. => otto -> {has} -> dog; otto -> {old} | how is otto? = old; what does otto have? = dog

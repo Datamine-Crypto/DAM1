@@ -6,5 +6,7 @@ john and tom are friends. => {group} -> {items} -> john; {group} -> {items} -> t
 test: zorp and flib are friends. => {group} -> {items} -> zorp; {group} -> {items} -> flib; {group} -> {is} -> friends
 john and i are best friends. => {group} -> {items} -> john; {group} -> {items} -> user; {group} -> {is} -> friends -> {is} -> best
 test: zorp and i are best friends. => {group} -> {items} -> zorp; {group} -> {items} -> user; {group} -> {is} -> friends -> {is} -> best
+vex and lun are friends. => {group} -> {items} -> vex; {group} -> {items} -> lun; {group} -> {is} -> friends
+vex and i are best friends. => {group} -> {items} -> vex; {group} -> {items} -> user; {group} -> {is} -> friends -> {is} -> best
 ann and mia are sisters. => {group} -> {items} -> ann; {group} -> {items} -> mia; {group} -> {is} -> sisters
 test: kim and sara are neighbours. => {group} -> {items} -> kim; {group} -> {items} -> sara; {group} -> {is} -> neighbours

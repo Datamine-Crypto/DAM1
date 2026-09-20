@@ -6,15 +6,15 @@ seed: 90-everyday
 seed: 18-qualities
 turn: how many words are in "the cat sat"? => | 3
 turn: how many words are in "i like red apples"? => | 4
-turn: how many words are in the sentence "dogs run"? => | 2
+turn: how many words are in the sentence "dogs run"? =>  | 2
 turn: how many words are in "my little sister has a red kite"? => | 7
-turn: how many words are in the sentence "the dog can run"? => | 4
+turn: how many words are in the sentence "the dog can run"? =>  | 4
 turn: how many words are in "a bird is in the tree"? => | 6
 turn: how many words are in the sentence "you can not see it"? => | 5
 tom has a red kite. ann has a cat. => tom -> {has} -> kite -> {red}; ann -> {has} -> cat | how many words are in "the cat sat"? = 3; how many words are in "i like red apples"? = 4; how many words are in the sentence "dogs run"? = 2; how many words are in "my little sister has a red kite"? = 7; how many words are in "tom has a red kite"? = 5; how many words are in the sentence "ann has a cat"? = 4; who has the kite? = tom; what color is the kite? = red; what does ann have? = cat
 sam has a big dog. lily has 2 birds. => sam -> {has} -> dog -> {big}; {number:value(2)}; lily -> {has} -> bird:quantity(2) | how many words are in "the big dog"? = 3; how many words are in the sentence "sam has a big dog"? = 5; how many words are in "lily has 2 birds"? = 4; how many words are in the sentence "dogs run"? = 2; how many words are in "the cat sat"? = 3; how many words are in "i like red apples"? = 4; how many birds does lily have? = 2; who has the dog? = sam; is the dog big? = yes
 test: zoe has a hat. ben has a hot cup. => zoe -> {has} -> hat; ben -> {has} -> cup -> {hot} | how many words are in "birds can fly high"? = 4; how many words are in the sentence "the sun is hot"? = 4; how many words are in "zoe has a hat"? = 4; how many words are in the sentence "ben has a hot cup"? = 5; how many words are in "a hot cup"? = 3; who has the hat? = zoe; what does ben have? = cup; is the cup hot? = yes
-test: turn: how many words are in "birds can fly high"? => | 4
+test: turn: how many words are in "birds can fly high"? =>  | 4
 test: turn: how many words are in the sentence "the sun is hot"? => | 4
 mia has a red bag. leo has a toy. => mia -> {has} -> bag -> {red}; leo -> {has} -> toy | how many words are in "mia has a red bag"? = 5; how many words are in the sentence "leo has a toy"? = 4; how many words are in "a red bag"? = 3; who has the toy? = leo
 kim has a blue cap. => kim -> {has} -> cap -> {blue} | how many words are in "kim has a blue cap"? = 5; how many words are in "a blue cap"? = 3; what does kim have? = cap

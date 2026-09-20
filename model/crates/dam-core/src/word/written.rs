@@ -73,6 +73,10 @@ pub(super) fn flagged(mind: &mut CursorMind, node: usize) {
                 let degree = added_under(mind, node, &step_item(super::mind::FLAG_DEGREE), false);
                 added_under(mind, degree, value, true);
             }
+            FLAG_PROPERTY if *mind.tree.node(mind.tree.node(node).parent).name == *crate::cursor::step_item(super::mind::GOING_RELATION) => {
+                let of = added_under(mind, node, &crate::cursor::step_item(super::mind::TOWARD), false);
+                added_under(mind, of, value, true);
+            }
             FLAG_PROPERTY => {
                 let is = added_under(mind, node, IS_FORM.trim(), false);
                 let under = match kind_of(mind, value) {

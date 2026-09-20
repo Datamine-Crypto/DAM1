@@ -2,14 +2,14 @@
 # can a fish swim checks it, and what can swim gets all that are able to. Held out lines use things
 # and deeds the learned lines never use.
 seed: 90-everyday
-a bird can fly. a fish can swim. => | can a bird fly? = yes; can a fish fly? = no; what can fly? = bird; can a fish swim? = yes; what can swim? = fish
-a horse can run. a frog can jump. a baby can cry. => | can a horse run? = yes; can a frog run? = no; what can jump? = frog; what can cry? = baby; can a baby jump? = no
+a bird can fly. a fish can swim. =>  | can a bird fly? = yes; can a fish fly? = no; what can fly? = bird; can a fish swim? = yes; what can swim? = fish
+a horse can run. a frog can jump. a baby can cry. =>  | can a horse run? = yes; can a frog run? = no; what can jump? = frog; what can cry? = baby; can a baby jump? = no
 tom can cook. ann can sing. => | can tom cook? = yes; can ann cook? = no; who can sing? = ann; who can cook? = tom
 a robot can talk. a parrot can talk. => | can a robot talk? = yes; what can talk? = robot, parrot
 turn: a duck can swim. can a duck swim? => | yes
 turn: a snake can bite what can bite => | snake
 test: a monkey can climb. a whale can dive. => | can a monkey climb? = yes; can a whale climb? = no; what can dive? = whale; what can climb? = monkey
 test: sam can dance. kim can paint. => | who can paint? = kim; can sam dance? = yes; can sam paint? = no
-test: turn: a bat can fly. can a bat fly? => | yes
+test: turn: a bat can fly. can a bat fly? =>  | yes
 mia can dance. leo can swim. => | can mia dance? = yes; can leo dance? = no; who can swim? = leo; who can dance? = mia
-ben can run. zoe can draw. => | can ben run? = yes; can zoe run? = no; who can draw? = zoe
+ben can run. zoe can draw. =>  | can ben run? = yes; can zoe run? = no; who can draw? = zoe

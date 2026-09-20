@@ -8,12 +8,12 @@ seed: 11-order
 turn: today is monday. what day is tomorrow? => today -> {monday} | tuesday
 turn: today is sunday. what day was yesterday? => today -> {sunday} | saturday
 turn: today is saturday. what day is tomorrow? => today -> {saturday} | sunday
-turn: what day comes after friday? => | saturday
+turn: what day comes after friday? =>  | saturday
 today is monday. => today -> {monday} | what day is tomorrow? = tuesday; what day was yesterday? = sunday; what day is today? = monday; is tomorrow tuesday? = yes; is tomorrow sunday? = no; was yesterday sunday? = yes; what day comes after friday? = saturday; what day comes before monday? = sunday; what day comes after monday? = tuesday
 today is sunday. => today -> {sunday} | what day was yesterday? = saturday; what day is tomorrow? = monday; what day is today? = sunday; is tomorrow monday? = yes; was yesterday friday? = no; what day comes before friday? = thursday; what day comes after wednesday? = thursday; what day comes before sunday? = saturday
 today is saturday. => today -> {saturday} | what day is tomorrow? = sunday; what day was yesterday? = friday; what day is today? = saturday; is tomorrow sunday? = yes; is today sunday? = no; what day comes after saturday? = sunday; what day comes before tuesday? = monday; what day comes after thursday? = friday
 test: turn: today is wednesday. what day is tomorrow? => today -> {wednesday} | thursday
 test: turn: today is tuesday. what day was yesterday? => today -> {tuesday} | monday
-test: turn: what day comes after sunday? => | monday
+test: turn: what day comes after sunday? =>  | monday
 test: today is wednesday. => today -> {wednesday} | what day is tomorrow? = thursday; what day was yesterday? = tuesday; what day is today? = wednesday; is tomorrow thursday? = yes; was yesterday monday? = no; what day comes after sunday? = monday; what day comes before saturday? = friday; what day comes after tuesday? = wednesday
 test: today is tuesday. => today -> {tuesday} | what day was yesterday? = monday; what day is tomorrow? = wednesday; what day is today? = tuesday; was yesterday monday? = yes; is tomorrow thursday? = no; what day comes after sunday? = monday; what day comes before wednesday? = tuesday; what day comes after thursday? = friday

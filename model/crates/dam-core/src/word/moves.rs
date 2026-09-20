@@ -39,6 +39,7 @@ pub enum WordMove {
     AddProperty,
     AddPropertyPast,
     AddRelation,
+    AddRelationPast,
     AddDeed,
     AddValue,
     SetColor,
@@ -416,7 +417,7 @@ impl WordMove {
             WordMove::ChangeState => STATE_FAMILY,
             WordMove::Release => RELEASE_FAMILY,
             WordMove::FlagThe | WordMove::FlagA | WordMove::FlagQuantity | WordMove::FlagProperty | WordMove::FlagTime | WordMove::FlagLater | WordMove::FlagFrom | WordMove::FlagWhen | WordMove::FlagWhose => FLAG_FAMILY,
-            WordMove::AddProperty | WordMove::AddPropertyPast | WordMove::AddRelation | WordMove::AddDeed | WordMove::AddValue | WordMove::AddRole => CHILDREN_FAMILY,
+            WordMove::AddProperty | WordMove::AddPropertyPast | WordMove::AddRelation | WordMove::AddRelationPast | WordMove::AddDeed | WordMove::AddValue | WordMove::AddRole => CHILDREN_FAMILY,
             WordMove::SetColor | WordMove::SetSize | WordMove::SetFeeling | WordMove::SetSpeed | WordMove::SetTemperature | WordMove::SetAge | WordMove::SetMaterial | WordMove::SetTrait => SET_FAMILY,
             WordMove::StepParent | WordMove::StepNewest | WordMove::StepTop => STEP_FAMILY,
             WordMove::PointNothing => POINT_FAMILY,
@@ -443,7 +444,7 @@ impl WordMove {
     }
 
     pub fn points(self) -> bool {
-        matches!(self, WordMove::GetDistance | WordMove::Measure | WordMove::SetClock | WordMove::NumberSet | WordMove::NumberAdd | WordMove::NumberSubtract | WordMove::NumberMultiply | WordMove::NumberDivide | WordMove::NumberLarger | WordMove::NumberSmaller | WordMove::NumberRemainder | WordMove::NumberPower | WordMove::NumberPercent | WordMove::NumberAddPercent | WordMove::NumberLessPercent | WordMove::NumberRound | WordMove::Drop | WordMove::FlagQuantity | WordMove::FlagProperty | WordMove::FlagWhen | WordMove::FlagWhose | WordMove::AddProperty | WordMove::AddPropertyPast | WordMove::AddRelation | WordMove::AddDeed | WordMove::AddValue | WordMove::AddQuestion | WordMove::FindAsked | WordMove::GetKind | WordMove::Check | WordMove::FindWith | WordMove::GetAllWith | WordMove::GetCount | WordMove::GetRelation | WordMove::GetSubject | WordMove::Compute | WordMove::NameResult | WordMove::GetBefore | WordMove::GetAfter | WordMove::GetGiven | WordMove::GetTotal | WordMove::GetDifference | WordMove::GetMost | WordMove::GetLeast | WordMove::ChangeState | WordMove::StepUser) || self.kind().is_some()
+        matches!(self, WordMove::GetDistance | WordMove::Measure | WordMove::SetClock | WordMove::NumberSet | WordMove::NumberAdd | WordMove::NumberSubtract | WordMove::NumberMultiply | WordMove::NumberDivide | WordMove::NumberLarger | WordMove::NumberSmaller | WordMove::NumberRemainder | WordMove::NumberPower | WordMove::NumberPercent | WordMove::NumberAddPercent | WordMove::NumberLessPercent | WordMove::NumberRound | WordMove::Drop | WordMove::FlagQuantity | WordMove::FlagProperty | WordMove::FlagWhen | WordMove::FlagWhose | WordMove::AddProperty | WordMove::AddPropertyPast | WordMove::AddRelation | WordMove::AddRelationPast | WordMove::AddDeed | WordMove::AddValue | WordMove::AddQuestion | WordMove::FindAsked | WordMove::GetKind | WordMove::Check | WordMove::FindWith | WordMove::GetAllWith | WordMove::GetCount | WordMove::GetRelation | WordMove::GetSubject | WordMove::Compute | WordMove::NameResult | WordMove::GetBefore | WordMove::GetAfter | WordMove::GetGiven | WordMove::GetTotal | WordMove::GetDifference | WordMove::GetMost | WordMove::GetLeast | WordMove::ChangeState | WordMove::StepUser) || self.kind().is_some()
     }
 
     pub fn kind(self) -> Option<&'static str> {
@@ -471,6 +472,7 @@ impl WordMove {
             WordMove::AddProperty => typed(PROPERTY_TYPE),
             WordMove::AddPropertyPast => class_parts(self.family(), &[argument(ADD_KIND, RECORD_MARK), argument(TYPE_KEY, PROPERTY_TYPE), argument(TIME_KEY, PAST_VALUE)]),
             WordMove::AddRelation => typed(RELATION_TYPE),
+            WordMove::AddRelationPast => class_parts(self.family(), &[argument(ADD_KIND, RECORD_MARK), argument(TYPE_KEY, RELATION_TYPE), argument(TIME_KEY, PAST_VALUE)]),
             WordMove::AddDeed => typed(DEED_TYPE),
             WordMove::AddValue => class_parts(self.family(), &[argument(ADD_KIND, RECORD_MARK)]),
             WordMove::StepParent => class_parts(self.family(), &[PARENT_KIND.to_string()]),
@@ -522,7 +524,7 @@ impl WordMove {
     }
 }
 
-pub const ALL: [WordMove; 98] = [
+pub const ALL: [WordMove; 99] = [
     WordMove::Grab,
     WordMove::Drop,
     WordMove::Give,
@@ -550,6 +552,7 @@ pub const ALL: [WordMove; 98] = [
     WordMove::AddProperty,
     WordMove::AddPropertyPast,
     WordMove::AddRelation,
+    WordMove::AddRelationPast,
     WordMove::AddDeed,
     WordMove::AddValue,
     WordMove::SetColor,
