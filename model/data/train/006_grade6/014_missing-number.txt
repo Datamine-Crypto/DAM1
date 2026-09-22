@@ -6,6 +6,8 @@ turn: what number plus 4 makes 10? => | 6
 turn: what number times 3 makes 12? => | 4
 turn: what number minus 5 makes 2? => | 7
 turn: 8 plus what number makes 15? => | 7
+turn: 20 plus what number makes 35? => | 15
+turn: 9 plus what number makes 21? => | 12
 tom has 4 apples. ann has 10 apples. sam has 3 pens. => tom -> {has} -> apple:quantity(4); {number:value(4)}; ann -> {has} -> apple:quantity(10); {number:value(10)}; sam -> {has} -> pen:quantity(3); {number:value(3)} | what number plus 4 makes 10? = 6; what number times 3 makes 12? = 4; what number minus 5 makes 2? = 7; 8 plus what number makes 15? = 7; how many apples does tom have? = 4; how many apples does ann have? = 10; how many more apples does ann have than tom? = 6; how many apples do tom and ann have? = 14; what number plus 3 makes 10? = 7; what number times 4 makes 12? = 3; how many pens does sam have? = 3
 kim has 5 cards. joe has 12 cards. lily has 2 stamps. => kim -> {has} -> card:quantity(5); {number:value(5)}; joe -> {has} -> card:quantity(12); {number:value(12)}; lily -> {has} -> stamp:quantity(2); {number:value(2)} | what number plus 5 makes 12? = 7; what number minus 2 makes 5? = 7; what number times 2 makes 12? = 6; 5 plus what number makes 12? = 7; how many cards does kim have? = 5; how many more cards does joe have than kim? = 7; how many cards do kim and joe have? = 17; how many stamps does lily have? = 2; who has more cards? = joe
 test: turn: what number plus 9 makes 20? => | 11

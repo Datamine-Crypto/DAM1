@@ -88,18 +88,25 @@ pub fn word_stepped(mind: &mut CursorMind, step: &WordStep) -> bool {
     mind.stack.push(item);
     mind.steps += 1;
     let word = word.unwrap_or_default();
+    let stood = mind.at;
     let at = mind.at;
     let plain = at != 0 && !mind.tree.node(at).name.starts_with(BRACE_OPEN_TEXT);
     let braced = at != 0 && !plain;
     if !super::moving::carried(mind, step, &word, at, plain, braced) && !super::answering::told_back(mind, step, &word, at, plain, braced) {
         super::writing::wrote_down(mind, step, &word, at, plain, braced);
     }
+    if mind.at != stood {
+        let now = super::view::cursor_item(mind);
+        mind.stack.push(now);
+    }
     true
 }
 because!(
     word_stepped,
     WordWorld,
-    "one step taken on the mind, a compute pointed at a word of a part writes that part of the whole said after it, a number or what a thing named is worth, as many times as the number before the part says, two fifths of ten and a third of tom's apples, a get of a count of parts the thing holds none of reads the count the seeds write under the part as a relation of the thing or of the seeded thing of its name, a dog's four legs, a get of a choice between two things by a comparison writes the one the story put ahead, by the comparison said or by its opposite the other way, which is faster a car or a bike, a get of the first or the last of a kind that holds no such relation itself reads it off the seeded thing whose first or last is of that kind, the first month off the year, a value added under is right after a word the seeds never state takes that word under itself as what \
+    "one step taken on the mind, which says where the cursor came to rest when it moved it, since the stack is all the next \
+     step is chosen from and a step that walks to the thing a question asks about leaves the reader blind to what it walked to: \
+     a compute pointed at a word of a part writes that part of the whole said after it, a compute pointed at a word of a part writes that part of the whole said after it, a number or what a thing named is worth, as many times as the number before the part says, two fifths of ten and a third of tom's apples, a get of a count of parts the thing holds none of reads the count the seeds write under the part as a relation of the thing or of the seeded thing of its name, a dog's four legs, a get of a choice between two things by a comparison writes the one the story put ahead, by the comparison said or by its opposite the other way, which is faster a car or a bike, a get of the first or the last of a kind that holds no such relation itself reads it off the seeded thing whose first or last is of that kind, the first month off the year, a value added under is right after a word the seeds never state takes that word under itself as what \
      describes it, a useful device, so what the thing is stays the device, a get of a name writes the name a thing goes by when one was \
      told, and for the speaker what they said they are when it is no class or quality, i am michael, and never the word user, a get of \
      what a thing of the seeds is writes the first class the seeds give it when they give several, a dog a mammal, a get of a reply writes \
@@ -267,3 +274,94 @@ because!(
      kind, as the small of a mouse asked its color, and the check yes or no by whether the thing holds the value its word names; pointing \
      at nothing passes over the place a moving thing came from, and continuing does nothing"
 );
+
+fn cursor_thing(mind: &CursorMind) -> Vec<usize> {
+    let at = mind.at;
+    if at == 0 || mind.tree.node(at).name.starts_with(BRACE_OPEN_TEXT) {
+        return Vec::new();
+    }
+    let name = mind.tree.node(at).name.to_string();
+    std::iter::once(at).chain(mind.tree.named(&name).filter(|&n| n != 0 && n != at && !mind.tree.node(n).gone && mind.tree.node(n).link.is_none())).collect()
+}
+because!(cursor_thing, WordWorld, "the thing a sight reads: the one the cursor stands on and every other node of its name, since a get \
+     of a relation is read off the thing asked about and not off the word being heard, which at a question mark names nothing");
+
+fn asked_relations(mind: &CursorMind) -> Vec<String> {
+    mind.before.iter().map(|said| super::lookup::relation_named(mind, said)).collect()
+}
+because!(asked_relations, WordWorld, "the relations the sentence names, one for each word it has said, since the \
+     relation a question asks by is said before the mark that answers it");
+
+pub(super) fn holds_asked(mind: &CursorMind) -> bool {
+    let asked = asked_relations(mind);
+    cursor_thing(mind).into_iter().any(|n| asked.iter().any(|relation| super::lookup::own_child(mind, n, relation).is_some()))
+}
+because!(holds_asked, WordWorld, "whether the thing the cursor stands on holds a relation the sentence names, so the get that reads it \
+     forward is told from the gets that must look elsewhere");
+
+pub(super) fn holds_doing(mind: &CursorMind) -> bool {
+    let doing = crate::cursor::step_item(super::mind::ACTIVITY);
+    cursor_thing(mind).into_iter().any(|n| super::lookup::present_children(mind, n).into_iter().any(|r| {
+        mind.tree.node(r).name.starts_with(BRACE_OPEN_TEXT) && (*mind.tree.node(r).name == *doing || super::lookup::own_child(mind, r, &doing).is_some())
+    }))
+}
+because!(holds_doing, WordWorld, "whether what the thing the cursor stands on holds is a doing of its own, tom loves to swim, so the \
+     get that reads the doing is told from the get that reads a plain value");
+
+pub(super) fn held_under(mind: &CursorMind) -> bool {
+    let asked = asked_relations(mind);
+    cursor_thing(mind).into_iter().any(|n| {
+        let up = mind.tree.node(n).parent;
+        up != 0 && asked.iter().any(|relation| *mind.tree.node(up).name == **relation) && mind.tree.node(up).parent != 0 && mind.tree.node(up).parent != mind.at
+    })
+}
+because!(held_under, WordWorld, "whether the thing the cursor stands on stands under a relation the sentence names that another thing \
+     holds, so the get that reads a relation backward is told from the one that reads it forward");
+
+pub(super) fn reaches_through(mind: &CursorMind) -> bool {
+    let at = mind.at;
+    at != 0 && !mind.tree.node(at).name.starts_with(BRACE_OPEN_TEXT) && mind.before.iter().any(|said| super::lookup::grandparent(mind, at, said).is_some())
+}
+because!(reaches_through, WordWorld, "whether a walk of two steps out of the thing the cursor stands on reaches a relation the \
+     sentence names, the father of one of its parents for a grandfather, so the get that walks through is told from the answer of \
+     nothing, where the thing has parents but none of them holds what is asked");
+
+pub(super) fn holds_said(mind: &CursorMind) -> bool {
+    cursor_thing(mind).into_iter().any(|n| super::lookup::present_children(mind, n).into_iter().flat_map(|c| std::iter::once(c).chain(super::lookup::present_children(mind, c))).any(|m| {
+        let name = crate::cursor::bare_name(&mind.tree.node(m).name);
+        !mind.tree.node(m).name.starts_with(BRACE_OPEN_TEXT) && mind.before.iter().any(|said| *super::view::singular(said) == *super::view::singular(&name))
+    }))
+}
+because!(holds_said, WordWorld, "whether the thing the cursor stands on holds a thing a word of the sentence names, under itself or \
+     under one of its relations, so a dog asked whether it has a tail is told from a dog asked whether it has a horn, which with the \
+     names taken away are the same question");
+
+pub(super) fn manners_said(mind: &CursorMind) -> bool {
+    mind.before.iter().any(|said| super::lookup::has_relation(mind, said, super::english::REPLY_RELATION))
+}
+because!(manners_said, WordWorld, "whether a word the sentence has said is one of manners the seeds give a reply, good evening, since \
+     the get of a reply is chosen at the mark that closes the turn and the mark is no word of manners itself");
+
+pub(super) fn ranked_kind(mind: &CursorMind) -> bool {
+    let at = mind.at;
+    if at == 0 || mind.tree.node(at).name.starts_with(BRACE_OPEN_TEXT) {
+        return false;
+    }
+    let name = mind.tree.node(at).name.to_string();
+    mind.before.iter().any(|said| (*said == *super::mind::ORDINALS[0] || *said == *super::mind::LAST_PLACE) && super::answering::ranked_value(mind, &name, &super::lookup::relation_named(mind, said)).is_some())
+}
+because!(ranked_kind, WordWorld, "whether the seeds rank the kind the cursor stands on, for a first or a last the sentence asks, the \
+     days of a week or the months of a year, so the get that writes the first or the last of a kind is told from the get that writes \
+     what a thing is");
+
+pub(super) fn owned_twice(mind: &CursorMind) -> bool {
+    cursor_thing(mind).into_iter().any(|n| { let thing = mind.tree.node(n).link.unwrap_or(n); super::lookup::own_child(mind, thing, OWNER_TAG).is_some_and(|tag| super::lookup::present_children(mind, tag).len() > 1) })
+}
+because!(owned_twice, WordWorld, "whether the thing the cursor stands on has been handed on more than once, so the get that writes \
+     every owner it has had is told from the get that writes the owner it has");
+
+pub(super) fn owned_thing(mind: &CursorMind) -> bool {
+    cursor_thing(mind).into_iter().any(|n| super::lookup::own_child(mind, n, OWNER_TAG).is_some())
+}
+because!(owned_thing, WordWorld, "whether the thing the cursor stands on has an owner written on it, so the get of an owner is told \
+     from the others");

@@ -11,5 +11,6 @@ turn: german is a language berlin is a capital what is german => german -> {is} 
 turn: elizabeth was a queen arthur was a king who was elizabeth => elizabeth -> {is} -> queen; arthur -> {is} -> king | queen
 turn: arthur was a king lincoln was a president who was arthur => arthur -> {is} -> king; lincoln -> {is} -> president | king
 turn: lincoln was a president victoria was a queen who was lincoln => lincoln -> {is} -> president; victoria -> {is} -> queen | president
+turn: mox was a queen vell was a king who was mox => mox -> {is} -> queen; vell -> {is} -> king | queen
 test: spanish is a language. rome is a capital. rome is the capital of italy. => spanish -> {is} -> language; rome -> {is} -> capital; italy -> {capital} -> rome | what is spanish? = language; is rome a capital? = yes; what is the capital of italy? = rome; what is rome? = capital; is spanish a language? = yes; is rome a language? = no; is spanish a capital? = no; what is the language of italy? = italian
 test: turn: cleopatra was a queen nero was a king who was cleopatra => cleopatra -> {is} -> queen; nero -> {is} -> king | queen

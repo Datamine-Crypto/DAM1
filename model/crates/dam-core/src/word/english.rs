@@ -774,6 +774,14 @@ because!(THING_PRONOUN_CLASS, WordEnglish, "the class of the words that stand fo
 pub(super) const PERSON_PRONOUN_CLASS: &str = "he";
 because!(PERSON_PRONOUN_CLASS, WordEnglish, "the class of the words that stand for the person the story told of last");
 
+pub(super) const ORDINAL_CLASS: &str = "ordinal";
+because!(ORDINAL_CLASS, WordEnglish, "the class of a word that names a place in an order, first or third, so a word that opens a \
+     sentence to order the telling is told from one that says when it happened, which the stack otherwise shows alike, since the text \
+     of a plain word is left off its event so a word never seen reads by its shape");
+pub(super) const TIME_CLASS: &str = "time";
+because!(TIME_CLASS, WordEnglish, "the class of a word that names a time of day, morning or evening, which says when the move of the \
+     sentence was made");
+
 pub(super) const PLACE_CLASS: &str = "place";
 because!(PLACE_CLASS, WordEnglish, "the class of a place word, which says the thing must be placed");
 
@@ -830,6 +838,18 @@ because!(CURSOR_BY, WordEnglish, "what brought the cursor's event onto the stack
 pub(super) const FACT_BY: &str = "fact";
 because!(FACT_BY, WordEnglish, "what brought a thing's event onto the stack: the word itself, since a thing word makes the thing appear \
      before he moves");
+
+pub(super) const SCENE_BY: &str = "scene";
+because!(SCENE_BY, WordEnglish, "what brought a scene's event onto the stack: the arrival of a word, at which the whole of what the story \
+     holds is laid out for him to read before the word itself");
+
+pub(super) const SCENE_END: &str = "{scene end}";
+because!(SCENE_END, WordEnglish, "the mark that closes the scene on the stack, so the events after it are where he stands, the word and \
+     what he does about it, and the events before it are what he is talking about; the scene lies under them and never between them, since \
+     where an event sits is read as a feature of it and a scene laid in between would move the cursor's record from sentence to sentence");
+
+pub(super) const RECORD_IN: &str = "in";
+because!(RECORD_IN, WordEnglish, "the argument of a scene's record that names what holds the thing, the world where nothing does");
 
 pub(super) const WORLD_KIND: &str = "world";
 because!(WORLD_KIND, WordEnglish, "the cursor's kind at the root, where every sentence starts");
@@ -954,12 +974,27 @@ because!(SAID_SIGHTS, WordEnglish, "the feature place of the words said before i
      any other by its first class, as the word just before is seen too, so a rule that reads an earlier word, a relative word or an \
      apostrophe, can be learned, and never by a word a lesson may swap");
 
-pub(super) const OPEN_CLASSES: [&str; 5] = [THING_CLASS, VALUE_CLASS, QUALITY_CLASS, OTHER_CLASS, NUMBER_CLASS];
+pub(super) const OPEN_CLASSES: [&str; 6] = [THING_CLASS, VALUE_CLASS, QUALITY_CLASS, OTHER_CLASS, NUMBER_CLASS, TIME_CLASS];
 because!(OPEN_CLASSES, WordEnglish, "the classes of the words a lesson may swap for others, which are seen among the words said before by \
-     their class and never by their text");
+     their class and never by their text, a word of a time of day among them, so good evening is read as good morning is; the word \
+     itself keeps its text where it is the word being read, and only where it was said before is it read by its class");
 
 pub const WORD_SIGHTS: [&str; 12] = ["word.told", "word.value-told", "word.relation-told", "word.person", "word.activity", "word.result", "word.measure-told", "word.numbered", "word.role", "word.told-article", "word.mannered", "word.classed"];
 because!(WORD_SIGHTS, WordEnglish, "the feature places of what the story shows of a word, in the order the sight gives them");
 
+pub const CURSOR_SIGHTS: [&str; 9] = ["cursor.holds-asked", "cursor.holds-doing", "cursor.held-under", "cursor.owned", "cursor.reaches-through", "cursor.mannered", "cursor.holds-said", "cursor.owned-twice", "cursor.ranked"];
+because!(CURSOR_SIGHTS, WordEnglish, "the feature places of what a get of a relation is chosen by, read off the thing the cursor \
+     stands on and the words the sentence has said: whether it holds a relation the sentence names, whether what it holds is a doing \
+     of its own rather than a plain value, whether it stands under a relation the sentence names that another thing holds, and \
+     whether it has an owner, and whether a walk of two steps out of it reaches the relation the sentence names, the father of a \
+     parent for a grandfather, and whether a word the sentence has said is one of manners the seeds give a reply; they stand on \
+     and whether it holds a thing a word of the sentence names, a dog asked for a tail walking to the tail where a dog asked for a \
+     horn is answered no outright, and whether it has been handed on more than once, since every owner it has had is read by a get of its own, and whether \
+     the seeds rank the kind it stands on for a first or a last the sentence asks, since the first and the last of such a kind \
+     are read by a get of their own, what is the last day from what a day is; a get \
+     of its own; a dog asked for a \
+     horn is answered no outright; they stand on \
+     the cursor's event and not on a word's, since the mark that answers a question is given \
+     no event of a word and the mark is where the get is chosen");
 pub(super) const DOING_LETTERS: usize = 4;
 because!(DOING_LETTERS, WordEnglish, "the fewest letters of a word of doing with its ending, hunts, under which a word ending so is a small word of its own, as or yes");

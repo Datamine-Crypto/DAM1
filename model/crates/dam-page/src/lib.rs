@@ -95,14 +95,9 @@ fn story_paths(mind: &CursorMind) -> Vec<String> {
         }
         names.reverse();
         Some(names.join(PATH_MARK))
-    }).fold(Vec::new(), |mut paths: Vec<String>, path| {
-        if !paths.contains(&path) {
-            paths.push(path);
-        }
-        paths
-    })
+    }).collect()
 }
-because!(story_paths, PageEngine, "the paths of the tree from the world down to every leaf the story added, a thing that stands with its owner written as owner has thing with the past of the owning after the thing, each path once, the state's own nodes and the words of an open question left out, since a question tells nothing, as a person reads them");
+because!(story_paths, PageEngine, "the paths of the tree from the world down to every leaf the story added, a thing that stands with its owner written as owner has thing with the past of the owning after the thing, one path a leaf and the same words as often as the tree writes them, since a thing that goes twice holds two goings and each says when it was, the state's own nodes and the words of an open question left out, since a question tells nothing, as a person reads them");
 
 #[derive(Serialize)]
 struct Settings {
@@ -170,11 +165,28 @@ pub fn described(text: &str) -> Result<String, String> {
         for sentence in sentences(simple_words(text)) {
             taught_words(&mut engine.mind, &punctuated(sentence));
         }
-        let told = story_paths(&engine.mind).into_iter().filter(|path| !before.contains(path)).collect();
+        let told = added(&before, story_paths(&engine.mind));
         serde_json::to_string(&Reading { steps: Vec::new(), output: Vec::new(), ended: true, told }).map_err(|e| e.to_string())
     })
 }
 because!(described, PageEngine, "a world described to the page and not said to the network: the teacher's own rules write each sentence into the chat's mind, exactly and with no move of the network, so a game can set a world the network has to explore, and what the description wrote is given back");
+
+fn added(before: &[String], now: Vec<String>) -> Vec<String> {
+    let mut held: std::collections::HashMap<&str, usize> = std::collections::HashMap::new();
+    for path in before {
+        *held.entry(path.as_str()).or_default() += 1;
+    }
+    now.into_iter()
+        .filter(|path| match held.get_mut(path.as_str()) {
+            Some(many) if *many > 0 => {
+                *many -= 1;
+                false
+            }
+            _ => true,
+        })
+        .collect()
+}
+because!(added, PageEngine, "the paths a turn wrote: those the tree holds now beside those it held before, counted rather than named, since a second going of the same thing writes the same words again, john went to the movies and then to the store, and the second telling of when it was is a path the turn wrote and not the first one seen twice");
 
 fn asked_here(words: &[String]) -> bool {
     let asks = words.iter().any(|w| ASKING.contains(&w.as_str()));
@@ -198,7 +210,7 @@ pub fn read(text: &str, steps: usize) -> Result<String, String> {
             answer.ended &= reading.ended;
             engine.mind = reading.mind;
         }
-        answer.told = story_paths(&engine.mind).into_iter().filter(|path| !before.contains(path)).collect();
+        answer.told = added(&before, story_paths(&engine.mind));
         serde_json::to_string(&answer).map_err(|e| e.to_string())
     })
 }

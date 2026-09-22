@@ -176,6 +176,15 @@ pub fn world_form(mind: &CursorMind, statement: &str) -> Vec<String> {
     while i + 1 < path.len() {
         let (a, relation) = (&names[i], &path[i + 1].name);
         let bare_relation = bare_name(relation);
+        let doing = braced(i + PATH_STRIDE) && bare_name(&path[i + PATH_STRIDE].name) == super::mind::ACTIVITY;
+        if doing && i + PATH_STRIDE + 1 < names.len() {
+            let done = &names[i + PATH_STRIDE + 1];
+            out.push(format!("{prefix}{a}{PATH_MARK}{}{PATH_MARK}{}{PATH_MARK}{done}", names[i + 1], names[i + PATH_STRIDE]));
+            if i + PATH_STRIDE + PATH_STRIDE < names.len() {
+                out.extend(world_form(mind, &format!("{prefix}{}", names[i + PATH_STRIDE + 1..].join(PATH_MARK))));
+            }
+            break;
+        }
         if i + PATH_STRIDE >= path.len() || braced(i + PATH_STRIDE) {
             out.push(format!("{prefix}{}", quality(a, &bare_relation)));
             break;
@@ -209,7 +218,7 @@ pub fn world_form(mind: &CursorMind, statement: &str) -> Vec<String> {
             format!("{a}{PATH_MARK}{is}{PATH_MARK}{b}{TAG_MARK}{QUANTITY_TAG_NAME}{TAG_VALUE_OPEN}0{TAG_VALUE_CLOSE}")
         } else if *relation == *is {
             quality(a, &path[i + PATH_STRIDE].name)
-        } else if super::moves::KINDS.iter().any(|(_, kind)| *kind == bare_relation) {
+        } else if super::moves::KINDS.contains(&bare_relation.as_str()) {
             format!("{a}{PATH_MARK}{is}{PATH_MARK}{relation}{PATH_MARK}{b_said}")
         } else {
             format!("{a}{PATH_MARK}{relation}{PATH_MARK}{b_said}")

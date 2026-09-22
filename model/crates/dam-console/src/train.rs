@@ -45,6 +45,7 @@ because!(
 
 #[derive(Clone, Debug, Default)]
 pub struct TrainRow {
+    pub file: String,
     pub line: usize,
     pub test: bool,
     pub word: String,
@@ -56,7 +57,7 @@ pub struct TrainRow {
 }
 because!(
     TrainRow,
-    "one row the teacher wrote, as a trainer reads it: the quiz line it came from, whether it is held out, the input item it was taken at, the step taught there, how many events the line's stack had held, the events of that line's stack, oldest first and shared by every row of the line, and for a row that copies a token the slots the token stands in and the slots it may be copied from; the row's slots are the newest events up to the stack's size, each with the place of its depth added"
+    "one row the teacher wrote, as a trainer reads it: the lesson and the quiz line it came from, whether it is held out, the input item it was taken at, the step taught there, how many events the line's stack had held, the events of that line's stack, oldest first and shared by every row of the line, and for a row that copies a token the slots the token stands in and the slots it may be copied from; the row's slots are the newest events up to the stack's size, each with the place of its depth added"
 );
 
 impl TrainRow {
@@ -73,6 +74,8 @@ impl TrainRow {
 #[derive(Deserialize)]
 struct WrittenRecord {
     #[serde(default)]
+    file: String,
+    #[serde(default)]
     line: usize,
     #[serde(default)]
     test: bool,
@@ -81,7 +84,7 @@ struct WrittenRecord {
     #[serde(default)]
     rows: Vec<WrittenRow>,
 }
-because!(WrittenRecord, "the rows of one quiz line as the teacher wrote them: the line, whether it is held out, the events its stack held, oldest first, and the rows over them");
+because!(WrittenRecord, "the rows of one quiz line as the teacher wrote them: the lesson, the line, whether it is held out, the events its stack held, oldest first, and the rows over them");
 
 #[derive(Deserialize)]
 struct WrittenRow {
@@ -107,7 +110,7 @@ pub fn rows_of(text: &str) -> Result<Vec<TrainRow>, String> {
             if row.depth > stack.len() {
                 return Err(format!("line {}: a row at depth {} over {} events", record.line, row.depth, stack.len()));
             }
-            rows.push(TrainRow { line: record.line, test: record.test, word: row.word, behavior: row.behavior, depth: row.depth, stack: stack.clone(), pointed: row.pointed, pointable: row.pointable });
+            rows.push(TrainRow { file: record.file.clone(), line: record.line, test: record.test, word: row.word, behavior: row.behavior, depth: row.depth, stack: stack.clone(), pointed: row.pointed, pointable: row.pointable });
         }
     }
     Ok(rows)
@@ -521,13 +524,42 @@ pub fn trained_acts(rows: &[TrainRow], outputs: &[String], (t, (settle, t_enough
     if let Some(c) = &card {
         c.written_into((&mut net, &mut sq))?;
     }
+    let stacked: BTreeMap<u64, Vec<&TrainRow>> = taught.iter().fold(BTreeMap::new(), |mut all, (row, _)| {
+        all.entry(stack_alike(row)).or_default().push(row);
+        all
+    });
+    for (row, _) in taught.iter().filter(|&&taken| !taken_as_taught(&net, taken)) {
+        let wanted = row.behavior.as_deref().unwrap_or_default();
+        let rivals: Vec<String> = stacked
+            .get(&stack_alike(row))
+            .map(|alike| {
+                let mut said: Vec<String> = alike.iter().filter(|other| other.behavior.as_deref().unwrap_or_default() != wanted).map(|other| format!("{} line {} at {:?} wants {}", other.file, other.line, other.word, other.behavior.as_deref().unwrap_or_default())).collect();
+                said.sort();
+                said.dedup();
+                said
+            })
+            .unwrap_or_default();
+        if rivals.is_empty() {
+            println!("row not learned: {} line {} at \"{}\" wants {wanted}", row.file, row.line, row.word);
+        } else {
+            println!("row not learned: {} line {} at \"{}\" wants {wanted}, on the stack of {}", row.file, row.line, row.word, rivals.join(" and "));
+        }
+    }
     Ok((net, sq))
 }
 because!(
     trained_acts,
     LoopTrainer,
-    "a network over the stack taught the loop's rows, from a fresh start or from the network of an earlier grade, the held out ones left aside, with one output for every action named, refused when a row's action is not one of them, every epoch reported, stopping once the share of learned lines whose every row is taken as taught has reached the share that is enough, a line being right only whole and the lines told apart by where a line of rows begins, so rows of several files never share a line, for as many epochs in a row as the settling allows beyond the first, or once the rows taken wrongly have gone the patience of epochs without a new low, since rows taught two actions on one stack can never all be right, or once the run has used the seconds it was given, since the user wants a run cut short and looked at before it is given more time; each step worked on the graphics card when the run asks for it, else each step's rows worked out on the machine's threads against the weights at the start of the step, added into one gradient in their order and applied once, and every row checked on threads, since the user wants a run fast and stopped as soon as it is good enough"
+    "a network over the stack taught the loop's rows, from a fresh start or from the network of an earlier grade, the held out ones left aside, with one output for every action named, refused when a row's action is not one of them, every epoch reported, stopping once the share of learned lines whose every row is taken as taught has reached the share that is enough, a line being right only whole and the lines told apart by where a line of rows begins, so rows of several files never share a line, for as many epochs in a row as the settling allows beyond the first, or once the rows taken wrongly have gone the patience of epochs without a new low, since rows taught two actions on one stack can never all be right, each such row said at the end by the line it came from, the item it was taken at and the step it wanted, so the lines that teach one stack two things can be found and said again, or once the run has used the seconds it was given, since the user wants a run cut short and looked at before it is given more time; each step worked on the graphics card when the run asks for it, else each step's rows worked out on the machine's threads against the weights at the start of the step, added into one gradient in their order and applied once, and every row checked on threads, since the user wants a run fast and stopped as soon as it is good enough"
 );
+
+fn stack_alike(row: &TrainRow) -> u64 {
+    let mut seen = std::collections::hash_map::DefaultHasher::new();
+    std::hash::Hash::hash(&row.items(), &mut seen);
+    std::hash::Hasher::finish(&seen)
+}
+because!(stack_alike, LoopTrainer, "what tells two rows apart by their stacks alone: the events each is given, hashed, so the rows a \
+     network is asked to take two ways from one stack are found by grouping on it");
 
 fn act_gradient(net: &Stacked, (row, wanted): (&TrainRow, usize), acc: &mut Gradient) {
     let items = row.items();

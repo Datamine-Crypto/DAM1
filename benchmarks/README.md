@@ -4,7 +4,7 @@ DAM1 beside small language models on the same questions, with one rule for every
 
 ## What is measured
 
-Every question of a held-out line of the curriculum: 2,669 questions over 16 lesson folders, from
+Every question of a held-out line of the curriculum: 2,673 questions over 16 lesson folders, from
 the basics to university. A held-out line is a line marked `test:` in its lesson, which no network
 was trained on. Each item is the text of the line, the question, and the answer the lesson wants.
 
@@ -27,10 +27,10 @@ words. The reply is right when the answer is in it. An answer of several parts n
 any order. An empty reply is right only when the answer is nothing. The table also gives the exact
 share, where the reply must begin with the answer and add nothing before it.
 
-DAM1 is measured twice, by two paths that agree. `dam1.mjs` asks the browser build as a person does,
-and it answers 2,659 of the 2,669. Reading the same lines with the console, `dam word report` from
-the state the model ships, answers 2,668 of the 2,669: the difference is ten questions written with
-no question mark, such as `the hat is`, which the chat page reads as a statement.
+DAM1 is measured twice, by two paths. `dam1.mjs` asks the browser build as a person does, and it
+answers 2,669 of the 2,673. Reading the same lines with the console, `dam word report` from the
+state the model ships, answers 3,113 of the 3,116 questions it counts, which include the chat turns
+the benchmark leaves out. The other models were run when the curriculum held 2,669 questions.
 
 ## Run it
 

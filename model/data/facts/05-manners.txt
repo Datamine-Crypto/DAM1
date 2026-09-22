@@ -7,5 +7,6 @@ the reply of bye is goodbye.
 the reply of goodbye is goodbye.
 the reply of thank is welcome.
 the reply of morning is hello.
+the reply of afternoon is hello.
 the reply of evening is hello.
 the reply of welcome is hello.

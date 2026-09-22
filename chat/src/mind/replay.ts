@@ -53,6 +53,8 @@ const skipped = [
 ];
 // The words a person says of themselves: on the map they are the one tile of the user.
 const selfWords = ['i', 'me', 'my', 'mine', 'myself'];
+// The words that stand for someone or something already spoken of, which name no thing of their own.
+const standsFor = ['he', 'she', 'it', 'they', 'him', 'her', 'them', 'his', 'hers', 'its', 'their'];
 export const worldInk = '#ffd166';
 // The two ways to use the input, each with what it means for him, so the choice explains itself.
 export const modes = [
@@ -63,6 +65,9 @@ export const modes = [
 export const groupWord = 'group';
 const itemsWord = 'items';
 const houseWord = 'home';
+// What he said back, written under this name: an answer is not a thing of the world, so a path that opens
+// with it draws nothing on the map.
+const answerWord = '{replied}';
 export const selfName = 'user';
 export const networkNames = ['you', 'assistant', 'dam1'];
 export const networkName = 'DAM1';
@@ -224,6 +229,9 @@ function walked(turns: GameTurn[], ends: Map<string, Region>): Frame[] {
   };
 
   turns.forEach((turn, turnAt) => {
+    // The things a group held when the turn opened: one this turn puts somewhere else stands in that place and
+    // the group keeps a line to it, since it is still one of them.
+    const grouped: { thing: number; group: number }[] = scene.places.flatMap((place, at) => (place.inside !== null && scene.places[place.inside].name === groupWord ? [{ thing: at, group: place.inside }] : []));
     let says: string[] = [];
     // Qualities said before their thing wait here, and are joined to the thing by a line once it is put down.
     let waiting: string[] = [];
@@ -240,6 +248,9 @@ function walked(turns: GameTurn[], ends: Map<string, Region>): Frame[] {
     describing = turn.world;
     // True at the start of a sentence: he still stands where the last one left him, and its first thing calls him over.
     let opened = true;
+    // True while the words of a question are being written into the question itself: where did he go. They say what
+    // is asked and name nothing of the world, so they draw no tile, and it ends when he goes looking for the answer.
+    let asking = false;
     turn.steps.forEach(([word, moves], at) => {
       const stack: StackItem[] = [{ text: 'cursor', kind: 'cursor' }, { text: word, kind: 'word' }];
       record.push({ text: word, kind: 'word' });
@@ -273,7 +284,7 @@ function walked(turns: GameTurn[], ends: Map<string, Region>): Frame[] {
         const [move, pointed] = taken.split('->');
         movedSoFar += 1;
         if (move === continueMove) {
-          if (mark) { scene = { ...scene, carries: null, owns: false, born: null, points: null, notes: [] }; opened = true; }
+          if (mark) { scene = { ...scene, carries: null, owns: false, born: null, points: null, notes: [] }; opened = true; asking = false; }
           if (!mark) act(pictures.next); else doing = null;
           push(mark ? 'continues, and stays where the talk was' : 'continues to the next word');
           continue;
@@ -284,7 +295,7 @@ function walked(turns: GameTurn[], ends: Map<string, Region>): Frame[] {
         const relation = move.includes('type: relation') || move.includes('type: quantity') || (move.includes('children add') && skipped.includes(named)) || (named === houseWord && !turn.world);
         // A word of the question, what or who, is no thing: pointing at it draws no tile that would stay on the map.
         const asksOnly = pointed !== undefined && pointed !== null && skipped.includes(pointed) && !scene.places.some((place) => place.name === pointed);
-        if (pointed && !relation && !marks.includes(pointed) && !asksOnly) {
+        if (pointed && !relation && !marks.includes(pointed) && !asksOnly && !asking) {
           const aimed = tileOf(pointed);
           scene = { ...scene, points: aimed };
           frames.push({ turn: turnAt, word: at, scene, stack: [...stack, { text: move, kind: 'move' }, { text: pointed, kind: 'pointed' }], note: `points at "${pointed}"`, says, doing: pictures.point, answers: false, heardSoFar, movedSoFar, kept: turnAt });
@@ -324,6 +335,12 @@ function walked(turns: GameTurn[], ends: Map<string, Region>): Frame[] {
           scene = { ...scene, born: null };
           act(pictures.note);
         } else if (move.includes('type: question')) {
+          asking = true;
+          scene = { ...scene, born: null };
+          act(pictures.question);
+        } else if (asking && (move.includes('children add') || move.includes('setProperty'))) {
+          // A word of the question is written into the question and is no thing of the world: who he is asked
+          // about is the thing already on the map, which he goes to once the question is whole.
           scene = { ...scene, born: null };
           act(pictures.question);
         } else if (relation) {
@@ -338,7 +355,12 @@ function walked(turns: GameTurn[], ends: Map<string, Region>): Frame[] {
           scene = { ...scene, places, at: tile };
           act(pictures.write);
         } else if (move.includes('find') || move.includes('step')) {
-          const tile = pointed && !marks.includes(pointed) ? tileOf(pointed) : scene.at;
+          // A word that stands for someone already spoken of, he or it, names no thing of its own: the search
+          // ends at the thing the talk is about, which is the thing the map is curious about.
+          const aimed = pointed && !marks.includes(pointed) ? pointed : null;
+          const stood = aimed !== null && standsFor.includes(aimed) ? scene.places.findIndex((place) => place.name === scene.curious[0]) : -1;
+          const known = aimed === null ? -1 : scene.places.findIndex((place) => place.name === aimed || singular(place.name) === singular(aimed));
+          const tile = stood >= 0 ? stood : known >= 0 ? known : aimed !== null && !asking ? tileOf(aimed) : scene.at;
           scene = { ...scene, at: tile };
           // Going to the person playing is a heart, not a search.
           act(move.includes('step user') || (tile !== null && scene.places[tile]?.name === selfName) ? pictures.heart : pointed ? pictures.look : pictures.step);
@@ -375,6 +397,10 @@ function walked(turns: GameTurn[], ends: Map<string, Region>): Frame[] {
     // The things whose is this turn tells in the past, and the links this turn drew, to tell which was meant.
     const pastIs: number[] = [];
     const linksBefore = scene.links.length;
+    // A going whose time is told on the going itself, john went to the movies: the path that carries the time
+    // ends at the going and names no place, so the line is drawn as past once the path that names the place
+    // has drawn it, whichever of the two the tree holds first.
+    const pastLinks: { from: number; label: string }[] = [];
     // What the tree says stands in what: a plain name straight after another, with no braced name between them.
     // A path opens at a thing of its own, so a thing that opens a path stands in nothing, whatever the walk did
     // while it was being read.
@@ -408,12 +434,19 @@ function walked(turns: GameTurn[], ends: Map<string, Region>): Frame[] {
       const top = { ...place, rooted: true };
       if (top.inside === null) return top;
       const holder = scene.places[top.inside];
+      // A group is no place a thing walked out of: being spoken of again leaves it one of them.
+      if (holder.name === groupWord) return top;
       return holds.has(`${singular(place.name)}>${singular(holder.name)}`) ? top : { ...top, inside: null };
     }) };
     for (const path of turn.wrote) {
       const parts = partsOf(path);
+      if (parts[0] === answerWord) continue;
       let from: number | null = null;
       let label: string[] = [];
+      // True for the thing a group holds, named right after the items of the group: the group is a thing of its
+      // own that holds them both, so it takes the thing in wherever it stood before, and the thing is drawn at
+      // the top of the map as well, since it is somewhere else too.
+      let item = false;
       // The line the path's last two things are joined by, when there is one: a time after them is that line's.
       let lastLink: number | null = null;
       // Whether the last thing of the path stands with its owner, written owner has thing: a past after it is the owning's.
@@ -427,7 +460,7 @@ function walked(turns: GameTurn[], ends: Map<string, Region>): Frame[] {
         // The group the story made is a thing of its own, so the path opens at its tile and what it holds
         // stands inside it, as a thing stands in a place.
         if (braced && part.replace(/[{}]/g, '') === groupWord && from === null) { from = tileOf(groupWord); continue; }
-        if (braced && part.replace(/[{}]/g, '') === itemsWord && from !== null) { label = []; continue; }
+        if (braced && part.replace(/[{}]/g, '') === itemsWord && from !== null) { label = []; item = true; continue; }
         if (braced) { label.push(part.replace(/[{}]/g, '')); continue; }
         // A flag set true is no thing: an article goes before the name, any other flag is a tag.
         if (part === 'true' && from !== null && label.length > 0) {
@@ -466,7 +499,10 @@ function walked(turns: GameTurn[], ends: Map<string, Region>): Frame[] {
         if (from !== null && from !== tile) {
           const holder: number = from;
           if (label.length === 0) {
-            if (scene.places[tile].inside === null && !scene.places[tile].named && !within(tile, holder)) scene = { ...scene, places: scene.places.map((place, at) => (at === tile ? { ...place, inside: holder } : place)) };
+            const stood = scene.places[tile].inside;
+            if (item && stood !== null && stood !== holder) {
+              if (!scene.links.some((link) => link.from === holder && link.to === tile)) scene = { ...scene, links: [...scene.links, { from: holder, to: tile, label: itemsWord }] };
+            } else if (stood === null && !scene.places[tile].named && !within(tile, holder)) scene = { ...scene, places: scene.places.map((place, at) => (at === tile ? { ...place, inside: holder } : place)) };
             // How the thing came to be there, when the turn said it with a verb of moving: john went to the store.
             const came = turn.heard.find((word) => movingWords.includes(word.toLowerCase()));
             if (came && scene.places[tile].inside === holder) {
@@ -490,6 +526,7 @@ function walked(turns: GameTurn[], ends: Map<string, Region>): Frame[] {
         if (from === null || from === tile || label.length === 0) lastLink = null;
         from = tile;
         label = [];
+        item = false;
       }
       // What is left after the last thing says something of it: its time, or a flag.
       const said = label.filter((one) => one !== 'is');
@@ -502,11 +539,22 @@ function walked(turns: GameTurn[], ends: Map<string, Region>): Frame[] {
         const old = from;
         if (label.includes('is')) pastIs.push(old);
         else scene = { ...scene, places: scene.places.map((place, at) => (at === old ? { ...place, past: true } : place)) };
+      } else if (from !== null && said.length > 2 && said[said.length - 2] === 'time' && said[said.length - 1] === 'past') {
+        pastLinks.push({ from, label: said.slice(0, -2).join(' ') });
       } else if (from !== null && said.length > 0) tag(from, said[0] === 'time' ? `${pictures.time} when: ${said.slice(1).join(' ')}` : said.join(' '));
+    }
+    for (const { from, label } of pastLinks) {
+      const at = scene.links.findIndex((link) => link.from === from && !link.past && (link.label === label || link.label === pastForm(label)));
+      if (at >= 0) scene = { ...scene, links: scene.links.map((link, nth) => (nth === at ? { ...link, label: pastForm(link.label), past: true } : link)) };
+      else tag(from, `${pictures.time} ${pastForm(label)}`);
     }
     // A thing this turn's paths open at is one the tree holds at its top, marked once the paths have made
     // their tiles, so a thing the turn itself named is marked too.
     scene = { ...scene, places: scene.places.map((place) => (freed.has(singular(place.name)) && place.rooted !== true ? { ...place, rooted: true } : place)) };
+    for (const { thing, group } of grouped) {
+      if (scene.places[thing]?.inside === group || scene.places[group]?.name !== groupWord) continue;
+      if (!scene.links.some((link) => link.from === group && link.to === thing)) scene = { ...scene, links: [...scene.links, { from: group, to: thing, label: itemsWord }] };
+    }
     // A past is with a line of this turn is that line, sophia was an angel; with no line it is the thing as it
     // stood then, alice was in wonderland, and the thing is drawn faded.
     for (const old of pastIs) {
@@ -516,7 +564,7 @@ function walked(turns: GameTurn[], ends: Map<string, Region>): Frame[] {
     }
     scene = { ...scene, born: null };
     track();
-    if (!turn.world && turn.wrote.length > 0) {
+    if (!turn.world && !turn.asks && turn.wrote.length > 0) {
       // He is curious about the newest thing he was told of, as he says when asked: of the things the turn's paths
       // name before any relation, a holder and what stands in it, the one that came to the map last.
       const told = turn.wrote.flatMap((path) => { const parts = partsOf(path); const upTo = parts.findIndex((part) => part.startsWith('{')); return (upTo < 0 ? parts : parts.slice(0, upTo)).filter((part) => plainName.test(part)); });

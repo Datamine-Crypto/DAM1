@@ -114,7 +114,7 @@ pub(super) fn asked_word(mind: &CursorMind, w: &str, start: bool) -> Vec<(WordMo
     }
     let claimed = words.iter().position(|w| verb_base(mind, w).is_some_and(|b| super::mind::CLAIMING.contains(&b.as_str())));
     if let Some(thing) = claimed.and_then(|at| words[at + 1..].iter().find(|w| noun_word(mind, w) && !COPULA.contains(&w.as_str()))).filter(|_| (form == WHAT_FORM || form == WHERE_FORM) && mind.before.iter().rev().nth(1).is_some_and(|w| COPULA.contains(&w.as_str()))) {
-        let kind = words.first().filter(|w| KINDS.iter().any(|(_, k)| *k == w.as_str())).cloned().unwrap_or_else(|| form.clone());
+        let kind = words.first().filter(|w| KINDS.contains(&w.as_str())).cloned().unwrap_or_else(|| form.clone());
         let get = if form == WHERE_FORM { (WordMove::GetLocation, None) } else { (WordMove::GetKind, Some(kind)) };
         return vec![(WordMove::FindAsked, Some(thing.clone())), get];
     }
@@ -296,7 +296,7 @@ pub(super) fn asked_word(mind: &CursorMind, w: &str, start: bool) -> Vec<(WordMo
         }
     }
     let kind_said = form == WHAT_FORM && words.len() == 1 && (mind.before.iter().rev().nth(super::mind::LIST_HALVES).is_some_and(|b| ARTICLE_FLAGS[1..].contains(&b.as_str())) || !quality_word(mind, &words[0]) && !super::physics::told_thing(mind, &words[0])) && super::physics::seeded_class(mind, &words[0]) && !super::physics::value_told(mind, &words[0]);
-    if (form == WHAT_FORM || form == WHO_FORM || form == CHOICE_FORM) && words.len() == 1 && !kind_said && (!super::physics::told_thing(mind, &words[0]) || super::mind::quality_word(mind, &words[0]) && !mind.before.iter().rev().nth(super::mind::LIST_HALVES).is_some_and(|b| ARTICLE_FLAGS[1..].contains(&b.as_str())) && (super::physics::value_told(mind, &words[0]) || kind_of(mind, &words[0]).as_deref() != WordMove::SetMaterial.kind())) && (noun_word(mind, &words[0]) || super::mind::LETTER_PLACES.iter().any(|(ordinal, _)| *ordinal == words[0]) || super::mind::compared_relation(&words[0]).is_some() || verb_base(mind, &words[0]).is_some_and(|b| super::mind::STATES.iter().any(|(v, _, _)| *v == b))) {
+    if (form == WHAT_FORM || form == WHO_FORM || form == CHOICE_FORM) && words.len() == 1 && !kind_said && (!super::physics::told_thing(mind, &words[0]) || super::mind::quality_word(mind, &words[0]) && !mind.before.iter().rev().nth(super::mind::LIST_HALVES).is_some_and(|b| ARTICLE_FLAGS[1..].contains(&b.as_str())) && (super::physics::value_told(mind, &words[0]) || kind_of(mind, &words[0]).as_deref() != Some(super::moves::MATERIAL_KIND))) && (noun_word(mind, &words[0]) || super::mind::LETTER_PLACES.iter().any(|(ordinal, _)| *ordinal == words[0]) || super::mind::compared_relation(&words[0]).is_some() || verb_base(mind, &words[0]).is_some_and(|b| super::mind::STATES.iter().any(|(v, _, _)| *v == b))) {
         return vec![(WordMove::GetAllWith, Some(words[0].clone()))];
     }
     if let Some(at) = words.iter().position(|w| super::mind::DIRECTIONS.contains(&w.as_str())) {
@@ -538,7 +538,7 @@ pub(super) fn asked_word(mind: &CursorMind, w: &str, start: bool) -> Vec<(WordMo
     let owning = words.iter().any(|w| HAVING.contains(&w.as_str()) || verb_base(mind, w).is_some_and(|b| super::mind::OWNING.contains(&b.as_str()) || GIVING.contains(&b.as_str()) || super::mind::TAKING.contains(&b.as_str())));
     if (form == WHO_FORM || form == WHAT_FORM) && !owning {
         let object = |verb: &String| words.iter().position(|w| w == verb) < words.iter().position(|w| w == *last);
-        for (at, verb) in words.iter().enumerate().filter(|(_, w)| !place_word(w) && !COPULA.contains(&w.as_str()) && !HAVING.contains(&w.as_str()) && !kind_word(mind, w) && !KINDS.iter().any(|(_, k)| *k == w.as_str())) {
+        for (at, verb) in words.iter().enumerate().filter(|(_, w)| !place_word(w) && !COPULA.contains(&w.as_str()) && !HAVING.contains(&w.as_str()) && !kind_word(mind, w) && !KINDS.contains(&w.as_str())) {
             let stem = super::mind::verb_stem(mind, verb);
             if let Some((was, thing)) = words.iter().enumerate().filter(|(i, w)| *i != at && !place_word(w)).rev().find(|(_, w)| super::physics::has_relation(mind, w, &stem)) {
                 let get = if at < was && !super::mind::role_word(mind, verb) && !super::mind::ORDINALS.contains(&verb.as_str()) { WordMove::GetSubject } else { WordMove::GetRelation };
@@ -573,7 +573,7 @@ pub(super) fn asked_word(mind: &CursorMind, w: &str, start: bool) -> Vec<(WordMo
             None => Vec::new(),
         };
     }
-    if let Some(relation) = words.iter().find(|w| **w != **last && !place_word(w) && !HAVING.contains(&w.as_str()) && !KINDS.iter().any(|(_, k)| *k == w.as_str()) && super::physics::has_relation(mind, &**last, w)) {
+    if let Some(relation) = words.iter().find(|w| **w != **last && !place_word(w) && !HAVING.contains(&w.as_str()) && !KINDS.contains(&w.as_str()) && super::physics::has_relation(mind, &**last, w)) {
         let get = if super::physics::owns_relation(mind, last, relation) { WordMove::GetRelation } else { WordMove::GetSubject };
         return vec![(WordMove::FindAsked, Some((*last).clone())), (get, Some(relation.clone()))];
     }

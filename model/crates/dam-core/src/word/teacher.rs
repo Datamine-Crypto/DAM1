@@ -5,7 +5,7 @@ use super::WordReading;
 use crate::cursor::{CursorMind, BRACE_OPEN_TEXT};
 use crate::quiz::{APOSTROPHE, IS_FORM};
 use patterns::{because, source};
-use super::walks::{plan_answers, number_walk, kept_walks, walk_kept};
+use super::walks::{answer_walk, plan_answers, number_walk, kept_walks, walk_kept};
 use super::asked::{asked_word};
 
 pub struct WordGame;
@@ -54,6 +54,22 @@ because!(KEPT_WALKS, WordGame, "the number walks the teacher found, each under t
      answered, so one shape of question is taught one walk and never a second one that numbers happening to agree let through, forty after \
      ten percent off as ten percent of forty times something");
 
+pub(super) const ANSWER_TRIES: usize = 400;
+because!(ANSWER_TRIES, WordGame, "how many plans the teacher tries before it gives up on a question its rules do not answer, so a \
+     wording no rule names still costs a bounded search and never a run that will not end");
+
+pub(super) const ANSWERING_MOVES: [WordMove; 20] = [
+    WordMove::GetLocation, WordMove::GetChildren, WordMove::GetOwner, WordMove::GetName, WordMove::GetKind, WordMove::GetCount,
+    WordMove::GetRelation, WordMove::GetRelationDoing, WordMove::GetRelationThrough, WordMove::GetRelationRanked, WordMove::GetRelationBackward,
+    WordMove::GetSubject, WordMove::GetPast, WordMove::GetShifted, WordMove::GetReply, WordMove::GetChoice, WordMove::GetAbout,
+    WordMove::GetBefore, WordMove::GetAfter, WordMove::GetAllWith,
+];
+because!(ANSWERING_MOVES, WordGame, "the moves that write an answer, in the order the teacher tries them when its rules do not \
+     answer: where a thing is, what it holds, whose it is, what it is called, what kind it is, how many, what it holds under a \
+     relation and the four other ways that relation is read, what holds it, where it was, what it shifted to, the reply, the choice, \
+     what it is about, what came before and after, and everything with it; the numbers are left out, since a number answer has a plan \
+     of its own");
+
 pub(super) const SHAPE_DIGITS: &str = "#";
 pub(super) const SHAPE_OPEN: &str = "_";
 pub(super) const SHAPE_PART: &str = "%";
@@ -84,9 +100,41 @@ pub fn taught_words_answered(mind: &mut CursorMind, words: &[String], answer: Op
                 }
                 walk.unwrap_or(ruled)
             }
+        } else if let Some(answer) = answer.filter(|_| closing) {
+            let ruled = asked_word(mind, word, start);
+            if plan_answers(mind, &ruled, index, answer) {
+                ruled
+            } else {
+                answer_walk(mind, index, answer).unwrap_or(ruled)
+            }
         } else if open_question(mind).is_some() || opens_question(word, start) { asked_word(mind, word, start) } else { taught_word(mind, word).into_iter().map(|m| (m, None)).collect() };
         let mut placed = Vec::new();
         for (act, target) in taught.into_iter().chain(std::iter::once((WordMove::Continue, None))) {
+            let plain = mind.at != 0 && !mind.tree.node(mind.at).name.starts_with(crate::cursor::BRACE_OPEN_TEXT);
+            let act = if act == WordMove::GetRelation {
+                let asked = target.clone().unwrap_or_else(|| word.clone());
+                super::answering::relation_way(mind, &asked, mind.at, plain)
+            } else if act == WordMove::GetOwner {
+                super::answering::owner_way(mind, mind.at, plain)
+            } else if act == WordMove::GetLocation {
+                super::answering::place_way(mind, mind.at, plain)
+            } else if act == WordMove::FindAsked {
+                let asked = target.clone().unwrap_or_else(|| word.clone());
+                super::answering::stood_way(mind, &asked)
+            } else if act == WordMove::GetDistance {
+                let asked = target.clone().unwrap_or_else(|| word.clone());
+                super::answering::distance_way(mind, &asked, mind.at)
+            } else if act == WordMove::Activity {
+                super::answering::doing_way(mind, mind.at, plain)
+            } else if act == WordMove::Check {
+                let asked = target.clone().unwrap_or_else(|| word.clone());
+                super::answering::check_way(mind, &asked, mind.at, plain)
+            } else if act == WordMove::GetKind {
+                let asked = target.clone().unwrap_or_else(|| word.clone());
+                super::answering::kind_way(mind, &asked, mind.at, plain)
+            } else {
+                act
+            };
             let at = if !act.points() { None } else if let Some(text) = target { slot_of_text(&mind.stack, &text).or_else(|| super::mind::slot_of_worked(&mind.stack, &text)) } else { slot_of_word(&mind.stack, index) };
             let ws = WordStep { act, at };
             word_stepped(mind, &ws);
@@ -275,7 +323,7 @@ fn taught_word(mind: &CursorMind, w: &str) -> Vec<WordMove> {
     if on_relation && super::physics::gained_by_word(mind, w) {
         return vec![WordMove::AddValue, WordMove::Belong, WordMove::StepParent, WordMove::StepParent, WordMove::Drop];
     }
-    if w == super::mind::SOURCE && plain && held.is_none() && mind.before.iter().any(|b| verb_base(mind, b).is_some_and(|v| super::mind::GAINING.contains(&v.as_str()))) {
+    if w == super::mind::SOURCE && plain && held.is_none() && mind.before.iter().any(|b| verb_base(mind, b).is_some_and(|v| super::mind::GAINING.contains(&v.as_str()) || super::english::TAKING.contains(&v.as_str()))) {
         return vec![WordMove::PointNothing];
     }
     if super::physics::traded(mind, &super::mind::PARTING) && w == super::mind::INFINITIVE {
@@ -387,6 +435,12 @@ fn taught_word(mind: &CursorMind, w: &str) -> Vec<WordMove> {
     if appeared && flag_of(mind, super::mind::FLAG_FROM).is_some() {
         return vec![WordMove::PointNothing];
     }
+    let kind_waiting = held.is_some() && flag_of(mind, super::mind::FLAG_GROUP).is_some() && mind.held.iter().any(|&member| {
+        super::lookup::own_child(mind, member, IS_FORM.trim()).is_some_and(|is| super::lookup::present_children(mind, is).iter().any(|&value| value >= mind.sentence_from && !mind.tree.node(value).name.starts_with(BRACE_OPEN_TEXT)))
+    });
+    if appeared && kind_waiting && !mind.held.contains(&at) {
+        return vec![WordMove::Join, WordMove::Together];
+    }
     if appeared {
         if flag_of(mind, super::mind::FLAG_STATE).is_some() {
             return vec![WordMove::ChangeState];
@@ -435,6 +489,13 @@ fn taught_word(mind: &CursorMind, w: &str) -> Vec<WordMove> {
     }
     if w == super::mind::SAMENESS && kind == AT_WORLD {
         return vec![WordMove::PointNothing];
+    }
+    let kind_of_subject = plain && at != 0 && mind.held.is_empty() && {
+        let is = mind.tree.node(at).parent;
+        *mind.tree.node(is).name == *IS_FORM.trim() && mind.tree.node(is).parent != 0 && mind.first_mark == Some(mind.tree.node(is).parent)
+    };
+    if w == super::mind::COMPANION && kind_of_subject {
+        return vec![WordMove::StepParent, WordMove::StepParent, WordMove::Join];
     }
     if w == super::mind::COMPANION && plain && held.is_none() {
         return vec![WordMove::Accompany];
@@ -656,8 +717,7 @@ fn taught_word(mind: &CursorMind, w: &str) -> Vec<WordMove> {
         return vec![WordMove::PointNothing];
     }
     if on_is {
-        let made_of = mind.before.iter().any(|b| b == super::mind::MADE) && mind.before.iter().rev().nth(1).is_some_and(|b| b == super::mind::TOWARD);
-        let set = if made_of { Some(WordMove::SetMaterial) } else { kind_of(mind, w).and_then(|k| KINDS.iter().find(|(_, name)| **name == *k).map(|(m, _)| *m)) };
+        let set = super::mind::quality_kind(mind, w).map(|_| WordMove::SetProperty);
         return vec![set.unwrap_or(WordMove::AddValue)];
     }
     let described_value = on_relation && super::mind::quality_word(mind, w) && super::mind::ARTICLE_FLAGS.iter().skip(usize::from(true)).any(|article| flag_of(mind, article).is_some());

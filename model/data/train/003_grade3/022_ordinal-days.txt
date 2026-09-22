@@ -8,9 +8,11 @@ today is friday. tomorrow is saturday. => today -> {friday}; tomorrow -> {saturd
 turn: what is the first day of the week? => | monday
 turn: what is the third day of the week? => | wednesday
 turn: what is the last day of the week? => | sunday
+turn: what is the second month of the year? => | february
 turn: what is the first month of the year? => | january
 turn: what is the fifth month of the year? => | may
 turn: what is the last month of the year? => | december
+turn: what is the last month => | december
 test: today is sunday. tomorrow is monday. => today -> {sunday}; tomorrow -> {monday} | what is the second day of the week? = tuesday; what is the sixth day of the week? = saturday; what is the tenth month of the year? = october; what is the seventh month of the year? = july; what is the eleventh month of the year? = november; what is the third day of the week? = wednesday; what is the first month of the year? = january; what is the last day of the week? = sunday; what day is today? = sunday; what day is tomorrow? = monday
 test: turn: what is the second day of the week? => | tuesday
 test: turn: what is the tenth month of the year? => | october

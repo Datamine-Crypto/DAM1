@@ -16,6 +16,10 @@ turn: how many consonants are in sun? => | 2
 turn: how many consonants are in tree? => | 2
 turn: how many vowels are in tiger? => | 2
 turn: how many consonants are in bed? => | 2
+turn: how many vowels are in the word green? => | 2
+turn: how many consonants are in the word green? => | 3
+turn: how many vowels are in the word yellow? => | 2
+max has a green hat. kim has a brown bag. => max -> {has} -> hat -> {green}; kim -> {has} -> bag -> {brown} | how many vowels are in the word green? = 2; how many vowels are in the word brown? = 1; what color is the hat? = green; how many consonants are in the word green? = 3
 test: ben has an orange. zoe has a dog. => ben -> {has} -> orange; zoe -> {has} -> dog | how many vowels are in the word orange? = 3; how many consonants are in dog? = 2; is o a vowel? = yes; how many vowels are in dog? = 1; how many consonants are in orange? = 3; is k a vowel? = no; who has the dog? = zoe; what does ben have? = orange
 test: turn: how many vowels are in the word orange? => | 3
 test: turn: how many consonants are in dog? => | 2

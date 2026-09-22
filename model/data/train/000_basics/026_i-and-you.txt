@@ -11,7 +11,7 @@ i am in the garden. => user -> {in} -> garden | where am i? = garden
 then: turn: where am i? => | garden
 i have a cat and a bird. => user -> {has} -> cat; user -> {has} -> bird | what do i have? = bird, cat
 then: turn: what do i have? => | bird, cat
-i like to swim in the lake. => user -> {activity} -> swim -> {in} -> lake | where do i swim? = lake
+i like to swim in the lake. => user -> {like} -> {activity} -> swim -> {in} -> lake | where do i swim? = lake
 then: turn: where do i swim? => | lake
 you are in the house. => you -> {in} -> house | where are you? = house
 then: turn: where are you? => | house

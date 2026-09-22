@@ -4,7 +4,48 @@ use super::physics::word_stepped;
 use crate::cursor::CursorMind;
 use crate::quiz::APOSTROPHE;
 use patterns::because;
-use super::teacher::{WordGame, WalkTarget, KeptWalk, KEPT_WALKS, SHAPE_DIGITS, SHAPE_OPEN, SHAPE_PART, SHAPE_GAP};
+use super::teacher::{WordGame, WalkTarget, ANSWER_TRIES, ANSWERING_MOVES, KeptWalk, KEPT_WALKS, SHAPE_DIGITS, SHAPE_OPEN, SHAPE_PART, SHAPE_GAP};
+
+pub(super) fn answer_walk(mind: &CursorMind, index: usize, answer: &str) -> Option<Vec<(WordMove, Option<String>)>> {
+    if answer == crate::quiz::YES || answer == crate::quiz::NO {
+        return None;
+    }
+    let asked = asked_words(mind);
+    let mut tries = 0;
+    let mut plan_works = |plan: Vec<(WordMove, Option<String>)>, tries: &mut usize| -> Option<Vec<(WordMove, Option<String>)>> {
+        if *tries >= ANSWER_TRIES {
+            return None;
+        }
+        *tries += 1;
+        plan_answers(mind, &plan, index, answer).then_some(plan)
+    };
+    for act in ANSWERING_MOVES {
+        if let Some(plan) = plan_works(vec![(act, None)], &mut tries) {
+            return Some(plan);
+        }
+        for said in &asked {
+            if let Some(plan) = plan_works(vec![(act, Some(said.clone()))], &mut tries) {
+                return Some(plan);
+            }
+        }
+    }
+    for found in &asked {
+        for act in ANSWERING_MOVES {
+            for said in &asked {
+                if said == found {
+                    continue;
+                }
+                if let Some(plan) = plan_works(vec![(WordMove::FindAsked, Some(found.clone())), (act, Some(said.clone()))], &mut tries) {
+                    return Some(plan);
+                }
+            }
+        }
+    }
+    None
+}
+because!(answer_walk, WordGame, "a plan the teacher finds for a question its rules do not answer: every answering move on its own and \
+     pointed at each word the question holds, then each of them after finding one of those words, the first that writes the answer the \
+     lesson gives; a bounded search, so a wording no rule names is still taught and the rules need not name every way a thing can be asked; a question answered yes or no is left to the rules, since of two answers one is hit by chance and a plan that says yes for reasons of its own would be taught as the reading");
 
 pub(super) fn plan_answers(mind: &CursorMind, plan: &[(WordMove, Option<String>)], index: usize, answer: &str) -> bool {
     let mut trial = mind.clone();

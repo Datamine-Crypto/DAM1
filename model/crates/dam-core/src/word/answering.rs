@@ -3,7 +3,7 @@ use super::moves::{WordMove, WordStep};
 use crate::cursor::{step_item, CursorMind, BRACE_OPEN_TEXT, TIME_RELATION};
 use crate::quiz::IS_FORM;
 use crate::words::number_of;
-use super::lookup::{present_children, tag_value, story_node, story_nodes, claim_right, operand_value, span_of, unit_worth, own_child, places_told, run_answer, person, story_nodes_all, quantity_tag_of, sides_of, count_of, place_value, speaker, trace, holder_like, owner_of, to_come, counted_within, held_or_owned, denied_value, holds_value, order_step, ordered_told, grandparent, equation_solved, expression_value, asked_numbers, asked_number, relation_named, related_chain, measured_by, opposites, compared_through, class_things, induced, holds_through, chain_end, motives, asks_having, time_of_day};
+use super::lookup::{present_children, tag_value, story_node, story_nodes, claim_right, operand_value, span_of, unit_worth, own_child, places_told, run_answer, person, story_nodes_all, quantity_tag_of, sides_of, count_of, place_value, speaker, trace, owner_of, to_come, counted_within, held_or_owned, denied_value, holds_value, order_step, ordered_told, grandparent, equation_solved, expression_value, asked_numbers, asked_number, relation_named, related_chain, measured_by, opposites, compared_through, class_things, induced, holds_through, chain_end, motives, asks_having, time_of_day};
 use super::lookup::{ranked_in_seeds, things_named, claim_node, seeded_class, thing_number, activity_word, spans_told, converted, told_relation, told_thing, number_run, place_of, who_has, shifted_value, named_result, measure_asked, map_route};
 use super::written::{thing_made, added_under, written_out};
 use super::physics::{WordWorld, ANSWER_TAG, CAUSE_TAG, CLASS_DEPTH, KIND_STEM, ORDER_SPAN, OWNER_TAG, PLACE_DEPTH};
@@ -37,7 +37,7 @@ pub(super) fn told_back(mind: &mut CursorMind, step: &WordStep, word: &str, at: 
             let said = mind.before.iter().find_map(|b| mind.tree.named(b).filter(|&n| n != 0 && !mind.tree.node(n).gone && mind.tree.node(n).parent == 0).find_map(|n| own_child(mind, n, &relation)).and_then(|r| present_children(mind, r).into_iter().next())).map(|v| mind.tree.node(v).name.to_string());
             written_out(mind, step.act, said);
         }
-        WordMove::GetDistance if at != 0 && map_route(mind, &crate::cursor::bare_name(&mind.tree.node(at).name), &word).is_some() => {
+        WordMove::GetDistanceRoute => {
             for way in map_route(mind, &crate::cursor::bare_name(&mind.tree.node(at).name), &word).unwrap_or_default() {
                 written_out(mind, step.act, Some(way));
             }
@@ -167,7 +167,7 @@ pub(super) fn told_back(mind: &mut CursorMind, step: &WordStep, word: &str, at: 
             }
             written_out(mind, step.act, found.map(|n| crate::cursor::bare_name(&mind.tree.node(n).name)));
         }
-        WordMove::GetRelation if super::mind::reply_word(mind, &word) && !told_relation(mind, &super::mind::verb_stem(mind, &word)) && !(plain && own_child(mind, at, &step_item(&super::mind::verb_stem(mind, &word))).is_some()) => {
+        WordMove::GetRelationSaid => {
             let said: Vec<String> = own_child(mind, 0, ANSWER_TAG).map(|last| present_children(mind, last).into_iter().map(|v| mind.tree.node(v).name.to_string()).collect()).unwrap_or_default();
             if said.is_empty() {
                 written_out(mind, step.act, None);
@@ -176,7 +176,7 @@ pub(super) fn told_back(mind: &mut CursorMind, step: &WordStep, word: &str, at: 
                 written_out(mind, step.act, Some(text));
             }
         }
-        WordMove::GetRelation if plain && mind.tree.node(at).parent != 0 && *mind.tree.node(mind.tree.node(at).parent).name == *step_item(super::mind::ACTIVITY) && *mind.tree.node(at).name == *super::mind::verb_stem(mind, &word) => {
+        WordMove::GetRelationToward => {
             let of: Vec<String> = own_child(mind, at, &step_item(super::mind::TOWARD)).map(|r| present_children(mind, r).into_iter().map(|v| mind.tree.node(v).name.to_string()).collect()).unwrap_or_default();
             if of.is_empty() {
                 written_out(mind, step.act, None);
@@ -186,6 +186,29 @@ pub(super) fn told_back(mind: &mut CursorMind, step: &WordStep, word: &str, at: 
             }
         }
         WordMove::GetRelation => relation_got(mind, step, &word, at, plain),
+        WordMove::GetRelationDoing => {
+            let relation = relation_named(mind, &word);
+            let name = if plain { mind.tree.node(at).name.to_string() } else { String::new() };
+            let holder = relation_holder(mind, &name, &relation, plain);
+            let doing = holder.and_then(|n| own_child(mind, n, &relation).and_then(|r| own_child(mind, r, &step_item(super::mind::ACTIVITY))).or_else(|| own_child(mind, n, &step_item(super::mind::ACTIVITY)))).and_then(|r| present_children(mind, r).into_iter().last());
+            written_out(mind, step.act, doing.map(|n| crate::cursor::bare_name(&mind.tree.node(n).name)));
+        }
+        WordMove::GetRelationThrough => {
+            let through = plain.then(|| grandparent(mind, at, &word)).flatten();
+            written_out(mind, step.act, through.map(|n| crate::cursor::bare_name(&mind.tree.node(n).name)));
+        }
+        WordMove::GetRelationRanked => {
+            let relation = relation_named(mind, &word);
+            let name = if plain { mind.tree.node(at).name.to_string() } else { String::new() };
+            let ranked = plain.then(|| ranked_value(mind, &name, &relation)).flatten();
+            written_out(mind, step.act, ranked.map(|n| crate::cursor::bare_name(&mind.tree.node(n).name)));
+        }
+        WordMove::GetRelationBackward => {
+            let relation = relation_named(mind, &word);
+            let name = if plain { mind.tree.node(at).name.to_string() } else { String::new() };
+            let back = backward_holder(mind, &name, &relation, at);
+            written_out(mind, step.act, back.map(|n| crate::cursor::bare_name(&mind.tree.node(n).name)));
+        }
         WordMove::Compute => computed(mind, step, &word, at, plain),
         WordMove::GetAllWith => all_with(mind, step, &word),
         WordMove::GetName => {
@@ -244,12 +267,12 @@ pub(super) fn told_back(mind: &mut CursorMind, step: &WordStep, word: &str, at: 
             let denied = plain && present_children(mind, at).into_iter().any(|c| count_of(mind, c) == 0 && { let name = &*mind.tree.node(c).name; *name == *word || *name == *singular(&word) });
             written_out(mind, step.act, (counted > 0 || denied || (all && plain && mind.tree.story(at))).then(|| counted.to_string()));
         }
-        WordMove::GetLocation if plain && mind.tree.node(at).parent != 0 && (*mind.tree.node(mind.tree.node(at).parent).name == *step_item(super::mind::ACTIVITY) || claim_node(mind, at)) => {
+        WordMove::GetLocationClaimed => {
             let name = mind.tree.node(at).name.to_string();
             let place = mind.tree.named(&name).filter(|&n| !mind.tree.node(n).gone && mind.tree.node(n).link == Some(at)).map(|n| mind.tree.node(n).parent).find(|&p| p != 0 && !mind.tree.node(p).name.starts_with(BRACE_OPEN_TEXT));
             written_out(mind, step.act, place.map(|p| crate::cursor::bare_name(&mind.tree.node(p).name)));
         }
-        WordMove::GetLocation if plain && mind.before.iter().any(|b| b == super::mind::WILL) && !motives(mind, at).is_empty() && own_child(mind, at, TIME_RELATION).is_none() => {
+        WordMove::GetLocationMotive => {
             let place = motives(mind, at).into_iter().next().map(|(_, place)| place);
             written_out(mind, step.act, place);
         }
@@ -258,23 +281,16 @@ pub(super) fn told_back(mind: &mut CursorMind, step: &WordStep, word: &str, at: 
                 written_out(mind, step.act, None);
                 return true;
             }
-            let bare_named = plain && own_child(mind, at, &step_item(FLAG_DEFINITE)).is_none() && own_child(mind, at, &step_item(FLAG_INDEFINITE)).is_none();
-            let seeded_place = || bare_named.then(|| mind.tree.named(&mind.tree.node(at).name.to_string()).filter(|&n| n != at && !mind.tree.node(n).gone && !mind.tree.story(n) && mind.tree.node(n).parent == 0).find_map(|n| place_value(mind, n))).flatten();
-            let parent = place_of(mind, at).or_else(|| plain.then(|| place_value(mind, at)).flatten()).or_else(seeded_place);
-            let asked_words = open_question(mind).map(|q| present_children(mind, q).len()).unwrap_or_default();
-            let alike: Vec<usize> = if plain && mind.tree.story(at) && asked_words == 1 { story_nodes(mind, &mind.tree.node(at).name.to_string()).into_iter().filter(|&n| n != at).filter_map(|n| place_of(mind, n)).collect() } else { Vec::new() };
-            let mut places: Vec<String> = parent.into_iter().chain(alike).map(|p| crate::cursor::bare_name(&mind.tree.node(p).name)).collect();
-            places.sort();
-            places.dedup();
+            let places = places_of(mind, at, plain);
             if places.len() > 1 {
                 for place in places {
                     written_out(mind, step.act, Some(place));
                 }
                 return true;
             }
-            written_out(mind, step.act, parent.map(|p| crate::cursor::bare_name(&mind.tree.node(p).name)));
+            written_out(mind, step.act, places.into_iter().next());
         }
-        WordMove::GetOwner if plain && { let thing = mind.tree.node(at).link.unwrap_or(at); own_child(mind, thing, OWNER_TAG).is_some_and(|tag| present_children(mind, tag).len() > 1) } => {
+        WordMove::GetOwnerEvery => {
             let thing = mind.tree.node(at).link.unwrap_or(at);
             let mut owners: Vec<String> = own_child(mind, thing, OWNER_TAG).map(|tag| present_children(mind, tag).into_iter().filter_map(|m| mind.tree.node(m).link).map(|o| mind.tree.node(o).name.to_string()).collect()).unwrap_or_default();
             owners.sort();
@@ -284,7 +300,7 @@ pub(super) fn told_back(mind: &mut CursorMind, step: &WordStep, word: &str, at: 
             }
         }
         WordMove::GetOwner => {
-            let owner = plain.then(|| who_has(mind, at)).flatten().or_else(|| (at != 0).then(|| mind.tree.node(at).parent).map(|p| if mind.tree.node(p).name.starts_with(BRACE_OPEN_TEXT) { mind.tree.node(p).parent } else { p }).filter(|&p| p != 0 && Some(p) != open_question(mind) && holder_like(mind, p)));
+            let owner = plain.then(|| owner_told(mind, at)).flatten();
             written_out(mind, step.act, owner.map(|p| crate::cursor::bare_name(&mind.tree.node(p).name)));
         }
         WordMove::GetChildren => {
@@ -299,7 +315,7 @@ pub(super) fn told_back(mind: &mut CursorMind, step: &WordStep, word: &str, at: 
                 written_out(mind, step.act, Some(name));
             }
         }
-        WordMove::GetKind if word == super::mind::WHY_ASKED && plain => {
+        WordMove::GetKindWhy => {
             let asked: Vec<String> = open_question(mind).map(|q| present_children(mind, q).into_iter().map(|c| mind.tree.node(c).name.to_string()).collect()).unwrap_or_default();
             if let Some(why) = own_child(mind, at, CAUSE_TAG) {
                 for cause in present_children(mind, why) {
@@ -312,12 +328,12 @@ pub(super) fn told_back(mind: &mut CursorMind, step: &WordStep, word: &str, at: 
             let state = sent.iter().find(|(_, place)| asked.iter().any(|a| a == place)).or(sent.first()).map(|(state, _)| state.clone());
             written_out(mind, step.act, state);
         }
-        WordMove::GetKind if super::mind::MEASURES.contains(&word.as_str()) && plain && own_child(mind, at, &step_item(&word)).is_none() && !mind.tree.story(at) => {
+        WordMove::GetKindMeasure => {
             written_out(mind, step.act, None);
         }
         WordMove::GetKind => kind_got(mind, step, &word, at, plain),
-        WordMove::Check if flag_of(mind, FLAG_PROPERTY).is_some() => property_checked(mind, step, &word, at, plain),
-        WordMove::Check if word == super::mind::RIGHT_ASKED && plain && claim_right(mind, at).is_some() => {
+        WordMove::CheckRelation => property_checked(mind, step, &word, at, plain),
+        WordMove::CheckRight => {
             let right = claim_right(mind, at).unwrap_or_default();
             written_out(mind, step.act, Some(if right { crate::quiz::YES } else { crate::quiz::NO }.to_string()));
         }
@@ -695,47 +711,263 @@ fn property_checked(mind: &mut CursorMind, step: &WordStep, word: &str, at: usiz
 }
 because!(property_checked, WordWorld, "the check of a relation flagged before it, is tom taller than ann, is the cat in the house: yes when the thing the cursor stands on, a thing of its name or a class it is of holds the pointed word under the flagged relation, by a measure both hold, by the places it stands inside, by a chain of the relation, or by the opposite relation told the other way, and no in every other case");
 
-fn kind_got(mind: &mut CursorMind, step: &WordStep, word: &str, at: usize, plain: bool) {
-    let word = word.to_string();
-    let word = if word == super::mind::MADE { WordMove::SetMaterial.kind().unwrap_or_default().to_string() } else { word };
-    let word = super::mind::kind_of(mind, &word).map(|k| k.to_string()).filter(|_| !super::moves::KINDS.iter().any(|(_, k)| **k == *word)).unwrap_or(word);
+fn kind_asked(mind: &CursorMind, word: &str) -> String {
+    let word = if word == super::mind::MADE { super::moves::MATERIAL_KIND.to_string() } else { word.to_string() };
+    super::mind::kind_of(mind, &word).map(|k| k.to_string()).filter(|_| !super::moves::KINDS.contains(&word.as_str())).unwrap_or(word)
+}
+because!(kind_asked, WordWorld, "the kind a word asks for: the kind the seeds class the word by where the word is a quality of one, \
+     red asking for a colour, else the word itself");
+
+fn kind_under(mind: &CursorMind, is: usize, word: &str) -> Option<usize> {
     let stem: String = word.chars().take(KIND_STEM).collect();
-    let kind_under = |is: usize| own_child(mind, is, &step_item(&word)).or_else(|| present_children(mind, is).into_iter().find(|&k| crate::cursor::bare_name(&mind.tree.node(k).name).starts_with(&stem)));
-    let is = plain.then(|| own_child(mind, at, IS_FORM.trim())).flatten();
-    let asked_kind = super::moves::KINDS.iter().map(|(_, k)| *k).find(|k| k.starts_with(&stem)).unwrap_or(word.as_str()).to_string();
-    let class_known = !super::mind::ASKING.contains(&word.as_str()) && mind.tree.named(&word).any(|c| !mind.tree.node(c).gone && !mind.tree.story(c) && *mind.tree.node(mind.tree.node(c).parent).name == *IS_FORM.trim());
-    let strict = super::moves::KINDS.iter().any(|(_, k)| **k == *word) || class_known;
+    own_child(mind, is, &step_item(word)).or_else(|| present_children(mind, is).into_iter().find(|&k| crate::cursor::bare_name(&mind.tree.node(k).name).starts_with(&stem)))
+}
+because!(kind_under, WordWorld, "what a thing holds under the kind a word asks for, by the word or by the letters it shares with a \
+     kind, feel with feeling");
+
+fn kind_held(mind: &CursorMind, k: usize) -> Option<usize> {
+    if mind.tree.node(k).name.starts_with(BRACE_OPEN_TEXT) { present_children(mind, k).into_iter().next() } else { Some(k) }
+}
+because!(kind_held, WordWorld, "the value under a kind a thing holds, or the kind itself where it is no relation");
+
+fn kind_strict(mind: &CursorMind, word: &str) -> bool {
+    let class_known = !super::mind::ASKING.contains(&word) && mind.tree.named(word).any(|c| !mind.tree.node(c).gone && !mind.tree.story(c) && *mind.tree.node(mind.tree.node(c).parent).name == *IS_FORM.trim());
+    super::moves::KINDS.contains(&word) || class_known
+}
+because!(kind_strict, WordWorld, "whether a word names a kind outright, one of the kinds a quality is classed by or one the seeds \
+     say a thing is, so a value is taken for it only where it is of that kind");
+
+fn kind_only(mind: &CursorMind, is: usize, word: &str) -> Option<usize> {
+    let stem: String = word.chars().take(KIND_STEM).collect();
+    let asked_kind = super::moves::KINDS.iter().copied().find(|k| k.starts_with(&stem)).unwrap_or(word).to_string();
+    let strict = kind_strict(mind, word);
     let counts = |v: usize| { let q = mind.tree.node(v).name.to_string(); !strict || mind.tree.named(&q).any(|s| s != v && !mind.tree.story(s) && !mind.tree.node(s).gone && own_child(mind, s, IS_FORM.trim()).is_some_and(|is| present_children(mind, is).into_iter().any(|k| *mind.tree.node(k).name == *asked_kind))) };
-    let only = |is: usize| { let kinds: Vec<usize> = present_children(mind, is).into_iter().filter(|&k| *mind.tree.node(k).name != *TIME_RELATION && count_of(mind, k) > 0).collect(); (kinds.len() == 1).then(|| kinds[0]).filter(|&k| { let value = if mind.tree.node(k).name.starts_with(BRACE_OPEN_TEXT) { present_children(mind, k).into_iter().next() } else { Some(k) }; value.is_some_and(counts) }) };
-    let value_of = |k: usize| if mind.tree.node(k).name.starts_with(BRACE_OPEN_TEXT) { present_children(mind, k).into_iter().next() } else { Some(k) };
-    let value = is.and_then(|is| kind_under(is).or_else(|| only(is))).and_then(value_of);
+    let kinds: Vec<usize> = present_children(mind, is).into_iter().filter(|&k| *mind.tree.node(k).name != *TIME_RELATION && count_of(mind, k) > 0).collect();
+    (kinds.len() == 1).then(|| kinds[0]).filter(|&k| kind_held(mind, k).is_some_and(counts))
+}
+because!(kind_only, WordWorld, "the one kind a thing holds, where it holds one only and a thing of the kind asked is known to be of \
+     it, so what a thing is is answered from the one thing the story says it is");
+
+fn kind_value(mind: &CursorMind, word: &str, at: usize, plain: bool) -> Option<usize> {
+    let is = plain.then(|| own_child(mind, at, IS_FORM.trim())).flatten();
+    let value = is.and_then(|is| kind_under(mind, is, word).or_else(|| kind_only(mind, is, word))).and_then(|k| kind_held(mind, k));
     let value = value.filter(|&v| count_of(mind, v) > 0).or_else(|| is.filter(|_| value.is_some()).and_then(|is| present_children(mind, is).into_iter().find(|&c| !mind.tree.node(c).name.starts_with(BRACE_OPEN_TEXT) && count_of(mind, c) > 0)));
-    let value = value.or_else(|| is.filter(|_| word == super::mind::ASKING[0] && plain && !mind.tree.story(at)).and_then(|is| present_children(mind, is).into_iter().find(|&c| !mind.tree.node(c).name.starts_with(BRACE_OPEN_TEXT) && count_of(mind, c) > 0)));
-    let of_kind: Vec<String> = is.and_then(kind_under).filter(|&k| mind.tree.node(k).name.starts_with(BRACE_OPEN_TEXT)).map(|k| present_children(mind, k).into_iter().filter(|&v| count_of(mind, v) > 0).map(|v| mind.tree.node(v).name.to_string()).collect()).unwrap_or_default();
+    value.or_else(|| is.filter(|_| word == super::mind::ASKING[0] && plain && !mind.tree.story(at)).and_then(|is| present_children(mind, is).into_iter().find(|&c| !mind.tree.node(c).name.starts_with(BRACE_OPEN_TEXT) && count_of(mind, c) > 0)))
+}
+because!(kind_value, WordWorld, "the value the plain get of a kind writes: what the thing holds under the kind asked, or the one kind \
+     it holds, and where that value was taken away, any kind it still holds, and for what asked of a thing the story never told, the \
+     first kind the seeds give it");
+
+fn kind_many(mind: &CursorMind, word: &str, at: usize, plain: bool) -> Vec<String> {
+    let is = plain.then(|| own_child(mind, at, IS_FORM.trim())).flatten();
+    let of_kind: Vec<String> = is.and_then(|is| kind_under(mind, is, word)).filter(|&k| mind.tree.node(k).name.starts_with(BRACE_OPEN_TEXT)).map(|k| present_children(mind, k).into_iter().filter(|&v| count_of(mind, v) > 0).map(|v| mind.tree.node(v).name.to_string()).collect()).unwrap_or_default();
     if of_kind.len() > 1 {
-        for name in of_kind {
-            written_out(mind, step.act, Some(name));
-        }
-        return;
+        return of_kind;
     }
     let every: Vec<String> = if word == super::mind::ASKING[0] && plain && mind.tree.story(at) { is.map(|is| present_children(mind, is).into_iter().filter(|&c| *mind.tree.node(c).name != *TIME_RELATION).flat_map(|c| if mind.tree.node(c).name.starts_with(BRACE_OPEN_TEXT) { present_children(mind, c) } else { vec![c] }).filter(|&c| !mind.tree.node(c).name.starts_with(BRACE_OPEN_TEXT) && count_of(mind, c) > 0).map(|c| mind.tree.node(c).name.to_string()).collect()).unwrap_or_default() } else { Vec::new() };
-    if every.len() > 1 {
-        for name in every {
+    if every.len() > 1 { every } else { Vec::new() }
+}
+because!(kind_many, WordWorld, "every value a thing holds under the kind asked where it holds several, and every kind it is where \
+     what is asked of a thing the story told");
+
+fn kind_borrowed(mind: &CursorMind, word: &str, at: usize, plain: bool) -> Option<usize> {
+    (kind_strict(mind, word) && plain && kind_value(mind, word, at, plain).is_none()).then(|| induced(mind, at, |n| own_child(mind, n, IS_FORM.trim()).and_then(|i| own_child(mind, i, &step_item(word))).is_some()).and_then(|n| own_child(mind, n, IS_FORM.trim())).and_then(|i| own_child(mind, i, &step_item(word))).and_then(|k| kind_held(mind, k))).flatten()
+}
+because!(kind_borrowed, WordWorld, "a value of the kind asked borrowed from a thing like the one asked of, where the thing itself \
+     holds none and the word names a kind outright");
+
+fn kind_kin(mind: &CursorMind, word: &str, at: usize, plain: bool) -> Option<String> {
+    (plain && (word == super::mind::WHO_ASKED || word == super::mind::ASKING[0])).then(|| (mind.tree.state..mind.tree.len()).filter(|&v| !mind.tree.node(v).gone && (mind.tree.node(v).link == Some(at) || *mind.tree.node(v).name == *mind.tree.node(at).name && v != at)).map(|v| crate::cursor::bare_name(&mind.tree.node(mind.tree.node(v).parent).name)).find(|r| super::mind::KIN.contains(&r.as_str()))).flatten()
+}
+because!(kind_kin, WordWorld, "the kin a thing is to another, written where what or who is asked of one the story told nothing else \
+     of, ann being tom's mother and nothing more");
+
+fn kind_got(mind: &mut CursorMind, step: &WordStep, word: &str, at: usize, plain: bool) {
+    let asked = kind_asked(mind, word);
+    let many = kind_many(mind, &asked, at, plain);
+    if !many.is_empty() {
+        for name in many {
             written_out(mind, step.act, Some(name));
         }
         return;
     }
-    let strict_kind = strict && value.is_none() && plain;
-    let borrowed = if strict_kind { induced(mind, at, |n| own_child(mind, n, IS_FORM.trim()).and_then(|i| own_child(mind, i, &step_item(&word))).is_some()).and_then(|n| own_child(mind, n, IS_FORM.trim())).and_then(|i| own_child(mind, i, &step_item(&word))).and_then(value_of) } else { None };
-    let value = value.or(borrowed);
-    let kin_of = || (mind.tree.state..mind.tree.len()).filter(|&v| !mind.tree.node(v).gone && (mind.tree.node(v).link == Some(at) || *mind.tree.node(v).name == *mind.tree.node(at).name && v != at)).map(|v| crate::cursor::bare_name(&mind.tree.node(mind.tree.node(v).parent).name)).find(|r| super::mind::KIN.contains(&r.as_str()));
-    if let Some(kin) = (value.is_none() && plain && (word == super::mind::WHO_ASKED || word == super::mind::ASKING[0])).then(kin_of).flatten() {
-        written_out(mind, step.act, Some(kin));
-        return;
+    let value = kind_value(mind, &asked, at, plain).or_else(|| kind_borrowed(mind, &asked, at, plain));
+    if value.is_none() {
+        if let Some(kin) = kind_kin(mind, word, at, plain) {
+            written_out(mind, step.act, Some(kin));
+            return;
+        }
     }
     written_out(mind, step.act, value.map(|v| mind.tree.node(v).name.to_string()));
 }
-because!(kind_got, WordWorld, "the get of a kind: the value the thing holds under the kind the pointed word names, by the word or by the letters it shares with a kind, feel with feeling, every value when the kind holds several, the one thing it is when no kind was named, a value borrowed from a thing like it, and for one with nothing told the kin they are to another");
+because!(kind_got, WordWorld, "the get of a kind: the value the thing holds under the kind the pointed word names, by the word or by \
+     the letters it shares with a kind, feel with feeling, or one borrowed from a thing like it");
+
+fn owner_told(mind: &CursorMind, at: usize) -> Option<usize> {
+    owner_of(mind, at)
+}
+because!(owner_told, WordWorld, "the owner a giving wrote on the thing itself, which is the owner asked for wherever the thing stands");
+
+pub(super) fn stood_way(mind: &CursorMind, word: &str) -> WordMove {
+    let _ = mind;
+    if super::mind::THING_PRONOUNS.contains(&word) || super::mind::PERSON_PRONOUNS.contains(&word) {
+        return WordMove::FindAskedStood;
+    }
+    WordMove::FindAsked
+}
+because!(stood_way, WordWorld, "which find answers the word pointed at: the one that walks to what a pronoun stands for, else the one \
+     that walks to a thing the word names");
+
+pub(super) fn distance_way(mind: &CursorMind, word: &str, at: usize) -> WordMove {
+    if at != 0 && map_route(mind, &crate::cursor::bare_name(&mind.tree.node(at).name), word).is_some() {
+        return WordMove::GetDistanceRoute;
+    }
+    WordMove::GetDistance
+}
+because!(distance_way, WordWorld, "which get of a distance answers: the one that adds the steps of a route the map knows between the \
+     thing and the word, else the plain one");
+
+pub(super) fn doing_way(mind: &CursorMind, at: usize, plain: bool) -> WordMove {
+    let carries = plain && own_child(mind, at, super::mind::DEED_TAG).is_some_and(|deed| !present_children(mind, deed).is_empty());
+    if carries && super::mind::heard_text(mind) == super::mind::INFINITIVE {
+        return WordMove::ActivityNamed;
+    }
+    if carries {
+        return WordMove::ActivityDone;
+    }
+    if plain && mind.tree.node(at).parent != 0 {
+        let deed = mind.tree.node(at).parent;
+        let name = &*mind.tree.node(deed).name;
+        if name.starts_with(BRACE_OPEN_TEXT) && *name != *step_item(super::mind::ACTIVITY) && mind.tree.node(deed).parent != 0 {
+            return WordMove::ActivityUnder;
+        }
+    }
+    WordMove::Activity
+}
+because!(doing_way, WordWorld, "which nesting of a doing answers the thing the cursor stands on: the one that turns a deed already \
+     written into a relation and opens a doing under it, for a verb said plain after to, the one that writes the deed it carries as \
+     the doing itself, the one that writes the doing on the doer above where a deed holds the thing, else the plain one, so the \
+     network chooses the way of nesting where tests on the words said and on what the thing carries chose it");
+
+pub(super) fn check_way(mind: &CursorMind, word: &str, at: usize, plain: bool) -> WordMove {
+    if flag_of(mind, FLAG_PROPERTY).is_some() {
+        return WordMove::CheckRelation;
+    }
+    if word == super::mind::RIGHT_ASKED && plain && claim_right(mind, at).is_some() {
+        return WordMove::CheckRight;
+    }
+    WordMove::Check
+}
+because!(check_way, WordWorld, "which check answers the word asked of the thing the cursor stands on: the check of a relation a word \
+     before it flagged, is tom taller than ann, the check of whether a claim the story made was right, else the plain check of a \
+     value the thing holds, so the network chooses the way of reading where tests on the flags and on the word chose it");
+
+pub(super) fn kind_way(mind: &CursorMind, word: &str, at: usize, plain: bool) -> WordMove {
+    if word == super::mind::WHY_ASKED && plain {
+        return WordMove::GetKindWhy;
+    }
+    if super::mind::MEASURES.contains(&word) && plain && own_child(mind, at, &step_item(word)).is_none() && !mind.tree.story(at) {
+        return WordMove::GetKindMeasure;
+    }
+    WordMove::GetKind
+}
+because!(kind_way, WordWorld, "which get of a kind answers the word asked of the thing the cursor stands on: why it is as it is, \
+     nothing for a measure the story never gave it, else the plain one, so the network chooses the way of reading where a test on \
+     the word chose it before the move ever ran");
+
+fn places_of(mind: &CursorMind, at: usize, plain: bool) -> Vec<String> {
+    let bare_named = plain && own_child(mind, at, &step_item(FLAG_DEFINITE)).is_none() && own_child(mind, at, &step_item(FLAG_INDEFINITE)).is_none();
+    let seeded_place = || bare_named.then(|| mind.tree.named(&mind.tree.node(at).name.to_string()).filter(|&n| n != at && !mind.tree.node(n).gone && !mind.tree.story(n) && mind.tree.node(n).parent == 0).find_map(|n| place_value(mind, n))).flatten();
+    let parent = place_of(mind, at).or_else(|| plain.then(|| place_value(mind, at)).flatten()).or_else(seeded_place);
+    let asked_words = open_question(mind).map(|q| present_children(mind, q).len()).unwrap_or_default();
+    let alike: Vec<usize> = if plain && mind.tree.story(at) && asked_words == 1 { story_nodes(mind, &mind.tree.node(at).name.to_string()).into_iter().filter(|&n| n != at).filter_map(|n| place_of(mind, n)).collect() } else { Vec::new() };
+    let mut places: Vec<String> = parent.into_iter().chain(alike).map(|p| crate::cursor::bare_name(&mind.tree.node(p).name)).collect();
+    places.sort();
+    places.dedup();
+    places
+}
+because!(places_of, WordWorld, "the places a thing stands in: where it stands, or the place written as a value of it, or the place \
+     the seeds give a thing of its name where the story named it bare, and beside those the places its other mentions stand in, \
+     where the story told of it and one word was asked");
+
+pub(super) fn place_way(mind: &CursorMind, at: usize, plain: bool) -> WordMove {
+    if plain && mind.tree.node(at).parent != 0 && (*mind.tree.node(mind.tree.node(at).parent).name == *step_item(super::mind::ACTIVITY) || claim_node(mind, at)) {
+        return WordMove::GetLocationClaimed;
+    }
+    if plain && mind.before.iter().any(|said| said == super::mind::WILL) && !motives(mind, at).is_empty() && own_child(mind, at, TIME_RELATION).is_none() {
+        return WordMove::GetLocationMotive;
+    }
+    WordMove::GetLocation
+}
+because!(place_way, WordWorld, "which get of a place answers the thing the cursor stands on: where a mention of it stands, for a thing \
+     a claim or a doing holds rather than a place, the place a motive names, for a move still to come, else the plain one, so the \
+     network chooses the way of reading where a test on the thing chose it before the move ever ran");
+
+pub(super) fn owner_way(mind: &CursorMind, at: usize, plain: bool) -> WordMove {
+    let thing = mind.tree.node(at).link.unwrap_or(at);
+    if plain && own_child(mind, thing, OWNER_TAG).is_some_and(|tag| present_children(mind, tag).len() > 1) {
+        return WordMove::GetOwnerEvery;
+    }
+    WordMove::GetOwner
+}
+because!(owner_way, WordWorld, "which get of an owner answers the thing the cursor stands on: every owner where it was handed on \
+     more than once, else the owner a giving wrote on it, so the teacher shows one way of reading for one shape and the network is \
+     asked to tell the two shapes apart where a count of the owners standing there used to tell them");
+
+pub(super) fn relation_way(mind: &CursorMind, word: &str, at: usize, plain: bool) -> WordMove {
+    if super::mind::reply_word(mind, word) && !told_relation(mind, &super::mind::verb_stem(mind, word)) && !(plain && own_child(mind, at, &step_item(&super::mind::verb_stem(mind, word))).is_some()) {
+        return WordMove::GetRelationSaid;
+    }
+    if plain && mind.tree.node(at).parent != 0 && *mind.tree.node(mind.tree.node(at).parent).name == *step_item(super::mind::ACTIVITY) && *mind.tree.node(at).name == *super::mind::verb_stem(mind, word) {
+        return WordMove::GetRelationToward;
+    }
+    let relation = relation_named(mind, word);
+    let name = if plain { mind.tree.node(at).name.to_string() } else { String::new() };
+    let holder = relation_holder(mind, &name, &relation, plain);
+    if holder.and_then(|n| own_child(mind, n, &relation)).and_then(|r| present_children(mind, r).into_iter().find(|&c| !mind.tree.node(c).name.starts_with(BRACE_OPEN_TEXT) || mind.tree.node(c).name.starts_with(crate::cursor::QUANTITY_TAG))).is_some() {
+        return WordMove::GetRelation;
+    }
+    if holder.and_then(|n| own_child(mind, n, &relation).and_then(|r| own_child(mind, r, &step_item(super::mind::ACTIVITY))).or_else(|| own_child(mind, n, &step_item(super::mind::ACTIVITY)))).and_then(|r| present_children(mind, r).into_iter().last()).is_some() {
+        return WordMove::GetRelationDoing;
+    }
+    if plain && grandparent(mind, at, word).is_some() {
+        return WordMove::GetRelationThrough;
+    }
+    if plain && (word == super::mind::ORDINALS[0] || word == super::mind::LAST_PLACE) && ranked_value(mind, &name, &relation).is_some() {
+        return WordMove::GetRelationRanked;
+    }
+    if super::mind::SYMMETRIC_ROLES.contains(&word) && backward_holder(mind, &name, &relation, at).is_some() {
+        return WordMove::GetRelationBackward;
+    }
+    WordMove::GetRelation
+}
+because!(relation_way, WordWorld, "which get of a relation answers the word asked of the thing the cursor stands on: the plain one when it \
+     holds the relation with a value, else the doing when what it holds is an activity, else the one two steps up, else the first or last \
+     of a kind the seeds order, else the backward read of a relation that goes both ways; the teacher shows the one that answers and the \
+     network learns to pick it, since a reader that tried them in a fixed order could never be taught to prefer another");
+
+fn relation_holder(mind: &CursorMind, name: &str, relation: &str, plain: bool) -> Option<usize> {
+    let at = mind.at;
+    let classes: Vec<usize> = if plain { own_child(mind, at, IS_FORM.trim()).into_iter().flat_map(|is| present_children(mind, is)).flat_map(|c| { let class = mind.tree.node(c).name.to_string(); mind.tree.named(&class).filter(|&n| n != 0 && n != c && !mind.tree.node(n).gone && mind.tree.node(n).link.is_none()).chain(class_things(mind, c)).collect::<Vec<_>>() }).collect() } else { Vec::new() };
+    let mut classes = classes;
+    classes.sort_by_key(|&c| !mind.tree.story(c));
+    plain.then(|| std::iter::once(at).chain(mind.tree.named(name).filter(|&n| n != 0 && !mind.tree.node(n).gone && mind.tree.node(n).link.is_none())).chain(classes).find(|&n| own_child(mind, n, relation).is_some())).flatten()
+}
+because!(relation_holder, WordWorld, "the thing a relation is read off: the thing the cursor stands on, else another node of its name, else \
+     a thing of a class it is of, the first of them that holds the relation");
+
+pub(super) fn ranked_value(mind: &CursorMind, name: &str, relation: &str) -> Option<usize> {
+    let is_a = |v: usize| mind.tree.named(&mind.tree.node(v).name.to_string()).any(|t| !mind.tree.node(t).gone && own_child(mind, t, IS_FORM.trim()).is_some_and(|is| present_children(mind, is).into_iter().any(|k| *mind.tree.node(k).name == *name)));
+    mind.tree.named(relation).filter(|&r| !mind.tree.node(r).gone && !mind.tree.story(r)).flat_map(|r| present_children(mind, r)).find(|&v| is_a(v))
+}
+because!(ranked_value, WordWorld, "the first or the last of a kind the seeds order, found under the relation the word names among the \
+     nodes the story never wrote, the first day of the week");
+
+fn backward_holder(mind: &CursorMind, name: &str, relation: &str, at: usize) -> Option<usize> {
+    mind.tree.named(name).filter(|&v| !mind.tree.node(v).gone && *mind.tree.node(mind.tree.node(v).parent).name == *relation).map(|v| mind.tree.node(mind.tree.node(v).parent).parent).find(|&t| t != 0 && t != at)
+}
+because!(backward_holder, WordWorld, "the thing that holds the cursor's thing under a relation that goes both ways, read from the value \
+     back to its holder");
 
 fn relation_got(mind: &mut CursorMind, step: &WordStep, word: &str, at: usize, plain: bool) {
     let word = word.to_string();
@@ -746,16 +978,7 @@ fn relation_got(mind: &mut CursorMind, step: &WordStep, word: &str, at: usize, p
     classes.sort_by_key(|&c| !mind.tree.story(c));
     let holder = plain.then(|| std::iter::once(at).chain(mind.tree.named(&name).filter(|&n| n != 0 && !mind.tree.node(n).gone && mind.tree.node(n).link.is_none())).chain(classes).find(|&n| own_child(mind, n, &relation).is_some())).flatten();
     let forward = holder.and_then(|n| own_child(mind, n, &relation)).and_then(|r| present_children(mind, r).into_iter().find(|&c| !mind.tree.node(c).name.starts_with(BRACE_OPEN_TEXT) || mind.tree.node(c).name.starts_with(crate::cursor::QUANTITY_TAG)));
-    let doing = || holder.filter(|_| forward.is_none()).and_then(|n| own_child(mind, n, &step_item(super::mind::ACTIVITY))).and_then(|r| present_children(mind, r).into_iter().last());
-    let forward = forward.or_else(doing);
-    let both = super::mind::SYMMETRIC_ROLES.contains(&word.as_str());
-    let through = if forward.is_none() && plain { grandparent(mind, at, &word) } else { None };
-    let forward = forward.or(through);
-    let is_a = |v: usize| mind.tree.named(&mind.tree.node(v).name.to_string()).any(|t| !mind.tree.node(t).gone && own_child(mind, t, IS_FORM.trim()).is_some_and(|is| present_children(mind, is).into_iter().any(|k| *mind.tree.node(k).name == *name)));
-    let ends = word == super::mind::ORDINALS[0] || word == super::mind::LAST_PLACE;
-    let ranked = if forward.is_none() && plain && ends { mind.tree.named(&relation).filter(|&r| !mind.tree.node(r).gone && !mind.tree.story(r)).flat_map(|r| present_children(mind, r)).find(|&v| is_a(v)) } else { None };
-    let forward = forward.or(ranked);
-    let found = forward.or_else(|| mind.tree.named(&name).filter(|&v| both && !mind.tree.node(v).gone && *mind.tree.node(mind.tree.node(v).parent).name == *relation).map(|v| mind.tree.node(mind.tree.node(v).parent).parent).find(|&t| t != 0 && t != at));
+    let found = forward;
     let several: Vec<usize> = holder.and_then(|n| own_child(mind, n, &relation)).map(|r| present_children(mind, r).into_iter().filter(|&c| !mind.tree.node(c).name.starts_with(BRACE_OPEN_TEXT) && count_of(mind, c) > 0).collect()).unwrap_or_default();
     if several.len() > 1 {
         let asked: Vec<String> = open_question(mind).map(|q| present_children(mind, q).into_iter().map(|c| mind.tree.node(c).name.to_string()).collect()).unwrap_or_default();
@@ -770,4 +993,7 @@ fn relation_got(mind: &mut CursorMind, step: &WordStep, word: &str, at: usize, p
     }
     written_out(mind, step.act, found.map(|n| crate::cursor::bare_name(&mind.tree.node(n).name)));
 }
-because!(relation_got, WordWorld, "the get of a relation: what the thing the cursor stands on, a thing of its name or a class it is of holds under the relation the pointed word names, what it is doing when it holds no such relation, the one two steps up for a grandparent, the first or the last of its kind off the seeds, the holder read back for a relation that goes both ways, and every value when it holds several, kept to the kind the question names");
+because!(relation_got, WordWorld, "the plain read of a relation: what the thing the cursor stands on, a thing of its name or a class \
+     it is of holds under the relation the pointed word names, and every value when it holds several, kept to the kind the question \
+     names; the other ways that relation may be read are moves of their own, so a reader that finds nothing here says nothing rather \
+     than trying them in an order nobody chose");

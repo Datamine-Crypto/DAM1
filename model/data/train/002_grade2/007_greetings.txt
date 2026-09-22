@@ -25,5 +25,6 @@ test: turn: hey => | hello
 test: turn: goodbye => | goodbye
 turn: thank you => | welcome
 turn: good morning => | hello
+turn: good afternoon => | hello
 turn: thank you. => | welcome
 test: turn: good evening => | hello

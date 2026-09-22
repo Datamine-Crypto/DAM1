@@ -14,6 +14,7 @@ test: turn: kim has 7 cards. she loses 2. how many cards does kim have left? => 
 ben has 6 apples. he ate 1. kim has 8 sweets. she ate 3. => ben -> {has} -> apple:quantity(6); kim -> {has} -> sweet:quantity(8) | how many apples does ben have left? = 5; how many sweets does kim have left? = 5
 sam had 12 dollars. he spent 5. ann has 9 cards. she lost 4. => sam -> {has} -> dollar:quantity(12); ann -> {has} -> card:quantity(9) | how many dollars does sam have left? = 7; how many cards does ann have left? = 5
 turn: joe had 10 coins he spent 4 how many coins does joe have left => | 6
+turn: ann had 12 sweets she lost 5 how many sweets does ann have left => | 7
 test: rose had 15 dollars. she spent 6. dan has 7 plums. he ate 2. => rose -> {has} -> dollar:quantity(15); dan -> {has} -> plum:quantity(7) | how many dollars does rose have left? = 9; how many plums does dan have left? = 5
 test: turn: max had 20 stickers he lost 5 how many stickers does max have left => | 15
 # The speaker's own amounts: i have some and i lose, spend or eat some.

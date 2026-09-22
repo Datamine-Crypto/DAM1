@@ -1,0 +1,12 @@
+# Before that: the place a thing was in before the place it is in now, asked with no place of its own,
+# since the talk has just named it. Where did i go, the library, and where did i go before that, the
+# store. Held out lines use names and places the learned lines never use.
+seed: 21-verb-forms
+i went to the store. => user -> {go}:time(past) -> store | where did i go? = store
+then: i went to the library. => user -> {go}:time(past) -> library | where did i go? = library; where did i go before that? = store
+mary went to the park. => mary -> {go}:time(past) -> park | where did mary go? = park
+then: mary went to the office. => mary -> {go}:time(past) -> office | where did mary go? = office; where was mary before that? = park
+fred went to the cinema. fred went to the bedroom. => fred -> {go}:time(past) -> cinema; fred -> {go}:time(past) -> bedroom | where did fred go? = bedroom; where did fred go before that? = cinema; where is fred? = bedroom
+test: bill went to the garden. => bill -> {go}:time(past) -> garden | where did bill go? = garden
+test: then: bill went to the school. => bill -> {go}:time(past) -> school | where did bill go? = school; where did bill go before that? = garden
+test: julie went to the office. julie went to the hallway. => julie -> {go}:time(past) -> office; julie -> {go}:time(past) -> hallway | where did julie go? = hallway; where was julie before that? = office; where is julie? = hallway

@@ -14,6 +14,7 @@ source!(
 pub enum WordMove {
     Grab,
     Drop,
+    SetProperty,
     Give,
     Contain,
     Hand,
@@ -42,14 +43,6 @@ pub enum WordMove {
     AddRelationPast,
     AddDeed,
     AddValue,
-    SetColor,
-    SetSize,
-    SetFeeling,
-    SetSpeed,
-    SetTemperature,
-    SetAge,
-    SetMaterial,
-    SetTrait,
     StepParent,
     StepNewest,
     StepTop,
@@ -90,6 +83,24 @@ pub enum WordMove {
     StepUser,
     GetKind,
     GetRelation,
+    GetRelationDoing,
+    GetRelationThrough,
+    GetRelationRanked,
+    GetRelationBackward,
+    GetLocationClaimed,
+    GetLocationMotive,
+    GetKindWhy,
+    GetKindMeasure,
+    CheckRelation,
+    CheckRight,
+    GetRelationSaid,
+    GetRelationToward,
+    ActivityNamed,
+    ActivityDone,
+    ActivityUnder,
+    FindAskedStood,
+    GetDistanceRoute,
+    GetOwnerEvery,
     GetSubject,
     GetPast,
     GetShifted,
@@ -269,30 +280,102 @@ const RELATION_KEY: &str = "relation";
 const SUBJECT_KEY: &str = "subject";
 because!(SUBJECT_KEY, RecordClasses, "the argument of the get that writes the thing whose relation holds the thing found, read backward, \
      who is ann liked by, who is taller than tom");
+const DOING_KIND: &str = "doing";
+because!(DOING_KIND, RecordClasses, "the kind of the get that writes what the thing found is doing when it holds no such relation of its \
+     own, what does tom love answered from the swimming he loves to do");
+const THROUGH_KIND: &str = "through";
+because!(THROUGH_KIND, RecordClasses, "the kind of the get that writes the thing two steps up, so a relation asked of a thing inside \
+     another is answered by the one that holds them both");
+const RANKED_KIND: &str = "ranked";
+because!(RANKED_KIND, RecordClasses, "the kind of the get that writes the first or the last of a kind the seeds order, the first day of the \
+     week");
+const CLAIMED_KIND: &str = "claimed";
+because!(CLAIMED_KIND, RecordClasses, "the kind of the get of a place that writes where a mention of the thing stands, for a thing a \
+     claim or a doing holds rather than a place");
+
+const MOTIVE_KIND: &str = "motive";
+because!(MOTIVE_KIND, RecordClasses, "the kind of the get of a place that writes the place a motive names, for a move still to come");
+
+const WHY_KIND: &str = "why";
+because!(WHY_KIND, RecordClasses, "the kind of the get that writes why a thing is as it is, the cause a because gave it or the state \
+     a motive sent it for");
+
+const MEASURE_KIND: &str = "measure";
+because!(MEASURE_KIND, RecordClasses, "the kind of the get that writes nothing for a measure asked of a thing the story never gave \
+     one, so a height asked of a thing that has none is answered nothing and not by a measure of another");
+
+const STOOD_KIND: &str = "stood";
+because!(STOOD_KIND, RecordClasses, "the kind of the find that walks to what a pronoun stands for, the newest thing or person it can \
+     mean, rather than to a thing the word names");
+
+const ROUTE_KIND: &str = "route";
+because!(ROUTE_KIND, RecordClasses, "the kind of the get of a distance that adds the steps of a route the map knows, rather than \
+     reading one distance told outright");
+
+const NAMED_KIND: &str = "named";
+because!(NAMED_KIND, RecordClasses, "the kind of the nesting that turns a deed already written into a relation of the thing and opens \
+     a doing under it, for a verb said in its plain form after to");
+
+const DONE_KIND: &str = "done";
+because!(DONE_KIND, RecordClasses, "the kind of the nesting that takes the deed the thing carries and writes it as the doing itself");
+
+const UNDER_KIND: &str = "under";
+because!(UNDER_KIND, RecordClasses, "the kind of the nesting that writes the doing on the doer above, where the thing the cursor \
+     stands on is held by a deed");
+
+const SAID_KIND: &str = "said";
+because!(SAID_KIND, RecordClasses, "the kind of the get of a relation that writes what was said back last, for a word of manners the \
+     story never told as a relation of the thing");
+
+const TOWARD_KIND: &str = "toward";
+because!(TOWARD_KIND, RecordClasses, "the kind of the get of a relation that writes what a doing is done toward, where the thing the \
+     cursor stands on is the doing itself");
+
+const RELATION_CHECK: &str = "relation";
+because!(RELATION_CHECK, RecordClasses, "the kind of the check that reads a relation flagged before the word, is tom taller than \
+     ann, rather than a value the thing holds");
+
+const RIGHT_CHECK: &str = "right";
+because!(RIGHT_CHECK, RecordClasses, "the kind of the check that reads whether a claim the story made was right");
+
+const BACKWARD_KIND: &str = "backward";
+because!(BACKWARD_KIND, RecordClasses, "the kind of the get that writes the holder of a relation that goes both ways, read from the value \
+     back to the thing that holds it, who is jane friends with");
+
 const PAST_KIND: &str = "past";
+
 const CHOICE_KIND: &str = "choice";
 because!(CHOICE_KIND, RecordClasses, "the kind of the get that writes which of the options a question offers the thing found holds, red or \
      blue");
+
 const SHIFTED_KIND: &str = "shifted";
+
 const REPLY_KIND: &str = "reply";
 because!(REPLY_KIND, RecordClasses, "the kind of the get that writes what the seeds say is said back to a word of manners, hello to hi, \
      when the input held nothing else");
+
 const DISTANCE_KEY: &str = "distance";
+
 const POSSESS_FAMILY: &str = "possess";
 because!(POSSESS_FAMILY, RecordClasses, "the family of the move for an apostrophe after a name under is: the name becomes the thing the \
      subject is something of, ann is tom's mother");
+
 const ACTIVITY_FAMILY: &str = "activity";
 because!(ACTIVITY_FAMILY, RecordClasses, "the family of the move that makes what the cursor stands on an activity of the thing above it: a \
      verb's empty relation becomes the activity it names, and any other relation gets the activity relation beside it");
+
 const REGARD_FAMILY: &str = "regard";
 because!(REGARD_FAMILY, RecordClasses, "the family of the move for of after a quality under is: the quality becomes a relation of the \
      subject, whose value is what it is about, afraid of wolves");
+
 const GRAB_ALL_FAMILY: &str = "grabAll";
 because!(GRAB_ALL_FAMILY, RecordClasses, "the family of the move for them after a verb of giving: everything the giver has is held as a \
      group, to be dropped into the one named after to");
+
 const CLOCK_FAMILY: &str = "clock";
 because!(CLOCK_FAMILY, RecordClasses, "the family of the move for clock after a number under is: the subject gets its time, counted in \
      clock by the number flagged");
+
 const MEASURE_FAMILY: &str = "measure";
 because!(SHIFTED_KIND, RecordClasses, "the kind of the get that writes the member of an order as many steps from the one the story told as \
      the question counts, or as the word found stands from the word the story told it of");
@@ -300,10 +383,15 @@ because!(DISTANCE_KEY, RecordClasses, "the argument of the get that writes how m
      to the one its word names");
 because!(MEASURE_FAMILY, RecordClasses, "the family of the move for a word of measure after a counted unit: the count moves under the \
      relation the word names, five years old");
+
 const AMOUNT_KIND: &str = "amount";
+
 const ABOUT_KIND: &str = "about";
+
 const BEFORE_KEY: &str = "before";
+
 const AFTER_KEY: &str = "after";
+
 const GIVEN_KEY: &str = "given";
 because!(GIVEN_KEY, RecordClasses, "the argument of the get that writes what the one found had and the one its word names has now, what \
      did mary give to bill");
@@ -315,19 +403,19 @@ because!(AMOUNT_KIND, RecordClasses, "the kind of the get that writes the count 
      is the book");
 because!(PAST_KIND, RecordClasses, "the kind of the get that writes where the thing found was, or who had it, before it moved, read from \
      the trace it left");
+
 const NUMBER_FAMILY: &str = "number";
 because!(NUMBER_FAMILY, RecordClasses, "the family of the moves that work on the number of the input: set it from a word, work another \
      word's number into it, or say it into the output");
-
-pub const NUMBER_KINDS: [(WordMove, &str); 19] = [(WordMove::NumberSet, "set"), (WordMove::NumberAdd, "add"), (WordMove::NumberSubtract, "subtract"), (WordMove::NumberMultiply, "multiply"), (WordMove::NumberDivide, "divide"), (WordMove::NumberLarger, "larger"), (WordMove::NumberSmaller, "smaller"), (WordMove::NumberRemainder, "remainder"), (WordMove::NumberPower, "power"), (WordMove::NumberPercent, "percent"), (WordMove::NumberAddPercent, "addPercent"), (WordMove::NumberLessPercent, "lessPercent"), (WordMove::NumberRound, "round"), (WordMove::NumberNegate, "negate"), (WordMove::NumberMean, "mean"), (WordMove::NumberWhole, "whole"), (WordMove::NumberRoot, "root"), (WordMove::NumberRoundDefault, "roundDefault"), (WordMove::NumberSay, "say")];
-because!(NUMBER_KINDS, RecordClasses, "each move on the number with the operation its class names, as the user writes a record, number add");
 
 pub const PLANNED_NUMBER_MOVES: [(crate::cursor::CursorMove, WordMove); 18] = [(crate::cursor::CursorMove::SetNumber, WordMove::NumberSet), (crate::cursor::CursorMove::AddNumber, WordMove::NumberAdd), (crate::cursor::CursorMove::SubtractNumber, WordMove::NumberSubtract), (crate::cursor::CursorMove::MultiplyNumber, WordMove::NumberMultiply), (crate::cursor::CursorMove::DivideNumber, WordMove::NumberDivide), (crate::cursor::CursorMove::LargerNumber, WordMove::NumberLarger), (crate::cursor::CursorMove::SmallerNumber, WordMove::NumberSmaller), (crate::cursor::CursorMove::RemainderNumber, WordMove::NumberRemainder), (crate::cursor::CursorMove::PowerNumber, WordMove::NumberPower), (crate::cursor::CursorMove::TakePercent, WordMove::NumberPercent), (crate::cursor::CursorMove::AddPercent, WordMove::NumberAddPercent), (crate::cursor::CursorMove::TakeAwayPercent, WordMove::NumberLessPercent), (crate::cursor::CursorMove::RoundNumber, WordMove::NumberRound), (crate::cursor::CursorMove::NegateNumber, WordMove::NumberNegate), (crate::cursor::CursorMove::DivideByCount, WordMove::NumberMean), (crate::cursor::CursorMove::WholeNumber, WordMove::NumberWhole), (crate::cursor::CursorMove::RootNumber, WordMove::NumberRoot), (crate::cursor::CursorMove::RoundDefault, WordMove::NumberRoundDefault)];
 because!(PLANNED_NUMBER_MOVES, RecordClasses, "each operation a number plan uses with the word move that does it, so the plan the teacher \
      finds for an answer is taught as word moves");
 
 const COMPUTE_FAMILY: &str = "compute";
+
 const NAME_FAMILY: &str = "name";
+
 const RESULT_KEY: &str = "result";
 because!(NAME_FAMILY, RecordClasses, "the family of the move that names what was just worked out, one plus one equals sum");
 because!(RESULT_KEY, RecordClasses, "the argument of the naming move that holds the word the result is named by");
@@ -345,6 +433,7 @@ because!(USER_KIND, RecordClasses, "the kind of the step to a person of the talk
      pointing at the word said");
 because!(OWNER_KIND, RecordClasses, "the kind of the get that writes who owns the thing found, the one it was given to, wherever it stands \
      now");
+
 const CHILD_KEY: &str = "withChild";
 because!(NAME_KEY, RecordClasses, "the argument of a find that holds the name looked for");
 because!(ORDER_KEY, RecordClasses, "the argument of a find that says which of several things of one name to take");
@@ -365,8 +454,11 @@ because!(POINT_FAMILY, RecordClasses, "the family of the move a word that does n
 because!(CONTINUE_FAMILY, RecordClasses, "the family of the move that ends the steps of a word");
 
 const PARENT_KIND: &str = "parent";
+
 const NEWEST_KIND: &str = "newest";
+
 const TOP_KIND: &str = "top";
+
 const TO_KIND: &str = "to";
 because!(PARENT_KIND, RecordClasses, "the kind of the step move to the parent of the node the cursor stands on, the thing a relation \
      belongs to");
@@ -374,16 +466,17 @@ because!(NEWEST_KIND, RecordClasses, "the kind of the step move to the newest th
 because!(TOP_KIND, RecordClasses, "the kind of the step move to the newest thing under the world, what he or she stands for");
 because!(TO_KIND, RecordClasses, "the kind of the point move, which points to nothing");
 
-pub const KINDS: [(WordMove, &str); 8] = [
-    (WordMove::SetColor, "color"),
-    (WordMove::SetSize, "size"),
-    (WordMove::SetFeeling, "feeling"),
-    (WordMove::SetTemperature, "temperature"),
-    (WordMove::SetSpeed, "speed"),
-    (WordMove::SetAge, "age"),
-    (WordMove::SetMaterial, "material"),
-    (WordMove::SetTrait, "trait"),
-];
+pub const NUMBER_KINDS: [(WordMove, &str); 19] = [(WordMove::NumberSet, "set"), (WordMove::NumberAdd, "add"), (WordMove::NumberSubtract, "subtract"), (WordMove::NumberMultiply, "multiply"), (WordMove::NumberDivide, "divide"), (WordMove::NumberLarger, "larger"), (WordMove::NumberSmaller, "smaller"), (WordMove::NumberRemainder, "remainder"), (WordMove::NumberPower, "power"), (WordMove::NumberPercent, "percent"), (WordMove::NumberAddPercent, "addPercent"), (WordMove::NumberLessPercent, "lessPercent"), (WordMove::NumberRound, "round"), (WordMove::NumberNegate, "negate"), (WordMove::NumberMean, "mean"), (WordMove::NumberWhole, "whole"), (WordMove::NumberRoot, "root"), (WordMove::NumberRoundDefault, "roundDefault"), (WordMove::NumberSay, "say")];
+because!(NUMBER_KINDS, RecordClasses, "each move on the number with the operation its class names, as the user writes a record, number add");
+
+const EVERY_KIND: &str = "every";
+because!(EVERY_KIND, RecordClasses, "the kind of a get that writes every answer a thing has of what is asked, where it has more \
+     than one");
+
+pub const MATERIAL_KIND: &str = "material";
+because!(MATERIAL_KIND, RecordClasses, "the kind of the quality a thing is made of, one of the kinds a quality is classed by, named \
+     on its own since a word said after made of sets that kind whatever else the seeds class the word by");
+pub const KINDS: [&str; 8] = ["color", "size", "feeling", "temperature", "speed", "age", "material", "trait"];
 because!(KINDS, RecordClasses, "the kinds the seeds class qualities by, red is a color, big is a size and shy is a trait, each with the move that sets a \
      quality of that kind, so the class says the kind as the user writes it, setProperty color: yellow");
 
@@ -418,38 +511,37 @@ impl WordMove {
             WordMove::Release => RELEASE_FAMILY,
             WordMove::FlagThe | WordMove::FlagA | WordMove::FlagQuantity | WordMove::FlagProperty | WordMove::FlagTime | WordMove::FlagLater | WordMove::FlagFrom | WordMove::FlagWhen | WordMove::FlagWhose => FLAG_FAMILY,
             WordMove::AddProperty | WordMove::AddPropertyPast | WordMove::AddRelation | WordMove::AddRelationPast | WordMove::AddDeed | WordMove::AddValue | WordMove::AddRole => CHILDREN_FAMILY,
-            WordMove::SetColor | WordMove::SetSize | WordMove::SetFeeling | WordMove::SetSpeed | WordMove::SetTemperature | WordMove::SetAge | WordMove::SetMaterial | WordMove::SetTrait => SET_FAMILY,
+            WordMove::SetProperty => SET_FAMILY,
             WordMove::StepParent | WordMove::StepNewest | WordMove::StepTop => STEP_FAMILY,
             WordMove::PointNothing => POINT_FAMILY,
             WordMove::AddQuestion => CHILDREN_FAMILY,
-            WordMove::FindAsked => FIND_FAMILY,
-            WordMove::GetLocation | WordMove::GetChildren | WordMove::GetOwner | WordMove::GetName | WordMove::GetCount | WordMove::GetTotal | WordMove::GetDifference | WordMove::GetMost | WordMove::GetLeast => GET_FAMILY,
+            WordMove::FindAsked | WordMove::FindAskedStood => FIND_FAMILY,
+            WordMove::GetDistanceRoute | WordMove::GetLocation | WordMove::GetLocationClaimed | WordMove::GetLocationMotive |  WordMove::GetChildren | WordMove::GetOwner | WordMove::GetOwnerEvery | WordMove::GetName | WordMove::GetCount | WordMove::GetTotal | WordMove::GetDifference | WordMove::GetMost | WordMove::GetLeast => GET_FAMILY,
             WordMove::FindNext | WordMove::FindWith => FIND_FAMILY,
             WordMove::GetAllWith => GET_FAMILY,
             WordMove::StepUser => STEP_FAMILY,
-            WordMove::GetKind => KIND_GET_FAMILY,
+            WordMove::GetKind | WordMove::GetKindWhy | WordMove::GetKindMeasure => KIND_GET_FAMILY,
             WordMove::Measure => MEASURE_FAMILY,
             WordMove::Possess => POSSESS_FAMILY,
             WordMove::GrabAll => GRAB_ALL_FAMILY,
             WordMove::SetClock => CLOCK_FAMILY,
-            WordMove::Activity => ACTIVITY_FAMILY,
+            WordMove::Activity | WordMove::ActivityNamed | WordMove::ActivityDone | WordMove::ActivityUnder => ACTIVITY_FAMILY,
             WordMove::Regard => REGARD_FAMILY,
-            WordMove::GetRelation | WordMove::GetSubject | WordMove::GetPast | WordMove::GetShifted | WordMove::GetReply | WordMove::GetChoice | WordMove::GetDistance | WordMove::GetAmount | WordMove::GetAbout | WordMove::GetBefore | WordMove::GetAfter | WordMove::GetGiven => GET_FAMILY,
+            WordMove::GetRelation | WordMove::GetRelationDoing | WordMove::GetRelationThrough | WordMove::GetRelationRanked | WordMove::GetRelationBackward | WordMove::GetRelationSaid | WordMove::GetRelationToward | WordMove::GetSubject | WordMove::GetPast | WordMove::GetShifted | WordMove::GetReply | WordMove::GetChoice | WordMove::GetDistance | WordMove::GetAmount | WordMove::GetAbout | WordMove::GetBefore | WordMove::GetAfter | WordMove::GetGiven => GET_FAMILY,
             WordMove::Compute => COMPUTE_FAMILY,
             WordMove::NumberSet | WordMove::NumberAdd | WordMove::NumberSubtract | WordMove::NumberMultiply | WordMove::NumberDivide | WordMove::NumberLarger | WordMove::NumberSmaller | WordMove::NumberRemainder | WordMove::NumberPower | WordMove::NumberPercent | WordMove::NumberAddPercent | WordMove::NumberLessPercent | WordMove::NumberRound | WordMove::NumberNegate | WordMove::NumberMean | WordMove::NumberWhole | WordMove::NumberRoot | WordMove::NumberRoundDefault | WordMove::NumberSay => NUMBER_FAMILY,
             WordMove::NameResult => NAME_FAMILY,
             WordMove::Check => CHECK_FAMILY,
+            WordMove::CheckRelation | WordMove::CheckRight => CHECK_FAMILY,
             WordMove::Continue => CONTINUE_FAMILY,
         }
     }
 
     pub fn points(self) -> bool {
-        matches!(self, WordMove::GetDistance | WordMove::Measure | WordMove::SetClock | WordMove::NumberSet | WordMove::NumberAdd | WordMove::NumberSubtract | WordMove::NumberMultiply | WordMove::NumberDivide | WordMove::NumberLarger | WordMove::NumberSmaller | WordMove::NumberRemainder | WordMove::NumberPower | WordMove::NumberPercent | WordMove::NumberAddPercent | WordMove::NumberLessPercent | WordMove::NumberRound | WordMove::Drop | WordMove::FlagQuantity | WordMove::FlagProperty | WordMove::FlagWhen | WordMove::FlagWhose | WordMove::AddProperty | WordMove::AddPropertyPast | WordMove::AddRelation | WordMove::AddRelationPast | WordMove::AddDeed | WordMove::AddValue | WordMove::AddQuestion | WordMove::FindAsked | WordMove::GetKind | WordMove::Check | WordMove::FindWith | WordMove::GetAllWith | WordMove::GetCount | WordMove::GetRelation | WordMove::GetSubject | WordMove::Compute | WordMove::NameResult | WordMove::GetBefore | WordMove::GetAfter | WordMove::GetGiven | WordMove::GetTotal | WordMove::GetDifference | WordMove::GetMost | WordMove::GetLeast | WordMove::ChangeState | WordMove::StepUser) || self.kind().is_some()
+        matches!(self, WordMove::GetDistance | WordMove::GetDistanceRoute | WordMove::FindAskedStood | WordMove::Measure | WordMove::SetClock | WordMove::NumberSet | WordMove::NumberAdd | WordMove::NumberSubtract | WordMove::NumberMultiply | WordMove::NumberDivide | WordMove::NumberLarger | WordMove::NumberSmaller | WordMove::NumberRemainder | WordMove::NumberPower | WordMove::NumberPercent | WordMove::NumberAddPercent | WordMove::NumberLessPercent | WordMove::NumberRound | WordMove::Drop | WordMove::FlagQuantity | WordMove::FlagProperty | WordMove::FlagWhen | WordMove::FlagWhose | WordMove::AddProperty | WordMove::AddPropertyPast | WordMove::AddRelation | WordMove::AddRelationPast | WordMove::AddDeed | WordMove::AddValue | WordMove::AddQuestion | WordMove::FindAsked | WordMove::GetKind | WordMove::GetKindWhy | WordMove::GetKindMeasure | WordMove::Check | WordMove::CheckRelation | WordMove::CheckRight | WordMove::FindWith | WordMove::GetAllWith | WordMove::GetCount | WordMove::GetRelation | WordMove::GetRelationDoing | WordMove::GetRelationThrough | WordMove::GetRelationRanked | WordMove::GetRelationBackward | WordMove::GetRelationSaid | WordMove::GetRelationToward | WordMove::GetSubject | WordMove::Compute | WordMove::NameResult | WordMove::GetBefore | WordMove::GetAfter | WordMove::GetGiven | WordMove::GetTotal | WordMove::GetDifference | WordMove::GetMost | WordMove::GetLeast | WordMove::ChangeState | WordMove::StepUser | WordMove::SetProperty)
     }
 
-    pub fn kind(self) -> Option<&'static str> {
-        KINDS.iter().find(|(m, _)| *m == self).map(|(_, kind)| *kind)
-    }
+
 
     pub fn class(self) -> String {
         let flag = |name: &str, value: &str| class_parts(self.family(), &[argument(TYPE_KEY, name), argument(VALUE_KEY, value)]);
@@ -475,15 +567,23 @@ impl WordMove {
             WordMove::AddRelationPast => class_parts(self.family(), &[argument(ADD_KIND, RECORD_MARK), argument(TYPE_KEY, RELATION_TYPE), argument(TIME_KEY, PAST_VALUE)]),
             WordMove::AddDeed => typed(DEED_TYPE),
             WordMove::AddValue => class_parts(self.family(), &[argument(ADD_KIND, RECORD_MARK)]),
+            WordMove::ActivityNamed => class_parts(self.family(), &[NAMED_KIND.to_string()]),
+            WordMove::ActivityDone => class_parts(self.family(), &[DONE_KIND.to_string()]),
+            WordMove::ActivityUnder => class_parts(self.family(), &[UNDER_KIND.to_string()]),
             WordMove::StepParent => class_parts(self.family(), &[PARENT_KIND.to_string()]),
             WordMove::StepNewest => class_parts(self.family(), &[NEWEST_KIND.to_string()]),
             WordMove::StepTop => class_parts(self.family(), &[TOP_KIND.to_string()]),
             WordMove::PointNothing => class_parts(self.family(), &[argument(TO_KIND, crate::cursor::CURSOR_NOTHING)]),
             WordMove::AddQuestion => typed(QUESTION_TYPE),
             WordMove::FindAsked => class_parts(self.family(), &[argument(NAME_KEY, RECORD_MARK), argument(ORDER_KEY, LAST_MENTIONED)]),
+            WordMove::FindAskedStood => class_parts(self.family(), &[STOOD_KIND.to_string(), argument(NAME_KEY, RECORD_MARK), argument(ORDER_KEY, LAST_MENTIONED)]),
             WordMove::GetLocation => class_parts(self.family(), &[LOCATION_KIND.to_string()]),
+            WordMove::GetDistanceRoute => class_parts(self.family(), &[ROUTE_KIND.to_string(), argument(CHILD_KEY, RECORD_MARK)]),
             WordMove::GetChildren => class_parts(self.family(), &[CHILDREN_KIND.to_string()]),
+            WordMove::GetLocationClaimed => class_parts(self.family(), &[LOCATION_KIND.to_string(), CLAIMED_KIND.to_string()]),
+            WordMove::GetLocationMotive => class_parts(self.family(), &[LOCATION_KIND.to_string(), MOTIVE_KIND.to_string()]),
             WordMove::GetOwner => class_parts(self.family(), &[OWNER_KIND.to_string()]),
+            WordMove::GetOwnerEvery => class_parts(self.family(), &[OWNER_KIND.to_string(), EVERY_KIND.to_string()]),
             WordMove::GetName => class_parts(self.family(), &[NAME_KIND.to_string()]),
             WordMove::GetCount => class_parts(self.family(), &[argument(COUNT_KEY, RECORD_MARK)]),
             WordMove::GetTotal => class_parts(self.family(), &[argument(TOTAL_KEY, RECORD_MARK)]),
@@ -495,7 +595,15 @@ impl WordMove {
             WordMove::GetAllWith => class_parts(self.family(), &[ALL_KIND.to_string(), argument(WITH_KEY, RECORD_MARK)]),
             WordMove::StepUser => class_parts(self.family(), &[argument(USER_KIND, RECORD_MARK)]),
             WordMove::GetKind => class_parts(self.family(), &[argument(CHILD_KEY, RECORD_MARK)]),
+            WordMove::GetKindWhy => class_parts(self.family(), &[WHY_KIND.to_string(), argument(CHILD_KEY, RECORD_MARK)]),
+            WordMove::GetKindMeasure => class_parts(self.family(), &[MEASURE_KIND.to_string(), argument(CHILD_KEY, RECORD_MARK)]),
             WordMove::GetRelation => class_parts(self.family(), &[argument(RELATION_KEY, RECORD_MARK)]),
+            WordMove::GetRelationDoing => class_parts(self.family(), &[DOING_KIND.to_string(), argument(RELATION_KEY, RECORD_MARK)]),
+            WordMove::GetRelationThrough => class_parts(self.family(), &[THROUGH_KIND.to_string(), argument(RELATION_KEY, RECORD_MARK)]),
+            WordMove::GetRelationRanked => class_parts(self.family(), &[RANKED_KIND.to_string(), argument(RELATION_KEY, RECORD_MARK)]),
+            WordMove::GetRelationBackward => class_parts(self.family(), &[BACKWARD_KIND.to_string(), argument(RELATION_KEY, RECORD_MARK)]),
+            WordMove::GetRelationSaid => class_parts(self.family(), &[SAID_KIND.to_string(), argument(RELATION_KEY, RECORD_MARK)]),
+            WordMove::GetRelationToward => class_parts(self.family(), &[TOWARD_KIND.to_string(), argument(RELATION_KEY, RECORD_MARK)]),
             WordMove::GetSubject => class_parts(self.family(), &[argument(SUBJECT_KEY, RECORD_MARK)]),
             WordMove::GetPast => class_parts(self.family(), &[PAST_KIND.to_string()]),
             WordMove::GetShifted => class_parts(self.family(), &[SHIFTED_KIND.to_string()]),
@@ -515,7 +623,10 @@ impl WordMove {
             }
             WordMove::NameResult => class_parts(self.family(), &[argument(RESULT_KEY, RECORD_MARK)]),
             WordMove::Check => class_parts(self.family(), &[RECORD_MARK.to_string()]),
-            _ => class_parts(self.family(), &[argument(self.kind().unwrap_or_default(), RECORD_MARK)]),
+            WordMove::CheckRelation => class_parts(self.family(), &[RELATION_CHECK.to_string(), RECORD_MARK.to_string()]),
+            WordMove::CheckRight => class_parts(self.family(), &[RIGHT_CHECK.to_string(), RECORD_MARK.to_string()]),
+            WordMove::SetProperty => class_parts(self.family(), &[argument(PROPERTY_FLAG, RECORD_MARK)]),
+            _ => self.family().to_string(),
         }
     }
 
@@ -524,9 +635,10 @@ impl WordMove {
     }
 }
 
-pub const ALL: [WordMove; 99] = [
+pub const ALL: [WordMove; 110] = [
     WordMove::Grab,
     WordMove::Drop,
+    WordMove::SetProperty,
     WordMove::Give,
     WordMove::Contain,
     WordMove::Hand,
@@ -555,23 +667,21 @@ pub const ALL: [WordMove; 99] = [
     WordMove::AddRelationPast,
     WordMove::AddDeed,
     WordMove::AddValue,
-    WordMove::SetColor,
-    WordMove::SetSize,
-    WordMove::SetFeeling,
-    WordMove::SetSpeed,
-    WordMove::SetTemperature,
-    WordMove::SetAge,
-    WordMove::SetMaterial,
-    WordMove::SetTrait,
     WordMove::StepParent,
     WordMove::StepNewest,
     WordMove::StepTop,
     WordMove::PointNothing,
     WordMove::AddQuestion,
     WordMove::FindAsked,
+    WordMove::FindAskedStood,
     WordMove::GetLocation,
     WordMove::GetChildren,
+    WordMove::GetKindWhy,
+    WordMove::GetKindMeasure,
+    WordMove::GetLocationClaimed,
+    WordMove::GetLocationMotive,
     WordMove::GetOwner,
+    WordMove::GetOwnerEvery,
     WordMove::GetName,
     WordMove::GetCount,
     WordMove::NumberSet,
@@ -603,17 +713,27 @@ pub const ALL: [WordMove; 99] = [
     WordMove::StepUser,
     WordMove::GetKind,
     WordMove::GetRelation,
+    WordMove::GetRelationDoing,
+    WordMove::GetRelationThrough,
+    WordMove::GetRelationRanked,
+    WordMove::GetRelationBackward,
+    WordMove::GetRelationSaid,
+    WordMove::GetRelationToward,
     WordMove::GetSubject,
     WordMove::GetPast,
     WordMove::GetShifted,
     WordMove::GetReply,
     WordMove::GetChoice,
     WordMove::GetDistance,
+    WordMove::GetDistanceRoute,
     WordMove::Measure,
     WordMove::Possess,
     WordMove::GrabAll,
     WordMove::SetClock,
     WordMove::Activity,
+    WordMove::ActivityNamed,
+    WordMove::ActivityDone,
+    WordMove::ActivityUnder,
     WordMove::Regard,
     WordMove::GetAbout,
     WordMove::GetBefore,
@@ -623,6 +743,8 @@ pub const ALL: [WordMove; 99] = [
     WordMove::Compute,
     WordMove::NameResult,
     WordMove::Check,
+    WordMove::CheckRelation,
+    WordMove::CheckRight,
     WordMove::Continue,
 ];
 because!(ALL, RecordClasses, "every move, so a class read from a network's file is matched against each move's own class");

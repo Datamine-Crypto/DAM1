@@ -6,7 +6,7 @@ use crate::quiz::{APOSTROPHE, IS_FORM, OWNS_FORM, PLACE_RELATIONS};
 use crate::words::number_of;
 use patterns::because;
 use std::sync::Arc;
-use super::english::{MARK_SIGNS, ASKED_END, TOLD_END, OPERATORS, SOFT_BEFORE, LIST_FUNCTIONS, PLURAL_LEAST, HISSING_ENDS, LONG_PLURAL, SOFT_PLURAL, PLAIN_PLURALS, MORE_PLACES, LINKS, VERB_ENDS, MARK_CLASS, SPEAKER_CLASS, OWN_CLASS, FILLER_CLASS, NEGATION_CLASS, LINK_CLASS, OPERATOR_CLASS, POSSESSIVE_CLASS, COPULA_CLASS, HAVING_CLASS, ARTICLE_CLASS, SKIPPED_CLASS, ASKS_CLASS, HELPER_CLASS, THING_PRONOUN_CLASS, PERSON_PRONOUN_CLASS, PLACE_CLASS, MOVING_CLASS, PAST_CLASS, NUMBER_CLASS, KIND_CLASS, QUALITY_CLASS, OTHER_CLASS, STORY_OPENER, POINTED_NTH};
+use super::english::{MARK_SIGNS, ASKED_END, TOLD_END, OPERATORS, SOFT_BEFORE, LIST_FUNCTIONS, PLURAL_LEAST, HISSING_ENDS, LONG_PLURAL, SOFT_PLURAL, PLAIN_PLURALS, MORE_PLACES, LINKS, VERB_ENDS, MARK_CLASS, SPEAKER_CLASS, OWN_CLASS, FILLER_CLASS, NEGATION_CLASS, LINK_CLASS, OPERATOR_CLASS, POSSESSIVE_CLASS, COPULA_CLASS, HAVING_CLASS, ARTICLE_CLASS, SKIPPED_CLASS, ASKS_CLASS, HELPER_CLASS, THING_PRONOUN_CLASS, PERSON_PRONOUN_CLASS, PLACE_CLASS, ORDINAL_CLASS, TIME_CLASS, MOVING_CLASS, PAST_CLASS, NUMBER_CLASS, KIND_CLASS, QUALITY_CLASS, OTHER_CLASS, STORY_OPENER, POINTED_NTH};
 pub use super::english::{WordEnglish, COPULA, LIST_MARK, HAVING, SKIPPED, ODD_SIGN, EVEN_SIGN, RANGE_WORD, ALPHABET_WORD, PLACE_UNITS, REPLY_WORDS, DIGITS_SIGN, POWER_SIGN, BRACKET_OPENS, BRACKET_CLOSES, FUNCTIONS, COMPARING, CLOCK_OPENER, MEASURES, SUPERLATIVE_RELATION, TELLING, GIVING, ARTICLE_FLAGS, ASKING, HELPERS, THING_PRONOUNS, PERSON_PRONOUNS, MOVING, CONTAINING, PLURAL_END, FLAG_OWNED, function_word, SWITCHED, STATES, OWN_WORDS, YOU_WORDS, SELF_WORDS, FILLERS, TAKING, LEAVING, ORDINALS, OPPOSITE_WORD, COMPARED, COMPARISON_END, POSING, OWNING, BELONGING, LOSING, NEGATIONS, DROPPING, VERB_CLASS, THING_CLASS, VALUE_CLASS, GOING_END, ABLE, LABEL_OPENER};
 pub use super::view::{found_word_item};
 pub use super::english::{TIMED_VERBS, YEAR_LEAST, YEAR_NAME, ACTIVITY, INFINITIVE, TOWARD, CLAUSE_BREAKS, ANOTHER, LINES, BEEN, PRONOUN_GENDERS, DONE_ASKED, OBJECT_PRONOUNS, PARTING_MARKS, MORE_SIGN, LESS_SIGN, MOST_SIGN, LEAST_SIGN, MAKING, LAST_PLACE, DECIMAL_BASE, HALVING, ROMAN_LETTERS, FRONT, MADE, AROUND_ASKED, SIDE_NAMED, PLURAL_ASKED, SINGULAR_ASKED, IN_WORDS, NUMBER_ASKED, RUN_ASKED, DURING, GAINING, PARTING, WHO_ASKED, WEIGHT_COMPARISONS, WEIGHING, SPAN_ENDS, SPAN_ASKED, SHARING, EVENLY, GOAL, WHY_ASKED, CHOICE_ASKED, STATE_WORDS, MEANS, GOING, CLAIMING, RIGHT_ASKED, NAME_ROLE, SEQUENCE_WORDS, THERE_OPENER, CHANGE_ASKED, PAYING, COSTING, POSSESSIVE_S, BORN, HOUR_OPENER, AGE_WORDS, RUN_SUM, ROUNDING, ROUNDING_WORDS, LETTER_ASKED, LETTER_PLACES, SPELLING, VOWEL_LETTERS, QUOTE, MEDIAN_SIGN, MODE_SIGN, SPREAD_SIGN, LEVEL_SIGN, LIST_HALVES, MULTIPLE_SIGN, FACTOR_SIGN, MULTIPLIERS, SHOWN_THOUSANDTHS, SOLVE_NEAR, SOLVE_SPAN, EQUAL_SIGN, CHOICE_WORD, MIDDLE_SIGN, TOGETHER, CLOCK_WORD, TIME_ASKED, AGO, UNTIL, DIRECTIONS, DIGITS_ASKED, KIN, GRAND, PARENTS, FLAG_KIN, SUPERLATIVE_END, ORDER_RELATION, FLAG_HAND, FLAG_DEFINITE, FLAG_INDEFINITE, FLAG_QUANTITY, FLAG_PROPERTY, FLAG_TIME, FLAG_GIVE, FLAG_PLACE, FLAG_CONTAIN, ASSISTANT_NAME, JOINER, SOURCE, FLAG_FROM, COMPANION, FLAG_WITH, BELONGS_IN, DEED_TAG, RELATIVES, FLAG_GROUP, FLAG_STATE, PAST_END, USER_NAME, COUNTING, GENERAL_THINGS, RECEIVING, OUT_OF, WILL, AWAY_FROM, FLAG_LEAVE, TIMES_OF_DAY, GOING_RELATION, METHOD_RELATION, FITTING, FLAG_WHEN, FLAG_ROLE, SAMENESS, LIKENESS, SYMMETRIC_ROLES, PASSIVE_MARK, ABOUT, EARLIER, LATER, NO_LONGER, FLAG_TAKE, FLAG_RELEASE, GREETING_OPENERS, REPLY_RELATION, WEAK_DEGREES, DEGREE_WORDS, FLAG_DEGREE, CAUSE_WORD, GROUP_OBJECT, REFLEXIVES, LABEL_AS, NAMED_BY};
@@ -206,7 +206,7 @@ because!(kind_word, WordReading, "whether a word names a kind the seeds class qu
 pub fn kind_of(mind: &CursorMind, quality: &str) -> Option<Arc<str>> {
     let thing = mind.tree.named(quality).find(|&n| n != 0 && !mind.tree.node(n).gone && mind.tree.node(n).parent == 0 && !mind.tree.story(n))?;
     let is = child_named(&mind.tree, thing, IS_FORM.trim())?;
-    mind.tree.node(is).children.iter().copied().filter(|&c| !mind.tree.node(c).gone).map(|c| mind.tree.node(c).name.clone()).find(|k| super::moves::KINDS.iter().any(|(_, name)| **name == **k))
+    mind.tree.node(is).children.iter().copied().filter(|&c| !mind.tree.node(c).gone).map(|c| mind.tree.node(c).name.clone()).find(|k| super::moves::KINDS.contains(&&**k))
 }
 because!(kind_of, WordReading, "the kind the seeds class a quality by, color for red, read from the seed thing of that name under is, one \
      of the kinds a quality has, or none for a word the seeds class by no such kind, as an animal is a living thing");
@@ -279,10 +279,16 @@ pub fn word_classes(mind: &CursorMind, word: &str) -> Vec<&'static str> {
     if OWN_WORDS.iter().any(|(w, _)| *w == word) {
         classes.push(OWN_CLASS);
     }
+    if ORDINALS.contains(&word) {
+        classes.push(ORDINAL_CLASS);
+    }
+    if TIMES_OF_DAY.contains(&word) {
+        classes.push(TIME_CLASS);
+    }
     if place_word(word) {
         classes.push(PLACE_CLASS);
     }
-    if !classes.is_empty() {
+    if !classes.is_empty() && !classes.iter().all(|class| *class == ORDINAL_CLASS || *class == TIME_CLASS) {
         return classes;
     }
     if is_number(mind, word).is_some() {
@@ -320,10 +326,20 @@ because!(word_classes, WordReading, "the classes a word is in: the closed classe
      themselves; else what the tree makes of it, a number, a verb and whether it moves, a past form, a kind, a quality, a thing standing \
      in the world, under it or inside another thing, or a value the tree holds under a relation, and a word in none of these is other");
 
+pub fn quality_kind(mind: &CursorMind, word: &str) -> Option<String> {
+    let made_of = mind.before.iter().any(|said| said == super::mind::MADE) && mind.before.iter().rev().nth(1).is_some_and(|said| said == super::mind::TOWARD);
+    if made_of {
+        return Some(super::moves::MATERIAL_KIND.to_string());
+    }
+    kind_of(mind, word).map(|k| k.to_string()).filter(|k| super::moves::KINDS.contains(&k.as_str()))
+}
+because!(quality_kind, WordReading, "the kind a quality a word names is set under: what a thing is made of where made of was said, \
+     else the kind the seeds class the word by, and none where they class it by no kind a quality has");
+
 pub fn quality_word(mind: &CursorMind, word: &str) -> bool {
     let known = |relation: &str| mind.tree.named(word).filter(|&n| n != 0 && !mind.tree.node(n).gone && mind.tree.node(n).parent == 0 && !mind.tree.story(n)).any(|n| child_named(&mind.tree, n, relation).is_some());
     let _ = known;
-    kind_of(mind, word).is_some_and(|k| super::moves::KINDS.iter().any(|(_, name)| **name == *k))
+    kind_of(mind, word).is_some_and(|k| super::moves::KINDS.contains(&&*k))
 }
 because!(quality_word, WordReading, "whether the seeds know a word as a quality, classed by one of the kinds a quality has, red under \
      color; a kitchen the seeds call a room and a brother set against a sister are things, not qualities");

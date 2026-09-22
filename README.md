@@ -11,8 +11,8 @@
 
 🟢 **Live now at [datamine.network](https://datamine.network/)**
 
-DAM1 is the World's Most Efficient LLM: three networks of about 1.9 million numbers each that read
-by vote, under 12 MB to download, and it runs in a browser with no server and no graphics card. It
+DAM1 is the World's Most Efficient LLM: one network of 1.9 million numbers, under 4 MB to
+download, and it runs in a browser with no server and no graphics card. It
 learns to read English without any word meaning written in the code. It reads one word at a time
 and shapes a tree of things, places and relations, the world the words describe. At each word a
 neural network looks at the stack of the sentence so far (the words heard, the steps taken and
@@ -25,14 +25,14 @@ fails the build when either slips. [AGENTS.md](AGENTS.md) says how to work here.
 
 ## 📊 How it compares
 
-Every model was asked the same 2,669 questions: the questions of the held-out lines of the
-curriculum, which no network was trained on. Each item is a short text and one question about it.
+Every model was asked the questions of the held-out lines of the curriculum, which no network was
+trained on: 2,673 for DAM1, and the 2,669 that existed when the others were run. Each item is a short text and one question about it.
 One rule scores every reply. The other models are also given an order and two worked examples,
 which DAM1 is not; they run in float16 on an NVIDIA RTX 3080 Ti, DAM1 on the processor.
 
 | Model | Parameters | Weights | Memory | Answered | Exact | One answer |
 |---|---:|---:|---:|---:|---:|---:|
-| **DAM1** | **5,596,839** | **22 MB** | **43 MB** | **100.0%** | **100.0%** | **3 ms** |
+| **DAM1** | **1,870,616** | **8 MB** | **23 MB** | **99.9%** | **99.9%** | **2 ms** |
 | Qwen2.5-0.5B-Instruct | 494,032,768 | 988 MB | 1.01 GB | 63.8% | 39.6% | 109 ms |
 | Qwen3-0.6B | 596,049,920 | 1.50 GB | 1.22 GB | 52.7% | 41.4% | 80 ms |
 | LFM2-350M | 354,483,968 | 709 MB | 727 MB | 52.2% | 44.1% | 53 ms |
@@ -40,7 +40,7 @@ which DAM1 is not; they run in float16 on an NVIDIA RTX 3080 Ti, DAM1 on the pro
 | SmolLM2-135M-Instruct | 134,515,008 | 269 MB | 285 MB | 36.0% | 14.5% | 228 ms |
 
 **Weights** is the file the hub publishes. DAM1's page downloads the same network written
-small, 10 MB. **Memory** is what answering one question takes: for DAM1 the one block of
+small, 3.3 MB. **Memory** is what answering one question takes: for DAM1 the one block of
 WebAssembly memory that holds the network, the state, the tree and the stack; for the others the
 most the card held over the same questions. **Answered** is the share of replies that say the
 answer. **Exact** is the share that begin with the answer and put nothing before it. **One answer**
@@ -109,8 +109,9 @@ A deterministic teacher writes the moves for every line of the curriculum, each 
 world the network runs on, and the rows it writes are what the network learns. The network sees the
 cursor, the word with its classes, its ending and what the story shows of it, the words said before by
 class, and what each step found. `--state all` starts every line from the state all seeds make, as the
-chat does. `--network` takes several files joined by commas: networks trained from different starts
-read by vote, which removes most of the misses one network makes by chance.
+chat does. `--network` takes one file, or several joined by commas: networks trained from different starts
+then read by vote, which removes most of the misses one network makes by chance, at three
+times the size; the release ships one.
 
 ## 🧭 The word network
 
@@ -128,8 +129,9 @@ read by vote, which removes most of the misses one network makes by chance.
 - **Rows and training.** Every step becomes a row: the stack and the step. The network learns the
   rows by AdaGrad, on the CPU or on the card, and a row counts as learned only when its step and
   its pointed word are both right.
-- **The vote.** Networks trained from different starts read together: each gives every step a
-  share, the shares are added, and the step with the largest sum is taken.
+- **The vote.** Several networks trained from different starts can read together: each gives every
+  step a share, the shares are added, and the step with the largest sum is taken. The release ships
+  one network and no vote.
 
 A wrong answer is fixed in the curriculum, the stack or the moves, never with a rule that answers
 it in code.
@@ -172,8 +174,8 @@ The lessons teach these concepts, one file each, from the basics up to a univers
 the sentences it can read as statements into `model/data/seeds/`, one file per facts file. A quiz
 line names the seeds it starts from. The chat page and the published model start from the seeds
 `scripts/build-chat.sh` is given with `SEEDS`: by default the chat starts from every seed, since the
-network is taught on the state all seeds make, and `NETWORK` takes several networks joined by commas
-that read by vote.
+network is taught on the state all seeds make, and `NETWORK` takes one network, or several joined by
+commas that read by vote.
 
 ### 💬 The chat
 

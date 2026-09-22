@@ -78,6 +78,7 @@ fn word_teach(args: &[String]) -> Result<(), String> {
     if out.is_empty() || !flag(args, QUIZ) {
         return Err(format!("dam {WORD_COMMAND} {WORD_TEACH} needs {QUIZ} and {OUT}"));
     }
+    let lesson = opt::<String>(args, QUIZ, String::new()).map(|said| std::path::Path::new(&said).file_name().map(|name| name.to_string_lossy().to_string()).unwrap_or_default())?;
     let items = quiz(args)?;
     let state = state_seeds(&opt::<String>(args, STATE_OPT, String::new())?)?;
     let known = known_names(&items);
@@ -110,7 +111,7 @@ fn word_teach(args: &[String]) -> Result<(), String> {
                 }
                 let mut replay = start;
                 for rows in word_rows(&mut replay, words, &steps, &|word| known.contains(word)) {
-                    let mut records = [false, true].map(|blanked| StackRecord { line: it.line, test: it.test, blanked, texts: Vec::new(), events: Vec::new(), rows: Vec::new() });
+                    let mut records = [false, true].map(|blanked| StackRecord { file: lesson.clone(), line: it.line, test: it.test, blanked, texts: Vec::new(), events: Vec::new(), rows: Vec::new() });
                     for row in rows {
                         record_extended(&mut records, &words.join(SENTENCE_GAP), &row)?;
                     }

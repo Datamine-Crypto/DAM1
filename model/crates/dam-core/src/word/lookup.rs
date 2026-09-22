@@ -674,13 +674,6 @@ pub fn said_to_have(mind: &CursorMind, thing: usize, owner: usize) -> bool {
 because!(said_to_have, WordReading, "whether a thing was said to be had by another, read from its owner tag, for the teacher to tell the \
      thing of a clause of having from a subject");
 
-pub(super) fn holder_like(mind: &CursorMind, n: usize) -> bool {
-    let name = mind.tree.node(n).name.to_string();
-    let asks_who = open_question(mind).is_some_and(|q| *mind.tree.node(q).name == *super::mind::WHO_ASKED);
-    !asks_who || person(mind, n) || name == super::mind::USER_NAME || singular(&name) != name || !noun_word(mind, &name)
-}
-because!(holder_like, WordReading, "whether a thing that holds another may answer a question that asks who: a person, the user, a group \
-     said in the plural, the kids, or a word that is no noun, we, and never a place, the garden the cat is in");
 
 pub fn who_has(mind: &CursorMind, thing: usize) -> Option<usize> {
     let mut at = thing;
@@ -780,7 +773,7 @@ pub(super) fn holds_value(mind: &CursorMind, thing: usize, value: &str) -> bool 
     let of_kind = own_child(mind, thing, IS_FORM.trim()).is_some_and(|is| present_children(mind, is).into_iter().filter(|&k| mind.tree.node(k).name.starts_with(BRACE_OPEN_TEXT) && *mind.tree.node(k).name != *TIME_RELATION).flat_map(|k| present_children(mind, k)).any(|v| named(v) && count_of(mind, v) > 0));
     let describes = own_child(mind, thing, IS_FORM.trim()).is_some_and(|is| present_children(mind, is).into_iter().filter(|&c| !mind.tree.node(c).name.starts_with(BRACE_OPEN_TEXT)).flat_map(|c| present_children(mind, c)).any(|q| named(q) && mind.tree.story(q)));
     let tagged = describes || own_child(mind, thing, &step_item(value)).is_some_and(|tag| present_children(mind, tag).is_empty());
-    let seeds_tell = !(mind.tree.story(thing) && kind_of(mind, value).is_some_and(|kind| super::moves::KINDS.iter().any(|(_, k)| **k == *kind)));
+    let seeds_tell = !(mind.tree.story(thing) && kind_of(mind, value).is_some_and(|kind| super::moves::KINDS.contains(&&*kind)));
     related || of_kind || tagged || holds_through(mind, thing, value, CLASS_DEPTH, seeds_tell) || compared_through(mind, thing, value, CLASS_DEPTH, None)
 }
 

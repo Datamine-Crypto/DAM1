@@ -19,7 +19,7 @@ because!(ITEM_KIND, ItemFeatures, "the feature every event has, naming its kind,
 const MARK_TEXT: &str = "mark";
 because!(MARK_TEXT, ItemFeatures, "tells the start of a reading from its end, so the network can act differently before the first word and \
      after the last");
-pub(crate) const INPUT_WORD: &str = "input.word";
+pub const INPUT_WORD: &str = "input.word";
 because!(INPUT_WORD, ItemFeatures, "the word heard as its text, never for a number, which its form, last digit and digit count stand for, \
      so the network learns an operation and never one number's answer; the cursor takes it off a word that names a node of its tree and \
      puts what the word names in its place");
@@ -43,8 +43,20 @@ const INPUT_DIGITS: &str = "input.digits";
 because!(INPUT_DIGITS, NumberItems, "how many digits the whole part of a number heard has, a band of its size shared by every number of \
      that many digits");
 const INPUT_GAP: &str = "input.gap";
-because!(INPUT_GAP, NumberItems, "what a number heard adds to the number heard before it on the stack, so every step of a count by one \
-     carries the same gap");
+because!(INPUT_GAP, NumberItems, "what a number heard adds to the number heard before it on the stack, as the step of a count where \
+     it is one, so every step of a count by one carries the same gap, and as more or less where it is not, since a difference a \
+     lesson never said would be a place of its own that no held out line reaches and the slot it stands for would lose what the \
+     lesson gave it");
+const COUNTING_STEPS: [f32; 11] = [-10.0, -5.0, -3.0, -2.0, -1.0, 0.0, 1.0, 2.0, 3.0, 5.0, 10.0];
+because!(COUNTING_STEPS, NumberItems, "the gaps a count is made of, by ones, twos, threes, fives and tens each way and standing still, \
+     which a number heard says of itself where the gap to the number before it is one of them");
+
+const GAP_MORE: &str = "more";
+because!(GAP_MORE, NumberItems, "that a number heard stands above the one before it by no step of a count");
+
+const GAP_LESS: &str = "less";
+because!(GAP_LESS, NumberItems, "that a number heard stands below the one before it by no step of a count");
+
 const INPUT_TWICE: &str = "input.twice";
 because!(INPUT_TWICE, NumberItems, "whether a number heard is twice the number heard before it on the stack, so a doubling reads the same \
      whichever numbers it doubles");
@@ -67,6 +79,11 @@ pub const STACK_SLOTS: usize = 200;
 because!(STACK_SLOTS, EventStack, "how many of the newest events the network is given, its short term memory: the user's number; every \
      input of the curriculum with its steps spans at most about a hundred events, so what a line needs beyond its own input is written \
      into the tree and found there, not kept on the stack");
+
+pub const SCENE_SLOTS: usize = 0;
+because!(SCENE_SLOTS, EventStack, "how much of what the story holds is laid out before a word, the newest first: what a scene is worth of \
+     the stack, left well under the whole so the word and the moves it takes are never crowded off, since the events the network is given \
+     are the newest ones and a scene laid out too wide would push the reading itself away");
 
 pub const INPUT_END: &str = "{input end}";
 because!(INPUT_END, EventStack, "the mark after a reading's last word, written in braces so no typed word is taken for it; the only mark, \
@@ -257,7 +274,13 @@ fn heard_number(item: &Item) -> Option<f32> {
 because!(heard_number, NumberItems, "the value of an event that is a number heard, none for any other event");
 
 pub fn step_ids(value: f32, previous: f32) -> Vec<FeatureId> {
-    vec![feature(INPUT_GAP, value - previous), feature(INPUT_TWICE, previous + previous == value)]
+    let gap = value - previous;
+    let told = match COUNTING_STEPS.iter().find(|&&step| step == gap) {
+        Some(step) => step.to_string(),
+        None if gap > crate::numbers::zero() => GAP_MORE.to_string(),
+        None => GAP_LESS.to_string(),
+    };
+    vec![feature(INPUT_GAP, told), feature(INPUT_TWICE, previous + previous == value)]
 }
 because!(
     step_ids,

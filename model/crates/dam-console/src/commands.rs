@@ -118,6 +118,7 @@ because!(run, ConsoleParts, "the console: the first word must name the command o
 
 #[derive(Serialize)]
 pub(crate) struct StackRecord {
+    pub(crate) file: String,
     pub(crate) line: usize,
     pub(crate) test: bool,
     pub(crate) blanked: bool,
@@ -125,7 +126,7 @@ pub(crate) struct StackRecord {
     pub(crate) events: Vec<Vec<FeatureId>>,
     pub(crate) rows: Vec<StackRow>,
 }
-because!(StackRecord, ConsoleParts, "the rows of one quiz line as a trainer reads them, written once a line and once more with the names blanked: the line, whether it is held out, whether the names are blanked, the events the line's stack held, oldest first, each as its text and its feature places without the place of its depth, and the rows, each a window over those events, so a stack of hundreds of events is written once and not once per step, which is what lets the rows of a large curriculum fit a file and the card");
+because!(StackRecord, ConsoleParts, "the rows of one quiz line as a trainer reads them, written once a line and once more with the names blanked: the lesson it came from and the line, whether it is held out, whether the names are blanked, the events the line's stack held, oldest first, each as its text and its feature places without the place of its depth, and the rows, each a window over those events, so a stack of hundreds of events is written once and not once per step, which is what lets the rows of a large curriculum fit a file and the card");
 
 #[derive(Serialize)]
 pub(crate) struct StackRow {

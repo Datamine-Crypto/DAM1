@@ -97,10 +97,10 @@ pub(super) fn carried(mind: &mut CursorMind, step: &WordStep, word: &str, at: us
             for member in members {
                 mind.tree.linked(holds, member, false);
             }
-            for name in said {
-                mind.flags.push((super::mind::FLAG_PROPERTY.to_string(), name));
-            }
             let theirs = added_under(mind, group, IS_FORM.trim(), false);
+            for name in said {
+                added_under(mind, theirs, &name, false);
+            }
             mind.at = theirs;
             mind.held = vec![group];
             mind.flags.retain(|(key, _)| key != super::mind::FLAG_GROUP);
@@ -201,7 +201,7 @@ pub(super) fn carried(mind: &mut CursorMind, step: &WordStep, word: &str, at: us
             mind.flags.push((super::mind::FLAG_KIN.to_string(), TRUE_TAG.to_string()));
             landed_on(mind, step.act, Some(owner));
         }
-        WordMove::Activity if plain && heard_text(mind) == super::mind::INFINITIVE && own_child(mind, at, super::mind::DEED_TAG).is_some_and(|deed| !present_children(mind, deed).is_empty()) => {
+        WordMove::ActivityNamed => {
             let deed = own_child(mind, at, super::mind::DEED_TAG).unwrap_or(at);
             let said = present_children(mind, deed).last().map(|&value| mind.tree.node(value).name.to_string()).unwrap_or_default();
             if let Some(&value) = present_children(mind, deed).last() {
@@ -214,7 +214,7 @@ pub(super) fn carried(mind: &mut CursorMind, step: &WordStep, word: &str, at: us
             let activity = added_under(mind, at, &step_item(super::mind::ACTIVITY), false);
             landed_on(mind, step.act, Some(activity));
         }
-        WordMove::Activity if plain && own_child(mind, at, super::mind::DEED_TAG).is_some_and(|d| !present_children(mind, d).is_empty()) => {
+        WordMove::ActivityDone => {
             let deed = own_child(mind, at, super::mind::DEED_TAG).unwrap_or(at);
             let thing = at;
             let at = present_children(mind, deed).into_iter().last().unwrap_or(at);
@@ -231,7 +231,7 @@ pub(super) fn carried(mind: &mut CursorMind, step: &WordStep, word: &str, at: us
             }
             landed_on(mind, step.act, Some(value));
         }
-        WordMove::Activity if plain && mind.tree.node(at).parent != 0 && { let deed = mind.tree.node(at).parent; let name = &*mind.tree.node(deed).name; name.starts_with(BRACE_OPEN_TEXT) && *name != *IS_FORM.trim() && *name != *step_item(super::mind::ACTIVITY) && mind.tree.node(deed).parent != 0 && present_children(mind, deed).len() == 1 } => {
+        WordMove::ActivityUnder => {
             let deed = mind.tree.node(at).parent;
             let doer = mind.tree.node(deed).parent;
             let name = crate::cursor::bare_name(&mind.tree.node(deed).name);
@@ -249,7 +249,8 @@ pub(super) fn carried(mind: &mut CursorMind, step: &WordStep, word: &str, at: us
                 landed_on(mind, step.act, None);
                 return true;
             }
-            let activity = added_under(mind, thing, &step_item(super::mind::ACTIVITY), false);
+            let under = if heard_text(mind) == super::mind::INFINITIVE { at } else { thing };
+            let activity = added_under(mind, under, &step_item(super::mind::ACTIVITY), false);
             if heard_text(mind) != super::mind::INFINITIVE {
                 let name = crate::cursor::bare_name(&mind.tree.node(at).name);
                 mind.tree.moved(at, None);
@@ -301,7 +302,7 @@ pub(super) fn carried(mind: &mut CursorMind, step: &WordStep, word: &str, at: us
             mind.first_mark = Some(user);
             landed_on(mind, step.act, Some(user));
         }
-        WordMove::FindAsked if super::mind::THING_PRONOUNS.contains(&word.as_str()) || super::mind::PERSON_PRONOUNS.contains(&word.as_str()) => {
+        WordMove::FindAskedStood => {
             let node = newest_for(mind, super::mind::PERSON_PRONOUNS.contains(&word.as_str()), &word);
             let of_things = node.filter(|&n| !mind.tree.node(mind.tree.node(n).parent).name.starts_with(BRACE_OPEN_TEXT));
             let node = if word == super::mind::THING_PRONOUNS[1] { of_things.or_else(|| newest_for(mind, true, &word)) } else { node };

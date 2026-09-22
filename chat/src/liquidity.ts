@@ -24,7 +24,8 @@ interface LiquidityState {
 }
 
 interface Series {
-  seriesName: string;
+  tokenName?: string;
+  seriesName?: string;
   points: [number, number][];
 }
 
@@ -61,17 +62,20 @@ export function progress(total: number): number {
   return Math.max(0, Math.min(1, (total - floor) / (listed[at].target - floor)));
 }
 
+// Each series names its token as tokenName, or as seriesName as the dashboard once did, so a
+// renaming on the analytics host does not blank the figure.
 // The payload is checked field by field before any of it is shown: a wrong shape is a failure,
 // never a NaN on screen.
 function latest(series: unknown): TokenLiquidity | null {
   if (typeof series !== 'object' || series === null) return null;
-  const { seriesName, points } = series as Partial<Series>;
-  if (typeof seriesName !== 'string' || seriesName === '' || !Array.isArray(points)) return null;
+  const { tokenName, seriesName, points } = series as Partial<Series>;
+  const name = tokenName ?? seriesName;
+  if (typeof name !== 'string' || name === '' || !Array.isArray(points)) return null;
   const last = points[points.length - 1];
   if (!Array.isArray(last) || last.length < 2) return null;
   const [at, dollars] = last;
   if (typeof at !== 'number' || typeof dollars !== 'number' || !Number.isFinite(dollars) || dollars < 0) return null;
-  return { token: seriesName, dollars, at };
+  return { token: name, dollars, at };
 }
 
 export const useLiquidityStore = create<LiquidityState>()((set) => ({

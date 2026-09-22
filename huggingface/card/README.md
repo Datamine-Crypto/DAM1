@@ -27,20 +27,20 @@ are fixed operations of the engine; the network only chooses between them.
 What it knows is in the tree, where it can be read and changed, and not in the weights. The
 network learns only how to shape and read that memory. That is why it is small: it is not a
 transformer, it was not trained on a large corpus, and it does not write free text. These files
-hold 5,596,839 numbers, three networks of 1,865,613 numbers each that read by vote, and the
+hold 1,870,616 numbers, one network, and the
 permanent state the project's seeds make. It runs on a processor, and in a browser through
 WebAssembly, where the Datamine Network chat runs it with nothing sent to a server.
 
 ## 📊 How it compares
 
-Every model was asked the same 2,669 questions: the questions of the held-out lines of DAM1's
-curriculum, which no network was trained on. Each item is a short text and one question about it.
+Every model was asked the questions of the held-out lines of DAM1's curriculum, which no network
+was trained on: 2,673 for DAM1, and the 2,669 that existed when the others were run. Each item is a short text and one question about it.
 One rule scores every reply. The other models are also given an order and two worked examples,
 which DAM1 is not; they run in float16 on an NVIDIA RTX 3080 Ti, DAM1 on the processor.
 
 | Model | Parameters | Weights | Memory | Answered | Exact | One answer |
 |---|---:|---:|---:|---:|---:|---:|
-| **DAM1** | **5,596,839** | **22 MB** | **43 MB** | **100.0%** | **100.0%** | **3 ms** |
+| **DAM1** | **1,870,616** | **8 MB** | **23 MB** | **99.9%** | **99.9%** | **2 ms** |
 | Qwen2.5-0.5B-Instruct | 494,032,768 | 988 MB | 1.01 GB | 63.8% | 39.6% | 109 ms |
 | Qwen3-0.6B | 596,049,920 | 1.50 GB | 1.22 GB | 52.7% | 41.4% | 80 ms |
 | LFM2-350M | 354,483,968 | 709 MB | 727 MB | 52.2% | 44.1% | 53 ms |
@@ -48,7 +48,7 @@ which DAM1 is not; they run in float16 on an NVIDIA RTX 3080 Ti, DAM1 on the pro
 | SmolLM2-135M-Instruct | 134,515,008 | 269 MB | 285 MB | 36.0% | 14.5% | 228 ms |
 
 **Weights** is the file the hub publishes. DAM1's page downloads the same network written
-small, 10 MB. **Memory** is what answering one question takes: for DAM1 the one block of
+small, 3.3 MB. **Memory** is what answering one question takes: for DAM1 the one block of
 WebAssembly memory that holds the network, the state, the tree and the stack; for the others the
 most the card held over the same questions. **Answered** is the share of replies that say the
 answer. **Exact** is the share that begin with the answer and put nothing before it. **One answer**
@@ -66,8 +66,7 @@ not. The harness is in
 - **Model type:** an LLM built as a reader of one word at a time over a tree, driven by networks
   over a stack: an embedding per feature place, a block of weights per stack slot, one hidden
   layer of rectified units, an output per step class and a pointer over the words of the
-  sentence. Three networks of one shape, trained from different starts, read by vote. They are
-  trained from nothing; there is no base model.
+  sentence. One network, trained from nothing; there is no base model.
 - **Language:** English.
 - **Licence:** AGPL-3.0-or-later.
 - **Files built at:** the commit `config.json` records under `build`, which the publish writes as it exports.
@@ -144,12 +143,11 @@ Out of scope:
    of features hashed into a space of 2^64 places.
 5. A network reads the stack, one event per slot of 200. An event's embedding is the sum of the
    16-wide embeddings of its places. Each slot has its own weights into 512 hidden rectified
-   units. The outputs take a softmax over the 92 step classes. A class is a move and its
+   units. The outputs take a softmax over the 104 step classes. A class is a move and its
    properties, such as `{grab}`, `{drop @}`, `{children add: @ type: property}` or `{get owner}`.
-6. The three networks vote: the shares each gives every step are added and the step with the
-   largest sum is taken. When the step takes a word of the sentence (the `@`), the pointers score
+6. The step with the largest share is taken. When the step takes a word of the sentence (the `@`), the pointers score
    every word on the stack the same way and the best one is taken.
-7. The step runs, its two events join the stack, and the networks choose again. `{continue}`
+7. The step runs, its two events join the stack, and the network chooses again. `{continue}`
    goes on to the next word. A word may take at most 50 steps.
 8. What a sentence wrote to the tree stays for the next sentence and the next turn, so a question
    is answered from everything the conversation said and from the seeds.
@@ -216,22 +214,22 @@ not recorded, so the card gives no `co2_eq_emissions`.
 
 | File | Holds |
 |---|---|
-| `config.json` | The step limit, the network's shape, its voters and its step classes, and the build commit |
-| `model.safetensors` | The eight tensors of each of the three voters, listed below |
+| `config.json` | The step limit, the network's shape, its one voter and its step classes, and the build commit |
+| `model.safetensors` | The eight tensors of the network, listed below |
 | `state.bin` | The permanent state every chat starts from: the tree the seeds make |
 | `LICENSE`, `NOTICE.md` | The licence and what it covers |
 
-The tensors of `model.safetensors`, for each voter `N` of 0, 1 and 2:
+The tensors of `model.safetensors`, `N` being 0, the one voter:
 
 | Tensor | Type | Shape |
 |---|---|---|
-| `network.N.items` | `U64` | 4,240 |
-| `network.N.item_table` | `F32` | 4,240 by 16 |
+| `network.N.items` | `U64` | 4,235 |
+| `network.N.item_table` | `F32` | 4,235 by 16 |
 | `network.N.slot_weights` | `F32` | 200 by 512 by 16 |
 | `network.N.fill_weights` | `F32` | 200 by 512 |
 | `network.N.hidden_bias` | `F32` | 512 |
-| `network.N.output_weights` | `F32` | 92 by 512 |
-| `network.N.output_bias` | `F32` | 92 |
+| `network.N.output_weights` | `F32` | 104 by 512 |
+| `network.N.output_bias` | `F32` | 104 |
 | `network.N.point_weights` | `F32` | 512 by 16 |
 
 No file contains code. A tensor runtime cannot run DAM1; it is read by the dam-core crate.
@@ -297,23 +295,24 @@ expected answer.
 |---|---:|---:|
 | Basics | 446 of 446 (100.0%) | 142 of 142 (100.0%) |
 | Grade 1 | 73 of 73 (100.0%) | 24 of 24 (100.0%) |
-| Grade 2 | 676 of 676 (100.0%) | 239 of 239 (100.0%) |
-| Grade 3 | 246 of 246 (100.0%) | 97 of 97 (100.0%) |
-| Grade 4 | 265 of 265 (100.0%) | 88 of 88 (100.0%) |
-| Grade 5 | 172 of 172 (100.0%) | 72 of 72 (100.0%) |
-| Grade 6 | 156 of 156 (100.0%) | 58 of 58 (100.0%) |
-| Grade 7 | 83 of 83 (100.0%) | 35 of 35 (100.0%) |
+| Grade 2 | 688 of 688 (100.0%) | 241 of 242 (99.6%) |
+| Grade 3 | 248 of 248 (100.0%) | 96 of 97 (99.0%) |
+| Grade 4 | 273 of 273 (100.0%) | 91 of 91 (100.0%) |
+| Grade 5 | 175 of 175 (100.0%) | 72 of 72 (100.0%) |
+| Grade 6 | 158 of 158 (100.0%) | 58 of 58 (100.0%) |
+| Grade 7 | 85 of 85 (100.0%) | 35 of 35 (100.0%) |
 | Grade 8 | 79 of 79 (100.0%) | 33 of 33 (100.0%) |
-| Grade 9 | 149 of 149 (100.0%) | 65 of 66 (98.5%) |
+| Grade 9 | 150 of 150 (100.0%) | 65 of 66 (98.5%) |
 | Grade 10 | 26 of 26 (100.0%) | 9 of 9 (100.0%) |
-| Grade 11 | 82 of 82 (100.0%) | 23 of 23 (100.0%) |
+| Grade 11 | 84 of 84 (100.0%) | 23 of 23 (100.0%) |
 | Grade 12 | 39 of 39 (100.0%) | 11 of 11 (100.0%) |
 | University | 47 of 47 (100.0%) | 13 of 13 (100.0%) |
 | World and debug cases | 36 of 36 (100.0%) | 32 of 32 (100.0%) |
-| **All** | **2575 of 2575 (100.0%)** | **941 of 942 (99.9%)** |
+| **All** | **2607 of 2607 (100.0%)** | **945 of 948 (99.7%)** |
 
-It reads every learned line of the curriculum. The one held-out line it misses is in the lesson
-on the parts a kind of thing has, which asks a part of a thing that is not a creature.
+It reads every learned line of the curriculum. The three held-out lines it misses are a statement
+of what we like, a question of whether one letter follows another read backward through the
+alphabet, and the last day of the week asked with no week named.
 
 The held-out lines use the same sentence shapes and many of the same words as the learned lines.
 They measure new words and numbers in taught shapes. They are not an independent benchmark. No

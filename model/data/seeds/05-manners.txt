@@ -3,6 +3,7 @@ hi {reply} hello
 hey {reply} hello
 thank {reply} welcome
 morning {reply} hello
+afternoon {reply} hello
 evening {reply} hello
 thanks -> {reply} -> welcome -> {reply} -> hello -> {reply} -> hello
 bye -> {reply} -> goodbye -> {reply} -> goodbye

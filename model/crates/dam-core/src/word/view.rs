@@ -1,11 +1,12 @@
 use super::physics::appeared;
 use super::WordReading;
 use crate::cursor::{names_class, CursorMind, BRACE_OPEN_TEXT, FOUND_BY, FOUND_TOP, NAMES_FEATURE, TOKEN_NODE, TOKEN_TEXT, WORD_PLACE};
-use crate::events::{feature, heard_item, Item, ItemKind, Stack, ITEM_KIND};
+use crate::events::{feature, heard_item, Item, ItemKind, Stack, INPUT_WORD, ITEM_KIND};
 use crate::quiz::IS_FORM;
 use crate::words::number_of;
 use patterns::because;
-use super::english::{function_word, WordEnglish, COPULA, LIST_MARK, PARTING_MARKS, WHEN_OPENER, QUOTE, LIST_HALVES, FUNCTIONS, MEASURES, DIRECTIONS, ARTICLE_FLAGS, PLURAL_END, PLURAL_LEAST, HISSING_ENDS, LONG_PLURAL, SOFT_PLURAL, PLAIN_PLURALS, FLAG_DEFINITE, FLAG_INDEFINITE, FLAG_GIVE, VERB_ENDS, TAKING, ORDINALS, TIMES_OF_DAY, FLAG_ROLE, COMPARISON_END, WORD_CLASS, WORD_KIND, MARK_CLASS, SPEAKER_CLASS, OWN_CLASS, FILLER_CLASS, NEGATION_CLASS, LINK_CLASS, OPERATOR_CLASS, POSSESSIVE_CLASS, COPULA_CLASS, HAVING_CLASS, ARTICLE_CLASS, SKIPPED_CLASS, ASKS_CLASS, HELPER_CLASS, THING_PRONOUN_CLASS, PERSON_PRONOUN_CLASS, PLACE_CLASS, VERB_CLASS, MOVING_CLASS, PAST_CLASS, NUMBER_CLASS, THING_CLASS, VALUE_CLASS, OTHER_CLASS, CURSOR_KIND, CURSOR_HOLDING, CURSOR_ASKING, WORD_ASKED, CURSOR_FLAG, CURSOR_BY, FACT_BY, WORLD_KIND, THING_KIND, VALUE_KIND, RELATION_KIND, PROPERTY_KIND, QUESTION_KIND, RECORD_OBJECT, RECORD_TYPE, RECORD_FLAGS, RECORD_HOLDING, WORD_ENDING, SEEN_ENDS, REPLY_RELATION, STORY_OPENER, AFTER_SIGHT, CURSOR_SUBJECT, CURSOR_NUMBER, CURSOR_QUOTING, ASKED_NTH, CURSOR_RELATION, CURSOR_UNDER, CURSOR_DONE, SAID_SIGHTS, OPEN_CLASSES, WORD_SIGHTS, DOING_LETTERS};
+use super::english::{function_word, WordEnglish, COPULA, LIST_MARK, PARTING_MARKS, WHEN_OPENER, QUOTE, LIST_HALVES, FUNCTIONS, MEASURES, DIRECTIONS, ARTICLE_FLAGS, PLURAL_END, PLURAL_LEAST, HISSING_ENDS, LONG_PLURAL, SOFT_PLURAL, PLAIN_PLURALS, FLAG_DEFINITE, FLAG_INDEFINITE, FLAG_GIVE, VERB_ENDS, TAKING, ORDINALS, TIMES_OF_DAY, FLAG_ROLE, COMPARISON_END, WORD_CLASS, WORD_KIND, MARK_CLASS, SPEAKER_CLASS, OWN_CLASS, FILLER_CLASS, NEGATION_CLASS, LINK_CLASS, OPERATOR_CLASS, POSSESSIVE_CLASS, COPULA_CLASS, HAVING_CLASS, ARTICLE_CLASS, SKIPPED_CLASS, ASKS_CLASS, HELPER_CLASS, THING_PRONOUN_CLASS, PERSON_PRONOUN_CLASS, PLACE_CLASS, VERB_CLASS, MOVING_CLASS, PAST_CLASS, NUMBER_CLASS, THING_CLASS, VALUE_CLASS, OTHER_CLASS, CURSOR_KIND, CURSOR_HOLDING, CURSOR_ASKING, WORD_ASKED, CURSOR_FLAG, CURSOR_BY, FACT_BY, SCENE_BY, SCENE_END, RECORD_IN, WORLD_KIND, THING_KIND, VALUE_KIND, RELATION_KIND, PROPERTY_KIND, QUESTION_KIND, RECORD_OBJECT, RECORD_TYPE, RECORD_FLAGS, RECORD_HOLDING, WORD_ENDING, SEEN_ENDS, REPLY_RELATION, STORY_OPENER, AFTER_SIGHT, CURSOR_SUBJECT, CURSOR_NUMBER, CURSOR_QUOTING, ASKED_NTH, CURSOR_RELATION, CURSOR_UNDER, CURSOR_DONE, CURSOR_SIGHTS, SAID_SIGHTS, OPEN_CLASSES, WORD_SIGHTS, DOING_LETTERS};
+use super::lookup::present_children;
 use super::mind::{mark_word, place_word, comparison_known, verb_base, past_form, kind_of, is_number, word_classes};
 
 pub fn closing_mark(word: &str) -> bool {
@@ -39,7 +40,7 @@ because!(verb_like, WordReading, "whether a word reads as a verb: one the world 
      held by the seeds only as a thing or a value, with a verb's ending, sees or painted");
 
 pub fn role_word(mind: &CursorMind, word: &str) -> bool {
-    !place_word(word) && !ORDINALS.contains(&word) && !super::moves::KINDS.iter().any(|(_, kind)| *kind == word) && mind.tree.named(&crate::cursor::step_item(word)).any(|n| !mind.tree.node(n).gone && mind.tree.node(n).children.iter().any(|&c| !mind.tree.node(c).gone && !mind.tree.node(c).name.starts_with(crate::quiz::BRACE_OPEN))) && verb_base(mind, word).is_none() && !verb_like(mind, word) && kind_of(mind, word).is_none()
+    !place_word(word) && !ORDINALS.contains(&word) && !super::moves::KINDS.contains(&word) && mind.tree.named(&crate::cursor::step_item(word)).any(|n| !mind.tree.node(n).gone && mind.tree.node(n).children.iter().any(|&c| !mind.tree.node(c).gone && !mind.tree.node(c).name.starts_with(crate::quiz::BRACE_OPEN))) && verb_base(mind, word).is_none() && !verb_like(mind, word) && kind_of(mind, word).is_none()
 }
 because!(role_word, WordReading, "whether a word names a role of one thing for another: a relation with a plain value the world or the \
      seeds hold that is no verb, no place, no ordinal, no kind and no bare quality, capital, author or opposite, and not a part, the door \
@@ -90,7 +91,99 @@ because!(node_kind, WordReading, "what kind of node the cursor stands on: the wo
      a property for is or a kind under it, a relation for any other braced node, a thing for a plain node under the world or inside \
      another thing, and a value under a relation");
 
-fn cursor_item(mind: &CursorMind) -> Item {
+fn scene_nodes(mind: &CursorMind, word: &str) -> Vec<usize> {
+    let asked = open_question(mind);
+    let said = |n: usize| {
+        let name = crate::cursor::bare_name(&mind.tree.node(n).name);
+        std::iter::once(word).chain(mind.before.iter().map(String::as_str)).any(|w| *w == *name || singular(w) == singular(&name))
+    };
+    let told: Vec<usize> = (mind.tree.state..mind.tree.len())
+        .filter(|&n| !mind.tree.node(n).gone && mind.tree.story(n))
+        .filter(|&n| asked.is_none_or(|q| n != q && mind.tree.node(n).parent != q))
+        .collect();
+    let about: Vec<usize> = told.iter().copied().filter(|&n| said(n)).collect();
+    let mut near: Vec<usize> = Vec::new();
+    for &n in &about {
+        let up = mind.tree.node(n).parent;
+        for step in std::iter::once(n).chain((up != 0).then_some(up)).chain(present_children(mind, n)) {
+            if !near.contains(&step) && step >= mind.tree.state {
+                near.push(step);
+            }
+        }
+        for kid in present_children(mind, n) {
+            for under in present_children(mind, kid) {
+                if !near.contains(&under) {
+                    near.push(under);
+                }
+            }
+        }
+    }
+    near.sort_unstable();
+    near.into_iter().rev().take(crate::events::SCENE_SLOTS).rev().collect()
+}
+because!(scene_nodes, WordReading, "the nodes of the scene laid out before a word: the things the sentence has named so far, each with \
+     what holds it, what it holds and the values under those, so the reader sees the shape it must choose a get by, whether the thing \
+     holds the relation asked, whether what it holds is an activity, whether the answer stands two steps up; what the story wrote and \
+     this sentence never named is left out, since a scene of everything written lately shows the network which lesson line it is on and \
+     it reads the line instead of the shape, and the words of an open question are left out, being what he is asked");
+
+fn scene_item(mind: &CursorMind, at: usize, word: &str) -> Item {
+    let name = mind.tree.node(at).name.trim_matches(|c| c == crate::quiz::BRACE_OPEN || c == crate::quiz::BRACE_CLOSE).to_string();
+    let kind = node_kind(mind, at);
+    let parent = mind.tree.node(at).parent;
+    let holder = if parent == 0 { WORLD_KIND.to_string() } else { mind.tree.node(parent).name.trim_matches(|c| c == crate::quiz::BRACE_OPEN || c == crate::quiz::BRACE_CLOSE).to_string() };
+    let mut ids = vec![feature(ITEM_KIND, SCENE_BY), feature(WORD_KIND, kind), feature(RECORD_IN, node_kind(mind, parent))];
+    if mind.at == at {
+        ids.push(feature(SCENE_BY, CURSOR_BY));
+    }
+    if mind.first_mark == Some(at) {
+        ids.push(feature(SCENE_BY, CURSOR_SUBJECT));
+    }
+    if mind.held.contains(&at) {
+        ids.push(feature(SCENE_BY, CURSOR_HOLDING));
+    }
+    if mind.tree.node(at).link.is_some() {
+        ids.push(feature(SCENE_BY, NAMES_FEATURE));
+    }
+    let same = |said: &str| *said == *name || singular(said) == singular(&name);
+    if same(word) {
+        ids.push(feature(SCENE_BY, INPUT_WORD));
+    }
+    if mind.before.iter().any(|said| same(said)) {
+        ids.push(feature(SCENE_BY, SAID_SIGHTS[0]));
+    }
+    let record = format!(
+        "{}{SCENE_BY} {RECORD_OBJECT}: {name} {RECORD_TYPE}: {kind} {RECORD_IN}: {holder}{}",
+        crate::quiz::BRACE_OPEN,
+        crate::quiz::BRACE_CLOSE
+    );
+    Item { kind: ItemKind::Found, ids, text: record.into(), token: None, value: None, bound: None, value_bound: None, node: Some(at) }
+}
+because!(scene_item, WordReading, "one node of the scene as the network reads it: its kind, the kind of what holds it, whether the cursor \
+     stands on it, whether it is the subject of the sentence, whether he holds it and whether it names another node, whether the word now heard names it and whether a word already said in this sentence names it, written for the user \
+     as the record scene object: corn type: thing in: bag, and carrying the node itself so a step may go to the very thing he is talking \
+     about; what a node is called is no feature of its event, since a scene that says john would be read by the name and not by the shape, \
+     and every held-out line names things the learned lines never name");
+
+fn class_or_text<'a>(mind: &CursorMind, word: &'a str) -> &'a str {
+    let classes = word_classes(mind, word);
+    if classes.iter().any(|class| OPEN_CLASSES.contains(class)) { classes[0] } else { word }
+}
+because!(class_or_text, WordReading, "a word as the reader is told of it where it is not the word being read: by its class where a \
+     lesson may swap it for another, else by its text, so a lesson that says one word of a time of day is read as the next lesson \
+     that says another; the relation the cursor stands on keeps its text, a verb of the seeds being a thing of theirs as well and to go \
+     meaning no what to love means");
+
+fn cursor_sight(mind: &CursorMind) -> [bool; CURSOR_SIGHTS.len()] {
+    [super::physics::holds_asked(mind), super::physics::holds_doing(mind), super::physics::held_under(mind), super::physics::owned_thing(mind), super::physics::reaches_through(mind), super::physics::manners_said(mind), super::physics::holds_said(mind), super::physics::owned_twice(mind), super::physics::ranked_kind(mind)]
+}
+because!(cursor_sight, WordReading, "what the story shows of the thing the cursor stands on, whether it holds a relation the sentence \
+     names, holds a doing, stands under a relation the sentence names, has an owner, is two steps from the relation the \
+     sentence names, or stands where a word of manners was said, 
+     so the network chooses a get of a relation by \
+     what the teacher's rules choose it by");
+
+pub(super) fn cursor_item(mind: &CursorMind) -> Item {
     let at = mind.at;
     let text = if at == 0 { crate::cursor::CURSOR_NOTHING.to_string() } else { mind.tree.node(at).name.trim_matches(|c| c == crate::quiz::BRACE_OPEN || c == crate::quiz::BRACE_CLOSE).to_string() };
     let mut ids = vec![feature(ITEM_KIND, ItemKind::Found.name()), feature(FOUND_BY, CURSOR_BY), feature(CURSOR_KIND, node_kind(mind, at))];
@@ -134,6 +227,11 @@ fn cursor_item(mind: &CursorMind) -> Item {
     flags.dedup();
     for flag in &flags {
         ids.push(feature(CURSOR_FLAG, *flag));
+    }
+    for (place, seen) in CURSOR_SIGHTS.iter().zip(cursor_sight(mind)) {
+        if seen {
+            ids.push(feature(place, true));
+        }
     }
     let nothing = crate::cursor::CURSOR_NOTHING;
     let record = format!(
@@ -184,13 +282,17 @@ pub fn heard_word(mind: &mut CursorMind, word: &str, index: usize) {
         mind.question_start = None;
     }
     mind.stack = Stack::default();
+    for node in scene_nodes(mind, word) {
+        let told = scene_item(mind, node, word);
+        mind.stack.push(told);
+    }
+    mind.stack.push(Item { kind: ItemKind::Mark, text: SCENE_END.into(), ids: vec![feature(ITEM_KIND, SCENE_END)], token: None, value: None, bound: None, value_bound: None, node: None });
     let cursor = cursor_item(mind);
     mind.stack.push(cursor);
     let mut item = sighted_item(mind, word);
     let last_said = mind.before.len().checked_sub(1);
     for (nth, said) in mind.before.iter().enumerate() {
-        let classes = word_classes(mind, said);
-        let seen: &str = if classes.iter().any(|class| OPEN_CLASSES.contains(class)) { classes[0] } else { said };
+        let seen: &str = class_or_text(mind, said);
         let places = [Some(feature(SAID_SIGHTS[0], seen)), (Some(nth) == last_said).then(|| feature(crate::cursor::WORD_AFTER, seen))];
         for place in places.into_iter().flatten() {
             if !item.ids.contains(&place) {
@@ -249,10 +351,11 @@ fn asked_now(mind: &CursorMind) -> Vec<String> {
 because!(asked_now, WordReading, "the words the open question holds so far, or none");
 
 fn unseen_doing(word: &str) -> bool {
-    word.len() > DOING_LETTERS && word.ends_with(PLURAL_END) && word.chars().all(char::is_alphabetic) && !FUNCTIONS.contains(&word) && !TIMES_OF_DAY.contains(&word)
+    word.len() > DOING_LETTERS && word.ends_with(PLURAL_END) && word.chars().all(char::is_alphabetic) && !function_word(word) && !TIMES_OF_DAY.contains(&word)
 }
 because!(unseen_doing, WordReading, "whether a word in no class looks like a word of doing the seeds never state, orbits or hunts: long enough, letters \
-     only, with the ending of doing, and no function or time of day; such a word loses its text in the view, since a learned one would \
+     only, with the ending of doing, and no word of a closed class or time of day, since means defines a name by being itself and \
+     a plural noun with its name taken away would read as it does; such a word loses its text in the view, since a learned one would \
      be read by its text and the next unseen one could not be, while every other word in no class keeps its text, which the teacher may read");
 
 fn sighted_item(mind: &CursorMind, word: &str) -> Item {

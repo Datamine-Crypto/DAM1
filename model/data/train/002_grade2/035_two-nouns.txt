@@ -7,7 +7,7 @@ anna sat on the park bench. => bench -> anna; bench -> {of} -> park | where is a
 tom has a toy car. => tom -> car -> {of} -> toy | what does tom have? = car
 the cat is in the garden shed. => shed -> cat; shed -> {of} -> garden | where is the cat? = shed
 mia went to the bus station. => mia -> {go}:time(past) -> station; station -> {of} -> bus | where is mia? = station
-the milk is in the kitchen cupboard. => cupboard -> milk | where is the milk? = cupboard
+the milk is in the kitchen cupboard. => cupboard -> milk; cupboard -> {of} -> kitchen | where is the milk? = cupboard
 ben has a school bag. => ben -> bag -> {of} -> school | what does ben have? = bag
 the ball is in the toy box. => box -> ball; box -> {of} -> toy | where is the ball? = box
 test: sara went to the train station. => sara -> {go}:time(past) -> station; station -> {of} -> train | where is sara? = station

@@ -55,6 +55,7 @@ pub(super) fn wrote_down(mind: &mut CursorMind, step: &WordStep, word: &str, at:
         }
         WordMove::AddRelation => relation_added(mind, step, &word, at, plain, false),
         WordMove::AddRelationPast => relation_added(mind, step, &word, at, plain, true),
+
         WordMove::AddQuestion => {
             let node = mind.tree.added(0, &word);
             mind.question_start = Some(node);
@@ -359,18 +360,17 @@ because!(value_added, WordWorld, "the value add: the pointed word is written und
 
 fn quality_set(mind: &mut CursorMind, step: &WordStep, word: &str, at: usize) {
     let word = word.to_string();
-    let kind = step.act.kind().unwrap_or_default();
+    let kind = super::mind::quality_kind(mind, &word).unwrap_or_default();
     let on_is = at != 0 && *mind.tree.node(at).name == *IS_FORM.trim();
-    let made_of = step.act == WordMove::SetMaterial && mind.before.iter().any(|b| b == super::mind::MADE);
-    if !on_is || (kind_of(mind, &word).as_deref() != Some(kind) && !made_of) {
+    if !on_is || kind.is_empty() {
         landed_on(mind, step.act, None);
         return;
     }
     let denied = flag_of(mind, FLAG_QUANTITY).is_some_and(|q| number_of(q) == Some(f32::default()));
     let mut last = at;
     for target in group_targets(mind, at) {
-        let under = added_under(mind, target, &step_item(kind), false);
-        last = added_under(mind, under, &word, !denied && !made_of);
+        let under = added_under(mind, target, &step_item(&kind), false);
+        last = added_under(mind, under, &word, !denied);
         for tag in present_children(mind, last).into_iter().filter(|&q| mind.tree.node(q).name.starts_with(crate::cursor::QUANTITY_TAG)).collect::<Vec<_>>() {
             mind.tree.moved(tag, None);
         }
