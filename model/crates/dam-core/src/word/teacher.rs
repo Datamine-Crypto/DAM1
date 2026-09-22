@@ -1,5 +1,5 @@
-use super::mind::{mark_word, FLAG_HAND, GIVING, noun_word, open_question, slot_of_text, flag_of, heard_word, is_number, kind_of, node_kind, past_form, place_word, quality_word, singular, slot_of_word, verb_base, word_classes, ARTICLE_FLAGS, ASKING, CONTAINING, COPULA, FLAG_GIVE, HAVING, HELPERS, MOVING, PERSON_PRONOUNS, SKIPPED, THING_PRONOUNS};
-use super::moves::{WordMove, WordStep, KINDS};
+use super::mind::{mark_word, FLAG_HAND, GIVING, noun_word, open_question, slot_of_text, flag_of, heard_word, is_number, node_kind, past_form, place_word, quality_word, singular, slot_of_word, verb_base, word_classes, ARTICLE_FLAGS, ASKING, CONTAINING, COPULA, FLAG_GIVE, HAVING, HELPERS, MOVING, PERSON_PRONOUNS, SKIPPED, THING_PRONOUNS};
+use super::moves::{WordMove, WordStep};
 use super::physics::word_stepped;
 use super::WordReading;
 use crate::cursor::{CursorMind, BRACE_OPEN_TEXT};

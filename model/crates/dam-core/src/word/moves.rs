@@ -783,7 +783,7 @@ mod tests {
         assert_eq!(WordMove::FlagTime.class(), "{setFlag type: time value: past}");
         assert_eq!(WordMove::AddProperty.class(), "{children add: @ type: property}");
         assert_eq!(WordMove::AddValue.class(), "{children add: @}");
-        assert_eq!(WordMove::SetColor.class(), "{setProperty color: @}");
+        assert_eq!(WordMove::SetProperty.class(), "{setProperty property: @}");
         assert_eq!(WordMove::PointNothing.class(), "{point to: {nothing}}");
         assert_eq!(WordMove::StepNewest.class(), "{step newest}");
         assert_eq!(WordMove::Continue.class(), "{continue}");

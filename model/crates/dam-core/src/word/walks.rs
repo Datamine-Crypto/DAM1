@@ -12,7 +12,7 @@ pub(super) fn answer_walk(mind: &CursorMind, index: usize, answer: &str) -> Opti
     }
     let asked = asked_words(mind);
     let mut tries = 0;
-    let mut plan_works = |plan: Vec<(WordMove, Option<String>)>, tries: &mut usize| -> Option<Vec<(WordMove, Option<String>)>> {
+    let plan_works = |plan: Vec<(WordMove, Option<String>)>, tries: &mut usize| -> Option<Vec<(WordMove, Option<String>)>> {
         if *tries >= ANSWER_TRIES {
             return None;
         }

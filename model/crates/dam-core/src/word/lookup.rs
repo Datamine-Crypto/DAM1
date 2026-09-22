@@ -1,4 +1,4 @@
-use super::mind::{mark_word, place_word, FLAG_HAND, HAVING, open_question, flag_of, is_number, kind_of, noun_word, quality_word, singular, verb_base, FLAG_INDEFINITE, FLAG_GIVE, FLAG_CONTAIN, FLAG_QUANTITY, FLAG_DEFINITE};
+use super::mind::{mark_word, place_word, FLAG_HAND, HAVING, open_question, flag_of, is_number, kind_of, quality_word, singular, verb_base, FLAG_INDEFINITE, FLAG_GIVE, FLAG_CONTAIN, FLAG_QUANTITY, FLAG_DEFINITE};
 use super::WordReading;
 use crate::cursor::{step_item, CursorMind, BRACE_OPEN_TEXT, TIME_RELATION};
 use crate::quiz::IS_FORM;

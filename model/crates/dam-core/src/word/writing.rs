@@ -1,4 +1,4 @@
-use super::mind::{open_question, flag_of, is_number, kind_of, landed_on, past_form, singular, verb_base, COPULA, FLAG_INDEFINITE, FLAG_GIVE, FLAG_PROPERTY, FLAG_QUANTITY, FLAG_DEFINITE, FLAG_TIME};
+use super::mind::{open_question, flag_of, is_number, landed_on, past_form, singular, verb_base, COPULA, FLAG_INDEFINITE, FLAG_GIVE, FLAG_PROPERTY, FLAG_QUANTITY, FLAG_DEFINITE, FLAG_TIME};
 use super::moves::{WordMove, WordStep};
 use crate::cursor::{quantity_tag_named, step_item, CursorMind, BRACE_OPEN_TEXT, PAST_TIME, TIME_RELATION};
 use crate::quiz::IS_FORM;
